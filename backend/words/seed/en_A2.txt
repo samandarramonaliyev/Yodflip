@@ -1,0 +1,65 @@
+# word | part_of_speech | definition (EN) | translation (UZ) | example | example (UZ)
+## travel | ✈️ | Travel | Sayohat | Путешествия
+airport | noun | a place where planes take off and land | aeroport | We arrived at the airport early. | Aeroportga erta yetib keldik.
+ticket | noun | a piece of paper that shows you have paid to travel or enter | chipta | I bought a train ticket online. | Poyezd chiptasini internetdan sotib oldim.
+passport | noun | an official document you need to travel to other countries | pasport | Don't forget your passport. | Pasportingizni unutmang.
+luggage | noun | the bags and cases you take when you travel | yuk, bagaj | My luggage is very heavy. | Yukim juda og'ir.
+hotel | noun | a building where you pay to sleep and eat when travelling | mehmonxona | Our hotel is near the beach. | Mehmonxonamiz sohilga yaqin.
+map | noun | a drawing of an area showing roads, cities, rivers, etc. | xarita | Let's look at the map. | Keling, xaritaga qaraymiz.
+journey | noun | the act of travelling from one place to another | safar, yo'l | The journey takes three hours. | Safar uch soat davom etadi.
+abroad | adverb | in or to a foreign country | chet elda, chet elga | She wants to study abroad. | U chet elda o'qimoqchi.
+to arrive | verb | to reach a place | yetib kelmoq | The train arrives at six. | Poyezd soat oltida yetib keladi.
+to leave | verb | to go away from a place | jo'nab ketmoq, tark etmoq | We leave home at eight. | Uydan soat sakkizda chiqamiz.
+to book | verb | to arrange to have a room, seat or ticket in advance | bron qilmoq | I booked a room for two nights. | Ikki kechaga xona bron qildim.
+trip | noun | a short journey to a place and back | sayohat (qisqa) | We had a trip to Samarkand. | Samarqandga sayohat qildik.
+station | noun | a place where trains or buses stop for passengers | bekat, vokzal | The station is five minutes away. | Vokzal besh daqiqalik yo'lda.
+tourist | noun | a person who visits a place for pleasure | sayyoh | Many tourists visit Bukhara. | Ko'plab sayyohlar Buxoroga tashrif buyurishadi.
+delay | noun | a time when something happens later than planned | kechikish | There is a two-hour delay. | Ikki soatlik kechikish bor.
+## health | 🩺 | Health & Body | Salomatlik va tana | Здоровье и тело
+headache | noun | a pain in your head | bosh og'rig'i | I have a terrible headache. | Boshim qattiq og'riyapti.
+medicine | noun | something you take to get better when you are ill | dori | Take this medicine twice a day. | Bu dorini kuniga ikki marta iching.
+fever | noun | a high body temperature caused by illness | isitma | The child has a fever. | Bolaning isitmasi bor.
+healthy | adjective | strong and not ill | sog'lom | Fruit is healthy food. | Meva sog'lom ovqat.
+ill | adjective | not feeling well; sick | kasal, betob | He was ill last week. | U o'tgan hafta kasal edi.
+pain | noun | the feeling you have when part of your body hurts | og'riq | I feel pain in my back. | Belimda og'riq sezyapman.
+to hurt | verb | to cause pain, or to feel pain | og'rimoq, og'ritmoq | My leg hurts. | Oyog'im og'riyapti.
+to rest | verb | to stop working or moving in order to relax | dam olmoq | You should rest for a few days. | Bir necha kun dam olishingiz kerak.
+appointment | noun | a fixed time to meet someone, e.g. a doctor | uchrashuv (oldindan belgilangan) | I have a doctor's appointment at 3. | Soat 3 da shifokor qabulim bor.
+exercise | noun | physical activity you do to stay strong and healthy | jismoniy mashq | Exercise is good for your heart. | Jismoniy mashq yurak uchun foydali.
+tooth | noun | one of the hard white things in your mouth used for biting | tish | I brush my teeth twice a day. | Tishlarimni kuniga ikki marta yuvaman.
+stomach | noun | the organ in your body where food goes after you eat | oshqozon, qorin | My stomach hurts. | Qornim og'riyapti.
+cold | noun | a common illness that makes you sneeze and cough | shamollash | I caught a cold. | Shamollab qoldim.
+nurse | noun | a person who looks after sick people in a hospital | hamshira | The nurse gave me an injection. | Hamshira menga ukol qildi.
+to feel | verb | to experience an emotion or a physical state | his qilmoq | I feel much better today. | Bugun o'zimni ancha yaxshi his qilyapman.
+## shopping | 🛒 | Shopping | Xarid | Покупки
+price | noun | the amount of money you pay for something | narx | The price is too high. | Narxi juda baland.
+cheap | adjective | not costing much money | arzon | This shirt is cheap. | Bu ko'ylak arzon.
+expensive | adjective | costing a lot of money | qimmat | That car is very expensive. | U mashina juda qimmat.
+to pay | verb | to give money for something | to'lamoq | Can I pay by card? | Karta bilan to'lasam bo'ladimi?
+cash | noun | money in coins or notes | naqd pul | I don't have any cash. | Menda naqd pul yo'q.
+receipt | noun | a piece of paper that shows you have paid | chek, kvitansiya | Keep the receipt. | Chekni saqlab qo'ying.
+size | noun | how big or small something is | o'lcham, razmer | What size are these shoes? | Bu tuflilar qaysi razmerda?
+customer | noun | a person who buys things from a shop | xaridor, mijoz | The shop has many customers. | Do'konda xaridorlar ko'p.
+sale | noun | a time when a shop sells things at lower prices | chegirma, arzon savdo | I bought this coat in a sale. | Bu paltoni chegirmada sotib oldim.
+to try on | verb | to put on clothes to see if they fit | kiyib ko'rmoq | Can I try on this jacket? | Bu kurtkani kiyib ko'rsam bo'ladimi?
+market | noun | a place where people buy and sell food and goods | bozor | We buy fruit at the market. | Mevani bozordan olamiz.
+to spend | verb | to use money to buy things | sarflamoq | I spend too much on coffee. | Qahvaga juda ko'p pul sarflayman.
+bill | noun | a piece of paper showing how much you must pay | hisob (to'lov) | Can we have the bill, please? | Hisobni olib kelsangiz, iltimos.
+change | noun | the money you get back when you pay more than the price | qaytim | Here is your change. | Mana qaytimingiz.
+discount | noun | a reduction in the usual price | chegirma | Students get a 10% discount. | Talabalarga 10% chegirma beriladi.
+## weather | ⛅ | Weather & Nature | Ob-havo va tabiat | Погода и природа
+weather | noun | the conditions in the air, e.g. sun, rain or wind | ob-havo | The weather is nice today. | Bugun ob-havo yaxshi.
+sunny | adjective | with a lot of sunshine | quyoshli | It's a sunny day. | Quyoshli kun.
+rainy | adjective | having a lot of rain | yomg'irli | Autumn is rainy here. | Bu yerda kuz yomg'irli bo'ladi.
+snow | noun | soft white pieces of frozen water that fall from the sky | qor | The children are playing in the snow. | Bolalar qorda o'ynashyapti.
+wind | noun | air that moves quickly | shamol | The wind is very strong today. | Bugun shamol juda kuchli.
+cloud | noun | a white or grey mass in the sky made of small drops of water | bulut | There are dark clouds in the sky. | Osmonda qora bulutlar bor.
+temperature | noun | how hot or cold something is | harorat | The temperature is 35 degrees. | Harorat 35 daraja.
+season | noun | one of the four parts of the year: spring, summer, autumn, winter | fasl | Spring is my favourite season. | Bahor mening sevimli faslim.
+forest | noun | a large area of land covered with trees | o'rmon | We walked in the forest. | O'rmonda sayr qildik.
+river | noun | a large natural flow of water across land | daryo | The Amu Darya is a long river. | Amudaryo uzun daryo.
+mountain | noun | a very high hill | tog' | They climbed the mountain. | Ular toqqa chiqishdi.
+lake | noun | a large area of water with land all around it | ko'l | We swam in the lake. | Ko'lda suzdik.
+storm | noun | very bad weather with strong wind and rain | bo'ron | The storm broke many trees. | Bo'ron ko'p daraxtlarni sindirdi.
+warm | adjective | a little hot, in a pleasant way | iliq | It's warm in spring. | Bahorda havo iliq.
+dry | adjective | without water or rain | quruq | The summer here is hot and dry. | Bu yerda yoz issiq va quruq.

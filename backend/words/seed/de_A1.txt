@@ -1,0 +1,65 @@
+# word | part_of_speech | definition (DE) | translation (UZ) | example | example (UZ)
+## essen | 🍎 | Food | Ovqat | Еда
+der Apfel | noun | eine runde Frucht, rot, grün oder gelb | olma | Ich esse jeden Tag einen Apfel. | Men har kuni bitta olma yeyman.
+das Brot | noun | ein Lebensmittel aus Mehl, Wasser und Hefe, im Ofen gebacken | non | Wir kaufen morgens frisches Brot. | Biz ertalab yangi non sotib olamiz.
+das Wasser | noun | die klare Flüssigkeit, die wir trinken | suv | Ein Glas Wasser, bitte. | Bir stakan suv, iltimos.
+die Milch | noun | die weiße Flüssigkeit von Kühen, die man trinkt | sut | Das Kind trinkt Milch. | Bola sut ichadi.
+das Ei | noun | etwas Rundes, das Hühner legen und das man kocht oder brät | tuxum | Ich esse zwei Eier zum Frühstück. | Nonushtaga ikkita tuxum yeyman.
+der Reis | noun | kleine weiße Körner, die man kocht und isst | guruch | Plov kocht man mit Reis. | Palov guruch bilan pishiriladi.
+das Fleisch | noun | Teile von Tieren, die man isst | go'sht | Mein Vater isst kein Fleisch. | Otam go'sht yemaydi.
+der Tee | noun | ein heißes Getränk aus getrockneten Blättern | choy | Möchtest du grünen Tee? | Ko'k choy ichasanmi?
+der Zucker | noun | etwas Süßes, das man in Getränke und Essen tut | shakar | Ich nehme keinen Zucker. | Men shakar solmayman.
+der Käse | noun | ein festes Lebensmittel aus Milch | pishloq | Das Brot mit Käse schmeckt gut. | Pishloqli non mazali.
+das Frühstück | noun | die erste Mahlzeit am Tag | nonushta | Das Frühstück ist um sieben Uhr. | Nonushta soat yettida.
+das Gemüse | noun | Pflanzen wie Karotten oder Kartoffeln, die man isst | sabzavot | Iss mehr Gemüse! | Ko'proq sabzavot ye!
+lecker | adjective | sehr gut im Geschmack | mazali | Die Suppe ist sehr lecker. | Sho'rva juda mazali.
+kochen | verb | Essen warm und fertig machen | ovqat pishirmoq | Meine Mutter kocht jeden Abend. | Onam har kuni kechqurun ovqat pishiradi.
+trinken | verb | Flüssigkeit in den Mund nehmen und schlucken | ichmoq | Ich trinke viel Wasser. | Men ko'p suv ichaman.
+## familie | 👨‍👩‍👧 | Family & People | Oila va odamlar | Семья и люди
+die Mutter | noun | eine Frau, die ein Kind hat | ona | Meine Mutter ist Lehrerin. | Onam o'qituvchi.
+der Vater | noun | ein Mann, der ein Kind hat | ota | Sein Vater arbeitet in einer Bank. | Uning otasi bankda ishlaydi.
+der Bruder | noun | ein Junge oder Mann mit denselben Eltern wie du | aka / uka | Ich habe einen älteren Bruder. | Mening bitta akam bor.
+die Schwester | noun | ein Mädchen oder eine Frau mit denselben Eltern wie du | opa / singil | Meine Schwester wohnt in Taschkent. | Opam Toshkentda yashaydi.
+der Freund | noun | ein Mensch, den man gut kennt und mag | do'st | Ali ist mein bester Freund. | Ali mening eng yaqin do'stim.
+das Kind | noun | ein junger Mensch, ein Junge oder Mädchen | bola | Das Kind spielt im Garten. | Bola bog'da o'ynayapti.
+das Baby | noun | ein sehr kleines Kind | chaqaloq | Das Baby schläft. | Chaqaloq uxlayapti.
+die Großmutter | noun | die Mutter von deiner Mutter oder deinem Vater | buvi | Meine Großmutter backt gutes Brot. | Buvim zo'r non yopadi.
+der Mann | noun | ein erwachsener männlicher Mensch; auch: Ehemann | erkak; er (turmush o'rtog'i) | Der Mann liest eine Zeitung. | Erkak gazeta o'qiyapti.
+die Frau | noun | ein erwachsener weiblicher Mensch; auch: Ehefrau | ayol; xotin (turmush o'rtog'i) | Die Frau spricht Englisch. | Ayol inglizcha gapiradi.
+der Name | noun | das Wort, mit dem man eine Person ruft | ism | Wie ist dein Name? | Isming nima?
+alt | adjective | schon viele Jahre lebend; nicht jung | qari, keksa | Mein Großvater ist alt, aber stark. | Bobom keksa, lekin baquvvat.
+jung | adjective | erst wenige Jahre alt | yosh | Sie ist noch sehr jung. | U hali juda yosh.
+glücklich | adjective | froh und zufrieden | baxtli | Ich bin glücklich, dich zu sehen. | Seni ko'rganimdan baxtliman.
+lieben | verb | jemanden oder etwas sehr gern haben | sevmoq | Ich liebe meine Familie. | Men oilamni sevaman.
+## wohnen | 🏠 | Home | Uy | Дом
+das Haus | noun | ein Gebäude, in dem Menschen wohnen | uy | Sie wohnen in einem großen Haus. | Ular katta uyda yashashadi.
+das Zimmer | noun | ein Raum in einer Wohnung oder einem Haus | xona | Mein Zimmer ist klein. | Xonam kichkina.
+die Küche | noun | der Raum, in dem man kocht | oshxona | Mama ist in der Küche. | Oyim oshxonada.
+das Bett | noun | ein Möbelstück, in dem man schläft | karavot | Ich gehe um zehn ins Bett. | Men soat o'nda yotaman.
+die Tür | noun | man öffnet sie, um in einen Raum zu gehen | eshik | Mach bitte die Tür zu. | Iltimos, eshikni yop.
+das Fenster | noun | eine Öffnung mit Glas in der Wand | deraza | Öffne das Fenster, es ist warm. | Derazani och, issiq.
+der Tisch | noun | ein Möbelstück mit einer flachen Platte und Beinen | stol | Die Schlüssel liegen auf dem Tisch. | Kalitlar stol ustida.
+der Stuhl | noun | ein Sitz für eine Person mit einer Lehne | stul | Setz dich auf den Stuhl. | Stulga o'tir.
+der Schlüssel | noun | ein kleines Metallding, mit dem man eine Tür öffnet | kalit | Ich habe meinen Schlüssel verloren. | Kalitimni yo'qotdim.
+der Garten | noun | ein Stück Land am Haus mit Blumen oder Gemüse | bog' | Im Garten stehen Apfelbäume. | Bog'da olma daraxtlari bor.
+die Wohnung | noun | mehrere Räume in einem Haus, in denen man lebt | kvartira | Unsere Wohnung hat drei Zimmer. | Kvartiramiz uch xonali.
+schlafen | verb | sich mit geschlossenen Augen ausruhen, meist nachts | uxlamoq | Babys schlafen viel. | Chaqaloqlar ko'p uxlashadi.
+groß | adjective | von großem Umfang, nicht klein | katta | Das ist ein großer Hund. | Bu katta it.
+klein | adjective | nicht groß | kichik | Ich habe eine kleine Wohnung. | Mening kichkina kvartiram bor.
+sauber | adjective | nicht schmutzig | toza | Deine Hände sind sauber. | Qo'llaring toza.
+## alltag | ⏰ | Daily Life | Kundalik hayot | Повседневная жизнь
+der Morgen | noun | der frühe Teil des Tages | ertalab, tong | Am Morgen trinke ich Kaffee. | Ertalab qahva ichaman.
+die Nacht | noun | die dunkle Zeit, in der man schläft | tun, kecha | Gute Nacht! | Xayrli tun!
+der Tag | noun | eine Zeit von 24 Stunden | kun | Die Woche hat sieben Tage. | Haftada yetti kun bor.
+die Woche | noun | eine Zeit von sieben Tagen | hafta | Ich sehe sie jede Woche. | Uni har hafta ko'raman.
+die Zeit | noun | was man in Stunden und Minuten misst | vaqt | Ich habe keine Zeit. | Vaqtim yo'q.
+die Schule | noun | ein Ort, wo Kinder lernen | maktab | Die Schule ist neben meinem Haus. | Maktab uyim yonida.
+das Buch | noun | viele bedruckte Seiten in einem Umschlag | kitob | Das Buch ist sehr interessant. | Kitob juda qiziq.
+das Handy | noun | ein kleines Telefon, das man mitnimmt | mobil telefon | Mein Handy ist in der Tasche. | Telefonim sumkada.
+lesen | verb | Wörter ansehen und verstehen | o'qimoq | Ich lese vor dem Schlafen. | Uxlashdan oldin o'qiyman.
+schreiben | verb | Buchstaben oder Wörter auf Papier oder einen Bildschirm bringen | yozmoq | Schreib deinen Namen hier. | Ismingni shu yerga yoz.
+gehen | verb | sich zu Fuß von einem Ort zu einem anderen bewegen | bormoq, yurmoq | Wir gehen in den Park. | Biz bog'ga boramiz.
+arbeiten | verb | eine Arbeit machen, meistens für Geld | ishlamoq | Sie arbeitet im Krankenhaus. | U kasalxonada ishlaydi.
+kaufen | verb | etwas für Geld bekommen | sotib olmoq | Ich will eine neue Tasche kaufen. | Yangi sumka sotib olmoqchiman.
+müde | adjective | man möchte schlafen oder sich ausruhen | charchagan | Nach der Arbeit bin ich müde. | Ishdan keyin charchayman.
+heute | adverb | an diesem Tag | bugun | Heute ist Montag. | Bugun dushanba.

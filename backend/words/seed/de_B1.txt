@@ -1,0 +1,65 @@
+# word | part_of_speech | definition (DE) | translation (UZ) | example | example (UZ)
+## arbeit | 💼 | Work & Career | Ish va kasb | Работа и карьера
+das Gehalt | noun | das Geld, das man jeden Monat für seine Arbeit bekommt | maosh, oylik | Sie bekommt ein gutes Gehalt. | U yaxshi maosh oladi.
+der Kollege | noun | eine Person, mit der man zusammenarbeitet | hamkasb | Meine Kollegen sind sehr nett. | Hamkasblarim juda yoqimli.
+einstellen | verb | jemandem eine Arbeitsstelle geben | ishga olmoq | Die Firma hat zehn Leute eingestellt. | Firma o'n kishini ishga oldi.
+das Vorstellungsgespräch | noun | ein Gespräch, in dem man sich für eine Stelle vorstellt | ishga qabul suhbati | Morgen habe ich ein Vorstellungsgespräch. | Ertaga ishga kirish suhbatim bor.
+die Erfahrung | noun | Wissen und Können, das man durch Tun bekommt | tajriba | Haben Sie Erfahrung im Verkauf? | Savdoda tajribangiz bormi?
+die Frist | noun | die Zeit, bis zu der etwas fertig sein muss | muddat | Die Frist endet am Freitag. | Muddat juma kuni tugaydi.
+sich bewerben | verb | offiziell um eine Arbeitsstelle oder einen Platz bitten | ariza topshirmoq | Ich habe mich bei drei Firmen beworben. | Uchta firmaga ariza topshirdim.
+die Fähigkeit | noun | etwas, das man gut kann | qobiliyat, ko'nikma | Kommunikation ist eine wichtige Fähigkeit. | Muloqot muhim ko'nikma.
+der Chef | noun | die Person, die in einer Firma die Leitung hat | boshliq, xo'jayin | Mein Chef hat mir einen Tag frei gegeben. | Boshlig'im menga bir kun dam berdi.
+der Beruf | noun | die Arbeit, die man gelernt hat und macht | kasb | Was sind Sie von Beruf? | Kasbingiz nima?
+kündigen | verb | einen Arbeitsvertrag beenden | ishdan bo'shamoq, shartnomani bekor qilmoq | Sie hat letzten Monat gekündigt. | U o'tgan oy ishdan bo'shadi.
+die Besprechung | noun | ein Treffen, bei dem man über etwas spricht | yig'ilish, majlis | Die Besprechung beginnt um zehn. | Yig'ilish soat o'nda boshlanadi.
+verdienen | verb | Geld für seine Arbeit bekommen | pul topmoq | Wie viel verdienst du? | Qancha pul topasan?
+der Mitarbeiter | noun | eine Person, die in einer Firma arbeitet | xodim | Die Firma hat 200 Mitarbeiter. | Firmada 200 nafar xodim bor.
+die Beförderung | noun | der Aufstieg auf eine höhere Stelle in der Firma | lavozimga ko'tarilish | Er hat eine Beförderung bekommen. | U lavozimda ko'tarildi.
+## gefuehle | 💛 | Emotions | His-tuyg'ular | Эмоции
+stolz | adjective | froh über etwas, das man selbst oder andere geschafft haben | faxrlangan | Ich bin stolz auf meine Tochter. | Qizim bilan faxrlanaman.
+nervös | adjective | unruhig und ein bisschen ängstlich | hayajonlangan, asabiy | Vor Prüfungen bin ich immer nervös. | Imtihondan oldin doim hayajonlanaman.
+eifersüchtig | adjective | unglücklich, weil man Angst hat, jemanden oder etwas zu verlieren | rashkchi | Er ist eifersüchtig auf seinen Bruder. | U akasidan rashk qiladi.
+peinlich | adjective | so, dass man sich vor anderen schämt | uyatli, noqulay | Das war mir sehr peinlich. | Bu men uchun juda noqulay bo'ldi.
+enttäuscht | adjective | traurig, weil etwas nicht so gut war wie erhofft | hafsalasi pir bo'lgan | Wir waren von dem Film enttäuscht. | Filmdan hafsalamiz pir bo'ldi.
+dankbar | adjective | voller Dank für etwas | minnatdor | Ich bin dir für deine Hilfe dankbar. | Yordaming uchun senga minnatdorman.
+einsam | adjective | traurig, weil man allein ist | yolg'iz | In der neuen Stadt fühlte sie sich einsam. | Yangi shaharda u o'zini yolg'iz his qildi.
+die Angst | noun | das Gefühl, wenn man sich fürchtet | qo'rquv | Er hat Angst vor Hunden. | U itlardan qo'rqadi.
+erleichtert | adjective | froh, weil etwas Schlimmes vorbei oder nicht passiert ist | yengil tortgan | Ich war erleichtert, als ich bestanden hatte. | Imtihondan o'tganimda yengil tortdim.
+selbstbewusst | adjective | sicher in Bezug auf sich selbst und seine Fähigkeiten | o'ziga ishongan | Sie spricht sehr selbstbewusst. | U juda o'ziga ishonch bilan gapiradi.
+traurig | adjective | nicht froh, voller Kummer | g'amgin, xafa | Warum bist du so traurig? | Nega bunchalik xafasan?
+ruhig | adjective | entspannt, ohne Aufregung | xotirjam, tinch | Bleib ruhig und hör zu. | Xotirjam bo'l va eshit.
+die Laune | noun | wie man sich in einem bestimmten Moment fühlt | kayfiyat | Du hast heute gute Laune. | Bugun kayfiyating yaxshi.
+sich freuen | verb | froh sein über etwas | xursand bo'lmoq | Ich freue mich auf das Wochenende. | Dam olish kunlarini intiqlik bilan kutyapman.
+wütend | adjective | sehr ärgerlich | g'azablangan, jahli chiqqan | Mein Vater war wütend auf mich. | Otamning menga jahli chiqdi.
+## technik | 💻 | Technology | Texnologiya | Технологии
+das Gerät | noun | eine Maschine oder ein Werkzeug für einen bestimmten Zweck | qurilma, asbob | Schalten Sie alle Geräte aus. | Barcha qurilmalarni o'chiring.
+herunterladen | verb | Daten aus dem Internet auf einen Computer oder ein Handy holen | yuklab olmoq | Ich habe eine neue App heruntergeladen. | Yangi ilova yuklab oldim.
+das Passwort | noun | ein geheimes Wort, mit dem man sich anmeldet | parol | Sag niemandem dein Passwort. | Parolingni hech kimga aytma.
+der Bildschirm | noun | die flache Fläche, auf der man Bilder und Texte sieht | ekran | Der Bildschirm meines Handys ist kaputt. | Telefonimning ekrani singan.
+der Akku | noun | eine Batterie, die man wieder aufladen kann | akkumulyator, batareya | Mein Akku ist fast leer. | Batareyam deyarli tugadi.
+aufladen | verb | Strom in einen Akku bringen | quvvatlamoq, zaryad qilmoq | Ich muss mein Handy aufladen. | Telefonimni zaryadlashim kerak.
+die Software | noun | Programme, die auf einem Computer laufen | dasturiy ta'minot | Wir haben neue Software installiert. | Yangi dasturiy ta'minot o'rnatdik.
+suchen | verb | versuchen, etwas zu finden | qidirmoq | Ich suche die Antwort im Internet. | Javobni internetdan qidiryapman.
+die Webseite | noun | eine Seite im Internet | veb-sahifa, sayt | Besuchen Sie unsere Webseite. | Saytimizga tashrif buyuring.
+löschen | verb | etwas von einem Computer entfernen | o'chirmoq | Ich habe die alten Fotos gelöscht. | Eski rasmlarni o'chirdim.
+das Konto | noun | ein persönlicher Zugang zu einer Webseite oder Bank | hisob, akkaunt | Erstellen Sie ein Konto. | Akkaunt yarating.
+drahtlos | adjective | ohne Kabel | simsiz | Das ist eine drahtlose Maus. | Bu simsiz sichqoncha.
+aktualisieren | verb | auf den neuesten Stand bringen | yangilamoq | Aktualisiere die App! | Ilovani yangila!
+die Erfindung | noun | etwas Neues, das jemand zum ersten Mal gemacht hat | ixtiro | Das Telefon war eine wichtige Erfindung. | Telefon muhim ixtiro edi.
+der Drucker | noun | ein Gerät, das Texte und Bilder auf Papier bringt | printer | Der Drucker hat kein Papier mehr. | Printerda qog'oz tugadi.
+## stadt | 🏙️ | City & Society | Shahar va jamiyat | Город и общество
+die Nachbarschaft | noun | die Gegend um die eigene Wohnung und die Leute dort | mahalla, qo'shnilar | Es ist eine ruhige Nachbarschaft. | Bu tinch mahalla.
+der Verkehr | noun | die Autos und anderen Fahrzeuge auf den Straßen | transport harakati, tirbandlik | Morgens gibt es viel Verkehr. | Ertalab yo'llarda tirbandlik ko'p.
+voll | adjective | mit vielen Menschen oder Dingen gefüllt | to'la, gavjum | Der Bus war sehr voll. | Avtobus juda gavjum edi.
+die Umweltverschmutzung | noun | Schaden an Luft, Wasser oder Boden durch schädliche Stoffe | atrof-muhitning ifloslanishi | Umweltverschmutzung ist ein großes Problem. | Atrof-muhitning ifloslanishi katta muammo.
+der Bürger | noun | eine Person, die zu einem Staat oder einer Stadt gehört | fuqaro | Er ist Bürger Usbekistans. | U O'zbekiston fuqarosi.
+das Gesetz | noun | eine offizielle Regel, die alle befolgen müssen | qonun | Alle müssen das Gesetz befolgen. | Hamma qonunga amal qilishi kerak.
+die Regierung | noun | die Gruppe von Menschen, die einen Staat leitet | hukumat | Die Regierung hat eine neue Straße gebaut. | Hukumat yangi yo'l qurdi.
+das Verbrechen | noun | eine Tat, die gegen das Gesetz ist | jinoyat | Hier gibt es wenige Verbrechen. | Bu yerda jinoyat kam.
+wählen | verb | bei einer Wahl seine Stimme geben; auch: aussuchen | saylamoq, ovoz bermoq; tanlamoq | Hast du gewählt? | Ovoz berdingmi?
+öffentlich | adjective | für alle Menschen da | ommaviy, jamoat | Nutzen Sie öffentliche Verkehrsmittel. | Jamoat transportidan foydalaning.
+die Miete | noun | das Geld, das man jeden Monat für eine Wohnung zahlt | ijara haqi | Die Miete ist sehr hoch. | Ijara haqi juda baland.
+trennen | verb | Dinge auseinander tun, z. B. Müll nach Sorten | ajratmoq | Wir trennen den Müll. | Biz chiqindini saralaymiz.
+der Müll | noun | Dinge, die man nicht mehr braucht und wegwirft | axlat, chiqindi | Bring bitte den Müll raus. | Iltimos, axlatni chiqarib tashla.
+die Gemeinschaft | noun | eine Gruppe von Menschen, die zusammengehören | jamoa, hamjamiyat | Unsere Gemeinschaft hilft sich gegenseitig. | Jamoamiz bir-biriga yordam beradi.
+ehrenamtlich | adjective | ohne Bezahlung, freiwillig zum Helfen | ko'ngilli ravishda, bepul | Sie arbeitet ehrenamtlich im Krankenhaus. | U kasalxonada ko'ngilli bo'lib ishlaydi.

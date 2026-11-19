@@ -1,0 +1,10 @@
+from django.contrib import admin
+
+from .models import ScanLog
+
+
+@admin.register(ScanLog)
+class ScanLogAdmin(admin.ModelAdmin):
+    list_display = ("user", "created_at", "engine", "pairs_found", "ok")
+    list_filter = ("engine", "ok")
+    raw_id_fields = ("user",)

@@ -1,0 +1,65 @@
+# word | part_of_speech | definition (EN) | translation (UZ) | example | example (UZ)
+## business | 📈 | Business & Money | Biznes va pul | Бизнес и деньги
+profit | noun | money you make after paying all costs | foyda | The company made a big profit. | Kompaniya katta foyda ko'rdi.
+investment | noun | money put into something to make more money later | sarmoya, investitsiya | Property is a safe investment. | Ko'chmas mulk xavfsiz sarmoya.
+to negotiate | verb | to discuss something to reach an agreement | muzokara olib bormoq | They negotiated a new contract. | Ular yangi shartnoma bo'yicha muzokara olib borishdi.
+budget | noun | a plan of how much money you can spend | byudjet | We are working on a tight budget. | Biz cheklangan byudjet bilan ishlayapmiz.
+competitor | noun | a company or person trying to be more successful than others | raqobatchi | Our main competitor lowered its prices. | Asosiy raqobatchimiz narxlarini tushirdi.
+to launch | verb | to start selling a new product or begin an activity | ishga tushirmoq | They launched a new phone. | Ular yangi telefonni sotuvga chiqarishdi.
+revenue | noun | the total income of a business | daromad (umumiy tushum) | Revenue grew by 20%. | Daromad 20% ga oshdi.
+loan | noun | money that you borrow and must pay back | qarz, kredit | He took a loan from the bank. | U bankdan kredit oldi.
+debt | noun | money that you owe | qarz | They paid off all their debts. | Ular barcha qarzlarini to'lab bo'lishdi.
+to afford | verb | to have enough money to pay for something | qurbi yetmoq | We can't afford a new car. | Yangi mashinaga qurbimiz yetmaydi.
+supply | noun | an amount of something available to be used | ta'minot, zaxira | Supply is lower than demand. | Taklif talabdan past.
+demand | noun | the need or desire of people to buy something | talab | There is high demand for nurses. | Hamshiralarga talab yuqori.
+contract | noun | a written legal agreement | shartnoma | Read the contract before you sign. | Imzolashdan oldin shartnomani o'qing.
+to invest | verb | to put money into something to get a profit | sarmoya kiritmoq | She invested in a small café. | U kichik kafega sarmoya kiritdi.
+entrepreneur | noun | a person who starts their own business | tadbirkor | Young entrepreneurs need support. | Yosh tadbirkorlar qo'llab-quvvatlashga muhtoj.
+## environment | 🌱 | Environment | Atrof-muhit | Окружающая среда
+climate | noun | the usual weather conditions of an area over a long time | iqlim | The climate is changing. | Iqlim o'zgarmoqda.
+drought | noun | a long period with little or no rain | qurg'oqchilik | The drought destroyed the crops. | Qurg'oqchilik hosilni nobud qildi.
+endangered | adjective | at risk of disappearing completely | yo'qolib ketish xavfi ostidagi | The snow leopard is an endangered animal. | Qor qoploni yo'qolib ketish xavfi ostidagi hayvon.
+renewable | adjective | able to be replaced naturally, like sun or wind energy | qayta tiklanadigan | Solar power is renewable energy. | Quyosh energiyasi qayta tiklanadigan energiya.
+to waste | verb | to use more of something than you need | isrof qilmoq | Don't waste water. | Suvni isrof qilmang.
+emission | noun | gas or other substance sent into the air | chiqindi gaz, chiqarilish | Cars produce harmful emissions. | Mashinalar zararli gazlar chiqaradi.
+to protect | verb | to keep someone or something safe from harm | himoya qilmoq | We must protect nature. | Biz tabiatni himoya qilishimiz kerak.
+species | noun | a group of animals or plants of the same kind | tur (biologik) | Thousands of species live here. | Bu yerda minglab turlar yashaydi.
+flood | noun | a large amount of water covering land that is usually dry | toshqin, suv toshqini | The flood damaged many homes. | Toshqin ko'plab uylarga zarar yetkazdi.
+sustainable | adjective | able to continue without harming the environment | barqaror | We need sustainable farming. | Bizga barqaror dehqonchilik kerak.
+to reduce | verb | to make something smaller in size or amount | kamaytirmoq | Reduce your plastic use. | Plastik iste'molingizni kamaytiring.
+wildlife | noun | animals and plants that live in natural conditions | yovvoyi tabiat | The park protects local wildlife. | Bog' mahalliy yovvoyi tabiatni himoya qiladi.
+fuel | noun | material like petrol or coal that is burned for energy | yoqilg'i | Fuel prices went up again. | Yoqilg'i narxi yana oshdi.
+harmful | adjective | causing damage or injury | zararli | Smoking is harmful to health. | Chekish sog'liqqa zararli.
+to destroy | verb | to damage something so badly that it no longer exists | vayron qilmoq | Fire destroyed the forest. | Yong'in o'rmonni vayron qildi.
+## education | 🎓 | Education & Learning | Ta'lim | Образование
+degree | noun | a qualification given by a university | daraja (ilmiy/akademik) | She has a degree in law. | Uning huquqshunoslik bo'yicha diplomi bor.
+scholarship | noun | money given to a student to help pay for their studies | grant, stipendiya | He won a scholarship to study in Korea. | U Koreyada o'qish uchun grant yutdi.
+to graduate | verb | to finish your studies at a university or school | bitirmoq | I graduated in 2020. | Men 2020-yilda o'qishni bitirdim.
+assignment | noun | a piece of work given to a student | topshiriq | The assignment is due next week. | Topshiriqni kelasi haftagacha topshirish kerak.
+lecture | noun | a talk given to students about a subject | ma'ruza | The lecture lasted two hours. | Ma'ruza ikki soat davom etdi.
+research | noun | detailed study to discover new facts | tadqiqot | They are doing research on cancer. | Ular saraton bo'yicha tadqiqot olib borishyapti.
+knowledge | noun | information and understanding you have | bilim | Knowledge is power. | Bilim — kuch.
+to memorize | verb | to learn something so you remember it exactly | yod olmoq | I memorized twenty new words. | Yigirmata yangi so'z yodladim.
+curriculum | noun | the subjects taught in a school or course | o'quv dasturi | Coding is now part of the curriculum. | Dasturlash endi o'quv dasturining bir qismi.
+to fail | verb | to not pass a test or exam | yiqilmoq (imtihondan), muvaffaqiyatsizlikka uchramoq | He failed his driving test. | U haydovchilik imtihonidan yiqildi.
+fluent | adjective | able to speak a language easily and well | ravon | She is fluent in three languages. | U uch tilda ravon gapiradi.
+to improve | verb | to become better or make something better | yaxshilamoq | Reading improves your vocabulary. | O'qish so'z boyligingizni oshiradi.
+tuition | noun | money paid for teaching, especially at a university | o'qish to'lovi, kontrakt | Tuition fees are rising. | O'qish to'lovlari oshib bormoqda.
+semester | noun | one of the two periods into which a school year is divided | semestr | The new semester starts in September. | Yangi semestr sentyabrda boshlanadi.
+to evaluate | verb | to judge how good or useful something is | baholamoq | Teachers evaluate students' progress. | O'qituvchilar o'quvchilar yutuqlarini baholaydi.
+## media | 📰 | Media & Communication | Media va muloqot | СМИ и общение
+headline | noun | the title of a newspaper story printed in large letters | sarlavha | The headline caught my eye. | Sarlavha e'tiborimni tortdi.
+journalist | noun | a person who writes news for newspapers, TV, etc. | jurnalist | The journalist interviewed the minister. | Jurnalist vazir bilan suhbat o'tkazdi.
+to broadcast | verb | to send out a programme on TV or radio | efirga uzatmoq | The match was broadcast live. | O'yin jonli efirda ko'rsatildi.
+advertisement | noun | a picture, film or text that tries to make people buy something | reklama, e'lon | I saw an advertisement for a new car. | Yangi mashina reklamasini ko'rdim.
+audience | noun | the people who watch or listen to something | tomoshabinlar, auditoriya | The audience clapped loudly. | Tomoshabinlar qattiq qarsak chalishdi.
+reliable | adjective | able to be trusted | ishonchli | Is this source reliable? | Bu manba ishonchlimi?
+to persuade | verb | to make someone agree to do or believe something | ko'ndirmoq | I persuaded him to come. | Uni kelishga ko'ndirdim.
+opinion | noun | what you think about something | fikr | In my opinion, it's a good idea. | Menimcha, bu yaxshi fikr.
+rumour | noun | a story that may not be true and that people pass on | mish-mish | Don't believe every rumour. | Har bir mish-mishga ishonmang.
+to influence | verb | to have an effect on someone's ideas or actions | ta'sir qilmoq | Social media influences young people. | Ijtimoiy tarmoqlar yoshlarga ta'sir qiladi.
+issue | noun | an important subject or problem people discuss | masala, muammo | Climate change is a global issue. | Iqlim o'zgarishi global muammo.
+to argue | verb | to disagree with someone in words, often angrily | bahslashmoq, janjallashmoq | They argue about money. | Ular pul ustida janjallashishadi.
+privacy | noun | the state of being free from public attention | shaxsiy daxlsizlik | Celebrities have little privacy. | Mashhurlarning shaxsiy hayoti kam bo'ladi.
+viewpoint | noun | a particular way of thinking about something | nuqtai nazar | Try to understand her viewpoint. | Uning nuqtai nazarini tushunishga harakat qiling.
+biased | adjective | unfairly preferring one person or side | xolis bo'lmagan, bir tomonlama | The report was clearly biased. | Hisobot aniq bir tomonlama edi.

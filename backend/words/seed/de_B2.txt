@@ -1,0 +1,65 @@
+# word | part_of_speech | definition (DE) | translation (UZ) | example | example (UZ)
+## wirtschaft | 📈 | Business & Money | Biznes va pul | Бизнес и деньги
+der Gewinn | noun | das Geld, das nach Abzug aller Kosten übrig bleibt | foyda | Die Firma hat einen großen Gewinn gemacht. | Firma katta foyda ko'rdi.
+die Investition | noun | Geld, das man einsetzt, um später mehr zu bekommen | sarmoya, investitsiya | Immobilien sind eine sichere Investition. | Ko'chmas mulk xavfsiz sarmoya.
+verhandeln | verb | über etwas sprechen, um eine Einigung zu erreichen | muzokara olib bormoq | Sie verhandeln über einen neuen Vertrag. | Ular yangi shartnoma bo'yicha muzokara olib borishyapti.
+das Budget | noun | der Plan, wie viel Geld man ausgeben kann | byudjet | Unser Budget ist knapp. | Byudjetimiz cheklangan.
+die Konkurrenz | noun | andere Firmen, die dieselben Waren anbieten | raqobat, raqobatchilar | Die Konkurrenz hat die Preise gesenkt. | Raqobatchilar narxlarni tushirishdi.
+einführen | verb | ein neues Produkt auf den Markt bringen oder etwas Neues beginnen | joriy etmoq, chiqarmoq | Die Firma führt ein neues Handy ein. | Firma yangi telefon chiqarmoqda.
+der Umsatz | noun | der Gesamtwert aller verkauften Waren in einer Zeit | savdo hajmi, tushum | Der Umsatz ist um 20 Prozent gestiegen. | Savdo hajmi 20 foizga oshdi.
+der Kredit | noun | Geld, das man von einer Bank leiht | kredit | Er hat einen Kredit aufgenommen. | U kredit oldi.
+die Schulden | noun | Geld, das man jemandem zurückzahlen muss (Plural) | qarzlar | Sie haben alle Schulden bezahlt. | Ular barcha qarzlarini to'lashdi.
+sich leisten | verb | genug Geld für etwas haben | qurbi yetmoq | Wir können uns kein neues Auto leisten. | Yangi mashinaga qurbimiz yetmaydi.
+das Angebot | noun | die Menge an Waren, die verkauft werden kann; auch: Offerte | taklif | Angebot und Nachfrage bestimmen den Preis. | Narxni talab va taklif belgilaydi.
+die Nachfrage | noun | der Wunsch der Menschen, etwas zu kaufen | talab | Die Nachfrage nach Pflegekräften ist groß. | Hamshiralarga talab katta.
+der Vertrag | noun | eine schriftliche, rechtlich gültige Vereinbarung | shartnoma | Lies den Vertrag, bevor du unterschreibst. | Imzolashdan oldin shartnomani o'qi.
+investieren | verb | Geld in etwas stecken, um Gewinn zu machen | sarmoya kiritmoq | Sie hat in ein Café investiert. | U kafega sarmoya kiritdi.
+der Unternehmer | noun | eine Person, die eine eigene Firma gründet und leitet | tadbirkor | Junge Unternehmer brauchen Unterstützung. | Yosh tadbirkorlarga ko'mak kerak.
+## umwelt | 🌱 | Environment | Atrof-muhit | Окружающая среда
+das Klima | noun | das typische Wetter in einem Gebiet über lange Zeit | iqlim | Das Klima verändert sich. | Iqlim o'zgarmoqda.
+die Dürre | noun | eine lange Zeit ohne Regen | qurg'oqchilik | Die Dürre hat die Ernte zerstört. | Qurg'oqchilik hosilni nobud qildi.
+bedroht | adjective | in Gefahr, ganz zu verschwinden | xavf ostidagi | Der Schneeleopard ist eine bedrohte Tierart. | Qor qoploni xavf ostidagi hayvon turi.
+erneuerbar | adjective | so, dass es sich auf natürliche Weise wieder bildet | qayta tiklanadigan | Sonnenenergie ist erneuerbar. | Quyosh energiyasi qayta tiklanadi.
+verschwenden | verb | mehr von etwas verbrauchen als nötig | isrof qilmoq | Verschwende kein Wasser! | Suvni isrof qilma!
+der Ausstoß | noun | die Menge an Gasen oder Stoffen, die in die Luft gelangt | chiqindi (gaz) chiqarish | Der CO2-Ausstoß muss sinken. | CO2 chiqarilishi kamayishi kerak.
+schützen | verb | dafür sorgen, dass jemandem oder etwas nichts passiert | himoya qilmoq | Wir müssen die Natur schützen. | Biz tabiatni himoya qilishimiz kerak.
+die Tierart | noun | eine Gruppe von Tieren derselben Sorte | hayvon turi | Hier leben viele seltene Tierarten. | Bu yerda ko'plab noyob hayvon turlari yashaydi.
+die Überschwemmung | noun | wenn viel Wasser ein normalerweise trockenes Gebiet bedeckt | suv toshqini | Die Überschwemmung hat viele Häuser beschädigt. | Toshqin ko'plab uylarga zarar yetkazdi.
+nachhaltig | adjective | so, dass es der Umwelt langfristig nicht schadet | barqaror | Wir brauchen eine nachhaltige Landwirtschaft. | Bizga barqaror qishloq xo'jaligi kerak.
+verringern | verb | kleiner oder weniger machen | kamaytirmoq | Verringere deinen Plastikverbrauch. | Plastik iste'molingni kamaytir.
+der Brennstoff | noun | ein Stoff wie Kohle oder Öl, den man verbrennt, um Energie zu gewinnen | yoqilg'i | Kohle ist ein fossiler Brennstoff. | Ko'mir qazilma yoqilg'idir.
+schädlich | adjective | so, dass es Schaden bringt | zararli | Rauchen ist schädlich für die Gesundheit. | Chekish sog'liqqa zararli.
+zerstören | verb | etwas so stark beschädigen, dass es nicht mehr existiert | vayron qilmoq | Das Feuer hat den Wald zerstört. | Yong'in o'rmonni vayron qildi.
+der Klimawandel | noun | die langfristige Veränderung des Klimas auf der Erde | iqlim o'zgarishi | Der Klimawandel betrifft uns alle. | Iqlim o'zgarishi barchamizga ta'sir qiladi.
+## bildung | 🎓 | Education & Learning | Ta'lim | Образование
+der Abschluss | noun | das erfolgreiche Ende einer Ausbildung oder eines Studiums | diplom, bitiruv | Sie hat einen Abschluss in Jura. | U huquqshunoslik bo'yicha diplomga ega.
+das Stipendium | noun | Geld, das ein Student zur Unterstützung beim Studium bekommt | stipendiya, grant | Er hat ein Stipendium für Korea bekommen. | U Koreya uchun grant yutdi.
+die Hausarbeit | noun | eine schriftliche Arbeit, die Studenten zu Hause schreiben | uy ishi, referat | Die Hausarbeit muss bis Montag fertig sein. | Referat dushanbagacha tayyor bo'lishi kerak.
+die Vorlesung | noun | ein Vortrag an der Universität für viele Studenten | ma'ruza | Die Vorlesung dauert zwei Stunden. | Ma'ruza ikki soat davom etadi.
+die Forschung | noun | genaue Untersuchungen, um Neues herauszufinden | tadqiqot | Sie arbeitet in der Forschung. | U tadqiqot sohasida ishlaydi.
+das Wissen | noun | alles, was man über etwas weiß | bilim | Wissen ist Macht. | Bilim — kuch.
+auswendig lernen | verb | etwas so lernen, dass man es genau wiedergeben kann | yod olmoq | Ich habe das Gedicht auswendig gelernt. | She'rni yodlab oldim.
+der Lehrplan | noun | der Plan, was in einer Schule gelernt wird | o'quv rejasi | Programmieren steht jetzt im Lehrplan. | Dasturlash endi o'quv rejasida bor.
+durchfallen | verb | eine Prüfung nicht bestehen | yiqilmoq (imtihondan) | Er ist durch die Fahrprüfung gefallen. | U haydovchilik imtihonidan yiqildi.
+fließend | adjective | ohne Mühe und Fehler (beim Sprechen einer Sprache) | ravon | Sie spricht fließend Deutsch. | U nemischa ravon gapiradi.
+verbessern | verb | etwas besser machen | yaxshilamoq | Lesen verbessert den Wortschatz. | O'qish so'z boyligini oshiradi.
+die Studiengebühr | noun | Geld, das man für das Studium an einer Hochschule bezahlt | o'qish to'lovi, kontrakt | Die Studiengebühren steigen. | O'qish to'lovlari oshmoqda.
+das Semester | noun | eine Hälfte des Studienjahres an der Universität | semestr | Das Semester beginnt im Oktober. | Semestr oktyabrda boshlanadi.
+bewerten | verb | beurteilen, wie gut etwas ist | baholamoq | Lehrer bewerten die Leistungen der Schüler. | O'qituvchilar o'quvchilar natijalarini baholaydi.
+die Prüfung | noun | ein Test, der zeigt, was jemand weiß oder kann | imtihon | Morgen habe ich eine wichtige Prüfung. | Ertaga muhim imtihonim bor.
+## medien | 📰 | Media & Communication | Media va muloqot | СМИ и общение
+die Schlagzeile | noun | der Titel eines Zeitungsartikels in großen Buchstaben | sarlavha | Die Schlagzeile war schockierend. | Sarlavha hayratlanarli edi.
+der Journalist | noun | eine Person, die Nachrichten für Zeitung, Radio oder Fernsehen macht | jurnalist | Der Journalist hat den Minister interviewt. | Jurnalist vazir bilan suhbat qildi.
+senden | verb | ein Programm im Fernsehen oder Radio zeigen; auch: schicken | efirga uzatmoq; jo'natmoq | Das Spiel wird live gesendet. | O'yin jonli efirda ko'rsatiladi.
+die Werbung | noun | Bilder, Filme oder Texte, die Menschen zum Kaufen bringen sollen | reklama | Im Fernsehen gibt es zu viel Werbung. | Televizorda reklama juda ko'p.
+das Publikum | noun | die Menschen, die etwas ansehen oder anhören | tomoshabinlar | Das Publikum hat laut geklatscht. | Tomoshabinlar qattiq qarsak chalishdi.
+zuverlässig | adjective | so, dass man sich darauf verlassen kann | ishonchli | Ist diese Quelle zuverlässig? | Bu manba ishonchlimi?
+überzeugen | verb | erreichen, dass jemand etwas glaubt oder tut | ishontirmoq, ko'ndirmoq | Ich habe ihn überzeugt mitzukommen. | Uni birga borishga ko'ndirdim.
+die Meinung | noun | was man über etwas denkt | fikr | Meiner Meinung nach ist das eine gute Idee. | Menimcha, bu yaxshi g'oya.
+das Gerücht | noun | eine Information, die man weitererzählt, die aber vielleicht nicht stimmt | mish-mish | Glaub nicht jedem Gerücht. | Har bir mish-mishga ishonma.
+beeinflussen | verb | eine Wirkung auf jemandes Denken oder Handeln haben | ta'sir qilmoq | Soziale Medien beeinflussen junge Leute. | Ijtimoiy tarmoqlar yoshlarga ta'sir qiladi.
+das Thema | noun | worüber man spricht oder schreibt | mavzu | Das ist ein wichtiges Thema. | Bu muhim mavzu.
+sich streiten | verb | mit Worten heftig uneinig sein | janjallashmoq | Sie streiten sich oft über Geld. | Ular tez-tez pul ustida janjallashishadi.
+die Privatsphäre | noun | der persönliche Bereich, der andere nichts angeht | shaxsiy hayot daxlsizligi | Stars haben wenig Privatsphäre. | Yulduzlarning shaxsiy hayoti kam.
+der Standpunkt | noun | die Art, wie man eine Sache sieht | nuqtai nazar | Ich verstehe deinen Standpunkt. | Nuqtai nazaringni tushunaman.
+einseitig | adjective | nur eine Seite einer Sache zeigend, nicht neutral | bir tomonlama | Der Bericht war sehr einseitig. | Hisobot juda bir tomonlama edi.

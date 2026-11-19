@@ -1,0 +1,65 @@
+# word | part_of_speech | definition (DE) | translation (UZ) | example | example (UZ)
+## reisen | ✈️ | Travel | Sayohat | Путешествия
+der Flughafen | noun | ein Ort, an dem Flugzeuge starten und landen | aeroport | Wir sind früh am Flughafen. | Aeroportga erta keldik.
+die Fahrkarte | noun | ein Papier, das zeigt, dass man für die Fahrt bezahlt hat | chipta (yo'l) | Ich habe die Fahrkarte online gekauft. | Chiptani internetdan sotib oldim.
+der Reisepass | noun | ein offizielles Dokument für Reisen in andere Länder | pasport (xorijga chiqish) | Vergiss deinen Reisepass nicht! | Pasportingni unutma!
+das Gepäck | noun | die Taschen und Koffer, die man auf eine Reise mitnimmt | yuk, bagaj | Mein Gepäck ist sehr schwer. | Yukim juda og'ir.
+das Hotel | noun | ein Haus, in dem man gegen Geld übernachten kann | mehmonxona | Das Hotel liegt am Strand. | Mehmonxona sohilda joylashgan.
+der Bahnhof | noun | ein Ort, an dem Züge halten und abfahren | vokzal | Der Bahnhof ist nicht weit. | Vokzal uzoq emas.
+die Reise | noun | eine Fahrt an einen anderen, oft fernen Ort | sayohat, safar | Die Reise dauert drei Stunden. | Safar uch soat davom etadi.
+der Urlaub | noun | freie Tage, an denen man nicht arbeitet und oft verreist | ta'til | Im Sommer machen wir Urlaub. | Yozda ta'tilga chiqamiz.
+ankommen | verb | an einem Ort eintreffen | yetib kelmoq | Der Zug kommt um sechs an. | Poyezd soat oltida yetib keladi.
+abfahren | verb | mit einem Fahrzeug einen Ort verlassen | jo'nab ketmoq | Der Bus fährt in fünf Minuten ab. | Avtobus besh daqiqadan keyin jo'naydi.
+buchen | verb | ein Zimmer, einen Platz oder eine Reise vorher bestellen | bron qilmoq | Ich habe ein Zimmer gebucht. | Xona bron qildim.
+die Verspätung | noun | wenn etwas später kommt als geplant | kechikish | Der Zug hat Verspätung. | Poyezd kechikmoqda.
+die Haltestelle | noun | ein Ort, an dem Busse oder Straßenbahnen halten | bekat | Die Haltestelle ist an der Ecke. | Bekat burchakda.
+das Ausland | noun | alle Länder außer dem eigenen | chet el | Sie möchte im Ausland studieren. | U chet elda o'qimoqchi.
+die Landkarte | noun | ein Bild von einem Gebiet mit Straßen, Städten und Flüssen | xarita | Schau auf die Landkarte! | Xaritaga qara!
+## gesundheit | 🩺 | Health & Body | Salomatlik va tana | Здоровье и тело
+der Arzt | noun | ein Mensch, der kranke Menschen untersucht und behandelt | shifokor, vrach | Ich muss zum Arzt gehen. | Shifokorga borishim kerak.
+das Medikament | noun | etwas, das man nimmt, wenn man krank ist | dori | Nimm das Medikament zweimal am Tag. | Dorini kuniga ikki marta ich.
+das Fieber | noun | eine zu hohe Körpertemperatur bei Krankheit | isitma | Das Kind hat Fieber. | Bolaning isitmasi bor.
+die Kopfschmerzen | noun | Schmerzen im Kopf (Plural) | bosh og'rig'i | Ich habe starke Kopfschmerzen. | Boshim qattiq og'riyapti.
+gesund | adjective | nicht krank, stark und fit | sog'lom | Obst ist gesund. | Meva sog'liq uchun foydali.
+krank | adjective | nicht gesund | kasal | Er war letzte Woche krank. | U o'tgan hafta kasal edi.
+der Schmerz | noun | das Gefühl, wenn ein Teil des Körpers wehtut | og'riq | Ich habe Schmerzen im Rücken. | Belimda og'riq bor.
+wehtun | verb | Schmerzen machen | og'rimoq | Mein Bein tut weh. | Oyog'im og'riyapti.
+sich ausruhen | verb | eine Pause machen, um sich zu erholen | dam olmoq | Du solltest dich ein paar Tage ausruhen. | Bir necha kun dam olishing kerak.
+der Termin | noun | eine feste Zeit für ein Treffen, z. B. beim Arzt | uchrashuv vaqti, qabul | Ich habe um drei einen Termin. | Soat uchda qabulim bor.
+der Zahn | noun | einer der harten weißen Teile im Mund | tish | Ich putze zweimal am Tag die Zähne. | Kuniga ikki marta tish yuvaman.
+der Bauch | noun | der vordere Teil des Körpers zwischen Brust und Beinen | qorin | Mein Bauch tut weh. | Qornim og'riyapti.
+die Erkältung | noun | eine leichte Krankheit mit Husten und Schnupfen | shamollash | Ich habe eine Erkältung. | Shamollab qoldim.
+die Apotheke | noun | ein Geschäft, in dem man Medikamente kauft | dorixona | Die Apotheke ist bis acht Uhr offen. | Dorixona soat sakkizgacha ochiq.
+sich fühlen | verb | einen bestimmten körperlichen oder seelischen Zustand haben | o'zini his qilmoq | Ich fühle mich heute besser. | Bugun o'zimni yaxshiroq his qilyapman.
+## einkaufen | 🛒 | Shopping | Xarid | Покупки
+der Preis | noun | wie viel Geld etwas kostet | narx | Der Preis ist zu hoch. | Narxi juda baland.
+billig | adjective | es kostet wenig Geld | arzon | Das Hemd ist billig. | Ko'ylak arzon.
+teuer | adjective | es kostet viel Geld | qimmat | Das Auto ist sehr teuer. | Mashina juda qimmat.
+bezahlen | verb | Geld für etwas geben | to'lamoq | Kann ich mit Karte bezahlen? | Karta bilan to'lasam bo'ladimi?
+das Bargeld | noun | Geld in Münzen und Scheinen | naqd pul | Ich habe kein Bargeld. | Menda naqd pul yo'q.
+die Quittung | noun | ein Zettel, der zeigt, dass man bezahlt hat | chek, kvitansiya | Bewahren Sie die Quittung auf. | Chekni saqlab qo'ying.
+die Größe | noun | wie groß oder klein etwas ist, z. B. Kleidung | o'lcham, razmer | Welche Größe haben Sie? | Sizga qaysi razmer kerak?
+der Kunde | noun | eine Person, die in einem Geschäft etwas kauft | xaridor, mijoz | Der Kunde ist König. | Mijoz — podshoh.
+das Angebot | noun | eine Ware zu einem besonders günstigen Preis | taklif, aksiya | Bananen sind heute im Angebot. | Bugun bananlar aksiyada.
+anprobieren | verb | Kleidung anziehen, um zu sehen, ob sie passt | kiyib ko'rmoq | Darf ich die Jacke anprobieren? | Kurtkani kiyib ko'rsam bo'ladimi?
+der Markt | noun | ein Platz, wo man Obst, Gemüse und andere Waren kauft | bozor | Wir kaufen Obst auf dem Markt. | Mevani bozordan olamiz.
+ausgeben | verb | Geld für etwas verwenden | sarflamoq | Ich gebe zu viel Geld für Kaffee aus. | Qahvaga juda ko'p pul sarflayman.
+die Rechnung | noun | ein Papier, auf dem steht, wie viel man bezahlen muss | hisob (to'lov) | Die Rechnung, bitte! | Hisobni bering, iltimos!
+das Wechselgeld | noun | das Geld, das man zurückbekommt, wenn man zu viel bezahlt | qaytim | Hier ist Ihr Wechselgeld. | Mana qaytimingiz.
+der Rabatt | noun | ein Nachlass auf den normalen Preis | chegirma | Studenten bekommen zehn Prozent Rabatt. | Talabalarga o'n foiz chegirma beriladi.
+## wetter | ⛅ | Weather & Nature | Ob-havo va tabiat | Погода и природа
+das Wetter | noun | wie die Luft draußen ist: Sonne, Regen, Wind usw. | ob-havo | Das Wetter ist heute schön. | Bugun ob-havo yaxshi.
+sonnig | adjective | mit viel Sonne | quyoshli | Heute ist es sonnig. | Bugun quyoshli.
+der Regen | noun | Wasser, das in Tropfen aus den Wolken fällt | yomg'ir | Der Regen hört nicht auf. | Yomg'ir to'xtamayapti.
+der Schnee | noun | weiße, weiche Eiskristalle, die im Winter vom Himmel fallen | qor | Die Kinder spielen im Schnee. | Bolalar qorda o'ynashyapti.
+der Wind | noun | Luft, die sich schnell bewegt | shamol | Der Wind ist heute stark. | Bugun shamol kuchli.
+die Wolke | noun | eine weiße oder graue Masse am Himmel aus kleinen Wassertropfen | bulut | Am Himmel sind dunkle Wolken. | Osmonda qora bulutlar bor.
+die Temperatur | noun | wie warm oder kalt etwas ist | harorat | Die Temperatur liegt bei 35 Grad. | Harorat 35 daraja.
+die Jahreszeit | noun | einer der vier Teile des Jahres: Frühling, Sommer, Herbst, Winter | fasl | Der Frühling ist meine Lieblingsjahreszeit. | Bahor mening sevimli faslim.
+der Wald | noun | ein großes Gebiet mit vielen Bäumen | o'rmon | Wir gehen im Wald spazieren. | O'rmonda sayr qilamiz.
+der Fluss | noun | ein langes, natürliches fließendes Gewässer | daryo | Der Fluss ist sehr breit. | Daryo juda keng.
+der Berg | noun | eine sehr hohe Erhebung der Erde | tog' | Sie steigen auf den Berg. | Ular toqqa chiqishyapti.
+der See | noun | eine große Fläche Wasser mit Land rundherum | ko'l | Wir schwimmen im See. | Ko'lda suzamiz.
+das Gewitter | noun | schlechtes Wetter mit Blitz, Donner und Regen | momaqaldiroq, chaqmoqli yomg'ir | Gestern gab es ein Gewitter. | Kecha momaqaldiroq bo'ldi.
+warm | adjective | ein bisschen heiß, angenehm | iliq | Im Frühling ist es warm. | Bahorda havo iliq.
+trocken | adjective | ohne Wasser oder Regen | quruq | Der Sommer hier ist heiß und trocken. | Bu yerda yoz issiq va quruq.

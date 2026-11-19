@@ -1,0 +1,65 @@
+# word | part_of_speech | definition (EN) | translation (UZ) | example | example (UZ)
+## work | 💼 | Work & Career | Ish va kasb | Работа и карьера
+salary | noun | the fixed amount of money you earn each month for your job | maosh, oylik | She gets a good salary. | U yaxshi maosh oladi.
+colleague | noun | a person you work with | hamkasb | My colleagues are very friendly. | Hamkasblarim juda samimiy.
+to hire | verb | to give someone a job | ishga olmoq | The company hired ten new workers. | Kompaniya o'nta yangi ishchini ishga oldi.
+interview | noun | a formal meeting where someone is asked questions for a job | suhbat (ishga qabul) | I have a job interview tomorrow. | Ertaga ishga kirish suhbatim bor.
+experience | noun | knowledge and skill you get from doing something | tajriba | Do you have any experience in sales? | Savdoda tajribangiz bormi?
+deadline | noun | the time by which something must be finished | muddat (oxirgi) | The deadline is Friday. | Topshirish muddati juma kuni.
+to apply | verb | to make a formal request for a job, place, etc. | ariza bermoq | I applied for three jobs. | Uchta ishga ariza berdim.
+skill | noun | an ability to do something well | ko'nikma, mahorat | Communication is an important skill. | Muloqot muhim ko'nikma.
+boss | noun | the person who is in charge of you at work | boshliq, xo'jayin | My boss gave me a day off. | Boshlig'im menga bir kun dam berdi.
+career | noun | the series of jobs you do during your working life | kasbiy faoliyat, martaba | He started his career as a teacher. | U faoliyatini o'qituvchi sifatida boshlagan.
+to resign | verb | to officially leave your job | iste'foga chiqmoq | She resigned last month. | U o'tgan oy iste'foga chiqdi.
+meeting | noun | an event where people come together to discuss something | yig'ilish | The meeting starts at ten. | Yig'ilish soat o'nda boshlanadi.
+to earn | verb | to get money for work you do | ishlab topmoq | How much do you earn? | Qancha pul ishlab topasiz?
+employee | noun | a person who works for a company | xodim | The firm has 200 employees. | Firmada 200 nafar xodim bor.
+promotion | noun | a move to a higher position at work | lavozimga ko'tarilish | He got a promotion this year. | U bu yil lavozimda ko'tarildi.
+## emotions | 💛 | Emotions | His-tuyg'ular | Эмоции
+proud | adjective | feeling pleased about something you or others have done | faxrlanuvchi, g'ururli | I'm proud of my daughter. | Qizim bilan faxrlanaman.
+nervous | adjective | worried and a little afraid | hayajonlangan, asabiy | I always feel nervous before exams. | Imtihondan oldin doim hayajonlanaman.
+jealous | adjective | unhappy because someone has something you want | hasadgo'y, rashkchi | He is jealous of his brother's success. | U akasining muvaffaqiyatiga hasad qiladi.
+embarrassed | adjective | feeling shy or ashamed in front of other people | xijolat bo'lgan | I was embarrassed when I fell. | Yiqilganimda xijolat bo'ldim.
+disappointed | adjective | unhappy because something was not as good as you hoped | hafsalasi pir bo'lgan | We were disappointed with the film. | Filmdan hafsalamiz pir bo'ldi.
+grateful | adjective | feeling or showing thanks | minnatdor | I'm grateful for your help. | Yordamingiz uchun minnatdorman.
+lonely | adjective | sad because you are alone | yolg'iz (va g'amgin) | She felt lonely in the new city. | U yangi shaharda o'zini yolg'iz his qildi.
+anxious | adjective | worried about something that might happen | xavotirli | Parents get anxious when kids are late. | Bolalar kechiksa, ota-onalar xavotirga tushadi.
+relieved | adjective | happy because something bad did not happen or has ended | yengil tortgan | I was relieved when I passed the test. | Testdan o'tganimda yengil tortdim.
+confident | adjective | sure about yourself and your abilities | o'ziga ishongan | She is confident when she speaks. | U gapirayotganda o'ziga ishongan bo'ladi.
+upset | adjective | unhappy or worried because something bad happened | xafa, ranjigan | Don't be upset, it's not your fault. | Xafa bo'lma, bu sening aybing emas.
+calm | adjective | relaxed and not worried or excited | xotirjam, sokin | Stay calm and listen. | Xotirjam bo'ling va tinglang.
+to cheer up | verb | to become or make someone happier | ko'nglini ko'tarmoq | This song always cheers me up. | Bu qo'shiq doim kayfiyatimni ko'taradi.
+fear | noun | the feeling you have when you are afraid | qo'rquv | He has a fear of dogs. | Uning itlardan qo'rquvi bor.
+mood | noun | the way you feel at a particular time | kayfiyat | You're in a good mood today. | Bugun kayfiyatingiz yaxshi.
+## technology | 💻 | Technology | Texnologiya | Технологии
+device | noun | a machine or tool made for a special purpose | qurilma | Turn off all electronic devices. | Barcha elektron qurilmalarni o'chiring.
+to download | verb | to copy data from the internet to your computer or phone | yuklab olmoq | I downloaded a new app. | Yangi ilova yuklab oldim.
+password | noun | a secret word you need to enter a system | parol | Never share your password. | Parolingizni hech kimga aytmang.
+screen | noun | the flat part of a TV, computer or phone where you see pictures | ekran | My phone screen is broken. | Telefonimning ekrani singan.
+battery | noun | a thing that provides electricity to a phone, toy, etc. | batareya, akkumulyator | My battery is almost dead. | Batareyam deyarli tugadi.
+to charge | verb | to put electricity into a battery | quvvatlamoq, zaryad qilmoq | I need to charge my phone. | Telefonimni zaryadlashim kerak.
+software | noun | programs that run on a computer | dasturiy ta'minot | We installed new software. | Yangi dasturiy ta'minot o'rnatdik.
+to search | verb | to look carefully for something, e.g. online | qidirmoq | Search for the answer online. | Javobni internetdan qidiring.
+website | noun | a set of pages on the internet about one subject or company | veb-sayt | Visit our website for more information. | Batafsil ma'lumot uchun saytimizga kiring.
+to delete | verb | to remove something from a computer | o'chirmoq | I deleted the old photos. | Eski rasmlarni o'chirib tashladim.
+account | noun | a personal record that lets you use a website or service | hisob, akkaunt | Create an account to continue. | Davom etish uchun akkaunt yarating.
+wireless | adjective | working without wires | simsiz | This is a wireless mouse. | Bu simsiz sichqoncha.
+to update | verb | to make something more modern or add new information | yangilamoq | Update the app to the latest version. | Ilovani so'nggi versiyaga yangilang.
+online | adverb | connected to or using the internet | onlayn, internetda | I bought it online. | Uni internetdan sotib oldim.
+inventor | noun | a person who creates something new | ixtirochi | Edison was a famous inventor. | Edison mashhur ixtirochi edi.
+## city | 🏙️ | City & Society | Shahar va jamiyat | Город и общество
+neighbourhood | noun | the area around your home | mahalla, atrof | It's a quiet neighbourhood. | Bu tinch mahalla.
+traffic | noun | the cars and other vehicles on a road | tirbandlik, transport harakati | There's a lot of traffic in the morning. | Ertalab yo'llarda tirbandlik ko'p.
+crowded | adjective | full of people | odam gavjum | The bus was very crowded. | Avtobus odam bilan gavjum edi.
+pollution | noun | damage to air, water or land by harmful things | ifloslanish | Air pollution is a big problem in cities. | Havoning ifloslanishi shaharlarda katta muammo.
+citizen | noun | a person who legally belongs to a country | fuqaro | She is a citizen of Uzbekistan. | U O'zbekiston fuqarosi.
+law | noun | an official rule that everyone in a country must follow | qonun | Everyone must obey the law. | Hamma qonunga bo'ysunishi kerak.
+government | noun | the group of people who control a country | hukumat | The government built a new road. | Hukumat yangi yo'l qurdi.
+crime | noun | an illegal action, like stealing | jinoyat | Crime is low in this area. | Bu hududda jinoyat kam.
+to vote | verb | to choose someone in an election | ovoz bermoq | Did you vote in the election? | Saylovda ovoz berdingizmi?
+public | adjective | for everyone to use | jamoat, ommaviy | Use public transport. | Jamoat transportidan foydalaning.
+local | adjective | of or in the area where you live | mahalliy | I buy vegetables from local farmers. | Sabzavotlarni mahalliy fermerlardan olaman.
+to recycle | verb | to treat used things so they can be used again | qayta ishlamoq | We recycle paper and glass. | Biz qog'oz va shishani qayta ishlaymiz.
+volunteer | noun | a person who works without being paid to help others | ko'ngilli | Volunteers cleaned the park. | Ko'ngillilar bog'ni tozalashdi.
+community | noun | the people who live in one area or share something | jamoa, hamjamiyat | Our community is very friendly. | Jamoamiz juda ahil.
+rent | noun | money you pay regularly to live in a place you do not own | ijara haqi | The rent is due on the first. | Ijara haqi har oyning birinchisida to'lanadi.

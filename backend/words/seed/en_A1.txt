@@ -1,0 +1,65 @@
+# word | part_of_speech | definition (EN) | translation (UZ) | example | example (UZ)
+## food | 🍎 | Food | Ovqat | Еда
+apple | noun | a round fruit with red, green or yellow skin | olma | I eat an apple every day. | Men har kuni bitta olma yeyman.
+bread | noun | a basic food made from flour, water and yeast and baked | non | We buy fresh bread in the morning. | Biz ertalab yangi non sotib olamiz.
+water | noun | the clear liquid that falls as rain and that we drink | suv | Can I have a glass of water? | Bir stakan suv bersangiz bo'ladimi?
+milk | noun | the white liquid that cows produce and people drink | sut | The baby drinks milk. | Chaqaloq sut ichadi.
+egg | noun | the round thing a hen lays, which we cook and eat | tuxum | I have two eggs for breakfast. | Nonushtaga ikkita tuxum yeyman.
+rice | noun | small white or brown grains that are cooked and eaten | guruch | Plov is made with rice. | Palov guruchdan tayyorlanadi.
+meat | noun | the flesh of animals that people eat | go'sht | My father does not eat meat. | Otam go'sht yemaydi.
+tea | noun | a hot drink made by pouring water on dried leaves | choy | Would you like some green tea? | Ko'k choy ichasizmi?
+sugar | noun | a sweet white or brown substance added to food and drinks | shakar | I don't put sugar in my coffee. | Men qahvamga shakar solmayman.
+cheese | noun | a solid food made from milk | pishloq | This sandwich has cheese in it. | Bu sendvichda pishloq bor.
+hungry | adjective | wanting or needing to eat food | och (qorni och) | I am very hungry after school. | Maktabdan keyin qornim juda och bo'ladi.
+delicious | adjective | having a very good taste | mazali | Your soup is delicious! | Sho'rvangiz juda mazali!
+to cook | verb | to make food ready to eat by heating it | ovqat pishirmoq | My mother cooks dinner every evening. | Onam har kuni kechqurun kechki ovqat pishiradi.
+breakfast | noun | the first meal of the day | nonushta | We have breakfast at seven. | Biz soat yettida nonushta qilamiz.
+vegetable | noun | a plant or part of a plant that is eaten as food, like a carrot | sabzavot | Eat more vegetables. | Ko'proq sabzavot yeng.
+## family | 👨‍👩‍👧 | Family & People | Oila va odamlar | Семья и люди
+mother | noun | a woman who has a child | ona | My mother is a teacher. | Onam o'qituvchi.
+father | noun | a man who has a child | ota | His father works in a bank. | Uning otasi bankda ishlaydi.
+brother | noun | a boy or man who has the same parents as you | aka / uka | I have one older brother. | Mening bitta akam bor.
+sister | noun | a girl or woman who has the same parents as you | opa / singil | My sister lives in Tashkent. | Opam Toshkentda yashaydi.
+friend | noun | a person you know well and like | do'st | Ali is my best friend. | Ali mening eng yaqin do'stim.
+child | noun | a young boy or girl | bola | The child is playing in the garden. | Bola bog'da o'ynayapti.
+baby | noun | a very young child | chaqaloq | The baby is sleeping. | Chaqaloq uxlayapti.
+grandmother | noun | the mother of your father or mother | buvi | My grandmother makes good bread. | Buvim zo'r non yopadi.
+husband | noun | the man a woman is married to | er (turmush o'rtog'i) | Her husband is a doctor. | Uning eri shifokor.
+wife | noun | the woman a man is married to | xotin (turmush o'rtog'i) | His wife speaks English. | Uning xotini inglizcha gapiradi.
+name | noun | the word that people call you | ism | What is your name? | Ismingiz nima?
+old | adjective | having lived for many years; not young | qari, keksa | My grandfather is old but strong. | Bobom keksa, lekin baquvvat.
+young | adjective | having lived for only a short time | yosh | She is too young to drive. | U mashina haydash uchun juda yosh.
+happy | adjective | feeling pleased and good | baxtli, xursand | I am happy to see you. | Sizni ko'rganimdan xursandman.
+to love | verb | to like someone or something very much | sevmoq | I love my family. | Men oilamni sevaman.
+## home | 🏠 | Home | Uy | Дом
+house | noun | a building where people live | uy | They live in a big house. | Ular katta uyda yashashadi.
+room | noun | a part of a building with walls, a floor and a ceiling | xona | My room is small but nice. | Xonam kichik, lekin chiroyli.
+kitchen | noun | the room where food is cooked | oshxona | Mum is in the kitchen. | Oyim oshxonada.
+bed | noun | a piece of furniture you sleep on | karavot | I go to bed at ten. | Men soat o'nda yotaman.
+door | noun | the thing you open to go into or out of a room | eshik | Please close the door. | Iltimos, eshikni yoping.
+window | noun | an opening in a wall with glass, to let in light | deraza | Open the window, it's hot. | Derazani oching, issiq.
+table | noun | a piece of furniture with a flat top and legs | stol | The keys are on the table. | Kalitlar stol ustida.
+chair | noun | a seat for one person, with a back | stul | Sit on this chair. | Bu stulga o'tiring.
+key | noun | a small metal thing used to open a lock | kalit | I lost my key. | Kalitimni yo'qotib qo'ydim.
+garden | noun | a piece of land next to a house where flowers or vegetables grow | bog' | We have apple trees in our garden. | Bog'imizda olma daraxtlari bor.
+to sleep | verb | to rest with your eyes closed, usually at night | uxlamoq | Babies sleep a lot. | Chaqaloqlar ko'p uxlashadi.
+to clean | verb | to make something free from dirt | tozalamoq | I clean my room on Sundays. | Yakshanba kunlari xonamni tozalayman.
+clean | adjective | not dirty | toza | Your hands are clean. | Qo'llaring toza.
+big | adjective | large in size | katta | That is a big dog. | Bu katta it.
+small | adjective | little in size | kichik | I have a small flat. | Mening kichkina kvartiram bor.
+## daily | ⏰ | Daily Life | Kundalik hayot | Повседневная жизнь
+morning | noun | the early part of the day, before noon | ertalab, tong | I run every morning. | Har kuni ertalab yuguraman.
+night | noun | the time when it is dark and people sleep | tun, kecha | The stars are bright tonight. | Bu kecha yulduzlar yorqin.
+day | noun | a period of 24 hours | kun | There are seven days in a week. | Haftada yetti kun bor.
+week | noun | a period of seven days | hafta | I see her every week. | Uni har hafta ko'raman.
+time | noun | what we measure in hours and minutes | vaqt | What time is it? | Soat necha bo'ldi?
+school | noun | a place where children go to learn | maktab | My school is near my house. | Maktabim uyimga yaqin.
+book | noun | a set of printed pages fixed together inside a cover | kitob | This book is very interesting. | Bu kitob juda qiziq.
+phone | noun | a device you use to talk to people far away | telefon | My phone is in my bag. | Telefonim sumkamda.
+to read | verb | to look at words and understand them | o'qimoq | I read before I sleep. | Uxlashdan oldin kitob o'qiyman.
+to write | verb | to make letters or words on paper or a screen | yozmoq | Write your name here. | Ismingizni shu yerga yozing.
+to go | verb | to move from one place to another | bormoq | We go to the park on Saturdays. | Shanba kunlari bog'ga boramiz.
+to work | verb | to do a job, usually for money | ishlamoq | She works in a hospital. | U kasalxonada ishlaydi.
+to drink | verb | to take liquid into your mouth and swallow it | ichmoq | Drink more water. | Ko'proq suv iching.
+to buy | verb | to get something by paying money for it | sotib olmoq | I want to buy a new bag. | Yangi sumka sotib olmoqchiman.
+tired | adjective | needing rest or sleep | charchagan | I'm tired after work. | Ishdan keyin charchayman.

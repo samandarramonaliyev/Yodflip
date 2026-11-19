@@ -1,0 +1,65 @@
+# word | part_of_speech | definition (EN) | translation (UZ) | example | example (UZ)
+## academic | 📚 | Academic Language | Akademik til | Академический язык
+to analyse | verb | to study something in detail to understand it | tahlil qilmoq | We need to analyse the data carefully. | Ma'lumotlarni sinchiklab tahlil qilishimiz kerak.
+hypothesis | noun | an idea that is suggested as an explanation but not yet proven | gipoteza, faraz | The results support our hypothesis. | Natijalar farazimizni tasdiqlaydi.
+significant | adjective | large or important enough to be noticed | sezilarli, muhim | There was a significant increase in sales. | Sotuvda sezilarli o'sish bo'ldi.
+to emphasise | verb | to show that something is especially important | ta'kidlamoq | She emphasised the need for change. | U o'zgarish zarurligini ta'kidladi.
+evidence | noun | facts or signs that show something is true | dalil | There is no evidence of that. | Bunga hech qanday dalil yo'q.
+to contradict | verb | to say the opposite of what someone else has said | zid kelmoq, inkor qilmoq | The two reports contradict each other. | Ikki hisobot bir-biriga zid.
+comprehensive | adjective | including everything that is needed | har tomonlama, keng qamrovli | This is a comprehensive guide. | Bu har tomonlama qo'llanma.
+ambiguous | adjective | having more than one possible meaning | noaniq, ikki ma'noli | His answer was ambiguous. | Uning javobi noaniq edi.
+to undermine | verb | to gradually make something weaker | putur yetkazmoq | Lies undermine trust. | Yolg'on ishonchga putur yetkazadi.
+framework | noun | a basic structure of ideas on which something is built | asos, tizim | We need a legal framework. | Bizga huquqiy asos kerak.
+inevitable | adjective | certain to happen and impossible to avoid | muqarrar | Change is inevitable. | O'zgarish muqarrar.
+to justify | verb | to give good reasons for something | asoslamoq, oqlamoq | How can you justify the cost? | Bu xarajatni qanday asoslaysiz?
+notion | noun | an idea or belief | tushuncha, g'oya | I have no notion of what he means. | U nimani nazarda tutayotganini umuman tushunmayman.
+to derive | verb | to get something from a particular source | kelib chiqmoq, olmoq | Many English words derive from Latin. | Ko'plab inglizcha so'zlar lotin tilidan kelib chiqqan.
+coherent | adjective | logical and well organised, so it is easy to understand | izchil, mantiqiy | Write a coherent essay. | Izchil insho yozing.
+## character | 🧩 | Character & Behaviour | Xarakter va xulq | Характер и поведение
+meticulous | adjective | giving great attention to every detail | sinchkov, puxta | She is meticulous about her work. | U ishiga juda puxta yondashadi.
+resilient | adjective | able to recover quickly from difficulties | bardoshli, chidamli | Children are often very resilient. | Bolalar ko'pincha juda bardoshli bo'ladi.
+arrogant | adjective | behaving as if you are better than other people | takabbur, kibrli | He is rude and arrogant. | U qo'pol va takabbur.
+humble | adjective | not thinking you are better than others | kamtar | Despite his fame, he stayed humble. | Shuhratiga qaramay, u kamtarligicha qoldi.
+stubborn | adjective | refusing to change your mind | o'jar | My little brother is very stubborn. | Ukam juda o'jar.
+diligent | adjective | working hard and carefully | tirishqoq | She is a diligent student. | U tirishqoq talaba.
+gullible | adjective | easily tricked because you trust people too much | soddadil, tez aldanadigan | Don't be so gullible. | Bunchalik soddadil bo'lmang.
+candid | adjective | honest and direct, even when the truth is unpleasant | ochiqko'ngil, samimiy | Thank you for your candid answer. | Samimiy javobingiz uchun rahmat.
+compassionate | adjective | feeling or showing sympathy for others who suffer | rahmdil, mehribon | Nurses must be compassionate. | Hamshiralar rahmdil bo'lishi kerak.
+reckless | adjective | doing dangerous things without thinking of the results | ehtiyotsiz, tavakkalchi | Reckless driving causes accidents. | Ehtiyotsiz haydash avariyalarga sabab bo'ladi.
+to procrastinate | verb | to keep delaying something that you should do | paysalga solmoq | Stop procrastinating and start working. | Paysalga solishni bas qiling va ishni boshlang.
+integrity | noun | the quality of being honest and having strong moral principles | halollik, vijdonlilik | He is a man of integrity. | U halol inson.
+to empathise | verb | to understand and share another person's feelings | hamdard bo'lmoq | I can empathise with your situation. | Ahvolingizga hamdardman.
+assertive | adjective | stating opinions and needs confidently | qat'iyatli, dadil | You need to be more assertive at work. | Ishda dadilroq bo'lishingiz kerak.
+eloquent | adjective | able to speak or write well and persuasively | notiq, so'zga chechan | She gave an eloquent speech. | U ta'sirli nutq so'zladi.
+## society | ⚖️ | Society & Politics | Jamiyat va siyosat | Общество и политика
+inequality | noun | an unfair situation where some people have more than others | tengsizlik | Income inequality is growing. | Daromadlar tengsizligi o'sib bormoqda.
+to advocate | verb | to publicly support an idea or plan | targ'ib qilmoq, himoya qilmoq | She advocates for women's rights. | U ayollar huquqlarini himoya qiladi.
+legislation | noun | a law or set of laws | qonunchilik | New legislation was passed. | Yangi qonun qabul qilindi.
+consensus | noun | general agreement among a group | kelishuv, yakdillik | We reached a consensus. | Biz yakdil fikrga keldik.
+to abolish | verb | to officially end a law or system | bekor qilmoq | Slavery was abolished long ago. | Qullik ancha oldin bekor qilingan.
+welfare | noun | the health, happiness and safety of people; state help for those in need | farovonlik, ijtimoiy yordam | The state must protect children's welfare. | Davlat bolalar farovonligini himoya qilishi kerak.
+controversial | adjective | causing a lot of public disagreement | bahsli, munozarali | It is a controversial decision. | Bu bahsli qaror.
+to implement | verb | to put a plan or decision into action | amalga oshirmoq | The reforms were implemented quickly. | Islohotlar tezda amalga oshirildi.
+sovereignty | noun | a country's complete power to govern itself | suverenitet, mustaqillik | Every nation values its sovereignty. | Har bir xalq o'z suverenitetini qadrlaydi.
+bureaucracy | noun | a complicated system of rules and officials | byurokratiya | There is too much bureaucracy. | Byurokratiya haddan tashqari ko'p.
+to exploit | verb | to use someone unfairly for your own advantage | ekspluatatsiya qilmoq, o'z manfaatiga ishlatmoq | Companies must not exploit workers. | Kompaniyalar ishchilardan nohaq foydalanmasligi kerak.
+prejudice | noun | an unfair opinion formed without knowledge or reason | xurofot, g'arazli qarash | We must fight racial prejudice. | Irqiy kamsitishga qarshi kurashishimiz kerak.
+accountable | adjective | responsible for your actions and expected to explain them | javobgar, hisobdor | Leaders must be held accountable. | Rahbarlar javobgarlikka tortilishi kerak.
+to undertake | verb | to accept responsibility for a task and start doing it | o'z zimmasiga olmoq | He undertook a difficult project. | U qiyin loyihani o'z zimmasiga oldi.
+dissent | noun | strong disagreement with official ideas | norozilik, qarshi fikr | The government did not allow dissent. | Hukumat norozilikka yo'l qo'ymadi.
+## nuance | 🎭 | Nuance & Expression | Nozik ifodalar | Нюансы и выражения
+subtle | adjective | not obvious; small but important | nozik, sezilmas | There is a subtle difference. | Nozik farq bor.
+to convey | verb | to communicate an idea or feeling | yetkazmoq, ifodalamoq | Words cannot convey my gratitude. | So'zlar minnatdorligimni ifodalay olmaydi.
+profound | adjective | very great or deep | chuqur | The book had a profound effect on me. | Kitob menga chuqur ta'sir qildi.
+to elaborate | verb | to give more details about something | batafsil tushuntirmoq | Could you elaborate on that? | Buni batafsilroq tushuntira olasizmi?
+vivid | adjective | very bright, clear or detailed | yorqin, jonli | I have vivid memories of my childhood. | Bolaligim haqida yorqin xotiralarim bor.
+to imply | verb | to suggest something without saying it directly | ishora qilmoq, nazarda tutmoq | Are you implying that I lied? | Yolg'on gapirdim demoqchimisiz?
+tedious | adjective | boring because it continues too long | zerikarli, toliqtiruvchi | Filling in forms is tedious. | Anketa to'ldirish zerikarli.
+ubiquitous | adjective | seeming to be everywhere | hamma joyda uchraydigan | Smartphones are ubiquitous today. | Bugun smartfonlar hamma joyda.
+to dwell on | verb | to keep thinking or talking about something unpleasant | o'ylab yurmoq (yomon narsani) | Don't dwell on your mistakes. | Xatolaringizni o'ylab o'zingizni qiynamang.
+blunt | adjective | saying what you think directly, without trying to be polite | to'g'riso'z, qo'pol ochiq | To be blunt, your plan won't work. | Ochig'ini aytsam, rejangiz ishlamaydi.
+nostalgic | adjective | feeling happy and a little sad when remembering the past | o'tmishni sog'inuvchi | Old songs make me nostalgic. | Eski qo'shiqlar meni o'tmishni sog'intiradi.
+to overlook | verb | to fail to notice or consider something | e'tibordan chetda qoldirmoq | We overlooked an important detail. | Muhim tafsilotni e'tibordan chetda qoldirdik.
+whimsical | adjective | unusual and playful in a pleasant way | g'aroyib, injiq va quvnoq | The film has a whimsical style. | Filmning uslubi g'aroyib va quvnoq.
+to scrutinise | verb | to examine something very carefully | sinchiklab tekshirmoq | Experts scrutinised the report. | Mutaxassislar hisobotni sinchiklab tekshirishdi.
+poignant | adjective | causing a strong feeling of sadness | ta'sirli, yurakni ezuvchi | It was a poignant moment. | Bu ta'sirli lahza edi.

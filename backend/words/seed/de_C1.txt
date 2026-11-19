@@ -1,0 +1,65 @@
+# word | part_of_speech | definition (DE) | translation (UZ) | example | example (UZ)
+## wissenschaft | 📚 | Academic Language | Akademik til | Академический язык
+analysieren | verb | etwas genau untersuchen, um es zu verstehen | tahlil qilmoq | Wir müssen die Daten sorgfältig analysieren. | Ma'lumotlarni sinchiklab tahlil qilishimiz kerak.
+die Hypothese | noun | eine Annahme, die noch nicht bewiesen ist | gipoteza, faraz | Die Ergebnisse bestätigen unsere Hypothese. | Natijalar farazimizni tasdiqlaydi.
+erheblich | adjective | groß oder wichtig genug, um bemerkt zu werden | sezilarli, katta | Es gab einen erheblichen Anstieg. | Sezilarli o'sish bo'ldi.
+betonen | verb | deutlich machen, dass etwas besonders wichtig ist | ta'kidlamoq | Sie betonte die Notwendigkeit von Reformen. | U islohotlar zarurligini ta'kidladi.
+der Beweis | noun | eine Tatsache, die zeigt, dass etwas wahr ist | dalil, isbot | Dafür gibt es keinen Beweis. | Bunga hech qanday dalil yo'q.
+widersprechen | verb | sagen, dass etwas nicht stimmt; das Gegenteil behaupten | e'tiroz bildirmoq, zid kelmoq | Die beiden Berichte widersprechen sich. | Ikki hisobot bir-biriga zid.
+umfassend | adjective | alles Wichtige enthaltend | keng qamrovli, har tomonlama | Das ist ein umfassender Bericht. | Bu keng qamrovli hisobot.
+mehrdeutig | adjective | mit mehr als einer möglichen Bedeutung | ko'p ma'noli, noaniq | Seine Antwort war mehrdeutig. | Uning javobi noaniq edi.
+untergraben | verb | etwas langsam schwächen oder zerstören | putur yetkazmoq | Lügen untergraben das Vertrauen. | Yolg'on ishonchga putur yetkazadi.
+der Rahmen | noun | die grundlegende Struktur, in der etwas stattfindet | doira, asos | Im Rahmen des Projekts wurden Daten gesammelt. | Loyiha doirasida ma'lumotlar to'plandi.
+unvermeidlich | adjective | so, dass man es nicht verhindern kann | muqarrar | Veränderungen sind unvermeidlich. | O'zgarishlar muqarrar.
+rechtfertigen | verb | gute Gründe für etwas nennen | oqlamoq, asoslamoq | Wie kannst du diese Kosten rechtfertigen? | Bu xarajatni qanday oqlaysan?
+der Begriff | noun | ein Wort oder eine Vorstellung für eine bestimmte Sache | tushuncha, atama | Dieser Begriff ist schwer zu erklären. | Bu atamani tushuntirish qiyin.
+ableiten | verb | etwas aus etwas anderem herleiten oder entwickeln | kelib chiqarmoq, xulosa chiqarmoq | Daraus kann man eine Regel ableiten. | Bundan qoida chiqarish mumkin.
+schlüssig | adjective | logisch und überzeugend aufgebaut | mantiqiy, asosli | Das Argument ist schlüssig. | Dalil mantiqiy.
+## charakter | 🧩 | Character & Behaviour | Xarakter va xulq | Характер и поведение
+gewissenhaft | adjective | sehr sorgfältig und verantwortungsvoll | vijdonli, puxta | Sie arbeitet sehr gewissenhaft. | U juda vijdonan ishlaydi.
+belastbar | adjective | fähig, viel Druck und Stress auszuhalten | chidamli, bardoshli | Für diesen Job muss man belastbar sein. | Bu ish uchun bardoshli bo'lish kerak.
+arrogant | adjective | sich für besser haltend als andere | takabbur, kibrli | Er ist unhöflich und arrogant. | U qo'pol va takabbur.
+bescheiden | adjective | nicht stolz auf sich selbst; ohne große Ansprüche | kamtar | Trotz seines Erfolgs blieb er bescheiden. | Muvaffaqiyatiga qaramay, u kamtar qoldi.
+stur | adjective | nicht bereit, seine Meinung zu ändern | o'jar | Mein kleiner Bruder ist sehr stur. | Ukam juda o'jar.
+fleißig | adjective | viel und gern arbeitend | mehnatkash, tirishqoq | Sie ist eine fleißige Studentin. | U tirishqoq talaba.
+leichtgläubig | adjective | so, dass man anderen zu schnell alles glaubt | soddadil, tez ishonuvchan | Sei nicht so leichtgläubig! | Bunchalik soddadil bo'lma!
+aufrichtig | adjective | ehrlich und offen | samimiy, chin dildan | Danke für deine aufrichtige Antwort. | Samimiy javobing uchun rahmat.
+mitfühlend | adjective | Verständnis und Mitleid für andere zeigend | hamdard, rahmdil | Pflegekräfte müssen mitfühlend sein. | Hamshiralar rahmdil bo'lishi kerak.
+leichtsinnig | adjective | ohne über Gefahren nachzudenken | ehtiyotsiz, beparvo | Leichtsinniges Fahren verursacht Unfälle. | Ehtiyotsiz haydash avariyalarga sabab bo'ladi.
+aufschieben | verb | etwas auf später verschieben, obwohl man es tun sollte | kechiktirmoq, paysalga solmoq | Hör auf, alles aufzuschieben! | Hamma narsani paysalga solishni bas qil!
+die Ehrlichkeit | noun | die Eigenschaft, die Wahrheit zu sagen | halollik, rostgo'ylik | Ehrlichkeit ist mir sehr wichtig. | Halollik men uchun juda muhim.
+sich einfühlen | verb | die Gefühle eines anderen verstehen und nachempfinden | hamdardlik bildirmoq, his-tuyg'usini tushunmoq | Ich kann mich gut in dich einfühlen. | Seni yaxshi tushunaman.
+durchsetzungsfähig | adjective | fähig, seine Meinung und Ziele gegen andere durchzusetzen | qat'iyatli | Im Beruf muss man durchsetzungsfähig sein. | Ishda qat'iyatli bo'lish kerak.
+redegewandt | adjective | fähig, gut und überzeugend zu sprechen | notiq, so'zga chechan | Sie hielt eine redegewandte Rede. | U ta'sirli nutq so'zladi.
+## gesellschaft | ⚖️ | Society & Politics | Jamiyat va siyosat | Общество и политика
+die Ungleichheit | noun | eine ungerechte Lage, in der manche mehr haben als andere | tengsizlik | Die soziale Ungleichheit wächst. | Ijtimoiy tengsizlik o'sib bormoqda.
+sich einsetzen | verb | sich aktiv für etwas oder jemanden engagieren | kurashmoq, tarafdori bo'lmoq | Sie setzt sich für Frauenrechte ein. | U ayollar huquqlari uchun kurashadi.
+die Gesetzgebung | noun | das Machen von Gesetzen; alle Gesetze eines Bereichs | qonunchilik | Die neue Gesetzgebung tritt bald in Kraft. | Yangi qonunchilik tez orada kuchga kiradi.
+der Konsens | noun | allgemeine Übereinstimmung in einer Gruppe | konsensus, yakdillik | Wir haben einen Konsens erreicht. | Biz yakdil fikrga keldik.
+abschaffen | verb | ein Gesetz oder System offiziell beenden | bekor qilmoq | Die Todesstrafe wurde abgeschafft. | O'lim jazosi bekor qilindi.
+der Wohlstand | noun | ein Zustand, in dem es Menschen wirtschaftlich gut geht | farovonlik | Der Wohlstand im Land ist gestiegen. | Mamlakatda farovonlik oshdi.
+umstritten | adjective | so, dass viele Menschen darüber verschiedener Meinung sind | bahsli, munozarali | Das ist eine umstrittene Entscheidung. | Bu bahsli qaror.
+umsetzen | verb | einen Plan in die Tat bringen | amalga oshirmoq | Die Reformen wurden schnell umgesetzt. | Islohotlar tez amalga oshirildi.
+die Souveränität | noun | die volle Macht eines Staates, sich selbst zu regieren | suverenitet | Jedes Land schätzt seine Souveränität. | Har bir davlat o'z suverenitetini qadrlaydi.
+die Bürokratie | noun | ein kompliziertes System von Vorschriften und Ämtern | byurokratiya | Es gibt zu viel Bürokratie. | Byurokratiya haddan tashqari ko'p.
+ausbeuten | verb | jemanden ungerecht für den eigenen Vorteil nutzen | ekspluatatsiya qilmoq | Firmen dürfen Arbeiter nicht ausbeuten. | Firmalar ishchilarni ekspluatatsiya qilmasligi kerak.
+das Vorurteil | noun | eine feste, ungerechte Meinung ohne genaue Kenntnis | xurofot, noto'g'ri qarash | Wir müssen Vorurteile abbauen. | Biz noto'g'ri qarashlarni yo'qotishimiz kerak.
+verantwortlich | adjective | so, dass man für etwas die Verantwortung trägt | mas'ul, javobgar | Wer ist dafür verantwortlich? | Bunga kim mas'ul?
+übernehmen | verb | eine Aufgabe oder Verantwortung auf sich nehmen | o'z zimmasiga olmoq | Er hat ein schwieriges Projekt übernommen. | U qiyin loyihani o'z zimmasiga oldi.
+der Widerstand | noun | das Handeln gegen etwas, das man ablehnt | qarshilik | Es gab großen Widerstand gegen den Plan. | Rejaga katta qarshilik bo'ldi.
+## ausdruck | 🎭 | Nuance & Expression | Nozik ifodalar | Нюансы и выражения
+subtil | adjective | fein und nicht leicht zu bemerken | nozik | Es gibt einen subtilen Unterschied. | Nozik farq bor.
+vermitteln | verb | eine Idee oder ein Gefühl an andere weitergeben | yetkazmoq, ifodalamoq | Das Buch vermittelt ein klares Bild. | Kitob aniq tasavvur beradi.
+tiefgreifend | adjective | sehr stark und grundlegend | chuqur, tub | Das hatte tiefgreifende Folgen. | Buning chuqur oqibatlari bo'ldi.
+erläutern | verb | etwas genauer erklären | izohlamoq, batafsil tushuntirmoq | Können Sie das näher erläutern? | Buni batafsilroq tushuntira olasizmi?
+anschaulich | adjective | so klar dargestellt, dass man es sich gut vorstellen kann | yaqqol, ko'rgazmali | Er erklärt sehr anschaulich. | U juda yaqqol tushuntiradi.
+andeuten | verb | etwas nur indirekt sagen | ishora qilmoq | Willst du andeuten, dass ich gelogen habe? | Yolg'on gapirdim demoqchimisan?
+mühsam | adjective | mit viel Anstrengung verbunden | mashaqqatli | Das Ausfüllen der Formulare ist mühsam. | Anketalarni to'ldirish mashaqqatli.
+allgegenwärtig | adjective | überall vorhanden | hamma joyda mavjud | Smartphones sind heute allgegenwärtig. | Bugun smartfonlar hamma joyda.
+grübeln | verb | lange und intensiv über etwas nachdenken, oft sorgenvoll | o'yga cho'mmoq, bosh qotirmoq | Grübel nicht so viel über deine Fehler. | Xatolaring haqida bunchalik bosh qotirma.
+unverblümt | adjective | direkt und offen, ohne höflich zu umschreiben | ochiqchasiga, to'g'ridan-to'g'ri | Er sagte mir unverblümt die Wahrheit. | U menga haqiqatni ochiqchasiga aytdi.
+wehmütig | adjective | leicht traurig beim Erinnern an Vergangenes | g'amgin-sog'inchli | Alte Lieder machen mich wehmütig. | Eski qo'shiqlar meni sog'intiradi.
+übersehen | verb | etwas nicht bemerken | e'tibordan chetda qoldirmoq | Wir haben ein wichtiges Detail übersehen. | Muhim tafsilotni e'tibordan chetda qoldirdik.
+skurril | adjective | seltsam und auf lustige Weise ungewöhnlich | g'aroyib, kulgili-g'alati | Der Film hat einen skurrilen Humor. | Filmning hazili g'aroyib.
+prüfen | verb | genau untersuchen, ob etwas richtig ist | tekshirmoq | Experten prüfen den Bericht genau. | Mutaxassislar hisobotni sinchiklab tekshirishmoqda.
+ergreifend | adjective | so, dass es tiefe Gefühle auslöst | ta'sirli, hayajonli | Es war ein ergreifender Moment. | Bu ta'sirli lahza edi.
