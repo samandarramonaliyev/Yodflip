@@ -40,7 +40,7 @@ export default function Play() {
   if (!isAvailable(game as GameId, track))
     return (
       <div className="page">
-        <EmptyState emoji="🇩🇪" title={t('game.german_only')} text={t('game.german_only_text')} action={<Link className="btn-primary" to="/games">{t('nav.games')}</Link>} />
+        <EmptyState emoji="🎩" title={t('game.german_only')} text={t('game.german_only_text')} action={<Link className="btn-primary" to="/games">{t('nav.games')}</Link>} />
       </div>
     )
 

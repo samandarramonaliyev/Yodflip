@@ -123,8 +123,8 @@ export default function SetEditor() {
           value={track}
           onChange={(v) => { setTrack(v); setDirty(true) }}
           options={[
-            { value: 'en', label: '🇬🇧 EN' },
-            { value: 'de', label: '🇩🇪 DE' },
+            { value: 'en', label: 'EN' },
+            { value: 'de', label: 'DE' },
           ]}
         />
       </div>

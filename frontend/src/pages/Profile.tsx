@@ -147,7 +147,7 @@ export default function Profile() {
             </div>
             <div className="card space-y-3 p-4">
               <h2 className="h2">{t('profile.track_level')}</h2>
-              <div className="text-sm font-bold text-muted">{track === 'en' ? '🇬🇧 English' : '🇩🇪 Deutsch'}</div>
+              <div className="text-sm font-bold text-muted">{track === 'en' ? 'EN · English' : 'DE · Deutsch'}</div>
               <div className="grid grid-cols-5 gap-1">
                 {CEFRS.map((c) => (
                   <button key={c} onClick={() => patch({ [cefrKey]: c } as Partial<User>)} className={`min-h-[44px] rounded-xl text-sm font-black ${d.cefr === c ? 'bg-tint text-tint-ink' : 'bg-line'}`}>

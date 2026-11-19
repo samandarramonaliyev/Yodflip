@@ -111,7 +111,7 @@ export default function Decks() {
           <input className="input" required value={name} onChange={(e) => setName(e.target.value)} placeholder={t('decks.name')} autoFocus />
           <textarea className="input min-h-[80px] py-2" value={desc} onChange={(e) => setDesc(e.target.value)} placeholder={t('decks.description')} />
           <div className="rounded-2xl bg-line/50 px-3 text-sm font-bold">
-            {t('decks.track')}: {track === 'en' ? '🇬🇧 English' : '🇩🇪 Deutsch'}
+            {t('decks.track')}: {track === 'en' ? 'EN · English' : 'DE · Deutsch'}
           </div>
           <Toggle checked={isPublic} onChange={setIsPublic} label={t('decks.is_public')} />
           <button className="btn-primary w-full" disabled={busy}>

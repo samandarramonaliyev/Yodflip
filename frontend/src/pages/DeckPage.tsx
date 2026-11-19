@@ -151,7 +151,7 @@ export default function DeckPage() {
         <div className="min-w-0 flex-1">
           <h1 className="h1 truncate">{deck.name}</h1>
           <div className="text-sm text-muted">
-            {deck.track === 'en' ? '🇬🇧' : '🇩🇪'} · {t('decks.cards_n', { n: cards.length })}
+            {deck.track === 'en' ? 'EN' : 'DE'} · {t('decks.cards_n', { n: cards.length })}
           </div>
         </div>
         <button className="grid h-10 w-10 place-items-center rounded-full hover:bg-line" onClick={() => setSettingsOpen(true)} aria-label={t('common.edit')}>

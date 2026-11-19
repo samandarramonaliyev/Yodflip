@@ -1,4 +1,4 @@
-"""WordFlip Django settings. All secrets come from environment variables."""
+"""Yodflip Django settings. All secrets come from environment variables."""
 
 import os
 from datetime import timedelta
@@ -111,7 +111,7 @@ SIMPLE_JWT = {
 }
 
 SPECTACULAR_SETTINGS = {
-    "TITLE": "WordFlip API",
+    "TITLE": "Yodflip API",
     "DESCRIPTION": "Vocabulary games for Uzbek-speaking learners of English and German.",
     "VERSION": "1.0.0",
     "SERVE_INCLUDE_SCHEMA": False,

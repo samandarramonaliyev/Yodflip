@@ -3,7 +3,7 @@
 TEXTS: dict[str, dict[str, str]] = {
     "uz": {
         "welcome": (
-            "Salom, {name}! 👋\n\nWordFlip — ingliz va nemis so'zlarini o'yin orqali o'rganing.\n"
+            "Salom, {name}! 👋\n\nYodflip — ingliz va nemis so'zlarini o'yin orqali o'rganing.\n"
             "📸 Kitob sahifasini skanerlang, 🃏 juftlash o'yinini o'ynang, 🔥 seriyangizni saqlang.\n\n"
             "Boshlash uchun tugmani bosing:"
         ),
@@ -12,10 +12,10 @@ TEXTS: dict[str, dict[str, str]] = {
         "play_daily": "📅 Kunlik musobaqani o'ynash",
         "stats": (
             "📊 Sizning natijangiz\n\n⭐ Daraja: {level} ({xp} XP)\n🔥 Seriya: {streak} kun\n"
-            "🇬🇧 Ingliz: {en_learned} o'rganildi / {en_total} ko'rildi\n"
-            "🇩🇪 Nemis: {de_learned} o'rganildi / {de_total} ko'rildi\nBugun: {today}"
+            "EN · Ingliz: {en_learned} o'rganildi / {en_total} ko'rildi\n"
+            "DE · Nemis: {de_learned} o'rganildi / {de_total} ko'rildi\nBugun: {today}"
         ),
-        "review": "🔁 Takrorlash vaqti keldi:\n🇬🇧 Ingliz: {en} ta so'z\n🇩🇪 Nemis: {de} ta so'z",
+        "review": "🔁 Takrorlash vaqti keldi:\nEN · Ingliz: {en} ta so'z\nDE · Nemis: {de} ta so'z",
         "review_none": "🎉 Hozircha takrorlash uchun so'z yo'q. Yangi so'zlar o'rganing!",
         "play_review": "🔁 Takrorlashni boshlash",
         "not_registered": "Avval ilovani bir marta oching — hisobingiz avtomatik yaratiladi.",
@@ -27,7 +27,7 @@ TEXTS: dict[str, dict[str, str]] = {
     },
     "en": {
         "welcome": (
-            "Hi, {name}! 👋\n\nWordFlip — learn English and German words by playing.\n"
+            "Hi, {name}! 👋\n\nYodflip — learn English and German words by playing.\n"
             "📸 Scan a book page, 🃏 play the match game, 🔥 keep your streak.\n\nTap the button to start:"
         ),
         "open": "🎮 Open game",
@@ -35,10 +35,10 @@ TEXTS: dict[str, dict[str, str]] = {
         "play_daily": "📅 Play the Daily Challenge",
         "stats": (
             "📊 Your progress\n\n⭐ Level: {level} ({xp} XP)\n🔥 Streak: {streak} days\n"
-            "🇬🇧 English: {en_learned} learned / {en_total} seen\n"
-            "🇩🇪 German: {de_learned} learned / {de_total} seen\nToday: {today}"
+            "EN · English: {en_learned} learned / {en_total} seen\n"
+            "DE · German: {de_learned} learned / {de_total} seen\nToday: {today}"
         ),
-        "review": "🔁 Words due for review:\n🇬🇧 English: {en}\n🇩🇪 German: {de}",
+        "review": "🔁 Words due for review:\nEN · English: {en}\nDE · German: {de}",
         "review_none": "🎉 Nothing to review right now. Learn some new words!",
         "play_review": "🔁 Start review",
         "not_registered": "Open the app once first — your account is created automatically.",
@@ -50,7 +50,7 @@ TEXTS: dict[str, dict[str, str]] = {
     },
     "ru": {
         "welcome": (
-            "Привет, {name}! 👋\n\nWordFlip — учите английские и немецкие слова, играя.\n"
+            "Привет, {name}! 👋\n\nYodflip — учите английские и немецкие слова, играя.\n"
             "📸 Сканируйте страницу учебника, 🃏 играйте в «Пары», 🔥 держите серию.\n\nНажмите кнопку, чтобы начать:"
         ),
         "open": "🎮 Открыть игру",
@@ -58,10 +58,10 @@ TEXTS: dict[str, dict[str, str]] = {
         "play_daily": "📅 Играть ежедневный вызов",
         "stats": (
             "📊 Ваш прогресс\n\n⭐ Уровень: {level} ({xp} XP)\n🔥 Серия: {streak} дн.\n"
-            "🇬🇧 Английский: выучено {en_learned} / встречено {en_total}\n"
-            "🇩🇪 Немецкий: выучено {de_learned} / встречено {de_total}\nСегодня: {today}"
+            "EN · Английский: выучено {en_learned} / встречено {en_total}\n"
+            "DE · Немецкий: выучено {de_learned} / встречено {de_total}\nСегодня: {today}"
         ),
-        "review": "🔁 Пора повторить:\n🇬🇧 Английский: {en}\n🇩🇪 Немецкий: {de}",
+        "review": "🔁 Пора повторить:\nEN · Английский: {en}\nDE · Немецкий: {de}",
         "review_none": "🎉 Сейчас повторять нечего. Выучите новые слова!",
         "play_review": "🔁 Начать повторение",
         "not_registered": "Сначала откройте приложение — аккаунт создастся автоматически.",

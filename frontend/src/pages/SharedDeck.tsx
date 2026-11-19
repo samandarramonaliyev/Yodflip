@@ -43,7 +43,7 @@ export default function SharedDeck() {
     <div className="page max-w-3xl space-y-4">
       <div className="card space-y-2 p-5">
         <div className="text-sm font-bold text-muted">
-          {deck.track === 'en' ? '🇬🇧 English' : '🇩🇪 Deutsch'} · {t('decks.by', { name: deck.owner_name })}
+          {deck.track === 'en' ? 'EN · English' : 'DE · Deutsch'} · {t('decks.by', { name: deck.owner_name })}
         </div>
         <h1 className="h1">{deck.name}</h1>
         {deck.description && <p className="text-muted">{deck.description}</p>}

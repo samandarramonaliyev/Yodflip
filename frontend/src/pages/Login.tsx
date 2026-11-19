@@ -92,7 +92,7 @@ export default function Login() {
       <motion.div initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} className="card w-full max-w-md p-6 md:p-8">
         <div className="mb-6 flex flex-col items-center text-center">
           <img src="/favicon.svg" alt="" className="mb-2 h-16 w-16" />
-          <h1 className="h1">WordFlip</h1>
+          <h1 className="h1">Yodflip</h1>
           <p className="mt-1 text-muted">{t('auth.tagline')}</p>
         </div>
 

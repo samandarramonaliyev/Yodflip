@@ -14,7 +14,7 @@ export const GAMES: GameInfo[] = [
   { id: 'builder', emoji: '🧩', color: 'bg-success/15', needsSource: true },
   { id: 'falling', emoji: '🌧️', color: 'bg-sky-400/15', needsSource: true },
   { id: 'memory', emoji: '🧠', color: 'bg-pink-400/15', needsSource: true },
-  { id: 'derdiedas', emoji: '🇩🇪', color: 'bg-accent/30', needsSource: true },
+  { id: 'derdiedas', emoji: '🎩', color: 'bg-accent/30', needsSource: true },
   { id: 'review', emoji: '🔁', color: 'bg-error/15', needsSource: false },
   { id: 'daily', emoji: '📅', color: 'bg-primary/15', needsSource: false },
 ]

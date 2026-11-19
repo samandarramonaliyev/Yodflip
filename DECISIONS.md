@@ -3,7 +3,8 @@
 Everything that was not fully specified, and what was chosen.
 
 ## Product
-- **Name**: kept **WordFlip** (short, describes the card-flip mechanic, works in all three UI languages).
+- **Name**: **Yodflip** ("yod" = memory/remembering in Uzbek + the card flip). Renamed from the working title WordFlip. Infrastructure identifiers (`wordflip` DB/service names in docker-compose and render.yaml, package names, the daily-challenge seed) were kept so existing data and URLs don't change.
+- Track labels are plain **EN** / **DE** text instead of flag emoji (Windows renders flag emoji as the letters "GB"/"DE").
 - **Extra game**: **Memory Pairs**, a classic concentration board with word and Uzbek cards mixed (memorization game, has the reverse toggle).
 - **Word Builder direction**: the default prompt is Uzbek and the player builds the foreign word, as the spec says. The reverse toggle flips it (word shown, build the Uzbek). The same applies to **Falling Words** (Uzbek falls by default).
 - **Review Mode and Daily Challenge** both use a multiple-choice quiz (word → Uzbek, 4 options). When the pool has no distractors at all (a single word), the quiz switches to typing.

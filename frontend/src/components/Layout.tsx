@@ -5,13 +5,13 @@ import { useT } from '../i18n'
 import { useApp } from '../store/app'
 import type { Track } from '../games/types'
 
-export function TrackSwitch({ compact = false }: { compact?: boolean }) {
+export function TrackSwitch() {
   const track = useApp((s) => s.track)
   const setTrack = useApp((s) => s.setTrack)
   const t = useT()
-  const opts: { v: Track; flag: string; label: string }[] = [
-    { v: 'en', flag: '🇬🇧', label: 'EN' },
-    { v: 'de', flag: '🇩🇪', label: 'DE' },
+  const opts: { v: Track; label: string }[] = [
+    { v: 'en', label: 'EN' },
+    { v: 'de', label: 'DE' },
   ]
   return (
     <div className="flex rounded-full bg-line p-1" role="radiogroup" aria-label={t('track.label')}>
@@ -25,7 +25,7 @@ export function TrackSwitch({ compact = false }: { compact?: boolean }) {
         >
           {track === o.v && <motion.span layoutId="track-pill" className="absolute inset-0 rounded-full bg-tint shadow-soft" transition={{ duration: 0.25 }} />}
           <span className="relative">
-            {o.flag} {!compact && o.label}
+            {o.label}
           </span>
         </button>
       ))}
@@ -58,9 +58,9 @@ export function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-line bg-bg/85 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-5xl items-center gap-3 px-4">
-        <NavLink to="/" className="flex items-center gap-2 font-black" aria-label="WordFlip">
+        <NavLink to="/" className="flex items-center gap-2 font-black" aria-label="Yodflip">
           <img src="/favicon.svg" alt="" className="h-8 w-8" />
-          <span className="hidden text-lg sm:inline">WordFlip</span>
+          <span className="hidden text-lg sm:inline">Yodflip</span>
         </NavLink>
         <nav className="ml-4 hidden items-center gap-1 lg:flex">
           {DESKTOP_NAV.map((n) => (
@@ -75,7 +75,7 @@ export function Header() {
           ))}
         </nav>
         <div className="ml-auto flex items-center gap-2">
-          <TrackSwitch compact />
+          <TrackSwitch />
           {user && (
             <NavLink to="/profile" className="chip bg-accent/25 text-ink" title={t('profile.streak')}>
               <Flame className={`h-4 w-4 ${user.streak ? 'fill-orange-400 text-orange-500' : 'text-muted'}`} />

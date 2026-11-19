@@ -1,4 +1,4 @@
-# WordFlip 🃏
+# Yodflip 🃏
 
 Vocabulary games for Uzbek-speaking learners of **English** and **German**, as a responsive website **and** a Telegram Mini App. Both share one backend and one account system.
 
@@ -119,7 +119,7 @@ bot/       aiogram 3 bot with Web App buttons and daily reminders
 
 ## 🇺🇿 O'zbekcha
 
-**WordFlip** — ingliz va nemis tillarini o'rganayotgan o'zbek tilli foydalanuvchilar uchun so'z o'yinlari. U veb-sayt va Telegram Mini App sifatida ishlaydi. Ikkalasida backend ham, hisob ham bitta.
+**Yodflip** — ingliz va nemis tillarini o'rganayotgan o'zbek tilli foydalanuvchilar uchun so'z o'yinlari. U veb-sayt va Telegram Mini App sifatida ishlaydi. Ikkalasida backend ham, hisob ham bitta.
 
 - 📸 **Rasm → o'yin**: lug'at sahifasini suratga oling, topilgan so'z–ta'rif juftlarini tekshiring va juftlash o'yinini o'ynang.
 - 🃏 **Juftlash o'yini**: tepada so'zlar, pastda o'sha tildagi ta'riflar, 3D aylanuvchi kartalar.

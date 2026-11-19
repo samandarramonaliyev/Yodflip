@@ -1,4 +1,4 @@
-"""WordFlip Telegram bot (aiogram 3).
+"""Yodflip Telegram bot (aiogram 3).
 
 Commands: /start /daily /stats /review /remind HH:MM|off
 Talks to the backend's internal bot API (X-Bot-Secret). Without TELEGRAM_BOT_TOKEN it exits
@@ -92,7 +92,7 @@ async def cmd_daily(message: Message) -> None:
         await message.answer(t(lang, "error"))
         return
     lines = [t(lang, "daily_title")]
-    for track, flag in (("en", "🇬🇧"), ("de", "🇩🇪")):
+    for track, flag in (("en", "EN ·"), ("de", "DE ·")):
         words = ", ".join(w["term"] for w in data.get(track, []))
         lines.append(f"\n{flag} {words}")
     await message.answer("\n".join(lines), reply_markup=open_button(t(lang, "play_daily"), "/play/daily"))
@@ -177,7 +177,7 @@ async def main() -> None:
     bot = Bot(TOKEN)
     await bot.set_my_commands(
         [
-            BotCommand(command="start", description="Open WordFlip"),
+            BotCommand(command="start", description="Open Yodflip"),
             BotCommand(command="daily", description="Today's challenge"),
             BotCommand(command="stats", description="My progress"),
             BotCommand(command="review", description="Words due for review"),
