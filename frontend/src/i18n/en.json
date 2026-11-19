@@ -7,7 +7,6 @@
   "nav.games": "Games",
   "nav.leaderboard": "Leaderboard",
   "track.label": "Learning track",
-
   "common.back": "Back",
   "common.cancel": "Cancel",
   "common.check": "Check",
@@ -26,7 +25,6 @@
   "common.search": "Search…",
   "common.see_all": "See all",
   "common.start": "Start",
-
   "err.title": "Oops, something went wrong",
   "err.generic": "Please try again in a moment.",
   "err.network": "No internet connection. Check your network and try again.",
@@ -35,7 +33,6 @@
   "err.forbidden": "This isn't available to you yet.",
   "err.not_found": "Not found.",
   "err.server": "Our server is having a moment. Please try again soon.",
-
   "auth.tagline": "Learn English and German words by playing",
   "auth.login": "Log in",
   "auth.register": "Sign up",
@@ -51,7 +48,6 @@
   "auth.tg_demo": "Continue with Telegram (demo)",
   "auth.mock_note": "Demo mode: no bot token configured, Telegram login is simulated.",
   "auth.logout": "Log out",
-
   "home.hello": "Hi, {name} 👋",
   "home.title_en": "Let's learn English today",
   "home.title_de": "Let's learn German today",
@@ -63,13 +59,11 @@
   "home.daily_desc": "10 words, the same for everyone. Beat the leaderboard!",
   "home.scan_title": "Scan a book page",
   "home.scan_desc": "Snap your vocabulary page and turn it into a game",
-
   "mode.definition": "Definitions",
   "mode.memorize": "Memorize (Uzbek)",
   "mode.article": "Articles",
   "mode.definition_desc": "Match each word with its definition in the same language.",
   "mode.memorize_desc": "Practise each word with its Uzbek translation.",
-
   "game.match": "Match Game",
   "game.match_desc": "Flip a word and its definition. Find all the pairs!",
   "game.speed": "Speed Match",
@@ -94,13 +88,11 @@
   "game.write_desc": "Type the answer.",
   "game.german_only": "German track only",
   "game.german_only_text": "Switch to the German track (🇩🇪) in the header to play Der · Die · Das.",
-
   "src.choose": "Choose words",
   "src.levels": "Levels",
   "src.decks": "My decks",
   "src.sets": "Scans",
   "src.lists": "My lists",
-
   "play.reverse": "Reverse direction (Uzbek → word)",
   "play.difficulty": "Board size",
   "play.easy": "Easy",
@@ -113,13 +105,11 @@
   "play.nothing_due": "Nothing to review!",
   "play.nothing_due_text": "You're all caught up. Play a game to learn new words.",
   "play.pick_other": "Choose another game",
-
   "match.words": "Words",
   "match.definitions": "Definitions",
   "match.definition": "Definition",
   "match.hidden_card": "Hidden card",
   "match.hint": "Flip one word card and one definition card.",
-
   "speed.hint": "Tap an answer to start the 60-second timer.",
   "builder.hint": "Hint",
   "builder.try_again": "Not quite. One more try!",
@@ -127,7 +117,6 @@
   "falling.type": "Type the word…",
   "memory.moves": "Moves",
   "memory.hint": "Flip two cards: find each word and its translation.",
-
   "res.time": "Time",
   "res.flips": "Flips",
   "res.accuracy": "Accuracy",
@@ -142,11 +131,9 @@
   "res.replay": "Replay",
   "res.next_round": "Next round",
   "res.new_game": "New game",
-
   "daily.already": "You already played today ({score} points). This run is practice only.",
   "daily.score": "Your score: {score}",
   "daily.leaderboard": "Daily leaderboard",
-
   "levels.title": "Levels",
   "levels.subtitle_en": "Built-in English vocabulary, A1 to C1",
   "levels.subtitle_de": "Built-in German vocabulary, A1 to C1",
@@ -160,13 +147,11 @@
   "levels.words": "Words",
   "levels.all_packs": "All packs",
   "levels.how_to_play": "How do you want to play?",
-
   "cefr.A1": "Beginner",
   "cefr.A2": "Elementary",
   "cefr.B1": "Intermediate",
   "cefr.B2": "Upper-intermediate",
   "cefr.C1": "Advanced",
-
   "scan.title": "Scan a page",
   "scan.subtitle": "Take a photo of a vocabulary page and we'll turn it into a game.",
   "scan.tip": "Tip: lay the book flat, use good light and keep the whole list in the frame.",
@@ -179,7 +164,6 @@
   "scan.quota": "Scans left today: {left} of {limit}",
   "scan.mock": "Demo mode: sample words",
   "scan.manual": "Type words by hand",
-
   "sets.title": "My scans",
   "sets.empty": "No scanned pages yet",
   "sets.empty_text": "Scan a vocabulary page from your book to create your first set.",
@@ -201,7 +185,6 @@
   "sets.play_memorize": "Practise with Uzbek",
   "sets.to_deck": "Turn into a deck",
   "sets.deck_created": "Deck created!",
-
   "decks.title": "My decks",
   "decks.mine": "Mine",
   "decks.public": "Public",
@@ -246,7 +229,6 @@
   "decks.copy_to_mine": "Copy to my decks",
   "decks.copied": "Deck copied to your account!",
   "decks.open_mine": "Open my deck",
-
   "study.flashcards": "Flashcards",
   "study.learn": "Learn",
   "study.write": "Write",
@@ -257,13 +239,11 @@
   "study.type": "Type the answer",
   "study.mastered": "{n} of {total} mastered",
   "study.again_missed": "Study missed again",
-
   "write.placeholder": "Your answer…",
   "write.correct": "Correct!",
   "write.typo": "Almost! Correct spelling: {answer}",
   "write.correct_answer": "Correct answer",
   "write.override": "I was right",
-
   "lists.title": "My word lists",
   "lists.learned": "Learned",
   "lists.missed": "Missed",
@@ -282,7 +262,6 @@
   "lists.moved": "Moved to {list}",
   "lists.practice": "Practise",
   "lists.box": "Leitner box",
-
   "profile.level_n": "Level {n}",
   "profile.streak": "Daily streak",
   "profile.streak_best": "day streak · best {n}",
@@ -305,7 +284,6 @@
   "profile.tg_linked": "Telegram linked!",
   "profile.link_tg_demo": "Link Telegram (demo)",
   "profile.tg_not_configured": "Telegram login is not configured on this server.",
-
   "lb.weekly": "This week",
   "lb.all": "All time",
   "lb.daily": "Daily",
@@ -313,7 +291,6 @@
   "lb.daily_hint": "Today's Daily Challenge ({track} track). Only the first attempt counts.",
   "lb.empty": "No one here yet",
   "lb.empty_text": "Play a game to be the first on the board!",
-
   "ach.first_game": "First game",
   "ach.first_game_desc": "Finish your first game",
   "ach.first_scan": "First scan",
@@ -341,5 +318,8 @@
   "ach.polyglot": "Polyglot",
   "ach.polyglot_desc": "Play in both English and German",
   "ach.deck_master": "Deck master",
-  "ach.deck_master_desc": "Create 5 decks"
+  "ach.deck_master_desc": "Create 5 decks",
+  "res.round_complete": "Round {n} of {total} complete!",
+  "res.home": "Home",
+  "res.other_set": "Another set"
 }

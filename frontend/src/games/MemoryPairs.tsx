@@ -40,12 +40,22 @@ export default function MemoryPairs({ items, track, reverse, onFinish }: GamePro
   const results = useRef<ResultItem[]>([])
   const start = useRef<number | null>(null)
 
+  // Finish ~600ms after the last pair; refs keep the timer safe from parent re-renders.
+  const finished = useRef(false)
+  const onFinishRef = useRef(onFinish)
+  onFinishRef.current = onFinish
+  const movesRef = useRef(0)
+  movesRef.current = moves
+  const allMatched = matched.length > 0 && matched.length === set.length
   useEffect(() => {
-    if (matched.length && matched.length === set.length) {
-      const id = setTimeout(() => onFinish({ results: results.current, durationMs: Date.now() - (start.current || Date.now()), flips: moves * 2 }), 600)
-      return () => clearTimeout(id)
-    }
-  }, [matched, set.length, onFinish, moves])
+    if (!allMatched) return
+    const id = setTimeout(() => {
+      if (finished.current) return
+      finished.current = true
+      onFinishRef.current({ results: results.current, durationMs: Date.now() - (start.current || Date.now()), flips: movesRef.current * 2 })
+    }, 600)
+    return () => clearTimeout(id)
+  }, [allMatched])
 
   const tap = (c: MCard) => {
     if (open.length === 2 || open.includes(c.id) || matched.includes(c.pair)) return

@@ -1,10 +1,10 @@
-import { AnimatePresence, motion } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { Maximize2 } from 'lucide-react'
 import { useEffect, useMemo, useReducer, useRef, useState } from 'react'
 import { FlipCard } from '../components/FlipCard'
 import { Sheet } from '../components/ui'
 import { useT } from '../i18n'
-import { burst, feedbackCorrect, feedbackWrong } from '../lib/fx'
+import { feedbackCorrect, feedbackWrong } from '../lib/fx'
 import { haptic } from '../lib/telegram'
 import { play } from '../lib/sound'
 import { accuracy, createBoard, matchReducer, type MatchCard } from './matchMachine'
@@ -13,6 +13,7 @@ import { toResult, type GameProps } from './types'
 
 const MISMATCH_MS = 1200
 const LONG_TEXT = 70
+export const ROUND_END_MS = 600
 
 function CardBack({ side }: { side: 'word' | 'def' }) {
   return (
@@ -85,23 +86,31 @@ export default function MatchGame({ items, track, onFinish }: GameProps) {
     }
   }, [state.lastEvent, state.log])
 
-  // Round end
+  // Round end: when every pair is matched, wait ~600ms for the last animation, then finish.
+  // Only state.phase is a dependency and the latest values are read from refs, so a parent
+  // re-render can never cancel the timer; `finished` is set inside the timer (exactly once).
+  const stateRef = useRef(state)
+  stateRef.current = state
+  const onFinishRef = useRef(onFinish)
+  onFinishRef.current = onFinish
+  const itemsRef = useRef(items)
+  itemsRef.current = items
   useEffect(() => {
-    if (state.phase !== 'done' || finished.current) return
-    finished.current = true
-    const byKey = new Map(items.map((i) => [i.key, i]))
-    const durationMs = startRef.current ? Date.now() - startRef.current : 0
+    if (state.phase !== 'done') return
     const id = setTimeout(() => {
-      burst(null, true)
-      onFinish({
-        results: state.log.map((l) => toResult(byKey.get(l.pairId)!, l.correct)),
-        durationMs,
-        flips: state.flips,
-        misses: state.misses,
+      if (finished.current) return
+      finished.current = true
+      const s = stateRef.current
+      const byKey = new Map(itemsRef.current.map((i) => [i.key, i]))
+      onFinishRef.current({
+        results: s.log.map((l) => toResult(byKey.get(l.pairId)!, l.correct)),
+        durationMs: startRef.current ? Date.now() - startRef.current : 0,
+        flips: s.flips,
+        misses: s.misses,
       })
-    }, 650)
+    }, ROUND_END_MS)
     return () => clearTimeout(id)
-  }, [state.phase, state.log, state.flips, state.misses, items, onFinish])
+  }, [state.phase])
 
   const flip = (c: MatchCard) => {
     if (state.phase !== 'idle' || c.faceUp || c.matched) return
@@ -124,25 +133,22 @@ export default function MatchGame({ items, track, onFinish }: GameProps) {
   const expandedCard = state.cards.find((c) => c.id === expanded)
 
   const renderCard = (c: MatchCard, h: string) => {
+    const leaving = c.matched && !celebrating.includes(c.id)
     const st = c.matched ? 'match' : missIds.includes(c.id) ? 'miss' : 'open'
     return (
-      <AnimatePresence key={c.id} mode="popLayout">
-        {!c.matched || celebrating.includes(c.id) ? (
-          <motion.div
-            ref={(el) => (cardRefs.current[c.id] = el)}
-            exit={{ scale: 0.6, opacity: 0, transition: { duration: 0.25 } }}
-            animate={st === 'miss' ? { x: [0, -7, 7, -5, 5, 0] } : st === 'match' ? { scale: [1, 1.08, 1] } : {}}
-            transition={{ duration: 0.4 }}
-            className={h}
-          >
-            <button className="h-full w-full" onClick={() => flip(c)} aria-label={c.faceUp ? c.text : t('match.hidden_card')} aria-pressed={c.faceUp}>
-              <FlipCard className="h-full w-full" flipped={c.faceUp} front={<CardBack side={c.side} />} back={<CardFront card={c} state={st} onExpand={() => setExpanded(c.id)} />} />
-            </button>
-          </motion.div>
-        ) : (
-          <div className={`${h} rounded-2xl border-2 border-dashed border-line`} aria-hidden />
-        )}
-      </AnimatePresence>
+      <motion.div
+        key={c.id}
+        ref={(el) => (cardRefs.current[c.id] = el)}
+        // Matched cards fade out but keep their grid slot (no reflow, no dashed boxes).
+        animate={leaving ? { opacity: 0, scale: 0.8 } : st === 'miss' ? { x: [0, -7, 7, -5, 5, 0], opacity: 1, scale: 1 } : st === 'match' ? { scale: [1, 1.08, 1], opacity: 1 } : { opacity: 1, scale: 1 }}
+        transition={{ duration: leaving ? 0.3 : 0.4 }}
+        className={`${h} ${leaving ? 'pointer-events-none' : ''}`}
+        aria-hidden={leaving}
+      >
+        <button className="h-full w-full" onClick={() => flip(c)} tabIndex={leaving ? -1 : 0} aria-label={c.faceUp ? c.text : t('match.hidden_card')} aria-pressed={c.faceUp}>
+          <FlipCard className="h-full w-full" flipped={c.faceUp} front={<CardBack side={c.side} />} back={<CardFront card={c} state={st} onExpand={() => setExpanded(c.id)} />} />
+        </button>
+      </motion.div>
     )
   }
 

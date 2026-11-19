@@ -7,7 +7,6 @@
   "nav.games": "O'yinlar",
   "nav.leaderboard": "Reyting",
   "track.label": "O'rganish yo'nalishi",
-
   "common.back": "Orqaga",
   "common.cancel": "Bekor qilish",
   "common.check": "Tekshirish",
@@ -26,7 +25,6 @@
   "common.search": "Qidirish…",
   "common.see_all": "Hammasi",
   "common.start": "Boshlash",
-
   "err.title": "Voy, nimadir xato ketdi",
   "err.generic": "Birozdan so'ng qayta urinib ko'ring.",
   "err.network": "Internet aloqasi yo'q. Tarmoqni tekshirib, qayta urinib ko'ring.",
@@ -35,7 +33,6 @@
   "err.forbidden": "Bu hozircha siz uchun ochiq emas.",
   "err.not_found": "Topilmadi.",
   "err.server": "Serverda vaqtinchalik muammo. Birozdan so'ng urinib ko'ring.",
-
   "auth.tagline": "Ingliz va nemis so'zlarini o'ynab o'rganing",
   "auth.login": "Kirish",
   "auth.register": "Ro'yxatdan o'tish",
@@ -51,7 +48,6 @@
   "auth.tg_demo": "Telegram orqali davom etish (demo)",
   "auth.mock_note": "Demo rejim: bot tokeni sozlanmagan, Telegram orqali kirish taqlid qilinadi.",
   "auth.logout": "Chiqish",
-
   "home.hello": "Salom, {name} 👋",
   "home.title_en": "Bugun inglizcha o'rganamiz",
   "home.title_de": "Bugun nemischa o'rganamiz",
@@ -63,13 +59,11 @@
   "home.daily_desc": "Hamma uchun bir xil 10 ta so'z. Reytingda birinchi bo'ling!",
   "home.scan_title": "Kitob sahifasini skanerlang",
   "home.scan_desc": "Lug'at sahifasini rasmga oling va uni o'yinga aylantiring",
-
   "mode.definition": "Ta'riflar",
   "mode.memorize": "Yodlash (o'zbekcha)",
   "mode.article": "Artikllar",
   "mode.definition_desc": "Har bir so'zni o'sha tildagi ta'rifi bilan juftlang.",
   "mode.memorize_desc": "Har bir so'zni o'zbekcha tarjimasi bilan mashq qiling.",
-
   "game.match": "Juftlash o'yini",
   "game.match_desc": "So'z va uning ta'rifini oching. Barcha juftlarni toping!",
   "game.speed": "Tezkor juftlash",
@@ -94,13 +88,11 @@
   "game.write_desc": "Javobni yozing.",
   "game.german_only": "Faqat nemis tili yo'nalishida",
   "game.german_only_text": "Der · Die · Das o'ynash uchun yuqoridagi menyudan nemis tilini (🇩🇪) tanlang.",
-
   "src.choose": "So'zlarni tanlang",
   "src.levels": "Darajalar",
   "src.decks": "To'plamlarim",
   "src.sets": "Skanerlar",
   "src.lists": "Ro'yxatlarim",
-
   "play.reverse": "Teskari yo'nalish (o'zbekcha → so'z)",
   "play.difficulty": "Taxta o'lchami",
   "play.easy": "Oson",
@@ -113,13 +105,11 @@
   "play.nothing_due": "Takrorlash uchun so'z yo'q!",
   "play.nothing_due_text": "Hammasini takrorladingiz. Yangi so'zlar o'rganish uchun o'yin o'ynang.",
   "play.pick_other": "Boshqa o'yin tanlash",
-
   "match.words": "So'zlar",
   "match.definitions": "Ta'riflar",
   "match.definition": "Ta'rif",
   "match.hidden_card": "Yopiq karta",
   "match.hint": "Bitta so'z kartasini va bitta ta'rif kartasini oching.",
-
   "speed.hint": "60 soniyalik taymerni boshlash uchun javobni bosing.",
   "builder.hint": "Yordam",
   "builder.try_again": "Unchalik emas. Yana bir urinish!",
@@ -127,7 +117,6 @@
   "falling.type": "So'zni yozing…",
   "memory.moves": "Yurishlar",
   "memory.hint": "Ikkita kartani oching: har bir so'z va uning tarjimasini toping.",
-
   "res.time": "Vaqt",
   "res.flips": "Ochishlar",
   "res.accuracy": "Aniqlik",
@@ -138,15 +127,13 @@
   "res.new_badges": "Yangi nishonlar",
   "res.learned_now": "{n} ta so'z «O'rganilgan»ga o'tdi!",
   "res.missed": "Xato qilingan so'zlar",
-  "res.add_missed_want": "Xatolarni «O'rganmoqchiman»ga qo'shish",
+  "res.add_missed_want": "Xatolarni yodlashga qo'shish",
   "res.replay": "Qayta o'ynash",
   "res.next_round": "Keyingi raund",
   "res.new_game": "Yangi o'yin",
-
   "daily.already": "Bugun allaqachon o'ynagansiz ({score} ball). Bu safar faqat mashq.",
   "daily.score": "Natijangiz: {score}",
   "daily.leaderboard": "Kunlik reyting",
-
   "levels.title": "Darajalar",
   "levels.subtitle_en": "Ichki ingliz tili lug'ati, A1 dan C1 gacha",
   "levels.subtitle_de": "Ichki nemis tili lug'ati, A1 dan C1 gacha",
@@ -160,13 +147,11 @@
   "levels.words": "So'zlar",
   "levels.all_packs": "Barcha to'plamlar",
   "levels.how_to_play": "Qanday o'ynamoqchisiz?",
-
   "cefr.A1": "Boshlang'ich",
   "cefr.A2": "Elementar",
   "cefr.B1": "O'rta",
   "cefr.B2": "O'rtadan yuqori",
   "cefr.C1": "Yuqori",
-
   "scan.title": "Sahifani skanerlash",
   "scan.subtitle": "Lug'at sahifasini rasmga oling, biz uni o'yinga aylantiramiz.",
   "scan.tip": "Maslahat: kitobni tekis qo'ying, yorug' joyda suratga oling va butun ro'yxat kadrga sig'sin.",
@@ -179,7 +164,6 @@
   "scan.quota": "Bugun qolgan skanerlar: {limit} tadan {left} ta",
   "scan.mock": "Demo rejim: namuna so'zlar",
   "scan.manual": "So'zlarni qo'lda yozish",
-
   "sets.title": "Skanerlarim",
   "sets.empty": "Hali skanerlangan sahifa yo'q",
   "sets.empty_text": "Birinchi to'plamingizni yaratish uchun kitobingizdagi lug'at sahifasini skanerlang.",
@@ -201,7 +185,6 @@
   "sets.play_memorize": "O'zbekcha bilan mashq qilish",
   "sets.to_deck": "To'plamga (deck) aylantirish",
   "sets.deck_created": "To'plam yaratildi!",
-
   "decks.title": "To'plamlarim",
   "decks.mine": "Meniki",
   "decks.public": "Ommaviy",
@@ -246,7 +229,6 @@
   "decks.copy_to_mine": "O'z to'plamlarimga nusxalash",
   "decks.copied": "To'plam hisobingizga nusxalandi!",
   "decks.open_mine": "To'plamimni ochish",
-
   "study.flashcards": "Kartochkalar",
   "study.learn": "O'rganish",
   "study.write": "Yozish",
@@ -257,13 +239,11 @@
   "study.type": "Javobni yozing",
   "study.mastered": "{total} tadan {n} tasi o'zlashtirildi",
   "study.again_missed": "Xatolarni qayta o'rganish",
-
   "write.placeholder": "Javobingiz…",
   "write.correct": "To'g'ri!",
   "write.typo": "Deyarli! To'g'ri yozilishi: {answer}",
   "write.correct_answer": "To'g'ri javob",
   "write.override": "Men to'g'ri yozgandim",
-
   "lists.title": "So'z ro'yxatlarim",
   "lists.learned": "O'rganilgan",
   "lists.missed": "Xato qilingan",
@@ -282,7 +262,6 @@
   "lists.moved": "«{list}»ga ko'chirildi",
   "lists.practice": "Mashq qilish",
   "lists.box": "Leitner qutisi",
-
   "profile.level_n": "{n}-daraja",
   "profile.streak": "Kunlik seriya",
   "profile.streak_best": "kunlik seriya · eng yaxshisi {n}",
@@ -305,7 +284,6 @@
   "profile.tg_linked": "Telegram ulandi!",
   "profile.link_tg_demo": "Telegramni ulash (demo)",
   "profile.tg_not_configured": "Bu serverda Telegram orqali kirish sozlanmagan.",
-
   "lb.weekly": "Shu hafta",
   "lb.all": "Umumiy",
   "lb.daily": "Kunlik",
@@ -313,7 +291,6 @@
   "lb.daily_hint": "Bugungi kunlik musobaqa ({track} yo'nalishi). Faqat birinchi urinish hisoblanadi.",
   "lb.empty": "Hali hech kim yo'q",
   "lb.empty_text": "Reytingda birinchi bo'lish uchun o'yin o'ynang!",
-
   "ach.first_game": "Birinchi o'yin",
   "ach.first_game_desc": "Birinchi o'yiningizni tugating",
   "ach.first_scan": "Birinchi skaner",
@@ -341,5 +318,8 @@
   "ach.polyglot": "Poliglot",
   "ach.polyglot_desc": "Ham ingliz, ham nemis tilida o'ynang",
   "ach.deck_master": "To'plam ustasi",
-  "ach.deck_master_desc": "5 ta to'plam yarating"
+  "ach.deck_master_desc": "5 ta to'plam yarating",
+  "res.round_complete": "{total} tadan {n}-raund yakunlandi!",
+  "res.home": "Bosh sahifa",
+  "res.other_set": "Boshqa to'plam"
 }

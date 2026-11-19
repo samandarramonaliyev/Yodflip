@@ -63,6 +63,7 @@ export default function DeckStudy() {
   const [server, setServer] = useState<ResultsResponse | null>(null)
   const [saving, setSaving] = useState(false)
   const [subset, setSubset] = useState<GameItem[] | null>(null)
+  const savedRounds = useRef(new Set<number>())
   const items = useMemo(() => (deck?.cards || []).map(cardToItem).filter((i) => i.translation), [deck])
 
   if (error) return <div className="page"><ErrorState error={error} onRetry={reload} /></div>
@@ -70,6 +71,8 @@ export default function DeckStudy() {
   if (!items.length) return <div className="page"><EmptyState emoji="🃏" title={t('decks.no_cards')} /></div>
 
   const finish = async (o: GameOutcome) => {
+    if (savedRounds.current.has(round)) return // each study run is saved exactly once
+    savedRounds.current.add(round)
     setOutcome(o)
     setSaving(true)
     setServer(null)
@@ -124,23 +127,31 @@ export default function DeckStudy() {
           durationMs={outcome.durationMs}
           accuracy={accuracy}
           missed={missed}
-          server={server}
+          xp={server ? server.xp_earned : null}
           saving={saving}
-          onReplay={() => {
+          newAchievements={server?.new_achievements}
+          learnedNow={server?.learned_now.length}
+          onNewGame={() => {
             setSubset(null)
             setOutcome(null)
             setRound((r) => r + 1)
+            window.scrollTo({ top: 0 })
           }}
-          onNext={
-            missed.length
-              ? () => {
+          otherSetTo="/decks"
+          extraActions={
+            missed.length ? (
+              <button
+                className="btn-ghost"
+                onClick={() => {
                   setSubset(missed)
                   setOutcome(null)
                   setRound((r) => r + 1)
-                }
-              : undefined
+                }}
+              >
+                🔁 {t('study.again_missed')}
+              </button>
+            ) : null
           }
-          nextLabel={t('study.again_missed')}
         />
       ) : (
         <Comp key={`${round}-${mode}`} items={playItems} track={deck.track} reverse={reverse} onFinish={finish} />

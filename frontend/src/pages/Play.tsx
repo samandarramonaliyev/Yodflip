@@ -1,12 +1,13 @@
 import { ArrowLeft, Play as PlayIcon } from 'lucide-react'
-import { lazy, Suspense, useCallback, useEffect, useMemo, useState } from 'react'
+import { lazy, Suspense, useCallback, useEffect, useReducer, useRef, useState } from 'react'
 import { Link, useNavigate, useParams, useSearchParams } from 'react-router-dom'
-import { Results } from '../components/Results'
+import { Results, RoundComplete } from '../components/Results'
 import { SourcePicker, type SourceChoice } from '../components/SourcePicker'
 import { EmptyState, ErrorState, Segmented, Spinner, Toggle } from '../components/ui'
 import { GAME_LIMITS, gameInfo } from '../games/catalog'
 import { isAvailable, supportsReverse, usableItems } from '../games/direction'
-import { BOARD_SIZES, splitRounds, type Difficulty } from '../games/matchMachine'
+import { BOARD_SIZES, shuffle, splitRounds, type Difficulty } from '../games/matchMachine'
+import { accuracyOf, createSession, otherSetPath, sessionReducer, totals } from '../games/session'
 import type { GameId, GameItem, GameOutcome, GameProps, Source } from '../games/types'
 import { useT } from '../i18n'
 import { api } from '../lib/api'
@@ -100,7 +101,11 @@ function Setup({ game, onStart }: { game: GameId; onStart: (q: Record<string, st
   )
 }
 
-type Phase = 'loading' | 'error' | 'empty' | 'playing' | 'results'
+type LoadPhase = 'loading' | 'error' | 'empty' | 'ready'
+
+function buildRounds(items: GameItem[], game: GameId, difficulty: Difficulty): GameItem[][] {
+  return game === 'match' ? splitRounds(items, BOARD_SIZES[difficulty]) : [items]
+}
 
 function Runner({ game, source, params }: { game: GameId; source: Source; params: URLSearchParams }) {
   const t = useT()
@@ -108,18 +113,15 @@ function Runner({ game, source, params }: { game: GameId; source: Source; params
   const bumpUser = useApp((s) => s.bumpUser)
   const reverse = params.get('reverse') === '1'
   const difficulty = (params.get('difficulty') as Difficulty) || 'medium'
-  const [phase, setPhase] = useState<Phase>('loading')
+  const [load, setLoad] = useState<LoadPhase>('loading')
   const [error, setError] = useState<unknown>(null)
   const [items, setItems] = useState<GameItem[]>([])
-  const [round, setRound] = useState(0)
-  const [playKey, setPlayKey] = useState(0)
-  const [outcome, setOutcome] = useState<GameOutcome | null>(null)
-  const [server, setServer] = useState<ResultsResponse | null>(null)
-  const [saving, setSaving] = useState(false)
-  const [daily, setDaily] = useState<{ already_played?: boolean; my_score?: number | null }>({})
+  const [session, dispatch] = useReducer(sessionReducer, createSession([]))
+  const [daily, setDaily] = useState<{ already_played?: boolean; my_score?: number | null; score?: number }>({})
+  const submitted = useRef(new Set<string>())
 
-  const load = useCallback(async () => {
-    setPhase('loading')
+  const fetchItems = useCallback(async () => {
+    setLoad('loading')
     try {
       const r = await api.get<{ items: GameItem[]; already_played?: boolean; my_score?: number | null }>('/games/words/', {
         game,
@@ -133,53 +135,71 @@ function Runner({ game, source, params }: { game: GameId; source: Source; params
       const usable = usableItems(r.items, game)
       setItems(usable)
       setDaily({ already_played: r.already_played, my_score: r.my_score })
-      setRound(0)
-      setPhase(usable.length ? 'playing' : 'empty')
+      dispatch({ type: 'RESTART', rounds: buildRounds(usable, game, difficulty) })
+      setLoad(usable.length ? 'ready' : 'empty')
     } catch (e) {
       setError(e)
-      setPhase('error')
+      setLoad('error')
     }
-  }, [game, track, source, params])
+  }, [game, track, source, params, difficulty])
 
   useEffect(() => {
-    void load()
-  }, [load])
+    void fetchItems()
+  }, [fetchItems])
 
-  const rounds = useMemo(() => (game === 'match' ? splitRounds(items, BOARD_SIZES[difficulty]) : [items]), [items, game, difficulty])
-  const roundItems = rounds[round] || []
-
-  const onFinish = async (o: GameOutcome) => {
-    setOutcome(o)
-    setServer(null)
-    setPhase('results')
-    if (!o.results.length) return
-    setSaving(true)
-    try {
-      const r = await api.post<ResultsResponse>('/games/results/', {
-        game,
-        track,
-        source,
-        results: o.results,
-        duration_ms: Math.round(o.durationMs),
-        combo_max: o.comboMax ?? 0,
-      })
-      setServer(r)
-      bumpUser({ xp: r.xp_total, streak: r.streak, level: r.level })
-    } catch {
-      /* results screen still shows local stats */
-    } finally {
-      setSaving(false)
+  // Save every finished round to the backend exactly once (keyed by playId + round).
+  useEffect(() => {
+    for (const stat of session.stats) {
+      const key = `${session.playId}-${stat.round}`
+      if (stat.xp !== null || submitted.current.has(key)) continue
+      submitted.current.add(key)
+      const playId = session.playId
+      if (!stat.results.length) {
+        dispatch({ type: 'SAVED', playId, round: stat.round, xp: 0 })
+        continue
+      }
+      api
+        .post<ResultsResponse>('/games/results/', {
+          game,
+          track,
+          source,
+          results: stat.results,
+          duration_ms: Math.round(stat.durationMs),
+          combo_max: stat.comboMax ?? 0,
+        })
+        .then((r) => {
+          dispatch({ type: 'SAVED', playId, round: stat.round, xp: r.xp_earned, newAchievements: r.new_achievements, learnedNow: r.learned_now.length })
+          bumpUser({ xp: r.xp_total, streak: r.streak, level: r.level })
+          if (r.daily) setDaily((d) => ({ ...d, score: r.daily!.score }))
+        })
+        .catch(() => dispatch({ type: 'SAVED', playId, round: stat.round, xp: 0 }))
     }
-  }
+  }, [session.stats, session.playId, game, track, source, bumpUser])
 
-  if (phase === 'loading')
+  const onFinish = useCallback(
+    (o: GameOutcome) => dispatch({ type: 'ROUND_DONE', results: o.results, durationMs: o.durationMs, flips: o.flips, comboMax: o.comboMax }),
+    [],
+  )
+  // "Yangi o'yin": same word set, freshly shuffled, from round 1.
+  const newGame = useCallback(() => {
+    const reshuffled = shuffle(items)
+    setItems(reshuffled)
+    dispatch({ type: 'RESTART', rounds: buildRounds(reshuffled, game, difficulty) })
+    window.scrollTo({ top: 0 })
+  }, [items, game, difficulty])
+  const nextRound = useCallback(() => {
+    dispatch({ type: 'NEXT_ROUND' })
+    window.scrollTo({ top: 0 })
+  }, [])
+
+  if (load === 'loading')
     return (
       <div className="grid min-h-[60vh] place-items-center">
         <Spinner className="h-8 w-8 text-primary" />
       </div>
     )
-  if (phase === 'error') return <div className="page"><ErrorState error={error} onRetry={load} /></div>
-  if (phase === 'empty')
+  if (load === 'error') return <div className="page"><ErrorState error={error} onRetry={fetchItems} /></div>
+  if (load === 'empty')
     return (
       <div className="page">
         <EmptyState
@@ -192,65 +212,63 @@ function Runner({ game, source, params }: { game: GameId; source: Source; params
     )
 
   const Game = COMPONENTS[game]
-  const missed = (() => {
-    if (!outcome) return []
-    const wrong = new Set(outcome.results.filter((r) => !r.correct).map((r) => r.term))
-    return roundItems.filter((i) => wrong.has(i.term))
-  })()
-  const accuracy = outcome && outcome.results.length ? Math.round((100 * outcome.results.filter((r) => r.correct).length) / outcome.results.length) : 0
-  const hasNextRound = game === 'match' && round < rounds.length - 1
+  const total = session.rounds.length
+  const lastStat = session.stats[session.stats.length - 1]
 
   return (
     <div className="mx-auto w-full max-w-5xl px-3 pb-10 pt-3 md:px-4">
-      {game === 'daily' && daily.already_played && phase === 'playing' && (
-        <div className="mb-3 rounded-2xl bg-accent/25 p-3 text-center text-sm font-bold">{t('daily.already', { score: daily.my_score ?? 0 })}</div>
-      )}
-      {phase === 'playing' && (
+      {session.status === 'playing' && (
         <>
-          {rounds.length > 1 && (
-            <div className="mb-2 text-center text-sm font-extrabold text-muted">{t('play.round_of', { n: round + 1, total: rounds.length })}</div>
-          )}
+          {game === 'daily' && daily.already_played && <div className="mb-3 rounded-2xl bg-accent/25 p-3 text-center text-sm font-bold">{t('daily.already', { score: daily.my_score ?? 0 })}</div>}
+          {total > 1 && <div className="mb-2 text-center text-sm font-extrabold text-muted">{t('play.round_of', { n: session.index + 1, total })}</div>}
           <Suspense fallback={<Spinner className="mx-auto mt-20 h-8 w-8 text-primary" />}>
-            <Game key={`${round}-${playKey}`} items={roundItems} track={track} reverse={reverse} onFinish={onFinish} />
+            <Game key={`${session.playId}-${session.index}`} items={session.rounds[session.index]} track={track} reverse={reverse} onFinish={onFinish} />
           </Suspense>
         </>
       )}
-      {phase === 'results' && outcome && (
-        <Results
-          track={track}
-          durationMs={outcome.durationMs}
-          flips={outcome.flips}
-          accuracy={accuracy}
-          missed={missed}
-          server={server}
-          saving={saving}
-          onReplay={() => {
-            setPlayKey((k) => k + 1)
-            setPhase('playing')
-          }}
-          onNext={
-            hasNextRound
-              ? () => {
-                  setRound((r) => r + 1)
-                  setPhase('playing')
-                }
-              : game === 'daily'
-                ? undefined
-                : () => void load()
-          }
-          nextLabel={hasNextRound ? t('res.next_round') : t('res.new_game')}
-          extra={
-            game === 'daily' && server?.daily ? (
-              <div className="mt-2 space-y-2">
-                <div className="text-lg font-black text-primary">{t('daily.score', { score: server.daily.score })}</div>
-                <Link to="/leaderboard?tab=daily" className="btn-soft">
-                  🏆 {t('daily.leaderboard')}
-                </Link>
-              </div>
-            ) : null
-          }
+
+      {session.status === 'round_complete' && lastStat && (
+        <RoundComplete
+          round={lastStat.round}
+          total={total}
+          durationMs={lastStat.durationMs}
+          flips={lastStat.flips}
+          accuracy={accuracyOf(lastStat.results)}
+          xp={lastStat.xp}
+          saving={lastStat.xp === null}
+          onNext={nextRound}
         />
       )}
+
+      {session.status === 'game_complete' &&
+        (() => {
+          const sum = totals(session)
+          return (
+            <Results
+              track={track}
+              durationMs={sum.durationMs}
+              flips={sum.flips}
+              accuracy={sum.accuracy}
+              xp={sum.xp}
+              saving={sum.saving}
+              missed={sum.missed}
+              newAchievements={sum.newAchievements}
+              learnedNow={sum.learnedNow}
+              onNewGame={newGame}
+              otherSetTo={game === 'daily' || game === 'review' ? undefined : otherSetPath(source, params)}
+              extra={
+                game === 'daily' && daily.score !== undefined ? (
+                  <div className="mt-2 space-y-2">
+                    <div className="text-lg font-black text-primary">{t('daily.score', { score: daily.score })}</div>
+                    <Link to="/leaderboard?tab=daily" className="btn-soft">
+                      🏆 {t('daily.leaderboard')}
+                    </Link>
+                  </div>
+                ) : null
+              }
+            />
+          )
+        })()}
     </div>
   )
 }

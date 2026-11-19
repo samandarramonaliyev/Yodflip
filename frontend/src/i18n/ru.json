@@ -7,7 +7,6 @@
   "nav.games": "Игры",
   "nav.leaderboard": "Рейтинг",
   "track.label": "Направление обучения",
-
   "common.back": "Назад",
   "common.cancel": "Отмена",
   "common.check": "Проверить",
@@ -26,7 +25,6 @@
   "common.search": "Поиск…",
   "common.see_all": "Все",
   "common.start": "Начать",
-
   "err.title": "Упс, что-то пошло не так",
   "err.generic": "Попробуйте ещё раз чуть позже.",
   "err.network": "Нет подключения к интернету. Проверьте сеть и попробуйте снова.",
@@ -35,7 +33,6 @@
   "err.forbidden": "Пока это вам недоступно.",
   "err.not_found": "Не найдено.",
   "err.server": "Сервер временно недоступен. Попробуйте позже.",
-
   "auth.tagline": "Учите английские и немецкие слова, играя",
   "auth.login": "Войти",
   "auth.register": "Регистрация",
@@ -51,7 +48,6 @@
   "auth.tg_demo": "Продолжить через Telegram (демо)",
   "auth.mock_note": "Демо-режим: токен бота не задан, вход через Telegram имитируется.",
   "auth.logout": "Выйти",
-
   "home.hello": "Привет, {name} 👋",
   "home.title_en": "Сегодня учим английский",
   "home.title_de": "Сегодня учим немецкий",
@@ -63,13 +59,11 @@
   "home.daily_desc": "10 слов, одинаковых для всех. Попадите в рейтинг!",
   "home.scan_title": "Сканируйте страницу книги",
   "home.scan_desc": "Сфотографируйте страницу словаря и превратите её в игру",
-
   "mode.definition": "Определения",
   "mode.memorize": "Запоминание (узбекский)",
   "mode.article": "Артикли",
   "mode.definition_desc": "Сопоставьте слово с определением на том же языке.",
   "mode.memorize_desc": "Тренируйте слова с узбекским переводом.",
-
   "game.match": "Игра «Пары»",
   "game.match_desc": "Открывайте слово и его определение. Найдите все пары!",
   "game.speed": "Скоростные пары",
@@ -94,13 +88,11 @@
   "game.write_desc": "Напишите ответ.",
   "game.german_only": "Только для немецкого",
   "game.german_only_text": "Переключитесь на немецкий (🇩🇪) в шапке, чтобы играть в Der · Die · Das.",
-
   "src.choose": "Выберите слова",
   "src.levels": "Уровни",
   "src.decks": "Мои колоды",
   "src.sets": "Сканы",
   "src.lists": "Мои списки",
-
   "play.reverse": "Обратное направление (узбекский → слово)",
   "play.difficulty": "Размер поля",
   "play.easy": "Легко",
@@ -113,13 +105,11 @@
   "play.nothing_due": "Повторять нечего!",
   "play.nothing_due_text": "Вы всё повторили. Сыграйте, чтобы выучить новые слова.",
   "play.pick_other": "Выбрать другую игру",
-
   "match.words": "Слова",
   "match.definitions": "Определения",
   "match.definition": "Определение",
   "match.hidden_card": "Закрытая карта",
   "match.hint": "Откройте одну карту со словом и одну с определением.",
-
   "speed.hint": "Нажмите на ответ, чтобы запустить 60-секундный таймер.",
   "builder.hint": "Подсказка",
   "builder.try_again": "Почти. Ещё одна попытка!",
@@ -127,7 +117,6 @@
   "falling.type": "Введите слово…",
   "memory.moves": "Ходы",
   "memory.hint": "Открывайте по две карты: найдите слово и его перевод.",
-
   "res.time": "Время",
   "res.flips": "Открытия",
   "res.accuracy": "Точность",
@@ -142,11 +131,9 @@
   "res.replay": "Ещё раз",
   "res.next_round": "Следующий раунд",
   "res.new_game": "Новая игра",
-
   "daily.already": "Вы уже играли сегодня ({score} очков). Эта попытка — тренировка.",
   "daily.score": "Ваш результат: {score}",
   "daily.leaderboard": "Рейтинг дня",
-
   "levels.title": "Уровни",
   "levels.subtitle_en": "Встроенный английский словарь, от A1 до C1",
   "levels.subtitle_de": "Встроенный немецкий словарь, от A1 до C1",
@@ -160,13 +147,11 @@
   "levels.words": "Слова",
   "levels.all_packs": "Все наборы",
   "levels.how_to_play": "Как будете играть?",
-
   "cefr.A1": "Начальный",
   "cefr.A2": "Элементарный",
   "cefr.B1": "Средний",
   "cefr.B2": "Выше среднего",
   "cefr.C1": "Продвинутый",
-
   "scan.title": "Сканировать страницу",
   "scan.subtitle": "Сфотографируйте страницу словаря — мы превратим её в игру.",
   "scan.tip": "Совет: положите книгу ровно, снимайте при хорошем свете, весь список должен попасть в кадр.",
@@ -179,7 +164,6 @@
   "scan.quota": "Осталось сканов сегодня: {left} из {limit}",
   "scan.mock": "Демо-режим: примерные слова",
   "scan.manual": "Ввести слова вручную",
-
   "sets.title": "Мои сканы",
   "sets.empty": "Пока нет отсканированных страниц",
   "sets.empty_text": "Отсканируйте страницу словаря из учебника, чтобы создать первый набор.",
@@ -201,7 +185,6 @@
   "sets.play_memorize": "Тренировать с узбекским",
   "sets.to_deck": "Превратить в колоду",
   "sets.deck_created": "Колода создана!",
-
   "decks.title": "Мои колоды",
   "decks.mine": "Мои",
   "decks.public": "Публичные",
@@ -246,7 +229,6 @@
   "decks.copy_to_mine": "Скопировать себе",
   "decks.copied": "Колода скопирована в ваш аккаунт!",
   "decks.open_mine": "Открыть мою колоду",
-
   "study.flashcards": "Карточки",
   "study.learn": "Заучивание",
   "study.write": "Письмо",
@@ -257,13 +239,11 @@
   "study.type": "Введите ответ",
   "study.mastered": "Освоено {n} из {total}",
   "study.again_missed": "Повторить ошибки",
-
   "write.placeholder": "Ваш ответ…",
   "write.correct": "Верно!",
   "write.typo": "Почти! Правильно: {answer}",
   "write.correct_answer": "Правильный ответ",
   "write.override": "Я ответил верно",
-
   "lists.title": "Мои списки слов",
   "lists.learned": "Выученные",
   "lists.missed": "Ошибки",
@@ -282,7 +262,6 @@
   "lists.moved": "Перемещено в «{list}»",
   "lists.practice": "Тренировать",
   "lists.box": "Коробка Лейтнера",
-
   "profile.level_n": "Уровень {n}",
   "profile.streak": "Серия дней",
   "profile.streak_best": "дней подряд · рекорд {n}",
@@ -305,7 +284,6 @@
   "profile.tg_linked": "Telegram привязан!",
   "profile.link_tg_demo": "Привязать Telegram (демо)",
   "profile.tg_not_configured": "Вход через Telegram на этом сервере не настроен.",
-
   "lb.weekly": "Эта неделя",
   "lb.all": "За всё время",
   "lb.daily": "День",
@@ -313,7 +291,6 @@
   "lb.daily_hint": "Сегодняшний вызов (направление {track}). Засчитывается только первая попытка.",
   "lb.empty": "Здесь пока никого",
   "lb.empty_text": "Сыграйте, чтобы стать первым в рейтинге!",
-
   "ach.first_game": "Первая игра",
   "ach.first_game_desc": "Завершите первую игру",
   "ach.first_scan": "Первый скан",
@@ -341,5 +318,8 @@
   "ach.polyglot": "Полиглот",
   "ach.polyglot_desc": "Играйте и на английском, и на немецком",
   "ach.deck_master": "Мастер колод",
-  "ach.deck_master_desc": "Создайте 5 колод"
+  "ach.deck_master_desc": "Создайте 5 колод",
+  "res.round_complete": "Раунд {n} из {total} пройден!",
+  "res.home": "Главная",
+  "res.other_set": "Другой набор"
 }
