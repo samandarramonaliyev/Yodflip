@@ -51,10 +51,8 @@ CSRF_TRUSTED_ORIGINS = env_list("CSRF_TRUSTED_ORIGINS")
 if PUBLIC_URL and PUBLIC_URL not in CSRF_TRUSTED_ORIGINS:
     CSRF_TRUSTED_ORIGINS.append(PUBLIC_URL)
 
-# The React app is served by Django itself (same origin), so CORS is only needed when the
-# frontend is hosted elsewhere (set CORS_ALLOWED_ORIGINS and VITE_API_URL for that case).
-CORS_ALLOWED_ORIGINS = env_list("CORS_ALLOWED_ORIGINS")
-CORS_ALLOW_ALL_ORIGINS = DEBUG and not CORS_ALLOWED_ORIGINS
+# The React app is served by Django itself and calls /api/... with relative URLs (same
+# origin, also in local dev via the Vite proxy), so no CORS configuration is needed.
 
 INSTALLED_APPS = [
     "django.contrib.admin",
@@ -66,7 +64,6 @@ INSTALLED_APPS = [
     "rest_framework",
     "rest_framework_simplejwt",
     "drf_spectacular",
-    "corsheaders",
     "core",
     "accounts",
     "telegram_auth",
@@ -75,12 +72,12 @@ INSTALLED_APPS = [
     "games",
     "ocr",
     "gamification",
+    "telegram_bot",
 ]
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "whitenoise.middleware.WhiteNoiseMiddleware",
-    "corsheaders.middleware.CorsMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -115,11 +112,15 @@ if not DATABASE_URL:
 if not DEBUG and DATABASE_URL.startswith("sqlite") and not env_bool("ALLOW_SQLITE"):
     # ALLOW_SQLITE is only used for build-time steps such as collectstatic.
     raise ImproperlyConfigured("SQLite is not allowed in production; use PostgreSQL via DATABASE_URL.")
+# Neon (or any PostgreSQL): use the connection string as-is, including ?sslmode=require.
 DATABASES = {
     "default": dj_database_url.parse(
         DATABASE_URL, conn_max_age=600, conn_health_checks=True, ssl_require=env_bool("DATABASE_SSL", False)
     )
 }
+if "-pooler." in DATABASE_URL:
+    # Neon's pooled endpoint runs PgBouncer in transaction mode: no server-side cursors.
+    DATABASES["default"]["DISABLE_SERVER_SIDE_CURSORS"] = True
 
 AUTH_USER_MODEL = "accounts.User"
 AUTH_PASSWORD_VALIDATORS = [
@@ -137,7 +138,7 @@ STATIC_URL = "static/"
 STATIC_ROOT = BASE_DIR / "staticfiles"
 # The built React app (frontend/dist). Whitenoise serves its files at the site root
 # (/assets/..., /favicon.svg); core.views.spa serves index.html for client-side routes.
-FRONTEND_DIST = Path(env("FRONTEND_DIST", str(BASE_DIR.parent / "frontend" / "dist")))
+FRONTEND_DIST = Path(env("FRONTEND_DIST", str(BASE_DIR.parent / "frontend" / "dist")))  # built by build.sh
 WHITENOISE_ROOT = FRONTEND_DIST if FRONTEND_DIST.exists() else None
 WHITENOISE_MAX_AGE = 3600
 
@@ -218,9 +219,10 @@ ANTHROPIC_API_KEY = env("ANTHROPIC_API_KEY")
 ANTHROPIC_MODEL = env("ANTHROPIC_MODEL", "claude-opus-5-5")
 TELEGRAM_BOT_TOKEN = env("TELEGRAM_BOT_TOKEN")
 TELEGRAM_BOT_USERNAME = env("TELEGRAM_BOT_USERNAME").lstrip("@")
-BOT_API_SECRET = env("BOT_API_SECRET") or ("dev-bot-secret" if DEBUG else "")
-if not DEBUG and len(BOT_API_SECRET) < 16:
-    raise ImproperlyConfigured("BOT_API_SECRET (>= 16 chars) must be set when DEBUG is false.")
+# Webhook path secret / Telegram secret_token and the reminder-cron path secret. Optional:
+# derived from SECRET_KEY when empty (see telegram_bot.services).
+TELEGRAM_WEBHOOK_SECRET = env("TELEGRAM_WEBHOOK_SECRET")
+BOT_CRON_SECRET = env("BOT_CRON_SECRET")
 
 # Sample OCR data is a development convenience only. In production without an Anthropic key
 # the Tesseract fallback is used instead.

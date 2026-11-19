@@ -22,7 +22,6 @@ PROD_ENV = {
     "SECRET_KEY": "x" * 50,
     "ALLOWED_HOSTS": "yodflip.example.com",
     "DATABASE_URL": "postgres://u:p@localhost:5432/db",
-    "BOT_API_SECRET": "s" * 32,
 }
 
 
@@ -62,7 +61,6 @@ def test_render_hostname_is_allowed_automatically():
         ({"ALLOWED_HOSTS": ""}, "ALLOWED_HOSTS"),
         ({"DATABASE_URL": ""}, "DATABASE_URL"),
         ({"DATABASE_URL": "sqlite:///db.sqlite3"}, "SQLite"),
-        ({"BOT_API_SECRET": "short"}, "BOT_API_SECRET"),
     ],
 )
 def test_production_refuses_insecure_config(override, message):

@@ -1,85 +1,56 @@
-# Render Blueprint — https://render.com/docs/blueprint-spec
-#
-#   yodflip-db   Managed PostgreSQL
-#   yodflip-web  Django API + the React build in ONE Docker web service (same origin, no CORS)
-#   yodflip-bot  aiogram bot in WEBHOOK mode (a web service: Telegram must reach it over HTTPS)
-#
-# Plans: "free" lets you try it at no cost, but free web services sleep after ~15 min idle
-# (30-60 s cold start) and a free Postgres database EXPIRES after 30 days. For real users,
-# switch to web/bot: starter and db: basic-256mb (see DEPLOY.md).
-
-databases:
-  - name: yodflip-db
-    plan: free
-    databaseName: yodflip
-    user: yodflip
-    postgresMajorVersion: "16"
+# Render Blueprint: ONE free-tier web service.
+#   - build.sh: pip install → React build → collectstatic → migrate → seed (once) → admin user
+#   - start:    gunicorn (Django serves the API, the React app and the Telegram bot webhook)
+#   - database: external PostgreSQL (Neon) via DATABASE_URL
+# See DEPLOY.md for the step-by-step guide.
 
 services:
   - type: web
-    name: yodflip-web
-    runtime: docker
+    name: yodflip
+    runtime: python
     plan: free
-    dockerfilePath: ./Dockerfile
-    dockerContext: .
+    buildCommand: ./build.sh
+    startCommand: cd backend && gunicorn config.wsgi:application -c gunicorn.conf.py
     healthCheckPath: /api/health/
     autoDeploy: true
     envVars:
-      # --- generated / wired automatically ---
-      - key: DATABASE_URL
-        fromDatabase:
-          name: yodflip-db
-          property: connectionString
-      - key: SECRET_KEY
-        generateValue: true
-      - key: BOT_API_SECRET
-        generateValue: true
-      # --- fixed values ---
+      # --- runtime versions ---
+      - key: PYTHON_VERSION
+        value: 3.12.8
+      - key: NODE_MAJOR
+        value: "20"
+      # --- Django ---
       - key: DEBUG
         value: "false"
+      - key: SECRET_KEY
+        generateValue: true
       - key: WEB_CONCURRENCY
         value: "2"
       - key: TIME_ZONE
         value: Asia/Tashkent
-      - key: OCR_DAILY_LIMIT
-        value: "20"
-      - key: ANTHROPIC_MODEL
-        value: claude-opus-5-5
-      # ALLOWED_HOSTS / CSRF_TRUSTED_ORIGINS are filled automatically from RENDER_EXTERNAL_HOSTNAME /
-      # RENDER_EXTERNAL_URL (injected by Render). For a custom domain, add in the dashboard e.g.
-      #   ALLOWED_HOSTS=yodflip.uz   CSRF_TRUSTED_ORIGINS=https://yodflip.uz   PUBLIC_URL=https://yodflip.uz
-      # --- secrets: fill in the Render dashboard ---
-      - key: ANTHROPIC_API_KEY
+      # ALLOWED_HOSTS / CSRF_TRUSTED_ORIGINS / PUBLIC_URL are filled automatically from Render's
+      # RENDER_EXTERNAL_HOSTNAME / RENDER_EXTERNAL_URL. For a custom domain set them explicitly.
+      # --- database: paste the Neon connection string (with ?sslmode=require) ---
+      - key: DATABASE_URL
         sync: false
+      # --- Telegram ---
       - key: TELEGRAM_BOT_TOKEN
         sync: false
       - key: TELEGRAM_BOT_USERNAME
         sync: false
+      - key: TELEGRAM_WEBHOOK_SECRET
+        generateValue: true
+      - key: BOT_CRON_SECRET
+        generateValue: true
+      # --- OCR (needed for real scans on Render: the native runtime has no Tesseract) ---
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      - key: ANTHROPIC_MODEL
+        value: claude-opus-5-5
+      - key: OCR_DAILY_LIMIT
+        value: "20"
+      # --- admin user, created during the build if missing ---
       - key: DJANGO_SUPERUSER_EMAIL
         sync: false
       - key: DJANGO_SUPERUSER_PASSWORD
-        sync: false
-
-  - type: web
-    name: yodflip-bot
-    runtime: docker
-    plan: free
-    dockerfilePath: ./bot/Dockerfile
-    dockerContext: ./bot
-    healthCheckPath: /health
-    autoDeploy: true
-    envVars:
-      # RENDER_EXTERNAL_URL (injected) -> webhook mode, webhook set automatically on startup.
-      - key: BOT_API_SECRET
-        fromService:
-          type: web
-          name: yodflip-web
-          envVarKey: BOT_API_SECRET
-      - key: WEBHOOK_SECRET
-        generateValue: true
-      # Public HTTPS URL of yodflip-web (the Mini App + API). Change it if Render gives the
-      # service a different hostname or you add a custom domain.
-      - key: WEBAPP_URL
-        value: https://yodflip-web.onrender.com
-      - key: TELEGRAM_BOT_TOKEN
         sync: false

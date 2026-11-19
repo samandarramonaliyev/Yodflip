@@ -17,7 +17,8 @@ urlpatterns = [
     path("api/games/", include("games.urls")),
     path("api/ocr/", include("ocr.urls")),
     path("api/gamification/", include("gamification.urls")),
+    path("bot/", include("telegram_bot.urls")),  # Telegram webhook + reminder cron
     path(f"{settings.MEDIA_URL.strip('/')}/<path:path>", core_views.media, name="media"),
     # Everything else is a client-side route of the React app.
-    re_path(r"^(?!api/|admin/|static/|media/|assets/)(?P<path>.*)$", core_views.spa, name="spa"),
+    re_path(r"^(?!api/|admin/|static/|media/|assets/|bot/)(?P<path>.*)$", core_views.spa, name="spa"),
 ]

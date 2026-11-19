@@ -1,7 +1,6 @@
 from datetime import date
 
 import pytest
-from rest_framework.test import APIClient
 
 from accounts.models import User
 from decks.models import Card, Deck, WordSet
@@ -125,15 +124,3 @@ def test_daily_results_only_first_attempt_scores(api, seeded):
     assert r2.data["daily"]["first_attempt"] is False and r2.data["xp_earned"] == 0
     lb = api.get("/api/games/daily/leaderboard/", {"track": "en"}).data
     assert len(lb["entries"]) == 1 and lb["entries"][0]["is_me"]
-
-
-def test_bot_endpoints_require_secret(settings, user):
-    settings.BOT_API_SECRET = "s3"
-    user.telegram_id = 4242
-    user.save()
-    c = APIClient()
-    assert c.get("/api/games/bot/stats/4242/").status_code in (401, 403)
-    r = c.get("/api/games/bot/stats/4242/", HTTP_X_BOT_SECRET="s3")
-    assert r.status_code == 200 and r.data["registered"]
-    r = c.post("/api/games/bot/reminder/4242/", {"reminder_time": "19:30"}, format="json", HTTP_X_BOT_SECRET="s3")
-    assert r.data["reminder_time"] == "19:30"

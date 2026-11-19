@@ -1,72 +1,41 @@
-# One command: `docker compose up --build`
-# App: http://localhost:8080   API docs: http://localhost:8080/api/docs/   Admin: http://localhost:8080/admin/
-# Works with no API keys (MOCK mode). Copy .env.example to .env to configure real keys.
+# Optional production-like local run of the single service (same settings as Render):
+#   docker compose up --build   →  http://localhost:8000
+# Day-to-day development doesn't need Docker: see README (runserver + Vite).
 
 services:
   db:
     image: postgres:16-alpine
     environment:
-      POSTGRES_DB: wordflip
-      POSTGRES_USER: wordflip
-      POSTGRES_PASSWORD: wordflip
+      POSTGRES_DB: yodflip
+      POSTGRES_USER: yodflip
+      POSTGRES_PASSWORD: yodflip
     volumes:
       - pgdata:/var/lib/postgresql/data
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U wordflip -d wordflip"]
+      test: ["CMD-SHELL", "pg_isready -U yodflip -d yodflip"]
       interval: 3s
       timeout: 3s
       retries: 30
 
-  backend:
-    build: ./backend
-    env_file:
-      - path: .env
-        required: false
+  web:
+    build: .
     environment:
-      DATABASE_URL: postgres://wordflip:wordflip@db:5432/wordflip
-      DEBUG: ${DEBUG:-true}
-      ALLOWED_HOSTS: "*"
-      FRONTEND_URL: ${FRONTEND_URL:-http://localhost:8080}
-      CSRF_TRUSTED_ORIGINS: ${CSRF_TRUSTED_ORIGINS:-http://localhost:8080}
-      DJANGO_SUPERUSER_EMAIL: ${DJANGO_SUPERUSER_EMAIL:-admin@wordflip.local}
-      DJANGO_SUPERUSER_PASSWORD: ${DJANGO_SUPERUSER_PASSWORD:-admin12345}
+      DEBUG: "false"
+      SECRET_KEY: ${SECRET_KEY:-local-prod-test-secret-key-change-me-0123456789}
+      ALLOWED_HOSTS: localhost,127.0.0.1
+      PUBLIC_URL: http://localhost:8000
+      DATABASE_URL: postgres://yodflip:yodflip@db:5432/yodflip
+      SECURE_SSL_REDIRECT: "false"   # local only: no TLS in front
+      OCR_MOCK: ${OCR_MOCK:-true}    # sample scan results locally
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
+      TELEGRAM_BOT_TOKEN: ${TELEGRAM_BOT_TOKEN:-}  # webhook needs HTTPS, so it's not set locally
+      DJANGO_SUPERUSER_EMAIL: ${DJANGO_SUPERUSER_EMAIL:-admin@yodflip.local}
+      DJANGO_SUPERUSER_PASSWORD: ${DJANGO_SUPERUSER_PASSWORD:-change-me-admin-123}
     depends_on:
       db:
         condition: service_healthy
-    volumes:
-      - media:/app/media
     ports:
       - "8000:8000"
-    healthcheck:
-      test: ["CMD-SHELL", "python -c \"import urllib.request;urllib.request.urlopen('http://localhost:8000/api/health/')\""]
-      interval: 5s
-      timeout: 5s
-      retries: 40
-
-  frontend:
-    build: ./frontend
-    environment:
-      BACKEND_URL: http://backend:8000
-    depends_on:
-      backend:
-        condition: service_healthy
-    ports:
-      - "8080:80"
-
-  bot:
-    build: ./bot
-    env_file:
-      - path: .env
-        required: false
-    environment:
-      BOT_BACKEND_URL: http://backend:8000
-      WEBAPP_URL: ${WEBAPP_URL:-http://localhost:8080}
-    depends_on:
-      backend:
-        condition: service_healthy
-    # Exits cleanly (code 0) when TELEGRAM_BOT_TOKEN is empty, so it is not restarted.
-    restart: on-failure
 
 volumes:
   pgdata:
-  media:

@@ -1,6 +1,7 @@
 import { load, save } from './storage'
 
-const BASE = (import.meta.env.VITE_API_URL as string | undefined)?.replace(/\/$/, '') || ''
+/** All API calls are relative (/api/...): Django serves this app and the API on one origin. */
+const API = '/api'
 
 export interface Tokens {
   access: string
@@ -39,7 +40,7 @@ async function refresh(): Promise<boolean> {
   if (!tokens?.refresh) return false
   refreshing ??= (async () => {
     try {
-      const r = await fetch(`${BASE}/api/auth/refresh/`, {
+      const r = await fetch(`${API}/auth/refresh/`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ refresh: tokens!.refresh }),
@@ -81,7 +82,7 @@ export async function request<T>(
       headers['Content-Type'] = 'application/json'
       body = JSON.stringify(opts.body)
     }
-    return fetch(`${BASE}/api${path}${qs(opts.query)}`, { method, headers, body })
+    return fetch(`${API}${path}${qs(opts.query)}`, { method, headers, body })
   }
   let res: Response
   try {

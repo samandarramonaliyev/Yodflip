@@ -20,4 +20,4 @@ select = ["E", "F", "W", "I", "B", "UP", "DJ"]
 ignore = ["DJ001", "DJ008", "B904"]
 
 [tool.ruff.lint.isort]
-known-first-party = ["config", "core", "accounts", "telegram_auth", "words", "decks", "games", "ocr", "gamification"]
+known-first-party = ["config", "core", "accounts", "telegram_auth", "words", "decks", "games", "ocr", "gamification", "telegram_bot"]
