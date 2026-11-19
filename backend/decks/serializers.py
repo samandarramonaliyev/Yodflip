@@ -11,6 +11,30 @@ class CardSerializer(serializers.ModelSerializer):
         read_only_fields = ("id",)
         extra_kwargs = {"order": {"required": False}}
 
+    def validate_image(self, image):
+        """Re-encode card images (JPEG, max 800px, EXIF stripped) and cap the size."""
+        if not image:
+            return image
+        import io
+
+        from django.conf import settings
+        from django.core.files.uploadedfile import InMemoryUploadedFile
+        from PIL import Image, ImageOps
+
+        if image.size > settings.MAX_UPLOAD_BYTES:
+            raise serializers.ValidationError("image_too_large")
+        try:
+            img = ImageOps.exif_transpose(Image.open(image)).convert("RGB")
+        except Exception as exc:  # noqa: BLE001
+            raise serializers.ValidationError("not_an_image") from exc
+        img.thumbnail((800, 800))
+        out = io.BytesIO()
+        img.save(out, format="JPEG", quality=82)
+        if out.tell() > settings.MAX_CARD_IMAGE_BYTES:
+            raise serializers.ValidationError("image_too_large")
+        out.seek(0)
+        return InMemoryUploadedFile(out, "image", "card.jpg", "image/jpeg", out.getbuffer().nbytes, None)
+
     def validate_article(self, value):
         value = (value or "").strip().lower()
         if value and value not in ("der", "die", "das"):

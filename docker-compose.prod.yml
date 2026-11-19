@@ -1,0 +1,62 @@
+# Production-like stack (same image and settings as Render):
+#   docker compose -f docker-compose.prod.yml up --build
+# App: http://localhost:8000. Only SECURE_SSL_REDIRECT is relaxed, because there is no HTTPS locally.
+
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: yodflip
+      POSTGRES_USER: yodflip
+      POSTGRES_PASSWORD: yodflip
+    volumes:
+      - pgdata_prod:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U yodflip -d yodflip"]
+      interval: 3s
+      timeout: 3s
+      retries: 30
+
+  web:
+    build: .
+    environment:
+      DEBUG: "false"
+      SECRET_KEY: ${SECRET_KEY:-local-prod-test-secret-key-change-me-0123456789}
+      ALLOWED_HOSTS: localhost,127.0.0.1,web
+      PUBLIC_URL: http://localhost:8000
+      DATABASE_URL: postgres://yodflip:yodflip@db:5432/yodflip
+      SECURE_SSL_REDIRECT: "false"      # local only: there is no TLS terminator in front
+      BOT_API_SECRET: ${BOT_API_SECRET:-local-prod-bot-secret-0123456789}
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
+      OCR_MOCK: ${OCR_MOCK:-true}       # sample scan results for local testing
+      TELEGRAM_BOT_TOKEN: ${TELEGRAM_BOT_TOKEN:-}
+      TELEGRAM_BOT_USERNAME: ${TELEGRAM_BOT_USERNAME:-}
+      DJANGO_SUPERUSER_EMAIL: ${DJANGO_SUPERUSER_EMAIL:-admin@yodflip.local}
+      DJANGO_SUPERUSER_PASSWORD: ${DJANGO_SUPERUSER_PASSWORD:-change-me-admin-123}
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "8000:8000"
+    healthcheck:
+      test: ["CMD-SHELL", "python -c \"import urllib.request;urllib.request.urlopen('http://localhost:8000/api/health/')\""]
+      interval: 5s
+      timeout: 5s
+      retries: 40
+
+  bot:
+    build: ./bot
+    environment:
+      TELEGRAM_BOT_TOKEN: ${TELEGRAM_BOT_TOKEN:-}
+      WEBAPP_URL: ${WEBAPP_URL:-}
+      BOT_BACKEND_URL: http://web:8000
+      BOT_API_SECRET: ${BOT_API_SECRET:-local-prod-bot-secret-0123456789}
+      # Leave empty locally -> polling mode. On Render the webhook URL is detected automatically.
+      WEBHOOK_BASE_URL: ${WEBHOOK_BASE_URL:-}
+    depends_on:
+      web:
+        condition: service_healthy
+    restart: on-failure
+
+volumes:
+  pgdata_prod:

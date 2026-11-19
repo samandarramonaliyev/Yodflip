@@ -7,6 +7,7 @@ from rest_framework.exceptions import ValidationError
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
+from accounts.models import TRACK_CHOICES
 from gamification.models import GameSession
 from gamification.services import check_achievements, level_for_xp, record_activity, today
 from words.services import record_answer
@@ -28,7 +29,7 @@ class ResultItemSerializer(serializers.Serializer):
 
 class ResultsSerializer(serializers.Serializer):
     game = serializers.ChoiceField(choices=list(GAMES))
-    track = serializers.ChoiceField(choices=["en", "de"])
+    track = serializers.ChoiceField(choices=TRACK_CHOICES)
     source = serializers.CharField(max_length=40, required=False, allow_blank=True)
     results = ResultItemSerializer(many=True)
     duration_ms = serializers.IntegerField(min_value=0, required=False, default=0)

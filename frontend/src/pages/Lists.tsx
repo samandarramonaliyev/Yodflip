@@ -1,5 +1,5 @@
 import { useNavigate, useParams } from 'react-router-dom'
-import { Segmented } from '../components/ui'
+import { Segmented, TabLabel } from '../components/ui'
 import { WordList, type ListKind } from '../components/WordList'
 import { useT } from '../i18n'
 import { useTelegramBack } from '../lib/hooks'
@@ -18,9 +18,9 @@ export default function Lists() {
         value={which}
         onChange={(v) => nav(`/lists/${v}`, { replace: true })}
         options={[
-          { value: 'learned', label: `✅ ${t('lists.learned')}` },
-          { value: 'missed', label: `❌ ${t('lists.missed')}` },
-          { value: 'want', label: `⭐ ${t('lists.want')}` },
+          { value: 'learned', label: <TabLabel emoji="✅" label={t('lists.learned')} /> },
+          { value: 'missed', label: <TabLabel emoji="❌" label={t('lists.missed')} /> },
+          { value: 'want', label: <TabLabel emoji="⭐" label={t('lists.want')} /> },
         ]}
       />
       <WordList which={which} track={track} />

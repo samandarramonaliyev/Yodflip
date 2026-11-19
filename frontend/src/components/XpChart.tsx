@@ -27,7 +27,7 @@ export function XpChart({ data }: { data: Point[] }) {
   const best = data.reduce((b, d, i) => (d.xp > (data[b]?.xp ?? 0) ? i : b), 0)
 
   return (
-    <figure>
+    <figure className="min-w-0">
       <figcaption className="h2 mb-3">{t('profile.activity')}</figcaption>
       <div className="relative flex h-36 items-end gap-[2px] border-b border-line" onMouseLeave={() => setActive(null)} aria-hidden>
         {data.map((d, i) => {
@@ -38,12 +38,15 @@ export function XpChart({ data }: { data: Point[] }) {
               key={d.date}
               type="button"
               tabIndex={-1}
-              className="group relative flex h-full flex-1 items-end justify-center px-[10%]"
+              className="group relative flex h-full min-w-0 flex-1 items-end justify-center px-0.5 sm:px-1.5"
               onMouseEnter={() => setActive(i)}
               onClick={() => setActive(i)}
             >
               {show && (
-                <span className="absolute z-10 -translate-y-1 whitespace-nowrap rounded-lg bg-card px-2 py-0.5 text-xs font-extrabold text-ink shadow-soft" style={{ bottom: `${h}%` }}>
+                <span
+                  className={`absolute z-10 -translate-y-1 whitespace-nowrap rounded-lg bg-card px-2 py-0.5 text-xs font-extrabold text-ink shadow-soft ${i === 0 ? 'left-0' : i === data.length - 1 ? 'right-0' : ''}`}
+                  style={{ bottom: `${h}%` }}
+                >
                   {d.xp} XP
                 </span>
               )}
@@ -54,7 +57,7 @@ export function XpChart({ data }: { data: Point[] }) {
       </div>
       <div className="mt-1 flex gap-[2px]" aria-hidden>
         {data.map((d) => (
-          <span key={d.date} className="flex-1 text-center text-[11px] font-bold capitalize text-muted">
+          <span key={d.date} className="min-w-0 flex-1 truncate text-center text-[11px] font-bold capitalize text-muted">
             {day(d.date)}
           </span>
         ))}

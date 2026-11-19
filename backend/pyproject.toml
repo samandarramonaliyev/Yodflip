@@ -4,7 +4,7 @@ version = "1.0.0"
 requires-python = ">=3.12"
 
 [tool.pytest.ini_options]
-DJANGO_SETTINGS_MODULE = "config.settings"
+DJANGO_SETTINGS_MODULE = "config.test_settings"
 python_files = ["test_*.py"]
 testpaths = ["tests"]
 addopts = "-q"
@@ -20,4 +20,4 @@ select = ["E", "F", "W", "I", "B", "UP", "DJ"]
 ignore = ["DJ001", "DJ008", "B904"]
 
 [tool.ruff.lint.isort]
-known-first-party = ["config", "accounts", "telegram_auth", "words", "decks", "games", "ocr", "gamification"]
+known-first-party = ["config", "core", "accounts", "telegram_auth", "words", "decks", "games", "ocr", "gamification"]

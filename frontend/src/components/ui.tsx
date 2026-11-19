@@ -169,12 +169,25 @@ export function Segmented<T extends string>({
           role="tab"
           aria-selected={value === o.value}
           onClick={() => onChange(o.value)}
-          className={`min-h-[40px] flex-1 rounded-xl px-3 text-sm font-extrabold transition ${value === o.value ? 'bg-card text-ink shadow-soft' : 'text-muted'}`}
+          className={`min-h-[40px] min-w-0 flex-1 break-words rounded-xl px-1.5 text-xs font-extrabold leading-tight transition sm:px-3 sm:text-sm ${value === o.value ? 'bg-card text-ink shadow-soft' : 'text-muted'}`}
         >
           {o.label}
         </button>
       ))}
     </div>
+  )
+}
+
+/** Two-line tab label (emoji + count / name) that fits three tabs on a 360px screen. */
+export function TabLabel({ emoji, label, count }: { emoji: string; label: string; count?: number }) {
+  return (
+    <span className="flex flex-col items-center leading-tight">
+      <span>
+        {emoji}
+        {count !== undefined ? ` ${count}` : ''}
+      </span>
+      <span className="text-[11px] sm:text-xs">{label}</span>
+    </span>
   )
 }
 

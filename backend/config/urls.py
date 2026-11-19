@@ -1,18 +1,13 @@
 from django.conf import settings
 from django.contrib import admin
-from django.http import JsonResponse
-from django.urls import include, path
-from django.views.static import serve
+from django.urls import include, path, re_path
 from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView
 
-
-def health(_request):
-    return JsonResponse({"ok": True, "ocr_mock": settings.OCR_MOCK, "telegram_mock": settings.TELEGRAM_MOCK})
-
+from core import views as core_views
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("api/health/", health),
+    path("api/health/", core_views.health, name="health"),
     path("api/schema/", SpectacularAPIView.as_view(), name="schema"),
     path("api/docs/", SpectacularSwaggerView.as_view(url_name="schema"), name="docs"),
     path("api/auth/", include("accounts.urls")),
@@ -22,5 +17,7 @@ urlpatterns = [
     path("api/games/", include("games.urls")),
     path("api/ocr/", include("ocr.urls")),
     path("api/gamification/", include("gamification.urls")),
-    path("media/<path:path>", serve, {"document_root": settings.MEDIA_ROOT}),
+    path(f"{settings.MEDIA_URL.strip('/')}/<path:path>", core_views.media, name="media"),
+    # Everything else is a client-side route of the React app.
+    re_path(r"^(?!api/|admin/|static/|media/|assets/)(?P<path>.*)$", core_views.spa, name="spa"),
 ]

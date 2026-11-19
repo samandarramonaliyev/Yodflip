@@ -31,6 +31,7 @@ def _next_order(deck: Deck) -> int:
 
 
 class DeckViewSet(viewsets.ModelViewSet):
+    queryset = Deck.objects.none()  # for schema generation; get_queryset() scopes to the owner
     serializer_class = DeckSerializer
     parser_classes = [JSONParser, MultiPartParser, FormParser]
 
@@ -220,6 +221,7 @@ class PublicDecksView(APIView):
 
 
 class WordSetViewSet(viewsets.ModelViewSet):
+    queryset = WordSet.objects.none()  # for schema generation; get_queryset() scopes to the owner
     serializer_class = WordSetSerializer
 
     def get_queryset(self):

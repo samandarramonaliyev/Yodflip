@@ -1,35 +1,54 @@
-# Render Blueprint: https://render.com/docs/blueprint-spec
-# Creates: Postgres, the Django API (Docker), the React static site and the Telegram bot worker.
+# Render Blueprint — https://render.com/docs/blueprint-spec
+#
+#   yodflip-db   Managed PostgreSQL
+#   yodflip-web  Django API + the React build in ONE Docker web service (same origin, no CORS)
+#   yodflip-bot  aiogram bot in WEBHOOK mode (a web service: Telegram must reach it over HTTPS)
+#
+# Plans: "free" lets you try it at no cost, but free web services sleep after ~15 min idle
+# (30-60 s cold start) and a free Postgres database EXPIRES after 30 days. For real users,
+# switch to web/bot: starter and db: basic-256mb (see DEPLOY.md).
+
 databases:
-  - name: wordflip-db
+  - name: yodflip-db
     plan: free
-    databaseName: wordflip
-    user: wordflip
+    databaseName: yodflip
+    user: yodflip
+    postgresMajorVersion: "16"
 
 services:
   - type: web
-    name: wordflip-api
+    name: yodflip-web
     runtime: docker
-    rootDir: backend
     plan: free
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
     healthCheckPath: /api/health/
+    autoDeploy: true
     envVars:
+      # --- generated / wired automatically ---
       - key: DATABASE_URL
         fromDatabase:
-          name: wordflip-db
+          name: yodflip-db
           property: connectionString
       - key: SECRET_KEY
         generateValue: true
-      - key: DEBUG
-        value: "false"
-      - key: ALLOWED_HOSTS
-        value: "*"
-      - key: CSRF_TRUSTED_ORIGINS
-        value: https://wordflip-web.onrender.com
-      - key: FRONTEND_URL
-        value: https://wordflip-web.onrender.com
       - key: BOT_API_SECRET
         generateValue: true
+      # --- fixed values ---
+      - key: DEBUG
+        value: "false"
+      - key: WEB_CONCURRENCY
+        value: "2"
+      - key: TIME_ZONE
+        value: Asia/Tashkent
+      - key: OCR_DAILY_LIMIT
+        value: "20"
+      - key: ANTHROPIC_MODEL
+        value: claude-opus-5-5
+      # ALLOWED_HOSTS / CSRF_TRUSTED_ORIGINS are filled automatically from RENDER_EXTERNAL_HOSTNAME /
+      # RENDER_EXTERNAL_URL (injected by Render). For a custom domain, add in the dashboard e.g.
+      #   ALLOWED_HOSTS=yodflip.uz   CSRF_TRUSTED_ORIGINS=https://yodflip.uz   PUBLIC_URL=https://yodflip.uz
+      # --- secrets: fill in the Render dashboard ---
       - key: ANTHROPIC_API_KEY
         sync: false
       - key: TELEGRAM_BOT_TOKEN
@@ -42,43 +61,25 @@ services:
         sync: false
 
   - type: web
-    name: wordflip-web
-    runtime: static
-    rootDir: frontend
-    buildCommand: npm ci && npm run build
-    staticPublishPath: dist
-    routes:
-      # Same-origin API calls: proxy /api, /admin, /static and /media to the Django service.
-      - type: rewrite
-        source: /api/*
-        destination: https://wordflip-api.onrender.com/api/*
-      - type: rewrite
-        source: /admin/*
-        destination: https://wordflip-api.onrender.com/admin/*
-      - type: rewrite
-        source: /static/*
-        destination: https://wordflip-api.onrender.com/static/*
-      - type: rewrite
-        source: /media/*
-        destination: https://wordflip-api.onrender.com/media/*
-      - type: rewrite
-        source: /*
-        destination: /index.html
-
-  - type: worker
-    name: wordflip-bot
+    name: yodflip-bot
     runtime: docker
-    rootDir: bot
-    plan: starter
+    plan: free
+    dockerfilePath: ./bot/Dockerfile
+    dockerContext: ./bot
+    healthCheckPath: /health
+    autoDeploy: true
     envVars:
-      - key: TELEGRAM_BOT_TOKEN
-        sync: false
-      - key: WEBAPP_URL
-        value: https://wordflip-web.onrender.com
-      - key: BOT_BACKEND_URL
-        value: https://wordflip-api.onrender.com
+      # RENDER_EXTERNAL_URL (injected) -> webhook mode, webhook set automatically on startup.
       - key: BOT_API_SECRET
         fromService:
           type: web
-          name: wordflip-api
+          name: yodflip-web
           envVarKey: BOT_API_SECRET
+      - key: WEBHOOK_SECRET
+        generateValue: true
+      # Public HTTPS URL of yodflip-web (the Mini App + API). Change it if Render gives the
+      # service a different hostname or you add a custom domain.
+      - key: WEBAPP_URL
+        value: https://yodflip-web.onrender.com
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false

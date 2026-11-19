@@ -39,10 +39,10 @@ With `OCR_MOCK=false` and no Anthropic key, OCR falls back to **Tesseract** plus
 ## Local development without Docker
 
 ```bash
-# backend (Python 3.12)
+# backend (Python 3.12). Local dev needs DEBUG=true: `cp .env.example .env` (it has DEBUG=true)
 cd backend
 python -m venv .venv && .venv/Scripts/activate      # Windows; on macOS/Linux: source .venv/bin/activate
-pip install -r requirements-dev.txt
+pip install -r requirements-dev.txt          # tests use config.test_settings (no .env needed)
 python manage.py migrate && python manage.py seed_words
 python manage.py runserver                          # http://localhost:8000
 
@@ -91,13 +91,10 @@ cd frontend && npm test && npm run lint && npm run build
 
 Telegram requires **HTTPS** for Mini Apps. For local testing, expose port 8080 with a tunnel (e.g. `cloudflared tunnel --url http://localhost:8080` or `ngrok http 8080`) and use that URL as `WEBAPP_URL`.
 
-## Deploying on Render
+## Deploying to production (Render)
 
-1. Push this repo to GitHub.
-2. In Render: **New → Blueprint**, then pick the repo. `render.yaml` creates the Postgres database, `wordflip-api` (Docker), `wordflip-web` (static site that proxies `/api` to the API) and `wordflip-bot` (worker).
-3. Fill in the secret env vars Render asks for: `ANTHROPIC_API_KEY`, `TELEGRAM_BOT_TOKEN` (on both the API and the bot), `TELEGRAM_BOT_USERNAME`, `DJANGO_SUPERUSER_EMAIL/PASSWORD`.
-4. If Render gives your services different hostnames, update the URLs in `render.yaml` (`CSRF_TRUSTED_ORIGINS`, `FRONTEND_URL`, the `routes` destinations, `WEBAPP_URL`, `BOT_BACKEND_URL`).
-5. Set the Mini App URL in @BotFather to the `wordflip-web` URL.
+See **[DEPLOY.md](DEPLOY.md)** (English + Uzbek): Render Blueprint, env vars, @BotFather setup (`/setmenubutton`, Mini App URL) and how to update.
+Production-like run locally: `docker compose -f docker-compose.prod.yml up --build` → http://localhost:8000
 
 ## Architecture
 
@@ -156,11 +153,7 @@ Telegram Mini App faqat **HTTPS** bilan ishlaydi. Lokal sinov uchun `cloudflared
 
 ### Render'ga joylash
 
-1. Repozitoriyani GitHub'ga yuklang.
-2. Render → **New → Blueprint** → repozitoriyani tanlang. `render.yaml` ma'lumotlar bazasi, API, statik sayt va bot xizmatlarini yaratadi.
-3. Maxfiy o'zgaruvchilarni kiriting: `ANTHROPIC_API_KEY`, `TELEGRAM_BOT_TOKEN`, `TELEGRAM_BOT_USERNAME`, `DJANGO_SUPERUSER_EMAIL/PASSWORD`.
-4. Xizmat manzillari boshqacha bo'lsa, `render.yaml` dagi URL'larni yangilang.
-5. @BotFather'da Mini App manzilini `wordflip-web` manziliga o'rnating.
+Batafsil qo'llanma: **[DEPLOY.md](DEPLOY.md)**.
 
 ### Testlar
 

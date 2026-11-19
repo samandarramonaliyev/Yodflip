@@ -1,13 +1,20 @@
 """Yodflip Telegram bot (aiogram 3).
 
 Commands: /start /daily /stats /review /remind HH:MM|off
-Talks to the backend's internal bot API (X-Bot-Secret). Without TELEGRAM_BOT_TOKEN it exits
-cleanly (MOCK mode: the rest of the stack runs without a bot).
+Talks to the backend's internal bot API (X-Bot-Secret).
+
+Modes
+* webhook (production): when WEBHOOK_BASE_URL (or Render's RENDER_EXTERNAL_URL) is set, an aiohttp
+  server listens on $PORT, registers the webhook with Telegram on startup (with a secret token)
+  and serves GET /health. Daily reminders run in the same process.
+* polling (local): when no public URL is configured.
+Without TELEGRAM_BOT_TOKEN the bot exits cleanly (the rest of the stack runs without it).
 """
 
 from __future__ import annotations
 
 import asyncio
+import hashlib
 import logging
 import os
 import re
@@ -24,17 +31,33 @@ from aiogram.types import (
     Message,
     WebAppInfo,
 )
+from aiogram.webhook.aiohttp_server import SimpleRequestHandler, setup_application
+from aiohttp import web
 
 from texts import t
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(name)s: %(message)s")
-log = logging.getLogger("wordflip.bot")
+log = logging.getLogger("yodflip.bot")
 
-TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "").strip()
-WEBAPP_URL = os.environ.get("WEBAPP_URL", os.environ.get("FRONTEND_URL", "http://localhost:5173")).rstrip("/")
-API_URL = os.environ.get("BOT_BACKEND_URL", "http://localhost:8000").rstrip("/")
-SECRET = os.environ.get("BOT_API_SECRET", "dev-bot-secret")
-REMINDER_INTERVAL = int(os.environ.get("REMINDER_INTERVAL_SECONDS", "60"))
+
+def env(name: str, default: str = "") -> str:
+    return os.environ.get(name, default).strip()
+
+
+TOKEN = env("TELEGRAM_BOT_TOKEN")
+WEBAPP_URL = env("WEBAPP_URL").rstrip("/")  # public HTTPS URL of the Mini App (the web service)
+API_URL = env("BOT_BACKEND_URL", WEBAPP_URL).rstrip("/")  # backend base URL (same as the web app by default)
+SECRET = env("BOT_API_SECRET")
+WEBHOOK_BASE_URL = (env("WEBHOOK_BASE_URL") or env("RENDER_EXTERNAL_URL")).rstrip("/")
+WEBHOOK_PATH = "/telegram/webhook"
+PORT = int(env("PORT", "8080"))
+REMINDER_INTERVAL = int(env("REMINDER_INTERVAL_SECONDS", "60"))
+
+
+def webhook_secret_token(seed: str) -> str:
+    """Telegram allows only [A-Za-z0-9_-] in secret_token, so derive a hex token from any secret."""
+    return hashlib.sha256(f"yodflip-webhook:{seed}".encode()).hexdigest()
+
 
 dp = Dispatcher()
 
@@ -170,25 +193,82 @@ async def reminder_loop(bot: Bot) -> None:
                 log.info("Reminder to %s failed: %s", u.get("telegram_id"), exc)
 
 
-async def main() -> None:
-    if not TOKEN:
-        log.warning("TELEGRAM_BOT_TOKEN is not set: bot skipped (MOCK mode).")
-        return
-    bot = Bot(TOKEN)
-    await bot.set_my_commands(
-        [
-            BotCommand(command="start", description="Open Yodflip"),
-            BotCommand(command="daily", description="Today's challenge"),
-            BotCommand(command="stats", description="My progress"),
-            BotCommand(command="review", description="Words due for review"),
-            BotCommand(command="remind", description="Daily reminder: /remind 19:00 or off"),
-        ]
-    )
+COMMANDS = [
+    BotCommand(command="start", description="Open Yodflip"),
+    BotCommand(command="daily", description="Today's challenge"),
+    BotCommand(command="stats", description="My progress"),
+    BotCommand(command="review", description="Words due for review"),
+    BotCommand(command="remind", description="Daily reminder: /remind 19:00 or off"),
+]
+
+
+async def configure_bot(bot: Bot) -> None:
+    await bot.set_my_commands(COMMANDS)
     if WEBAPP_URL.startswith("https://"):
         await bot.set_chat_menu_button(menu_button=MenuButtonWebApp(text="Play", web_app=WebAppInfo(url=WEBAPP_URL)))
+    else:
+        log.warning("WEBAPP_URL is not an https:// URL (%r): Mini App buttons fall back to plain links.", WEBAPP_URL)
+
+
+async def health(_request: web.Request) -> web.Response:
+    return web.json_response({"ok": True, "mode": "webhook"})
+
+
+def build_webhook_app(bot: Bot, dispatcher: Dispatcher, secret_token: str) -> web.Application:
+    """aiohttp app: POST /telegram/webhook (secret-checked by aiogram), GET /health and GET /."""
+    app = web.Application()
+    SimpleRequestHandler(dispatcher=dispatcher, bot=bot, secret_token=secret_token).register(app, path=WEBHOOK_PATH)
+    app.router.add_get("/health", health)
+    app.router.add_get("/", health)
+    setup_application(app, dispatcher, bot=bot)
+    return app
+
+
+async def run_webhook(bot: Bot) -> None:
+    secret_token = webhook_secret_token(env("WEBHOOK_SECRET") or TOKEN)
+    url = f"{WEBHOOK_BASE_URL}{WEBHOOK_PATH}"
+
+    async def on_startup(_app: web.Application) -> None:
+        await configure_bot(bot)
+        await bot.set_webhook(url, secret_token=secret_token, allowed_updates=dp.resolve_used_update_types())
+        log.info("Webhook set to %s", url)
+        _app["reminders"] = asyncio.create_task(reminder_loop(bot))
+
+    async def on_cleanup(_app: web.Application) -> None:
+        task = _app.get("reminders")
+        if task:
+            task.cancel()
+
+    app = build_webhook_app(bot, dp, secret_token)
+    app.on_startup.append(on_startup)
+    app.on_cleanup.append(on_cleanup)
+    runner = web.AppRunner(app)
+    await runner.setup()
+    await web.TCPSite(runner, "0.0.0.0", PORT).start()
+    log.info("Webhook server listening on :%s", PORT)
+    await asyncio.Event().wait()
+
+
+async def run_polling(bot: Bot) -> None:
+    await configure_bot(bot)
+    await bot.delete_webhook(drop_pending_updates=False)
     asyncio.create_task(reminder_loop(bot))
-    log.info("Bot started. Web App URL: %s", WEBAPP_URL)
+    log.info("Polling mode (no WEBHOOK_BASE_URL / RENDER_EXTERNAL_URL).")
     await dp.start_polling(bot)
+
+
+async def main() -> None:
+    if not TOKEN:
+        log.warning("TELEGRAM_BOT_TOKEN is not set: bot skipped.")
+        return
+    if not API_URL or not SECRET:
+        log.error("BOT_BACKEND_URL/WEBAPP_URL and BOT_API_SECRET must be set.")
+        sys.exit(1)
+    bot = Bot(TOKEN)
+    if WEBHOOK_BASE_URL:
+        await run_webhook(bot)
+    else:
+        await run_polling(bot)
 
 
 if __name__ == "__main__":

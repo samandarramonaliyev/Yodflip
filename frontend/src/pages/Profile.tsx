@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import { TrackSwitch } from '../components/Layout'
 import { WordList, type ListKind } from '../components/WordList'
 import { XpChart } from '../components/XpChart'
-import { Avatar, ErrorState, ProgressBar, Segmented, Skeleton, Toggle, toast } from '../components/ui'
+import { Avatar, ErrorState, ProgressBar, Segmented, Skeleton, TabLabel, Toggle, toast } from '../components/ui'
 import { LANG_NAMES, useT } from '../i18n'
 import { api } from '../lib/api'
 import { useAsync } from '../lib/hooks'
@@ -142,7 +142,7 @@ export default function Profile() {
             </div>
           </section>
           <section className="grid gap-3 md:grid-cols-[2fr_1fr]">
-            <div className="card p-4">
+            <div className="card min-w-0 p-4">
               <XpChart data={d.chart} />
             </div>
             <div className="card space-y-3 p-4">
@@ -169,9 +169,9 @@ export default function Profile() {
           value={list}
           onChange={setList}
           options={[
-            { value: 'learned', label: `✅ ${t('lists.learned')}${d ? ` ${d.learned}` : ''}` },
-            { value: 'missed', label: `❌ ${t('lists.missed')}${d ? ` ${d.missed}` : ''}` },
-            { value: 'want', label: `⭐ ${t('lists.want')}${d ? ` ${d.want}` : ''}` },
+            { value: 'learned', label: <TabLabel emoji="✅" label={t('lists.learned')} count={d?.learned} /> },
+            { value: 'missed', label: <TabLabel emoji="❌" label={t('lists.missed')} count={d?.missed} /> },
+            { value: 'want', label: <TabLabel emoji="⭐" label={t('lists.want')} count={d?.want} /> },
           ]}
         />
         <WordList which={list} track={track} />

@@ -1,24 +1,60 @@
-"""Yodflip Django settings. All secrets come from environment variables."""
+"""Yodflip Django settings.
+
+Everything environment-specific comes from env vars. Production (DEBUG=false) refuses to start
+with an insecure configuration (missing SECRET_KEY, SQLite, no allowed hosts, ...).
+Local development: put DEBUG=true in the repo-root .env (see .env.example).
+"""
 
 import os
 from datetime import timedelta
 from pathlib import Path
 
 import dj_database_url
+from django.core.exceptions import ImproperlyConfigured
 from dotenv import load_dotenv
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 load_dotenv(BASE_DIR.parent / ".env")
 
 
+def env(name: str, default: str = "") -> str:
+    return os.environ.get(name, default).strip()
+
+
 def env_bool(name: str, default: bool = False) -> bool:
-    return os.environ.get(name, str(default)).strip().lower() in {"1", "true", "yes", "on"}
+    return env(name, str(default)).lower() in {"1", "true", "yes", "on"}
 
 
-SECRET_KEY = os.environ.get("SECRET_KEY") or "dev-insecure-secret-key-change-me"
-DEBUG = env_bool("DEBUG", True)
-ALLOWED_HOSTS = [h.strip() for h in os.environ.get("ALLOWED_HOSTS", "*").split(",") if h.strip()]
-CSRF_TRUSTED_ORIGINS = [o.strip() for o in os.environ.get("CSRF_TRUSTED_ORIGINS", "").split(",") if o.strip()]
+def env_list(name: str, default: str = "") -> list[str]:
+    return [x.strip() for x in env(name, default).split(",") if x.strip()]
+
+
+DEBUG = env_bool("DEBUG", False)
+
+# --- Core security ----------------------------------------------------------
+SECRET_KEY = env("SECRET_KEY")
+if not SECRET_KEY:
+    if not DEBUG:
+        raise ImproperlyConfigured("SECRET_KEY must be set when DEBUG is false.")
+    SECRET_KEY = "dev-insecure-secret-key"  # local development only
+
+# Render injects RENDER_EXTERNAL_HOSTNAME / RENDER_EXTERNAL_URL automatically.
+RENDER_HOST = env("RENDER_EXTERNAL_HOSTNAME")
+ALLOWED_HOSTS = env_list("ALLOWED_HOSTS", "*" if DEBUG else "")
+if RENDER_HOST and RENDER_HOST not in ALLOWED_HOSTS:
+    ALLOWED_HOSTS.append(RENDER_HOST)
+if not DEBUG and not ALLOWED_HOSTS:
+    raise ImproperlyConfigured("ALLOWED_HOSTS must be set when DEBUG is false.")
+
+PUBLIC_URL = env("PUBLIC_URL") or env("RENDER_EXTERNAL_URL") or ("http://localhost:5173" if DEBUG else "")
+CSRF_TRUSTED_ORIGINS = env_list("CSRF_TRUSTED_ORIGINS")
+if PUBLIC_URL and PUBLIC_URL not in CSRF_TRUSTED_ORIGINS:
+    CSRF_TRUSTED_ORIGINS.append(PUBLIC_URL)
+
+# The React app is served by Django itself (same origin), so CORS is only needed when the
+# frontend is hosted elsewhere (set CORS_ALLOWED_ORIGINS and VITE_API_URL for that case).
+CORS_ALLOWED_ORIGINS = env_list("CORS_ALLOWED_ORIGINS")
+CORS_ALLOW_ALL_ORIGINS = DEBUG and not CORS_ALLOWED_ORIGINS
 
 INSTALLED_APPS = [
     "django.contrib.admin",
@@ -31,6 +67,7 @@ INSTALLED_APPS = [
     "rest_framework_simplejwt",
     "drf_spectacular",
     "corsheaders",
+    "core",
     "accounts",
     "telegram_auth",
     "words",
@@ -71,7 +108,18 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "config.wsgi.application"
 
-DATABASES = {"default": dj_database_url.config(default=f"sqlite:///{BASE_DIR / 'db.sqlite3'}", conn_max_age=600)}
+# --- Database ---------------------------------------------------------------
+DATABASE_URL = env("DATABASE_URL") or (f"sqlite:///{BASE_DIR / 'db.sqlite3'}" if DEBUG else "")
+if not DATABASE_URL:
+    raise ImproperlyConfigured("DATABASE_URL (PostgreSQL) must be set when DEBUG is false.")
+if not DEBUG and DATABASE_URL.startswith("sqlite") and not env_bool("ALLOW_SQLITE"):
+    # ALLOW_SQLITE is only used for build-time steps such as collectstatic.
+    raise ImproperlyConfigured("SQLite is not allowed in production; use PostgreSQL via DATABASE_URL.")
+DATABASES = {
+    "default": dj_database_url.parse(
+        DATABASE_URL, conn_max_age=600, conn_health_checks=True, ssl_require=env_bool("DATABASE_SSL", False)
+    )
+}
 
 AUTH_USER_MODEL = "accounts.User"
 AUTH_PASSWORD_VALIDATORS = [
@@ -79,30 +127,72 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 LANGUAGE_CODE = "en-us"
-TIME_ZONE = os.environ.get("TIME_ZONE", "Asia/Tashkent")
+TIME_ZONE = env("TIME_ZONE", "Asia/Tashkent")
 USE_I18N = True
 USE_TZ = True
-
-STATIC_URL = "static/"
-STATIC_ROOT = BASE_DIR / "staticfiles"
-MEDIA_URL = "media/"
-MEDIA_ROOT = BASE_DIR / "media"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-# Upload limits: 10 MB images
+# --- Static files, the React build and media ---------------------------------
+STATIC_URL = "static/"
+STATIC_ROOT = BASE_DIR / "staticfiles"
+# The built React app (frontend/dist). Whitenoise serves its files at the site root
+# (/assets/..., /favicon.svg); core.views.spa serves index.html for client-side routes.
+FRONTEND_DIST = Path(env("FRONTEND_DIST", str(BASE_DIR.parent / "frontend" / "dist")))
+WHITENOISE_ROOT = FRONTEND_DIST if FRONTEND_DIST.exists() else None
+WHITENOISE_MAX_AGE = 3600
+
+
+def _immutable_file_test(path: str, url: str) -> bool:
+    # Vite emits content-hashed files under /assets/ -> cache forever.
+    return url.startswith("/assets/")
+
+
+WHITENOISE_IMMUTABLE_FILE_TEST = _immutable_file_test
+
+# Media (card images) is stored in PostgreSQL, never on the container's local disk
+# (Render disks are ephemeral). See core.storage.DatabaseStorage.
+MEDIA_URL = "/media/"
+STORAGES = {
+    "default": {"BACKEND": "core.storage.DatabaseStorage"},
+    "staticfiles": {
+        "BACKEND": "django.contrib.staticfiles.storage.StaticFilesStorage"
+        if DEBUG
+        else "whitenoise.storage.CompressedManifestStaticFilesStorage"
+    },
+}
+
+# Upload limits: 10 MB scan images, 2 MB card images
 MAX_UPLOAD_BYTES = 10 * 1024 * 1024
+MAX_CARD_IMAGE_BYTES = 2 * 1024 * 1024
 DATA_UPLOAD_MAX_MEMORY_SIZE = MAX_UPLOAD_BYTES + 1024 * 1024
 FILE_UPLOAD_MAX_MEMORY_SIZE = MAX_UPLOAD_BYTES + 1024 * 1024
 
-CORS_ALLOWED_ORIGINS = [o.strip() for o in os.environ.get("CORS_ALLOWED_ORIGINS", "").split(",") if o.strip()]
-CORS_ALLOW_ALL_ORIGINS = DEBUG and not CORS_ALLOWED_ORIGINS
+# --- HTTPS / security headers (production) ------------------------------------
+SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
+SECURE_CONTENT_TYPE_NOSNIFF = True
+SECURE_REFERRER_POLICY = "strict-origin-when-cross-origin"
+X_FRAME_OPTIONS = "DENY"  # the SPA view relaxes this for Telegram via CSP frame-ancestors
+if not DEBUG:
+    SECURE_SSL_REDIRECT = env_bool("SECURE_SSL_REDIRECT", True)
+    SECURE_REDIRECT_EXEMPT = [r"^api/health/$"]  # platform health checks may use plain HTTP
+    SESSION_COOKIE_SECURE = True
+    CSRF_COOKIE_SECURE = True
+    SECURE_HSTS_SECONDS = int(env("SECURE_HSTS_SECONDS", "31536000"))
+    SECURE_HSTS_INCLUDE_SUBDOMAINS = env_bool("SECURE_HSTS_INCLUDE_SUBDOMAINS", False)
+    SECURE_HSTS_PRELOAD = False
+    # includeSubDomains / preload would pin HTTPS for every subdomain of a domain we may not own
+    # (e.g. *.onrender.com). Enable SECURE_HSTS_INCLUDE_SUBDOMAINS on your own domain if you want it.
+    SILENCED_SYSTEM_CHECKS = ["security.W021"] + ([] if SECURE_HSTS_INCLUDE_SUBDOMAINS else ["security.W005"])
 
+# --- API ----------------------------------------------------------------------
 REST_FRAMEWORK = {
     "DEFAULT_AUTHENTICATION_CLASSES": ("rest_framework_simplejwt.authentication.JWTAuthentication",),
     "DEFAULT_PERMISSION_CLASSES": ("rest_framework.permissions.IsAuthenticated",),
     "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
     "DEFAULT_THROTTLE_RATES": {"auth": "30/min"},
 }
+if not DEBUG:
+    REST_FRAMEWORK["DEFAULT_RENDERER_CLASSES"] = ("rest_framework.renderers.JSONRenderer",)
 
 SIMPLE_JWT = {
     "ACCESS_TOKEN_LIFETIME": timedelta(hours=12),
@@ -116,33 +206,35 @@ SPECTACULAR_SETTINGS = {
     "VERSION": "1.0.0",
     "SERVE_INCLUDE_SCHEMA": False,
     "COMPONENT_SPLIT_REQUEST": True,
+    "ENUM_NAME_OVERRIDES": {
+        "TrackEnum": "accounts.models.TRACK_CHOICES",
+        "CefrLevelEnum": "accounts.models.CEFR_CHOICES",
+        "UiLanguageEnum": "accounts.models.UI_LANG_CHOICES",
+    },
 }
 
-# --- Integrations -----------------------------------------------------------
-ANTHROPIC_API_KEY = os.environ.get("ANTHROPIC_API_KEY", "").strip()
-ANTHROPIC_MODEL = os.environ.get("ANTHROPIC_MODEL", "claude-opus-5-5")
-TELEGRAM_BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "").strip()
-TELEGRAM_BOT_USERNAME = os.environ.get("TELEGRAM_BOT_USERNAME", "").strip()
-BOT_API_SECRET = os.environ.get("BOT_API_SECRET", "dev-bot-secret")
-FRONTEND_URL = os.environ.get("FRONTEND_URL", "http://localhost:5173")
+# --- Integrations -------------------------------------------------------------
+ANTHROPIC_API_KEY = env("ANTHROPIC_API_KEY")
+ANTHROPIC_MODEL = env("ANTHROPIC_MODEL", "claude-opus-5-5")
+TELEGRAM_BOT_TOKEN = env("TELEGRAM_BOT_TOKEN")
+TELEGRAM_BOT_USERNAME = env("TELEGRAM_BOT_USERNAME").lstrip("@")
+BOT_API_SECRET = env("BOT_API_SECRET") or ("dev-bot-secret" if DEBUG else "")
+if not DEBUG and len(BOT_API_SECRET) < 16:
+    raise ImproperlyConfigured("BOT_API_SECRET (>= 16 chars) must be set when DEBUG is false.")
 
-# MOCK modes: enabled automatically when keys are missing.
-OCR_MOCK = env_bool("OCR_MOCK", not ANTHROPIC_API_KEY)
+# Sample OCR data is a development convenience only. In production without an Anthropic key
+# the Tesseract fallback is used instead.
+OCR_MOCK = env_bool("OCR_MOCK", DEBUG and not ANTHROPIC_API_KEY)
 # Mock Telegram login accepts UNSIGNED identities, so it is only ever allowed with DEBUG on.
 TELEGRAM_MOCK = DEBUG and env_bool("TELEGRAM_MOCK", not TELEGRAM_BOT_TOKEN)
-OCR_DAILY_LIMIT = int(os.environ.get("OCR_DAILY_LIMIT", "20"))
-TELEGRAM_AUTH_MAX_AGE = int(os.environ.get("TELEGRAM_AUTH_MAX_AGE", str(24 * 3600)))
-
-if not DEBUG:
-    SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
-    STORAGES = {
-        "default": {"BACKEND": "django.core.files.storage.FileSystemStorage"},
-        "staticfiles": {"BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage"},
-    }
+OCR_DAILY_LIMIT = int(env("OCR_DAILY_LIMIT", "20"))
+TELEGRAM_AUTH_MAX_AGE = int(env("TELEGRAM_AUTH_MAX_AGE", str(24 * 3600)))
 
 LOGGING = {
     "version": 1,
     "disable_existing_loggers": False,
-    "handlers": {"console": {"class": "logging.StreamHandler"}},
-    "root": {"handlers": ["console"], "level": os.environ.get("LOG_LEVEL", "INFO")},
+    "formatters": {"plain": {"format": "%(asctime)s %(levelname)s %(name)s: %(message)s"}},
+    "handlers": {"console": {"class": "logging.StreamHandler", "formatter": "plain"}},
+    "root": {"handlers": ["console"], "level": env("LOG_LEVEL", "INFO")},
+    "loggers": {"django.security": {"handlers": ["console"], "level": "WARNING", "propagate": False}},
 }

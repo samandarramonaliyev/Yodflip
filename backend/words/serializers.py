@@ -1,5 +1,7 @@
 from rest_framework import serializers
 
+from accounts.models import TRACK_CHOICES
+
 from .models import Pack, UserWord, Word
 
 
@@ -57,7 +59,7 @@ class UserWordSerializer(serializers.ModelSerializer):
 
 
 class WantSerializer(serializers.Serializer):
-    track = serializers.ChoiceField(choices=["en", "de"])
+    track = serializers.ChoiceField(choices=TRACK_CHOICES)
     term = serializers.CharField(max_length=200)
     translation_uz = serializers.CharField(max_length=300, required=False, allow_blank=True)
     definition = serializers.CharField(max_length=500, required=False, allow_blank=True)

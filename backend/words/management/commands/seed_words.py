@@ -8,6 +8,7 @@ German nouns are written with their article ("der Hund"); it is split into Word.
 
 from __future__ import annotations
 
+import hashlib
 from pathlib import Path
 
 from django.core.management.base import BaseCommand, CommandError
@@ -65,12 +66,22 @@ def split_article(raw: str, track: str) -> tuple[str, str]:
 
 
 class Command(BaseCommand):
-    help = "Seed built-in word levels (EN/DE, A1–C1)."
+    help = "Seed built-in word levels (EN/DE, A1–C1). Skips when this exact seed was already loaded."
+
+    def add_arguments(self, parser):
+        parser.add_argument("--force", action="store_true", help="Reload even if the seed is unchanged.")
 
     def handle(self, *args, **opts):
+        from core.models import SeedState
+
         files = sorted(SEED_DIR.glob("*_*.txt"))
         if not files:
             raise CommandError(f"No seed files in {SEED_DIR}")
+        digest = hashlib.sha256(b"".join(f.name.encode() + f.read_bytes() for f in files)).hexdigest()
+        state = SeedState.objects.filter(key="words").first()
+        if state and state.digest == digest and Word.objects.exists() and not opts["force"]:
+            self.stdout.write("Seed unchanged, already loaded. Skipping (use --force to reload).")
+            return
         total = 0
         with transaction.atomic():
             for path in files:
@@ -113,4 +124,5 @@ class Command(BaseCommand):
                 Word.objects.filter(track=track, level=level).exclude(id__in=keep_ids).delete()
                 total += count
                 self.stdout.write(f"  {path.name}: {count} words in {len(packs)} packs")
+            SeedState.objects.update_or_create(key="words", defaults={"digest": digest})
         self.stdout.write(self.style.SUCCESS(f"Seeded {total} words."))
