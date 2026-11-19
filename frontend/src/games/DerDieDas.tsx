@@ -26,8 +26,10 @@ export default function DerDieDas({ items, track, onFinish }: GameProps) {
   const start = useRef(Date.now())
   const controls = useAnimationControls()
   const busy = useRef(false)
+  const animToken = useRef(0)
+  const answerRef = useRef<(a: string | null) => void>(() => undefined)
   const item = order[idx]
-  const dropMs = Math.max(2600, 6000 - idx * 120)
+  const dropMs = Math.max(3000, 7000 - idx * 120)
 
   const end = useCallback(() => onFinish({ results: results.current, durationMs: Date.now() - start.current }), [onFinish])
 
@@ -35,6 +37,7 @@ export default function DerDieDas({ items, track, onFinish }: GameProps) {
     (a: string | null) => {
       if (busy.current || !item) return
       busy.current = true
+      animToken.current++
       controls.stop()
       const ok = a === item.article
       results.current.push(toResult(item, ok))
@@ -61,12 +64,20 @@ export default function DerDieDas({ items, track, onFinish }: GameProps) {
     [item, lives, idx, order.length, end, controls],
   )
 
+  answerRef.current = answer
+
   useEffect(() => {
     if (!item) return
+    const token = ++animToken.current
     controls.set({ y: 0, x: 0, opacity: 1 })
     void controls.start({ y: 300, transition: { duration: dropMs / 1000, ease: 'linear' } }).then(() => {
-      if (!busy.current) answer(null) // reached the bottom
+      // Only the current, uninterrupted drop counts as "reached the bottom".
+      if (token === animToken.current && !busy.current) answerRef.current(null)
     })
+    const tokens = animToken
+    return () => {
+      tokens.current++ // invalidate this drop (e.g. StrictMode re-run or next noun)
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [idx])
 

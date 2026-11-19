@@ -128,7 +128,8 @@ FRONTEND_URL = os.environ.get("FRONTEND_URL", "http://localhost:5173")
 
 # MOCK modes: enabled automatically when keys are missing.
 OCR_MOCK = env_bool("OCR_MOCK", not ANTHROPIC_API_KEY)
-TELEGRAM_MOCK = env_bool("TELEGRAM_MOCK", not TELEGRAM_BOT_TOKEN)
+# Mock Telegram login accepts UNSIGNED identities, so it is only ever allowed with DEBUG on.
+TELEGRAM_MOCK = DEBUG and env_bool("TELEGRAM_MOCK", not TELEGRAM_BOT_TOKEN)
 OCR_DAILY_LIMIT = int(os.environ.get("OCR_DAILY_LIMIT", "20"))
 TELEGRAM_AUTH_MAX_AGE = int(os.environ.get("TELEGRAM_AUTH_MAX_AGE", str(24 * 3600)))
 

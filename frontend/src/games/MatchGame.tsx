@@ -16,7 +16,7 @@ const LONG_TEXT = 70
 
 function CardBack({ side }: { side: 'word' | 'def' }) {
   return (
-    <div className={`grid h-full w-full place-items-center rounded-2xl shadow-soft ${side === 'word' ? 'bg-tint text-tint-ink' : 'bg-primary text-white'}`}>
+    <div className={`grid h-full w-full place-items-center rounded-2xl shadow-soft ${side === 'word' ? 'bg-tint text-tint-ink' : 'bg-[#A29BFE] text-white'}`}>
       <span className="text-2xl font-black opacity-80">{side === 'word' ? 'W' : 'D'}</span>
     </div>
   )

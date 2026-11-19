@@ -68,7 +68,7 @@ export function Header() {
               key={n.to}
               to={n.to}
               end={n.end}
-              className={({ isActive }) => `flex min-h-[40px] items-center gap-1.5 rounded-xl px-3 text-sm font-extrabold transition ${isActive ? 'bg-primary-soft text-primary' : 'text-muted hover:text-ink'}`}
+              className={({ isActive }) => `flex min-h-[40px] items-center gap-1.5 whitespace-nowrap rounded-xl px-2.5 text-sm font-extrabold transition ${isActive ? 'bg-primary-soft text-primary' : 'text-muted hover:text-ink'}`}
             >
               <n.icon className="h-4 w-4" /> {t(n.key)}
             </NavLink>

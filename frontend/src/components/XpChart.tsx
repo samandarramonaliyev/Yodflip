@@ -14,8 +14,10 @@ export function XpChart({ data }: { data: Point[] }) {
   const lang = useApp((s) => s.lang)
   const [active, setActive] = useState<number | null>(null)
   const max = Math.max(10, ...data.map((d) => d.xp))
-  const locale = lang === 'uz' ? 'uz-Latn' : lang
+  const UZ_DAYS = ['Ya', 'Du', 'Se', 'Ch', 'Pa', 'Ju', 'Sh']
+  const locale = lang
   const day = (iso: string) => {
+    if (lang === 'uz') return UZ_DAYS[new Date(iso + 'T00:00:00').getDay()]
     try {
       return new Date(iso + 'T00:00:00').toLocaleDateString(locale, { weekday: 'short' })
     } catch {

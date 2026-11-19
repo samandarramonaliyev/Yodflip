@@ -26,7 +26,7 @@ def level_overview(user, track: str) -> list[dict]:
     by_level: dict[str, list[Word]] = {lv: [] for lv in LEVELS}
     for w in words:
         by_level.setdefault(w.level, []).append(w)
-    packs = Pack.objects.filter(track=track).annotate(n=Count("words"))
+    packs = Pack.objects.filter(track=track).annotate(n=Count("words")).order_by("level", "order")
     packs_by_level: dict[str, list[Pack]] = {}
     for p in packs:
         packs_by_level.setdefault(p.level, []).append(p)
