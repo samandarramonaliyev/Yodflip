@@ -9,6 +9,24 @@ timeout = 120
 accesslog = "-"
 forwarded_allow_ips = "*"
 
+try:  # mask /bot/webhook/<secret>/ and /bot/cron/<secret>/ in the access log
+    from gunicorn.glogging import Logger
+
+    class RedactingLogger(Logger):
+        def access(self, resp, req, environ, request_time):
+            from core.logging import redact
+
+            for key in ("RAW_URI", "PATH_INFO"):
+                if key in environ:
+                    environ[key] = redact(environ[key])
+            req.uri = redact(getattr(req, "uri", "") or "")
+            req.path = redact(getattr(req, "path", "") or "")
+            super().access(resp, req, environ, request_time)
+
+    logger_class = RedactingLogger
+except ImportError:  # gunicorn not installed (e.g. Windows dev)
+    pass
+
 
 def when_ready(server):
     try:

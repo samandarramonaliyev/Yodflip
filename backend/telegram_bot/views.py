@@ -34,15 +34,29 @@ def webhook(request, secret: str):
     return HttpResponse("ok")
 
 
+def _client_ip(request) -> str:
+    fwd = request.META.get("HTTP_X_FORWARDED_FOR", "")
+    return fwd.split(",")[0].strip() if fwd else request.META.get("REMOTE_ADDR", "")
+
+
 @csrf_exempt
 @require_http_methods(["GET", "POST"])
 def cron(request, secret: str):
     """Send due daily reminders. Call every 5–15 min from an external scheduler (e.g. cron-job.org).
 
-    Also keeps a free Render service awake.
+    URL: /bot/cron/<BOT_CRON_SECRET>/ (trailing slash optional). Also keeps a free Render service awake.
+    No CSRF, no auth, no throttling: the secret in the path is the only check.
     """
-    if not hmac.compare_digest(secret, services.cron_secret()):
-        return HttpResponseForbidden()
+    if not services.cron_secret_matches(secret):
+        # Log why, never the secret itself.
+        log.warning(
+            "Cron 403: secret mismatch (given length %d; BOT_CRON_SECRET %s, expected length %d) from %s",
+            len((secret or "").strip()),
+            "set" if (settings.BOT_CRON_SECRET or "").strip() else "NOT set (using value derived from SECRET_KEY)",
+            len(services.cron_secret()),
+            _client_ip(request),
+        )
+        return HttpResponseForbidden("forbidden")
     if not settings.TELEGRAM_BOT_TOKEN:
         return JsonResponse({"ok": True, "sent": 0, "detail": "bot_disabled"})
     users = services.take_due_reminders()

@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import hashlib
+import hmac
 from datetime import datetime
 
 from django.conf import settings
@@ -20,9 +21,37 @@ def webhook_secret() -> str:
     return hashlib.sha256(f"yodflip-webhook:{seed}".encode()).hexdigest()
 
 
-def cron_secret() -> str:
-    seed = settings.BOT_CRON_SECRET or f"{settings.SECRET_KEY}:cron"
+def _derived_cron_secret(seed: str) -> str:
     return hashlib.sha256(f"yodflip-cron:{seed}".encode()).hexdigest()[:40]
+
+
+def cron_secret() -> str:
+    """The secret to put in /bot/cron/<secret>/.
+
+    If BOT_CRON_SECRET is set, the URL secret IS that value (whitespace stripped).
+    Otherwise a value derived from SECRET_KEY is used.
+    """
+    raw = (settings.BOT_CRON_SECRET or "").strip()
+    return raw or _derived_cron_secret(f"{settings.SECRET_KEY}:cron")
+
+
+def accepted_cron_secrets() -> list[str]:
+    """All secrets the cron URL accepts. Besides cron_secret(), the older derived form
+    sha256("yodflip-cron:" + BOT_CRON_SECRET)[:40] keeps working, so links set up earlier don't break."""
+    raw = (settings.BOT_CRON_SECRET or "").strip()
+    secrets = [cron_secret()]
+    if raw:
+        secrets.append(_derived_cron_secret(raw))
+    return secrets
+
+
+def cron_secret_matches(given: str) -> bool:
+    given = (given or "").strip().strip("/")
+    if not given:
+        return False
+    # Compare against every accepted value (no early exit, constant-time per comparison).
+    results = [hmac.compare_digest(given.encode(), s.encode()) for s in accepted_cron_secrets()]
+    return any(results)
 
 
 def webapp_url(path: str = "/") -> str:

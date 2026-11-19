@@ -65,10 +65,13 @@ Test: send `/start` to the bot → **🎮 O'yinni ochish**. You're signed in aut
 
 There's no background worker, so reminders are sent when a secret URL is called.
 
-1. Open the Render **Shell** for the service (or run it locally with the same env vars):
-   `cd backend && python manage.py telegram_setup`
-   It re-registers the webhook and prints the **reminder cron URL** `https://…/bot/cron/<secret>/`.
+1. Your reminder URL is `https://<your-service>.onrender.com/bot/cron/<BOT_CRON_SECRET>/`, using the
+   value of the `BOT_CRON_SECRET` env var (Render → Environment → reveal). You can also set your own
+   value there (letters/digits, at least 24 characters). The trailing slash is optional, and GET and POST both work.
+   `cd backend && python manage.py telegram_setup` in the Render **Shell** prints the exact URL too.
 2. At [cron-job.org](https://cron-job.org) (free): **Create cronjob** → that URL → **every 10 minutes**.
+   A correct URL returns `{"ok": true, ...}`. A wrong one returns `403`, and the service log shows
+   `Cron 403: secret mismatch (...)` (the secret itself is never logged).
 
 This sends reminders (at most one per user per day, only if they haven't played) and keeps the free service from sleeping. Without it, a free service sleeps after ~15 min idle: the first request then takes 30–60 s, and Telegram retries the webhook, so messages still arrive, just late.
 
@@ -89,6 +92,7 @@ This sends reminders (at most one per user per day, only if they haven't played)
 | Bot doesn't answer | Logs must show `Telegram webhook set to …`. Check `TELEGRAM_BOT_TOKEN`, then run `python manage.py telegram_setup`. |
 | Mini App opens but login fails | `TELEGRAM_BOT_TOKEN` must belong to the bot that opened the Mini App. |
 | Scanning says it can't read the page | Set `ANTHROPIC_API_KEY`. |
+| Reminder URL returns 403 | The part after `/bot/cron/` must equal `BOT_CRON_SECRET`. Check the log line `Cron 403: …` (lengths, whether the variable is set). |
 
 ---
 
@@ -134,7 +138,7 @@ Sinov: botga `/start` yuboring va **🎮 O'yinni ochish** tugmasini bosing.
 
 ### 5. Kunlik eslatmalar
 
-Render Shell'da `cd backend && python manage.py telegram_setup` buyrug'ini bajaring: u eslatma uchun maxfiy URL'ni chiqaradi. [cron-job.org](https://cron-job.org) saytida shu URL'ni **har 10 daqiqada** chaqiradigan cronjob yarating. Bu eslatmalarni yuboradi va bepul xizmatni "uyg'oq" saqlaydi.
+Eslatma manzili: `https://<xizmat>.onrender.com/bot/cron/<BOT_CRON_SECRET>/`. Bu yerda `BOT_CRON_SECRET` Render → Environment bo'limidagi qiymat (o'zingiz ham kiritishingiz mumkin). Render Shell'da `cd backend && python manage.py telegram_setup` buyrug'i aniq manzilni chiqaradi. [cron-job.org](https://cron-job.org) saytida shu URL'ni **har 10 daqiqada** chaqiradigan cronjob yarating. Bu eslatmalarni yuboradi va bepul xizmatni "uyg'oq" saqlaydi.
 
 ### Yangilash
 

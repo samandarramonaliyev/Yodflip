@@ -183,3 +183,119 @@ def test_configure_telegram_skips_without_https_or_token(bot_settings):
 @pytest.mark.django_db
 def test_spa_does_not_swallow_bot_routes(bot_settings):
     assert APIClient().get("/bot/webhook/x/").status_code == 405  # POST only, not index.html
+
+
+# --- reminder cron: secret handling ---------------------------------------------------------
+HEX_SECRET = "3f9a0c7be12d4e5f8a6b9c0d1e2f3a4b"
+
+
+@pytest.fixture
+def cron_settings(bot_settings):
+    bot_settings.BOT_CRON_SECRET = HEX_SECRET
+    return bot_settings
+
+
+@pytest.mark.django_db
+@pytest.mark.parametrize(
+    "path,method",
+    [
+        (f"/bot/cron/{HEX_SECRET}/", "get"),
+        (f"/bot/cron/{HEX_SECRET}/", "post"),  # POST without a CSRF token
+        (f"/bot/cron/{HEX_SECRET}", "get"),  # no trailing slash, no redirect
+        (f"/bot/cron/{HEX_SECRET}", "post"),
+    ],
+)
+def test_cron_url_secret_equals_env_var(cron_settings, sent, path, method):
+    c = APIClient(enforce_csrf_checks=True)
+    r = getattr(c, method)(path)
+    assert r.status_code == 200, r.content
+    assert r.json()["ok"] is True
+
+
+@pytest.mark.django_db
+def test_cron_wrong_secret_is_403_and_logged_without_secret(cron_settings, sent, caplog):
+    with caplog.at_level("WARNING", logger="telegram_bot.views"):
+        r = APIClient().get("/bot/cron/not-the-secret/")
+    assert r.status_code == 403
+    assert "secret mismatch" in caplog.text
+    assert "BOT_CRON_SECRET set" in caplog.text
+    assert HEX_SECRET not in caplog.text and "not-the-secret" not in caplog.text
+    assert APIClient().get("/bot/cron/").status_code in (403, 404)  # empty secret never passes
+
+
+@pytest.mark.django_db
+def test_cron_env_whitespace_is_stripped(cron_settings, sent):
+    cron_settings.BOT_CRON_SECRET = f"  {HEX_SECRET}\n"
+    assert APIClient().get(f"/bot/cron/{HEX_SECRET}/").status_code == 200
+
+
+@pytest.mark.django_db
+def test_cron_accepts_render_style_secret_with_slash_and_plus(bot_settings, sent):
+    bot_settings.BOT_CRON_SECRET = "aB3+dE/fG9=="
+    assert APIClient().get("/bot/cron/aB3+dE/fG9==/").status_code == 200
+    assert APIClient().get("/bot/cron/aB3+dE/fG9").status_code == 403
+
+
+@pytest.mark.django_db
+def test_cron_legacy_derived_link_still_works(cron_settings, sent):
+    import hashlib
+
+    legacy = hashlib.sha256(f"yodflip-cron:{HEX_SECRET}".encode()).hexdigest()[:40]
+    assert APIClient().get(f"/bot/cron/{legacy}/").status_code == 200
+
+
+@pytest.mark.django_db
+def test_cron_without_env_uses_secret_key_derived_value(bot_settings, sent):
+    bot_settings.BOT_CRON_SECRET = ""
+    assert APIClient().get(f"/bot/cron/{services.cron_secret()}/").status_code == 200
+    assert APIClient().get("/bot/cron/anything/").status_code == 403
+
+
+@pytest.mark.django_db
+def test_cron_not_blocked_by_middleware_in_production_mode(cron_settings, sent, settings):
+    # Production-like: SSL redirect on (request arrives via Render's proxy as https), CSRF enforced.
+    settings.SECURE_SSL_REDIRECT = True
+    settings.ALLOWED_HOSTS = ["yodflip.onrender.com"]
+    c = APIClient(enforce_csrf_checks=True)
+    r = c.post(f"/bot/cron/{HEX_SECRET}/", HTTP_HOST="yodflip.onrender.com", HTTP_X_FORWARDED_PROTO="https")
+    assert r.status_code == 200, r.status_code
+
+
+def test_log_redaction_helper():
+    from core.logging import redact
+
+    line = 'GET /bot/cron/3f9a0c7b/ 200 "POST /bot/webhook/abc123/ HTTP/1.1"'
+    out = redact(line)
+    assert "3f9a0c7b" not in out and "abc123" not in out
+    assert out.count("<redacted>") == 2
+    assert redact("/api/health/") == "/api/health/"
+
+
+def test_gunicorn_access_log_redacts_secret_paths(monkeypatch):
+    """gunicorn only runs on Unix, so stub its Logger and check what our subclass passes on."""
+    import importlib.util
+    import sys
+    import types
+    from pathlib import Path
+
+    seen = {}
+
+    class StubLogger:
+        def access(self, resp, req, environ, request_time):
+            seen.update(environ=dict(environ), uri=req.uri, path=req.path)
+
+    glogging = types.ModuleType("gunicorn.glogging")
+    glogging.Logger = StubLogger
+    monkeypatch.setitem(sys.modules, "gunicorn.glogging", glogging)
+    conf = Path(__file__).resolve().parents[1] / "gunicorn.conf.py"
+    spec = importlib.util.spec_from_file_location("gunicorn_conf_test", conf)
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+
+    secret_path = "/bot/cron/3f9a0c7be12d4e5f/"
+    environ = {"RAW_URI": secret_path, "PATH_INFO": secret_path, "REQUEST_METHOD": "GET"}
+    req = types.SimpleNamespace(uri=secret_path, path=secret_path)
+    mod.logger_class().access(None, req, environ, None)
+    blob = repr(seen)
+    assert "3f9a0c7be12d4e5f" not in blob
+    assert seen["environ"]["RAW_URI"] == "/bot/cron/<redacted>/"

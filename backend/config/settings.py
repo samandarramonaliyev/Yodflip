@@ -236,7 +236,9 @@ LOGGING = {
     "version": 1,
     "disable_existing_loggers": False,
     "formatters": {"plain": {"format": "%(asctime)s %(levelname)s %(name)s: %(message)s"}},
-    "handlers": {"console": {"class": "logging.StreamHandler", "formatter": "plain"}},
+    # Never write the webhook/cron URL secrets to the logs (e.g. Django's "Forbidden: /bot/cron/...").
+    "filters": {"redact_secrets": {"()": "core.logging.RedactSecretsFilter"}},
+    "handlers": {"console": {"class": "logging.StreamHandler", "formatter": "plain", "filters": ["redact_secrets"]}},
     "root": {"handlers": ["console"], "level": env("LOG_LEVEL", "INFO")},
     "loggers": {"django.security": {"handlers": ["console"], "level": "WARNING", "propagate": False}},
 }

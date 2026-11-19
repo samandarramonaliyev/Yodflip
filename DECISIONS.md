@@ -82,3 +82,8 @@ Everything that was not fully specified, and what was chosen.
 - **Neon:** the connection string is used as-is (`?sslmode=require`). For the pooled `-pooler` endpoint (PgBouncer, transaction mode) server-side cursors are disabled automatically.
 - **OCR on Render:** the native runtime has no Tesseract, so photo scanning in production needs `ANTHROPIC_API_KEY`. Without it, a scan returns a friendly "couldn't read the page" error instead of sample data. The optional Docker image still includes Tesseract.
 - Docker is now optional (`Dockerfile` + `docker-compose.yml` = the same single service + Postgres, for local production-like runs). The per-app Dockerfiles, nginx config and `docker-compose.prod.yml` were removed.
+
+## Reminder cron URL (fix: 403 with a correct-looking secret)
+- **Cause:** the cron URL expected `sha256("yodflip-cron:" + BOT_CRON_SECRET)[:40]`, not `BOT_CRON_SECRET` itself, so a URL containing the env var's value always got 403. Also, the route required a trailing slash and only matched secrets without `/`.
+- **Now:** `/bot/cron/<BOT_CRON_SECRET>/` (whitespace stripped, trailing slash optional, `/` and `+` allowed, GET or POST, CSRF-exempt, no auth or throttling), compared with `hmac.compare_digest`. The older derived form is still accepted, so a link set up earlier keeps working. Without `BOT_CRON_SECRET`, a value derived from `SECRET_KEY` is used (shown by `manage.py telegram_setup`).
+- A 403 is logged as `Cron 403: secret mismatch (given length, whether BOT_CRON_SECRET is set, expected length, client IP)`, never the secret. `core.logging.RedactSecretsFilter` (Django logs, e.g. `django.request` "Forbidden: …") and a redacting gunicorn access logger replace `/bot/cron/<secret>` and `/bot/webhook/<secret>` with `<redacted>`.
