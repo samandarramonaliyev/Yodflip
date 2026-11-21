@@ -37,6 +37,8 @@ class Card(models.Model):
     term = models.CharField(max_length=200)
     translation = models.CharField(max_length=300)  # in deck.translation_lang
     extra_translations = models.JSONField(default=dict, blank=True)  # {lang: text}, optional / AI-cached
+    # Deck owner's flashcard result: "known" (Topdim) / "learning" (Topa olmadim) / "" (not studied)
+    study_status = models.CharField(max_length=10, blank=True)
     definition = models.CharField(max_length=500, blank=True)
     example = models.CharField(max_length=500, blank=True)
     article = models.CharField(max_length=3, blank=True)

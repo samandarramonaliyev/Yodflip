@@ -3,9 +3,9 @@ import { Flame, LogOut, Moon, Send, Star, Sun, Target, Trophy } from 'lucide-rea
 import { useEffect, useRef, useState, type FormEvent } from 'react'
 import { Link } from 'react-router-dom'
 import { TrackSwitch } from '../components/Layout'
-import { WordList, type ListKind } from '../components/WordList'
+import { WordListsSection } from '../components/WordListsSection'
 import { XpChart } from '../components/XpChart'
-import { Avatar, ErrorState, ProgressBar, Segmented, Skeleton, TabLabel, Toggle, toast } from '../components/ui'
+import { Avatar, ErrorState, ProgressBar, Segmented, Skeleton, Toggle, toast } from '../components/ui'
 import { LANG_NAMES, useT } from '../i18n'
 import { api } from '../lib/api'
 import { useAsync } from '../lib/hooks'
@@ -77,7 +77,6 @@ function SetEmail() {
 export default function Profile() {
   const t = useT()
   const { track, user, lang, setLang, theme, setTheme, muted, toggleMute, logout, setUser } = useApp()
-  const [list, setList] = useState<ListKind>('learned')
   const stats = useAsync(() => api.get<ProfileStats>('/gamification/profile/', { track }), [track])
   const ach = useAsync(() => api.get<Achievement[]>('/gamification/achievements/'), [])
   const [reminder, setReminder] = useState(user?.reminder_time?.slice(0, 5) || '')
@@ -169,19 +168,9 @@ export default function Profile() {
         </>
       )}
 
-      <section className="card space-y-3 p-4">
-        <h2 className="h2">{t('lists.title')}</h2>
-        <Segmented
-          value={list}
-          onChange={setList}
-          options={[
-            { value: 'learned', label: <TabLabel emoji="✅" label={t('lists.learned')} count={d?.learned} /> },
-            { value: 'missed', label: <TabLabel emoji="❌" label={t('lists.missed')} count={d?.missed} /> },
-            { value: 'want', label: <TabLabel emoji="⭐" label={t('lists.want')} count={d?.want} /> },
-          ]}
-        />
-        <WordList which={list} track={track} />
-      </section>
+      <div className="card p-4">
+        <WordListsSection track={track} />
+      </div>
 
       <section className="card p-4">
         <h2 className="h2 mb-3">{t('profile.achievements')}</h2>

@@ -9,6 +9,7 @@ export interface GameInfo {
 }
 
 export const GAMES: GameInfo[] = [
+  { id: 'flashcards', emoji: '🎴', color: 'bg-success/15', needsSource: true },
   { id: 'match', emoji: '🃏', color: 'bg-primary/15', needsSource: true },
   { id: 'speed', emoji: '⚡', color: 'bg-accent/30', needsSource: true },
   { id: 'builder', emoji: '🧩', color: 'bg-success/15', needsSource: true },
@@ -24,6 +25,7 @@ export const gameInfo = (id: GameId) => GAMES.find((g) => g.id === id)
 /** How many items each game takes from the source. */
 export const GAME_LIMITS: Partial<Record<GameId, number>> = {
   speed: 80,
+  flashcards: 30,
   builder: 10,
   falling: 40,
   memory: 6,

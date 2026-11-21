@@ -209,7 +209,7 @@ export default function DeckPage() {
 
       {cards.length > 0 && (
         <section className="grid grid-cols-3 gap-2">
-          <Link to={`/decks/${deck.id}/study/flashcards`} className="card flex flex-col items-center gap-1 p-3 text-center font-extrabold hover:shadow-lift">
+          <Link to={`/play/flashcards?source=deck&id=${deck.id}`} className="card flex flex-col items-center gap-1 p-3 text-center font-extrabold hover:shadow-lift">
             <Layers className="h-6 w-6 text-primary" /> {t('study.flashcards')}
           </Link>
           <Link to={`/decks/${deck.id}/study/learn`} className="card flex flex-col items-center gap-1 p-3 text-center font-extrabold hover:shadow-lift">

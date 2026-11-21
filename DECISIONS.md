@@ -124,3 +124,18 @@ Everything that was not fully specified, and what was chosen.
 - **Answer checking**: alternatives split by `,` `/` `;`; case-insensitive and trimmed; Russian ё = е; German ä/ö/ü/ß = ae/oe/ue/ss; a leading der/die/das/the/a/an/to is optional. Typos: 1 edit for 3–6 letters, 2 for longer; answers of 1–2 letters must be exact (otherwise nearly anything would pass).
 - **TTS**: the foreign word speaks with its own voice; the translation side has a speaker button in the chosen language only when the device has that voice (Uzbek is usually missing, so the button is hidden).
 - The interface language (uz/ru/en) is a separate setting and is not changed by the picker.
+
+## Two-sided flashcards ("Topdim / Topa olmadim")
+- New game **Kartochkalar** (`/play/flashcards?source=…`) for levels, decks, scanned sets and the Want / Missed lists. The deck page's "Kartochkalar" button and the profile's "Bu ro'yxatni o'rganish" open it.
+- Front = translation in the chosen language (picker from the previous task; decks use their own language), back = the foreign word (German article coloured: der blue, die red, das green), part of speech, example, 🔊. The picker's direction does not change flashcards: the front is always the translation, the header toggle "Teskari" swaps it.
+- Answer buttons (and swipe / ←→ keys) work only after the current card was flipped once; Space flips.
+- Every answer is saved immediately: `POST /api/words/flash/answer/` with a client-generated `client_id` (retries return the same result). Topdim → Learned (box 5), removed from Want / Missed; built-in word → level "found" once (`mark_found`, completion bonus via the shared `check_completion`). Topa olmadim → Want-to-learn, removed from Learned (box back to 1; the miss counter is unchanged, so it is not added to Missed). Never reduces level progress.
+- Undo (`POST /api/words/flash/undo/`) restores the stored snapshot of the list row (or deletes the row if the answer created it), the deck card status, and removes the level "found" mark if that answer set it. It is meant for the latest answer.
+- Deck cards: `Card.study_status` known / learning, only for the deck owner's answers; the deck API returns `known_count` / `learning_count`.
+- Results of a flashcards session give flashcards XP but do not touch the lists again (no Leitner miss → Missed). In level rounds, XP counts only words found in that round.
+- End screen: "Topdim N / Topa olmadim M", "Topa olmaganlarni qayta o'rganish" (restarts with the missed cards), "Yangi o'yin", "Bosh sahifa".
+
+## Profile word lists
+- Tabs Yodlanganlar · Yodlanadiganlar · Topa olmaganlar with counts. Collapsed: the 6 most recent words + "Hammasini ko'rish (N)". Expanded: search, sort (newest / A–Z), level and deck filters, 30 rows per request ("Ko'proq yuklash"), move / delete / 🔊 per row, "Yopish" at the top and sticky at the bottom on mobile (collapsing scrolls to the section header).
+- Backend: `GET /api/me/words/?list=&page=&page_size=(max 30)&search=&sort=new|az&level=&deck=&track=` → `count`, `has_more`, `counts` for all three lists, `results`. Deck filter = words whose term is a card of that (own) deck.
+- The open/closed state per tab is kept in `sessionStorage` (session only).

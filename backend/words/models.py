@@ -195,3 +195,29 @@ class LevelCompletion(models.Model):
 
     class Meta:
         constraints = [models.UniqueConstraint(fields=["user", "track", "level"], name="uniq_level_completion")]
+
+
+class FlashAnswer(models.Model):
+    """One "Topdim / Topa olmadim" answer on a two-sided flashcard.
+
+    `client_id` makes retries idempotent; `snapshot` holds the list state before the answer so
+    "Bekor qilish" (undo) can restore it exactly.
+    """
+
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name="flash_answers")
+    client_id = models.CharField(max_length=64)
+    track = models.CharField(max_length=2, choices=TRACK_CHOICES)
+    known = models.BooleanField()
+    userword = models.ForeignKey(UserWord, null=True, blank=True, on_delete=models.SET_NULL, related_name="+")
+    snapshot = models.JSONField(default=dict)
+    level_word = models.ForeignKey(
+        UserLevelWord, null=True, blank=True, on_delete=models.SET_NULL, related_name="+"
+    )  # set when this answer found a level word for the first time
+    card = models.ForeignKey("decks.Card", null=True, blank=True, on_delete=models.SET_NULL, related_name="+")
+    card_prev_status = models.CharField(max_length=10, blank=True)
+    result = models.JSONField(default=dict)
+    undone = models.BooleanField(default=False)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        constraints = [models.UniqueConstraint(fields=["user", "client_id"], name="uniq_flash_client_id")]

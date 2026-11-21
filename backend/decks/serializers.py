@@ -36,8 +36,9 @@ class CardSerializer(serializers.ModelSerializer):
             "article",
             "image",
             "order",
+            "study_status",
         )
-        read_only_fields = ("id",)
+        read_only_fields = ("id", "study_status")
         extra_kwargs = {"order": {"required": False}, "extra_translations": {"required": False}}
 
     def validate_extra_translations(self, value):
@@ -78,6 +79,8 @@ class DeckSerializer(serializers.ModelSerializer):
     card_count = serializers.IntegerField(read_only=True)
     owner_name = serializers.CharField(source="owner.display_name", read_only=True)
     is_owner = serializers.SerializerMethodField()
+    known_count = serializers.SerializerMethodField()
+    learning_count = serializers.SerializerMethodField()
 
     class Meta:
         model = Deck
@@ -90,6 +93,8 @@ class DeckSerializer(serializers.ModelSerializer):
             "is_public",
             "share_code",
             "card_count",
+            "known_count",
+            "learning_count",
             "owner_name",
             "is_owner",
             "created_at",
@@ -103,6 +108,12 @@ class DeckSerializer(serializers.ModelSerializer):
         if lang not in TRANSLATION_LANGS or lang == track:
             raise serializers.ValidationError({"translation_lang": "invalid_language_pair"})
         return attrs
+
+    def get_known_count(self, obj) -> int:
+        return obj.cards.filter(study_status="known").count()
+
+    def get_learning_count(self, obj) -> int:
+        return obj.cards.filter(study_status="learning").count()
 
     def get_is_owner(self, obj) -> bool:
         req = self.context.get("request")

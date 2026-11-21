@@ -20,6 +20,7 @@ import { useApp } from '../store/app'
 
 const COMPONENTS: Record<string, React.LazyExoticComponent<React.ComponentType<GameProps>>> = {
   match: lazy(() => import('../games/MatchGame')),
+  flashcards: lazy(() => import('../games/Flashcards')),
   speed: lazy(() => import('../games/SpeedMatch')),
   builder: lazy(() => import('../games/WordBuilder')),
   falling: lazy(() => import('../games/FallingWords')),
@@ -181,7 +182,7 @@ function Setup({ game, onStart }: { game: GameId; onStart: (q: Record<string, st
 type LoadPhase = 'loading' | 'error' | 'empty' | 'ready' | 'completed' | 'pool_done'
 
 /** Words per server-built level round (Match uses the board size of the difficulty). */
-export const LEVEL_ROUND_SIZE: Partial<Record<GameId, number>> = { speed: 24, builder: 10, falling: 24, memory: 6, derdiedas: 20 }
+export const LEVEL_ROUND_SIZE: Partial<Record<GameId, number>> = { speed: 24, builder: 10, falling: 24, memory: 6, derdiedas: 20, flashcards: 20 }
 
 interface LevelRoundResponse {
   session_id: string | null
@@ -286,8 +287,8 @@ function Runner({ game, source, params, onChangeLang }: { game: GameId; source: 
         continue
       }
       const save = async () => {
-        if (source === 'level' && sessionId) {
-          // Report every answer (idempotent on the server), then close the round.
+        if (source === 'level' && sessionId && game !== 'flashcards') {
+          // Flashcards save each answer themselves (/words/flash/answer/). Others: report every answer (idempotent on the server), then close the round.
           const answers = stat.results.filter((r) => r.word_id).map((r) => ({ word_id: r.word_id, correct: r.correct }))
           if (answers.length) await api.post('/levels/answer/', { session_id: sessionId, answers }).catch(() => null)
         }
@@ -329,6 +330,12 @@ function Runner({ game, source, params, onChangeLang }: { game: GameId; source: 
     dispatch({ type: 'RESTART', rounds: buildRounds(reshuffled, game, difficulty) })
     window.scrollTo({ top: 0 })
   }, [items, game, difficulty, isLevel, fetchItems])
+  // "Topa olmaganlarni qayta o'rganish": restart with only the missed cards.
+  const retryMissed = useCallback((missed: GameItem[]) => {
+    if (!missed.length) return
+    dispatch({ type: 'RESTART', rounds: [missed] })
+    window.scrollTo({ top: 0 })
+  }, [])
   const nextRound = useCallback(() => {
     dispatch({ type: 'NEXT_ROUND' })
     window.scrollTo({ top: 0 })
@@ -399,7 +406,7 @@ function Runner({ game, source, params, onChangeLang }: { game: GameId; source: 
           {game === 'daily' && daily.already_played && <div className="mb-3 rounded-2xl bg-accent/25 p-3 text-center text-sm font-bold">{t('daily.already', { score: daily.my_score ?? 0 })}</div>}
           {total > 1 && <div className="mb-2 text-center text-sm font-extrabold text-muted">{t('play.round_of', { n: session.index + 1, total })}</div>}
           <Suspense fallback={<Spinner className="mx-auto mt-20 h-8 w-8 text-primary" />}>
-            <Game key={`${session.playId}-${session.index}`} items={session.rounds[session.index]} track={track} reverse={reverse} translationLang={activeLang} onFinish={onFinish} />
+            <Game key={`${session.playId}-${session.index}`} items={session.rounds[session.index]} track={track} reverse={reverse} translationLang={activeLang} onFinish={onFinish} {...(game === 'flashcards' ? { sessionId: sessionRef.current } : {})} />
           </Suspense>
         </>
       )}
@@ -440,8 +447,22 @@ function Runner({ game, source, params, onChangeLang }: { game: GameId; source: 
               learnedNow={sum.learnedNow}
               onNewGame={newGame}
               otherSetTo={game === 'daily' || game === 'review' ? undefined : otherSetPath(source, params)}
+              extraActions={
+                game === 'flashcards' && sum.missed.length > 0 ? (
+                  <button className="btn-soft" onClick={() => retryMissed(sum.missed)} data-testid="retry-missed">
+                    🔁 {t('flash.retry_missed')} ({sum.missed.length})
+                  </button>
+                ) : null
+              }
               extra={
                 isLevel && levelRound.before ? (
+                  <>
+                    {game === 'flashcards' && <FlashSummary results={session.stats.flatMap((s) => s.results)} />}
+                    <LevelRoundSummary before={levelRound.before} after={lr?.progress ?? null} newFound={lr ? lr.new_found_count : null} />
+                  </>
+                ) : game === 'flashcards' ? (
+                  <FlashSummary results={session.stats.flatMap((s) => s.results)} />
+                ) : isLevel && levelRound.before ? (
                   <LevelRoundSummary before={levelRound.before} after={lr?.progress ?? null} newFound={lr ? lr.new_found_count : null} />
                 ) : game === 'daily' && daily.score !== undefined ? (
                   <div className="mt-2 space-y-2">
@@ -456,6 +477,17 @@ function Runner({ game, source, params, onChangeLang }: { game: GameId; source: 
             </>
           )
         })()}
+    </div>
+  )
+}
+
+function FlashSummary({ results }: { results: { correct: boolean }[] }) {
+  const t = useT()
+  const known = results.filter((r) => r.correct).length
+  return (
+    <div className="mt-3 flex justify-center gap-3 text-sm font-black" data-testid="flash-summary">
+      <span className="rounded-full bg-success/15 px-3 py-1 text-success">✅ {t('flash.known')}: {known}</span>
+      <span className="rounded-full bg-[#FF7675]/15 px-3 py-1 text-[#d64545]">❌ {t('flash.missed')}: {results.length - known}</span>
     </div>
   )
 }

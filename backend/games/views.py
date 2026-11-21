@@ -139,6 +139,9 @@ class ResultsView(APIView):
             if d.get("source") == "level":
                 xp, perfect, level_payload = self._level_round(user, d, results, game, correct, attempts)
                 learned_now = level_payload.pop("learned_terms")
+            elif game == "flashcards":
+                # Lists were already updated card by card via /api/words/flash/answer/.
+                xp, perfect = session_xp(game, correct, attempts, 0)
             else:
                 for r in results:
                     uw, became = record_answer(user, track, r, r["correct"])
@@ -197,6 +200,8 @@ class ResultsView(APIView):
         """Level games: XP only for words found for the first time in this round (once per round)."""
         rnd = get_object_or_404(LevelRound, session_id=d["session_id"], user=user)
         answers = [(r["word_id"], r["correct"]) for r in results if r.get("word_id")]
+        if game == "flashcards":
+            answers = []  # applied by the flash endpoint ("Topa olmadim" must not go to Missed)
         outcome = record_answers(user, rnd, answers) if answers else None
         found_qs = UserLevelWord.objects.filter(found_round=rnd).select_related("word")
         new_found = found_qs.count()

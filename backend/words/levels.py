@@ -221,8 +221,6 @@ def _mark_missed(user, w: Word, now) -> None:
 
 def record_answers(user, rnd: LevelRound, answers: list[tuple[int, bool]]) -> dict:
     """Apply answers of one round. Idempotent: retries and duplicates never double-count."""
-    from gamification.services import grant, record_activity
-
     now = timezone.now()
     round_ids = set(rnd.word_ids)
     fillers = set(rnd.filler_ids)
@@ -259,23 +257,7 @@ def record_answers(user, rnd: LevelRound, answers: list[tuple[int, bool]]) -> di
             elif first and not UserLevelWord.objects.filter(user=user, word=w, found_at__isnull=False).exists():
                 _mark_missed(user, w, now)
 
-        row = level_progress(user, rnd.track, rnd.level)
-        completed_now = False
-        bonus = 0
-        if row["completed"]:
-            try:
-                with transaction.atomic():
-                    LevelCompletion.objects.create(
-                        user=user, track=rnd.track, level=rnd.level, bonus_xp=COMPLETION_BONUS_XP
-                    )
-                completed_now = True
-            except IntegrityError:
-                completed_now = False
-            if completed_now:
-                bonus = COMPLETION_BONUS_XP
-                user.refresh_from_db()
-                record_activity(user, bonus, 0, 0, games=0)
-                grant(user, "level_complete")
+        row, completed_now, bonus = check_completion(user, rnd.track, rnd.level)
     return {
         "session_id": rnd.session_id,
         "new_found": new_found,
@@ -285,6 +267,34 @@ def record_answers(user, rnd: LevelRound, answers: list[tuple[int, bool]]) -> di
         "completed_now": completed_now,
         "bonus_xp": bonus,
     }
+
+
+def check_completion(user, track: str, level: str) -> tuple[dict, bool, int]:
+    """(progress row, completed just now, bonus XP). The bonus is given exactly once per level."""
+    from gamification.services import grant, record_activity
+
+    row = level_progress(user, track, level)
+    if not row["completed"]:
+        return row, False, 0
+    try:
+        with transaction.atomic():
+            LevelCompletion.objects.create(user=user, track=track, level=level, bonus_xp=COMPLETION_BONUS_XP)
+    except IntegrityError:
+        return row, False, 0
+    user.refresh_from_db()
+    record_activity(user, COMPLETION_BONUS_XP, 0, 0, games=0)
+    grant(user, "level_complete")
+    return row, True, COMPLETION_BONUS_XP
+
+
+def mark_found(user, w: Word, rnd: LevelRound | None = None) -> bool:
+    """Mark a built-in word found (FOUND = LEARNED). True only the first time."""
+    UserLevelWord.objects.get_or_create(user=user, word=w, defaults={"track": w.track, "level": w.level})
+    return bool(
+        UserLevelWord.objects.filter(user=user, word=w, found_at__isnull=True).update(
+            found_at=timezone.now(), found_round=rnd
+        )
+    )
 
 
 def found_words(user, track: str, level: str):
