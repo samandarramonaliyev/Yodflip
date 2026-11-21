@@ -113,6 +113,14 @@ def get_items(user, track: str, source: str, params: dict, mode: str, day: date 
         if params.get("pack"):
             qs = qs.filter(pack__slug=params["pack"])
         items = [item_from_word(w) for w in qs]
+    elif source == "levelreview":
+        # Review session of a level's found words (no level progress; normal Leitner review).
+        from words.levels import found_words
+
+        level = params.get("level")
+        if level not in LEVELS:
+            raise ValidationError({"level": "invalid_level"})
+        items = [item_from_word(w) for w in found_words(user, track, level)]
     elif source == "deck":
         deck = get_object_or_404(Deck, pk=params.get("id"))
         if deck.owner_id != user.id and not deck.is_public:

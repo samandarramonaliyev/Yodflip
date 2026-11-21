@@ -1,5 +1,5 @@
 /** Compress a photo on the client: longest side ≤ maxSide, JPEG. */
-export async function compressImage(file: File, maxSide = 1600, quality = 0.85): Promise<Blob> {
+export async function compressImage(file: Blob, maxSide = 1600, quality = 0.85): Promise<Blob> {
   const url = URL.createObjectURL(file)
   try {
     const img = await new Promise<HTMLImageElement>((resolve, reject) => {

@@ -21,6 +21,7 @@ ACHIEVEMENTS: dict[str, str] = {
     "daily_first": "📅",
     "polyglot": "🌍",
     "deck_master": "🃏",
+    "level_complete": "🎓",
 }
 
 

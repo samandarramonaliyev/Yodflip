@@ -36,17 +36,35 @@ export interface PackRow {
   emoji: string
   name: Record<UiLang, string>
   total: number
+  found: number
   learned: number
   percent: number
 }
 
-export interface LevelRow {
+/** Server-side level progress (found words). */
+export interface LevelProgress {
   level: Cefr
   total: number
+  found: number
   learned: number
+  remaining: number
   percent: number
+  unlock_target: number
+  to_unlock: number
   unlocked: boolean
+  completed: boolean
+}
+
+export interface LevelRow extends LevelProgress {
   packs: PackRow[]
+}
+
+export interface LevelRoundOutcome {
+  session_id: string
+  new_found_count: number
+  progress: LevelProgress
+  completed_now: boolean
+  bonus_xp: number
 }
 
 export interface Word {
@@ -175,6 +193,7 @@ export interface ResultsResponse {
   new_achievements: string[]
   flips?: number
   daily?: { score: number; first_attempt: boolean }
+  level_round?: LevelRoundOutcome
 }
 
 export interface PublicConfig {

@@ -134,7 +134,7 @@ def test_card_rejects_non_image(api, user):
 def test_seed_runs_only_once():
     out = io.StringIO()
     call_command("seed_words", stdout=out)
-    assert "Seeded 600 words" in out.getvalue()
+    assert "Seeded 2000 words" in out.getvalue()
     assert SeedState.objects.get(key="words").digest
     Word.objects.filter(pk=Word.objects.first().pk).update(translation_uz="CHANGED")
     out = io.StringIO()
@@ -143,3 +143,9 @@ def test_seed_runs_only_once():
     assert Word.objects.filter(translation_uz="CHANGED").count() == 1  # untouched
     call_command("seed_words", "--force", stdout=io.StringIO())
     assert Word.objects.filter(translation_uz="CHANGED").count() == 0
+
+
+def test_permissions_policy_allows_camera_for_self(client):
+    r = client.get("/api/health/")
+    assert "camera=(self)" in r.headers["Permissions-Policy"]
+    assert "microphone=()" in r.headers["Permissions-Policy"]

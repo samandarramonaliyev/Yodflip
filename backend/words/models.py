@@ -47,7 +47,8 @@ class Word(models.Model):
     example_uz = models.CharField(max_length=300, blank=True)
 
     class Meta:
-        unique_together = ("track", "level", "word", "article")
+        # A word belongs to exactly one level inside its track.
+        unique_together = ("track", "word", "article")
         ordering = ("track", "level", "pack__order", "id")
 
     def __str__(self):
@@ -97,3 +98,78 @@ class UserWord(models.Model):
     @property
     def is_missed(self) -> bool:
         return self.box == 1 and self.miss_count > 0
+
+
+class LevelRound(models.Model):
+    """One round of a level game built by the server (the "session" of the level API).
+
+    Stores which words were shown and which of them were review fillers, so answers can be
+    validated server-side and the next rounds can avoid the words of the last sessions.
+    """
+
+    session_id = models.CharField(max_length=40, unique=True)
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name="level_rounds")
+    track = models.CharField(max_length=2, choices=TRACK_CHOICES)
+    level = models.CharField(max_length=2, choices=CEFR_CHOICES)
+    game = models.CharField(max_length=30, blank=True)
+    word_ids = models.JSONField(default=list)
+    filler_ids = models.JSONField(default=list)
+    xp_awarded = models.BooleanField(default=False)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ("-created_at", "-id")
+        indexes = [models.Index(fields=["user", "track", "-created_at"])]
+
+    def __str__(self):
+        return f"{self.user} · {self.track}/{self.level} · {self.session_id}"
+
+
+class UserLevelWord(models.Model):
+    """Level progress of one built-in word for one user. FOUND = LEARNED, permanently."""
+
+    MAX_FILLER_USES = 2
+
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name="level_words")
+    word = models.ForeignKey(Word, on_delete=models.CASCADE, related_name="level_progress")
+    track = models.CharField(max_length=2, choices=TRACK_CHOICES)
+    level = models.CharField(max_length=2, choices=CEFR_CHOICES)
+    found_at = models.DateTimeField(null=True, blank=True)
+    found_round = models.ForeignKey(LevelRound, null=True, blank=True, on_delete=models.SET_NULL, related_name="+")
+    filler_uses = models.PositiveSmallIntegerField(default=0)
+    last_shown_at = models.DateTimeField(null=True, blank=True)
+
+    class Meta:
+        constraints = [
+            models.UniqueConstraint(fields=["user", "word"], name="uniq_user_level_word"),
+            models.CheckConstraint(condition=models.Q(filler_uses__lte=2), name="filler_uses_max_2"),
+        ]
+        indexes = [models.Index(fields=["user", "track", "level", "found_at"])]
+
+    def __str__(self):
+        return f"{self.user} · {self.word} · {'found' if self.found_at else 'open'}"
+
+
+class LevelAnswer(models.Model):
+    """First answer for a word inside one round; makes retries and double taps idempotent."""
+
+    round = models.ForeignKey(LevelRound, on_delete=models.CASCADE, related_name="answers")
+    word = models.ForeignKey(Word, on_delete=models.CASCADE, related_name="+")
+    correct = models.BooleanField(default=False)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        constraints = [models.UniqueConstraint(fields=["round", "word"], name="uniq_round_word_answer")]
+
+
+class LevelCompletion(models.Model):
+    """A level finished at 100%. The unique row makes the completion bonus a one-time event."""
+
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name="level_completions")
+    track = models.CharField(max_length=2, choices=TRACK_CHOICES)
+    level = models.CharField(max_length=2, choices=CEFR_CHOICES)
+    bonus_xp = models.PositiveIntegerField(default=0)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        constraints = [models.UniqueConstraint(fields=["user", "track", "level"], name="uniq_level_completion")]

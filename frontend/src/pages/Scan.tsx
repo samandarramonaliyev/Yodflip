@@ -1,11 +1,13 @@
 import { motion } from 'framer-motion'
-import { Camera, Image as ImageIcon, Keyboard, ScanLine, X } from 'lucide-react'
+import { Keyboard, ScanLine, X } from 'lucide-react'
 import { useEffect, useRef, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
+import { CameraCapture } from '../components/CameraCapture'
 import { Spinner, toast } from '../components/ui'
 import { useT } from '../i18n'
 import { api, ApiError, errorKey } from '../lib/api'
 import { useAsync, useMainButton } from '../lib/hooks'
+import { cameraSupported } from '../lib/cameraMachine'
 import { compressImage } from '../lib/image'
 import type { SetPair } from '../lib/types'
 import { useApp } from '../store/app'
@@ -30,33 +32,57 @@ export default function Scan() {
   const [preview, setPreview] = useState<string | null>(null)
   const [busy, setBusy] = useState(false)
   const [error, setError] = useState('')
+  const [cameraOpen, setCameraOpen] = useState(false)
+  const [hint, setHint] = useState(false)
   const quota = useAsync(() => api.get<{ left: number; limit: number; mock: boolean }>('/ocr/quota/'), [])
 
   useEffect(() => () => void (preview && URL.revokeObjectURL(preview)), [preview])
 
-  const pick = async (f: File | undefined) => {
-    if (!f) return
+  const pick = async (f: File | Blob | undefined): Promise<Blob | null> => {
+    if (!f) return null
     setError('')
     if (f.size > 25 * 1024 * 1024) {
       setError(t('err.too_large'))
-      return
+      return null
     }
     const blob = await compressImage(f, 1600)
     if (blob.size > 10 * 1024 * 1024) {
       setError(t('err.too_large'))
-      return
+      return null
     }
     setFile(blob)
     setPreview(URL.createObjectURL(blob))
+    return blob
   }
 
-  const upload = async () => {
-    if (!file) return
+  /** "Kameradan olish": the in-app camera; without getUserMedia straight to <input capture>. */
+  const openCamera = () => {
+    if (cameraSupported()) setCameraOpen(true)
+    else {
+      setHint(true)
+      cam.current?.click()
+    }
+  }
+
+  const onCameraPhoto = async (photo: Blob, fromFile: boolean) => {
+    setCameraOpen(false)
+    if (fromFile) setHint(true) // the fallback was used: keep the permission hint visible
+    let blob: Blob | null = photo
+    if (fromFile) blob = await pick(photo)
+    else {
+      setFile(photo) // already a ≤1600px JPEG from the camera canvas
+      setPreview(URL.createObjectURL(photo))
+    }
+    if (blob) void upload(blob)
+  }
+
+  const upload = async (photo: Blob | null = file) => {
+    if (!photo) return
     setBusy(true)
     setError('')
     try {
       const fd = new FormData()
-      fd.append('image', file, 'page.jpg')
+      fd.append('image', photo, 'page.jpg')
       fd.append('track', track)
       const r = await api.form<ScanResult>('/ocr/scan/', fd)
       if (!r.pairs.length) {
@@ -73,7 +99,7 @@ export default function Scan() {
     }
   }
 
-  useMainButton(file && !busy ? t('scan.extract') : null, upload, !busy)
+  useMainButton(file && !busy && !cameraOpen ? t('scan.extract') : null, () => void upload(), !busy)
 
   return (
     <div className="page max-w-2xl space-y-5">
@@ -82,6 +108,7 @@ export default function Scan() {
         <p className="text-muted">{t('scan.subtitle')}</p>
       </div>
 
+      {/* Fallback when getUserMedia is missing; WebViews may still open the gallery, hence the hint. */}
       <input ref={cam} type="file" accept="image/*" capture="environment" className="hidden" onChange={(e) => pick(e.target.files?.[0])} />
       <input ref={gal} type="file" accept="image/*" className="hidden" onChange={(e) => pick(e.target.files?.[0])} />
 
@@ -92,13 +119,23 @@ export default function Scan() {
           </motion.div>
           <p className="max-w-sm text-muted">{t('scan.tip')}</p>
           <div className="grid w-full gap-2 sm:grid-cols-2">
-            <button className="btn-primary" onClick={() => cam.current?.click()}>
-              <Camera className="h-5 w-5" /> {t('scan.camera')}
+            <button className="btn-primary" onClick={openCamera}>
+              📷 {t('scan.camera')}
             </button>
             <button className="btn-ghost" onClick={() => gal.current?.click()}>
-              <ImageIcon className="h-5 w-5" /> {t('scan.gallery')}
+              🖼 {t('scan.gallery')}
             </button>
           </div>
+          {hint && (
+            <div className="w-full rounded-2xl bg-accent/20 p-3 text-left text-sm" role="note">
+              <div className="font-bold">{t('cam.hint')}</div>
+              <ol className="mt-1 list-decimal space-y-1 pl-5 text-muted">
+                <li>{t('cam.step_tg_android')}</li>
+                <li>{t('cam.step_tg_ios')}</li>
+                <li>{t('cam.step_browser')}</li>
+              </ol>
+            </div>
+          )}
         </div>
       ) : (
         <div className="card space-y-3 p-3">
@@ -117,7 +154,7 @@ export default function Scan() {
               </button>
             )}
           </div>
-          <button className="btn-primary w-full" disabled={busy} onClick={upload}>
+          <button className="btn-primary w-full" disabled={busy} onClick={() => void upload()}>
             {busy ? <Spinner className="h-5 w-5" /> : <ScanLine className="h-5 w-5" />} {t('scan.extract')}
           </button>
         </div>
@@ -133,6 +170,8 @@ export default function Scan() {
         <span>{quota.data ? t('scan.quota', { left: quota.data.left, limit: quota.data.limit }) : ''}</span>
         {quota.data?.mock && <span className="chip bg-accent/25 text-ink">{t('scan.mock')}</span>}
       </div>
+
+      {cameraOpen && <CameraCapture onCapture={onCameraPhoto} onClose={() => setCameraOpen(false)} />}
 
       <div className="grid gap-2 sm:grid-cols-2">
         <Link to="/sets/new" state={{ pairs: [], language: track }} className="btn-ghost">

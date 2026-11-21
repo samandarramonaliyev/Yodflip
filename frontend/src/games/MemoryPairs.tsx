@@ -1,3 +1,4 @@
+import { FillerBadge } from '../components/LevelProgress'
 import { motion } from 'framer-motion'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { FlipCard } from '../components/FlipCard'
@@ -13,6 +14,7 @@ interface MCard {
   pair: string
   text: string
   lang: 'word' | 'uz'
+  filler?: boolean
 }
 
 /** Extra game: classic concentration with word ↔ Uzbek cards mixed on one board. */
@@ -25,7 +27,7 @@ export default function MemoryPairs({ items, track, reverse, onFinish }: GamePro
         set.flatMap((i) => {
           const s = sidesFor(i, 'memory', track, reverse)
           return [
-            { id: `a-${i.key}`, pair: i.key, text: s.prompt, lang: s.promptLang === 'uz' ? 'uz' : 'word' },
+            { id: `a-${i.key}`, pair: i.key, text: s.prompt, lang: s.promptLang === 'uz' ? 'uz' : 'word', filler: i.is_filler },
             { id: `b-${i.key}`, pair: i.key, text: s.answer, lang: s.answerLang === 'uz' ? 'uz' : 'word' },
           ] as MCard[]
         }),
@@ -113,7 +115,10 @@ export default function MemoryPairs({ items, track, reverse, onFinish }: GamePro
                 front={<div className={`grid h-full w-full place-items-center rounded-2xl text-2xl font-black shadow-soft ${c.lang === 'uz' ? 'bg-accent text-ink' : 'bg-tint text-tint-ink'}`}>?</div>}
                 back={
                   <div className={`flex h-full w-full items-center justify-center rounded-2xl bg-card p-2 text-center shadow-soft ${isMatched ? 'ring-4 ring-success' : 'ring-2 ring-primary/30'}`}>
-                    <span className="break-words text-sm font-extrabold leading-tight sm:text-base">{c.text}</span>
+                    <span className="flex flex-col items-center gap-1 break-words text-sm font-extrabold leading-tight sm:text-base">
+                      {c.filler && <FillerBadge />}
+                      {c.text}
+                    </span>
                   </div>
                 }
               />

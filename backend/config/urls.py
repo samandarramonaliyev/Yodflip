@@ -13,6 +13,7 @@ urlpatterns = [
     path("api/auth/", include("accounts.urls")),
     path("api/auth/telegram/", include("telegram_auth.urls")),
     path("api/words/", include("words.urls")),
+    path("api/levels/", include("words.level_urls")),
     path("api/", include("decks.urls")),
     path("api/games/", include("games.urls")),
     path("api/ocr/", include("ocr.urls")),

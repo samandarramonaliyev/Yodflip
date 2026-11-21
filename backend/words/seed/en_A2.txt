@@ -63,3 +63,99 @@ lake | noun | a large area of water with land all around it | ko'l | We swam in 
 storm | noun | very bad weather with strong wind and rain | bo'ron | The storm broke many trees. | Bo'ron ko'p daraxtlarni sindirdi.
 warm | adjective | a little hot, in a pleasant way | iliq | It's warm in spring. | Bahorda havo iliq.
 dry | adjective | without water or rain | quruq | The summer here is hot and dry. | Bu yerda yoz issiq va quruq.
+## hobbies | 🎸 | Free Time & Hobbies | Bo'sh vaqt va xobbilar | Досуг и хобби
+hobby | noun | an activity you do for fun in your free time | xobbi, sevimli mashg'ulot | My hobby is photography. | Mening xobbim suratga olish.
+guitar | noun | a musical instrument with six strings | gitara | He plays the guitar every evening. | U har kuni kechqurun gitara chaladi.
+camera | noun | a device for taking photos or videos | fotoapparat, kamera | I took this photo with my new camera. | Bu suratni yangi kameram bilan oldim.
+concert | noun | a show where people play music for an audience | konsert | We went to a concert on Saturday. | Shanba kuni konsertga bordik.
+film | noun | a story shown with moving pictures, at the cinema or on TV | film, kino | Let's watch a film tonight. | Bugun kechqurun film ko'raylik.
+picnic | noun | a meal you eat outside, for example in a park | piknik | We had a picnic by the lake. | Ko'l bo'yida piknik qildik.
+painting | noun | a picture made with paint | rasm (bo'yoq bilan chizilgan) | There is a beautiful painting on the wall. | Devorda chiroyli rasm osig'liq.
+chess | noun | a game for two players with kings, queens and other pieces | shaxmat | My grandfather taught me chess. | Bobom menga shaxmat o'rgatgan.
+to dance | verb | to move your body to music | raqsga tushmoq | She loves to dance. | U raqsga tushishni yaxshi ko'radi.
+to sing | verb | to make music with your voice | qo'shiq aytmoq | They sing in a choir. | Ular xorda qo'shiq aytishadi.
+to swim | verb | to move through water using your arms and legs | suzmoq | Can you swim? | Suza olasizmi?
+to draw | verb | to make a picture with a pencil or pen | chizmoq | My son likes to draw animals. | O'g'lim hayvonlarni chizishni yoqtiradi.
+to collect | verb | to bring together things of the same kind as a hobby | yig'moq, to'plamoq | He collects old coins. | U eski tangalarni yig'adi.
+to relax | verb | to rest and become calm | dam olmoq, hordiq chiqarmoq | I relax by reading books. | Kitob o'qib hordiq chiqaraman.
+free time | noun | time when you don't have to work or study | bo'sh vaqt | What do you do in your free time? | Bo'sh vaqtingizda nima qilasiz?
+## town | 🏙️ | Town & Directions | Shahar va yo'nalishlar | Город и направления
+bank | noun | a place where you keep and take out money | bank | The bank is next to the post office. | Bank pochta yonida.
+post office | noun | a place where you send letters and parcels | pochta bo'limi | I need to go to the post office. | Pochtaga borishim kerak.
+hospital | noun | a building where sick people get medical care | kasalxona, shifoxona | She works in a hospital. | U kasalxonada ishlaydi.
+library | noun | a place where you can borrow books | kutubxona | I study in the library. | Men kutubxonada o'qiyman.
+museum | noun | a building where you can see old or interesting objects | muzey | The museum is closed on Mondays. | Muzey dushanba kunlari yopiq.
+bridge | noun | a structure that goes over a river or road | ko'prik | Walk across the bridge. | Ko'prikdan o'ting.
+corner | noun | the place where two streets meet | burchak, muyulish | The café is on the corner. | Kafe muyulishda joylashgan.
+square | noun | an open area in a town with buildings around it | maydon | There is a fountain in the main square. | Bosh maydonda favvora bor.
+traffic lights | noun | coloured lights that tell cars when to stop and go | svetofor | Turn left at the traffic lights. | Svetoforda chapga buriling.
+to turn | verb | to change direction | burilmoq | Turn right after the bank. | Bankdan keyin o'ngga buriling.
+to cross | verb | to go from one side to the other | kesib o'tmoq | Be careful when you cross the road. | Yo'ldan o'tayotganda ehtiyot bo'ling.
+straight on | adverb | forward, without turning | to'g'riga | Go straight on for two hundred metres. | Ikki yuz metr to'g'riga yuring.
+near | preposition | not far from | yaqin, yaqinida | Is there a pharmacy near here? | Bu yerga yaqin dorixona bormi?
+opposite | preposition | on the other side, facing something | qarshisida, ro'parasida | The hotel is opposite the station. | Mehmonxona vokzal ro'parasida.
+far | adjective | a long distance away | uzoq | The airport is far from the city. | Aeroport shahardan uzoqda.
+## restaurant | 🍽️ | Cooking & Restaurants | Oshxona va restoran | Кухня и ресторан
+menu | noun | a list of the food you can order in a restaurant | menyu | Can I see the menu, please? | Menyuni ko'rsam bo'ladimi?
+waiter | noun | a person who brings food to your table in a restaurant | ofitsiant | The waiter brought our soup. | Ofitsiant sho'rvamizni olib keldi.
+dish | noun | food prepared in a particular way; also a plate | taom; idish | Plov is a famous Uzbek dish. | Palov mashhur o'zbek taomi.
+recipe | noun | instructions for cooking a dish | retsept | Can you give me the recipe for this cake? | Bu tortning retseptini bera olasizmi?
+soup | noun | a hot liquid food made from vegetables or meat | sho'rva | The soup is too hot. | Sho'rva juda issiq.
+salt | noun | a white substance that makes food taste better | tuz | Pass me the salt, please. | Tuzni uzatib yuboring, iltimos.
+pepper | noun | a spice that makes food hot | qalampir, murch | Add a little black pepper. | Ozgina qora murch qo'shing.
+knife | noun | a tool with a sharp edge for cutting | pichoq | Cut the bread with a knife. | Nonni pichoq bilan kesing.
+fork | noun | a tool with points for eating food | sanchqi, vilka | I eat with a fork and knife. | Men sanchqi va pichoq bilan ovqatlanaman.
+to order | verb | to ask for food or drink in a restaurant | buyurtma bermoq | Are you ready to order? | Buyurtma berishga tayyormisiz?
+to fry | verb | to cook something in hot oil | qovurmoq | Fry the onions for five minutes. | Piyozni besh daqiqa qovuring.
+to boil | verb | to heat water until it bubbles; to cook in such water | qaynatmoq | Boil the eggs for ten minutes. | Tuxumlarni o'n daqiqa qaynating.
+sweet | adjective | tasting of sugar | shirin | This tea is too sweet. | Bu choy juda shirin.
+spicy | adjective | having a strong hot taste | achchiq (ziravorli) | I don't like spicy food. | Men achchiq ovqatni yoqtirmayman.
+fresh | adjective | recently made or picked; not old | yangi, toza | We buy fresh fruit at the market. | Bozordan yangi meva sotib olamiz.
+## study | 🎒 | School & Study | Maktab va o'qish | Школа и учёба
+teacher | noun | a person whose job is to teach | o'qituvchi | Our teacher is very kind. | O'qituvchimiz juda mehribon.
+student | noun | a person who studies at a school or university | o'quvchi, talaba | There are thirty students in my class. | Sinfimda o'ttizta o'quvchi bor.
+lesson | noun | a period of time when you learn something | dars | The English lesson starts at nine. | Ingliz tili darsi soat to'qqizda boshlanadi.
+homework | noun | school work you do at home | uy vazifasi | Did you do your homework? | Uy vazifangni qildingmi?
+exam | noun | an important test of what you know | imtihon | I have a maths exam tomorrow. | Ertaga matematikadan imtihonim bor.
+dictionary | noun | a book that explains the meanings of words | lug'at | Look up the word in the dictionary. | So'zni lug'atdan qarang.
+notebook | noun | a book of empty pages for writing notes | daftar | Write the new words in your notebook. | Yangi so'zlarni daftaringizga yozing.
+mistake | noun | something that is not correct | xato | I made two mistakes in the test. | Testda ikkita xato qildim.
+question | noun | a sentence that asks for information | savol | Can I ask a question? | Savol bersam bo'ladimi?
+answer | noun | what you say or write when someone asks a question | javob | Do you know the answer? | Javobni bilasizmi?
+to learn | verb | to get knowledge or a new skill | o'rganmoq | I want to learn Spanish. | Ispan tilini o'rganmoqchiman.
+to teach | verb | to show someone how to do something; to give lessons | o'rgatmoq, dars bermoq | She teaches history. | U tarixdan dars beradi.
+to understand | verb | to know the meaning of something | tushunmoq | I don't understand this word. | Bu so'zni tushunmayapman.
+to remember | verb | to keep something in your mind | eslamoq, yodda tutmoq | I can't remember his name. | Uning ismini eslay olmayapman.
+easy | adjective | not difficult | oson | The test was easy. | Test oson edi.
+## clothes | 👗 | Clothes & Appearance | Kiyim va tashqi ko'rinish | Одежда и внешность
+jacket | noun | a short coat | kurtka, kamzul | Take a jacket, it might rain. | Kurtka ol, yomg'ir yog'ishi mumkin.
+skirt | noun | a piece of women's clothing that hangs from the waist | yubka | She is wearing a long skirt. | U uzun yubka kiygan.
+sweater | noun | a warm piece of knitted clothing for the top of the body | sviter | My grandmother made this sweater. | Bu sviterni buvim to'qigan.
+boots | noun | strong shoes that cover the foot and part of the leg | etik | I need new winter boots. | Menga yangi qishki etik kerak.
+socks | noun | soft things you wear on your feet inside shoes | paypoq | These socks are warm. | Bu paypoqlar issiq.
+gloves | noun | things you wear on your hands to keep them warm | qo'lqop | Don't forget your gloves. | Qo'lqopingni unutma.
+scarf | noun | a long piece of cloth you wear around your neck | sharf | It's cold, wear a scarf. | Sovuq, sharf taqing.
+uniform | noun | special clothes that people wear for school or work | forma | Students wear a uniform at our school. | Maktabimizda o'quvchilar forma kiyadi.
+pocket | noun | a small bag sewn into clothes | cho'ntak | My keys are in my pocket. | Kalitlarim cho'ntagimda.
+fashion | noun | the style of clothes that is popular at a time | moda | She always follows fashion. | U doim modaga ergashadi.
+to put on | verb | to start wearing clothes | kiymoq | Put on your coat. | Paltoingni kiy.
+to take off | verb | to remove clothes | yechmoq | Take off your shoes, please. | Iltimos, poyabzalingizni yeching.
+tight | adjective | fitting your body very closely; too small | tor, siqib turadigan | These jeans are too tight. | Bu jinsi shim juda tor.
+comfortable | adjective | pleasant to wear or use; not causing pain | qulay | These shoes are very comfortable. | Bu tuflilar juda qulay.
+beautiful | adjective | very nice to look at | chiroyli, go'zal | What a beautiful dress! | Qanday chiroyli ko'ylak!
+## people | 🧑‍🤝‍🧑 | Describing People | Odamlarni tasvirlash | Описание людей
+tall | adjective | having a greater height than most people | baland bo'yli | My brother is very tall. | Akam juda baland bo'yli.
+short | adjective | not tall; not long | past bo'yli; qisqa | She is short and has curly hair. | U past bo'yli va sochi jingalak.
+thin | adjective | having little fat on the body | ozg'in | He is thin because he runs a lot. | U ko'p yugurgani uchun ozg'in.
+strong | adjective | having a lot of physical power | kuchli | My father is very strong. | Otam juda kuchli.
+friendly | adjective | kind and pleasant to other people | do'stona, xushmuomala | Our neighbours are friendly. | Qo'shnilarimiz xushmuomala.
+funny | adjective | making you laugh | kulgili | He tells funny stories. | U kulgili hikoyalar aytib beradi.
+kind | adjective | caring about other people and helping them | mehribon, rahmdil | It was kind of you to help. | Yordam berganingiz juda mehribonlik bo'ldi.
+shy | adjective | nervous and quiet with people you don't know | uyatchan | The little girl is shy. | Kichkina qiz uyatchan.
+clever | adjective | quick to learn and understand | aqlli | She is a clever student. | U aqlli o'quvchi.
+lazy | adjective | not wanting to work or be active | dangasa | Don't be lazy, help me! | Dangasalik qilma, yordam ber!
+polite | adjective | behaving with good manners | odobli, xushmuomala | He is always polite to everyone. | U har doim hammaga odobli.
+beard | noun | hair that grows on a man's chin and cheeks | soqol | My uncle has a grey beard. | Amakimning oq soqoli bor.
+glasses | noun | two pieces of glass in a frame that help you see better | ko'zoynak | She wears glasses for reading. | U o'qish uchun ko'zoynak taqadi.
+to look like | verb | to be similar in appearance to someone | o'xshamoq | You look like your mother. | Siz onangizga o'xshaysiz.
+neighbour | noun | a person who lives next to you | qo'shni | Our neighbour has a big dog. | Qo'shnimizning katta iti bor.

@@ -63,3 +63,45 @@ to work | verb | to do a job, usually for money | ishlamoq | She works in a hosp
 to drink | verb | to take liquid into your mouth and swallow it | ichmoq | Drink more water. | Ko'proq suv iching.
 to buy | verb | to get something by paying money for it | sotib olmoq | I want to buy a new bag. | Yangi sumka sotib olmoqchiman.
 tired | adjective | needing rest or sleep | charchagan | I'm tired after work. | Ishdan keyin charchayman.
+## body | 🧍 | Body & Clothes | Tana va kiyim | Тело и одежда
+head | noun | the top part of the body, with the eyes, nose and mouth | bosh | My head hurts. | Boshim og'riyapti.
+hand | noun | the part at the end of your arm with five fingers | qo'l (kaft) | Wash your hands before lunch. | Tushlikdan oldin qo'lingizni yuving.
+eye | noun | the part of the face you see with | ko'z | She has blue eyes. | Uning ko'zlari ko'k.
+ear | noun | the part of the head you hear with | quloq | The cat has big ears. | Mushukning quloqlari katta.
+nose | noun | the part of the face you smell with | burun | My nose is cold. | Burnim sovqotgan.
+mouth | noun | the part of the face you eat and speak with | og'iz | Open your mouth, please. | Og'zingizni oching, iltimos.
+leg | noun | one of the two long parts of the body you walk on | oyoq | He broke his leg. | U oyog'ini sindirib oldi.
+foot | noun | the part at the end of your leg that you stand on | oyoq panjasi, tovon | My foot is wet. | Oyog'im ho'l.
+hair | noun | the thin threads that grow on your head | soch | Her hair is long and black. | Uning sochi uzun va qora.
+face | noun | the front of the head | yuz | Wash your face in the morning. | Ertalab yuzingizni yuving.
+shirt | noun | a piece of clothing for the top of the body, with buttons | ko'ylak | He is wearing a white shirt. | U oq ko'ylak kiygan.
+shoe | noun | a thing you wear on your foot when you walk outside | poyabzal, tufli | These shoes are new. | Bu tuflilar yangi.
+dress | noun | a piece of clothing for women and girls, top and skirt in one | ko'ylak (ayollar) | She has a red dress. | Uning qizil ko'ylagi bor.
+hat | noun | a thing you wear on your head | shapka, shlyapa | Put on your hat, it's cold. | Shapkangni kiy, sovuq.
+coat | noun | a long warm piece of clothing you wear outside | palto | Take your coat. | Paltoingizni oling.
+trousers | noun | clothing that covers each leg separately | shim | My trousers are too long. | Shimim juda uzun.
+to wear | verb | to have clothes on your body | kiymoq | I wear a uniform at school. | Maktabda forma kiyaman.
+to wash | verb | to make something clean with water | yuvmoq | I wash the dishes after dinner. | Kechki ovqatdan keyin idish yuvaman.
+to sit | verb | to rest your body on a chair or the floor | o'tirmoq | Please sit here. | Iltimos, shu yerga o'tiring.
+to stand | verb | to be on your feet | turmoq (tik turmoq) | We stand in the line. | Biz navbatda turibmiz.
+## basics | 🎨 | Colours & Basics | Ranglar va asosiy so'zlar | Цвета и основы
+red | adjective | the colour of blood or a tomato | qizil | I like red apples. | Men qizil olmani yoqtiraman.
+blue | adjective | the colour of the sky on a sunny day | ko'k | The sky is blue. | Osmon ko'k.
+green | adjective | the colour of grass and leaves | yashil | The grass is green. | O't yashil.
+white | adjective | the colour of snow or milk | oq | The cat is white. | Mushuk oq.
+black | adjective | the colour of the night sky | qora | He has a black car. | Uning qora mashinasi bor.
+yellow | adjective | the colour of a lemon or the sun | sariq | The banana is yellow. | Banan sariq.
+number | noun | a word or sign like 1, 2 or 3 | raqam, son | What is your phone number? | Telefon raqamingiz qanday?
+money | noun | coins and paper you use to buy things | pul | I don't have much money. | Menda ko'p pul yo'q.
+car | noun | a vehicle with four wheels and an engine | mashina, avtomobil | My father drives a car. | Otam mashina haydaydi.
+bus | noun | a big vehicle that carries many people | avtobus | I go to school by bus. | Men maktabga avtobusda boraman.
+street | noun | a road in a town with buildings on each side | ko'cha | I live on this street. | Men shu ko'chada yashayman.
+shop | noun | a place where you buy things | do'kon | The shop opens at nine. | Do'kon soat to'qqizda ochiladi.
+city | noun | a big and important town | shahar | Tashkent is a big city. | Toshkent katta shahar.
+good | adjective | of high quality; nice | yaxshi | This is a good book. | Bu yaxshi kitob.
+bad | adjective | not good; unpleasant | yomon | The weather is bad today. | Bugun havo yomon.
+new | adjective | just made or bought; not old | yangi | I have a new phone. | Menda yangi telefon bor.
+to come | verb | to move towards the speaker or a place | kelmoq | Come here, please. | Bu yerga keling, iltimos.
+to see | verb | to notice something with your eyes | ko'rmoq | I can see the mountains. | Men tog'larni ko'ra olaman.
+to speak | verb | to say words; to use a language | gapirmoq | Do you speak English? | Inglizcha gapirasizmi?
+to play | verb | to have fun with a game or toy | o'ynamoq | The children play football. | Bolalar futbol o'ynashadi.

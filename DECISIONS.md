@@ -14,7 +14,7 @@ Everything that was not fully specified, and what was chosen.
 - **Leitner intervals** (days until due): box 1 → 0, 2 → 1, 3 → 3, 4 → 7, 5 → 14. "Review" = words already seen whose `due_at` has passed.
 - **Unified word identity**: progress is stored per *(user, track, normalised term)* in `UserWord`, so built-in words, deck cards and scanned pairs with the same term share one Leitner box and appear once in the lists.
 - **Lists actions**: "move to Learned" sets box 5; "move to Missed" sets box 1 with at least one miss; "move to Want" sets the flag. Deleting from Learned or Missed resets the progress. Deleting from Want clears the flag. A row with no flag and no progress is removed.
-- **Level unlock**: a level is unlocked when the previous level is ≥ 70% learned (box 5). A1 is always open. The user's CEFR level per track is a self-reported profile setting and does not lock content.
+- **Level unlock**: see *Level progress* below (found words, server-side). A1 is always open. The user's CEFR level per track is a self-reported profile setting and does not lock content.
 - **Definition mode on decks**: deck cards only enter the Match Game if they have a definition, because Uzbek is never allowed in definition games.
 - **Private decks**: only the owner can open them. The Share button offers to make a deck public first, because the share link must work for others.
 - **XP**: points per correct answer per game (match 10, builder/write 8, review/memory 6, falling/learn 5, speed 4, derdiedas 3, flashcards 2), +20% for a perfect session (+50% for a perfect Match round), with a session cap of 400 XP. Level L needs 50·L·(L−1) XP.
@@ -22,7 +22,8 @@ Everything that was not fully specified, and what was chosen.
 - **Achievements**: 14 badges (first game/scan/deck, perfect round, 3/7/30-day streak, 10/100/500 learned, 1000 XP, daily player, polyglot, deck master).
 
 ## Content
-- **Seed**: exactly 60 words per level per language (600 total), 4 themed packs of 15 words. Written by hand in pipe-separated text files (`backend/words/seed/*.txt`), loaded idempotently by `manage.py seed_words`, which validates ≥ 60 words per level.
+- **Seed**: exactly A1 100 / A2 150 / B1 200 / B2 250 / C1 300 words per track (2000 total), in themed packs of 15–20. Written by hand in pipe-separated text files (`backend/words/seed/*.txt`), validated by `manage.py check_seed` and loaded idempotently by `manage.py seed_words`. Words are matched by *(track, word, article)*, so existing words keep their IDs; the seed never deletes words. Multi-word expressions (e.g. *post office*, *in der Nähe*) are allowed as one entry.
+- **One level per word**: `Word` is unique per *(track, word, article)*. The only existing clash, DE *das Angebot* (A2 "offer" and B2 "supply"), was resolved by renaming the B2 row in place to *der Engpass* (same ID).
 - German nouns are written with their article in the seed and stored as `article` + `word`. Plural-only nouns (e.g. *die Kopfschmerzen*, *die Schulden*) are stored with *die*.
 - Uzbek uses Latin script with ASCII apostrophes (o', g').
 - English verbs are listed as "to …". Answer checking ignores a leading "to" / article.
@@ -87,3 +88,23 @@ Everything that was not fully specified, and what was chosen.
 - **Cause:** the cron URL expected `sha256("yodflip-cron:" + BOT_CRON_SECRET)[:40]`, not `BOT_CRON_SECRET` itself, so a URL containing the env var's value always got 403. Also, the route required a trailing slash and only matched secrets without `/`.
 - **Now:** `/bot/cron/<BOT_CRON_SECRET>/` (whitespace stripped, trailing slash optional, `/` and `+` allowed, GET or POST, CSRF-exempt, no auth or throttling), compared with `hmac.compare_digest`. The older derived form is still accepted, so a link set up earlier keeps working. Without `BOT_CRON_SECRET`, a value derived from `SECRET_KEY` is used (shown by `manage.py telegram_setup`).
 - A 403 is logged as `Cron 403: secret mismatch (given length, whether BOT_CRON_SECRET is set, expected length, client IP)`, never the secret. `core.logging.RedactSecretsFilter` (Django logs, e.g. `django.request` "Forbidden: …") and a redacting gunicorn access logger replace `/bot/cron/<secret>` and `/bot/webhook/<secret>` with `<redacted>`.
+
+## Level progress (found = learned)
+- Progress lives in `UserLevelWord` (one row per user and built-in word): `found_at`, `filler_uses` (0–2), `last_shown_at`. Level progress = found rows / words in the level, computed in SQL on every request; client counters are never trusted.
+- **Unlock** at `ceil(70% × total)` found words of the previous level: A1 70, A2 105, B1 140, B2 175 (C1 210 only matters for completion).
+- **Rounds** are built by the server (`GET /api/levels/{track}/{level}/round/?size=N&game=&pack=`) and stored as `LevelRound` (the `session_id`), with the shown word IDs and filler IDs, so answers are validated server-side (a client can't mark a word as a filler or answer words that weren't shown).
+- "Last 2 sessions" = the user's last 2 rounds of the same track and level. Their words go to the back of the queue; they are not excluded (when few unfound words remain they still appear).
+- Round size is clamped to 3–60. If fewer words are available (even with fillers) the round is simply smaller; 1–2 word rounds are allowed when only 1–2 unfound words remain (better than blocking the last words of a level).
+- **Fillers**: only when the unfound pool can't fill the board. `filler_uses` grows on the first answer to that filler in a round (idempotent per round via `LevelAnswer`), not when it's shown, so a refreshed or abandoned round doesn't burn uses. Fillers give no XP, change no list and no progress.
+- **Pack filter / Der·Die·Das**: the pool is the pack (or the nouns for Der·Die·Das). When that pool has no unfound words, the API returns `pool_done` (the level isn't complete yet) and the app suggests another pack.
+- `POST /api/levels/answer/` takes one answer (`{session_id, word_id, correct}`) or a batch (`{session_id, answers: [...]}`); the app sends one batch per finished round. Idempotency: `found_at` is set with a conditional `UPDATE … WHERE found_at IS NULL`, `LevelAnswer` is unique per (round, word), `LevelCompletion` per (user, track, level).
+- **XP** in level games: base XP per *newly found* word (game rate) + perfect-round bonus, paid once per round (`LevelRound.xp_awarded`). `/api/games/results/` with `source=level` requires the `session_id` and re-applies the answers idempotently, so a lost `/answer/` call doesn't lose progress.
+- **Lists**: a found word is set to Learned (box 5) in `UserWord`, which also removes it from Missed. A miss on an unfound word puts it in Missed (box 1). A level miss never demotes a word that is already Learned (e.g. from a deck). Removing a word from the Learned list does not undo level progress (found is permanent).
+- **Completion** (100%): +200 XP and the `level_complete` badge (🎓), exactly once. The completion screen links to the next level and to a review session (`source=levelreview`: the found words of that level, played as a normal Leitner review, no level progress).
+- **Migration**: `words/0002_level_progress` converts Leitner box-5 progress on built-in words (by word FK or normalised term) into found rows. `seed_words` runs the same backfill after loading new words, so terms a user learned from decks that are now built-in level words count too.
+- Decks, scanned sets and lists keep the Leitner boxes; only level progress moved to found words.
+
+## Scanner camera
+- "📷 Kameradan olish" opens an in-app camera (`getUserMedia`, back camera, ideal 1920×1080) with a page frame, shutter, torch (only if the track reports `torch` capability), camera switch (only with > 1 video input) and close. The photo is drawn to a canvas, scaled to ≤ 1600px and encoded as JPEG 0.85; "Ishlatish" sends it straight to OCR.
+- Fallbacks: no `getUserMedia` / insecure context → `<input capture="environment">` immediately plus the permission hint; any getUserMedia error → an error screen (denied / not found / busy / unsupported, in Uzbek) with "use the phone camera app" (`<input capture>`), "gallery" and "retry". All tracks are stopped on close, on "Ishlatish", on unmount and on `pagehide`.
+- `Permissions-Policy: camera=(self), microphone=(), geolocation=(), payment=(), usb=()` on every response. In Telegram Web the Mini App is an iframe whose `allow` attribute is set by Telegram, which we can't change; mobile Telegram apps open the page directly in a WebView.

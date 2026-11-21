@@ -1,6 +1,7 @@
 import { ArrowLeft, BookOpen, Brain } from 'lucide-react'
 import { useState } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
+import { LevelBar, unlockText } from '../components/LevelProgress'
 import { SpeakButton, WordActions } from '../components/WordActions'
 import { EmptyState, ErrorState, ListSkeleton, ProgressBar, Segmented, Sheet } from '../components/ui'
 import { GAMES } from '../games/catalog'
@@ -8,7 +9,7 @@ import { isAvailable, modeFor } from '../games/direction'
 import { useT } from '../i18n'
 import { api } from '../lib/api'
 import { useAsync, useTelegramBack } from '../lib/hooks'
-import type { LevelRow, Word } from '../lib/types'
+import type { LevelProgress, LevelRow, Word } from '../lib/types'
 import { useApp } from '../store/app'
 
 export default function LevelPage() {
@@ -23,6 +24,8 @@ export default function LevelPage() {
   const [mode, setMode] = useState<'definition' | 'memorize'>('definition')
   const overview = useAsync(() => api.get<{ levels: LevelRow[] }>('/words/levels/', { track }), [track])
   const words = useAsync(() => api.get<Word[]>(`/words/levels/${level}/`, { track, pack }), [track, level, pack])
+  const detail = useAsync(() => api.get<LevelProgress & { found_words: Word[] }>(`/levels/${track}/${level}/`), [track, level])
+  const [showFound, setShowFound] = useState(false)
   const lv = overview.data?.levels.find((l) => l.level === level)
 
   if (overview.error) return <div className="page"><ErrorState error={overview.error} onRetry={overview.reload} /></div>
@@ -42,13 +45,36 @@ export default function LevelPage() {
         </h1>
       </div>
       {lv && (
-        <div className="card p-4">
-          <div className="mb-2 flex justify-between text-sm font-bold">
-            <span>{t('levels.learned_of', { n: lv.learned, total: lv.total })}</span>
-            <span className="text-primary">{lv.percent}%</span>
+        <div className="card space-y-3 p-4" data-testid="level-progress">
+          <LevelBar progress={lv} />
+          <div className="grid grid-cols-3 gap-2 text-center">
+            <div className="rounded-2xl bg-line/60 p-2">
+              <div className="text-lg font-black">{lv.found}</div>
+              <div className="text-xs font-bold text-muted">{t('level.found')}</div>
+            </div>
+            <div className="rounded-2xl bg-line/60 p-2">
+              <div className="text-lg font-black">{lv.remaining}</div>
+              <div className="text-xs font-bold text-muted">{t('level.left')}</div>
+            </div>
+            <div className="rounded-2xl bg-line/60 p-2">
+              <div className="text-lg font-black">{lv.unlock_target}</div>
+              <div className="text-xs font-bold text-muted">{t('level.target')}</div>
+            </div>
           </div>
-          <ProgressBar value={lv.percent} color={lv.percent >= 70 ? 'bg-success' : 'bg-primary'} />
-          <p className="mt-2 text-xs text-muted">{t('levels.unlock_rule')}</p>
+          <p className="text-sm font-bold text-primary">{unlockText(t, lv)}</p>
+          <p className="text-xs text-muted">{t('level.rule')}</p>
+          <button className="btn-ghost w-full" onClick={() => setShowFound((v) => !v)} disabled={!detail.data?.found_words.length}>
+            ✅ {t('level.found_list', { n: detail.data?.found_words.length ?? lv.found })}
+          </button>
+          {showFound && detail.data && (
+            <ul className="flex flex-wrap gap-1.5" data-testid="found-words">
+              {detail.data.found_words.map((w) => (
+                <li key={w.id} className="chip bg-success/15 text-ink" title={w.translation_uz}>
+                  {w.display}
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
       )}
 
@@ -62,7 +88,7 @@ export default function LevelPage() {
               <button key={p.slug} onClick={() => setPlayPack(p.slug)} className="card flex flex-col items-start gap-1 p-4 text-left transition hover:shadow-lift">
                 <span className="text-3xl">{p.emoji}</span>
                 <span className="font-black">{p.name[lang]}</span>
-                <span className="text-xs text-muted">{t('levels.learned_of', { n: p.learned, total: p.total })}</span>
+                <span className="text-xs text-muted">{t('level.count', { n: p.found, total: p.total })}</span>
                 <ProgressBar value={p.percent} className="mt-1 h-1.5" />
               </button>
             ))}

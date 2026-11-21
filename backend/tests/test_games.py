@@ -1,11 +1,12 @@
 from datetime import date
 
 import pytest
+from django.utils import timezone
 
 from accounts.models import User
 from decks.models import Card, Deck, WordSet
 from games.sources import daily_words
-from words.models import UserWord, Word
+from words.models import UserLevelWord, UserWord, Word
 
 pytestmark = pytest.mark.django_db
 
@@ -14,7 +15,7 @@ def test_match_game_uses_same_language_definitions(api, seeded):
     r = api.get("/api/games/words/", {"game": "match", "track": "de", "source": "level", "level": "A1"})
     assert r.status_code == 200
     assert r.data["mode"] == "definition"
-    assert len(r.data["items"]) == 60
+    assert len(r.data["items"]) == 100
     words = {w.display: w for w in Word.objects.filter(track="de", level="A1")}
     for item in r.data["items"]:
         assert item["definition"] == words[item["term"]].definition  # German definition, not Uzbek
@@ -47,8 +48,10 @@ def test_locked_level(api, seeded):
 
 def test_level_unlocks_at_70_percent(api, user, seeded):
     words = list(Word.objects.filter(track="en", level="A1"))
-    for w in words[:42]:  # 70% of 60
-        UserWord.objects.create(user=user, track="en", term_key=w.display.lower(), term=w.display, box=5, seen=True)
+    assert len(words) == 100
+    now = timezone.now()
+    for w in words[:70]:
+        UserLevelWord.objects.create(user=user, word=w, track="en", level="A1", found_at=now)
     levels = api.get("/api/words/levels/", {"track": "en"}).data["levels"]
     assert levels[0]["percent"] == 70
     assert levels[1]["unlocked"] is True
@@ -59,7 +62,7 @@ def test_results_update_leitner_xp_and_streak(api, user, seeded):
     payload = {
         "game": "match",
         "track": "en",
-        "source": "level",
+        "source": "missed",
         "results": [
             {"term": "apple", "definition": "a fruit", "correct": False},
             {"term": "apple", "definition": "a fruit", "correct": True},

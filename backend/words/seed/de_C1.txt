@@ -63,3 +63,255 @@ wehmütig | adjective | leicht traurig beim Erinnern an Vergangenes | g'amgin-so
 skurril | adjective | seltsam und auf lustige Weise ungewöhnlich | g'aroyib, kulgili-g'alati | Der Film hat einen skurrilen Humor. | Filmning hazili g'aroyib.
 prüfen | verb | genau untersuchen, ob etwas richtig ist | tekshirmoq | Experten prüfen den Bericht genau. | Mutaxassislar hisobotni sinchiklab tekshirishmoqda.
 ergreifend | adjective | so, dass es tiefe Gefühle auslöst | ta'sirli, hayajonli | Es war ein ergreifender Moment. | Bu ta'sirli lahza edi.
+## argumentation | 🗣️ | Argument & Debate | Bahs va munozara | Аргументация и дебаты
+die Prämisse | noun | eine Annahme, auf der ein Argument beruht | asos, dastlabki faraz | Die Prämisse seines Arguments ist falsch. | Uning dalilining asosi noto'g'ri.
+das Gegenargument | noun | ein Argument gegen ein anderes Argument | qarshi dalil | Bedenke auch das Gegenargument. | Qarshi dalilni ham o'ylab ko'r.
+der Trugschluss | noun | ein falscher Schluss oder Denkfehler | noto'g'ri xulosa, mantiqiy xato | Es ist ein Trugschluss, dass Geld glücklich macht. | Pul baxt keltiradi degani noto'g'ri xulosa.
+die Begründung | noun | die Gründe für eine Entscheidung | asoslash, sabab | Was ist die Begründung für diese Änderung? | Bu o'zgarishning asosi nima?
+die Haltung | noun | eine Einstellung oder Meinung; auch: Körperhaltung | pozitsiya, munosabat; qad-qomat | Welche Haltung hat die Partei zu Steuern? | Partiyaning soliqlarga munosabati qanday?
+das Zugeständnis | noun | etwas, das man in einer Diskussion nachgibt | yon berish | Beide Seiten machten Zugeständnisse. | Ikkala tomon ham yon berdi.
+widerlegen | verb | beweisen, dass etwas falsch ist | rad etmoq (dalil bilan) | Sie widerlegte alle seine Behauptungen. | U uning barcha da'volarini rad etdi.
+einräumen | verb | zugeben, dass etwas stimmt | tan olmoq, e'tirof etmoq | Er räumte ein, dass er sich geirrt hatte. | U xato qilganini tan oldi.
+behaupten | verb | etwas mit Bestimmtheit sagen | da'vo qilmoq, ta'kidlamoq | Er behauptet, unschuldig zu sein. | U o'zini aybsiz deb da'vo qiladi.
+bestreiten | verb | sagen, dass etwas nicht stimmt | inkor etmoq, e'tiroz bildirmoq | Niemand bestreitet die Fakten. | Faktlarni hech kim inkor etmaydi.
+in Einklang bringen | verb | zwei Dinge miteinander vereinbar machen | uyg'unlashtirmoq, muvofiqlashtirmoq | Es ist schwer, Beruf und Familie in Einklang zu bringen. | Ish va oilani uyg'unlashtirish qiyin.
+untermauern | verb | mit Beweisen stützen | dalillar bilan mustahkamlamoq | Können Sie diese Behauptung untermauern? | Bu da'voni dalillar bilan asoslay olasizmi?
+abtun | verb | etwas als unwichtig zurückweisen | e'tiborsiz qoldirmoq, rad qilmoq | Er tat die Idee als Unsinn ab. | U g'oyani bema'nilik deb rad qildi.
+überzeugend | adjective | so, dass man es glaubt | ishonarli | Sie hat ein überzeugendes Argument. | Uning ishonarli dalili bor.
+stichhaltig | adjective | logisch gut begründet | asosli, puxta | Das ist ein stichhaltiges Argument. | Bu asosli dalil.
+fehlerhaft | adjective | mit Fehlern | xatoli, nuqsonli | Die Studie war fehlerhaft. | Tadqiqot nuqsonli edi.
+schlagfertig | adjective | schnell mit einer klugen Antwort | hozirjavob | Sie ist sehr schlagfertig. | U juda hozirjavob.
+rhetorisch | adjective | auf Wirkung zielend, nicht auf Antwort | ritorik | Das war nur eine rhetorische Frage. | Bu shunchaki ritorik savol edi.
+unwiderlegbar | adjective | nicht zu widerlegen | rad etib bo'lmaydigan | Die Beweise sind unwiderlegbar. | Dalillarni rad etib bo'lmaydi.
+die Nuance | noun | ein sehr feiner Unterschied | nozik farq, jilo | Übersetzer müssen jede Nuance verstehen. | Tarjimonlar har bir nozik farqni tushunishi kerak.
+## finanzen | 📈 | Economics & Finance | Iqtisod va moliya | Экономика и финансы
+die Inflation | noun | das allgemeine Steigen der Preise | inflyatsiya | Die Inflation lag bei zehn Prozent. | Inflyatsiya o'n foiz edi.
+die Rezession | noun | eine Zeit, in der die Wirtschaft schrumpft | retsessiya, iqtisodiy tanazzul | Das Land befindet sich in einer Rezession. | Mamlakat tanazzulda.
+fiskalisch | adjective | die Staatsfinanzen betreffend | fiskal, moliyaviy | Die fiskalische Lage ist schwierig. | Fiskal holat og'ir.
+die Subvention | noun | Geld vom Staat, um etwas zu fördern | subsidiya | Landwirte erhalten Subventionen. | Fermerlar subsidiya oladi.
+der Zolltarif | noun | eine Steuer auf importierte Waren | boj tarifi | Die Regierung erhöhte die Zolltarife. | Hukumat boj tariflarini oshirdi.
+das Vermögen | noun | aller Besitz und alles Geld einer Person | mol-mulk, boylik | Er hat ein großes Vermögen geerbt. | U katta boylikni meros qilib oldi.
+die Verbindlichkeit | noun | eine Schuld; auch: Verlässlichkeit | majburiyat, qarz | Die Firma hat hohe Verbindlichkeiten. | Firmaning katta majburiyatlari bor.
+die Dividende | noun | ein Teil des Gewinns, der an Aktionäre geht | dividend | Die Aktionäre erhielten eine Dividende. | Aksiyadorlar dividend olishdi.
+das Monopol | noun | die alleinige Kontrolle eines Marktes | monopoliya | Die Firma hat ein Monopol auf Strom. | Firma elektr bo'yicha monopoliyaga ega.
+die Sparpolitik | noun | strenge Kürzung der Staatsausgaben | tejamkorlik siyosati | Die Sparpolitik machte viele wütend. | Tejamkorlik siyosati ko'pchilikni g'azablantirdi.
+die Ausgaben | noun | das Geld, das man ausgibt | xarajatlar | Die Ausgaben für Bildung steigen. | Ta'lim xarajatlari oshmoqda.
+das Eigenkapital | noun | das eigene Geld eines Unternehmens | o'z kapitali | Die Bank verlangt mehr Eigenkapital. | Bank ko'proq o'z kapitalini talab qiladi.
+schwanken | verb | sich oft zwischen höher und niedriger verändern | tebranmoq, o'zgarib turmoq | Die Ölpreise schwanken stark. | Neft narxlari keskin o'zgarib turadi.
+ankurbeln | verb | etwas in Schwung bringen | jonlantirmoq | Niedrige Zinsen sollen die Wirtschaft ankurbeln. | Past foizlar iqtisodiyotni jonlantirishi kerak.
+zuweisen | verb | für einen Zweck geben oder bestimmen | ajratmoq, belgilamoq | Die Stadt wies Geld für Schulen zu. | Shahar maktablar uchun mablag' ajratdi.
+erschöpfen | verb | völlig aufbrauchen; auch: sehr müde machen | tugatmoq; holdan toydirmoq | Der Krieg erschöpfte die Reserven. | Urush zaxiralarni tugatdi.
+lukrativ | adjective | viel Gewinn bringend | daromadli | Das ist ein lukratives Geschäft. | Bu daromadli biznes.
+volatil | adjective | stark und plötzlich schwankend | beqaror | Der Markt ist sehr volatil. | Bozor juda beqaror.
+wohlhabend | adjective | reich | badavlat | Sie leben in einem wohlhabenden Viertel. | Ular badavlat mahallada yashashadi.
+das Wirtschaftswachstum | noun | die Zunahme der Wirtschaftsleistung | iqtisodiy o'sish | Das Wirtschaftswachstum war schwach. | Iqtisodiy o'sish sust bo'ldi.
+## recht | 🏛️ | Law & Rights | Huquq | Право и права
+die Zuständigkeit | noun | das Recht und die Pflicht, über etwas zu entscheiden | vakolat, yurisdiksiya | Das liegt nicht in unserer Zuständigkeit. | Bu bizning vakolatimizda emas.
+das Urteil | noun | die Entscheidung eines Gerichts; auch: Meinung | hukm, sud qarori | Das Gericht hat ein Urteil gefällt. | Sud hukm chiqardi.
+der Kläger | noun | eine Person, die vor Gericht klagt | da'vogar | Der Kläger forderte Schadenersatz. | Da'vogar tovon talab qildi.
+der Angeklagte | noun | eine Person, die vor Gericht beschuldigt wird | ayblanuvchi, sudlanuvchi | Der Angeklagte bekannte sich nicht schuldig. | Sudlanuvchi aybini tan olmadi.
+der Schadenersatz | noun | Geld als Ausgleich für einen Schaden | tovon puli | Sie erhielt Schadenersatz für die Verletzung. | U jarohat uchun tovon oldi.
+der Präzedenzfall | noun | ein früherer Fall, der als Beispiel dient | pretsedent | Der Fall schuf einen Präzedenzfall. | Bu ish pretsedent yaratdi.
+die Satzung | noun | schriftliche Regeln einer Organisation | nizom, ustav | Die Satzung des Vereins wurde geändert. | Uyushma nizomi o'zgartirildi.
+die Gesetzesänderung | noun | eine Änderung eines Gesetzes | qonunga o'zgartirish | Das Parlament beschloss eine Gesetzesänderung. | Parlament qonunga o'zgartirish kiritdi.
+die Gesetzeslücke | noun | ein Fehler im Gesetz, der Umgehung erlaubt | qonundagi bo'shliq | Sie nutzten eine Gesetzeslücke. | Ular qonundagi bo'shliqdan foydalanishdi.
+die Freiheit | noun | der Zustand, frei zu sein | erkinlik, ozodlik | Sie kämpften für die Freiheit. | Ular erkinlik uchun kurashishdi.
+anklagen | verb | jemanden offiziell vor Gericht beschuldigen | ayblov qo'ymoq, sudga bermoq | Er wurde wegen Betrugs angeklagt. | Unga firibgarlik ayblovi qo'yildi.
+durchsetzen | verb | dafür sorgen, dass etwas befolgt wird | amalga oshirmoq, o'tkazmoq | Die Polizei setzt das Gesetz durch. | Politsiya qonun ijrosini ta'minlaydi.
+Berufung einlegen | verb | ein höheres Gericht um Prüfung bitten | apellyatsiya bermoq | Sie wird Berufung einlegen. | U apellyatsiya beradi.
+verletzen | verb | ein Gesetz brechen; auch: jemandem wehtun | buzmoq; jarohatlamoq | Die Firma hat den Vertrag verletzt. | Firma shartnomani buzdi.
+aufheben | verb | ungültig machen; auch: vom Boden nehmen | bekor qilmoq; ko'tarib olmoq | Das Gericht hob das Urteil auf. | Sud hukmni bekor qildi.
+aussagen | verb | vor Gericht als Zeuge sprechen | ko'rsatma bermoq, guvohlik bermoq | Sie sagte gegen ihn aus. | U unga qarshi guvohlik berdi.
+rechtmäßig | adjective | dem Gesetz entsprechend | qonuniy | Er ist der rechtmäßige Besitzer. | U qonuniy egasi.
+verbindlich | adjective | so, dass man es befolgen muss | majburiy | Die Vereinbarung ist rechtlich verbindlich. | Kelishuv yuridik jihatdan majburiy.
+unparteiisch | adjective | keine Seite bevorzugend | xolis, betaraf | Ein Richter muss unparteiisch sein. | Sudya xolis bo'lishi kerak.
+der Verstoß | noun | das Brechen einer Regel | qoidabuzarlik | Das ist ein Verstoß gegen den Vertrag. | Bu shartnomaning buzilishi.
+## forschung | 🔭 | Research & Methods | Tadqiqot va usullar | Исследования и методы
+die Methodik | noun | die Methoden einer Untersuchung | metodika, metodologiya | Die Methodik wurde klar erklärt. | Metodika aniq tushuntirildi.
+die Stichprobe | noun | eine kleine Auswahl, die für eine größere Gruppe steht | tanlanma, namuna | Die Stichprobe umfasste 500 Personen. | Tanlanma 500 kishidan iborat edi.
+die Variable | noun | ein Faktor, der sich ändern kann | o'zgaruvchi | Die Temperatur ist die wichtigste Variable. | Harorat eng muhim o'zgaruvchi.
+der Zusammenhang | noun | eine Verbindung zwischen Dingen | bog'liqlik, aloqa | Es gibt einen Zusammenhang zwischen Ernährung und Gesundheit. | Ovqatlanish va salomatlik o'rtasida bog'liqlik bor.
+die Erkenntnis | noun | ein neues Wissen, das man gewonnen hat | xulosa, bilim | Die Studie brachte neue Erkenntnisse. | Tadqiqot yangi xulosalar berdi.
+das Gutachten | noun | eine Bewertung durch Experten | ekspert xulosasi | Das Gutachten liegt noch nicht vor. | Ekspert xulosasi hali tayyor emas.
+die Abweichung | noun | ein Unterschied zum Normalen | og'ish, farq | Die Daten zeigten eine Abweichung. | Ma'lumotlar og'ishni ko'rsatdi.
+das Kriterium | noun | ein Maßstab, nach dem man urteilt | mezon | Was ist das wichtigste Kriterium? | Eng muhim mezon nima?
+das Paradigma | noun | ein Denkmodell | paradigma | Die Entdeckung veränderte das Paradigma. | Kashfiyot paradigmani o'zgartirdi.
+empirisch | adjective | auf Beobachtung und Experiment beruhend | empirik | Wir brauchen empirische Belege. | Bizga empirik dalillar kerak.
+qualitativ | adjective | die Qualität betreffend | sifatiy | Sie führten qualitative Interviews. | Ular sifatiy intervyular o'tkazishdi.
+quantitativ | adjective | die Menge betreffend | miqdoriy | Das ist eine quantitative Studie. | Bu miqdoriy tadqiqot.
+vorläufig | adjective | noch nicht endgültig | dastlabki, vaqtinchalik | Die vorläufigen Ergebnisse sind gut. | Dastlabki natijalar yaxshi.
+gründlich | adjective | sehr genau und sorgfältig | puxta, sinchkov | Die Tests waren gründlich. | Sinovlar puxta o'tkazildi.
+wiederholen | verb | noch einmal machen | takrorlamoq | Andere Forscher wiederholten die Studie. | Boshqa tadqiqotchilar tadqiqotni takrorlashdi.
+vermuten | verb | etwas für wahrscheinlich halten | taxmin qilmoq, gumon qilmoq | Ich vermute, dass er recht hat. | Menimcha, u haq.
+bestätigen | verb | sagen oder zeigen, dass etwas stimmt | tasdiqlamoq | Die Ergebnisse bestätigen die Theorie. | Natijalar nazariyani tasdiqlaydi.
+beziffern | verb | in Zahlen angeben | raqamlarda ifodalamoq | Den Schaden kann man kaum beziffern. | Zararni raqamda ifodalash qiyin.
+zusammenfassen | verb | das Wichtigste kurz sagen | xulosalamoq, qisqacha bayon qilmoq | Fassen Sie den Text zusammen. | Matnni qisqacha bayon qiling.
+hochrechnen | verb | aus bekannten Zahlen auf ein Ganzes schließen | prognoz qilmoq, hisoblab chiqmoq | Man kann die Zahlen auf das ganze Land hochrechnen. | Raqamlarni butun mamlakatga hisoblab chiqish mumkin.
+## psychologie | 🌀 | Psychology & Mind | Psixologiya | Психология
+die Kognition | noun | die Prozesse des Denkens und Erkennens | idrok, bilish | Schlaf beeinflusst die Kognition. | Uyqu idrokka ta'sir qiladi.
+die Wahrnehmung | noun | die Art, wie man etwas bemerkt und versteht | idrok, qabul qilish | Unsere Wahrnehmung der Zeit ändert sich. | Vaqtni idrok etishimiz o'zgaradi.
+das Trauma | noun | ein schwerer seelischer Schock | ruhiy jarohat, travma | Krieg hinterlässt tiefe Traumata. | Urush chuqur ruhiy jarohatlar qoldiradi.
+die Angststörung | noun | eine psychische Krankheit mit starker Angst | xavotir buzilishi | Sie wird wegen einer Angststörung behandelt. | U xavotir buzilishidan davolanmoqda.
+das Selbstwertgefühl | noun | das Gefühl für den eigenen Wert | o'z-o'zini qadrlash | Lob stärkt das Selbstwertgefühl. | Maqtov o'zini qadrlash hissini mustahkamlaydi.
+die Voreingenommenheit | noun | eine unfaire Vorliebe oder Abneigung | noxolislik, g'arazlilik | Jeder hat unbewusste Voreingenommenheiten. | Har kimda ongsiz noxolislik bor.
+die Verdrängung | noun | das Unterdrücken unangenehmer Gedanken | ongdan siqib chiqarish | Verdrängung hilft nur kurzfristig. | Ongdan siqib chiqarish faqat qisqa muddat yordam beradi.
+das Temperament | noun | die grundlegende Art eines Menschen | mijoz, tabiat | Er hat ein ruhiges Temperament. | Uning mijozi vazmin.
+die Willenskraft | noun | die Fähigkeit, sich zu beherrschen | iroda kuchi | Mit dem Rauchen aufzuhören braucht Willenskraft. | Chekishni tashlash iroda kuchini talab qiladi.
+der Introvertierte | noun | ein ruhiger Mensch, der gern allein ist | introvert | Als Introvertierter brauche ich Zeit für mich. | Introvert sifatida menga yolg'izlik kerak.
+wahrnehmen | verb | bemerken; auf bestimmte Art verstehen | idrok etmoq, sezmoq | Sie wird als starke Führungskraft wahrgenommen. | U kuchli rahbar sifatida qabul qilinadi.
+unterdrücken | verb | ein Gefühl nicht zeigen; auch: Menschen beherrschen | bosmoq; ezmoq | Er unterdrückte seine Wut. | U g'azabini bosdi.
+lindern | verb | Schmerzen oder Probleme schwächer machen | yengillashtirmoq | Musik kann Stress lindern. | Musiqa stressni yengillashtirishi mumkin.
+manipulieren | verb | jemanden heimlich und unfair beeinflussen | manipulyatsiya qilmoq | Er manipuliert andere Menschen. | U boshqalarni o'z izmiga soladi.
+verarbeiten | verb | Erlebtes seelisch bewältigen; auch: Material bearbeiten | hazm qilmoq (ruhan); qayta ishlamoq | Sie muss den Verlust erst verarbeiten. | U avval yo'qotishni hazm qilishi kerak.
+unterbewusst | adjective | im Geist vorhanden, ohne dass man es merkt | ongosti | Das war eine unterbewusste Reaktion. | Bu ongosti reaktsiyasi edi.
+impulsiv | adjective | plötzlich und ohne Nachdenken handelnd | impulsiv, o'ylamay harakat qiladigan | Er traf eine impulsive Entscheidung. | U o'ylamay qaror qildi.
+besorgt | adjective | voller Sorge | xavotirli, tashvishli | Ich bin besorgt wegen des Gesprächs. | Suhbat tufayli xavotirdaman.
+nachdenklich | adjective | in Gedanken versunken | o'yga cho'mgan, mulohazali | Sie ist ein stilles, nachdenkliches Mädchen. | U jim, mulohazali qiz.
+verletzlich | adjective | leicht zu verletzen | zaif, himoyasiz | Kinder sind besonders verletzlich. | Bolalar ayniqsa himoyasiz.
+## kritik | 🎬 | Arts & Criticism | San'at va tanqid | Искусство и критика
+ästhetisch | adjective | die Schönheit und Kunst betreffend | estetik | Das Gebäude hat einen hohen ästhetischen Wert. | Binoning estetik qiymati yuqori.
+das Genre | noun | eine Art von Kunst, Musik oder Literatur | janr | Mein Lieblingsgenre ist Science-Fiction. | Sevimli janrim ilmiy fantastika.
+die Erzählung | noun | eine Geschichte; das Erzählen | hikoya, qissa | Die Erzählung spielt im Mittelalter. | Hikoya o'rta asrlarda kechadi.
+der Protagonist | noun | die Hauptfigur einer Geschichte | bosh qahramon | Der Protagonist ist ein junger Arzt. | Bosh qahramon yosh shifokor.
+die Metapher | noun | ein bildlicher Ausdruck durch Vergleich | metafora | "Zeit ist Geld" ist eine Metapher. | "Vaqt – pul" metaforadir.
+die Satire | noun | Humor, der Menschen oder Ideen kritisiert | satira, hajv | Die Sendung ist eine Satire auf die Politik. | Ko'rsatuv siyosat ustidan satira.
+die Rezension | noun | eine kritische Besprechung eines Werks | taqriz | Sie schrieb eine Rezension des Romans. | U roman haqida taqriz yozdi.
+der Beifall | noun | Klatschen und öffentliches Lob | olqish | Der Film erhielt großen Beifall. | Film katta olqishga sazovor bo'ldi.
+die Darstellung | noun | die Art, wie etwas gezeigt wird | tasvir, ijro | Seine Darstellung des Königs war brillant. | Uning podsho obrazini ijro etishi ajoyib edi.
+die Symbolik | noun | die Verwendung von Symbolen | ramziylik | Das Gedicht ist voller Symbolik. | She'r ramziylikka to'la.
+darstellen | verb | in Kunst oder Worten zeigen | tasvirlamoq | Das Gemälde stellt eine Schlacht dar. | Rasmda jang tasvirlangan.
+hervorrufen | verb | ein Gefühl oder eine Reaktion auslösen | uyg'otmoq, keltirib chiqarmoq | Das Lied ruft Erinnerungen hervor. | Qo'shiq xotiralarni uyg'otadi.
+rezensieren | verb | ein Werk kritisch besprechen | taqriz yozmoq | Er rezensiert Bücher für eine Zeitung. | U gazeta uchun kitoblarga taqriz yozadi.
+deuten | verb | die Bedeutung erklären; auch: zeigen | talqin qilmoq; ko'rsatmoq | Wie deutest du dieses Gedicht? | Bu she'rni qanday talqin qilasan?
+fesseln | verb | die Aufmerksamkeit ganz festhalten; auch: anbinden | maftun qilmoq; bog'lamoq | Die Geschichte fesselte das Publikum. | Hikoya tomoshabinlarni maftun etdi.
+eindringlich | adjective | stark wirkend und eindrucksvoll | ta'sirli, ta'sirchan | Es ist ein eindringliches Musikstück. | Bu ta'sirli musiqa asari.
+abgekupfert | adjective | von anderen Werken kopiert | ko'chirilgan, taqlidiy | Kritiker nannten den Film abgekupfert. | Tanqidchilar filmni taqlidiy deb atashdi.
+avantgardistisch | adjective | neu und sehr experimentell | avangard | Sie macht avantgardistische Mode. | U avangard moda yaratadi.
+erhaben | adjective | sehr schön und würdevoll | ulug'vor | Die Musik war erhaben. | Musiqa ulug'vor edi.
+mittelmäßig | adjective | nur durchschnittlich gut | o'rtamiyona | Das Essen war mittelmäßig. | Ovqat o'rtamiyona edi.
+## oekopolitik | 🌍 | Environment & Policy | Ekologiya siyosati | Экологическая политика
+die Artenvielfalt | noun | die Vielfalt von Pflanzen und Tieren | biologik xilma-xillik | Der Regenwald hat eine große Artenvielfalt. | Tropik o'rmon biologik xilma-xillikka boy.
+das Ökosystem | noun | alle Lebewesen eines Gebiets und ihre Beziehungen | ekotizim | Die Verschmutzung schadet dem Ökosystem. | Ifloslanish ekotizimga zarar yetkazadi.
+die Abholzung | noun | das Fällen von Wäldern | o'rmonlarni kesish | Die Abholzung ist ein großes Problem. | O'rmonlarni kesish katta muammo.
+der CO2-Fußabdruck | noun | die Menge CO2, die eine Person verursacht | uglerod izi | Fliegen vergrößert den CO2-Fußabdruck. | Samolyotda uchish uglerod izini oshiradi.
+die Eindämmung | noun | das Begrenzen von etwas Schädlichem | cheklash, jilovlash | Die Eindämmung des Klimawandels ist dringend. | Iqlim o'zgarishini jilovlash shoshilinch.
+der Lebensraum | noun | der natürliche Ort, wo ein Tier oder eine Pflanze lebt | yashash muhiti | Der Lebensraum des Tigers schrumpft. | Yo'lbarsning yashash muhiti qisqarmoqda.
+der Naturschutz | noun | der Schutz der Natur | tabiatni muhofaza qilish | Sie arbeitet im Naturschutz. | U tabiatni muhofaza qilish sohasida ishlaydi.
+die Verseuchung | noun | die Verschmutzung mit giftigen Stoffen | zaharlanish, ifloslanish | Die Verseuchung des Wassers machte viele krank. | Suvning zaharlanishi ko'pchilikni kasal qildi.
+die Knappheit | noun | der Zustand, dass etwas nicht ausreicht | tanqislik | Wasserknappheit betrifft Millionen. | Suv tanqisligi millionlarga ta'sir qiladi.
+die Mülldeponie | noun | ein Ort, wo Abfall gelagert wird | chiqindixona | Viel Plastik landet auf der Mülldeponie. | Ko'p plastik chiqindixonaga tushadi.
+eindämmen | verb | etwas Schädliches begrenzen | cheklamoq, jilovlamoq | Wir müssen die Emissionen eindämmen. | Chiqindilarni cheklashimiz kerak.
+ausgleichen | verb | eine Wirkung durch eine andere aufheben | qoplamoq, muvozanatlamoq | Bäume pflanzen, um CO2 auszugleichen. | Uglerodni qoplash uchun daraxt ekish.
+zersetzen | verb | in kleine Teile zerfallen lassen | parchalamoq | Plastik braucht Jahrhunderte, um sich zu zersetzen. | Plastik parchalanishi uchun asrlar kerak.
+auffüllen | verb | wieder voll machen | to'ldirmoq | Der Regen füllt die Flüsse wieder auf. | Yomg'ir daryolarni qayta to'ldiradi.
+auslaufen lassen | verb | schrittweise beenden | bosqichma-bosqich to'xtatmoq | Das Land lässt die Kohle auslaufen. | Mamlakat ko'mirdan bosqichma-bosqich voz kechmoqda.
+unumkehrbar | adjective | nicht rückgängig zu machen | qaytarib bo'lmaydigan | Der Schaden ist vielleicht unumkehrbar. | Zarar qaytarib bo'lmaydigan bo'lishi mumkin.
+giftig | adjective | Gift enthaltend | zaharli | Die Fabrik leitete giftige Abfälle ein. | Zavod zaharli chiqindilar chiqardi.
+endlich | adjective | begrenzt; auch: schließlich | cheklangan; nihoyat | Öl ist eine endliche Ressource. | Neft cheklangan resurs.
+dürr | adjective | sehr trocken | qurg'oqchil, quruq | Die Region ist sehr dürr. | Mintaqa juda qurg'oqchil.
+unberührt | adjective | vom Menschen nicht verändert | daxlsiz, beg'ubor | Die Strände sind unberührt. | Plyajlar beg'ubor.
+## strategie | ♟️ | Business Strategy | Biznes strategiyasi | Бизнес-стратегия
+der Interessenvertreter | noun | eine Person mit Interesse an einem Unternehmen | manfaatdor tomon | Wir haben alle Interessenvertreter befragt. | Barcha manfaatdor tomonlar bilan maslahatlashdik.
+die Fusion | noun | das Zusammengehen zweier Firmen | qo'shilish (kompaniyalar) | Die Fusion schuf eine riesige Bank. | Qo'shilish ulkan bankni yuzaga keltirdi.
+die Übernahme | noun | der Kauf einer Firma durch eine andere | sotib olish, egallash | Die Übernahme kostete Milliarden. | Sotib olish milliardlarga tushdi.
+der Maßstab | noun | ein Wert zum Vergleichen | mezon, andoza | Das Produkt setzt neue Maßstäbe. | Mahsulot yangi andozalar yaratadi.
+das Druckmittel | noun | etwas, womit man Druck ausüben kann | ta'sir vositasi | Wir haben kaum Druckmittel. | Bizda ta'sir vositasi deyarli yo'q.
+die Auslagerung | noun | das Abgeben von Arbeit an andere Firmen | autsorsing | Die Auslagerung senkte die Kosten. | Autsorsing xarajatlarni kamaytirdi.
+der Synergieeffekt | noun | ein zusätzlicher Nutzen durch Zusammenarbeit | sinergiya samarasi | Die Fusion bringt Synergieeffekte. | Qo'shilish sinergiya samarasini beradi.
+die Fluktuation | noun | der Wechsel von Mitarbeitern; Schwankung | kadrlar qo'nimsizligi; tebranish | Die Fluktuation im Team ist hoch. | Jamoada kadrlar qo'nimsizligi yuqori.
+die Marktnische | noun | ein kleiner, spezieller Teil des Marktes | bozor tokchasi, tor segment | Sie fanden eine Marktnische. | Ular o'z bozor tokchasini topishdi.
+die Machbarkeit | noun | die Möglichkeit, etwas umzusetzen | amalga oshirish imkoniyati | Wir prüfen die Machbarkeit des Projekts. | Loyihaning amalga oshirish imkoniyatini tekshiryapmiz.
+straffen | verb | effizienter und einfacher machen | soddalashtirmoq, ixchamlashtirmoq | Wir haben den Ablauf gestrafft. | Jarayonni ixchamlashtirdik.
+diversifizieren | verb | in neue Geschäftsfelder gehen | xilma-xillashtirmoq | Die Firma hat diversifiziert. | Firma faoliyatini xilma-xillashtirdi.
+nutzen | verb | etwas zum eigenen Vorteil verwenden | foydalanmoq | Wir müssen diese Chance nutzen. | Bu imkoniyatdan foydalanishimiz kerak.
+prognostizieren | verb | vorhersagen | bashorat qilmoq | Experten prognostizieren Wachstum. | Mutaxassislar o'sishni bashorat qilmoqda.
+umstrukturieren | verb | die Organisation grundlegend ändern | qayta tashkil etmoq | Die Firma wurde umstrukturiert. | Firma qayta tashkil etildi.
+übertreffen | verb | besser sein als andere | ortda qoldirmoq | Die Ergebnisse übertrafen die Erwartungen. | Natijalar kutilganidan oshib ketdi.
+skalierbar | adjective | leicht vergrößerbar | kengaytiriladigan | Ist das Geschäftsmodell skalierbar? | Biznes modelni kengaytirish mumkinmi?
+tragfähig | adjective | so, dass es auf Dauer funktioniert | barqaror, hayotiy | Das ist ein tragfähiges Konzept. | Bu hayotiy konsepsiya.
+der Wettbewerbsvorteil | noun | ein Vorteil gegenüber der Konkurrenz | raqobat ustunligi | Qualität ist unser Wettbewerbsvorteil. | Sifat – bizning raqobat ustunligimiz.
+vorausschauend | adjective | an die Zukunft denkend | uzoqni ko'zlovchi | Wir brauchen eine vorausschauende Planung. | Bizga uzoqni ko'zlagan rejalashtirish kerak.
+## verben_formal | 📜 | Formal Verbs | Rasmiy fe'llar | Формальные глаголы
+erleichtern | verb | einfacher machen | yengillashtirmoq, osonlashtirmoq | Technik erleichtert die Kommunikation. | Texnika muloqotni osonlashtiradi.
+abmildern | verb | weniger schlimm machen | yumshatmoq | Maßnahmen sollen die Folgen abmildern. | Choralar oqibatlarni yumshatishi kerak.
+verschärfen | verb | eine schlechte Lage schlimmer machen | keskinlashtirmoq | Die Dürre verschärfte die Krise. | Qurg'oqchilik inqirozni keskinlashtirdi.
+einhalten | verb | eine Regel oder Frist befolgen | rioya qilmoq | Alle müssen die Regeln einhalten. | Hamma qoidalarga rioya qilishi kerak.
+befürworten | verb | öffentlich unterstützen | qo'llab-quvvatlamoq | Der Minister befürwortet den Plan. | Vazir rejani qo'llab-quvvatlaydi.
+in Erwägung ziehen | verb | ernsthaft über etwas nachdenken | ko'rib chiqmoq, o'ylab ko'rmoq | Wir ziehen einen Umzug in Erwägung. | Ko'chishni o'ylab ko'ryapmiz.
+umgehen | verb | eine Regel geschickt vermeiden | chetlab o'tmoq | Sie umgingen die Vorschriften. | Ular qoidalarni chetlab o'tishdi.
+ablösen | verb | an die Stelle von etwas treten | almashtirmoq, o'rnini egallamoq | Das neue Gesetz löst das alte ab. | Yangi qonun eskisining o'rnini egallaydi.
+ergänzen | verb | etwas Fehlendes hinzufügen | to'ldirmoq | Bitte ergänzen Sie das Formular. | Iltimos, anketani to'ldiring.
+eruieren | verb | durch genaue Prüfung herausfinden | aniqlamoq, surishtirib bilmoq | Die Ursache konnte noch nicht eruiert werden. | Sabab hali aniqlanmadi.
+abgrenzen | verb | genau trennen und bestimmen | chegaralamoq, ajratmoq | Man muss die Begriffe klar abgrenzen. | Tushunchalarni aniq ajratish kerak.
+sich halten an | verb | einer Regel folgen | amal qilmoq | Wir halten uns an strenge Standards. | Biz qat'iy standartlarga amal qilamiz.
+anspielen auf | verb | indirekt erwähnen | ishora qilmoq | Sie spielte auf ihre Vergangenheit an. | U o'tmishiga ishora qildi.
+auslösen | verb | etwas plötzlich beginnen lassen | sabab bo'lmoq, qo'zg'atmoq | Der Skandal löste seinen Rücktritt aus. | Janjal uning iste'fosiga sabab bo'ldi.
+bekräftigen | verb | noch einmal bestätigen | tasdiqlamoq, qayta ta'kidlamoq | Der Minister bekräftigte seine Position. | Vazir o'z pozitsiyasini qayta ta'kidladi.
+erachten | verb | für etwas halten | hisoblamoq, deb bilmoq | Der Plan wurde als zu riskant erachtet. | Reja juda xavfli deb hisoblandi.
+voraussetzen | verb | als gegeben annehmen | nazarda tutmoq, talab qilmoq | Die Stelle setzt Erfahrung voraus. | Bu ish tajribani talab qiladi.
+überschreiten | verb | über eine Grenze hinausgehen | oshib ketmoq | Die Kosten überschreiten das Budget. | Xarajatlar byudjetdan oshib ketdi.
+gipfeln in | verb | den Höhepunkt erreichen | avjiga chiqmoq | Das Fest gipfelte in einem Feuerwerk. | Bayram mushakbozlik bilan avjiga chiqdi.
+beanstanden | verb | offiziell kritisieren | e'tiroz bildirmoq, nuqson topmoq | Der Kunde beanstandete die Lieferung. | Mijoz yetkazib berishdan e'tiroz bildirdi.
+## adjektive_formal | 🎓 | Formal Adjectives | Rasmiy sifatlar | Формальные прилагательные
+durchdringend | adjective | überall spürbar; auch: sehr laut | hamma yoqni qamragan; o'tkir | Ein durchdringender Geruch füllte den Raum. | Xonani o'tkir hid tutdi.
+inhärent | adjective | von Natur aus zu etwas gehörend | xos, ajralmas | Jedes Geschäft hat inhärente Risiken. | Har bir biznesga xos xavflar bor.
+plausibel | adjective | einleuchtend und glaubhaft | ishonarli, mantiqiy | Das ist eine plausible Erklärung. | Bu ishonarli izoh.
+nachteilig | adjective | Nachteile bringend | zararli, noqulay | Rauchen ist nachteilig für die Gesundheit. | Chekish sog'liq uchun zararli.
+unerlässlich | adjective | absolut notwendig | o'ta zarur | Erfahrung ist unerlässlich. | Tajriba o'ta zarur.
+weit verbreitet | adjective | an vielen Orten vorkommend | keng tarqalgan | Diese Meinung ist weit verbreitet. | Bu fikr keng tarqalgan.
+ausdrücklich | adjective | klar und deutlich gesagt | aniq, ochiq-oydin | Er hat es ausdrücklich verboten. | U buni aniq taqiqlagan.
+stillschweigend | adjective | ohne Worte, aber verstanden | so'zsiz, yashirin | Es gab eine stillschweigende Vereinbarung. | So'zsiz kelishuv bor edi.
+willkürlich | adjective | ohne Grund, nach Laune | o'zboshimcha | Die Entscheidung wirkt willkürlich. | Qaror o'zboshimcha ko'rinadi.
+veraltet | adjective | nicht mehr modern | eskirgan | Diese Technik ist veraltet. | Bu texnika eskirgan.
+durchführbar | adjective | möglich umzusetzen | amalga oshirsa bo'ladigan | Ist der Plan durchführbar? | Rejani amalga oshirsa bo'ladimi?
+vorrangig | adjective | wichtiger als anderes | ustuvor, birinchi navbatdagi | Sicherheit ist vorrangig. | Xavfsizlik ustuvor.
+zaghaft | adjective | vorsichtig und unsicher | ehtiyotkor, ikkilanuvchi | Sie machte einen zaghaften Versuch. | U ikkilanib urinib ko'rdi.
+umständlich | adjective | kompliziert und zeitaufwendig | chalkash, noqulay | Das Verfahren ist umständlich. | Jarayon chalkash.
+die Diskrepanz | noun | ein Unterschied zwischen Dingen, die gleich sein sollten | nomuvofiqlik | Es gibt eine Diskrepanz in den Zahlen. | Raqamlarda nomuvofiqlik bor.
+markant | adjective | auffallend und prägnant | ko'zga tashlanadigan | Er hat ein markantes Gesicht. | Uning yuzi ko'zga tashlanadigan.
+beispiellos | adjective | so, wie es noch nie war | misli ko'rilmagan | Die Preise stiegen in beispiellosem Tempo. | Narxlar misli ko'rilmagan sur'atda oshdi.
+vergänglich | adjective | nicht von Dauer | o'tkinchi | Ruhm ist vergänglich. | Shon-shuhrat o'tkinchi.
+akribisch | adjective | äußerst genau und sorgfältig | o'ta sinchkov | Sie arbeitet akribisch. | U o'ta sinchkovlik bilan ishlaydi.
+zwangsläufig | adjective | nicht zu vermeiden, notwendigerweise | muqarrar ravishda | Das führt zwangsläufig zu Problemen. | Bu muqarrar ravishda muammolarga olib keladi.
+## ethik | 🩻 | Health & Ethics | Sog'liq va axloq | Здоровье и этика
+das Dilemma | noun | eine Lage mit einer schweren Wahl | dilemma, qiyin tanlov | Ärzte stehen oft vor moralischen Dilemmata. | Shifokorlar ko'pincha axloqiy dilemmalarga duch keladi.
+die Einwilligung | noun | die Erlaubnis zu etwas | rozilik | Patienten müssen ihre Einwilligung geben. | Bemorlar rozilik berishi kerak.
+die Sterbehilfe | noun | Hilfe beim Sterben für sehr kranke Menschen | evtanaziya | Sterbehilfe ist in vielen Ländern verboten. | Ko'p mamlakatlarda evtanaziya taqiqlangan.
+die Pandemie | noun | eine weltweite Krankheitswelle | pandemiya | Die Pandemie hat unser Leben verändert. | Pandemiya hayotimizni o'zgartirdi.
+die Epidemie | noun | eine Krankheit, die sich in einem Gebiet ausbreitet | epidemiya | In der Stadt herrscht eine Grippeepidemie. | Shaharda gripp epidemiyasi bor.
+die Diagnose | noun | die Feststellung einer Krankheit | tashxis | Die Diagnose war Krebs. | Tashxis saraton edi.
+die Prognose | noun | eine Vorhersage über den Verlauf | prognoz, bashorat | Die Prognose ist gut. | Prognoz yaxshi.
+die Nebenwirkung | noun | eine ungewollte Wirkung eines Medikaments | nojo'ya ta'sir | Das Mittel hat kaum Nebenwirkungen. | Dorining nojo'ya ta'siri deyarli yo'q.
+die Schweigepflicht | noun | die Pflicht, Informationen geheim zu halten | sir saqlash majburiyati | Ärzte haben Schweigepflicht. | Shifokorlar sir saqlashga majbur.
+das Wohlbefinden | noun | der Zustand, sich gut zu fühlen | farovonlik, o'zini yaxshi his qilish | Sport steigert das Wohlbefinden. | Sport kayfiyat va salomatlikni yaxshilaydi.
+chronisch | adjective | lange andauernd (Krankheit) | surunkali | Er hat chronische Schmerzen. | Uning surunkali og'riqlari bor.
+akut | adjective | plötzlich und heftig | o'tkir | Sie hat eine akute Blinddarmentzündung. | Unda o'tkir appenditsit bor.
+ansteckend | adjective | von Mensch zu Mensch übertragbar | yuqumli | Das Virus ist sehr ansteckend. | Virus juda yuqumli.
+gutartig | adjective | nicht gefährlich (Tumor) | xavfsiz (o'sma) | Zum Glück war der Tumor gutartig. | Baxtga o'sma xavfsiz ekan.
+unheilbar | adjective | nicht heilbar | davosiz | Die Krankheit ist unheilbar. | Kasallik davosiz.
+verabreichen | verb | ein Medikament geben | (dori) bermoq | Die Krankenschwester verabreichte die Spritze. | Hamshira ukol qildi.
+diagnostizieren | verb | eine Krankheit feststellen | tashxis qo'ymoq | Bei ihr wurde Diabetes diagnostiziert. | Unga qandli diabet tashxisi qo'yildi.
+der Rückfall | noun | das Wiederkommen einer Krankheit | kasallikning qaytalanishi | Nach einem Monat hatte er einen Rückfall. | Bir oydan keyin kasalligi qaytalandi.
+sich anstecken | verb | eine Krankheit von jemandem bekommen | yuqtirib olmoq | Ich habe mich bei meinem Sohn angesteckt. | O'g'limdan yuqtirib oldim.
+ganzheitlich | adjective | den ganzen Menschen betrachtend | yaxlit, kompleks | Sie bevorzugt eine ganzheitliche Medizin. | U yaxlit tibbiyotni afzal ko'radi.
+## diskurs | 📰 | Media & Discourse | Media va nutq | СМИ и дискурс
+die Propaganda | noun | Informationen, die Meinungen gezielt beeinflussen | propaganda, targ'ibot | Die Plakate waren Kriegspropaganda. | Plakatlar urush propagandasi edi.
+die Zensur | noun | das Verbieten bestimmter Informationen | senzura | In dem Land gibt es strenge Zensur. | U mamlakatda qattiq senzura bor.
+die Falschinformation | noun | falsche Information | noto'g'ri ma'lumot | Falschinformationen verbreiten sich schnell. | Noto'g'ri ma'lumotlar tez tarqaladi.
+der Diskurs | noun | eine ernsthafte öffentliche Diskussion | diskurs, munozara | Der politische Diskurs ist rauer geworden. | Siyosiy munozara qo'pollashdi.
+die Berichterstattung | noun | das Berichten in den Medien | yoritish (OAVda) | Die Wahl bekam viel Berichterstattung. | Saylov keng yoritildi.
+die Effekthascherei | noun | das Streben nach billiger Wirkung | shov-shuvbozlik | Die Zeitung ist für Effekthascherei bekannt. | Gazeta shov-shuvbozligi bilan tanilgan.
+die Glaubwürdigkeit | noun | die Eigenschaft, glaubhaft zu sein | ishonchlilik, obro' | Der Skandal schadete seiner Glaubwürdigkeit. | Janjal uning obro'siga putur yetkazdi.
+die Transparenz | noun | Offenheit und Nachvollziehbarkeit | shaffoflik | Wir fordern mehr Transparenz. | Biz ko'proq shaffoflik talab qilamiz.
+die Schönfärberei | noun | das Darstellen von etwas als besser, als es ist | bo'yab ko'rsatish | Das ist reine Schönfärberei. | Bu shunchaki bo'yab ko'rsatish.
+die Filterblase | noun | ein Umfeld, in dem man nur ähnliche Meinungen sieht | axborot pufagi | Soziale Medien erzeugen Filterblasen. | Ijtimoiy tarmoqlar axborot pufaklarini yaratadi.
+verbreiten | verb | weit bekannt machen | tarqatmoq | Die Ergebnisse wurden online verbreitet. | Natijalar internetda tarqatildi.
+fälschen | verb | etwas Unechtes als echt herstellen | soxtalashtirmoq | Der Journalist hat die Zitate gefälscht. | Jurnalist iqtiboslarni soxtalashtirgan.
+verzerren | verb | so ändern, dass es nicht mehr stimmt | buzib ko'rsatmoq | Der Artikel verzerrt meine Worte. | Maqola so'zlarimni buzib ko'rsatgan.
+aufbauschen | verb | übertrieben darstellen | bo'rttirmoq | Die Presse bauschte die Geschichte auf. | Matbuot voqeani bo'rttirdi.
+hinterfragen | verb | kritisch prüfen, was dahintersteckt | tanqidiy o'rganmoq, shubha ostiga olmoq | Man sollte Nachrichten immer hinterfragen. | Yangiliklarni har doim tanqidiy o'rganish kerak.
+widerrufen | verb | offiziell zurücknehmen | rad etmoq, qaytarib olmoq | Die Zeitung widerrief den Bericht. | Gazeta xabarni qaytarib oldi.
+parteiisch | adjective | eine Seite bevorzugend | bir tomonlama, xolis emas | Die Zeitung ist sehr parteiisch. | Gazeta juda bir tomonlama.
+sachlich | adjective | nüchtern, ohne Gefühle | xolis, ishchan | Bleib bitte sachlich. | Iltimos, xolis bo'l.
+anonym | adjective | ohne bekannten Namen | anonim | Eine anonyme Quelle gab den Hinweis. | Anonim manba xabar berdi.
+strittig | adjective | Streit auslösend, nicht geklärt | bahsli | Das ist eine strittige Frage. | Bu bahsli masala.

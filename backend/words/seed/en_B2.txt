@@ -63,3 +63,203 @@ to argue | verb | to disagree with someone in words, often angrily | bahslashmoq
 privacy | noun | the state of being free from public attention | shaxsiy daxlsizlik | Celebrities have little privacy. | Mashhurlarning shaxsiy hayoti kam bo'ladi.
 viewpoint | noun | a particular way of thinking about something | nuqtai nazar | Try to understand her viewpoint. | Uning nuqtai nazarini tushunishga harakat qiling.
 biased | adjective | unfairly preferring one person or side | xolis bo'lmagan, bir tomonlama | The report was clearly biased. | Hisobot aniq bir tomonlama edi.
+## justice | ⚖️ | Crime & Justice | Jinoyat va adolat | Преступность и правосудие
+suspect | noun | a person the police think may have committed a crime | gumonlanuvchi | The police arrested a suspect. | Politsiya gumonlanuvchini hibsga oldi.
+witness | noun | a person who sees a crime or accident happen | guvoh | The witness described the car. | Guvoh mashinani tasvirlab berdi.
+victim | noun | a person who is hurt or killed by a crime or accident | jabrlanuvchi, qurbon | The victim was taken to hospital. | Jabrlanuvchi kasalxonaga olib ketildi.
+trial | noun | the process in a court to decide if someone is guilty | sud jarayoni | The trial lasted three weeks. | Sud jarayoni uch hafta davom etdi.
+judge | noun | the person who controls a trial and decides punishments | sudya | The judge gave him five years. | Sudya unga besh yil berdi.
+lawyer | noun | a person whose job is to give legal advice | advokat, huquqshunos | You should talk to a lawyer. | Advokat bilan gaplashishingiz kerak.
+sentence | noun | the punishment a court gives | hukm, jazo muddati | He received a long prison sentence. | U uzoq muddatli qamoq jazosiga hukm qilindi.
+fine | noun | money you must pay as a punishment | jarima | I got a fine for parking there. | U yerda to'xtaganim uchun jarima oldim.
+theft | noun | the crime of stealing | o'g'irlik | Car theft is common in this area. | Bu hududda mashina o'g'irligi ko'p uchraydi.
+fraud | noun | the crime of cheating people to get money | firibgarlik | He was found guilty of fraud. | U firibgarlikda aybdor deb topildi.
+to arrest | verb | to take someone to a police station because of a crime | hibsga olmoq | Two men were arrested last night. | Kecha kechqurun ikki kishi hibsga olindi.
+to accuse | verb | to say that someone did something wrong | ayblamoq | She accused him of lying. | U uni yolg'on gapirishda aybladi.
+to commit | verb | to do something illegal or wrong | sodir etmoq | He committed the crime alone. | U jinoyatni yolg'iz sodir etgan.
+to investigate | verb | to try to find out the truth about something | tergov qilmoq, tekshirmoq | Police are investigating the robbery. | Politsiya o'g'irlikni tergov qilmoqda.
+to punish | verb | to make someone suffer because they did something wrong | jazolamoq | Criminals must be punished. | Jinoyatchilar jazolanishi kerak.
+to deny | verb | to say that something is not true | inkor etmoq | He denied everything. | U hammasini inkor etdi.
+guilty | adjective | having done something wrong or illegal | aybdor | The jury found her guilty. | Hakamlar uni aybdor deb topishdi.
+innocent | adjective | not guilty of a crime | aybsiz, begunoh | He says he is innocent. | U o'zini aybsiz deydi.
+illegal | adjective | not allowed by law | noqonuniy | It is illegal to drive without a licence. | Guvohnomasiz mashina haydash noqonuniy.
+## science | 🔬 | Science & Technology | Fan va texnologiya | Наука и технологии
+experiment | noun | a scientific test to learn something | tajriba | We did an experiment in the lab. | Laboratoriyada tajriba o'tkazdik.
+laboratory | noun | a room where scientists do tests | laboratoriya | She works in a laboratory. | U laboratoriyada ishlaydi.
+discovery | noun | finding something that was not known before | kashfiyot | The discovery changed medicine. | Bu kashfiyot tibbiyotni o'zgartirdi.
+theory | noun | an idea that tries to explain something | nazariya | Einstein's theory of relativity is famous. | Eynshteynning nisbiylik nazariyasi mashhur.
+data | noun | facts and numbers collected for study | ma'lumotlar | We need more data. | Bizga ko'proq ma'lumot kerak.
+robot | noun | a machine that can do tasks automatically | robot | Robots build cars in this factory. | Bu zavodda mashinalarni robotlar yig'adi.
+artificial intelligence | noun | computer systems that can think and learn like humans | sun'iy intellekt | Artificial intelligence is changing many jobs. | Sun'iy intellekt ko'plab kasblarni o'zgartirmoqda.
+engineer | noun | a person who designs machines, roads or buildings | muhandis | My sister is a civil engineer. | Opam qurilish muhandisi.
+satellite | noun | a machine sent into space that moves around the Earth | sun'iy yo'ldosh | The satellite sends TV signals. | Sun'iy yo'ldosh televizion signal uzatadi.
+innovation | noun | a new idea, method or invention | innovatsiya, yangilik | The company is famous for innovation. | Kompaniya innovatsiyalari bilan mashhur.
+breakthrough | noun | an important new discovery or development | katta yutuq, burilish | Scientists made a breakthrough in cancer research. | Olimlar saraton tadqiqotida katta yutuqqa erishdi.
+to invent | verb | to create something that did not exist before | ixtiro qilmoq | Who invented the telephone? | Telefonni kim ixtiro qilgan?
+to measure | verb | to find the size or amount of something | o'lchamoq | Measure the length of the table. | Stolning uzunligini o'lchang.
+to prove | verb | to show that something is true | isbotlamoq | Can you prove it? | Buni isbotlay olasizmi?
+to observe | verb | to watch something carefully | kuzatmoq | Scientists observe animals in the wild. | Olimlar hayvonlarni tabiatda kuzatishadi.
+to develop | verb | to grow or make something grow; to create | rivojlantirmoq, ishlab chiqmoq | They developed a new vaccine. | Ular yangi vaksina ishlab chiqishdi.
+scientific | adjective | relating to science | ilmiy | There is no scientific proof. | Ilmiy dalil yo'q.
+advanced | adjective | modern and highly developed | ilg'or, rivojlangan | This is very advanced technology. | Bu juda ilg'or texnologiya.
+digital | adjective | using computers and electronic signals | raqamli | We live in a digital world. | Biz raqamli dunyoda yashaymiz.
+## medicine | 🩺 | Health & Medicine | Tibbiyot | Медицина
+surgeon | noun | a doctor who does operations | jarroh | The surgeon operated on his heart. | Jarroh uning yuragini operatsiya qildi.
+operation | noun | cutting open a body to repair it | operatsiya, jarrohlik | She needs an operation on her knee. | Uning tizzasiga operatsiya kerak.
+patient | noun | a person who is receiving medical care | bemor | The doctor has many patients. | Shifokorning bemorlari ko'p.
+disease | noun | an illness of people, animals or plants | kasallik | Heart disease is very common. | Yurak kasalligi juda keng tarqalgan.
+infection | noun | an illness caused by bacteria or a virus | infeksiya, yuqumli kasallik | He has an ear infection. | Uning qulog'ida infeksiya bor.
+vaccine | noun | a substance that protects you from a disease | vaksina, emlash dori | The vaccine is free for children. | Vaksina bolalar uchun bepul.
+prescription | noun | a doctor's written order for medicine | retsept (dori uchun) | You need a prescription for this drug. | Bu dori uchun retsept kerak.
+allergy | noun | a bad reaction of the body to certain foods or substances | allergiya | I have an allergy to nuts. | Menda yong'oqqa allergiya bor.
+blood | noun | the red liquid that flows through the body | qon | He lost a lot of blood. | U ko'p qon yo'qotdi.
+heart | noun | the organ that pumps blood around the body | yurak | Exercise is good for your heart. | Mashq yuragingiz uchun foydali.
+pill | noun | a small round piece of medicine you swallow | tabletka | Take one pill after each meal. | Har ovqatdan keyin bitta tabletka iching.
+to cure | verb | to make an ill person healthy again | davolamoq, shifo bermoq | This disease can be cured. | Bu kasallikni davolash mumkin.
+to prevent | verb | to stop something from happening | oldini olmoq | Washing hands prevents infection. | Qo'l yuvish infeksiyaning oldini oladi.
+to suffer | verb | to feel pain or have an illness | azob chekmoq, aziyat chekmoq | She suffers from back pain. | U bel og'rig'idan aziyat chekadi.
+to examine | verb | to look at a patient carefully | ko'rikdan o'tkazmoq | The doctor examined my throat. | Shifokor tomog'imni ko'rikdan o'tkazdi.
+to bleed | verb | to lose blood | qon ketmoq | His nose was bleeding. | Uning burnidan qon ketayotgan edi.
+serious | adjective | very bad or dangerous | jiddiy, og'ir | It's not a serious illness. | Bu jiddiy kasallik emas.
+mental | adjective | relating to the mind | ruhiy, aqliy | Mental health is as important as physical health. | Ruhiy salomatlik jismoniy salomatlik kabi muhim.
+pregnant | adjective | having a baby growing inside the body | homilador | My sister is pregnant. | Opam homilador.
+## mind | 🧠 | Mind & Behaviour | Ong va xulq | Разум и поведение
+personality | noun | the qualities that make a person who they are | shaxsiyat, xarakter | She has a strong personality. | Uning kuchli shaxsiyati bor.
+behaviour | noun | the way a person acts | xulq-atvor | His behaviour at school has improved. | Uning maktabdagi xulq-atvori yaxshilandi.
+attitude | noun | the way you think and feel about something | munosabat, nuqtai nazar | She has a positive attitude to work. | Uning ishga ijobiy munosabati bor.
+memory | noun | the ability to remember; something you remember | xotira | I have a good memory for faces. | Yuzlarni yaxshi eslab qolaman.
+emotion | noun | a strong feeling like love, fear or anger | his-tuyg'u | He doesn't show his emotions. | U his-tuyg'ularini ko'rsatmaydi.
+motivation | noun | the reason or wish to do something | motivatsiya, ishtiyoq | She lost her motivation to study. | U o'qishga ishtiyoqini yo'qotdi.
+confidence | noun | the feeling that you can do things well | o'ziga ishonch | He lacks confidence. | Unga o'ziga ishonch yetishmaydi.
+pressure | noun | a feeling that you must do something; stress | bosim | Students are under a lot of pressure. | O'quvchilar katta bosim ostida.
+instinct | noun | a natural way of behaving without thinking | instinkt, tug'ma sezgi | Trust your instincts. | Sezgingizga ishoning.
+to cope | verb | to deal successfully with a difficult situation | bardosh bermoq, uddalamoq | How do you cope with stress? | Stressga qanday bardosh berasiz?
+to adapt | verb | to change to fit a new situation | moslashmoq | Children adapt quickly. | Bolalar tez moslashadi.
+to concentrate | verb | to give all your attention to something | diqqatni jamlamoq | I can't concentrate with this noise. | Bu shovqinda diqqatimni jamlay olmayman.
+to hesitate | verb | to pause before doing or saying something | ikkilanmoq | Don't hesitate to call me. | Menga qo'ng'iroq qilishga ikkilanmang.
+to realise | verb | to understand something suddenly | anglamoq, tushunib yetmoq | I realised I had left my keys. | Kalitlarimni qoldirganimni angladim.
+to imagine | verb | to form a picture in your mind | tasavvur qilmoq | Imagine you are on a beach. | Plyajda ekaningizni tasavvur qiling.
+aware | adjective | knowing about something | xabardor | Are you aware of the risks? | Xavflardan xabardormisiz?
+sensitive | adjective | easily upset; understanding other people's feelings | ta'sirchan, nozik | He is very sensitive to criticism. | U tanqidga juda ta'sirchan.
+curious | adjective | wanting to know or learn things | qiziquvchan | Children are naturally curious. | Bolalar tabiatan qiziquvchan.
+independent | adjective | not needing help from others | mustaqil | She is very independent. | U juda mustaqil.
+## management | 📊 | Work & Management | Ish va boshqaruv | Работа и управление
+manager | noun | a person who is in charge of a team or business | menejer, rahbar | I need to speak to the manager. | Menejer bilan gaplashishim kerak.
+staff | noun | all the people who work for an organisation | xodimlar | The staff are friendly. | Xodimlar xushmuomala.
+responsibility | noun | a duty to deal with something | mas'uliyat | It's my responsibility to lock the door. | Eshikni qulflash mening mas'uliyatim.
+task | noun | a piece of work to be done | vazifa, topshiriq | I have three tasks to finish today. | Bugun tugatishim kerak bo'lgan uchta vazifa bor.
+goal setting | noun | deciding what you want to achieve | maqsad belgilash | Goal setting helps teams work better. | Maqsad belgilash jamoalarga yaxshiroq ishlashga yordam beradi.
+strategy | noun | a plan to achieve a goal | strategiya | We need a new marketing strategy. | Bizga yangi marketing strategiyasi kerak.
+report | noun | a written document that gives information | hisobot | Please send me the report by Friday. | Iltimos, hisobotni jumagacha yuboring.
+project | noun | a planned piece of work | loyiha | The project will take six months. | Loyiha olti oy davom etadi.
+feedback | noun | comments about how well someone did something | fikr-mulohaza | Thank you for your feedback. | Fikr-mulohazangiz uchun rahmat.
+schedule | noun | a plan of when things will happen | jadval | We are behind schedule. | Biz jadvaldan ortda qolyapmiz.
+to delegate | verb | to give part of your work to someone else | topshirmoq (vakolat bermoq) | A good manager knows how to delegate. | Yaxshi menejer vazifani topshirishni biladi.
+to achieve | verb | to succeed in reaching a goal | erishmoq | We achieved our sales target. | Sotuv maqsadimizga erishdik.
+to organise | verb | to plan and arrange something | tashkil qilmoq | She organised the conference. | U konferensiyani tashkil qildi.
+to cooperate | verb | to work together with others | hamkorlik qilmoq | The two companies cooperate closely. | Ikki kompaniya yaqin hamkorlik qiladi.
+to motivate | verb | to make someone want to do something | rag'batlantirmoq | A good boss motivates the team. | Yaxshi rahbar jamoani rag'batlantiradi.
+to supervise | verb | to watch and direct people's work | nazorat qilmoq | He supervises ten workers. | U o'nta ishchini nazorat qiladi.
+efficient | adjective | working well without wasting time or money | samarali | The new system is more efficient. | Yangi tizim samaraliroq.
+flexible | adjective | able to change easily | moslashuvchan | I have flexible working hours. | Mening ish vaqtim moslashuvchan.
+experienced | adjective | having skill and knowledge from doing something | tajribali | We are looking for an experienced teacher. | Biz tajribali o'qituvchi qidiryapmiz.
+## arts | 🎨 | Arts & Culture | San'at va madaniyat | Искусство и культура
+masterpiece | noun | a work of art of the highest quality | durdona asar, shoh asar | The Mona Lisa is a masterpiece. | Mona Liza – durdona asar.
+sculpture | noun | a work of art made from stone, wood or metal | haykal | There is a bronze sculpture in the park. | Bog'da bronza haykal bor.
+poetry | noun | poems as a form of literature | she'riyat | Navoi's poetry is famous. | Navoiy she'riyati mashhur.
+literature | noun | books, plays and poems that have artistic value | adabiyot | She studies Uzbek literature. | U o'zbek adabiyotini o'rganadi.
+heritage | noun | the traditions and buildings of a country from the past | meros | Bukhara is a world heritage site. | Buxoro jahon merosi obyekti.
+tradition | noun | a custom that has existed for a long time | an'ana | It's a family tradition to eat plov on Fridays. | Juma kuni palov yeyish oilaviy an'anamiz.
+gallery | noun | a building where art is shown | galereya | We visited the national art gallery. | Milliy san'at galereyasiga bordik.
+craft | noun | a skill of making things by hand | hunarmandchilik | Pottery is a traditional craft. | Kulolchilik an'anaviy hunarmandchilik.
+author | noun | a person who writes a book | muallif | Who is the author of this novel? | Bu romanning muallifi kim?
+theatre | noun | a building where plays are performed | teatr | We went to the theatre last night. | Kecha kechqurun teatrga bordik.
+festival | noun | an organised event with music, films or celebrations | festival, bayram | The music festival lasts three days. | Musiqa festivali uch kun davom etadi.
+to create | verb | to make something new | yaratmoq | She creates beautiful paintings. | U chiroyli rasmlar yaratadi.
+to express | verb | to show a feeling or opinion | ifodalamoq | Music helps me express my feelings. | Musiqa his-tuyg'ularimni ifodalashga yordam beradi.
+to inspire | verb | to give someone the wish or ideas to create | ilhomlantirmoq | Nature inspires many artists. | Tabiat ko'plab rassomlarni ilhomlantiradi.
+to admire | verb | to respect and like someone or something | qoyil qolmoq, hayratlanmoq | I admire his work. | Uning ishiga qoyil qolaman.
+classical | adjective | traditional and of lasting value, especially music | klassik, mumtoz | She loves classical music. | U mumtoz musiqani yaxshi ko'radi.
+original | adjective | new and different; the first one | original, asl | This painting is the original. | Bu rasm asl nusxa.
+creative | adjective | good at thinking of new ideas | ijodiy, ijodkor | My son is very creative. | O'g'lim juda ijodkor.
+contemporary | adjective | belonging to the present time | zamonaviy | I don't understand contemporary art. | Zamonaviy san'atni tushunmayman.
+## tourism | 🏝️ | Travel & Tourism | Turizm | Туризм
+itinerary | noun | a plan of a journey with places and times | sayohat rejasi | Our itinerary includes three cities. | Sayohat rejamizga uchta shahar kiradi.
+resort | noun | a place where people go for holidays | kurort, dam olish maskani | They stayed at a ski resort. | Ular chang'i kurortida dam olishdi.
+excursion | noun | a short trip, often with a group | ekskursiya | We went on an excursion to the mountains. | Tog'larga ekskursiyaga bordik.
+reservation | noun | an arrangement to keep a room or table for you | bron, oldindan buyurtma | I have a reservation for two nights. | Ikki kecha uchun bronim bor.
+departure | noun | the act of leaving a place | jo'nash | Departure is at six in the morning. | Jo'nash ertalab soat oltida.
+customs | noun | the place at a border where bags are checked | bojxona | We went through customs quickly. | Bojxonadan tez o'tdik.
+visa | noun | an official paper that lets you enter a country | viza | Do I need a visa for Germany? | Germaniya uchun viza kerakmi?
+landmark | noun | a famous building or place that is easy to recognise | diqqatga sazovor joy, ramz | The Registan is Samarkand's most famous landmark. | Registon Samarqandning eng mashhur ramzi.
+jet lag | noun | tiredness after a long flight across time zones | vaqt mintaqasi almashuvidan charchoq | I had terrible jet lag after flying to New York. | Nyu-Yorkka uchganimdan keyin vaqt farqidan qattiq charchadim.
+peak season | noun | the time of year when most people travel | mavsum cho'qqisi | Hotels are expensive in peak season. | Mavsum cho'qqisida mehmonxonalar qimmat.
+to cancel | verb | to decide that something will not happen | bekor qilmoq | Our flight was cancelled. | Reysimiz bekor qilindi.
+to postpone | verb | to move an event to a later time | kechiktirmoq, keyinga surmoq | We postponed the trip until spring. | Safarni bahorgacha keyinga surdik.
+to commute | verb | to travel regularly between home and work | ish va uy orasida qatnamoq | I commute by metro. | Ishga metroda qatnayman.
+to board | verb | to get on a plane, train or ship | chiqmoq (samolyot, poyezdga) | Passengers can now board the plane. | Yo'lovchilar endi samolyotga chiqishlari mumkin.
+to wander | verb | to walk slowly without a clear direction | sayr qilmoq, kezmoq | We wandered around the old streets. | Eski ko'chalarni kezdik.
+breathtaking | adjective | extremely beautiful or surprising | hayratlanarli, nafasni to'xtatadigan | The view from the top is breathtaking. | Cho'qqidan manzara hayratlanarli.
+remote | adjective | far from cities and other people | chekka, olis | They live in a remote village. | Ular olis qishloqda yashashadi.
+picturesque | adjective | very pretty, like a painting | manzarali | It's a picturesque little town. | Bu manzarali kichik shaharcha.
+overcrowded | adjective | with too many people | odam gavjum, tiqilinch | The beach was overcrowded. | Plyaj odam bilan tiqilinch edi.
+## social | 🤝 | Social Issues | Ijtimoiy muammolar | Социальные проблемы
+poverty | noun | the state of being very poor | qashshoqlik | Millions of people live in poverty. | Millionlab odamlar qashshoqlikda yashaydi.
+unemployment | noun | the state of not having a job | ishsizlik | Unemployment has fallen this year. | Bu yil ishsizlik kamaydi.
+homeless | adjective | having no place to live | uysiz, boshpanasiz | The charity helps homeless people. | Xayriya tashkiloti uysiz odamlarga yordam beradi.
+charity | noun | an organisation that helps people in need | xayriya tashkiloti | She gives money to charity. | U xayriyaga pul beradi.
+equality | noun | the same rights and chances for everyone | tenglik | We believe in equality for women. | Biz ayollar tengligiga ishonamiz.
+discrimination | noun | treating people unfairly because of who they are | kamsitish | Discrimination at work is illegal. | Ishda kamsitish noqonuniy.
+population | noun | the number of people living in a place | aholi | The population of the city is growing. | Shahar aholisi o'smoqda.
+immigrant | noun | a person who comes to live in a different country | muhojir | Many immigrants work in construction. | Ko'plab muhojirlar qurilishda ishlaydi.
+violence | noun | behaviour that hurts people | zo'ravonlik | There is too much violence on TV. | Televizorda zo'ravonlik juda ko'p.
+generation | noun | all the people born around the same time | avlod | The young generation uses social media a lot. | Yosh avlod ijtimoiy tarmoqlardan ko'p foydalanadi.
+rights | noun | the things the law says everyone is allowed to have | huquqlar | Children have rights too. | Bolalarning ham huquqlari bor.
+to protest | verb | to show publicly that you disagree | norozilik bildirmoq | Students protested against the new law. | Talabalar yangi qonunga qarshi norozilik bildirishdi.
+to donate | verb | to give money or goods to help others | xayr-ehson qilmoq | He donated his old clothes. | U eski kiyimlarini xayr-ehson qildi.
+to solve | verb | to find an answer to a problem | hal qilmoq | We must solve this problem together. | Bu muammoni birgalikda hal qilishimiz kerak.
+to tackle | verb | to make an effort to deal with a problem | qarshi kurashmoq, hal qilishga kirishmoq | The government must tackle crime. | Hukumat jinoyatchilikka qarshi kurashishi kerak.
+to increase | verb | to become or make bigger in amount | oshmoq, ko'paytirmoq | Prices increased by ten percent. | Narxlar o'n foizga oshdi.
+elderly | adjective | old (polite word) | keksa, yoshi ulug' | We should help elderly people. | Keksalarga yordam berishimiz kerak.
+disabled | adjective | having a condition that limits movement or senses | nogironligi bo'lgan | The building has access for disabled people. | Binoda nogironligi bo'lgan odamlar uchun kirish joyi bor.
+fair | adjective | treating everyone equally; right | adolatli | It's not fair! | Bu adolatdan emas!
+## describing | 🖋️ | Descriptive Language | Tasviriy so'zlar | Описательная лексика
+obvious | adjective | easy to see or understand | aniq, ravshan | The answer is obvious. | Javob aniq.
+rare | adjective | not happening or seen often | kamyob, noyob | This bird is very rare. | Bu qush juda noyob.
+huge | adjective | extremely big | ulkan | They live in a huge house. | Ular ulkan uyda yashashadi.
+tiny | adjective | extremely small | juda kichkina, mitti | The baby has tiny hands. | Chaqaloqning qo'llari juda kichkina.
+ancient | adjective | very old, from a long time ago | qadimiy | We visited an ancient city. | Biz qadimiy shaharga bordik.
+modern | adjective | new and using the latest ideas | zamonaviy | The hotel is very modern. | Mehmonxona juda zamonaviy.
+ordinary | adjective | normal, not special | oddiy | It was just an ordinary day. | Bu shunchaki oddiy kun edi.
+unusual | adjective | different from what is normal | g'ayrioddiy | What an unusual name! | Qanday g'ayrioddiy ism!
+complicated | adjective | difficult to understand | murakkab, chigal | The instructions are complicated. | Ko'rsatmalar murakkab.
+essential | adjective | completely necessary | zarur, o'ta muhim | Water is essential for life. | Suv hayot uchun zarur.
+valuable | adjective | worth a lot of money; very useful | qimmatbaho, qimmatli | Thank you for your valuable advice. | Qimmatli maslahatingiz uchun rahmat.
+efficient use | noun | using something without waste | samarali foydalanish | Efficient use of energy saves money. | Energiyadan samarali foydalanish pulni tejaydi.
+impressive | adjective | making you admire something | ta'sirli, hayratlanarli | Her English is impressive. | Uning ingliz tili hayratlanarli.
+disgusting | adjective | extremely unpleasant | jirkanch | The food was disgusting. | Ovqat jirkanch edi.
+terrible | adjective | very bad | dahshatli, juda yomon | I had a terrible day. | Kunim dahshatli o'tdi.
+gorgeous | adjective | very beautiful | juda chiroyli, go'zal | What a gorgeous view! | Qanday go'zal manzara!
+smooth | adjective | flat and even, without lumps | silliq, tekis | The road is smooth. | Yo'l tekis.
+rough | adjective | not smooth; not exact | g'adir-budir; taxminiy | The wall feels rough. | Devor g'adir-budir.
+brilliant | adjective | extremely clever or good | ajoyib, zo'r | That's a brilliant idea! | Bu ajoyib g'oya!
+## verbs_b2 | 🧭 | Key Verbs | Muhim fe'llar | Ключевые глаголы
+to require | verb | to need something | talab qilmoq | The job requires experience. | Bu ish tajriba talab qiladi.
+to obtain | verb | to get something, often with effort | qo'lga kiritmoq, olmoq | You must obtain a visa first. | Avval viza olishingiz kerak.
+to maintain | verb | to keep something in good condition or at the same level | saqlamoq, qo'llab turmoq | It's hard to maintain an old car. | Eski mashinani saqlash qiyin.
+to ensure | verb | to make certain that something happens | ta'minlamoq, kafolatlamoq | Please ensure the door is locked. | Iltimos, eshik qulflanganiga ishonch hosil qiling.
+to involve | verb | to include something as a necessary part | o'z ichiga olmoq, jalb qilmoq | The job involves a lot of travel. | Bu ish ko'p safarni o'z ichiga oladi.
+to consider | verb | to think carefully about something | ko'rib chiqmoq, o'ylab ko'rmoq | We are considering moving abroad. | Chet elga ko'chishni o'ylab ko'ryapmiz.
+to estimate | verb | to guess a size, number or cost | taxmin qilmoq, chamalamoq | They estimated the cost at $5000. | Ular narxni 5000 dollar deb chamalashdi.
+to identify | verb | to recognise and name someone or something | aniqlamoq | Can you identify the problem? | Muammoni aniqlay olasizmi?
+to reveal | verb | to make something known that was secret | oshkor qilmoq | He revealed the truth at last. | Nihoyat u haqiqatni oshkor qildi.
+to replace | verb | to put something new in place of something old | almashtirmoq | We need to replace the battery. | Batareyani almashtirishimiz kerak.
+to struggle | verb | to try very hard to do something difficult | qiynalmoq, kurashmoq | She struggled to find a job. | U ish topishda qiynaldi.
+to emerge | verb | to appear or come out | paydo bo'lmoq, chiqmoq | New problems emerged. | Yangi muammolar paydo bo'ldi.
+to attract | verb | to make people come or be interested | jalb qilmoq | The city attracts many tourists. | Shahar ko'plab sayyohlarni jalb qiladi.
+to encourage | verb | to give someone confidence or support to do something | dalda bermoq, rag'batlantirmoq | My parents encouraged me to study. | Ota-onam meni o'qishga rag'batlantirishdi.
+to deserve | verb | to have earned something because of your actions | munosib bo'lmoq, loyiq bo'lmoq | You deserve a break. | Siz dam olishga loyiqsiz.
+to admit | verb | to agree that something bad is true | tan olmoq | He admitted his mistake. | U xatosini tan oldi.
+to remind | verb | to make someone remember something | eslatmoq | Remind me to call her. | Unga qo'ng'iroq qilishni eslatib qo'ying.
+to approve | verb | to officially agree to something; to like | ma'qullamoq, tasdiqlamoq | The plan was approved. | Reja tasdiqlandi.
+to assume | verb | to think something is true without proof | taxmin qilmoq, faraz qilmoq | I assumed you knew. | Siz bilasiz deb o'ylagandim.

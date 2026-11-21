@@ -63,3 +63,99 @@ der See | noun | eine große Fläche Wasser mit Land rundherum | ko'l | Wir schw
 das Gewitter | noun | schlechtes Wetter mit Blitz, Donner und Regen | momaqaldiroq, chaqmoqli yomg'ir | Gestern gab es ein Gewitter. | Kecha momaqaldiroq bo'ldi.
 warm | adjective | ein bisschen heiß, angenehm | iliq | Im Frühling ist es warm. | Bahorda havo iliq.
 trocken | adjective | ohne Wasser oder Regen | quruq | Der Sommer hier ist heiß und trocken. | Bu yerda yoz issiq va quruq.
+## freizeit | 🎸 | Free Time & Hobbies | Bo'sh vaqt va xobbilar | Досуг и хобби
+das Hobby | noun | etwas, das man in der Freizeit gern macht | xobbi, sevimli mashg'ulot | Mein Hobby ist Fotografieren. | Mening xobbim suratga olish.
+die Gitarre | noun | ein Musikinstrument mit sechs Saiten | gitara | Er spielt jeden Abend Gitarre. | U har kuni kechqurun gitara chaladi.
+die Kamera | noun | ein Gerät, mit dem man Fotos macht | fotoapparat, kamera | Ich habe eine neue Kamera. | Menda yangi kamera bor.
+das Konzert | noun | eine Veranstaltung, bei der Musik gespielt wird | konsert | Am Samstag gehen wir ins Konzert. | Shanba kuni konsertga boramiz.
+der Film | noun | eine Geschichte mit bewegten Bildern im Kino oder Fernsehen | film, kino | Wollen wir heute einen Film sehen? | Bugun film ko'ramizmi?
+das Picknick | noun | ein Essen draußen, zum Beispiel im Park | piknik | Wir machen ein Picknick am See. | Ko'l bo'yida piknik qilamiz.
+das Bild | noun | ein gemaltes oder fotografiertes Werk | rasm, surat | An der Wand hängt ein schönes Bild. | Devorda chiroyli rasm osig'liq.
+das Schach | noun | ein Brettspiel für zwei Personen mit König und Dame | shaxmat | Mein Opa spielt gern Schach. | Bobom shaxmat o'ynashni yoqtiradi.
+tanzen | verb | sich zur Musik bewegen | raqsga tushmoq | Sie tanzt sehr gern. | U raqsga tushishni juda yaxshi ko'radi.
+singen | verb | mit der Stimme Musik machen | qo'shiq aytmoq | Wir singen im Chor. | Biz xorda qo'shiq aytamiz.
+schwimmen | verb | sich im Wasser mit Armen und Beinen bewegen | suzmoq | Kannst du schwimmen? | Suza olasanmi?
+malen | verb | mit Farbe ein Bild machen | rasm chizmoq (bo'yoq bilan) | Mein Sohn malt gern Tiere. | O'g'lim hayvonlar rasmini chizishni yoqtiradi.
+sammeln | verb | Dinge derselben Art zusammentragen | yig'moq, to'plamoq | Er sammelt alte Münzen. | U eski tangalarni yig'adi.
+sich entspannen | verb | sich ausruhen und ruhig werden | hordiq chiqarmoq, bo'shashmoq | Beim Lesen entspanne ich mich. | Kitob o'qib hordiq chiqaraman.
+die Freizeit | noun | die Zeit, in der man nicht arbeiten muss | bo'sh vaqt | Was machst du in deiner Freizeit? | Bo'sh vaqtingda nima qilasan?
+## stadtweg | 🏙️ | Town & Directions | Shahar va yo'nalishlar | Город и направления
+die Bank | noun | ein Ort, wo man Geld aufbewahrt und abhebt; auch: Sitzbank | bank; skameyka | Die Bank ist neben der Post. | Bank pochta yonida.
+die Post | noun | ein Ort, wo man Briefe und Pakete schickt | pochta | Ich muss zur Post gehen. | Pochtaga borishim kerak.
+das Krankenhaus | noun | ein Gebäude, in dem kranke Menschen behandelt werden | kasalxona | Sie arbeitet im Krankenhaus. | U kasalxonada ishlaydi.
+die Bibliothek | noun | ein Ort, wo man Bücher ausleihen kann | kutubxona | Ich lerne in der Bibliothek. | Men kutubxonada o'qiyman.
+das Museum | noun | ein Gebäude mit alten oder interessanten Dingen | muzey | Das Museum ist montags geschlossen. | Muzey dushanba kunlari yopiq.
+die Brücke | noun | ein Bauwerk über einen Fluss oder eine Straße | ko'prik | Geh über die Brücke. | Ko'prikdan o't.
+die Ecke | noun | der Ort, wo zwei Straßen sich treffen | burchak, muyulish | Das Café ist an der Ecke. | Kafe muyulishda.
+der Platz | noun | ein offener Ort in der Stadt; auch: Sitzplatz | maydon; joy | Auf dem Platz steht ein Brunnen. | Maydonda favvora bor.
+die Ampel | noun | Lichter, die Autos sagen, wann sie halten oder fahren | svetofor | An der Ampel links abbiegen. | Svetoforda chapga buriling.
+abbiegen | verb | die Richtung ändern | burilmoq | Biegen Sie nach der Bank rechts ab. | Bankdan keyin o'ngga buriling.
+überqueren | verb | von einer Seite auf die andere gehen | kesib o'tmoq | Pass auf, wenn du die Straße überquerst. | Ko'chadan o'tayotganda ehtiyot bo'l.
+geradeaus | adverb | nach vorne, ohne abzubiegen | to'g'riga | Gehen Sie zweihundert Meter geradeaus. | Ikki yuz metr to'g'riga yuring.
+in der Nähe | adverb | nicht weit weg | yaqinida | Gibt es hier in der Nähe eine Apotheke? | Bu yerga yaqin dorixona bormi?
+gegenüber | preposition | auf der anderen Seite | ro'parasida, qarshisida | Das Hotel ist gegenüber dem Bahnhof. | Mehmonxona vokzal ro'parasida.
+weit | adjective | eine große Entfernung entfernt | uzoq | Der Flughafen ist weit von der Stadt. | Aeroport shahardan uzoq.
+## restaurant | 🍽️ | Cooking & Restaurants | Oshxona va restoran | Кухня и ресторан
+die Speisekarte | noun | eine Liste der Gerichte im Restaurant | menyu | Kann ich bitte die Speisekarte haben? | Menyuni bera olasizmi?
+der Kellner | noun | ein Mann, der im Restaurant das Essen bringt | ofitsiant | Der Kellner bringt die Suppe. | Ofitsiant sho'rvani olib keladi.
+das Gericht | noun | ein zubereitetes Essen; auch: Ort, wo Richter urteilen | taom; sud | Plov ist ein berühmtes usbekisches Gericht. | Palov mashhur o'zbek taomi.
+das Rezept | noun | eine Anleitung zum Kochen; auch: Zettel vom Arzt | retsept | Gibst du mir das Rezept für den Kuchen? | Tort retseptini berasanmi?
+die Suppe | noun | ein warmes, flüssiges Essen | sho'rva | Die Suppe ist zu heiß. | Sho'rva juda issiq.
+das Salz | noun | weißes Pulver, das Essen würzt | tuz | Gib mir bitte das Salz. | Tuzni uzat, iltimos.
+der Pfeffer | noun | ein scharfes Gewürz | murch, qalampir | Ein bisschen schwarzer Pfeffer, bitte. | Ozgina qora murch, iltimos.
+das Messer | noun | ein Werkzeug mit scharfer Klinge zum Schneiden | pichoq | Schneide das Brot mit dem Messer. | Nonni pichoq bilan kes.
+die Gabel | noun | ein Werkzeug mit Zinken zum Essen | sanchqi, vilka | Ich esse mit Messer und Gabel. | Men pichoq va sanchqi bilan ovqatlanaman.
+bestellen | verb | im Restaurant oder Geschäft um etwas bitten | buyurtma bermoq | Möchten Sie jetzt bestellen? | Hozir buyurtma berasizmi?
+braten | verb | in heißem Fett kochen | qovurmoq | Brate die Zwiebeln fünf Minuten. | Piyozni besh daqiqa qovur.
+backen | verb | im Ofen zubereiten, z. B. Brot oder Kuchen | pishirmoq (tandir/pechda) | Meine Oma backt jeden Sonntag. | Buvim har yakshanba pishiriq qiladi.
+süß | adjective | mit dem Geschmack von Zucker | shirin | Der Tee ist zu süß. | Choy juda shirin.
+scharf | adjective | mit starkem, heißem Geschmack; auch: sehr spitz | achchiq; o'tkir | Ich esse nicht gern scharf. | Men achchiq ovqatni yoqtirmayman.
+frisch | adjective | gerade gemacht oder geerntet; nicht alt | yangi, toza | Wir kaufen frisches Obst auf dem Markt. | Bozordan yangi meva olamiz.
+## schule | 🎒 | School & Study | Maktab va o'qish | Школа и учёба
+der Lehrer | noun | ein Mann, der in der Schule unterrichtet | o'qituvchi | Unser Lehrer ist sehr nett. | O'qituvchimiz juda yoqimli.
+der Schüler | noun | ein Kind oder Jugendlicher, der in die Schule geht | o'quvchi | In meiner Klasse sind dreißig Schüler. | Sinfimda o'ttizta o'quvchi bor.
+der Unterricht | noun | die Zeit, in der man in der Schule lernt | dars, ta'lim | Der Unterricht beginnt um acht. | Darslar soat sakkizda boshlanadi.
+die Hausaufgabe | noun | Schularbeit, die man zu Hause macht | uy vazifasi | Hast du deine Hausaufgaben gemacht? | Uy vazifangni qildingmi?
+der Test | noun | eine kurze Prüfung | test, sinov | Morgen schreiben wir einen Test. | Ertaga test yozamiz.
+das Wörterbuch | noun | ein Buch, das die Bedeutung von Wörtern erklärt | lug'at | Schau im Wörterbuch nach. | Lug'atdan qara.
+das Heft | noun | ein dünnes Buch mit leeren Seiten zum Schreiben | daftar | Schreib die Wörter in dein Heft. | So'zlarni daftaringga yoz.
+der Fehler | noun | etwas, das nicht richtig ist | xato | Ich habe zwei Fehler gemacht. | Men ikkita xato qildim.
+die Frage | noun | ein Satz, mit dem man etwas wissen will | savol | Darf ich eine Frage stellen? | Savol bersam bo'ladimi?
+die Antwort | noun | was man auf eine Frage sagt | javob | Weißt du die Antwort? | Javobni bilasanmi?
+lernen | verb | Wissen oder eine Fähigkeit bekommen | o'rganmoq | Ich lerne Englisch. | Men ingliz tilini o'rganyapman.
+unterrichten | verb | Schülern etwas beibringen | dars bermoq, o'qitmoq | Sie unterrichtet Geschichte. | U tarixdan dars beradi.
+verstehen | verb | die Bedeutung von etwas wissen | tushunmoq | Ich verstehe das Wort nicht. | Bu so'zni tushunmayapman.
+sich erinnern | verb | etwas im Gedächtnis haben | eslamoq | Ich erinnere mich nicht an seinen Namen. | Uning ismini eslay olmayapman.
+leicht | adjective | nicht schwer; nicht schwierig | yengil; oson | Der Test war leicht. | Test oson edi.
+## kleidung | 👗 | Clothes & Appearance | Kiyim va tashqi ko'rinish | Одежда и внешность
+der Rock | noun | ein Kleidungsstück für Frauen, das von der Taille hängt | yubka | Sie trägt einen langen Rock. | U uzun yubka kiygan.
+der Pullover | noun | ein warmes, gestricktes Kleidungsstück für oben | sviter | Meine Oma hat den Pullover gestrickt. | Bu sviterni buvim to'qigan.
+der Stiefel | noun | ein hoher Schuh, der auch das Bein bedeckt | etik | Ich brauche neue Winterstiefel. | Menga yangi qishki etik kerak.
+die Socke | noun | etwas Weiches, das man im Schuh an den Füßen trägt | paypoq | Die Socken sind warm. | Paypoqlar issiq.
+der Handschuh | noun | etwas, das die Hände warm hält | qo'lqop | Vergiss deine Handschuhe nicht! | Qo'lqopingni unutma!
+der Schal | noun | ein langes Tuch, das man um den Hals trägt | sharf | Es ist kalt, nimm einen Schal. | Sovuq, sharf ol.
+der Mantel | noun | ein langes, warmes Kleidungsstück für draußen | palto | Zieh deinen Mantel an. | Paltoingni kiy.
+die Tasche | noun | etwas, worin man Dinge trägt; auch: Teil der Kleidung | sumka; cho'ntak | Mein Schlüssel ist in der Tasche. | Kalitim cho'ntagimda.
+die Mode | noun | der Stil von Kleidung, der gerade beliebt ist | moda | Sie interessiert sich für Mode. | U moda bilan qiziqadi.
+die Brille | noun | zwei Gläser in einem Gestell, mit denen man besser sieht | ko'zoynak | Er trägt eine Brille. | U ko'zoynak taqadi.
+anziehen | verb | Kleidung auf den Körper tun | kiymoq | Zieh dich warm an! | Issiq kiyin!
+ausziehen | verb | Kleidung vom Körper nehmen; auch: aus einer Wohnung gehen | yechmoq; ko'chib ketmoq | Bitte zieh die Schuhe aus. | Iltimos, poyabzalingni yech.
+eng | adjective | sehr nah am Körper; zu klein | tor | Die Jeans ist zu eng. | Jinsi shim juda tor.
+bequem | adjective | angenehm zu tragen oder zu benutzen | qulay | Diese Schuhe sind sehr bequem. | Bu tuflilar juda qulay.
+schön | adjective | angenehm zu sehen | chiroyli, go'zal | Was für ein schönes Kleid! | Qanday chiroyli ko'ylak!
+## menschen | 🧑‍🤝‍🧑 | Describing People | Odamlarni tasvirlash | Описание людей
+dünn | adjective | mit wenig Fett am Körper; nicht dick | ozg'in; yupqa | Er ist sehr dünn. | U juda ozg'in.
+dick | adjective | mit viel Fett am Körper; nicht dünn | semiz; qalin | Die Katze ist zu dick. | Mushuk juda semiz.
+stark | adjective | mit viel Kraft | kuchli | Mein Vater ist sehr stark. | Otam juda kuchli.
+freundlich | adjective | nett und angenehm zu anderen | xushmuomala, mehribon | Die Nachbarn sind freundlich. | Qo'shnilar xushmuomala.
+lustig | adjective | so, dass man lachen muss | kulgili, quvnoq | Er erzählt lustige Geschichten. | U kulgili hikoyalar aytadi.
+nett | adjective | freundlich und angenehm | yoqimli, mehribon | Deine Schwester ist sehr nett. | Opang juda yoqimli.
+schüchtern | adjective | ruhig und nervös bei fremden Menschen | uyatchan | Das kleine Mädchen ist schüchtern. | Kichkina qiz uyatchan.
+klug | adjective | schnell im Lernen und Verstehen | aqlli | Sie ist eine kluge Schülerin. | U aqlli o'quvchi.
+faul | adjective | nicht gern arbeitend; auch: verdorben | dangasa; chirigan | Sei nicht so faul! | Bunchalik dangasa bo'lma!
+höflich | adjective | mit guten Manieren | odobli, xushmuomala | Er ist immer höflich. | U doim odobli.
+der Bart | noun | Haare am Kinn und an den Wangen eines Mannes | soqol | Mein Onkel hat einen grauen Bart. | Amakimning oq soqoli bor.
+blond | adjective | mit hellen, gelben Haaren | sariq sochli | Ihre Tochter ist blond. | Uning qizi sariq sochli.
+hübsch | adjective | angenehm zu sehen, schön | chiroyli, ko'rkam | Was für ein hübsches Kind! | Qanday chiroyli bola!
+aussehen | verb | einen bestimmten Eindruck machen | ko'rinmoq, o'xshamoq | Du siehst müde aus. | Charchagan ko'rinasan.
+der Nachbar | noun | ein Mensch, der neben dir wohnt | qo'shni | Unser Nachbar hat einen großen Hund. | Qo'shnimizning katta iti bor.

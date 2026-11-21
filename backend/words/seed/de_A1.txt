@@ -63,3 +63,45 @@ arbeiten | verb | eine Arbeit machen, meistens für Geld | ishlamoq | Sie arbeit
 kaufen | verb | etwas für Geld bekommen | sotib olmoq | Ich will eine neue Tasche kaufen. | Yangi sumka sotib olmoqchiman.
 müde | adjective | man möchte schlafen oder sich ausruhen | charchagan | Nach der Arbeit bin ich müde. | Ishdan keyin charchayman.
 heute | adverb | an diesem Tag | bugun | Heute ist Montag. | Bugun dushanba.
+## koerper | 🧍 | Body & Clothes | Tana va kiyim | Тело и одежда
+der Kopf | noun | der oberste Teil des Körpers mit Augen, Nase und Mund | bosh | Mein Kopf tut weh. | Boshim og'riyapti.
+die Hand | noun | der Teil am Ende des Arms mit fünf Fingern | qo'l (kaft) | Wasch dir die Hände! | Qo'lingni yuv!
+das Auge | noun | damit sieht man | ko'z | Sie hat braune Augen. | Uning ko'zlari jigarrang.
+das Ohr | noun | damit hört man | quloq | Der Hase hat lange Ohren. | Quyonning quloqlari uzun.
+die Nase | noun | damit riecht man | burun | Meine Nase ist kalt. | Burnim sovqotgan.
+der Mund | noun | damit isst und spricht man | og'iz | Mach den Mund auf, bitte. | Og'zingni och, iltimos.
+das Bein | noun | einer der zwei langen Körperteile, mit denen man geht | oyoq | Er hat sich das Bein gebrochen. | U oyog'ini sindirib oldi.
+der Fuß | noun | der unterste Teil des Beins, auf dem man steht | oyoq panjasi | Mein Fuß ist nass. | Oyog'im ho'l.
+das Haar | noun | die dünnen Fäden, die auf dem Kopf wachsen | soch | Sie hat lange schwarze Haare. | Uning uzun qora sochlari bor.
+das Gesicht | noun | die Vorderseite des Kopfes | yuz | Ich wasche mir morgens das Gesicht. | Ertalab yuzimni yuvaman.
+das Hemd | noun | ein Kleidungsstück mit Knöpfen für den Oberkörper | ko'ylak (erkaklar) | Er trägt ein weißes Hemd. | U oq ko'ylak kiygan.
+der Schuh | noun | das trägt man draußen an den Füßen | poyabzal, tufli | Die Schuhe sind neu. | Tuflilar yangi.
+das Kleid | noun | ein Kleidungsstück für Frauen, oben und unten in einem | ko'ylak (ayollar) | Sie hat ein rotes Kleid. | Uning qizil ko'ylagi bor.
+die Mütze | noun | eine warme Kopfbedeckung | shapka, do'ppi | Setz deine Mütze auf, es ist kalt! | Shapkangni kiy, sovuq!
+die Jacke | noun | ein kurzer Mantel | kurtka | Nimm eine Jacke mit. | Kurtka olib ol.
+die Hose | noun | ein Kleidungsstück für die Beine | shim | Die Hose ist zu lang. | Shim juda uzun.
+tragen | verb | Kleidung am Körper haben; auch: etwas in der Hand halten und bringen | kiymoq; ko'tarib yurmoq | Ich trage heute eine Brille. | Bugun ko'zoynak taqqanman.
+waschen | verb | mit Wasser sauber machen | yuvmoq | Ich wasche das Auto. | Men mashinani yuvaman.
+sitzen | verb | auf einem Stuhl oder Boden ruhen | o'tirmoq | Wir sitzen im Garten. | Biz bog'da o'tiribmiz.
+stehen | verb | auf den Füßen sein | turmoq (tik turmoq) | Er steht an der Tür. | U eshik oldida turibdi.
+## grundwoerter | 🎨 | Colours & Basics | Ranglar va asosiy so'zlar | Цвета и основы
+rot | adjective | die Farbe von Blut oder Tomaten | qizil | Ich mag rote Äpfel. | Men qizil olmani yoqtiraman.
+blau | adjective | die Farbe des Himmels bei Sonne | ko'k | Der Himmel ist blau. | Osmon ko'k.
+grün | adjective | die Farbe von Gras und Blättern | yashil | Das Gras ist grün. | O't yashil.
+weiß | adjective | die Farbe von Schnee oder Milch | oq | Die Katze ist weiß. | Mushuk oq.
+schwarz | adjective | die Farbe der Nacht | qora | Er hat ein schwarzes Auto. | Uning qora mashinasi bor.
+gelb | adjective | die Farbe einer Zitrone oder der Sonne | sariq | Die Banane ist gelb. | Banan sariq.
+die Zahl | noun | ein Zeichen wie 1, 2 oder 3 | son, raqam | Sieben ist meine Glückszahl. | Yetti mening omadli raqamim.
+das Geld | noun | Münzen und Scheine, mit denen man bezahlt | pul | Ich habe nicht viel Geld. | Menda ko'p pul yo'q.
+das Auto | noun | ein Fahrzeug mit vier Rädern und einem Motor | mashina, avtomobil | Mein Vater fährt Auto. | Otam mashina haydaydi.
+der Bus | noun | ein großes Fahrzeug für viele Menschen | avtobus | Ich fahre mit dem Bus zur Schule. | Maktabga avtobusda boraman.
+die Straße | noun | ein Weg in der Stadt für Autos und Menschen | ko'cha | Ich wohne in dieser Straße. | Men shu ko'chada yashayman.
+das Geschäft | noun | ein Ort, wo man Dinge kaufen kann | do'kon | Das Geschäft öffnet um neun. | Do'kon soat to'qqizda ochiladi.
+die Stadt | noun | ein großer Ort mit vielen Häusern und Menschen | shahar | Taschkent ist eine große Stadt. | Toshkent katta shahar.
+gut | adjective | von hoher Qualität; schön | yaxshi | Das ist ein gutes Buch. | Bu yaxshi kitob.
+schlecht | adjective | nicht gut | yomon | Das Wetter ist heute schlecht. | Bugun havo yomon.
+neu | adjective | gerade gemacht oder gekauft; nicht alt | yangi | Ich habe ein neues Handy. | Menda yangi telefon bor.
+kommen | verb | zu einem Ort hin gehen oder fahren | kelmoq | Komm bitte her! | Bu yerga kel, iltimos!
+sehen | verb | mit den Augen bemerken | ko'rmoq | Ich sehe die Berge. | Men tog'larni ko'ryapman.
+sprechen | verb | Wörter sagen; eine Sprache benutzen | gapirmoq | Sprichst du Deutsch? | Nemischa gapirasanmi?
+spielen | verb | Spaß mit einem Spiel haben | o'ynamoq | Die Kinder spielen Fußball. | Bolalar futbol o'ynashyapti.

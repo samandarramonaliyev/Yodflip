@@ -13,7 +13,7 @@ export type GameId =
   | 'memory'
   | 'derdiedas'
 
-export type Source = 'level' | 'deck' | 'set' | 'missed' | 'want' | 'learned' | 'review' | 'daily'
+export type Source = 'level' | 'levelreview' | 'deck' | 'set' | 'missed' | 'want' | 'learned' | 'review' | 'daily'
 
 /** A word item as returned by /api/games/words/ */
 export interface GameItem {
@@ -27,6 +27,8 @@ export interface GameItem {
   pos: string
   example: string
   example_uz: string
+  /** Level rounds: an already-found word that only fills the board ("takror"). */
+  is_filler?: boolean
 }
 
 export interface ResultItem {

@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 # Render build step for the single Yodflip web service (also works locally on Linux/macOS/Git Bash).
 #   1. Python dependencies   2. React build (frontend/dist)   3. collectstatic
-#   4. migrate               5. seed vocabulary (only when the seed files changed)   6. admin user
+#   4. migrate (incl. the level-progress data migration)
+#   5. check + seed vocabulary (seed only when the files changed; never deletes words)   6. admin user
 set -o errexit -o nounset -o pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
@@ -35,7 +36,10 @@ python manage.py collectstatic --noinput
 echo "==> migrate"
 python manage.py migrate --noinput
 
-echo "==> seed vocabulary (skipped when unchanged)"
+echo "==> check vocabulary files (exact counts, no duplicates, no empty fields)"
+python manage.py check_seed
+
+echo "==> seed vocabulary (skipped when unchanged; idempotent, keeps word IDs)"
 python manage.py seed_words
 
 echo "==> admin user (only if DJANGO_SUPERUSER_EMAIL/PASSWORD are set)"

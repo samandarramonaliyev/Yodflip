@@ -1,76 +1,25 @@
 from __future__ import annotations
 
-from django.db.models import Count
 from django.utils import timezone
 
 from . import leitner
-from .models import Pack, UserWord, Word, term_key
+from .models import UserWord, Word, term_key
 
 LEVELS = ["A1", "A2", "B1", "B2", "C1"]
-UNLOCK_THRESHOLD = 70  # percent of previous level learned
-
-
-def learned_keys(user, track: str) -> set[str]:
-    return set(
-        UserWord.objects.filter(user=user, track=track, box__gte=leitner.MAX_BOX).values_list("term_key", flat=True)
-    )
-
-
-def word_key(w: Word) -> str:
-    return term_key(w.display)
+UNLOCK_THRESHOLD = 70  # percent of previous level found
 
 
 def level_overview(user, track: str) -> list[dict]:
-    learned = learned_keys(user, track)
-    words = list(Word.objects.filter(track=track).only("id", "word", "article", "level", "pack_id"))
-    by_level: dict[str, list[Word]] = {lv: [] for lv in LEVELS}
-    for w in words:
-        by_level.setdefault(w.level, []).append(w)
-    packs = Pack.objects.filter(track=track).annotate(n=Count("words")).order_by("level", "order")
-    packs_by_level: dict[str, list[Pack]] = {}
-    for p in packs:
-        packs_by_level.setdefault(p.level, []).append(p)
+    """Level progress per level (server-side, from found words). See words/levels.py."""
+    from .levels import progress
 
-    result = []
-    prev_pct = 100
-    for idx, lv in enumerate(LEVELS):
-        lw = by_level.get(lv, [])
-        n_learned = sum(1 for w in lw if word_key(w) in learned)
-        pct = round(100 * n_learned / len(lw)) if lw else 0
-        pack_rows = []
-        for p in packs_by_level.get(lv, []):
-            pw = [w for w in lw if w.pack_id == p.id]
-            pl = sum(1 for w in pw if word_key(w) in learned)
-            pack_rows.append(
-                {
-                    "id": p.id,
-                    "slug": p.slug,
-                    "emoji": p.emoji,
-                    "name": {"uz": p.name_uz, "en": p.name_en, "ru": p.name_ru},
-                    "total": len(pw),
-                    "learned": pl,
-                    "percent": round(100 * pl / len(pw)) if pw else 0,
-                }
-            )
-        result.append(
-            {
-                "level": lv,
-                "total": len(lw),
-                "learned": n_learned,
-                "percent": pct,
-                "unlocked": idx == 0 or prev_pct >= UNLOCK_THRESHOLD,
-                "packs": pack_rows,
-            }
-        )
-        prev_pct = pct
-    return result
+    return progress(user, track, with_packs=True)
 
 
 def is_level_unlocked(user, track: str, level: str) -> bool:
-    for row in level_overview(user, track):
-        if row["level"] == level:
-            return row["unlocked"]
-    return False
+    from .levels import is_unlocked
+
+    return is_unlocked(user, track, level)
 
 
 def upsert_userword(

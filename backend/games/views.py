@@ -1,6 +1,7 @@
 import random
 
 from django.db import transaction
+from django.shortcuts import get_object_or_404
 from drf_spectacular.utils import OpenApiParameter, extend_schema
 from rest_framework import serializers, status
 from rest_framework.exceptions import ValidationError
@@ -10,10 +11,12 @@ from rest_framework.views import APIView
 from accounts.models import TRACK_CHOICES
 from gamification.models import GameSession
 from gamification.services import check_achievements, level_for_xp, record_activity, today
+from words.levels import level_progress, record_answers
+from words.models import LevelRound, UserLevelWord
 from words.services import record_answer
 
 from .models import DailyChallengeScore
-from .rules import GAMES, allowed_for_track, mode_for
+from .rules import GAMES, SESSION_XP_CAP, XP_PER_CORRECT, allowed_for_track, mode_for
 from .scoring import daily_score, match_round_score, session_xp
 from .sources import get_items
 
@@ -34,6 +37,12 @@ class ResultsSerializer(serializers.Serializer):
     results = ResultItemSerializer(many=True)
     duration_ms = serializers.IntegerField(min_value=0, required=False, default=0)
     combo_max = serializers.IntegerField(min_value=0, required=False, default=0)
+    session_id = serializers.CharField(max_length=40, required=False, allow_blank=True)
+
+    def validate(self, attrs):
+        if attrs.get("source") == "level" and not attrs.get("session_id"):
+            raise serializers.ValidationError({"session_id": "required_for_level"})
+        return attrs
 
     def validate_results(self, value):
         if len(value) > 300:
@@ -49,7 +58,9 @@ class WordsView(APIView):
             OpenApiParameter("game", str, enum=list(GAMES)),
             OpenApiParameter("track", str, enum=["en", "de"]),
             OpenApiParameter(
-                "source", str, enum=["level", "deck", "set", "missed", "want", "learned", "review", "daily"]
+                "source",
+                str,
+                enum=["level", "levelreview", "deck", "set", "missed", "want", "learned", "review", "daily"],
             ),
             OpenApiParameter("level", str),
             OpenApiParameter("pack", str),
@@ -99,12 +110,17 @@ class ResultsView(APIView):
         attempts = len(results)
         correct = sum(1 for r in results if r["correct"])
         learned_now = []
+        level_payload = None
         with transaction.atomic():
-            for r in results:
-                uw, became = record_answer(user, track, r, r["correct"])
-                if became:
-                    learned_now.append(uw.term)
-            xp, perfect = session_xp(game, correct, attempts, d.get("combo_max", 0))
+            if d.get("source") == "level":
+                xp, perfect, level_payload = self._level_round(user, d, results, game, correct, attempts)
+                learned_now = level_payload.pop("learned_terms")
+            else:
+                for r in results:
+                    uw, became = record_answer(user, track, r, r["correct"])
+                    if became:
+                        learned_now.append(uw.term)
+                xp, perfect = session_xp(game, correct, attempts, d.get("combo_max", 0))
             daily_payload = None
             if game == "daily":
                 score = daily_score(correct, d["duration_ms"])
@@ -147,7 +163,33 @@ class ResultsView(APIView):
             resp["flips"] = r.flips
         if daily_payload:
             resp["daily"] = daily_payload
+        if level_payload:
+            resp["level_round"] = level_payload
         return Response(resp, status=status.HTTP_200_OK)
+
+    @staticmethod
+    def _level_round(user, d, results, game, correct, attempts):
+        """Level games: XP only for words found for the first time in this round (once per round)."""
+        rnd = get_object_or_404(LevelRound, session_id=d["session_id"], user=user)
+        answers = [(r["word_id"], r["correct"]) for r in results if r.get("word_id")]
+        outcome = record_answers(user, rnd, answers) if answers else None
+        found_qs = UserLevelWord.objects.filter(found_round=rnd).select_related("word")
+        new_found = found_qs.count()
+        perfect = correct >= 4 and correct == attempts
+        xp = 0
+        if LevelRound.objects.filter(pk=rnd.pk, xp_awarded=False).update(xp_awarded=True):
+            base = XP_PER_CORRECT.get(game, 5) * new_found
+            bonus = (base // 2 if game == "match" else round(base * 0.2)) if perfect else 0
+            xp = min(SESSION_XP_CAP, base + bonus)
+        payload = {
+            "session_id": rnd.session_id,
+            "new_found_count": new_found,
+            "progress": outcome["progress"] if outcome else level_progress(user, rnd.track, rnd.level),
+            "completed_now": bool(outcome and outcome["completed_now"]),
+            "bonus_xp": outcome["bonus_xp"] if outcome else 0,
+            "learned_terms": [u.word.display for u in found_qs],
+        }
+        return xp, perfect, payload
 
 
 class DailyLeaderboardView(APIView):

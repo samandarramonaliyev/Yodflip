@@ -63,3 +63,150 @@ to recycle | verb | to treat used things so they can be used again | qayta ishla
 volunteer | noun | a person who works without being paid to help others | ko'ngilli | Volunteers cleaned the park. | Ko'ngillilar bog'ni tozalashdi.
 community | noun | the people who live in one area or share something | jamoa, hamjamiyat | Our community is very friendly. | Jamoamiz juda ahil.
 rent | noun | money you pay regularly to live in a place you do not own | ijara haqi | The rent is due on the first. | Ijara haqi har oyning birinchisida to'lanadi.
+## relationships | 💞 | Relationships | Munosabatlar | Отношения
+relationship | noun | the way two people or groups feel and behave towards each other | munosabat | They have a good relationship with their neighbours. | Ularning qo'shnilari bilan munosabati yaxshi.
+wedding | noun | a ceremony where two people get married | to'y (nikoh to'yi) | We were invited to their wedding. | Bizni ularning to'yiga taklif qilishdi.
+couple | noun | two people who are married or in a relationship | er-xotin, juftlik | A young couple moved in next door. | Qo'shni uyga yosh er-xotin ko'chib keldi.
+partner | noun | the person you live with or are married to | turmush o'rtog'i, sherik | She came to the party with her partner. | U ziyofatga sherigi bilan keldi.
+trust | noun | the belief that someone is honest and will not hurt you | ishonch | Trust is important in a friendship. | Do'stlikda ishonch muhim.
+argument | noun | an angry discussion between people who disagree | janjal, tortishuv | They had an argument about money. | Ular pul haqida janjallashib qolishdi.
+to get married | verb | to become husband and wife | turmush qurmoq | They got married last summer. | Ular o'tgan yozda turmush qurishdi.
+to get on with | verb | to have a friendly relationship with someone | chiqishib ketmoq, til topishmoq | I get on well with my sister. | Opam bilan yaxshi chiqishamiz.
+to fall in love | verb | to start to love someone romantically | sevib qolmoq | He fell in love with her at first sight. | U uni birinchi ko'rishdayoq sevib qoldi.
+to break up | verb | to end a romantic relationship | ajrashmoq (munosabatni uzmoq) | They broke up after two years. | Ular ikki yildan keyin ajrashishdi.
+to forgive | verb | to stop being angry with someone who did something wrong | kechirmoq | Please forgive me. | Iltimos, meni kechiring.
+to apologise | verb | to say that you are sorry | uzr so'ramoq | You should apologise to her. | Undan uzr so'rashingiz kerak.
+to support | verb | to help someone, especially when they have problems | qo'llab-quvvatlamoq | My family always supports me. | Oilam meni doim qo'llab-quvvatlaydi.
+to rely on | verb | to need and trust someone to help you | tayanmoq, ishonmoq | You can always rely on me. | Har doim menga tayanishingiz mumkin.
+honest | adjective | always telling the truth | halol, rostgo'y | He is an honest man. | U halol inson.
+loyal | adjective | always supporting your friends or family | sodiq | A dog is a loyal friend. | It sodiq do'st.
+generous | adjective | happy to give money, time or help | saxiy | My uncle is very generous. | Amakim juda saxiy.
+selfish | adjective | caring only about yourself | xudbin, o'zini o'ylaydigan | Don't be so selfish! | Bunchalik xudbin bo'lma!
+engaged | adjective | having agreed to marry someone | unashtirilgan | My sister is engaged to a doctor. | Opam shifokorga unashtirilgan.
+relative | noun | a member of your family | qarindosh | All our relatives came for the holiday. | Bayramga barcha qarindoshlarimiz keldi.
+## entertainment | 🎭 | Film, Music & Arts | Kino, musiqa va san'at | Кино, музыка и искусство
+actor | noun | a person who performs in films or plays | aktyor | He is my favourite actor. | U mening sevimli aktyorim.
+audience member | noun | one person who watches a show or performance | tomoshabin | Every audience member got a free ticket. | Har bir tomoshabin bepul chipta oldi.
+stage | noun | the raised area in a theatre where actors perform | sahna | The band came onto the stage. | Guruh sahnaga chiqdi.
+performance | noun | a show of music, dance or acting | chiqish, spektakl | The performance lasted two hours. | Spektakl ikki soat davom etdi.
+band | noun | a group of musicians who play together | musiqiy guruh | My brother plays drums in a band. | Akam guruhda baraban chaladi.
+song | noun | a short piece of music with words | qo'shiq | This song is very popular. | Bu qo'shiq juda mashhur.
+exhibition | noun | a public show of art or objects | ko'rgazma | We visited a photo exhibition. | Biz foto ko'rgazmaga bordik.
+artist | noun | a person who paints, draws or makes art | rassom, san'atkor | The artist painted my portrait. | Rassom mening portretimni chizdi.
+novel | noun | a long written story | roman | I'm reading a novel by Tolstoy. | Tolstoyning romanini o'qiyapman.
+character | noun | a person in a story, film or play | qahramon, personaj | The main character is a young girl. | Bosh qahramon yosh qiz.
+plot | noun | the events that make up the story of a film or book | syujet, voqealar rivoji | The plot of the film was boring. | Filmning syujeti zerikarli edi.
+scene | noun | a part of a film or play in one place | sahna, epizod | The last scene was very sad. | Oxirgi sahna juda g'amgin edi.
+review | noun | an article giving an opinion about a film, book or show | taqriz, sharh | The film got good reviews. | Film yaxshi taqrizlar oldi.
+ticket office | noun | a place where you buy tickets for a show | kassa | Buy tickets at the ticket office. | Chiptalarni kassadan oling.
+to perform | verb | to entertain people by acting, singing or dancing | ijro etmoq, chiqish qilmoq | The group will perform tonight. | Guruh bugun kechqurun chiqish qiladi.
+to clap | verb | to hit your hands together to show you liked something | qarsak chalmoq | Everyone clapped at the end. | Oxirida hamma qarsak chaldi.
+to record | verb | to store sound or pictures so they can be played later | yozib olmoq | They recorded a new album. | Ular yangi albom yozib olishdi.
+famous | adjective | known by many people | mashhur | She wants to be a famous singer. | U mashhur qo'shiqchi bo'lishni xohlaydi.
+boring | adjective | not interesting | zerikarli | The lecture was boring. | Ma'ruza zerikarli edi.
+exciting | adjective | making you feel very happy and interested | hayajonli, qiziqarli | It was an exciting match. | Bu hayajonli o'yin bo'ldi.
+## sport | ⚽ | Sport & Fitness | Sport va jismoniy tarbiya | Спорт и фитнес
+team | noun | a group of people who play a sport together | jamoa | Our team won the cup. | Jamoamiz kubokni yutdi.
+match | noun | a sports game between two teams or players | o'yin, uchrashuv | Did you watch the match last night? | Kecha kechqurun o'yinni ko'rdingmi?
+coach | noun | a person who trains a sports team or player | murabbiy | The coach is very strict. | Murabbiy juda talabchan.
+player | noun | a person who takes part in a sport or game | o'yinchi | He is the best player on the team. | U jamoadagi eng yaxshi o'yinchi.
+competition | noun | an event where people try to win | musobaqa, tanlov | She won a swimming competition. | U suzish musobaqasida g'olib bo'ldi.
+score | noun | the number of points each team has | hisob | What's the score? | Hisob qanday?
+stadium | noun | a large place where people watch sports | stadion | The stadium was full. | Stadion to'la edi.
+gym | noun | a room or building with equipment for exercise | sport zali | I go to the gym three times a week. | Haftasiga uch marta sport zaliga boraman.
+goal | noun | a point scored in football; also an aim | gol; maqsad | He scored a great goal. | U ajoyib gol urdi.
+medal | noun | a round piece of metal given as a prize | medal | She won a gold medal. | U oltin medal qo'lga kiritdi.
+fan | noun | a person who likes a team or star very much | muxlis | He is a big football fan. | U katta futbol muxlisi.
+to win | verb | to be the best in a game or competition | yutmoq, g'alaba qozonmoq | Who won the game? | O'yinda kim yutdi?
+to lose | verb | not to win; also to be unable to find something | yutqazmoq; yo'qotmoq | We lost two to one. | Biz ikki-birga yutqazdik.
+to train | verb | to practise a sport to get better | mashq qilmoq | They train every morning. | Ular har kuni ertalab mashq qilishadi.
+to score | verb | to get a point or goal in a game | gol urmoq, ochko olmoq | He scored in the last minute. | U so'nggi daqiqada gol urdi.
+to beat | verb | to win against someone | yengmoq | We beat the best team in the league. | Biz ligadagi eng kuchli jamoani yengdik.
+to join | verb | to become a member of a group or club | a'zo bo'lmoq, qo'shilmoq | I want to join a tennis club. | Tennis klubiga a'zo bo'lmoqchiman.
+fit | adjective | healthy and strong because of exercise | sog'lom, chiniqqan | She keeps fit by running. | U yugurib o'zini chiniqtiradi.
+professional | adjective | doing something as a paid job | professional | He is a professional footballer. | U professional futbolchi.
+race | noun | a competition to see who is the fastest | poyga | He came second in the race. | U poygada ikkinchi bo'ldi.
+## lifestyle | 🥗 | Health & Lifestyle | Salomatlik va turmush tarzi | Здоровье и образ жизни
+diet | noun | the food you usually eat | parhez, ovqatlanish tartibi | A healthy diet includes fruit and vegetables. | Sog'lom ovqatlanish meva va sabzavotni o'z ichiga oladi.
+habit | noun | something you do often and regularly | odat | Smoking is a bad habit. | Chekish yomon odat.
+stress | noun | a feeling of worry caused by problems or too much work | stress, ruhiy zo'riqish | Exercise helps with stress. | Jismoniy mashq stressga qarshi yordam beradi.
+energy | noun | the strength to be active | kuch-quvvat, energiya | I have no energy today. | Bugun hech kuchim yo'q.
+weight | noun | how heavy someone or something is | vazn, og'irlik | He wants to lose weight. | U vazn yo'qotmoqchi.
+injury | noun | damage to the body, for example from an accident | jarohat | He has a knee injury. | Uning tizzasida jarohat bor.
+treatment | noun | medical care for an illness or injury | davolash | The treatment takes two weeks. | Davolash ikki hafta davom etadi.
+symptom | noun | a sign that you have an illness | alomat, belgi | Fever is a symptom of flu. | Isitma grippning alomati.
+to recover | verb | to become healthy again after an illness | tuzalmoq, sog'aymoq | She recovered quickly. | U tez tuzaldi.
+to avoid | verb | to stay away from something | qochmoq, saqlanmoq | Try to avoid sugar. | Shakardan saqlanishga harakat qiling.
+to give up | verb | to stop doing something, especially a habit | tashlamoq, voz kechmoq | My father gave up smoking. | Otam chekishni tashladi.
+to breathe | verb | to take air into your body and let it out | nafas olmoq | Breathe slowly and relax. | Sekin nafas oling va bo'shashing.
+to sweat | verb | to lose liquid through your skin when hot | terlamoq | I sweat a lot in summer. | Yozda ko'p terlayman.
+to sneeze | verb | to suddenly push air out through your nose | aksirmoq | Dust makes me sneeze. | Chang meni aksirtiradi.
+regular | adjective | happening at the same time or often | muntazam | Regular exercise is good for you. | Muntazam mashq siz uchun foydali.
+balanced | adjective | with the right amounts of different things | muvozanatli | Eat a balanced diet. | Muvozanatli ovqatlaning.
+active | adjective | doing a lot of physical activity | faol, harakatchan | My grandmother is still very active. | Buvim hali ham juda harakatchan.
+unhealthy | adjective | not good for your health | zararli, nosog'lom | Fast food is unhealthy. | Fast fud sog'liq uchun zararli.
+vitamin | noun | a natural substance in food that keeps you healthy | vitamin | Oranges contain vitamin C. | Apelsinda S vitamini bor.
+sleep | noun | the natural state of rest at night | uyqu | You need eight hours of sleep. | Sizga sakkiz soat uyqu kerak.
+## housing | 🏠 | Home & Housing | Uy-joy | Жильё
+flat | noun | a set of rooms for living in, on one floor of a building | kvartira | They live in a small flat. | Ular kichkina kvartirada yashashadi.
+landlord | noun | a person who rents a house or flat to someone | uy egasi (ijaraga beruvchi) | The landlord wants more money. | Uy egasi ko'proq pul so'rayapti.
+furniture | noun | tables, chairs, beds and other things in a home | mebel | We bought new furniture. | Biz yangi mebel sotib oldik.
+floor | noun | the surface you walk on inside; also a level of a building | pol; qavat | We live on the fifth floor. | Biz beshinchi qavatda yashaymiz.
+roof | noun | the top cover of a building | tom | The roof needs repairs. | Tomni ta'mirlash kerak.
+stairs | noun | steps that go from one floor to another | zinapoya | Take the stairs, the lift is broken. | Zinadan chiqing, lift buzuq.
+balcony | noun | a small area outside a flat on an upper floor | balkon | We drink tea on the balcony. | Biz balkonda choy ichamiz.
+heating | noun | the system that keeps a building warm | isitish tizimi | The heating doesn't work. | Isitish ishlamayapti.
+lift | noun | a machine that carries people up and down in a building | lift | The lift is out of order. | Lift ishlamayapti.
+to move | verb | to go to live in a different place | ko'chmoq | We moved to a new flat last year. | O'tgan yili yangi kvartiraga ko'chdik.
+to share | verb | to use something together with others | baham ko'rmoq, birga foydalanmoq | I share a room with my brother. | Akam bilan bitta xonada yashayman.
+to repair | verb | to fix something that is broken | ta'mirlamoq | Can you repair the tap? | Jo'mrakni ta'mirlay olasizmi?
+to decorate | verb | to paint a room or make it look nice | bezamoq, ta'mirlab bezatmoq | We decorated the living room. | Mehmonxonani bezatdik.
+to tidy | verb | to make a place neat | yig'ishtirmoq, tartibga keltirmoq | Tidy your room, please. | Iltimos, xonangni yig'ishtir.
+spacious | adjective | having a lot of space | keng | The kitchen is bright and spacious. | Oshxona yorug' va keng.
+cosy | adjective | warm, comfortable and pleasant | shinam | It's a cosy little house. | Bu shinam kichkina uy.
+noisy | adjective | making a lot of noise | shovqinli | Our street is very noisy. | Ko'chamiz juda shovqinli.
+neighbourly | adjective | friendly and helpful like a good neighbour | qo'shnichilikka xos, mehribon | It was a neighbourly thing to do. | Bu qo'shnichilikka xos ish bo'ldi.
+address | noun | the number, street and town where you live | manzil | What's your address? | Manzilingiz qanday?
+fridge | noun | a machine in the kitchen that keeps food cold | muzlatkich | Put the milk in the fridge. | Sutni muzlatkichga qo'ying.
+## experiences | 🧳 | Travel Experiences | Sayohat taassurotlari | Впечатления от путешествий
+sightseeing | noun | visiting famous places as a tourist | diqqatga sazovor joylarni ko'rish | We went sightseeing in Samarkand. | Samarqandda diqqatga sazovor joylarni ko'rdik.
+guide | noun | a person who shows tourists around | gid, yo'lboshchi | Our guide spoke three languages. | Gidimiz uch tilda gapirardi.
+souvenir | noun | something you buy to remember a place | esdalik sovg'a | I bought a souvenir for my mum. | Onam uchun esdalik sovg'a oldim.
+accommodation | noun | a place to stay, like a hotel or flat | turar joy | The price includes accommodation. | Narxga turar joy kiradi.
+adventure | noun | an exciting and unusual experience | sarguzasht | Our trip was a real adventure. | Safarimiz haqiqiy sarguzasht bo'ldi.
+destination | noun | the place you are travelling to | manzil (borish joyi) | Paris is a popular destination. | Parij mashhur sayohat manzili.
+culture | noun | the customs, art and way of life of a people | madaniyat | I love learning about other cultures. | Boshqa madaniyatlarni o'rganishni yaxshi ko'raman.
+custom | noun | a traditional way of doing something | urf-odat | It's a local custom to take off your shoes. | Poyabzalni yechish mahalliy odat.
+backpack | noun | a bag you carry on your back | ryukzak | He travelled with just a backpack. | U faqat ryukzak bilan sayohat qildi.
+flight | noun | a journey by plane | parvoz, reys | Our flight was delayed. | Reysimiz kechikdi.
+to explore | verb | to travel around a place to learn about it | o'rganib chiqmoq, kezmoq | We explored the old town. | Biz eski shaharni kezib chiqdik.
+to pack | verb | to put things into a bag for a trip | yig'ishtirmoq (jomadonga) | Have you packed your suitcase? | Jomadoningni yig'dingmi?
+to check in | verb | to arrive and register at a hotel or airport | ro'yxatdan o'tmoq | We checked in at the hotel at 3 pm. | Mehmonxonada soat 15 da ro'yxatdan o'tdik.
+to miss | verb | to be too late for something; to feel sad without someone | o'tkazib yubormoq; sog'inmoq | We missed the train. | Poyezddan qolib ketdik.
+to get lost | verb | to not know where you are | adashib qolmoq | We got lost in the mountains. | Tog'larda adashib qoldik.
+to recommend | verb | to say that something is good | tavsiya qilmoq | Can you recommend a good hotel? | Yaxshi mehmonxona tavsiya qila olasizmi?
+amazing | adjective | very surprising and wonderful | ajoyib, hayratlanarli | The view was amazing. | Manzara ajoyib edi.
+foreign | adjective | from another country | chet ellik, xorijiy | I like trying foreign food. | Xorijiy taomlarni tatib ko'rishni yoqtiraman.
+crowd | noun | a large group of people in one place | olomon | There was a huge crowd at the festival. | Festivalda katta olomon bor edi.
+view | noun | what you can see from a place | manzara | The room has a view of the sea. | Xonadan dengiz manzarasi ko'rinadi.
+## verbs | 🔧 | Useful Verbs | Foydali fe'llar | Полезные глаголы
+to manage | verb | to succeed in doing something difficult | uddalamoq, eplamoq | I managed to finish on time. | O'z vaqtida tugatishni uddaladim.
+to decide | verb | to choose after thinking | qaror qilmoq | We decided to stay at home. | Uyda qolishga qaror qildik.
+to suggest | verb | to give an idea for someone to consider | taklif qilmoq | I suggest we take a taxi. | Taksi olishni taklif qilaman.
+to prefer | verb | to like one thing more than another | afzal ko'rmoq | I prefer tea to coffee. | Men qahvadan ko'ra choyni afzal ko'raman.
+to expect | verb | to think that something will happen | kutmoq | I didn't expect so many people. | Bunchalik ko'p odam kutmagandim.
+to explain | verb | to make something clear | tushuntirmoq | Can you explain this rule? | Bu qoidani tushuntirib bera olasizmi?
+to describe | verb | to say what someone or something is like | tasvirlamoq | Describe your best friend. | Eng yaqin do'stingizni tasvirlang.
+to compare | verb | to look at how things are similar or different | taqqoslamoq | Compare the two prices. | Ikki narxni taqqoslang.
+to borrow | verb | to take something and promise to give it back | qarzga olmoq | Can I borrow your pen? | Ruchkangizni olib tursam bo'ladimi?
+to lend | verb | to give something for a short time | qarzga bermoq | I can lend you some money. | Sizga biroz pul qarz bera olaman.
+to look after | verb | to take care of someone or something | qaramoq, g'amxo'rlik qilmoq | She looks after her little brother. | U ukasiga qaraydi.
+to look forward to | verb | to feel happy about something that will happen | intiqlik bilan kutmoq | I'm looking forward to the holidays. | Ta'tilni intiqlik bilan kutyapman.
+to find out | verb | to get information about something | bilib olmoq, aniqlamoq | I found out the truth. | Haqiqatni bilib oldim.
+to turn down | verb | to say no to an offer; to make quieter | rad etmoq; pasaytirmoq | She turned down the job. | U ishni rad etdi.
+to set up | verb | to start a business or organisation | tashkil qilmoq, ochmoq | He set up his own company. | U o'z kompaniyasini ochdi.
+to take part | verb | to be involved in an activity | qatnashmoq | Ten schools took part in the contest. | Tanlovda o'nta maktab qatnashdi.
+to happen | verb | to take place, especially without planning | sodir bo'lmoq | What happened yesterday? | Kecha nima bo'ldi?
+to agree | verb | to have the same opinion | rozi bo'lmoq, kelishmoq | I agree with you. | Siz bilan roziman.
+to refuse | verb | to say you will not do something | rad etmoq, bosh tortmoq | He refused to help us. | U bizga yordam berishdan bosh tortdi.
+to warn | verb | to tell someone about a danger | ogohlantirmoq | I warned you about the ice. | Men sizni muz haqida ogohlantirgandim.

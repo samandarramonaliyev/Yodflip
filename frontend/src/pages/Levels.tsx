@@ -35,7 +35,7 @@ export default function Levels() {
                       <span className="text-primary">{lv.percent}%</span>
                     </div>
                     <div className="mb-2 text-sm text-muted">
-                      {t('levels.learned_of', { n: lv.learned, total: lv.total })} · {lv.packs.map((p) => p.emoji).join(' ')}
+                      {t('level.count', { n: lv.found, total: lv.total })} · {lv.completed ? '🎓' : lv.to_unlock > 0 ? t('level.to_unlock_short', { n: lv.to_unlock }) : '🔓'}
                     </div>
                     <ProgressBar value={lv.percent} color={lv.percent >= 70 ? 'bg-success' : 'bg-primary'} />
                   </div>

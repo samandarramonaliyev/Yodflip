@@ -17,7 +17,7 @@
                        Neon PostgreSQL (free)
 ```
 
-- **Build** (`build.sh`): `pip install` → `npm ci && npm run build` → `collectstatic` → `migrate` → `seed_words` (only when the seed files changed) → admin user.
+- **Build** (`build.sh`): `pip install` → `npm ci && npm run build` → `collectstatic` → `migrate` (includes the level-progress data migration) → `check_seed` (fails the build on a broken vocabulary file) → `seed_words` (only when the seed files changed; idempotent, keeps word IDs, never deletes) → admin user. Nothing has to be run by hand.
 - **Start:** `gunicorn`. On startup it registers the Telegram webhook, the bot commands and the "Play" menu button (Mini App) automatically.
 - The frontend calls the API with relative URLs (`/api/...`): one origin, no CORS.
 - Card images are stored in PostgreSQL (Render's disk is temporary).
@@ -78,7 +78,8 @@ This sends reminders (at most one per user per day, only if they haven't played)
 ## Updating
 
 - **Code:** `git push`. Render runs `build.sh` again (migrations included) and restarts gunicorn, which re-registers the webhook.
-- **Vocabulary:** edit `backend/words/seed/*.txt` and push. It reloads once. To force a reload: `python manage.py seed_words --force` in the Shell.
+- **Vocabulary:** edit `backend/words/seed/*.txt` and push. It reloads once. Each level must have exactly A1 100 / A2 150 / B1 200 / B2 250 / C1 300 words per track; check locally with `python manage.py check_seed`. To force a reload: `python manage.py seed_words --force` in the Shell (safe: progress is kept).
+- **Camera:** the scanner uses `getUserMedia`, which needs HTTPS (Render provides it). Django sends `Permissions-Policy: camera=(self)`.
 - **Env vars:** change them in the dashboard; the service restarts.
 - **Rollback:** Render → *Deploys* → pick an earlier deploy → *Rollback*.
 - **Custom domain:** Render → Settings → Custom Domains. Then set `ALLOWED_HOSTS=yourdomain.uz`, `CSRF_TRUSTED_ORIGINS=https://yourdomain.uz` and `PUBLIC_URL=https://yourdomain.uz`, redeploy, and update the URLs in @BotFather and cron-job.org.
@@ -143,5 +144,5 @@ Eslatma manzili: `https://<xizmat>.onrender.com/bot/cron/<BOT_CRON_SECRET>/`. Bu
 ### Yangilash
 
 - **Kod:** `git push`. Render `build.sh` ni qayta bajaradi (migratsiyalar ham shu yerda).
-- **So'zlar bazasi:** `backend/words/seed/*.txt` ni o'zgartirib push qiling (majburan yuklash: `python manage.py seed_words --force`).
+- **So'zlar bazasi:** `backend/words/seed/*.txt` ni o'zgartirib push qiling (tekshirish: `python manage.py check_seed`; majburan yuklash: `python manage.py seed_words --force` — progress saqlanadi).
 - **Orqaga qaytarish:** Render → *Deploys* → avvalgi deploy → *Rollback*.

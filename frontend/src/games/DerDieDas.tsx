@@ -1,3 +1,4 @@
+import { FillerBadge } from '../components/LevelProgress'
 import { motion, useAnimationControls, type PanInfo } from 'framer-motion'
 import { Heart } from 'lucide-react'
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
@@ -125,6 +126,7 @@ export default function DerDieDas({ items, track, onFinish }: GameProps) {
             feedback ? (feedback.ok ? 'bg-success text-white' : 'bg-error text-white') : 'bg-tint text-tint-ink'
           }`}
         >
+          {item.is_filler && <FillerBadge className="mb-1" />}
           <span className="text-2xl font-black">
             {feedback ? `${feedback.answer} ` : ''}
             {item.word}

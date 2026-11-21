@@ -1,3 +1,4 @@
+import { FillerBadge } from '../components/LevelProgress'
 import { Heart } from 'lucide-react'
 import { useEffect, useMemo, useRef, useState, type FormEvent } from 'react'
 import { useT } from '../i18n'
@@ -154,6 +155,7 @@ export default function FallingWords({ items, track, reverse, onFinish }: GamePr
             className="absolute max-w-[70%] rounded-2xl bg-tint px-3 py-2 text-center text-base font-black text-tint-ink shadow-soft"
             style={{ left: `${f.x * 100}%`, top: `${f.y * 88}%`, transform: 'translateX(-20%)' }}
           >
+            {f.item.is_filler && <FillerBadge className="mb-0.5 block w-fit" />}
             {sides(f.item).prompt}
           </div>
         ))}

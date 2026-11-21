@@ -4,6 +4,10 @@ File format (pipe-separated, UTF-8):
     ## slug | emoji | name_en | name_uz | name_ru         <- starts a themed pack
     word | pos | definition | translation_uz | example | example_uz
 German nouns are written with their article ("der Hund"); it is split into Word.article.
+
+Idempotent and production-safe: words are matched by (track, word, article), so existing words
+keep their IDs (and user progress). Words are never deleted. Every level must have exactly the
+number of words in words.levels.LEVEL_SIZES.
 """
 
 from __future__ import annotations
@@ -14,10 +18,10 @@ from pathlib import Path
 from django.core.management.base import BaseCommand, CommandError
 from django.db import transaction
 
+from words.levels import LEVEL_SIZES, backfill_from_leitner
 from words.models import Pack, Word
 
 SEED_DIR = Path(__file__).resolve().parents[2] / "seed"
-MIN_PER_LEVEL = 60
 
 
 def parse_file(path: Path) -> list[dict]:
@@ -88,9 +92,8 @@ class Command(BaseCommand):
                 track, level = path.stem.split("_")
                 packs = parse_file(path)
                 count = sum(len(p["words"]) for p in packs)
-                if count < MIN_PER_LEVEL:
-                    raise CommandError(f"{path.name}: only {count} words (< {MIN_PER_LEVEL})")
-                keep_ids = []
+                if count != LEVEL_SIZES[level]:
+                    raise CommandError(f"{path.name}: {count} words, expected exactly {LEVEL_SIZES[level]}")
                 for order, p in enumerate(packs):
                     pack, _ = Pack.objects.update_or_create(
                         track=track,
@@ -106,12 +109,12 @@ class Command(BaseCommand):
                     )
                     for w in p["words"]:
                         word, article = split_article(w["raw"], track)
-                        obj, _ = Word.objects.update_or_create(
+                        Word.objects.update_or_create(
                             track=track,
-                            level=level,
                             word=word,
                             article=article,
                             defaults={
+                                "level": level,
                                 "pack": pack,
                                 "part_of_speech": w["pos"],
                                 "definition": w["definition"],
@@ -120,9 +123,8 @@ class Command(BaseCommand):
                                 "example_uz": w["example_uz"],
                             },
                         )
-                        keep_ids.append(obj.id)
-                Word.objects.filter(track=track, level=level).exclude(id__in=keep_ids).delete()
                 total += count
                 self.stdout.write(f"  {path.name}: {count} words in {len(packs)} packs")
             SeedState.objects.update_or_create(key="words", defaults={"digest": digest})
-        self.stdout.write(self.style.SUCCESS(f"Seeded {total} words."))
+            converted = backfill_from_leitner()
+        self.stdout.write(self.style.SUCCESS(f"Seeded {total} words. Level progress backfilled: {converted}."))

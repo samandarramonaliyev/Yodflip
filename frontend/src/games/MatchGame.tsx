@@ -1,3 +1,4 @@
+import { FillerBadge } from '../components/LevelProgress'
 import { motion } from 'framer-motion'
 import { Maximize2 } from 'lucide-react'
 import { useEffect, useMemo, useReducer, useRef, useState } from 'react'
@@ -23,7 +24,7 @@ function CardBack({ side }: { side: 'word' | 'def' }) {
   )
 }
 
-function CardFront({ card, state, onExpand }: { card: MatchCard; state: 'open' | 'match' | 'miss'; onExpand: () => void }) {
+function CardFront({ card, state, onExpand, filler }: { card: MatchCard; state: 'open' | 'match' | 'miss'; onExpand: () => void; filler?: boolean }) {
   const long = card.side === 'def' && card.text.length > LONG_TEXT
   const ring = state === 'match' ? 'ring-4 ring-success bg-success/10' : state === 'miss' ? 'ring-4 ring-error bg-error/10' : 'ring-2 ring-primary/30'
   return (
@@ -37,6 +38,7 @@ function CardFront({ card, state, onExpand }: { card: MatchCard; state: 'open' |
       >
         {card.text}
       </span>
+      {filler && <FillerBadge className="absolute left-1 top-1 scale-90" />}
       {long && (
         <button
           className="absolute bottom-1 right-1 grid h-7 w-7 place-items-center rounded-full bg-line text-muted"
@@ -55,6 +57,7 @@ function CardFront({ card, state, onExpand }: { card: MatchCard; state: 'open' |
 
 export default function MatchGame({ items, track, onFinish }: GameProps) {
   const t = useT()
+  const fillerKeys = useMemo(() => new Set(items.filter((i) => i.is_filler).map((i) => i.key)), [items])
   const pairs = useMemo(
     () =>
       items.map((i) => {
@@ -146,7 +149,7 @@ export default function MatchGame({ items, track, onFinish }: GameProps) {
         aria-hidden={leaving}
       >
         <button className="h-full w-full" onClick={() => flip(c)} tabIndex={leaving ? -1 : 0} aria-label={c.faceUp ? c.text : t('match.hidden_card')} aria-pressed={c.faceUp}>
-          <FlipCard className="h-full w-full" flipped={c.faceUp} front={<CardBack side={c.side} />} back={<CardFront card={c} state={st} onExpand={() => setExpanded(c.id)} />} />
+          <FlipCard className="h-full w-full" flipped={c.faceUp} front={<CardBack side={c.side} />} back={<CardFront card={c} state={st} filler={c.side === 'word' && fillerKeys.has(c.pairId)} onExpand={() => setExpanded(c.id)} />} />
         </button>
       </motion.div>
     )

@@ -10,7 +10,7 @@ der Umsatz | noun | der Gesamtwert aller verkauften Waren in einer Zeit | savdo 
 der Kredit | noun | Geld, das man von einer Bank leiht | kredit | Er hat einen Kredit aufgenommen. | U kredit oldi.
 die Schulden | noun | Geld, das man jemandem zurückzahlen muss (Plural) | qarzlar | Sie haben alle Schulden bezahlt. | Ular barcha qarzlarini to'lashdi.
 sich leisten | verb | genug Geld für etwas haben | qurbi yetmoq | Wir können uns kein neues Auto leisten. | Yangi mashinaga qurbimiz yetmaydi.
-das Angebot | noun | die Menge an Waren, die verkauft werden kann; auch: Offerte | taklif | Angebot und Nachfrage bestimmen den Preis. | Narxni talab va taklif belgilaydi.
+der Engpass | noun | ein Mangel: es gibt weniger von etwas, als man braucht | tanqislik, taqchillik | Wegen des Engpasses steigen die Preise. | Tanqislik tufayli narxlar oshmoqda.
 die Nachfrage | noun | der Wunsch der Menschen, etwas zu kaufen | talab | Die Nachfrage nach Pflegekräften ist groß. | Hamshiralarga talab katta.
 der Vertrag | noun | eine schriftliche, rechtlich gültige Vereinbarung | shartnoma | Lies den Vertrag, bevor du unterschreibst. | Imzolashdan oldin shartnomani o'qi.
 investieren | verb | Geld in etwas stecken, um Gewinn zu machen | sarmoya kiritmoq | Sie hat in ein Café investiert. | U kafega sarmoya kiritdi.
@@ -63,3 +63,203 @@ sich streiten | verb | mit Worten heftig uneinig sein | janjallashmoq | Sie stre
 die Privatsphäre | noun | der persönliche Bereich, der andere nichts angeht | shaxsiy hayot daxlsizligi | Stars haben wenig Privatsphäre. | Yulduzlarning shaxsiy hayoti kam.
 der Standpunkt | noun | die Art, wie man eine Sache sieht | nuqtai nazar | Ich verstehe deinen Standpunkt. | Nuqtai nazaringni tushunaman.
 einseitig | adjective | nur eine Seite einer Sache zeigend, nicht neutral | bir tomonlama | Der Bericht war sehr einseitig. | Hisobot juda bir tomonlama edi.
+## justiz | ⚖️ | Crime & Justice | Jinoyat va adolat | Преступность и правосудие
+der Verdächtige | noun | eine Person, die die Polizei für einen Täter hält | gumonlanuvchi | Die Polizei hat einen Verdächtigen festgenommen. | Politsiya gumonlanuvchini hibsga oldi.
+der Zeuge | noun | eine Person, die ein Verbrechen oder einen Unfall gesehen hat | guvoh | Der Zeuge beschrieb das Auto. | Guvoh mashinani tasvirlab berdi.
+das Opfer | noun | eine Person, die durch ein Verbrechen oder Unglück leidet | jabrlanuvchi, qurbon | Das Opfer wurde ins Krankenhaus gebracht. | Jabrlanuvchi kasalxonaga olib ketildi.
+der Prozess | noun | ein Verfahren vor Gericht; auch: Ablauf | sud jarayoni; jarayon | Der Prozess dauerte drei Wochen. | Sud jarayoni uch hafta davom etdi.
+der Richter | noun | die Person, die vor Gericht entscheidet | sudya | Der Richter verurteilte ihn zu fünf Jahren. | Sudya unga besh yil berdi.
+der Anwalt | noun | eine Person, die rechtlich berät und vor Gericht vertritt | advokat | Sprechen Sie mit einem Anwalt. | Advokat bilan gaplashing.
+die Strafe | noun | was man für ein Vergehen bekommt | jazo; jarima | Er bekam eine hohe Strafe. | U og'ir jazo oldi.
+das Bußgeld | noun | Geld, das man als Strafe zahlen muss | jarima | Ich musste ein Bußgeld fürs Falschparken zahlen. | Noto'g'ri to'xtaganim uchun jarima to'ladim.
+der Diebstahl | noun | das Verbrechen, etwas zu stehlen | o'g'irlik | Autodiebstahl ist hier häufig. | Bu yerda mashina o'g'irligi ko'p.
+der Betrug | noun | das Täuschen von Menschen, um Geld zu bekommen | firibgarlik | Er wurde wegen Betrugs verurteilt. | U firibgarlik uchun hukm qilindi.
+festnehmen | verb | jemanden wegen eines Verbrechens mitnehmen | hibsga olmoq | Zwei Männer wurden gestern festgenommen. | Kecha ikki kishi hibsga olindi.
+beschuldigen | verb | sagen, dass jemand etwas Falsches getan hat | ayblamoq | Sie beschuldigte ihn der Lüge. | U uni yolg'onchilikda aybladi.
+begehen | verb | etwas Verbotenes tun | sodir etmoq | Er hat das Verbrechen allein begangen. | U jinoyatni yolg'iz sodir etgan.
+ermitteln | verb | versuchen, die Wahrheit herauszufinden | tergov qilmoq | Die Polizei ermittelt in dem Fall. | Politsiya bu ishni tergov qilmoqda.
+bestrafen | verb | jemandem eine Strafe geben | jazolamoq | Verbrecher müssen bestraft werden. | Jinoyatchilar jazolanishi kerak.
+leugnen | verb | sagen, dass etwas nicht wahr ist | inkor etmoq | Er leugnete alles. | U hammasini inkor etdi.
+schuldig | adjective | etwas Falsches oder Verbotenes getan habend | aybdor | Das Gericht fand sie schuldig. | Sud uni aybdor deb topdi.
+unschuldig | adjective | nicht schuldig | aybsiz, begunoh | Er sagt, er sei unschuldig. | U o'zini aybsiz deydi.
+illegal | adjective | vom Gesetz verboten | noqonuniy | Ohne Führerschein zu fahren ist illegal. | Guvohnomasiz haydash noqonuniy.
+## naturwissenschaft | 🔬 | Science & Technology | Fan va texnologiya | Наука и технологии
+das Experiment | noun | ein wissenschaftlicher Versuch | tajriba | Wir haben im Labor ein Experiment gemacht. | Laboratoriyada tajriba o'tkazdik.
+das Labor | noun | ein Raum, in dem Wissenschaftler forschen | laboratoriya | Sie arbeitet in einem Labor. | U laboratoriyada ishlaydi.
+die Entdeckung | noun | das Finden von etwas Neuem | kashfiyot | Die Entdeckung veränderte die Medizin. | Kashfiyot tibbiyotni o'zgartirdi.
+die Theorie | noun | eine Idee, die etwas erklären will | nazariya | Einsteins Theorie ist berühmt. | Eynshteyn nazariyasi mashhur.
+die Daten | noun | gesammelte Fakten und Zahlen | ma'lumotlar | Wir brauchen mehr Daten. | Bizga ko'proq ma'lumot kerak.
+der Roboter | noun | eine Maschine, die automatisch Aufgaben erledigt | robot | Roboter bauen in dieser Fabrik Autos. | Bu zavodda mashinalarni robotlar yig'adi.
+die künstliche Intelligenz | noun | Computersysteme, die wie Menschen lernen können | sun'iy intellekt | Künstliche Intelligenz verändert viele Berufe. | Sun'iy intellekt ko'plab kasblarni o'zgartirmoqda.
+der Ingenieur | noun | eine Person, die Maschinen oder Bauwerke plant | muhandis | Meine Schwester ist Ingenieurin. | Opam muhandis.
+der Satellit | noun | ein Gerät im Weltraum, das um die Erde kreist | sun'iy yo'ldosh | Der Satellit sendet Fernsehsignale. | Sun'iy yo'ldosh televizion signal uzatadi.
+die Innovation | noun | eine neue Idee oder Methode | innovatsiya, yangilik | Die Firma ist für Innovation bekannt. | Firma innovatsiyalari bilan mashhur.
+der Durchbruch | noun | ein wichtiger neuer Erfolg | burilish, katta yutuq | Forscher haben einen Durchbruch erzielt. | Tadqiqotchilar katta yutuqqa erishdi.
+erfinden | verb | etwas Neues schaffen, das es noch nicht gab | ixtiro qilmoq | Wer hat das Telefon erfunden? | Telefonni kim ixtiro qilgan?
+messen | verb | die Größe oder Menge von etwas feststellen | o'lchamoq | Miss die Länge des Tisches. | Stolning uzunligini o'lcha.
+beweisen | verb | zeigen, dass etwas wahr ist | isbotlamoq | Kannst du das beweisen? | Buni isbotlay olasanmi?
+beobachten | verb | etwas genau ansehen | kuzatmoq | Forscher beobachten Tiere in der Natur. | Tadqiqotchilar hayvonlarni tabiatda kuzatadi.
+entwickeln | verb | etwas Neues herstellen oder wachsen lassen | ishlab chiqmoq, rivojlantirmoq | Sie haben einen neuen Impfstoff entwickelt. | Ular yangi vaksina ishlab chiqishdi.
+wissenschaftlich | adjective | die Wissenschaft betreffend | ilmiy | Es gibt keinen wissenschaftlichen Beweis. | Ilmiy dalil yo'q.
+fortschrittlich | adjective | modern und weit entwickelt | ilg'or | Das ist sehr fortschrittliche Technik. | Bu juda ilg'or texnika.
+digital | adjective | mit Computern und elektronischen Signalen | raqamli | Wir leben in einer digitalen Welt. | Biz raqamli dunyoda yashaymiz.
+## medizin | 🩺 | Health & Medicine | Tibbiyot | Медицина
+der Chirurg | noun | ein Arzt, der operiert | jarroh | Der Chirurg hat sein Herz operiert. | Jarroh uning yuragini operatsiya qildi.
+die Operation | noun | ein Eingriff, bei dem der Körper geöffnet wird | operatsiya | Sie braucht eine Operation am Knie. | Uning tizzasiga operatsiya kerak.
+der Patient | noun | eine Person, die medizinisch behandelt wird | bemor | Der Arzt hat viele Patienten. | Shifokorning bemorlari ko'p.
+die Krankheit | noun | der Zustand, wenn man krank ist | kasallik | Herzkrankheiten sind häufig. | Yurak kasalliklari keng tarqalgan.
+die Infektion | noun | eine Krankheit durch Bakterien oder Viren | infeksiya | Er hat eine Ohrinfektion. | Uning qulog'ida infeksiya bor.
+der Impfstoff | noun | ein Mittel, das vor einer Krankheit schützt | vaksina | Der Impfstoff ist für Kinder kostenlos. | Vaksina bolalar uchun bepul.
+die Spritze | noun | ein Gerät, mit dem man Medizin in den Körper gibt | ukol, shprits | Ich habe Angst vor Spritzen. | Men ukoldan qo'rqaman.
+die Allergie | noun | eine schlechte Reaktion des Körpers auf bestimmte Stoffe | allergiya | Ich habe eine Allergie gegen Nüsse. | Menda yong'oqqa allergiya bor.
+das Blut | noun | die rote Flüssigkeit im Körper | qon | Er hat viel Blut verloren. | U ko'p qon yo'qotdi.
+das Herz | noun | das Organ, das Blut durch den Körper pumpt | yurak | Sport ist gut für das Herz. | Sport yurak uchun foydali.
+die Tablette | noun | ein kleines Stück Medizin zum Schlucken | tabletka | Nimm nach jedem Essen eine Tablette. | Har ovqatdan keyin bitta tabletka ich.
+heilen | verb | einen Kranken wieder gesund machen | davolamoq, shifo topmoq | Die Wunde heilt langsam. | Yara sekin bitmoqda.
+vorbeugen | verb | verhindern, dass etwas passiert | oldini olmoq | Händewaschen beugt Infektionen vor. | Qo'l yuvish infeksiyaning oldini oladi.
+leiden | verb | Schmerzen oder eine Krankheit haben | azob chekmoq | Sie leidet an Rückenschmerzen. | U bel og'rig'idan azob chekadi.
+untersuchen | verb | einen Patienten genau ansehen; auch: prüfen | ko'rikdan o'tkazmoq; tekshirmoq | Der Arzt untersuchte meinen Hals. | Shifokor tomog'imni ko'rikdan o'tkazdi.
+bluten | verb | Blut verlieren | qon ketmoq | Seine Nase blutete. | Uning burnidan qon ketdi.
+ernst | adjective | schlimm oder gefährlich; nicht lustig | jiddiy | Es ist keine ernste Krankheit. | Bu jiddiy kasallik emas.
+psychisch | adjective | die Seele oder den Geist betreffend | ruhiy | Psychische Gesundheit ist sehr wichtig. | Ruhiy salomatlik juda muhim.
+schwanger | adjective | ein Baby im Bauch tragend | homilador | Meine Schwester ist schwanger. | Opam homilador.
+## psyche | 🧠 | Mind & Behaviour | Ong va xulq | Разум и поведение
+die Persönlichkeit | noun | die Eigenschaften, die einen Menschen ausmachen | shaxsiyat | Sie hat eine starke Persönlichkeit. | Uning kuchli shaxsiyati bor.
+das Verhalten | noun | die Art, wie sich jemand benimmt | xulq-atvor | Sein Verhalten in der Schule ist besser geworden. | Uning maktabdagi xulqi yaxshilandi.
+die Einstellung | noun | wie man über etwas denkt; auch: Anstellung | munosabat; ishga olish | Sie hat eine positive Einstellung zur Arbeit. | Uning ishga ijobiy munosabati bor.
+das Gedächtnis | noun | die Fähigkeit, sich zu erinnern | xotira | Ich habe ein gutes Gedächtnis für Gesichter. | Yuzlarni yaxshi eslab qolaman.
+das Gefühl | noun | etwas, das man innerlich empfindet | his, tuyg'u | Er zeigt seine Gefühle nicht. | U his-tuyg'ularini ko'rsatmaydi.
+die Motivation | noun | der Grund oder Wunsch, etwas zu tun | motivatsiya, ishtiyoq | Sie hat ihre Motivation verloren. | U ishtiyoqini yo'qotdi.
+das Selbstvertrauen | noun | das Gefühl, dass man etwas gut kann | o'ziga ishonch | Ihm fehlt Selbstvertrauen. | Unga o'ziga ishonch yetishmaydi.
+der Druck | noun | ein Gefühl, etwas tun zu müssen; auch: Kraft auf etwas | bosim | Schüler stehen unter großem Druck. | O'quvchilar katta bosim ostida.
+der Instinkt | noun | ein natürliches Verhalten ohne Nachdenken | instinkt, sezgi | Vertrau deinem Instinkt. | Sezgingga ishon.
+bewältigen | verb | eine schwierige Situation schaffen | yengib o'tmoq, uddalamoq | Wie bewältigst du Stress? | Stressni qanday yengasan?
+sich anpassen | verb | sich ändern, um zu einer neuen Situation zu passen | moslashmoq | Kinder passen sich schnell an. | Bolalar tez moslashadi.
+sich konzentrieren | verb | die ganze Aufmerksamkeit auf etwas richten | diqqatni jamlamoq | Bei dem Lärm kann ich mich nicht konzentrieren. | Bu shovqinda diqqatimni jamlay olmayman.
+zögern | verb | warten, bevor man etwas tut oder sagt | ikkilanmoq | Zögere nicht, mich anzurufen. | Menga qo'ng'iroq qilishga ikkilanma.
+merken | verb | etwas bemerken oder verstehen | sezmoq, payqamoq | Ich habe gemerkt, dass ich den Schlüssel vergessen hatte. | Kalitni unutganimni payqadim.
+sich vorstellen | verb | ein Bild im Kopf machen; auch: sich bekannt machen | tasavvur qilmoq; o'zini tanishtirmoq | Stell dir vor, du bist am Strand. | Plyajda ekaningni tasavvur qil.
+bewusst | adjective | etwas wissend; mit Absicht | ongli, xabardor | Bist du dir der Risiken bewusst? | Xavflardan xabardormisan?
+empfindlich | adjective | leicht verletzt oder gekränkt | ta'sirchan, nozik | Er ist sehr empfindlich gegenüber Kritik. | U tanqidga juda ta'sirchan.
+neugierig | adjective | etwas wissen wollend | qiziquvchan | Kinder sind von Natur aus neugierig. | Bolalar tabiatan qiziquvchan.
+unabhängig | adjective | keine Hilfe von anderen brauchend | mustaqil | Sie ist sehr unabhängig. | U juda mustaqil.
+## management | 📊 | Work & Management | Ish va boshqaruv | Работа и управление
+der Manager | noun | eine Person, die ein Team oder eine Firma leitet | menejer, rahbar | Ich möchte mit dem Manager sprechen. | Menejer bilan gaplashmoqchiman.
+das Personal | noun | alle Mitarbeiter einer Firma | xodimlar | Das Personal ist freundlich. | Xodimlar xushmuomala.
+die Verantwortung | noun | die Pflicht, sich um etwas zu kümmern | mas'uliyat | Das ist meine Verantwortung. | Bu mening mas'uliyatim.
+die Aufgabe | noun | eine Arbeit, die man erledigen muss | vazifa, topshiriq | Ich habe heute drei Aufgaben. | Bugun uchta vazifam bor.
+das Ziel | noun | was man erreichen will | maqsad | Unser Ziel ist mehr Umsatz. | Maqsadimiz – ko'proq savdo.
+die Strategie | noun | ein Plan, um ein Ziel zu erreichen | strategiya | Wir brauchen eine neue Strategie. | Bizga yangi strategiya kerak.
+der Bericht | noun | ein Text, der über etwas informiert | hisobot | Schicken Sie mir den Bericht bis Freitag. | Hisobotni jumagacha yuboring.
+das Projekt | noun | eine geplante Arbeit | loyiha | Das Projekt dauert sechs Monate. | Loyiha olti oy davom etadi.
+die Rückmeldung | noun | eine Antwort oder Meinung zu einer Arbeit | fikr-mulohaza | Danke für Ihre Rückmeldung. | Fikr-mulohazangiz uchun rahmat.
+der Zeitplan | noun | ein Plan, wann was passiert | jadval | Wir liegen hinter dem Zeitplan. | Biz jadvaldan ortda qolyapmiz.
+delegieren | verb | einen Teil der Arbeit anderen geben | topshirmoq | Ein guter Chef kann delegieren. | Yaxshi rahbar vazifani topshira oladi.
+erreichen | verb | ein Ziel schaffen; auch: jemanden kontaktieren | erishmoq; bog'lanmoq | Wir haben unser Ziel erreicht. | Maqsadimizga erishdik.
+organisieren | verb | etwas planen und vorbereiten | tashkil qilmoq | Sie hat die Konferenz organisiert. | U konferensiyani tashkil qildi.
+zusammenarbeiten | verb | gemeinsam arbeiten | hamkorlik qilmoq | Die beiden Firmen arbeiten eng zusammen. | Ikki firma yaqin hamkorlik qiladi.
+motivieren | verb | jemandem Lust machen, etwas zu tun | rag'batlantirmoq | Ein guter Chef motiviert das Team. | Yaxshi rahbar jamoani rag'batlantiradi.
+beaufsichtigen | verb | die Arbeit anderer kontrollieren | nazorat qilmoq | Er beaufsichtigt zehn Arbeiter. | U o'nta ishchini nazorat qiladi.
+effizient | adjective | gut arbeitend, ohne Zeit oder Geld zu verschwenden | samarali | Das neue System ist effizienter. | Yangi tizim samaraliroq.
+flexibel | adjective | leicht änderbar | moslashuvchan | Ich habe flexible Arbeitszeiten. | Ish vaqtim moslashuvchan.
+erfahren | adjective | mit viel Erfahrung | tajribali | Wir suchen eine erfahrene Lehrerin. | Biz tajribali o'qituvchi qidiryapmiz.
+## kunst | 🎨 | Arts & Culture | San'at va madaniyat | Искусство и культура
+das Meisterwerk | noun | ein Kunstwerk von höchster Qualität | durdona asar | Die Mona Lisa ist ein Meisterwerk. | Mona Liza – durdona asar.
+die Skulptur | noun | ein Kunstwerk aus Stein, Holz oder Metall | haykal | Im Park steht eine Bronzeskulptur. | Bog'da bronza haykal bor.
+die Dichtung | noun | Gedichte als Form der Literatur; auch: Abdichtung | she'riyat | Navois Dichtung ist berühmt. | Navoiy she'riyati mashhur.
+die Literatur | noun | Bücher, Gedichte und Theaterstücke mit künstlerischem Wert | adabiyot | Sie studiert usbekische Literatur. | U o'zbek adabiyotini o'rganadi.
+das Erbe | noun | was man von früheren Generationen bekommt | meros | Buchara gehört zum Weltkulturerbe. | Buxoro jahon madaniy merosiga kiradi.
+die Tradition | noun | eine Sitte, die es schon lange gibt | an'ana | Freitags Plov zu essen ist bei uns Tradition. | Juma kuni palov yeyish bizda an'ana.
+die Galerie | noun | ein Ort, wo Kunst gezeigt wird | galereya | Wir besuchen die Nationalgalerie. | Biz milliy galereyaga boramiz.
+das Handwerk | noun | die Arbeit, Dinge mit der Hand herzustellen | hunarmandchilik | Töpferei ist ein traditionelles Handwerk. | Kulolchilik an'anaviy hunarmandchilik.
+der Autor | noun | eine Person, die ein Buch schreibt | muallif | Wer ist der Autor dieses Romans? | Bu romanning muallifi kim?
+das Theater | noun | ein Gebäude, in dem Stücke gespielt werden | teatr | Wir waren gestern im Theater. | Kecha teatrda edik.
+das Festival | noun | eine Veranstaltung mit Musik, Filmen oder Feiern | festival | Das Musikfestival dauert drei Tage. | Musiqa festivali uch kun davom etadi.
+erschaffen | verb | etwas Neues herstellen, besonders Kunst | yaratmoq | Sie erschafft wunderschöne Bilder. | U ajoyib rasmlar yaratadi.
+ausdrücken | verb | ein Gefühl oder eine Meinung zeigen | ifodalamoq | Musik hilft mir, meine Gefühle auszudrücken. | Musiqa his-tuyg'ularimni ifodalashga yordam beradi.
+inspirieren | verb | jemandem Ideen oder Lust zum Schaffen geben | ilhomlantirmoq | Die Natur inspiriert viele Künstler. | Tabiat ko'plab rassomlarni ilhomlantiradi.
+bewundern | verb | jemanden oder etwas sehr gut finden | qoyil qolmoq, hayratlanmoq | Ich bewundere seine Arbeit. | Uning ishiga qoyil qolaman.
+klassisch | adjective | traditionell und von bleibendem Wert | klassik, mumtoz | Sie liebt klassische Musik. | U mumtoz musiqani yaxshi ko'radi.
+originell | adjective | neu und anders | o'ziga xos, original | Das ist eine originelle Idee. | Bu o'ziga xos g'oya.
+kreativ | adjective | gut darin, neue Ideen zu haben | ijodkor | Mein Sohn ist sehr kreativ. | O'g'lim juda ijodkor.
+zeitgenössisch | adjective | aus der heutigen Zeit | zamonaviy | Ich verstehe zeitgenössische Kunst nicht. | Zamonaviy san'atni tushunmayman.
+## tourismus | 🏝️ | Travel & Tourism | Turizm | Туризм
+die Reiseroute | noun | der Plan einer Reise mit Orten und Zeiten | sayohat yo'nalishi | Unsere Reiseroute umfasst drei Städte. | Yo'nalishimizga uchta shahar kiradi.
+der Ferienort | noun | ein Ort, wo man Urlaub macht | dam olish maskani, kurort | Sie waren in einem Skiferienort. | Ular chang'i kurortida bo'lishdi.
+der Ausflug | noun | eine kurze Reise, oft mit einer Gruppe | sayr, ekskursiya | Wir machen einen Ausflug in die Berge. | Tog'larga sayrga boramiz.
+die Reservierung | noun | das Freihalten eines Zimmers oder Tisches | bron | Ich habe eine Reservierung für zwei Nächte. | Ikki kecha uchun bronim bor.
+die Abfahrt | noun | der Moment, wenn ein Zug oder Bus losfährt | jo'nash | Die Abfahrt ist um sechs Uhr morgens. | Jo'nash ertalab soat oltida.
+der Zoll | noun | die Stelle an der Grenze, wo Gepäck kontrolliert wird | bojxona | Wir sind schnell durch den Zoll gekommen. | Bojxonadan tez o'tdik.
+das Visum | noun | ein Dokument, mit dem man in ein Land einreisen darf | viza | Brauche ich ein Visum für Deutschland? | Germaniya uchun viza kerakmi?
+das Wahrzeichen | noun | ein bekanntes Gebäude, das für eine Stadt steht | ramz, timsol | Der Registan ist das Wahrzeichen Samarkands. | Registon Samarqandning ramzi.
+der Einheimische | noun | eine Person, die in einem Ort lebt | mahalliy aholi vakili | Frag einen Einheimischen nach dem Weg. | Yo'lni mahalliy odamdan so'ra.
+die Hauptsaison | noun | die Zeit im Jahr, in der die meisten reisen | mavsum cho'qqisi | In der Hauptsaison sind Hotels teuer. | Mavsum cho'qqisida mehmonxonalar qimmat.
+stornieren | verb | eine Buchung rückgängig machen | bekor qilmoq | Ich musste den Flug stornieren. | Reysni bekor qilishga majbur bo'ldim.
+verschieben | verb | auf einen späteren Zeitpunkt legen | keyinga surmoq | Wir haben die Reise auf den Frühling verschoben. | Safarni bahorga surdik.
+pendeln | verb | regelmäßig zwischen Wohnort und Arbeit fahren | qatnamoq (ishga) | Ich pendle mit der U-Bahn. | Ishga metroda qatnayman.
+einsteigen | verb | in einen Zug, Bus oder ein Flugzeug gehen | (transportga) chiqmoq | Die Passagiere können jetzt einsteigen. | Yo'lovchilar endi chiqishlari mumkin.
+bummeln | verb | langsam und ohne Ziel spazieren gehen | sayr qilmoq, aylanib yurmoq | Wir bummelten durch die Altstadt. | Eski shahar bo'ylab aylanib yurdik.
+atemberaubend | adjective | so schön, dass einem der Atem stockt | hayratlanarli | Die Aussicht vom Gipfel ist atemberaubend. | Cho'qqidan manzara hayratlanarli.
+abgelegen | adjective | weit weg von Städten und Menschen | olis, chekka | Sie wohnen in einem abgelegenen Dorf. | Ular olis qishloqda yashashadi.
+malerisch | adjective | sehr hübsch, wie ein Bild | manzarali | Das ist ein malerisches Städtchen. | Bu manzarali shaharcha.
+überfüllt | adjective | mit zu vielen Menschen | odam gavjum, tiqilinch | Der Strand war überfüllt. | Plyaj odam bilan tiqilinch edi.
+## soziales | 🤝 | Social Issues | Ijtimoiy muammolar | Социальные проблемы
+die Armut | noun | der Zustand, sehr arm zu sein | qashshoqlik | Millionen Menschen leben in Armut. | Millionlab odamlar qashshoqlikda yashaydi.
+die Arbeitslosigkeit | noun | der Zustand, keine Arbeit zu haben | ishsizlik | Die Arbeitslosigkeit ist gesunken. | Ishsizlik kamaydi.
+obdachlos | adjective | ohne Wohnung | uysiz, boshpanasiz | Die Organisation hilft obdachlosen Menschen. | Tashkilot uysiz odamlarga yordam beradi.
+die Wohltätigkeit | noun | das Helfen von Menschen in Not | xayriya | Sie spendet viel für Wohltätigkeit. | U xayriyaga ko'p pul beradi.
+die Gleichberechtigung | noun | gleiche Rechte für alle | teng huquqlilik | Wir setzen uns für Gleichberechtigung ein. | Biz teng huquqlilik uchun kurashamiz.
+die Diskriminierung | noun | unfaire Behandlung wegen Herkunft, Geschlecht usw. | kamsitish | Diskriminierung am Arbeitsplatz ist verboten. | Ish joyida kamsitish taqiqlangan.
+die Bevölkerung | noun | alle Menschen, die an einem Ort leben | aholi | Die Bevölkerung der Stadt wächst. | Shahar aholisi o'smoqda.
+der Einwanderer | noun | eine Person, die in ein anderes Land zieht | muhojir | Viele Einwanderer arbeiten auf dem Bau. | Ko'plab muhojirlar qurilishda ishlaydi.
+die Gewalt | noun | körperlicher Angriff; auch: Macht | zo'ravonlik; hokimiyat | Im Fernsehen gibt es zu viel Gewalt. | Televizorda zo'ravonlik juda ko'p.
+die Generation | noun | alle Menschen, die etwa gleich alt sind | avlod | Die junge Generation nutzt viel soziale Medien. | Yosh avlod ijtimoiy tarmoqlardan ko'p foydalanadi.
+das Recht | noun | was jeder laut Gesetz darf; auch: die Gesetze | huquq | Kinder haben auch Rechte. | Bolalarning ham huquqlari bor.
+protestieren | verb | öffentlich zeigen, dass man dagegen ist | norozilik bildirmoq | Studenten protestierten gegen das Gesetz. | Talabalar qonunga qarshi norozilik bildirishdi.
+spenden | verb | Geld oder Dinge geben, um zu helfen | xayr-ehson qilmoq | Er hat seine alten Kleider gespendet. | U eski kiyimlarini xayr-ehson qildi.
+lösen | verb | eine Antwort auf ein Problem finden | hal qilmoq | Wir müssen das Problem gemeinsam lösen. | Muammoni birga hal qilishimiz kerak.
+bekämpfen | verb | gegen etwas kämpfen | qarshi kurashmoq | Die Regierung muss die Armut bekämpfen. | Hukumat qashshoqlikka qarshi kurashishi kerak.
+steigen | verb | höher oder mehr werden; auch: klettern | oshmoq, ko'tarilmoq | Die Preise sind um zehn Prozent gestiegen. | Narxlar o'n foizga oshdi.
+älter | adjective | höflich für alte Menschen; Komparativ von alt | keksa, yoshi kattaroq | Wir sollten älteren Menschen helfen. | Keksalarga yordam berishimiz kerak.
+behindert | adjective | mit einer körperlichen oder geistigen Einschränkung | nogironligi bor | Das Gebäude ist für behinderte Menschen zugänglich. | Bino nogironligi bor odamlar uchun qulay.
+gerecht | adjective | alle gleich behandelnd | adolatli | Das ist nicht gerecht! | Bu adolatdan emas!
+## beschreiben | 🖋️ | Descriptive Language | Tasviriy so'zlar | Описательная лексика
+offensichtlich | adjective | leicht zu sehen oder zu verstehen | aniq, ravshan | Die Antwort ist offensichtlich. | Javob aniq.
+selten | adjective | nicht oft vorkommend | kamdan-kam, noyob | Dieser Vogel ist sehr selten. | Bu qush juda noyob.
+riesig | adjective | sehr, sehr groß | ulkan | Sie wohnen in einem riesigen Haus. | Ular ulkan uyda yashashadi.
+winzig | adjective | sehr, sehr klein | juda kichkina, mitti | Das Baby hat winzige Hände. | Chaqaloqning qo'lchalari juda kichkina.
+uralt | adjective | sehr alt, aus früher Zeit | qadimiy, juda eski | Wir besuchten eine uralte Stadt. | Biz qadimiy shaharga bordik.
+modern | adjective | neu und nach den neuesten Ideen | zamonaviy | Das Hotel ist sehr modern. | Mehmonxona juda zamonaviy.
+gewöhnlich | adjective | normal, nicht besonders | oddiy, odatiy | Es war ein ganz gewöhnlicher Tag. | Bu oddiy bir kun edi.
+ungewöhnlich | adjective | anders als normal | g'ayrioddiy | Was für ein ungewöhnlicher Name! | Qanday g'ayrioddiy ism!
+kompliziert | adjective | schwer zu verstehen | murakkab | Die Anleitung ist kompliziert. | Ko'rsatma murakkab.
+wesentlich | adjective | sehr wichtig, grundlegend | muhim, asosiy | Das ist ein wesentlicher Unterschied. | Bu muhim farq.
+wertvoll | adjective | viel Geld wert; sehr nützlich | qimmatli, qimmatbaho | Danke für den wertvollen Rat. | Qimmatli maslahat uchun rahmat.
+eindrucksvoll | adjective | so, dass man es bewundert | ta'sirli, hayratlanarli | Ihr Deutsch ist eindrucksvoll. | Uning nemis tili hayratlanarli.
+ekelhaft | adjective | sehr unangenehm | jirkanch | Das Essen war ekelhaft. | Ovqat jirkanch edi.
+schrecklich | adjective | sehr schlimm | dahshatli | Ich hatte einen schrecklichen Tag. | Kunim dahshatli o'tdi.
+wunderschön | adjective | sehr schön | juda go'zal | Was für eine wunderschöne Aussicht! | Qanday go'zal manzara!
+glatt | adjective | eben, ohne Unebenheiten; auch: rutschig | silliq; sirpanchiq | Die Straße ist glatt. | Yo'l sirpanchiq.
+rau | adjective | nicht glatt; auch: unfreundlich | g'adir-budir; qo'pol | Die Wand fühlt sich rau an. | Devor g'adir-budir.
+großartig | adjective | sehr gut, hervorragend | ajoyib, zo'r | Das ist eine großartige Idee! | Bu ajoyib g'oya!
+bunt | adjective | mit vielen Farben | rang-barang | Die Kinder malen bunte Bilder. | Bolalar rang-barang rasmlar chizishyapti.
+## verben_b2 | 🧭 | Key Verbs | Muhim fe'llar | Ключевые глаголы
+erfordern | verb | nötig machen, verlangen | talab qilmoq | Die Stelle erfordert Erfahrung. | Bu ish tajriba talab qiladi.
+erhalten | verb | bekommen; auch: in gutem Zustand halten | olmoq; saqlamoq | Sie erhalten die Antwort per E-Mail. | Javobni elektron pochta orqali olasiz.
+aufrechterhalten | verb | etwas auf dem gleichen Stand halten | saqlab turmoq | Es ist schwer, den Kontakt aufrechtzuerhalten. | Aloqani saqlab turish qiyin.
+sicherstellen | verb | dafür sorgen, dass etwas sicher passiert | ta'minlamoq, kafolatlamoq | Bitte stellen Sie sicher, dass die Tür zu ist. | Iltimos, eshik yopiqligiga ishonch hosil qiling.
+betreffen | verb | mit etwas zu tun haben; Wirkung haben auf | taalluqli bo'lmoq, ta'sir qilmoq | Das Problem betrifft alle. | Muammo hammaga taalluqli.
+berücksichtigen | verb | bei einer Entscheidung an etwas denken | hisobga olmoq | Wir müssen die Kosten berücksichtigen. | Xarajatlarni hisobga olishimiz kerak.
+schätzen | verb | ungefähr berechnen; auch: wertvoll finden | chamalamoq; qadrlamoq | Ich schätze, es dauert zwei Stunden. | Menimcha, bu ikki soat davom etadi.
+feststellen | verb | etwas bemerken oder herausfinden | aniqlamoq, payqamoq | Der Arzt stellte nichts Schlimmes fest. | Shifokor jiddiy narsa aniqlamadi.
+enthüllen | verb | etwas Geheimes bekannt machen | oshkor qilmoq | Er hat endlich die Wahrheit enthüllt. | Nihoyat u haqiqatni oshkor qildi.
+ersetzen | verb | etwas Neues an die Stelle von etwas Altem tun | almashtirmoq | Wir müssen die Batterie ersetzen. | Batareyani almashtirishimiz kerak.
+sich bemühen | verb | sich große Mühe geben | harakat qilmoq, tirishmoq | Sie bemüht sich, eine Arbeit zu finden. | U ish topishga harakat qilyapti.
+entstehen | verb | anfangen zu existieren | paydo bo'lmoq, yuzaga kelmoq | Es entstanden neue Probleme. | Yangi muammolar paydo bo'ldi.
+anlocken | verb | Menschen oder Tiere dazu bringen zu kommen | jalb qilmoq, o'ziga tortmoq | Die Stadt lockt viele Touristen an. | Shahar ko'plab sayyohlarni jalb qiladi.
+ermutigen | verb | jemandem Mut machen | dalda bermoq | Meine Eltern haben mich ermutigt zu studieren. | Ota-onam meni o'qishga dalda berishdi.
+zustehen | verb | jemandem mit Recht gehören | haqli bo'lmoq, tegishli bo'lmoq | Dir steht eine Pause zu. | Sen dam olishga haqlisan.
+zugeben | verb | sagen, dass etwas Unangenehmes wahr ist | tan olmoq | Er hat seinen Fehler zugegeben. | U xatosini tan oldi.
+erinnern | verb | jemanden an etwas denken lassen | eslatmoq | Erinnere mich daran, sie anzurufen. | Unga qo'ng'iroq qilishni eslatib qo'y.
+genehmigen | verb | offiziell erlauben | tasdiqlamoq, ruxsat bermoq | Der Plan wurde genehmigt. | Reja tasdiqlandi.
+annehmen | verb | glauben, dass etwas so ist; auch: akzeptieren | taxmin qilmoq; qabul qilmoq | Ich nehme an, du weißt es schon. | Sen buni allaqachon bilasan deb o'ylayman.

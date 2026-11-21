@@ -1,6 +1,7 @@
 import { ArrowLeft, Play as PlayIcon } from 'lucide-react'
 import { lazy, Suspense, useCallback, useEffect, useReducer, useRef, useState } from 'react'
 import { Link, useNavigate, useParams, useSearchParams } from 'react-router-dom'
+import { LevelComplete, LevelRoundSummary } from '../components/LevelProgress'
 import { Results, RoundComplete } from '../components/Results'
 import { SourcePicker, type SourceChoice } from '../components/SourcePicker'
 import { EmptyState, ErrorState, Segmented, Spinner, Toggle } from '../components/ui'
@@ -12,7 +13,7 @@ import type { GameId, GameItem, GameOutcome, GameProps, Source } from '../games/
 import { useT } from '../i18n'
 import { api } from '../lib/api'
 import { useMainButton, useTelegramBack } from '../lib/hooks'
-import type { ResultsResponse } from '../lib/types'
+import type { LevelProgress, LevelRoundOutcome, ResultsResponse } from '../lib/types'
 import { useApp } from '../store/app'
 
 const COMPONENTS: Record<string, React.LazyExoticComponent<React.ComponentType<GameProps>>> = {
@@ -101,7 +102,24 @@ function Setup({ game, onStart }: { game: GameId; onStart: (q: Record<string, st
   )
 }
 
-type LoadPhase = 'loading' | 'error' | 'empty' | 'ready'
+type LoadPhase = 'loading' | 'error' | 'empty' | 'ready' | 'completed' | 'pool_done'
+
+/** Words per server-built level round (Match uses the board size of the difficulty). */
+export const LEVEL_ROUND_SIZE: Partial<Record<GameId, number>> = { speed: 24, builder: 10, falling: 24, memory: 6, derdiedas: 20 }
+
+interface LevelRoundResponse {
+  session_id: string | null
+  completed: boolean
+  pool_done: boolean
+  words: GameItem[]
+  progress: LevelProgress
+}
+
+interface LevelState {
+  sessionId: string | null
+  before: LevelProgress | null
+  outcome: LevelRoundOutcome | null
+}
 
 function buildRounds(items: GameItem[], game: GameId, difficulty: Difficulty): GameItem[][] {
   return game === 'match' ? splitRounds(items, BOARD_SIZES[difficulty]) : [items]
@@ -119,10 +137,27 @@ function Runner({ game, source, params }: { game: GameId; source: Source; params
   const [session, dispatch] = useReducer(sessionReducer, createSession([]))
   const [daily, setDaily] = useState<{ already_played?: boolean; my_score?: number | null; score?: number }>({})
   const submitted = useRef(new Set<string>())
+  const isLevel = source === 'level'
+  const [levelRound, setLevelRound] = useState<LevelState>({ sessionId: null, before: null, outcome: null })
+  const sessionRef = useRef<string | null>(null)
 
   const fetchItems = useCallback(async () => {
     setLoad('loading')
     try {
+      if (source === 'level') {
+        // FOUND = LEARNED: the server builds every level round (unfound words first, "takror" fillers last).
+        const size = game === 'match' ? BOARD_SIZES[difficulty] : (LEVEL_ROUND_SIZE[game] ?? 10)
+        const lr = await api.get<LevelRoundResponse>(`/levels/${track}/${params.get('level') || 'A1'}/round/`, { size, game, pack: params.get('pack') })
+        sessionRef.current = lr.session_id
+        setLevelRound({ sessionId: lr.session_id, before: lr.progress, outcome: null })
+        if (lr.completed) return setLoad('completed')
+        if (lr.pool_done) return setLoad('pool_done')
+        const usable = usableItems(lr.words, game)
+        setItems(usable)
+        dispatch({ type: 'RESTART', rounds: [usable] })
+        setLoad(usable.length ? 'ready' : 'empty')
+        return
+      }
       const r = await api.get<{ items: GameItem[]; already_played?: boolean; my_score?: number | null }>('/games/words/', {
         game,
         track,
@@ -154,20 +189,31 @@ function Runner({ game, source, params }: { game: GameId; source: Source; params
       if (stat.xp !== null || submitted.current.has(key)) continue
       submitted.current.add(key)
       const playId = session.playId
+      const sessionId = sessionRef.current
       if (!stat.results.length) {
         dispatch({ type: 'SAVED', playId, round: stat.round, xp: 0 })
+        if (source === 'level') setLevelRound((l) => (l.before ? { ...l, outcome: { session_id: sessionId || '', new_found_count: 0, progress: l.before, completed_now: false, bonus_xp: 0 } } : l))
         continue
       }
-      api
-        .post<ResultsResponse>('/games/results/', {
+      const save = async () => {
+        if (source === 'level' && sessionId) {
+          // Report every answer (idempotent on the server), then close the round.
+          const answers = stat.results.filter((r) => r.word_id).map((r) => ({ word_id: r.word_id, correct: r.correct }))
+          if (answers.length) await api.post('/levels/answer/', { session_id: sessionId, answers }).catch(() => null)
+        }
+        return api.post<ResultsResponse>('/games/results/', {
           game,
           track,
           source,
+          session_id: source === 'level' ? sessionId : undefined,
           results: stat.results,
           duration_ms: Math.round(stat.durationMs),
           combo_max: stat.comboMax ?? 0,
         })
+      }
+      save()
         .then((r) => {
+          if (r.level_round) setLevelRound((l) => ({ ...l, outcome: r.level_round! }))
           dispatch({ type: 'SAVED', playId, round: stat.round, xp: r.xp_earned, newAchievements: r.new_achievements, learnedNow: r.learned_now.length })
           bumpUser({ xp: r.xp_total, streak: r.streak, level: r.level })
           if (r.daily) setDaily((d) => ({ ...d, score: r.daily!.score }))
@@ -182,11 +228,16 @@ function Runner({ game, source, params }: { game: GameId; source: Source; params
   )
   // "Yangi o'yin": same word set, freshly shuffled, from round 1.
   const newGame = useCallback(() => {
+    if (isLevel) {
+      void fetchItems() // a fresh server round: found words are left out
+      window.scrollTo({ top: 0 })
+      return
+    }
     const reshuffled = shuffle(items)
     setItems(reshuffled)
     dispatch({ type: 'RESTART', rounds: buildRounds(reshuffled, game, difficulty) })
     window.scrollTo({ top: 0 })
-  }, [items, game, difficulty])
+  }, [items, game, difficulty, isLevel, fetchItems])
   const nextRound = useCallback(() => {
     dispatch({ type: 'NEXT_ROUND' })
     window.scrollTo({ top: 0 })
@@ -196,6 +247,23 @@ function Runner({ game, source, params }: { game: GameId; source: Source; params
     return (
       <div className="grid min-h-[60vh] place-items-center">
         <Spinner className="h-8 w-8 text-primary" />
+      </div>
+    )
+  if (load === 'completed')
+    return (
+      <div className="page max-w-xl">
+        <LevelComplete level={params.get('level') || 'A1'} bonusXp={0} />
+      </div>
+    )
+  if (load === 'pool_done')
+    return (
+      <div className="page">
+        <EmptyState
+          emoji="✅"
+          title={t('level.pool_done')}
+          text={t('level.pool_done_text')}
+          action={<Link className="btn-primary" to={`/levels/${params.get('level') || 'A1'}`}>{t('res.other_set')}</Link>}
+        />
       </div>
     )
   if (load === 'error') return <div className="page"><ErrorState error={error} onRetry={fetchItems} /></div>
@@ -243,7 +311,14 @@ function Runner({ game, source, params }: { game: GameId; source: Source; params
       {session.status === 'game_complete' &&
         (() => {
           const sum = totals(session)
+          const lr = levelRound.outcome
           return (
+            <>
+            {isLevel && lr && (lr.completed_now || lr.progress.completed) && (
+              <div className="mx-auto mb-4 w-full max-w-xl">
+                <LevelComplete level={lr.progress.level} bonusXp={lr.bonus_xp} />
+              </div>
+            )}
             <Results
               track={track}
               durationMs={sum.durationMs}
@@ -257,7 +332,9 @@ function Runner({ game, source, params }: { game: GameId; source: Source; params
               onNewGame={newGame}
               otherSetTo={game === 'daily' || game === 'review' ? undefined : otherSetPath(source, params)}
               extra={
-                game === 'daily' && daily.score !== undefined ? (
+                isLevel && levelRound.before ? (
+                  <LevelRoundSummary before={levelRound.before} after={lr?.progress ?? null} newFound={lr ? lr.new_found_count : null} />
+                ) : game === 'daily' && daily.score !== undefined ? (
                   <div className="mt-2 space-y-2">
                     <div className="text-lg font-black text-primary">{t('daily.score', { score: daily.score })}</div>
                     <Link to="/leaderboard?tab=daily" className="btn-soft">
@@ -267,6 +344,7 @@ function Runner({ game, source, params }: { game: GameId; source: Source; params
                 ) : null
               }
             />
+            </>
           )
         })()}
     </div>

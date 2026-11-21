@@ -63,3 +63,255 @@ to overlook | verb | to fail to notice or consider something | e'tibordan chetda
 whimsical | adjective | unusual and playful in a pleasant way | g'aroyib, injiq va quvnoq | The film has a whimsical style. | Filmning uslubi g'aroyib va quvnoq.
 to scrutinise | verb | to examine something very carefully | sinchiklab tekshirmoq | Experts scrutinised the report. | Mutaxassislar hisobotni sinchiklab tekshirishdi.
 poignant | adjective | causing a strong feeling of sadness | ta'sirli, yurakni ezuvchi | It was a poignant moment. | Bu ta'sirli lahza edi.
+## debate | 🗣️ | Argument & Debate | Bahs va munozara | Аргументация и дебаты
+premise | noun | an idea on which an argument is based | asos, dastlabki fikr | The premise of his argument is wrong. | Uning dalilining asosi noto'g'ri.
+counterargument | noun | an argument against another argument | qarshi dalil | Consider the counterargument before you decide. | Qaror qilishdan oldin qarshi dalilni ham ko'rib chiqing.
+fallacy | noun | a false idea or a mistake in reasoning | xato fikr, mantiqiy xato | It's a fallacy that money brings happiness. | Pul baxt keltiradi degani xato fikr.
+rationale | noun | the reasons behind a decision | asoslash, mantiqiy asos | What is the rationale for this change? | Bu o'zgarishning asosi nima?
+stance | noun | a publicly stated opinion | pozitsiya, munosabat | What is the party's stance on taxes? | Partiyaning soliqlar bo'yicha pozitsiyasi qanday?
+concession | noun | something you admit or give up in an argument | yon berish | Both sides made concessions. | Ikkala tomon ham yon berdi.
+to refute | verb | to prove that something is wrong | rad etmoq (dalil bilan) | She refuted all his claims. | U uning barcha da'volarini rad etdi.
+to concede | verb | to admit that something is true, often unwillingly | tan olmoq, yon bermoq | He conceded that he was wrong. | U noto'g'ri ekanini tan oldi.
+to assert | verb | to state something firmly | qat'iy ta'kidlamoq | She asserted her innocence. | U o'zining aybsizligini qat'iy ta'kidladi.
+to dispute | verb | to argue that something is not correct | e'tiroz bildirmoq, bahslashmoq | Nobody disputes the facts. | Faktlarga hech kim e'tiroz bildirmaydi.
+to reconcile | verb | to make two ideas or people agree | murosaga keltirmoq | It's hard to reconcile these two views. | Bu ikki qarashni murosaga keltirish qiyin.
+to substantiate | verb | to provide evidence to support a claim | asoslamoq, dalillamoq | Can you substantiate that claim? | Bu da'voni dalillay olasizmi?
+to dismiss | verb | to decide that something is not worth considering | rad etmoq, e'tiborsiz qoldirmoq | He dismissed the idea as nonsense. | U g'oyani bema'nilik deb rad etdi.
+compelling | adjective | very convincing | ishonarli, inkor qilib bo'lmas | She made a compelling case. | U juda ishonarli dalil keltirdi.
+valid | adjective | based on good reasoning; legally accepted | asosli; amal qiluvchi | That's a valid point. | Bu asosli fikr.
+flawed | adjective | having a mistake or weakness | nuqsonli, kamchilikli | The study was flawed. | Tadqiqot kamchilikli edi.
+persuasive | adjective | able to make people believe something | ishontiruvchi | He is a persuasive speaker. | U ishontiruvchi notiq.
+rhetorical | adjective | used for effect rather than for a real answer | ritorik | It was just a rhetorical question. | Bu shunchaki ritorik savol edi.
+irrefutable | adjective | impossible to prove wrong | rad etib bo'lmaydigan | The evidence is irrefutable. | Dalillarni rad etib bo'lmaydi.
+nuance | noun | a very small difference in meaning or feeling | nozik farq, jilo | Translators must understand every nuance. | Tarjimonlar har bir nozik farqni tushunishi kerak.
+## economics | 📈 | Economics & Finance | Iqtisod va moliya | Экономика и финансы
+inflation | noun | a general rise in prices over time | inflyatsiya | Inflation reached ten percent. | Inflyatsiya o'n foizga yetdi.
+recession | noun | a period when the economy does badly | iqtisodiy tanazzul, retsessiya | The country is in recession. | Mamlakat iqtisodiy tanazzulda.
+fiscal | adjective | relating to government money and taxes | moliyaviy, fiskal | The new fiscal policy cuts taxes. | Yangi fiskal siyosat soliqlarni kamaytiradi.
+subsidy | noun | money the government pays to lower a price | subsidiya | Farmers receive a subsidy. | Fermerlar subsidiya oladi.
+tariff | noun | a tax on imported goods | boj tarifi | The government raised tariffs on cars. | Hukumat avtomobillarga boj tariflarini oshirdi.
+asset | noun | something valuable that a person or company owns | aktiv, boylik | The house is their biggest asset. | Uy ularning eng katta boyligi.
+liability | noun | a debt; legal responsibility | majburiyat; javobgarlik | The company has huge liabilities. | Kompaniyaning katta majburiyatlari bor.
+dividend | noun | part of a company's profit paid to shareholders | dividend | Shareholders received a dividend. | Aksiyadorlar dividend olishdi.
+monopoly | noun | complete control of a market by one company | monopoliya | The firm has a monopoly on electricity. | Firma elektr energiyasi bo'yicha monopoliyaga ega.
+austerity | noun | strict cuts in government spending | tejamkorlik siyosati | Austerity made people angry. | Tejamkorlik siyosati odamlarni g'azablantirdi.
+expenditure | noun | the total amount of money spent | xarajat | Public expenditure on health increased. | Sog'liqni saqlashga davlat xarajatlari oshdi.
+equity | noun | the value of shares; fairness | kapital, aksiyalar; adolat | They sold equity to raise money. | Ular pul yig'ish uchun aksiyalar sotishdi.
+to fluctuate | verb | to change often between higher and lower levels | o'zgarib turmoq, tebranmoq | Oil prices fluctuate a lot. | Neft narxlari ko'p o'zgarib turadi.
+to stimulate | verb | to encourage something to grow or develop | rag'batlantirmoq, jonlantirmoq | Lower taxes can stimulate the economy. | Past soliqlar iqtisodiyotni jonlantirishi mumkin.
+to allocate | verb | to give money or resources for a purpose | ajratmoq | The city allocated funds for schools. | Shahar maktablar uchun mablag' ajratdi.
+to deplete | verb | to reduce the amount of something | tugatmoq, kamaytirmoq | The war depleted the country's reserves. | Urush mamlakat zaxiralarini tugatdi.
+lucrative | adjective | producing a lot of money | daromadli, foydali | It's a lucrative business. | Bu daromadli biznes.
+volatile | adjective | likely to change suddenly | beqaror, o'zgaruvchan | The market is very volatile. | Bozor juda beqaror.
+affluent | adjective | rich | badavlat, boy | They live in an affluent area. | Ular badavlat hududda yashashadi.
+sustainable growth | noun | economic growth that can continue for a long time | barqaror o'sish | The aim is sustainable growth. | Maqsad – barqaror o'sish.
+## rights | 🏛️ | Law & Rights | Huquq | Право и права
+jurisdiction | noun | the official power to make legal decisions | yurisdiksiya, vakolat doirasi | This case is outside our jurisdiction. | Bu ish bizning vakolatimizdan tashqarida.
+verdict | noun | the decision in a court case | hukm, sud qarori | The jury reached a verdict. | Hakamlar hay'ati hukm chiqardi.
+plaintiff | noun | a person who brings a case against someone in court | da'vogar | The plaintiff asked for compensation. | Da'vogar tovon so'radi.
+defendant | noun | a person accused in a court case | ayblanuvchi, javobgar | The defendant pleaded not guilty. | Ayblanuvchi aybini tan olmadi.
+compensation | noun | money paid to someone for loss or damage | tovon puli, kompensatsiya | She received compensation for the injury. | U jarohat uchun tovon oldi.
+precedent | noun | an earlier decision used as an example | pretsedent, namuna | The case set a precedent. | Bu ish pretsedent yaratdi.
+statute | noun | a written law | qonun, nizom | The statute protects workers. | Qonun ishchilarni himoya qiladi.
+amendment | noun | a change made to a law or document | tuzatish, o'zgartirish | Parliament passed an amendment. | Parlament tuzatishni qabul qildi.
+loophole | noun | a mistake in a law that lets people avoid it | qonundagi bo'shliq | They used a loophole to avoid tax. | Ular soliqdan qochish uchun qonundagi bo'shliqdan foydalanishdi.
+liberty | noun | freedom | erkinlik, ozodlik | They fought for liberty. | Ular erkinlik uchun kurashishdi.
+to prosecute | verb | to accuse someone officially in a court | sudga bermoq, jinoiy javobgarlikka tortmoq | He was prosecuted for fraud. | U firibgarlik uchun javobgarlikka tortildi.
+to enforce | verb | to make sure a law is obeyed | ijro etmoq, majburan amalga oshirmoq | Police enforce the speed limit. | Politsiya tezlik chegarasiga rioya qilinishini ta'minlaydi.
+to appeal | verb | to ask a higher court to change a decision | shikoyat qilmoq (yuqori sudga) | She will appeal against the decision. | U qaror ustidan shikoyat qiladi.
+to violate | verb | to break a law or agreement | buzmoq | The company violated the contract. | Kompaniya shartnomani buzdi.
+to overturn | verb | to change a legal decision officially | bekor qilmoq | The court overturned the ruling. | Sud qarorni bekor qildi.
+to testify | verb | to give evidence in court | guvohlik bermoq | She testified against him. | U unga qarshi guvohlik berdi.
+lawful | adjective | allowed by law | qonuniy | It is a lawful protest. | Bu qonuniy norozilik.
+binding | adjective | that must be obeyed | majburiy | The agreement is legally binding. | Kelishuv yuridik jihatdan majburiy.
+impartial | adjective | not supporting either side | xolis, betaraf | A judge must be impartial. | Sudya xolis bo'lishi kerak.
+breach | noun | the breaking of a law or agreement | buzish, buzilish | This is a breach of contract. | Bu shartnomaning buzilishi.
+## research | 🔭 | Research & Methods | Tadqiqot va usullar | Исследования и методы
+methodology | noun | the methods used in a study | metodologiya | The methodology was clearly explained. | Metodologiya aniq tushuntirildi.
+sample | noun | a small group chosen to represent a larger one | namuna, tanlanma | The sample included 500 people. | Tanlanmaga 500 kishi kirdi.
+variable | noun | a factor that can change in an experiment | o'zgaruvchi | Temperature is the key variable. | Harorat asosiy o'zgaruvchi.
+correlation | noun | a connection between two things | korrelyatsiya, o'zaro bog'liqlik | There is a correlation between diet and health. | Ovqatlanish va salomatlik o'rtasida bog'liqlik bor.
+findings | noun | the results of a study | natijalar, xulosalar | The findings were published last month. | Natijalar o'tgan oy e'lon qilindi.
+peer review | noun | checking of research by other experts | ekspert taqrizi | The paper is under peer review. | Maqola ekspert taqrizida.
+anomaly | noun | something that is different from what is normal | anomaliya, g'ayritabiiylik | The data showed an anomaly. | Ma'lumotlar anomaliyani ko'rsatdi.
+criterion | noun | a standard used for judging something | mezon | What is the main criterion? | Asosiy mezon nima?
+paradigm | noun | a model or typical way of thinking | paradigma, namuna | This discovery changed the paradigm. | Bu kashfiyot paradigmani o'zgartirdi.
+empirical | adjective | based on observation and experiment | empirik, tajribaga asoslangan | We need empirical evidence. | Bizga empirik dalil kerak.
+qualitative | adjective | about quality rather than numbers | sifat jihatidan, sifatiy | They used qualitative interviews. | Ular sifatiy intervyulardan foydalanishdi.
+quantitative | adjective | about numbers and amounts | miqdoriy | This is a quantitative study. | Bu miqdoriy tadqiqot.
+preliminary | adjective | coming before the main part | dastlabki | The preliminary results look good. | Dastlabki natijalar yaxshi ko'rinadi.
+rigorous | adjective | very careful and thorough | qat'iy, puxta | The tests were rigorous. | Sinovlar puxta o'tkazildi.
+to replicate | verb | to repeat an experiment with the same result | takrorlamoq | Other scientists replicated the study. | Boshqa olimlar tadqiqotni takrorlashdi.
+to hypothesise | verb | to suggest an explanation that can be tested | faraz qilmoq | They hypothesised that stress affects memory. | Ular stress xotiraga ta'sir qiladi deb faraz qilishdi.
+to validate | verb | to prove that something is true or correct | tasdiqlamoq | The results validate the theory. | Natijalar nazariyani tasdiqlaydi.
+to quantify | verb | to measure something as a number | miqdoriy baholamoq | It's hard to quantify happiness. | Baxtni miqdoriy baholash qiyin.
+to synthesise | verb | to combine ideas into a whole | umumlashtirmoq, sintez qilmoq | She synthesised the research into one report. | U tadqiqotlarni bitta hisobotga umumlashtirdi.
+to extrapolate | verb | to use known facts to guess about unknown ones | ekstrapolyatsiya qilmoq, xulosa chiqarmoq | We can't extrapolate from such a small sample. | Bunday kichik tanlanmadan xulosa chiqarib bo'lmaydi.
+## psyche | 🌀 | Psychology & Mind | Psixologiya | Психология
+cognition | noun | the mental process of knowing and understanding | idrok, bilish jarayoni | Sleep affects cognition. | Uyqu idrokka ta'sir qiladi.
+perception | noun | the way you notice or understand something | idrok, qabul qilish | Our perception of time changes with age. | Vaqtni idrok etishimiz yosh bilan o'zgaradi.
+trauma | noun | severe emotional shock or physical injury | ruhiy jarohat, travma | War leaves deep trauma. | Urush chuqur ruhiy jarohat qoldiradi.
+anxiety disorder | noun | a mental illness with strong, constant worry | xavotir buzilishi | She is being treated for an anxiety disorder. | U xavotir buzilishidan davolanmoqda.
+self-esteem | noun | belief in your own value | o'z-o'zini hurmat | Praise builds children's self-esteem. | Maqtov bolalarning o'zini hurmat qilishini oshiradi.
+bias | noun | an unfair preference for or against something | g'arazlilik, noxolislik | We all have unconscious biases. | Barchamizda ongsiz noxolislik bor.
+denial | noun | refusing to accept something unpleasant | inkor, tan olmaslik | He is in denial about his illness. | U kasalligini tan olishni istamayapti.
+temperament | noun | a person's basic nature | mijoz, tabiat | He has a calm temperament. | Uning mijozi vazmin.
+willpower | noun | the ability to control yourself | iroda kuchi | It takes willpower to stop smoking. | Chekishni tashlash uchun iroda kuchi kerak.
+introvert | noun | a quiet person who prefers being alone | introvert, ichimdagi odam | As an introvert, I need time alone. | Introvert sifatida menga yolg'izlik vaqti kerak.
+to perceive | verb | to notice or understand something in a certain way | idrok etmoq, qabul qilmoq | She is perceived as a strong leader. | U kuchli rahbar sifatida qabul qilinadi.
+to suppress | verb | to stop yourself from showing a feeling | bosmoq, ichiga yutmoq | He suppressed his anger. | U g'azabini ichiga yutdi.
+to rationalise | verb | to find reasons to explain behaviour | o'zini oqlash uchun sabab topmoq | He rationalised his bad decision. | U yomon qarorini oqlashga sabab topdi.
+to alleviate | verb | to make pain or a problem less severe | yengillashtirmoq | Music can alleviate stress. | Musiqa stressni yengillashtirishi mumkin.
+to manipulate | verb | to control someone in a clever, unfair way | manipulyatsiya qilmoq, o'z izmiga solmoq | He manipulates people to get what he wants. | U xohlaganiga erishish uchun odamlarni o'z izmiga soladi.
+subconscious | adjective | existing in the mind without you being aware | ongosti | It was a subconscious reaction. | Bu ongosti reaktsiyasi edi.
+impulsive | adjective | acting suddenly without thinking | o'ylamasdan harakat qiladigan, impulsiv | He made an impulsive decision. | U o'ylamasdan qaror qildi.
+apprehensive | adjective | worried about the future | xavotirli, cho'chiyotgan | I'm apprehensive about the interview. | Suhbatdan xavotirdaman.
+introspective | adjective | examining your own thoughts and feelings | o'z ichiga nazar soladigan | She is a quiet, introspective girl. | U jim, o'z ichiga nazar soladigan qiz.
+vulnerable | adjective | easily hurt physically or emotionally | himoyasiz, zaif | Children are vulnerable. | Bolalar himoyasiz.
+## criticism | 🎬 | Arts & Criticism | San'at va tanqid | Искусство и критика
+aesthetic | adjective | relating to beauty and art | estetik | The building has great aesthetic value. | Binoning estetik qiymati katta.
+genre | noun | a type of art, music or literature | janr | My favourite genre is science fiction. | Mening sevimli janrim ilmiy fantastika.
+narrative | noun | a story or description of events | hikoya, bayon | The film has a powerful narrative. | Filmning kuchli hikoya chizig'i bor.
+protagonist | noun | the main character in a story | bosh qahramon | The protagonist is a young doctor. | Bosh qahramon yosh shifokor.
+metaphor | noun | describing something by comparing it to something else | metafora, istiora | "Time is money" is a metaphor. | "Vaqt – pul" bu metafora.
+satire | noun | humour used to criticise people or ideas | satira, hajv | The show is a satire on politics. | Ko'rsatuv siyosat ustidan satira.
+critique | noun | a detailed analysis and judgement | tanqidiy tahlil | She wrote a critique of the novel. | U roman haqida tanqidiy tahlil yozdi.
+acclaim | noun | public praise | olqish, e'tirof | The film won critical acclaim. | Film tanqidchilar e'tirofiga sazovor bo'ldi.
+portrayal | noun | the way someone or something is shown | tasvir, ijro | His portrayal of the king was brilliant. | Uning podsho obrazini ijro etishi ajoyib edi.
+symbolism | noun | the use of symbols to express ideas | ramziylik | The poem is full of symbolism. | She'r ramziylikka to'la.
+to depict | verb | to show someone or something in art or words | tasvirlamoq | The painting depicts a battle. | Rasmda jang tasvirlangan.
+to evoke | verb | to bring a feeling or memory into the mind | uyg'otmoq, yodga solmoq | The song evokes my childhood. | Qo'shiq bolaligimni yodga soladi.
+to critique | verb | to analyse and judge something in detail | tanqidiy baholamoq | The teacher critiqued our essays. | O'qituvchi inshoalarimizni tanqidiy baholadi.
+to interpret | verb | to explain the meaning of something | talqin qilmoq | How do you interpret this poem? | Bu she'rni qanday talqin qilasiz?
+to captivate | verb | to hold someone's attention completely | maftun qilmoq | The story captivated the audience. | Hikoya tomoshabinlarni maftun etdi.
+evocative | adjective | bringing strong images or feelings to mind | his-tuyg'ularni uyg'otadigan | It's an evocative piece of music. | Bu his-tuyg'ularni uyg'otadigan musiqa.
+derivative | adjective | copied from other works, not original | taqlidiy, o'ziga xos bo'lmagan | Critics called the film derivative. | Tanqidchilar filmni taqlidiy deb atashdi.
+avant-garde | adjective | new and very experimental | avangard | She makes avant-garde fashion. | U avangard moda yaratadi.
+sublime | adjective | extremely beautiful or excellent | yuksak, ulug'vor | The music was sublime. | Musiqa ulug'vor edi.
+mediocre | adjective | of only average or low quality | o'rtamiyona | The food was mediocre. | Ovqat o'rtamiyona edi.
+## ecopolicy | 🌍 | Environment & Policy | Ekologiya siyosati | Экологическая политика
+biodiversity | noun | the variety of plants and animals in an area | biologik xilma-xillik | Rainforests have rich biodiversity. | Tropik o'rmonlar biologik xilma-xillikka boy.
+ecosystem | noun | all living things in an area and how they interact | ekotizim | Pollution damages the ecosystem. | Ifloslanish ekotizimga zarar yetkazadi.
+deforestation | noun | the cutting down of forests | o'rmonlarni kesish | Deforestation is a serious problem. | O'rmonlarni kesish jiddiy muammo.
+carbon footprint | noun | the amount of CO2 a person or activity produces | uglerod izi | Flying increases your carbon footprint. | Samolyotda uchish uglerod izingizni oshiradi.
+mitigation | noun | action to reduce how harmful something is | yumshatish, kamaytirish | Climate mitigation needs global action. | Iqlim o'zgarishini yumshatish global harakat talab qiladi.
+habitat | noun | the natural home of an animal or plant | yashash muhiti | The tiger's habitat is shrinking. | Yo'lbarsning yashash muhiti qisqarmoqda.
+conservation | noun | the protection of nature | tabiatni muhofaza qilish | She works in wildlife conservation. | U yovvoyi tabiatni muhofaza qilish sohasida ishlaydi.
+contamination | noun | making something dirty or poisonous | ifloslanish, zaharlanish | Water contamination caused the illness. | Suvning ifloslanishi kasallikka sabab bo'ldi.
+scarcity | noun | a situation in which there is not enough of something | tanqislik | Water scarcity affects millions. | Suv tanqisligi millionlab odamlarga ta'sir qiladi.
+landfill | noun | a place where waste is buried | chiqindixona | Most plastic ends up in landfill. | Plastikning ko'p qismi chiqindixonaga tushadi.
+to curb | verb | to control or limit something bad | cheklamoq, jilovlamoq | We must curb emissions. | Chiqindilarni cheklashimiz kerak.
+to offset | verb | to balance one effect with an opposite one | qoplamoq, muvozanatlamoq | Plant trees to offset carbon. | Uglerodni qoplash uchun daraxt eking.
+to degrade | verb | to make something worse in quality | yomonlashtirmoq, buzmoq | Plastic takes centuries to degrade. | Plastik parchalanishi uchun asrlar kerak.
+to replenish | verb | to fill something again | to'ldirmoq, tiklamoq | Rain replenishes the rivers. | Yomg'ir daryolarni to'ldiradi.
+to phase out | verb | to stop using something gradually | bosqichma-bosqich voz kechmoq | The country will phase out coal. | Mamlakat ko'mirdan bosqichma-bosqich voz kechadi.
+irreversible | adjective | impossible to change back | qaytarib bo'lmaydigan | The damage may be irreversible. | Zarar qaytarib bo'lmaydigan bo'lishi mumkin.
+toxic | adjective | poisonous | zaharli | The factory released toxic waste. | Zavod zaharli chiqindilar chiqardi.
+finite | adjective | having a limit | cheklangan, tugaydigan | Oil is a finite resource. | Neft – tugaydigan resurs.
+arid | adjective | very dry, with little rain | qurg'oqchil | Much of the region is arid. | Mintaqaning katta qismi qurg'oqchil.
+pristine | adjective | completely clean and untouched | musaffo, beg'ubor | The beaches are pristine. | Plyajlar musaffo.
+## strategy | ♟️ | Business Strategy | Biznes strategiyasi | Бизнес-стратегия
+stakeholder | noun | a person with an interest in a business | manfaatdor tomon | We consulted all stakeholders. | Biz barcha manfaatdor tomonlar bilan maslahatlashdik.
+merger | noun | the joining of two companies into one | qo'shilish (kompaniyalar) | The merger created a huge bank. | Qo'shilish ulkan bankni yuzaga keltirdi.
+acquisition | noun | buying a company | sotib olish, egallash | The acquisition cost billions. | Sotib olish milliardlarga tushdi.
+benchmark | noun | a standard used for comparison | mezon, andoza | This product is the industry benchmark. | Bu mahsulot soha andozasi.
+leverage | noun | power to influence a situation | ta'sir kuchi, ustunlik | We have little leverage in the negotiations. | Muzokaralarda ta'sir kuchimiz kam.
+outsourcing | noun | paying another company to do work | autsorsing | Outsourcing reduced costs. | Autsorsing xarajatlarni kamaytirdi.
+synergy | noun | extra benefit from working together | sinergiya, hamjihatlik samarasi | The merger created synergy. | Qo'shilish sinergiya yaratdi.
+turnover | noun | total sales of a company; rate staff leave | aylanma; kadrlar qo'nimsizligi | Staff turnover is high. | Kadrlar qo'nimsizligi yuqori.
+niche | noun | a small specialised part of a market | tor bozor segmenti, o'ziga xos o'rin | They found a niche in organic food. | Ular organik oziq-ovqatda o'z o'rnini topishdi.
+viability | noun | the ability to succeed | hayotiylik, yashovchanlik | We doubt the project's viability. | Loyihaning hayotiyligiga shubha qilamiz.
+to streamline | verb | to make a system simpler and more efficient | soddalashtirmoq | We streamlined the process. | Jarayonni soddalashtirdik.
+to diversify | verb | to start doing new kinds of business | xilma-xillashtirmoq | The company diversified into tourism. | Kompaniya turizm sohasiga ham kirdi.
+to capitalise on | verb | to use a situation to your advantage | foydalanib qolmoq | We must capitalise on this success. | Bu muvaffaqiyatdan foydalanib qolishimiz kerak.
+to forecast | verb | to say what will happen in the future | bashorat qilmoq | Experts forecast growth. | Mutaxassislar o'sishni bashorat qilmoqda.
+to restructure | verb | to change the organisation of a company | qayta tashkil etmoq | The firm was restructured. | Firma qayta tashkil etildi.
+to outperform | verb | to do better than others | ortda qoldirmoq | Our shares outperformed the market. | Aksiyalarimiz bozorni ortda qoldirdi.
+scalable | adjective | able to grow easily | kengaytiriladigan | Is the business scalable? | Biznesni kengaytirish mumkinmi?
+viable | adjective | able to work successfully | hayotiy, amalga oshirsa bo'ladigan | It's a viable plan. | Bu amalga oshirsa bo'ladigan reja.
+competitive edge | noun | an advantage over competitors | raqobat ustunligi | Quality gives us a competitive edge. | Sifat bizga raqobat ustunligini beradi.
+proactive | adjective | acting early to prevent problems | tashabbuskor, oldindan harakat qiladigan | We need a proactive approach. | Bizga tashabbuskor yondashuv kerak.
+## formal_verbs | 📜 | Formal Verbs | Rasmiy fe'llar | Формальные глаголы
+to facilitate | verb | to make something easier | osonlashtirmoq | Technology facilitates communication. | Texnologiya muloqotni osonlashtiradi.
+to mitigate | verb | to make something less harmful | yumshatmoq, kamaytirmoq | Measures were taken to mitigate the risk. | Xavfni kamaytirish choralari ko'rildi.
+to exacerbate | verb | to make a bad situation worse | og'irlashtirmoq | The drought exacerbated the crisis. | Qurg'oqchilik inqirozni og'irlashtirdi.
+to comply | verb | to obey a rule or request | rioya qilmoq | All companies must comply with the law. | Barcha kompaniyalar qonunga rioya qilishi shart.
+to endorse | verb | to support or approve publicly | qo'llab-quvvatlamoq, ma'qullamoq | The minister endorsed the plan. | Vazir rejani ma'qulladi.
+to envisage | verb | to imagine something possible in the future | ko'zda tutmoq, tasavvur qilmoq | We envisage growth next year. | Kelgusi yil o'sishni ko'zda tutyapmiz.
+to circumvent | verb | to find a way around a rule or problem | chetlab o'tmoq | They circumvented the regulations. | Ular qoidalarni chetlab o'tishdi.
+to supersede | verb | to replace something older | o'rnini egallamoq | The new law supersedes the old one. | Yangi qonun eskisining o'rnini egallaydi.
+to augment | verb | to increase the size or value of something | ko'paytirmoq, kuchaytirmoq | He augments his income by teaching. | U dars berib daromadini ko'paytiradi.
+to ascertain | verb | to find out for certain | aniqlamoq | Police are trying to ascertain the cause. | Politsiya sababni aniqlashga urinmoqda.
+to delineate | verb | to describe or mark something exactly | aniq belgilamoq | The report delineates our duties. | Hisobot vazifalarimizni aniq belgilaydi.
+to adhere to | verb | to follow a rule or belief | amal qilmoq, rioya qilmoq | We adhere to strict standards. | Biz qat'iy standartlarga amal qilamiz.
+to allude to | verb | to mention something indirectly | ishora qilmoq | She alluded to her past. | U o'tmishiga ishora qildi.
+to precipitate | verb | to make something bad happen suddenly | tezlashtirmoq, keltirib chiqarmoq | The scandal precipitated his resignation. | Janjal uning iste'fosini tezlashtirdi.
+to corroborate | verb | to confirm with new evidence | tasdiqlamoq | Witnesses corroborated his story. | Guvohlar uning hikoyasini tasdiqlashdi.
+to deem | verb | to consider something in a particular way | hisoblamoq, deb bilmoq | The plan was deemed too risky. | Reja juda xavfli deb hisoblandi.
+to presume | verb | to think something is true without proof | taxmin qilmoq | I presume you are tired. | Charchagan bo'lsangiz kerak, deb o'ylayman.
+to reiterate | verb | to say something again for emphasis | takrorlab aytmoq | Let me reiterate my point. | Fikrimni yana bir bor takrorlay.
+to transcend | verb | to go beyond normal limits | doiradan chiqmoq, oshib o'tmoq | Music transcends language. | Musiqa til chegarasidan oshib o'tadi.
+to culminate | verb | to reach the highest point or end | avjiga chiqmoq, yakunlanmoq | The festival culminates in a parade. | Festival parad bilan yakunlanadi.
+## formal_adj | 🎓 | Formal Adjectives | Rasmiy sifatlar | Формальные прилагательные
+pervasive | adjective | spreading everywhere | keng tarqalgan, hamma yoqni qamragan | Corruption is pervasive there. | U yerda korrupsiya keng tarqalgan.
+intrinsic | adjective | belonging naturally to something | ichki, tabiiy | Art has intrinsic value. | San'atning o'ziga xos ichki qiymati bor.
+plausible | adjective | seeming reasonable or likely | ishonarli, haqiqatga yaqin | That's a plausible explanation. | Bu haqiqatga yaqin izoh.
+detrimental | adjective | causing harm | zararli | Smoking is detrimental to health. | Chekish sog'liq uchun zararli.
+indispensable | adjective | absolutely necessary | ajralmas, o'ta zarur | She is indispensable to the team. | U jamoa uchun ajralmas.
+inherent | adjective | existing as a natural part of something | xos, ajralmas | There are risks inherent in any business. | Har qanday biznesga xos xavflar bor.
+prevalent | adjective | common in a place or time | keng tarqalgan | The disease is prevalent in hot countries. | Bu kasallik issiq mamlakatlarda keng tarqalgan.
+explicit | adjective | stated clearly | aniq, ochiq | He gave explicit instructions. | U aniq ko'rsatmalar berdi.
+implicit | adjective | suggested but not stated directly | yashirin, bilvosita | There was an implicit threat. | Yashirin tahdid bor edi.
+arbitrary | adjective | based on chance rather than reason | o'zboshimcha, tasodifiy | The decision seems arbitrary. | Qaror o'zboshimchalik bilan qabul qilinganga o'xshaydi.
+obsolete | adjective | no longer used because something newer exists | eskirgan | This technology is obsolete. | Bu texnologiya eskirgan.
+feasible | adjective | possible to do | amalga oshirish mumkin bo'lgan | Is the plan feasible? | Reja amalga oshirsa bo'ladimi?
+paramount | adjective | more important than anything else | eng muhim, birinchi darajali | Safety is paramount. | Xavfsizlik eng muhim.
+tentative | adjective | not certain or final | taxminiy, dastlabki | We made a tentative agreement. | Biz dastlabki kelishuvga erishdik.
+cumbersome | adjective | large and difficult to use | noqulay, og'ir | The process is cumbersome. | Jarayon noqulay.
+discrepancy | noun | a difference between things that should match | nomuvofiqlik, tafovut | There is a discrepancy in the figures. | Raqamlarda nomuvofiqlik bor.
+salient | adjective | most important or noticeable | asosiy, ko'zga tashlanadigan | Here are the salient points. | Mana asosiy fikrlar.
+unprecedented | adjective | never having happened before | misli ko'rilmagan | Prices rose at an unprecedented rate. | Narxlar misli ko'rilmagan sur'atda oshdi.
+transient | adjective | lasting only a short time | o'tkinchi | Fame is transient. | Shon-shuhrat o'tkinchi.
+meticulous planning | noun | very careful and detailed preparation | puxta rejalashtirish | The event needed meticulous planning. | Tadbir puxta rejalashtirishni talab qildi.
+## ethics | 🩻 | Health & Ethics | Sog'liq va axloq | Здоровье и этика
+dilemma | noun | a situation with a difficult choice | dilemma, qiyin tanlov | Doctors face moral dilemmas. | Shifokorlar axloqiy dilemmalarga duch kelishadi.
+consent | noun | permission to do something | rozilik | Patients must give their consent. | Bemorlar rozilik berishi kerak.
+euthanasia | noun | ending a sick person's life to stop suffering | evtanaziya | Euthanasia is illegal in many countries. | Ko'p mamlakatlarda evtanaziya taqiqlangan.
+pandemic | noun | a disease that spreads across the world | pandemiya | The pandemic changed how we work. | Pandemiya ish uslubimizni o'zgartirdi.
+epidemic | noun | a disease affecting many people in one area | epidemiya | There is a flu epidemic in the city. | Shaharda gripp epidemiyasi bor.
+diagnosis | noun | identifying an illness | tashxis | The diagnosis was cancer. | Tashxis saraton edi.
+prognosis | noun | the likely development of an illness | prognoz, kasallik oqibati bashorati | The prognosis is good. | Prognoz yaxshi.
+side effect | noun | an unwanted effect of a medicine | nojo'ya ta'sir | The drug has few side effects. | Dorining nojo'ya ta'siri kam.
+confidentiality | noun | keeping information private | maxfiylik | Doctors must respect confidentiality. | Shifokorlar maxfiylikni hurmat qilishi kerak.
+wellbeing | noun | the state of being healthy and happy | farovonlik, salomatlik | Exercise improves wellbeing. | Mashq farovonlikni yaxshilaydi.
+chronic | adjective | lasting a long time (illness) | surunkali | He suffers from chronic pain. | U surunkali og'riqdan aziyat chekadi.
+acute | adjective | severe and sudden | o'tkir | She has acute appendicitis. | Unda o'tkir appenditsit bor.
+contagious | adjective | spreading from person to person | yuqumli | The virus is highly contagious. | Virus juda yuqumli.
+benign | adjective | not dangerous (a tumour); kind | xavfsiz, xavfli bo'lmagan | Luckily the tumour was benign. | Baxtimizga o'sma xavfsiz ekan.
+terminal | adjective | (an illness) that will cause death | davosiz, o'limga olib keladigan | He has terminal cancer. | Uning davosiz saratoni bor.
+to administer | verb | to give medicine; to manage | (dori) bermoq; boshqarmoq | The nurse administered the vaccine. | Hamshira vaksina qildi.
+to diagnose | verb | to identify an illness | tashxis qo'ymoq | She was diagnosed with diabetes. | Unga qandli diabet tashxisi qo'yildi.
+to relapse | verb | to become ill again after improving | kasallik qaytalanmoq | He relapsed after a month. | Bir oydan keyin kasalligi qaytalandi.
+to contract | verb | to catch a disease | (kasallik) yuqtirmoq | He contracted malaria in Africa. | U Afrikada bezgak yuqtirdi.
+holistic | adjective | treating the whole person, not just symptoms | yaxlit, kompleks | She prefers a holistic approach to health. | U sog'liqqa yaxlit yondashuvni afzal ko'radi.
+## discourse | 📰 | Media & Discourse | Media va nutq | СМИ и дискурс
+propaganda | noun | information used to influence people's opinions | targ'ibot, propaganda | The posters were wartime propaganda. | Plakatlar urush davri propagandasi edi.
+censorship | noun | stopping people from publishing certain information | senzura | There is strict censorship in that country. | U mamlakatda qattiq senzura bor.
+misinformation | noun | wrong information, often spread by mistake | noto'g'ri ma'lumot | Misinformation spreads fast online. | Noto'g'ri ma'lumot internetda tez tarqaladi.
+discourse | noun | serious discussion or communication about a subject | nutq, munozara | Political discourse has become aggressive. | Siyosiy munozara tajovuzkor tus oldi.
+coverage | noun | the reporting of news in the media | yoritish (OAVda) | The election got wide coverage. | Saylov keng yoritildi.
+sensationalism | noun | presenting news in a shocking way | shov-shuvbozlik | Tabloids are known for sensationalism. | Sariq matbuot shov-shuvbozligi bilan tanilgan.
+credibility | noun | the quality of being believed and trusted | ishonchlilik, obro' | The scandal damaged his credibility. | Janjal uning obro'siga putur yetkazdi.
+transparency | noun | openness about what you are doing | shaffoflik | We demand transparency from the government. | Biz hukumatdan shaffoflik talab qilamiz.
+spin | noun | a way of presenting facts to look good | ma'lumotni bo'rttirib taqdim etish | The minister put a positive spin on the news. | Vazir yangilikni ijobiy tarzda taqdim etdi.
+echo chamber | noun | a space where people only hear opinions like their own | aks-sado xonasi (bir xil fikrlar muhiti) | Social media can become an echo chamber. | Ijtimoiy tarmoqlar bir xil fikrlar muhitiga aylanishi mumkin.
+to disseminate | verb | to spread information widely | tarqatmoq | The results were disseminated online. | Natijalar internetda tarqatildi.
+to fabricate | verb | to invent false information | to'qib chiqarmoq, soxtalashtirmoq | The journalist fabricated the story. | Jurnalist hikoyani to'qib chiqargan.
+to distort | verb | to change facts so they are no longer true | buzib ko'rsatmoq | The article distorted my words. | Maqola so'zlarimni buzib ko'rsatdi.
+to sensationalise | verb | to present something in a shocking way | shov-shuv ko'tarmoq, bo'rttirmoq | The press sensationalised the story. | Matbuot voqeani bo'rttirib yubordi.
+to scrutinise closely | verb | to examine something very carefully | sinchiklab tekshirmoq | Journalists scrutinise closely every word of the minister. | Jurnalistlar vazirning har bir so'zini sinchiklab tekshirishadi.
+to retract | verb | to say officially that something you said is not true | qaytarib olmoq (so'zini) | The newspaper retracted the story. | Gazeta maqolani qaytarib oldi.
+partisan | adjective | strongly supporting one party | bir tarafni yoqlovchi | The newspaper is very partisan. | Gazeta juda bir tomonlama.
+objective | adjective | not influenced by personal feelings | xolis, ob'ektiv | Try to be objective. | Xolis bo'lishga harakat qiling.
+anonymous | adjective | with a name that is not known | anonim, nomi oshkor qilinmagan | An anonymous source gave the information. | Ma'lumotni nomi oshkor qilinmagan manba berdi.
+contentious | adjective | causing disagreement | bahsli, munozarali | It's a contentious issue. | Bu munozarali masala.

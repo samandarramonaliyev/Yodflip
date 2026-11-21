@@ -1,3 +1,4 @@
+import { FillerBadge } from '../components/LevelProgress'
 import { motion } from 'framer-motion'
 import { Delete, Lightbulb, SkipForward } from 'lucide-react'
 import { useEffect, useMemo, useRef, useState } from 'react'
@@ -89,6 +90,7 @@ export default function WordBuilder({ items, track, reverse, onFinish }: GamePro
         {idx + 1} / {items.length}
       </div>
       <div className="card flex min-h-[120px] items-center justify-center gap-3 p-6 text-center">
+        {item.is_filler && <FillerBadge />}
         <span className="text-2xl font-black">{sides.prompt}</span>
         {sides.promptLang !== 'uz' && <SpeakButton text={sides.prompt} track={track} />}
       </div>
