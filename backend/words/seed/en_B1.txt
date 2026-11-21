@@ -115,7 +115,7 @@ score | noun | the number of points each team has | hisob | What's the score? | 
 stadium | noun | a large place where people watch sports | stadion | The stadium was full. | Stadion to'la edi.
 gym | noun | a room or building with equipment for exercise | sport zali | I go to the gym three times a week. | Haftasiga uch marta sport zaliga boraman.
 goal | noun | a point scored in football; also an aim | gol; maqsad | He scored a great goal. | U ajoyib gol urdi.
-medal | noun | a round piece of metal given as a prize | medal | She won a gold medal. | U oltin medal qo'lga kiritdi.
+medal | noun | a round piece of metal given as a prize | medal, nishon | She won a gold medal. | U oltin medal qo'lga kiritdi.
 fan | noun | a person who likes a team or star very much | muxlis | He is a big football fan. | U katta futbol muxlisi.
 to win | verb | to be the best in a game or competition | yutmoq, g'alaba qozonmoq | Who won the game? | O'yinda kim yutdi?
 to lose | verb | not to win; also to be unable to find something | yutqazmoq; yo'qotmoq | We lost two to one. | Biz ikki-birga yutqazdik.
@@ -124,7 +124,7 @@ to score | verb | to get a point or goal in a game | gol urmoq, ochko olmoq | He
 to beat | verb | to win against someone | yengmoq | We beat the best team in the league. | Biz ligadagi eng kuchli jamoani yengdik.
 to join | verb | to become a member of a group or club | a'zo bo'lmoq, qo'shilmoq | I want to join a tennis club. | Tennis klubiga a'zo bo'lmoqchiman.
 fit | adjective | healthy and strong because of exercise | sog'lom, chiniqqan | She keeps fit by running. | U yugurib o'zini chiniqtiradi.
-professional | adjective | doing something as a paid job | professional | He is a professional footballer. | U professional futbolchi.
+professional | adjective | doing something as a paid job | professional, kasbiy | He is a professional footballer. | U professional futbolchi.
 race | noun | a competition to see who is the fastest | poyga | He came second in the race. | U poygada ikkinchi bo'ldi.
 ## lifestyle | 🥗 | Health & Lifestyle | Salomatlik va turmush tarzi | Здоровье и образ жизни
 diet | noun | the food you usually eat | parhez, ovqatlanish tartibi | A healthy diet includes fruit and vegetables. | Sog'lom ovqatlanish meva va sabzavotni o'z ichiga oladi.
@@ -145,7 +145,7 @@ regular | adjective | happening at the same time or often | muntazam | Regular e
 balanced | adjective | with the right amounts of different things | muvozanatli | Eat a balanced diet. | Muvozanatli ovqatlaning.
 active | adjective | doing a lot of physical activity | faol, harakatchan | My grandmother is still very active. | Buvim hali ham juda harakatchan.
 unhealthy | adjective | not good for your health | zararli, nosog'lom | Fast food is unhealthy. | Fast fud sog'liq uchun zararli.
-vitamin | noun | a natural substance in food that keeps you healthy | vitamin | Oranges contain vitamin C. | Apelsinda S vitamini bor.
+vitamin | noun | a natural substance in food that keeps you healthy | vitamin, darmondori | Oranges contain vitamin C. | Apelsinda S vitamini bor.
 sleep | noun | the natural state of rest at night | uyqu | You need eight hours of sleep. | Sizga sakkiz soat uyqu kerak.
 ## housing | 🏠 | Home & Housing | Uy-joy | Жильё
 flat | noun | a set of rooms for living in, on one floor of a building | kvartira | They live in a small flat. | Ular kichkina kvartirada yashashadi.
@@ -156,7 +156,7 @@ roof | noun | the top cover of a building | tom | The roof needs repairs. | Tomn
 stairs | noun | steps that go from one floor to another | zinapoya | Take the stairs, the lift is broken. | Zinadan chiqing, lift buzuq.
 balcony | noun | a small area outside a flat on an upper floor | balkon | We drink tea on the balcony. | Biz balkonda choy ichamiz.
 heating | noun | the system that keeps a building warm | isitish tizimi | The heating doesn't work. | Isitish ishlamayapti.
-lift | noun | a machine that carries people up and down in a building | lift | The lift is out of order. | Lift ishlamayapti.
+lift | noun | a machine that carries people up and down in a building | lift, ko'targich | The lift is out of order. | Lift ishlamayapti.
 to move | verb | to go to live in a different place | ko'chmoq | We moved to a new flat last year. | O'tgan yili yangi kvartiraga ko'chdik.
 to share | verb | to use something together with others | baham ko'rmoq, birga foydalanmoq | I share a room with my brother. | Akam bilan bitta xonada yashayman.
 to repair | verb | to fix something that is broken | ta'mirlamoq | Can you repair the tap? | Jo'mrakni ta'mirlay olasizmi?

@@ -27,8 +27,8 @@ export default function MemoryPairs({ items, track, reverse, onFinish }: GamePro
         set.flatMap((i) => {
           const s = sidesFor(i, 'memory', track, reverse)
           return [
-            { id: `a-${i.key}`, pair: i.key, text: s.prompt, lang: s.promptLang === 'uz' ? 'uz' : 'word', filler: i.is_filler },
-            { id: `b-${i.key}`, pair: i.key, text: s.answer, lang: s.answerLang === 'uz' ? 'uz' : 'word' },
+            { id: `a-${i.key}`, pair: i.key, text: s.prompt, lang: s.promptLang === track ? 'word' : 'uz', filler: i.is_filler },
+            { id: `b-${i.key}`, pair: i.key, text: s.answer, lang: s.answerLang === track ? 'word' : 'uz' },
           ] as MCard[]
         }),
       ),

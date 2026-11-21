@@ -21,10 +21,11 @@ import { EmptyState, ErrorState, ListSkeleton, Sheet, Spinner, Toggle, toast } f
 import { GAMES } from '../games/catalog'
 import { isAvailable, modeFor } from '../games/direction'
 import { useT } from '../i18n'
-import { api } from '../lib/api'
+import { api, ApiError } from '../lib/api'
 import { useAsync, useTelegramBack } from '../lib/hooks'
 import { shareToTelegram } from '../lib/telegram'
 import type { Card, Deck } from '../lib/types'
+import { allowedLangs, LANG_META, type TrLang } from '../lib/translation'
 
 const emptyCard = { term: '', translation: '', definition: '', example: '', article: '' }
 
@@ -40,6 +41,8 @@ export default function DeckPage() {
   const [bulk, setBulk] = useState('')
   const [settingsOpen, setSettingsOpen] = useState(false)
   const [busy, setBusy] = useState(false)
+  const [aiBusy, setAiBusy] = useState<TrLang | null>(null)
+  const [aiDown, setAiDown] = useState(false)
   const csvRef = useRef<HTMLInputElement>(null)
 
   if (error) return <div className="page"><ErrorState error={error} onRetry={reload} /></div>
@@ -139,6 +142,23 @@ export default function DeckPage() {
     nav('/decks')
   }
 
+  const deckLang: TrLang = deck.translation_lang ?? 'uz'
+  const otherLangs = allowedLangs(deck.track).filter((l) => l !== deckLang)
+  const hasLang = (l: TrLang) => cards.length > 0 && cards.every((c) => c.extra_translations?.[l])
+  const aiTranslate = async (l: TrLang) => {
+    setAiBusy(l)
+    try {
+      const d = await api.post<Deck>(`/decks/${deck.id}/translate/`, { lang: l })
+      setData({ ...deck, ...d })
+      toast.ok(t('decks.ai_done', { lang: LANG_META[l].name }))
+    } catch (e) {
+      if (e instanceof ApiError && e.status === 503) setAiDown(true)
+      else toast.err(t('err.generic'))
+    } finally {
+      setAiBusy(null)
+    }
+  }
+
   const memoGames = GAMES.filter((g) => g.needsSource && isAvailable(g.id, deck.track) && modeFor(g.id) !== 'definition')
   const hasDefs = cards.some((c) => c.definition)
 
@@ -151,7 +171,7 @@ export default function DeckPage() {
         <div className="min-w-0 flex-1">
           <h1 className="h1 truncate">{deck.name}</h1>
           <div className="text-sm text-muted">
-            {deck.track === 'en' ? 'EN' : 'DE'} · {t('decks.cards_n', { n: cards.length })}
+            {deck.track === 'en' ? 'EN' : 'DE'} → {LANG_META[deckLang].flag} {LANG_META[deckLang].short} · {t('decks.cards_n', { n: cards.length })}
           </div>
         </div>
         <button className="grid h-10 w-10 place-items-center rounded-full hover:bg-line" onClick={() => setSettingsOpen(true)} aria-label={t('common.edit')}>
@@ -159,6 +179,33 @@ export default function DeckPage() {
         </button>
       </div>
       {deck.description && <p className="text-muted">{deck.description}</p>}
+      {deck.is_owner && cards.length > 0 && (
+        <section className="card space-y-2 p-3" data-testid="deck-langs">
+          <div className="text-sm font-bold">
+            {t('decks.translation_lang')}: {LANG_META[deckLang].flag} {LANG_META[deckLang].name}
+          </div>
+          <div className="flex flex-wrap gap-2">
+            {otherLangs.map((l) =>
+              hasLang(l) ? (
+                <span key={l} className="chip bg-success/15 text-ink">
+                  ✓ {LANG_META[l].flag} {LANG_META[l].short}
+                </span>
+              ) : (
+                <button
+                  key={l}
+                  className="chip bg-line/70 disabled:cursor-not-allowed disabled:opacity-40"
+                  disabled={aiDown || aiBusy !== null}
+                  title={aiDown ? t('tr.unavailable') : undefined}
+                  onClick={() => void aiTranslate(l)}
+                >
+                  {aiBusy === l ? <Spinner className="h-4 w-4" /> : '✨'} {t('decks.ai_translate')} → {LANG_META[l].flag} {LANG_META[l].short}
+                </button>
+              ),
+            )}
+          </div>
+          {aiDown && <p className="text-xs text-muted">{t('tr.unavailable')}</p>}
+        </section>
+      )}
 
       {cards.length > 0 && (
         <section className="grid grid-cols-3 gap-2">
@@ -216,6 +263,11 @@ export default function DeckPage() {
                   <SpeakButton text={c.term} track={deck.track} className="h-8 w-8 scale-90" />
                 </div>
                 <div className="font-bold text-primary">{c.translation}</div>
+                {Object.entries(c.extra_translations || {}).map(([l, v]) => (
+                  <div key={l} className="text-xs text-muted">
+                    {LANG_META[l as TrLang]?.flag} {v}
+                  </div>
+                ))}
                 {c.definition && <div className="font-read text-sm text-muted">{c.definition}</div>}
                 {c.example && <div className="font-read text-xs italic text-muted">“{c.example}”</div>}
               </div>
@@ -263,7 +315,7 @@ export default function DeckPage() {
               )}
               <input className="input font-bold" required value={editing.term || ''} onChange={(e) => setEditing({ ...editing, term: e.target.value })} placeholder={t('decks.term')} autoFocus />
             </div>
-            <input className="input" required value={editing.translation || ''} onChange={(e) => setEditing({ ...editing, translation: e.target.value })} placeholder={t('decks.translation')} />
+            <input className="input" required value={editing.translation || ''} onChange={(e) => setEditing({ ...editing, translation: e.target.value })} placeholder={`${t('decks.translation')} (${LANG_META[deckLang].name})`} />
             <textarea className="input font-read min-h-[64px] py-2" value={editing.definition || ''} onChange={(e) => setEditing({ ...editing, definition: e.target.value })} placeholder={t('decks.definition_opt')} />
             <input className="input" value={editing.example || ''} onChange={(e) => setEditing({ ...editing, example: e.target.value })} placeholder={t('decks.example_opt')} />
             <label className="flex min-h-[48px] cursor-pointer items-center gap-2 rounded-2xl border border-dashed border-line px-4 text-sm font-bold text-muted">

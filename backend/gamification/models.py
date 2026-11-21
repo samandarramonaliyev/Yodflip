@@ -23,6 +23,7 @@ class GameSession(models.Model):
     game = models.CharField(max_length=30)
     mode = models.CharField(max_length=20, default="memorize")
     source = models.CharField(max_length=40, blank=True)
+    translation_lang = models.CharField(max_length=2, blank=True)  # memorization games only
     xp = models.PositiveIntegerField(default=0)
     correct = models.PositiveIntegerField(default=0)
     attempts = models.PositiveIntegerField(default=0)

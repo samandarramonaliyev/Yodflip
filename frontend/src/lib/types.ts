@@ -101,6 +101,7 @@ export interface Card {
   id: number
   term: string
   translation: string
+  extra_translations?: Partial<Record<'uz' | 'ru' | 'en' | 'de', string>>
   definition: string
   example: string
   article: string
@@ -113,6 +114,8 @@ export interface Deck {
   name: string
   track: Track
   description: string
+  /** Language of the cards' translation side */
+  translation_lang?: 'uz' | 'ru' | 'en' | 'de'
   is_public: boolean
   share_code: string
   card_count: number
@@ -129,6 +132,8 @@ export interface SetPair {
   part_of_speech: string
   article: string | null
   translation_uz: string
+  /** ru + the other track language from the scanner (editable) */
+  translations?: Partial<Record<'ru' | 'en' | 'de', string>>
 }
 
 export interface WordSet {
@@ -137,6 +142,8 @@ export interface WordSet {
   track: Track
   pair_count: number
   pairs?: SetPair[]
+  /** Translation languages present in this set */
+  available_langs?: ('uz' | 'ru' | 'en' | 'de')[]
   created_at: string
 }
 
@@ -156,6 +163,7 @@ export interface ProfileStats {
   want: number
   due: number
   accuracy: number
+  translation_langs?: { lang: 'uz' | 'ru' | 'en' | 'de'; count: number; percent: number }[]
   cefr: Cefr
   chart: { date: string; xp: number; correct: number }[]
 }

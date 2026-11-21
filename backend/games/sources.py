@@ -11,6 +11,7 @@ from rest_framework.exceptions import PermissionDenied, ValidationError
 from decks.models import Deck, WordSet
 from words.models import UserWord, Word
 from words.services import LEVELS, is_level_unlocked, list_queryset
+from words.translations import apply_translations
 
 from .rules import ARTICLE, item_usable
 
@@ -29,6 +30,8 @@ def item_from_word(w: Word) -> dict:
         "pos": w.part_of_speech,
         "example": w.example,
         "example_uz": w.example_uz,
+        "example_tr": w.example_uz,
+        "translation_lang": "uz",
     }
 
 
@@ -53,6 +56,9 @@ def item_from_card(c) -> dict:
         "pos": "",
         "example": c.example,
         "example_uz": "",
+        "example_tr": "",
+        "translation_lang": c.deck.translation_lang,
+        "translations": c.extra_translations or {},
     }
 
 
@@ -70,6 +76,9 @@ def item_from_pair(p) -> dict:
         "pos": p.part_of_speech,
         "example": "",
         "example_uz": "",
+        "example_tr": "",
+        "translation_lang": "uz",
+        "translations": p.translations or {},
     }
 
 
@@ -86,6 +95,8 @@ def item_from_userword(uw: UserWord) -> dict:
         "pos": "",
         "example": "",
         "example_uz": "",
+        "example_tr": "",
+        "translation_lang": "uz",
     }
 
 
@@ -102,7 +113,20 @@ def daily_words(track: str, day: date) -> list[Word]:
     return [by_id[i] for i in chosen if i in by_id]
 
 
-def get_items(user, track: str, source: str, params: dict, mode: str, day: date | None = None) -> list[dict]:
+def get_items(
+    user, track: str, source: str, params: dict, mode: str, day: date | None = None, translation_lang: str = "uz"
+) -> list[dict]:
+    """Items for a game. Memorization sides use `translation_lang` (a deck always uses its own)."""
+    items = _raw_items(user, track, source, params, day)
+    if source != "deck":
+        items = apply_translations(items, translation_lang)
+    items = [i for i in items if item_usable(i, mode)]
+    if mode == ARTICLE and track != "de":
+        return []
+    return items
+
+
+def _raw_items(user, track: str, source: str, params: dict, day: date | None = None) -> list[dict]:
     if source == "level":
         level = params.get("level")
         if level not in LEVELS:
@@ -127,7 +151,7 @@ def get_items(user, track: str, source: str, params: dict, mode: str, day: date 
             raise PermissionDenied("not_your_deck")
         if deck.track != track:
             raise ValidationError({"track": "track_mismatch"})
-        items = [item_from_card(c) for c in deck.cards.all()]
+        items = [item_from_card(c) for c in deck.cards.select_related("deck")]
     elif source == "set":
         ws = get_object_or_404(WordSet, pk=params.get("id"), owner=user)
         if ws.track != track:
@@ -142,8 +166,4 @@ def get_items(user, track: str, source: str, params: dict, mode: str, day: date 
         return [item_from_word(w) for w in daily_words(track, day or today())]
     else:
         raise ValidationError({"source": "invalid_source"})
-
-    items = [i for i in items if item_usable(i, mode)]
-    if mode == ARTICLE and track != "de":
-        return []
     return items

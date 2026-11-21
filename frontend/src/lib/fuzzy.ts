@@ -9,9 +9,17 @@ export function normalize(s: string): string {
     .trim()
 }
 
-/** Strip a leading "to " (EN verbs) or article (DE nouns) for lenient comparisons. */
+/**
+ * Fold language variants together so they compare equal:
+ * Russian ё = е; German ä/ö/ü/ß = ae/oe/ue/ss (also when typed on a keyboard without umlauts).
+ */
+export function fold(s: string): string {
+  return normalize(s).replace(/ё/g, 'е').replace(/ä/g, 'ae').replace(/ö/g, 'oe').replace(/ü/g, 'ue').replace(/ß/g, 'ss')
+}
+
+/** Strip a leading "to " (EN verbs) or an article (DE der/die/das, EN the/a/an): articles are optional. */
 export function stripLead(s: string): string {
-  return s.replace(/^(to|der|die|das)\s+/, '')
+  return s.replace(/^(to|der|die|das|the|an|a)\s+/, '')
 }
 
 export function levenshtein(a: string, b: string): number {
@@ -33,16 +41,18 @@ export type Verdict = 'exact' | 'typo' | 'wrong'
 
 /**
  * Check a typed answer. The expected answer may contain alternatives separated by "," "/" or ";".
- * Small typos are accepted: 1 edit for words ≤ 6 chars, 2 edits for longer ones.
+ * Case-insensitive, trimmed, ё = е, ä/ö/ü/ß = ae/oe/ue/ss, articles and "to" optional.
+ * Small typos are accepted: 1 edit for words of 3–6 letters, 2 edits for longer ones
+ * (1–2 letter answers must be exact, otherwise almost anything would pass).
  */
 export function checkAnswer(input: string, expected: string): Verdict {
-  const given = normalize(input)
+  const given = fold(input)
   if (!given) return 'wrong'
   const options = expected
     .split(/[,/;]|\(|\)/)
-    .map(normalize)
+    .map(fold)
     .filter(Boolean)
-  options.push(normalize(expected))
+  options.push(fold(expected))
   let best: Verdict = 'wrong'
   for (const opt of options) {
     for (const [g, o] of [
@@ -50,7 +60,7 @@ export function checkAnswer(input: string, expected: string): Verdict {
       [stripLead(given), stripLead(opt)],
     ]) {
       if (g === o) return 'exact'
-      const allowed = o.length <= 3 ? 0 : o.length <= 6 ? 1 : 2
+      const allowed = o.length <= 2 ? 0 : o.length <= 6 ? 1 : 2
       if (levenshtein(g, o) <= allowed) best = 'typo'
     }
   }

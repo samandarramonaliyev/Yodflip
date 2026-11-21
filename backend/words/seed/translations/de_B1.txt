@@ -1,0 +1,201 @@
+# word | ru | example (ru) | en | example (en)
+das Gehalt | зарплата | Она получает хорошую зарплату. | salary | She gets a good salary.
+der Kollege | коллега | Мои коллеги очень милые. | colleague | My colleagues are very nice.
+einstellen | нанимать | Фирма наняла десять человек. | to hire, to employ | The company has hired ten people.
+das Vorstellungsgespräch | собеседование | Завтра у меня собеседование. | job interview | I have a job interview tomorrow.
+die Erfahrung | опыт | У вас есть опыт в продажах? | experience | Do you have experience in sales?
+die Frist | срок | Срок истекает в пятницу. | deadline | The deadline is on Friday.
+sich bewerben | подавать заявку (на работу) | Я подал заявки в три фирмы. | to apply | I've applied to three companies.
+die Fähigkeit | способность, навык | Общение — важный навык. | ability, skill | Communication is an important skill.
+der Chef | начальник, шеф | Начальник дал мне выходной. | boss | My boss gave me a day off.
+der Beruf | профессия | Кто вы по профессии? | profession, job | What do you do for a living?
+kündigen | уволиться; расторгнуть | В прошлом месяце она уволилась. | to quit, to resign | She quit her job last month.
+die Besprechung | совещание | Совещание начинается в десять. | meeting | The meeting starts at ten.
+verdienen | зарабатывать; заслуживать | Сколько ты зарабатываешь? | to earn; to deserve | How much do you earn?
+der Mitarbeiter | сотрудник | В фирме 200 сотрудников. | employee | The company has 200 employees.
+die Beförderung | повышение (по службе) | Его повысили в должности. | promotion | He got a promotion.
+stolz | гордый | Я горжусь своей дочерью. | proud | I'm proud of my daughter.
+nervös | нервный, взволнованный | Перед экзаменами я всегда волнуюсь. | nervous | I'm always nervous before exams.
+eifersüchtig | ревнивый, завистливый | Он ревнует к брату. | jealous | He is jealous of his brother.
+peinlich | неловкий, стыдный | Мне было очень неловко. | embarrassing | That was really embarrassing for me.
+enttäuscht | разочарованный | Мы были разочарованы фильмом. | disappointed | We were disappointed with the film.
+dankbar | благодарный | Я благодарен тебе за помощь. | grateful | I'm grateful for your help.
+einsam | одинокий | В новом городе она чувствовала себя одинокой. | lonely | She felt lonely in the new city.
+die Angst | страх | Он боится собак. | fear | He is afraid of dogs.
+erleichtert | испытывающий облегчение | Я почувствовал облегчение, когда сдал. | relieved | I was relieved when I passed.
+selbstbewusst | уверенный в себе | Она говорит очень уверенно. | self-confident | She speaks very confidently.
+traurig | грустный | Почему ты такой грустный? | sad | Why are you so sad?
+ruhig | спокойный, тихий | Сохраняй спокойствие и слушай. | calm, quiet | Stay calm and listen.
+die Laune | настроение | У тебя сегодня хорошее настроение. | mood | You're in a good mood today.
+sich freuen | радоваться | Я жду выходных с нетерпением. | to be happy, to look forward | I'm looking forward to the weekend.
+wütend | злой, разъярённый | Отец был зол на меня. | angry, furious | My father was angry with me.
+das Gerät | прибор, устройство | Выключите все приборы. | device, appliance | Switch off all devices.
+herunterladen | скачивать | Я скачал новое приложение. | to download | I've downloaded a new app.
+das Passwort | пароль | Никому не говори свой пароль. | password | Don't tell anyone your password.
+der Bildschirm | экран | У моего телефона разбит экран. | screen | My phone screen is broken.
+der Akku | аккумулятор | Аккумулятор почти сел. | battery | My battery is almost dead.
+aufladen | заряжать | Мне нужно зарядить телефон. | to charge | I need to charge my phone.
+die Software | программное обеспечение | Мы установили новые программы. | software | We've installed new software.
+suchen | искать | Я ищу ответ в интернете. | to look for, to search | I'm looking for the answer online.
+die Webseite | сайт, веб-страница | Посетите наш сайт. | website, web page | Visit our website.
+löschen | удалять | Я удалил старые фото. | to delete | I deleted the old photos.
+das Konto | счёт, аккаунт | Создайте аккаунт. | account | Create an account.
+drahtlos | беспроводной | Это беспроводная мышь. | wireless | That's a wireless mouse.
+aktualisieren | обновлять | Обнови приложение! | to update | Update the app!
+die Erfindung | изобретение | Телефон был важным изобретением. | invention | The telephone was an important invention.
+der Drucker | принтер | В принтере закончилась бумага. | printer | The printer is out of paper.
+die Nachbarschaft | соседство, район | Это тихий район. | neighbourhood | It's a quiet neighbourhood.
+der Verkehr | движение (транспорта) | Утром большое движение. | traffic | There's a lot of traffic in the morning.
+voll | полный, переполненный | Автобус был переполнен. | full, crowded | The bus was very crowded.
+die Umweltverschmutzung | загрязнение окружающей среды | Загрязнение среды — большая проблема. | pollution | Pollution is a big problem.
+der Bürger | гражданин | Он гражданин Узбекистана. | citizen | He is a citizen of Uzbekistan.
+das Gesetz | закон | Все должны соблюдать закон. | law | Everyone must obey the law.
+die Regierung | правительство | Правительство построило новую дорогу. | government | The government has built a new road.
+das Verbrechen | преступление | Здесь мало преступлений. | crime | There is little crime here.
+wählen | голосовать; выбирать | Ты голосовал? | to vote; to choose | Did you vote?
+öffentlich | общественный, публичный | Пользуйтесь общественным транспортом. | public | Use public transport.
+die Miete | арендная плата | Аренда очень высокая. | rent | The rent is very high.
+trennen | разделять, сортировать | Мы сортируем мусор. | to separate, to sort | We sort our rubbish.
+der Müll | мусор | Вынеси, пожалуйста, мусор. | rubbish, garbage | Please take out the rubbish.
+die Gemeinschaft | сообщество | Наше сообщество помогает друг другу. | community | Our community helps each other.
+ehrenamtlich | добровольно, на общественных началах | Она работает волонтёром в больнице. | voluntary, as a volunteer | She volunteers at the hospital.
+die Beziehung | отношения | У них хорошие отношения с соседями. | relationship | They have a good relationship with the neighbours.
+die Hochzeit | свадьба | Нас пригласили на их свадьбу. | wedding | We're invited to their wedding.
+das Paar | пара | По соседству поселилась молодая пара. | couple | A young couple has moved in next door.
+der Partner | партнёр | Она пришла на вечеринку с партнёром. | partner | She came to the party with her partner.
+das Vertrauen | доверие | В дружбе важно доверие. | trust | Trust is important in a friendship.
+der Streit | ссора | Они поссорились из-за денег. | argument, quarrel | They had an argument about money.
+heiraten | жениться, выходить замуж | Они поженились прошлым летом. | to marry, to get married | They got married last summer.
+sich verstehen | ладить | Я хорошо лажу с сестрой. | to get on (well) | I get on well with my sister.
+sich verlieben | влюбляться | Он сразу в неё влюбился. | to fall in love | He fell in love with her immediately.
+sich trennen | расставаться | Они расстались через два года. | to split up, to separate | They split up after two years.
+verzeihen | прощать | Пожалуйста, прости меня! | to forgive | Please forgive me!
+sich entschuldigen | извиняться | Тебе стоит извиниться перед ней. | to apologise | You should apologise to her.
+unterstützen | поддерживать | Семья всегда меня поддерживает. | to support | My family always supports me.
+sich verlassen auf | полагаться на | Ты можешь на меня положиться. | to rely on | You can rely on me.
+ehrlich | честный | Он честный человек. | honest | He is an honest person.
+treu | верный | Собака — верный друг. | loyal, faithful | A dog is a loyal friend.
+großzügig | щедрый | Мой дядя очень щедрый. | generous | My uncle is very generous.
+egoistisch | эгоистичный | Не будь таким эгоистом! | selfish | Don't be so selfish!
+verlobt | помолвленный | Моя сестра помолвлена с врачом. | engaged | My sister is engaged to a doctor.
+der Verwandte | родственник | На праздник приехали все родственники. | relative | All the relatives came to the party.
+der Schauspieler | актёр | Он мой любимый актёр. | actor | He is my favourite actor.
+der Zuschauer | зритель | Зрители громко хлопали. | spectator, viewer | The spectators clapped loudly.
+die Bühne | сцена | Группа вышла на сцену. | stage | The band came on stage.
+die Vorstellung | представление, сеанс; представление (идея) | Спектакль начинается в восемь. | performance, show; idea | The show starts at eight.
+die Band | группа (музыкальная) | Мой брат играет на барабанах в группе. | band | My brother plays drums in a band.
+das Lied | песня | Эта песня очень известная. | song | This song is very well known.
+die Ausstellung | выставка | Мы идём на фотовыставку. | exhibition | We're visiting a photo exhibition.
+der Künstler | художник, артист | Художник нарисовал мой портрет. | artist | The artist painted my portrait.
+der Roman | роман | Я читаю роман Толстого. | novel | I'm reading a novel by Tolstoy.
+die Figur | персонаж; фигура | Главная героиня — молодая девушка. | character; figure | The main character is a young girl.
+die Handlung | сюжет; действие | Сюжет фильма был скучным. | plot; action | The plot of the film was boring.
+die Szene | сцена | Последняя сцена была очень грустной. | scene | The last scene was very sad.
+die Kritik | рецензия; критика | Фильм получил хорошие рецензии. | review; criticism | The film got good reviews.
+die Kasse | касса | Билеты продаются в кассе. | ticket office, till | Tickets are sold at the box office.
+auftreten | выступать | Группа выступает сегодня вечером. | to perform, to appear | The group is performing tonight.
+klatschen | хлопать | В конце все хлопали. | to clap | Everyone clapped at the end.
+aufnehmen | записывать; принимать | Они записали новый альбом. | to record; to take in | They recorded a new album.
+berühmt | знаменитый | Она хочет стать знаменитой певицей. | famous | She wants to become a famous singer.
+langweilig | скучный | Лекция была скучной. | boring | The lecture was boring.
+spannend | захватывающий | Игра была очень захватывающей. | exciting, gripping | The match was very exciting.
+die Mannschaft | команда | Наша команда выиграла кубок. | team | Our team won the cup.
+das Spiel | игра, матч | Ты видел вчерашний матч? | game, match | Did you see the match yesterday?
+der Trainer | тренер | Тренер очень строгий. | coach, trainer | The coach is very strict.
+der Spieler | игрок | Он лучший игрок команды. | player | He is the best player in the team.
+der Wettbewerb | соревнование, конкурс | Она выиграла соревнование по плаванию. | competition | She won a swimming competition.
+das Ergebnis | результат, счёт | Какой счёт? | result, score | What's the score?
+das Stadion | стадион | Стадион был полон. | stadium | The stadium was full.
+das Fitnessstudio | фитнес-клуб, спортзал | Я хожу в спортзал три раза в неделю. | gym | I go to the gym three times a week.
+das Tor | гол; ворота | Он забил отличный гол. | goal; gate | He scored a great goal.
+die Medaille | медаль | Она выиграла золотую медаль. | medal | She won a gold medal.
+der Fan | фанат, болельщик | Он большой фанат футбола. | fan | He is a big football fan.
+gewinnen | выигрывать | Кто выиграл? | to win | Who won?
+verlieren | проигрывать; терять | Мы проиграли два-один. | to lose | We lost two-one.
+trainieren | тренироваться | Они тренируются каждое утро. | to train, to practise | They train every morning.
+schießen | бить (по мячу); стрелять | Он ударил на последней минуте. | to shoot | He shot in the last minute.
+besiegen | побеждать | Мы победили лучшую команду. | to defeat, to beat | We beat the best team.
+beitreten | вступать (в клуб) | Я хочу вступить в теннисный клуб. | to join | I'd like to join a tennis club.
+fit | в форме | Она поддерживает форму пробежками. | fit, in good shape | She keeps fit by jogging.
+der Verein | клуб, общество | Он играет в футбольном клубе. | club, association | He plays in a football club.
+das Rennen | гонка, забег | Он пришёл вторым в гонке. | race | He came second in the race.
+die Ernährung | питание | Здоровое питание важно. | diet, nutrition | A healthy diet is important.
+die Gewohnheit | привычка | Курение — вредная привычка. | habit | Smoking is a bad habit.
+der Stress | стресс | Спорт помогает от стресса. | stress | Sport helps against stress.
+die Energie | энергия | Сегодня у меня нет сил. | energy | I have no energy today.
+das Gewicht | вес | Он хочет сбросить вес. | weight | He wants to lose weight.
+die Verletzung | травма | У него травма колена. | injury | He has a knee injury.
+die Behandlung | лечение | Лечение длится две недели. | treatment | The treatment takes two weeks.
+das Symptom | симптом | Температура — симптом гриппа. | symptom | Fever is a symptom of flu.
+sich erholen | выздоравливать, восстанавливаться | Она быстро поправилась. | to recover | She recovered quickly.
+vermeiden | избегать | Старайся избегать сахара. | to avoid | Try to avoid sugar.
+aufhören | прекращать, бросать | Отец бросил курить. | to stop, to quit | My father has stopped smoking.
+atmen | дышать | Дыши медленно и расслабься. | to breathe | Breathe slowly and relax.
+schwitzen | потеть | Летом я сильно потею. | to sweat | I sweat a lot in summer.
+niesen | чихать | От пыли я чихаю. | to sneeze | Dust makes me sneeze.
+regelmäßig | регулярный | Регулярный спорт полезен. | regular, regularly | Regular exercise is healthy.
+ausgewogen | сбалансированный | Питайся сбалансированно! | balanced | Eat a balanced diet!
+aktiv | активный | Моя бабушка всё ещё очень активна. | active | My grandma is still very active.
+ungesund | вредный для здоровья | Фастфуд вреден. | unhealthy | Fast food is unhealthy.
+das Vitamin | витамин | В апельсинах много витамина C. | vitamin | Oranges contain a lot of vitamin C.
+der Schlaf | сон | Тебе нужно восемь часов сна. | sleep | You need eight hours of sleep.
+der Vermieter | арендодатель | Хозяин квартиры хочет больше денег. | landlord | The landlord wants more money.
+die Möbel | мебель | Мы купили новую мебель. | furniture | We bought new furniture.
+der Stock | этаж; палка | Мы живём на пятом этаже. | floor, storey; stick | We live on the fifth floor.
+das Dach | крыша | Крышу нужно отремонтировать. | roof | The roof needs to be repaired.
+die Treppe | лестница | Иди по лестнице, лифт сломан. | stairs | Take the stairs, the lift is broken.
+der Balkon | балкон | Мы пьём чай на балконе. | balcony | We drink tea on the balcony.
+die Heizung | отопление | Отопление не работает. | heating | The heating isn't working.
+der Aufzug | лифт | Лифт не работает. | lift, elevator | The lift is out of order.
+umziehen | переезжать | В прошлом году мы переехали. | to move (house) | We moved last year.
+teilen | делить | Я делю комнату с братом. | to share | I share a room with my brother.
+reparieren | ремонтировать | Ты можешь починить кран? | to repair, to fix | Can you fix the tap?
+renovieren | делать ремонт | Мы ремонтируем гостиную. | to renovate, to redecorate | We're redecorating the living room.
+aufräumen | убирать, наводить порядок | Убери, пожалуйста, свою комнату! | to tidy up | Please tidy up your room!
+geräumig | просторный | Кухня светлая и просторная. | spacious | The kitchen is bright and spacious.
+gemütlich | уютный | Это уютный маленький дом. | cosy | It's a cosy little house.
+laut | громкий, шумный | Наша улица очень шумная. | loud, noisy | Our street is very noisy.
+die Adresse | адрес | Какой у тебя адрес? | address | What's your address?
+der Kühlschrank | холодильник | Поставь молоко в холодильник. | fridge | Put the milk in the fridge.
+die Nebenkosten | коммунальные платежи | Коммунальные платежи высокие. | utility costs, bills | The utility bills are high.
+der Hausmeister | завхоз, управляющий домом | Управляющий чинит свет. | caretaker | The caretaker is fixing the light.
+die Sehenswürdigkeit | достопримечательность | Мы осмотрели достопримечательности Самарканда. | sight, place of interest | We visited the sights of Samarkand.
+der Reiseführer | гид; путеводитель | Наш гид говорил на трёх языках. | tour guide; guidebook | Our guide spoke three languages.
+das Andenken | сувенир, память | Я купил сувенир для мамы. | souvenir | I bought a souvenir for Mum.
+die Unterkunft | жильё, ночлег | В цену входит проживание. | accommodation | The price includes accommodation.
+das Abenteuer | приключение | Наша поездка была настоящим приключением. | adventure | Our trip was a real adventure.
+das Reiseziel | цель путешествия | Париж — популярное направление. | destination | Paris is a popular destination.
+die Kultur | культура | Мне нравится знакомиться с другими культурами. | culture | I like getting to know other cultures.
+die Sitte | обычай | Здесь принято снимать обувь. | custom | It's the custom here to take off your shoes.
+der Rucksack | рюкзак | Он путешествовал только с рюкзаком. | backpack, rucksack | He travelled with just a backpack.
+der Flug | полёт, рейс | Наш рейс задержали. | flight | Our flight was delayed.
+erkunden | исследовать, осматривать | Мы обошли старый город. | to explore | We explored the old town.
+packen | упаковывать, собирать | Ты собрал чемодан? | to pack | Have you packed your suitcase?
+einchecken | регистрироваться | Мы заселяемся в отель в 15:00. | to check in | We check in at the hotel at 3 pm.
+verpassen | пропускать, опаздывать | Мы опоздали на поезд. | to miss | We missed the train.
+sich verlaufen | заблудиться | Мы заблудились в горах. | to get lost | We got lost in the mountains.
+empfehlen | рекомендовать | Можете порекомендовать хороший отель? | to recommend | Can you recommend a good hotel?
+toll | отличный, классный | Вид был отличный. | great, fantastic | The view was great.
+fremd | чужой, незнакомый | Я здесь чужой. | strange, foreign | I'm a stranger here.
+die Menge | толпа; количество | На фестивале была огромная толпа. | crowd; amount | There was a huge crowd at the festival.
+die Aussicht | вид | Из номера вид на море. | view | The room has a view of the sea.
+schaffen | справиться, успеть | Я успел закончить вовремя. | to manage | I managed to finish on time.
+sich entscheiden | решать, принимать решение | Мы решили остаться дома. | to decide | We decided to stay at home.
+vorschlagen | предлагать | Предлагаю взять такси. | to suggest | I suggest taking a taxi.
+bevorzugen | предпочитать | Я предпочитаю чай. | to prefer | I prefer tea.
+erwarten | ожидать | Я не ожидал столько людей. | to expect | I didn't expect so many people.
+erklären | объяснять | Можешь объяснить правило? | to explain | Can you explain the rule?
+beschreiben | описывать | Опиши своего лучшего друга. | to describe | Describe your best friend.
+vergleichen | сравнивать | Сравни две цены. | to compare | Compare the two prices.
+leihen | одалживать, брать взаймы | Одолжишь мне ручку? | to lend, to borrow | Can you lend me your pen?
+sich kümmern um | заботиться о | Она присматривает за младшим братом. | to look after, to take care of | She looks after her little brother.
+sich freuen auf | с нетерпением ждать | Я с нетерпением жду каникул. | to look forward to | I'm looking forward to the holidays.
+herausfinden | выяснять | Я узнал правду. | to find out | I found out the truth.
+ablehnen | отклонять | Она отказалась от места. | to turn down, to reject | She turned down the job.
+gründen | основывать | Он основал собственную фирму. | to found, to set up | He set up his own company.
+teilnehmen | участвовать | В конкурсе участвовали десять школ. | to take part | Ten schools took part in the competition.
+passieren | случаться | Что случилось вчера? | to happen | What happened yesterday?
+zustimmen | соглашаться | Я с тобой согласен. | to agree | I agree with you.
+sich weigern | отказываться | Он отказался нам помочь. | to refuse | He refused to help us.
+warnen | предупреждать | Я предупреждал тебя о льде. | to warn | I warned you about the ice.
+sich beschweren | жаловаться | Он пожаловался на шум. | to complain | He complained about the noise.

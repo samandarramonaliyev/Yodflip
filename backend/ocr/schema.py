@@ -19,8 +19,18 @@ JSON_SCHEMA = {
                     "part_of_speech": {"type": "string"},
                     "article": {"anyOf": [{"type": "string", "enum": ["der", "die", "das"]}, {"type": "null"}]},
                     "translation_uz": {"type": "string"},
+                    "translation_ru": {"type": "string"},
+                    "translation_alt": {"type": "string"},
                 },
-                "required": ["word", "definition", "part_of_speech", "article", "translation_uz"],
+                "required": [
+                    "word",
+                    "definition",
+                    "part_of_speech",
+                    "article",
+                    "translation_uz",
+                    "translation_ru",
+                    "translation_alt",
+                ],
                 "additionalProperties": False,
             },
         },
@@ -101,6 +111,14 @@ def validate_payload(data) -> dict:
                 "part_of_speech": _clean(p.get("part_of_speech"), 30),
                 "article": article,
                 "translation_uz": _clean(p.get("translation_uz"), 300),
+                "translations": {
+                    k: v
+                    for k, v in (
+                        ("ru", _clean(p.get("translation_ru"), 300)),
+                        ("de" if lang == "en" else "en", _clean(p.get("translation_alt"), 300)),
+                    )
+                    if v
+                },
             }
         )
     return {"language": lang, "pairs": out[:100]}

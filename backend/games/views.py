@@ -14,6 +14,7 @@ from gamification.services import check_achievements, level_for_xp, record_activ
 from words.levels import level_progress, record_answers
 from words.models import LevelRound, UserLevelWord
 from words.services import record_answer
+from words.translations import resolve
 
 from .models import DailyChallengeScore
 from .rules import GAMES, SESSION_XP_CAP, XP_PER_CORRECT, allowed_for_track, mode_for
@@ -38,6 +39,7 @@ class ResultsSerializer(serializers.Serializer):
     duration_ms = serializers.IntegerField(min_value=0, required=False, default=0)
     combo_max = serializers.IntegerField(min_value=0, required=False, default=0)
     session_id = serializers.CharField(max_length=40, required=False, allow_blank=True)
+    translation_lang = serializers.CharField(max_length=2, required=False, allow_blank=True)
 
     def validate(self, attrs):
         if attrs.get("source") == "level" and not attrs.get("session_id"):
@@ -66,6 +68,8 @@ class WordsView(APIView):
             OpenApiParameter("pack", str),
             OpenApiParameter("id", int),
             OpenApiParameter("limit", int),
+            OpenApiParameter("translation_lang", str, enum=["uz", "ru", "en", "de"]),
+            OpenApiParameter("direction", str, enum=["forward", "reverse"]),
         ],
         responses={200: dict},
     )
@@ -78,7 +82,14 @@ class WordsView(APIView):
         if not allowed_for_track(game, track):
             raise ValidationError({"detail": "game_not_available_for_track"})
         mode = mode_for(game)
-        items = get_items(request.user, track, p.get("source", "level"), p, mode)
+        lang, direction = resolve(track, p.get("translation_lang"), p.get("direction"))
+        source = p.get("source", "level")
+        if source == "deck":
+            from decks.models import Deck
+
+            deck = Deck.objects.filter(pk=p.get("id")).only("translation_lang").first()
+            lang = deck.translation_lang if deck else lang  # a deck always plays in its own language
+        items = get_items(request.user, track, source, p, mode, translation_lang=lang)
         if p.get("source") != "daily":
             random.shuffle(items)
         try:
@@ -86,7 +97,14 @@ class WordsView(APIView):
         except ValueError:
             limit = 200
         items = items[:limit]
-        payload = {"game": game, "track": track, "mode": mode, "items": items}
+        payload = {
+            "game": game,
+            "track": track,
+            "mode": mode,
+            "translation_lang": lang,
+            "direction": direction,
+            "items": items,
+        }
         if p.get("source") == "daily":
             done = DailyChallengeScore.objects.filter(user=request.user, track=track, date=today()).first()
             payload["already_played"] = bool(done)
@@ -107,6 +125,12 @@ class ResultsView(APIView):
         if not allowed_for_track(game, track):
             raise ValidationError({"detail": "game_not_available_for_track"})
         results = d["results"]
+        lang = ""
+        if d.get("translation_lang"):
+            lang, _ = resolve(track, d["translation_lang"])
+            if lang != "uz":
+                # UserWord.translation_uz only stores Uzbek: never copy RU / EN / DE text into it.
+                results = [{**r, "translation": ""} for r in results]
         attempts = len(results)
         correct = sum(1 for r in results if r["correct"])
         learned_now = []
@@ -139,6 +163,7 @@ class ResultsView(APIView):
                 game=game,
                 mode=GAMES[game],
                 source=d.get("source", ""),
+                translation_lang=lang if GAMES[game] != "definition" else "",
                 xp=xp,
                 correct=correct,
                 attempts=attempts,

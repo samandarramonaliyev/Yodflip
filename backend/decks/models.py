@@ -17,6 +17,8 @@ class Deck(models.Model):
     name = models.CharField(max_length=120)
     track = models.CharField(max_length=2, choices=TRACK_CHOICES)
     description = models.CharField(max_length=500, blank=True)
+    # Language of the cards' "translation" side (uz / ru / en / de, never the track itself).
+    translation_lang = models.CharField(max_length=2, default="uz")
     is_public = models.BooleanField(default=False)
     share_code = models.CharField(max_length=20, unique=True, default=new_share_code)
     copied_from = models.ForeignKey("self", null=True, blank=True, on_delete=models.SET_NULL)
@@ -33,7 +35,8 @@ class Deck(models.Model):
 class Card(models.Model):
     deck = models.ForeignKey(Deck, on_delete=models.CASCADE, related_name="cards")
     term = models.CharField(max_length=200)
-    translation = models.CharField(max_length=300)  # usually Uzbek; other languages allowed
+    translation = models.CharField(max_length=300)  # in deck.translation_lang
+    extra_translations = models.JSONField(default=dict, blank=True)  # {lang: text}, optional / AI-cached
     definition = models.CharField(max_length=500, blank=True)
     example = models.CharField(max_length=500, blank=True)
     article = models.CharField(max_length=3, blank=True)
@@ -70,6 +73,7 @@ class SetPair(models.Model):
     part_of_speech = models.CharField(max_length=30, blank=True)
     article = models.CharField(max_length=3, blank=True)
     translation_uz = models.CharField(max_length=300, blank=True)
+    translations = models.JSONField(default=dict, blank=True)  # {"ru": ..., "en"/"de": ...}
     order = models.PositiveIntegerField(default=0)
 
     class Meta:

@@ -1,6 +1,6 @@
 from datetime import timedelta
 
-from django.db.models import Sum
+from django.db.models import Count, Sum
 from drf_spectacular.utils import OpenApiParameter, extend_schema
 from rest_framework.response import Response
 from rest_framework.views import APIView
@@ -9,7 +9,7 @@ from accounts.serializers import UserSerializer
 from words.models import UserWord
 from words.services import due_queryset
 
-from .models import DailyActivity, UserAchievement
+from .models import DailyActivity, GameSession, UserAchievement
 from .services import ACHIEVEMENTS, leaderboard, level_for_xp, today, xp_for_level
 
 
@@ -43,7 +43,21 @@ def profile_stats(user, track: str) -> dict:
         "accuracy": round(100 * correct / (correct + missed)) if (correct + missed) else 0,
         "cefr": user.cefr_for(track),
         "chart": chart,
+        "translation_langs": translation_breakdown(user, track),
     }
+
+
+def translation_breakdown(user, track: str) -> list[dict]:
+    """Share of memorization games per translation language, e.g. UZ 60%, RU 30%, DE 10%."""
+    rows = (
+        GameSession.objects.filter(user=user, track=track)
+        .exclude(translation_lang="")
+        .values("translation_lang")
+        .annotate(n=Count("id"))
+        .order_by("-n")
+    )
+    total = sum(r["n"] for r in rows)
+    return [{"lang": r["translation_lang"], "count": r["n"], "percent": round(100 * r["n"] / total)} for r in rows]
 
 
 class ProfileStatsView(APIView):

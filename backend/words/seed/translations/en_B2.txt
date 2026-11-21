@@ -1,0 +1,251 @@
+# word | ru | example (ru) | de | example (de)
+profit | прибыль | Компания получила большую прибыль. | der Gewinn | Die Firma hat einen großen Gewinn gemacht.
+investment | инвестиция, вложение | Недвижимость — надёжное вложение. | die Investition, die Geldanlage | Immobilien sind eine sichere Geldanlage.
+to negotiate | вести переговоры | Они договорились о новом контракте. | verhandeln | Sie haben einen neuen Vertrag ausgehandelt.
+budget | бюджет | Мы работаем с ограниченным бюджетом. | das Budget | Wir arbeiten mit einem knappen Budget.
+competitor | конкурент | Наш главный конкурент снизил цены. | der Konkurrent, der Wettbewerber | Unser Hauptkonkurrent hat die Preise gesenkt.
+to launch | запускать, выпускать | Они выпустили новый телефон. | auf den Markt bringen, einführen | Sie haben ein neues Handy auf den Markt gebracht.
+revenue | выручка, доход | Выручка выросла на 20%. | der Umsatz, die Einnahmen | Der Umsatz ist um 20 % gestiegen.
+loan | кредит, заём | Он взял кредит в банке. | der Kredit, das Darlehen | Er hat bei der Bank einen Kredit aufgenommen.
+debt | долг | Они выплатили все долги. | die Schulden | Sie haben alle Schulden abbezahlt.
+to afford | позволить себе | Мы не можем позволить себе новую машину. | sich leisten | Wir können uns kein neues Auto leisten.
+supply | предложение, поставка | Предложение ниже спроса. | das Angebot | Das Angebot ist niedriger als die Nachfrage.
+demand | спрос | Медсёстры пользуются большим спросом. | die Nachfrage | Es gibt eine hohe Nachfrage nach Pflegekräften.
+contract | договор, контракт | Прочитайте договор, прежде чем подписывать. | der Vertrag | Lesen Sie den Vertrag, bevor Sie unterschreiben.
+to invest | инвестировать, вкладывать | Она вложила деньги в маленькое кафе. | investieren | Sie hat in ein kleines Café investiert.
+entrepreneur | предприниматель | Молодым предпринимателям нужна поддержка. | der Unternehmer | Junge Unternehmer brauchen Unterstützung.
+climate | климат | Климат меняется. | das Klima | Das Klima verändert sich.
+drought | засуха | Засуха уничтожила урожай. | die Dürre | Die Dürre hat die Ernte zerstört.
+endangered | находящийся под угрозой исчезновения | Снежный барс — исчезающий вид. | vom Aussterben bedroht | Der Schneeleopard ist vom Aussterben bedroht.
+renewable | возобновляемый | Солнечная энергия — возобновляемая. | erneuerbar | Solarenergie ist erneuerbar.
+to waste | тратить впустую | Не трать воду зря. | verschwenden | Verschwende kein Wasser.
+emission | выброс | Машины производят вредные выбросы. | der Ausstoß, die Emission | Autos verursachen schädliche Emissionen.
+to protect | защищать | Мы должны защищать природу. | schützen | Wir müssen die Natur schützen.
+species | вид (биол.) | Здесь обитают тысячи видов. | die Art, die Tierart | Hier leben Tausende von Arten.
+flood | наводнение | Наводнение повредило много домов. | die Überschwemmung, das Hochwasser | Das Hochwasser hat viele Häuser beschädigt.
+sustainable | устойчивый, экологичный | Нам нужно устойчивое сельское хозяйство. | nachhaltig | Wir brauchen nachhaltige Landwirtschaft.
+to reduce | сокращать, уменьшать | Сократите использование пластика. | reduzieren, verringern | Verringere deinen Plastikverbrauch.
+wildlife | дикая природа, животный мир | Парк охраняет местный животный мир. | die Tierwelt | Der Park schützt die heimische Tierwelt.
+fuel | топливо | Цены на топливо снова выросли. | der Kraftstoff, der Brennstoff | Die Kraftstoffpreise sind wieder gestiegen.
+harmful | вредный | Курение вредно для здоровья. | schädlich | Rauchen ist schädlich für die Gesundheit.
+to destroy | разрушать, уничтожать | Пожар уничтожил лес. | zerstören | Das Feuer hat den Wald zerstört.
+degree | диплом, степень | У неё юридический диплом. | der Abschluss | Sie hat einen Abschluss in Jura.
+scholarship | стипендия | Он получил стипендию на учёбу в Корее. | das Stipendium | Er hat ein Stipendium für ein Studium in Korea bekommen.
+to graduate | оканчивать (учебное заведение) | Я окончил вуз в 2020 году. | den Abschluss machen | Ich habe 2020 meinen Abschluss gemacht.
+assignment | задание | Задание нужно сдать на следующей неделе. | die Aufgabe, die Hausarbeit | Die Hausarbeit ist nächste Woche fällig.
+lecture | лекция | Лекция длилась два часа. | die Vorlesung | Die Vorlesung dauerte zwei Stunden.
+research | исследование | Они проводят исследования рака. | die Forschung | Sie betreiben Krebsforschung.
+knowledge | знание | Знание — сила. | das Wissen | Wissen ist Macht.
+to memorize | запоминать, заучивать | Я выучил двадцать новых слов. | auswendig lernen | Ich habe zwanzig neue Wörter auswendig gelernt.
+curriculum | учебная программа | Программирование теперь в учебной программе. | der Lehrplan | Programmieren steht jetzt im Lehrplan.
+to fail | провалить, не сдать | Он не сдал экзамен по вождению. | durchfallen | Er ist durch die Fahrprüfung gefallen.
+fluent | свободный (о языке) | Она свободно говорит на трёх языках. | fließend | Sie spricht drei Sprachen fließend.
+to improve | улучшать | Чтение улучшает словарный запас. | verbessern | Lesen verbessert den Wortschatz.
+tuition | плата за обучение | Плата за обучение растёт. | die Studiengebühren | Die Studiengebühren steigen.
+semester | семестр | Новый семестр начинается в сентябре. | das Semester | Das neue Semester beginnt im September.
+to evaluate | оценивать | Учителя оценивают успехи учеников. | bewerten | Lehrer bewerten den Fortschritt der Schüler.
+headline | заголовок | Заголовок привлёк моё внимание. | die Schlagzeile | Die Schlagzeile ist mir aufgefallen.
+journalist | журналист | Журналист взял интервью у министра. | der Journalist | Der Journalist hat den Minister interviewt.
+to broadcast | транслировать | Матч транслировали в прямом эфире. | senden, übertragen | Das Spiel wurde live übertragen.
+advertisement | реклама, объявление | Я видел рекламу новой машины. | die Werbung, die Anzeige | Ich habe eine Werbung für ein neues Auto gesehen.
+audience | публика, зрители | Публика громко аплодировала. | das Publikum | Das Publikum klatschte laut.
+reliable | надёжный | Этот источник надёжный? | zuverlässig | Ist diese Quelle zuverlässig?
+to persuade | убеждать, уговаривать | Я уговорил его прийти. | überreden, überzeugen | Ich habe ihn überredet zu kommen.
+opinion | мнение | По-моему, это хорошая идея. | die Meinung | Meiner Meinung nach ist das eine gute Idee.
+rumour | слух | Не верь каждому слуху. | das Gerücht | Glaub nicht jedes Gerücht.
+to influence | влиять | Соцсети влияют на молодёжь. | beeinflussen | Soziale Medien beeinflussen junge Leute.
+issue | проблема, вопрос | Изменение климата — глобальная проблема. | das Thema, das Problem | Der Klimawandel ist ein globales Problem.
+to argue | спорить | Они спорят из-за денег. | sich streiten | Sie streiten sich über Geld.
+privacy | частная жизнь, конфиденциальность | У знаменитостей мало личной жизни. | die Privatsphäre | Prominente haben wenig Privatsphäre.
+viewpoint | точка зрения | Постарайся понять её точку зрения. | der Standpunkt | Versuch, ihren Standpunkt zu verstehen.
+biased | предвзятый | Репортаж был явно предвзятым. | einseitig, voreingenommen | Der Bericht war eindeutig einseitig.
+suspect | подозреваемый | Полиция арестовала подозреваемого. | der Verdächtige | Die Polizei hat einen Verdächtigen festgenommen.
+witness | свидетель | Свидетель описал машину. | der Zeuge | Der Zeuge beschrieb das Auto.
+victim | жертва, пострадавший | Пострадавшего отвезли в больницу. | das Opfer | Das Opfer wurde ins Krankenhaus gebracht.
+trial | судебный процесс | Процесс длился три недели. | der Prozess | Der Prozess dauerte drei Wochen.
+judge | судья | Судья дал ему пять лет. | der Richter | Der Richter verurteilte ihn zu fünf Jahren.
+lawyer | адвокат, юрист | Вам стоит поговорить с адвокатом. | der Anwalt, der Rechtsanwalt | Sie sollten mit einem Anwalt sprechen.
+sentence | приговор, срок | Его приговорили к длительному сроку. | die Strafe, das Urteil | Er bekam eine lange Haftstrafe.
+fine | штраф | Я получил штраф за парковку там. | das Bußgeld, die Geldstrafe | Ich habe ein Bußgeld fürs Parken dort bekommen.
+theft | кража | Угон машин здесь обычное дело. | der Diebstahl | Autodiebstahl ist hier häufig.
+fraud | мошенничество | Его признали виновным в мошенничестве. | der Betrug | Er wurde des Betrugs für schuldig befunden.
+to arrest | арестовывать | Вчера вечером арестовали двух мужчин. | festnehmen, verhaften | Gestern Abend wurden zwei Männer festgenommen.
+to accuse | обвинять | Она обвинила его во лжи. | beschuldigen | Sie beschuldigte ihn der Lüge.
+to commit | совершать | Он совершил преступление в одиночку. | begehen | Er hat das Verbrechen allein begangen.
+to investigate | расследовать | Полиция расследует ограбление. | ermitteln, untersuchen | Die Polizei ermittelt wegen des Raubes.
+to punish | наказывать | Преступники должны быть наказаны. | bestrafen | Verbrecher müssen bestraft werden.
+to deny | отрицать | Он всё отрицал. | leugnen, bestreiten | Er leugnete alles.
+guilty | виновный | Присяжные признали её виновной. | schuldig | Die Geschworenen befanden sie für schuldig.
+innocent | невиновный | Он говорит, что невиновен. | unschuldig | Er sagt, er sei unschuldig.
+illegal | незаконный | Водить без прав незаконно. | illegal, rechtswidrig | Ohne Führerschein zu fahren ist illegal.
+experiment | эксперимент, опыт | Мы провели опыт в лаборатории. | das Experiment | Wir haben im Labor ein Experiment gemacht.
+laboratory | лаборатория | Она работает в лаборатории. | das Labor | Sie arbeitet in einem Labor.
+discovery | открытие | Это открытие изменило медицину. | die Entdeckung | Die Entdeckung veränderte die Medizin.
+theory | теория | Теория относительности Эйнштейна знаменита. | die Theorie | Einsteins Relativitätstheorie ist berühmt.
+data | данные | Нам нужно больше данных. | die Daten | Wir brauchen mehr Daten.
+robot | робот | На этом заводе машины собирают роботы. | der Roboter | In dieser Fabrik bauen Roboter Autos.
+artificial intelligence | искусственный интеллект | Искусственный интеллект меняет многие профессии. | die künstliche Intelligenz | Künstliche Intelligenz verändert viele Berufe.
+engineer | инженер | Моя сестра — инженер-строитель. | der Ingenieur | Meine Schwester ist Bauingenieurin.
+satellite | спутник | Спутник передаёт телесигнал. | der Satellit | Der Satellit sendet Fernsehsignale.
+innovation | инновация, новшество | Компания известна своими инновациями. | die Innovation | Die Firma ist für Innovation bekannt.
+breakthrough | прорыв | Учёные совершили прорыв в исследовании рака. | der Durchbruch | Forscher haben einen Durchbruch in der Krebsforschung erzielt.
+to invent | изобретать | Кто изобрёл телефон? | erfinden | Wer hat das Telefon erfunden?
+to measure | измерять | Измерьте длину стола. | messen | Miss die Länge des Tisches.
+to prove | доказывать | Ты можешь это доказать? | beweisen | Kannst du das beweisen?
+to observe | наблюдать | Учёные наблюдают за животными в природе. | beobachten | Wissenschaftler beobachten Tiere in der Natur.
+to develop | разрабатывать, развивать | Они разработали новую вакцину. | entwickeln | Sie haben einen neuen Impfstoff entwickelt.
+scientific | научный | Научных доказательств нет. | wissenschaftlich | Es gibt keinen wissenschaftlichen Beweis.
+advanced | передовой | Это очень передовая технология. | fortschrittlich | Das ist eine sehr fortschrittliche Technologie.
+digital | цифровой | Мы живём в цифровом мире. | digital, elektronisch | Wir leben in einer digitalen Welt.
+surgeon | хирург | Хирург прооперировал ему сердце. | der Chirurg | Der Chirurg hat sein Herz operiert.
+operation | операция | Ей нужна операция на колене. | die Operation | Sie braucht eine Operation am Knie.
+patient | пациент | У врача много пациентов. | der Patient | Der Arzt hat viele Patienten.
+disease | болезнь | Болезни сердца очень распространены. | die Krankheit | Herzkrankheiten sind sehr häufig.
+infection | инфекция | У него инфекция уха. | die Infektion, die Entzündung | Er hat eine Ohrenentzündung.
+vaccine | вакцина | Вакцина для детей бесплатная. | der Impfstoff | Der Impfstoff ist für Kinder kostenlos.
+prescription | рецепт (врача) | Для этого лекарства нужен рецепт. | das Rezept | Für dieses Medikament braucht man ein Rezept.
+allergy | аллергия | У меня аллергия на орехи. | die Allergie | Ich habe eine Nussallergie.
+blood | кровь | Он потерял много крови. | das Blut | Er hat viel Blut verloren.
+heart | сердце | Упражнения полезны для сердца. | das Herz | Sport ist gut für das Herz.
+pill | таблетка | Принимайте по таблетке после еды. | die Tablette | Nehmen Sie nach jeder Mahlzeit eine Tablette.
+to cure | вылечить | Эту болезнь можно вылечить. | heilen | Diese Krankheit kann geheilt werden.
+to prevent | предотвращать | Мытьё рук предотвращает инфекции. | vorbeugen, verhindern | Händewaschen beugt Infektionen vor.
+to suffer | страдать | Она страдает от болей в спине. | leiden | Sie leidet an Rückenschmerzen.
+to examine | осматривать | Врач осмотрел моё горло. | untersuchen | Der Arzt hat meinen Hals untersucht.
+to bleed | кровоточить | У него шла кровь из носа. | bluten | Seine Nase blutete.
+serious | серьёзный, тяжёлый | Это не серьёзная болезнь. | ernst, schwer | Das ist keine ernste Krankheit.
+mental | психический | Психическое здоровье так же важно, как физическое. | psychisch, geistig | Psychische Gesundheit ist genauso wichtig wie körperliche.
+pregnant | беременная | Моя сестра беременна. | schwanger | Meine Schwester ist schwanger.
+personality | личность, характер | У неё сильный характер. | die Persönlichkeit | Sie hat eine starke Persönlichkeit.
+behaviour | поведение | Его поведение в школе улучшилось. | das Verhalten | Sein Verhalten in der Schule hat sich gebessert.
+attitude | отношение | У неё позитивное отношение к работе. | die Einstellung | Sie hat eine positive Einstellung zur Arbeit.
+memory | память; воспоминание | У меня хорошая память на лица. | das Gedächtnis; die Erinnerung | Ich habe ein gutes Gedächtnis für Gesichter.
+emotion | эмоция, чувство | Он не показывает своих эмоций. | das Gefühl, die Emotion | Er zeigt seine Gefühle nicht.
+motivation | мотивация | Она потеряла мотивацию к учёбе. | die Motivation | Sie hat die Motivation zum Lernen verloren.
+confidence | уверенность в себе | Ему не хватает уверенности. | das Selbstvertrauen | Ihm fehlt Selbstvertrauen.
+pressure | давление | Студенты находятся под большим давлением. | der Druck | Schüler stehen unter großem Druck.
+instinct | инстинкт, чутьё | Доверяй своему чутью. | der Instinkt | Vertrau deinem Instinkt.
+to cope | справляться | Как ты справляешься со стрессом? | bewältigen, zurechtkommen | Wie gehst du mit Stress um?
+to adapt | приспосабливаться | Дети быстро приспосабливаются. | sich anpassen | Kinder passen sich schnell an.
+to concentrate | сосредотачиваться | Я не могу сосредоточиться при таком шуме. | sich konzentrieren | Bei diesem Lärm kann ich mich nicht konzentrieren.
+to hesitate | колебаться, сомневаться | Не стесняйтесь звонить мне. | zögern | Zögern Sie nicht, mich anzurufen.
+to realise | понимать, осознавать | Я понял, что оставил ключи. | merken, erkennen | Ich habe gemerkt, dass ich meine Schlüssel vergessen hatte.
+to imagine | представлять | Представь, что ты на пляже. | sich vorstellen | Stell dir vor, du bist am Strand.
+aware | осведомлённый | Вы знаете о рисках? | bewusst | Bist du dir der Risiken bewusst?
+sensitive | чувствительный, ранимый | Он очень болезненно воспринимает критику. | empfindlich, sensibel | Er reagiert sehr empfindlich auf Kritik.
+curious | любопытный, любознательный | Дети от природы любознательны. | neugierig | Kinder sind von Natur aus neugierig.
+independent | независимый, самостоятельный | Она очень самостоятельная. | unabhängig, selbstständig | Sie ist sehr selbstständig.
+manager | менеджер, руководитель | Мне нужно поговорить с менеджером. | der Manager, der Leiter | Ich muss mit dem Leiter sprechen.
+staff | персонал, сотрудники | Персонал дружелюбный. | das Personal | Das Personal ist freundlich.
+responsibility | ответственность | Запирать дверь — моя обязанность. | die Verantwortung | Es ist meine Verantwortung, die Tür abzuschließen.
+task | задача, задание | Сегодня мне нужно закончить три задачи. | die Aufgabe | Ich muss heute drei Aufgaben erledigen.
+goal setting | постановка целей | Постановка целей помогает командам работать лучше. | die Zielsetzung | Zielsetzung hilft Teams, besser zu arbeiten.
+strategy | стратегия | Нам нужна новая маркетинговая стратегия. | die Strategie | Wir brauchen eine neue Marketingstrategie.
+report | отчёт, доклад | Пришлите мне отчёт до пятницы. | der Bericht | Schicken Sie mir den Bericht bis Freitag.
+project | проект | Проект займёт шесть месяцев. | das Projekt | Das Projekt dauert sechs Monate.
+feedback | обратная связь, отзыв | Спасибо за ваш отзыв. | die Rückmeldung, das Feedback | Danke für Ihre Rückmeldung.
+schedule | график, расписание | Мы отстаём от графика. | der Zeitplan | Wir liegen hinter dem Zeitplan.
+to delegate | делегировать, поручать | Хороший менеджер умеет делегировать. | delegieren | Ein guter Manager kann delegieren.
+to achieve | достигать | Мы достигли цели по продажам. | erreichen | Wir haben unser Verkaufsziel erreicht.
+to organise | организовывать | Она организовала конференцию. | organisieren | Sie hat die Konferenz organisiert.
+to cooperate | сотрудничать | Эти две компании тесно сотрудничают. | zusammenarbeiten | Die beiden Firmen arbeiten eng zusammen.
+to motivate | мотивировать | Хороший начальник мотивирует команду. | motivieren | Ein guter Chef motiviert das Team.
+to supervise | руководить, контролировать | Он руководит десятью рабочими. | beaufsichtigen | Er beaufsichtigt zehn Arbeiter.
+efficient | эффективный | Новая система эффективнее. | effizient | Das neue System ist effizienter.
+flexible | гибкий | У меня гибкий график работы. | flexibel | Ich habe flexible Arbeitszeiten.
+experienced | опытный | Мы ищем опытного учителя. | erfahren | Wir suchen einen erfahrenen Lehrer.
+masterpiece | шедевр | «Мона Лиза» — шедевр. | das Meisterwerk | Die Mona Lisa ist ein Meisterwerk.
+sculpture | скульптура | В парке стоит бронзовая скульптура. | die Skulptur | Im Park steht eine Bronzeskulptur.
+poetry | поэзия | Поэзия Навои знаменита. | die Dichtung, die Lyrik | Navois Dichtung ist berühmt.
+literature | литература | Она изучает узбекскую литературу. | die Literatur | Sie studiert usbekische Literatur.
+heritage | наследие | Бухара — объект всемирного наследия. | das Erbe | Buchara gehört zum Weltkulturerbe.
+tradition | традиция | Есть плов по пятницам — наша семейная традиция. | die Tradition | Freitags Plov zu essen ist bei uns Familientradition.
+gallery | галерея | Мы посетили национальную художественную галерею. | die Galerie | Wir haben die Nationalgalerie besucht.
+craft | ремесло | Гончарство — традиционное ремесло. | das Handwerk | Töpfern ist ein traditionelles Handwerk.
+author | автор | Кто автор этого романа? | der Autor | Wer ist der Autor dieses Romans?
+theatre | театр | Вчера вечером мы ходили в театр. | das Theater | Gestern Abend waren wir im Theater.
+festival | фестиваль | Музыкальный фестиваль длится три дня. | das Festival | Das Musikfestival dauert drei Tage.
+to create | создавать | Она создаёт красивые картины. | erschaffen, schaffen | Sie schafft wunderschöne Bilder.
+to express | выражать | Музыка помогает мне выражать чувства. | ausdrücken | Musik hilft mir, meine Gefühle auszudrücken.
+to inspire | вдохновлять | Природа вдохновляет многих художников. | inspirieren | Die Natur inspiriert viele Künstler.
+to admire | восхищаться | Я восхищаюсь его работой. | bewundern | Ich bewundere seine Arbeit.
+classical | классический | Она любит классическую музыку. | klassisch | Sie liebt klassische Musik.
+original | оригинальный, подлинный | Эта картина — оригинал. | original, echt | Dieses Gemälde ist das Original.
+creative | творческий | Мой сын очень творческий. | kreativ | Mein Sohn ist sehr kreativ.
+contemporary | современный | Я не понимаю современное искусство. | zeitgenössisch | Ich verstehe zeitgenössische Kunst nicht.
+itinerary | маршрут, план поездки | Наш маршрут включает три города. | die Reiseroute | Unsere Reiseroute umfasst drei Städte.
+resort | курорт | Они отдыхали на горнолыжном курорте. | der Ferienort | Sie waren in einem Skiferienort.
+excursion | экскурсия | Мы ездили на экскурсию в горы. | der Ausflug | Wir haben einen Ausflug in die Berge gemacht.
+reservation | бронь, бронирование | У меня бронь на две ночи. | die Reservierung | Ich habe eine Reservierung für zwei Nächte.
+departure | отправление, отъезд | Отправление в шесть утра. | die Abfahrt, der Abflug | Die Abfahrt ist um sechs Uhr morgens.
+customs | таможня | Мы быстро прошли таможню. | der Zoll | Wir sind schnell durch den Zoll gekommen.
+visa | виза | Мне нужна виза в Германию? | das Visum | Brauche ich ein Visum für Deutschland?
+landmark | достопримечательность, символ | Регистан — самая известная достопримечательность Самарканда. | das Wahrzeichen | Der Registan ist das bekannteste Wahrzeichen Samarkands.
+peak season | высокий сезон | В высокий сезон отели дорогие. | die Hauptsaison | In der Hauptsaison sind Hotels teuer.
+to cancel | отменять | Наш рейс отменили. | stornieren, absagen | Unser Flug wurde gestrichen.
+to postpone | откладывать, переносить | Мы перенесли поездку на весну. | verschieben | Wir haben die Reise auf den Frühling verschoben.
+to commute | ездить на работу | Я езжу на работу на метро. | pendeln | Ich pendle mit der U-Bahn.
+to board | садиться (на борт) | Пассажиры могут садиться в самолёт. | einsteigen, an Bord gehen | Die Passagiere können jetzt an Bord gehen.
+to wander | бродить | Мы бродили по старым улицам. | bummeln, umherschlendern | Wir sind durch die alten Straßen gebummelt.
+breathtaking | захватывающий дух | Вид с вершины захватывает дух. | atemberaubend | Die Aussicht vom Gipfel ist atemberaubend.
+remote | отдалённый | Они живут в отдалённой деревне. | abgelegen | Sie wohnen in einem abgelegenen Dorf.
+picturesque | живописный | Это живописный городок. | malerisch | Das ist ein malerisches Städtchen.
+overcrowded | переполненный | Пляж был переполнен. | überfüllt | Der Strand war überfüllt.
+poverty | бедность | Миллионы людей живут в бедности. | die Armut | Millionen Menschen leben in Armut.
+unemployment | безработица | В этом году безработица снизилась. | die Arbeitslosigkeit | Die Arbeitslosigkeit ist dieses Jahr gesunken.
+homeless | бездомный | Благотворительная организация помогает бездомным. | obdachlos | Die Hilfsorganisation hilft obdachlosen Menschen.
+charity | благотворительная организация | Она жертвует деньги на благотворительность. | die Wohltätigkeitsorganisation | Sie spendet Geld für wohltätige Zwecke.
+equality | равенство | Мы верим в равноправие женщин. | die Gleichberechtigung | Wir glauben an die Gleichberechtigung der Frauen.
+discrimination | дискриминация | Дискриминация на работе незаконна. | die Diskriminierung | Diskriminierung am Arbeitsplatz ist verboten.
+population | население | Население города растёт. | die Bevölkerung | Die Bevölkerung der Stadt wächst.
+immigrant | иммигрант | Многие иммигранты работают на стройке. | der Einwanderer | Viele Einwanderer arbeiten auf dem Bau.
+violence | насилие | По телевизору слишком много насилия. | die Gewalt | Im Fernsehen gibt es zu viel Gewalt.
+generation | поколение | Молодое поколение много пользуется соцсетями. | die Generation | Die junge Generation nutzt viel soziale Medien.
+rights | права | У детей тоже есть права. | die Rechte | Auch Kinder haben Rechte.
+to protest | протестовать | Студенты протестовали против нового закона. | protestieren | Studenten protestierten gegen das neue Gesetz.
+to donate | жертвовать | Он отдал свою старую одежду. | spenden | Er hat seine alten Kleider gespendet.
+to solve | решать | Мы должны решить эту проблему вместе. | lösen | Wir müssen dieses Problem gemeinsam lösen.
+to tackle | бороться с, браться за | Правительство должно бороться с преступностью. | bekämpfen, angehen | Die Regierung muss die Kriminalität bekämpfen.
+to increase | увеличиваться, расти | Цены выросли на десять процентов. | steigen, erhöhen | Die Preise sind um zehn Prozent gestiegen.
+elderly | пожилой | Мы должны помогать пожилым людям. | älter, betagt | Wir sollten älteren Menschen helfen.
+disabled | с инвалидностью | В здании есть вход для людей с инвалидностью. | behindert | Das Gebäude ist für Menschen mit Behinderung zugänglich.
+fair | справедливый | Это несправедливо! | gerecht, fair | Das ist nicht gerecht!
+obvious | очевидный | Ответ очевиден. | offensichtlich | Die Antwort ist offensichtlich.
+rare | редкий | Эта птица очень редкая. | selten | Dieser Vogel ist sehr selten.
+huge | огромный | Они живут в огромном доме. | riesig | Sie wohnen in einem riesigen Haus.
+tiny | крошечный | У малыша крошечные ручки. | winzig | Das Baby hat winzige Hände.
+ancient | древний | Мы посетили древний город. | uralt, antik | Wir haben eine uralte Stadt besucht.
+modern | современный | Отель очень современный. | modern, zeitgemäß | Das Hotel ist sehr modern.
+ordinary | обычный | Это был просто обычный день. | gewöhnlich | Es war nur ein gewöhnlicher Tag.
+unusual | необычный | Какое необычное имя! | ungewöhnlich | Was für ein ungewöhnlicher Name!
+complicated | сложный | Инструкция сложная. | kompliziert | Die Anleitung ist kompliziert.
+essential | необходимый, важнейший | Вода необходима для жизни. | unerlässlich, wesentlich | Wasser ist lebensnotwendig.
+valuable | ценный | Спасибо за ценный совет. | wertvoll | Danke für den wertvollen Rat.
+efficient use | эффективное использование | Эффективное использование энергии экономит деньги. | die effiziente Nutzung | Effiziente Energienutzung spart Geld.
+impressive | впечатляющий | Её английский впечатляет. | beeindruckend | Ihr Englisch ist beeindruckend.
+disgusting | отвратительный | Еда была отвратительной. | ekelhaft | Das Essen war ekelhaft.
+terrible | ужасный | У меня был ужасный день. | schrecklich | Ich hatte einen schrecklichen Tag.
+gorgeous | великолепный, прекрасный | Какой великолепный вид! | wunderschön | Was für eine wunderschöne Aussicht!
+smooth | гладкий, ровный | Дорога ровная. | glatt, eben | Die Straße ist eben.
+rough | шершавый, грубый; приблизительный | Стена шершавая на ощупь. | rau | Die Wand fühlt sich rau an.
+brilliant | блестящий, отличный | Отличная идея! | großartig, brillant | Das ist eine großartige Idee!
+to require | требовать | Эта работа требует опыта. | erfordern | Die Stelle erfordert Erfahrung.
+to obtain | получать | Сначала нужно получить визу. | erhalten, bekommen | Sie müssen zuerst ein Visum erhalten.
+to maintain | поддерживать, обслуживать | Старую машину трудно содержать. | instand halten, aufrechterhalten | Es ist schwer, ein altes Auto instand zu halten.
+to ensure | обеспечивать, гарантировать | Пожалуйста, убедитесь, что дверь заперта. | sicherstellen | Bitte stellen Sie sicher, dass die Tür abgeschlossen ist.
+to involve | включать, вовлекать | Эта работа связана с частыми поездками. | beinhalten, mit sich bringen | Die Arbeit bringt viele Reisen mit sich.
+to consider | рассматривать, обдумывать | Мы подумываем о переезде за границу. | in Betracht ziehen, überlegen | Wir überlegen, ins Ausland zu ziehen.
+to estimate | оценивать (приблизительно) | Они оценили стоимость в 5000 долларов. | schätzen | Sie schätzten die Kosten auf 5000 Dollar.
+to identify | определять, выявлять | Ты можешь определить проблему? | identifizieren, erkennen | Kannst du das Problem erkennen?
+to reveal | раскрывать | Наконец он раскрыл правду. | enthüllen, verraten | Endlich hat er die Wahrheit enthüllt.
+to replace | заменять | Нам нужно заменить батарейку. | ersetzen, austauschen | Wir müssen die Batterie austauschen.
+to struggle | с трудом справляться, бороться | Она с трудом нашла работу. | sich abmühen, kämpfen | Sie hatte Mühe, eine Arbeit zu finden.
+to emerge | появляться, возникать | Возникли новые проблемы. | auftauchen, entstehen | Neue Probleme tauchten auf.
+to attract | привлекать | Город привлекает много туристов. | anziehen, anlocken | Die Stadt zieht viele Touristen an.
+to encourage | поощрять, поддерживать | Родители поддержали меня в учёбе. | ermutigen | Meine Eltern haben mich zum Studieren ermutigt.
+to deserve | заслуживать | Ты заслужил отдых. | verdienen | Du hast eine Pause verdient.
+to admit | признавать | Он признал свою ошибку. | zugeben | Er hat seinen Fehler zugegeben.
+to remind | напоминать | Напомни мне ей позвонить. | erinnern | Erinnere mich daran, sie anzurufen.
+to approve | одобрять, утверждать | План одобрили. | genehmigen, billigen | Der Plan wurde genehmigt.
+to assume | предполагать | Я думал, ты знаешь. | annehmen, vermuten | Ich habe angenommen, dass du es weißt.
+jet lag | смена часовых поясов, джетлаг | После перелёта в Нью-Йорк у меня был тяжёлый джетлаг. | der Jetlag | Nach dem Flug nach New York hatte ich einen schlimmen Jetlag.

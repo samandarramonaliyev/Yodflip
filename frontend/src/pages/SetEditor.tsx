@@ -9,6 +9,7 @@ import { useMainButton, useTelegramBack } from '../lib/hooks'
 import type { Deck, SetPair, WordSet } from '../lib/types'
 import { useApp } from '../store/app'
 import type { Track } from '../games/types'
+import { allowedLangs, LANG_META, type TrLang } from '../lib/translation'
 
 const blank = (): SetPair => ({ word: '', definition: '', part_of_speech: '', article: null, translation_uz: '' })
 
@@ -29,6 +30,11 @@ export default function SetEditor() {
   const [error, setError] = useState<unknown>(null)
   const [busy, setBusy] = useState(false)
   const [dirty, setDirty] = useState(isNew)
+  const [trTab, setTrTab] = useState<TrLang>('uz')
+  const trOf = (p: SetPair, l: TrLang) => (l === 'uz' ? p.translation_uz : p.translations?.[l as 'ru' | 'en' | 'de'] || '')
+  const setTr = (i: number, l: TrLang, v: string) =>
+    l === 'uz' ? update(i, { translation_uz: v }) : update(i, { translations: { ...(pairs[i].translations || {}), [l]: v } })
+  const tabLangs = allowedLangs(track)
 
   useEffect(() => {
     if (isNew) return
@@ -129,6 +135,24 @@ export default function SetEditor() {
         />
       </div>
 
+      <div className="flex items-center gap-2" role="tablist" aria-label={t('tr.tabs')} data-testid="tr-tabs">
+        {tabLangs.map((l) => {
+          const has = pairs.some((p) => trOf(p, l).trim())
+          return (
+            <button
+              key={l}
+              role="tab"
+              aria-selected={trTab === l}
+              onClick={() => setTrTab(l)}
+              title={has ? undefined : t('tr.unavailable')}
+              className={`chip ${trTab === l ? 'bg-primary text-white' : 'bg-line/60'} ${has ? '' : 'opacity-60'}`}
+            >
+              {LANG_META[l].flag} {LANG_META[l].short}
+            </button>
+          )
+        })}
+      </div>
+
       <ul className="space-y-3">
         <AnimatePresence initial={false}>
           {pairs.map((p, i) => (
@@ -150,7 +174,13 @@ export default function SetEditor() {
               </div>
               <textarea className="input font-read min-h-[64px] py-2" value={p.definition} onChange={(e) => update(i, { definition: e.target.value })} placeholder={t('sets.definition', { lang: track.toUpperCase() })} aria-label={t('sets.definition', { lang: track.toUpperCase() })} />
               <div className="grid grid-cols-[1fr_120px] gap-2">
-                <input className="input" value={p.translation_uz} onChange={(e) => update(i, { translation_uz: e.target.value })} placeholder={t('sets.translation_uz')} aria-label={t('sets.translation_uz')} />
+                <input
+                  className="input"
+                  value={trOf(p, trTab)}
+                  onChange={(e) => setTr(i, trTab, e.target.value)}
+                  placeholder={`${t('decks.translation')} (${LANG_META[trTab].name})`}
+                  aria-label={`${t('decks.translation')} (${LANG_META[trTab].name})`}
+                />
                 <input className="input" value={p.part_of_speech} onChange={(e) => update(i, { part_of_speech: e.target.value })} placeholder={t('sets.pos')} aria-label={t('sets.pos')} />
               </div>
             </motion.li>
@@ -169,7 +199,7 @@ export default function SetEditor() {
         <button className="btn-primary" onClick={() => void playUrl('match')} disabled={busy || !valid.length}>
           🃏 {t('sets.play_match')}
         </button>
-        <button className="btn-ghost" onClick={() => void playUrl('speed')} disabled={busy || !valid.some((p) => p.translation_uz)}>
+        <button className="btn-ghost" onClick={() => void playUrl('speed')} disabled={busy || !valid.some((p) => tabLangs.some((l) => trOf(p, l)))}>
           <Brain className="h-5 w-5" /> {t('sets.play_memorize')}
         </button>
         <button className="btn-ghost" onClick={toDeck} disabled={busy || !valid.length}>

@@ -1,0 +1,201 @@
+# word | ru | example (ru) | de | example (de)
+salary | зарплата | Она получает хорошую зарплату. | das Gehalt | Sie bekommt ein gutes Gehalt.
+colleague | коллега | Мои коллеги очень дружелюбные. | der Kollege, die Kollegin | Meine Kollegen sind sehr freundlich.
+to hire | нанимать | Компания наняла десять новых работников. | einstellen | Die Firma hat zehn neue Mitarbeiter eingestellt.
+interview | собеседование, интервью | Завтра у меня собеседование. | das Vorstellungsgespräch | Morgen habe ich ein Vorstellungsgespräch.
+experience | опыт | У вас есть опыт в продажах? | die Erfahrung | Haben Sie Erfahrung im Verkauf?
+deadline | крайний срок, дедлайн | Крайний срок — пятница. | die Frist, der Abgabetermin | Die Frist ist Freitag.
+to apply | подавать заявление | Я подал заявки на три вакансии. | sich bewerben | Ich habe mich auf drei Stellen beworben.
+skill | навык, умение | Общение — важный навык. | die Fähigkeit | Kommunikation ist eine wichtige Fähigkeit.
+boss | начальник | Начальник дал мне выходной. | der Chef | Mein Chef hat mir einen Tag freigegeben.
+career | карьера | Он начал карьеру учителем. | die Karriere, die Laufbahn | Er begann seine Karriere als Lehrer.
+to resign | увольняться (по собственному желанию) | Она уволилась в прошлом месяце. | kündigen | Sie hat letzten Monat gekündigt.
+meeting | встреча, совещание | Совещание начинается в десять. | die Besprechung, das Treffen | Die Besprechung beginnt um zehn.
+to earn | зарабатывать | Сколько ты зарабатываешь? | verdienen | Wie viel verdienst du?
+employee | сотрудник, работник | В фирме 200 сотрудников. | der Mitarbeiter | Die Firma hat 200 Mitarbeiter.
+promotion | повышение | В этом году его повысили. | die Beförderung | Er wurde dieses Jahr befördert.
+proud | гордый | Я горжусь своей дочерью. | stolz | Ich bin stolz auf meine Tochter.
+nervous | нервный, взволнованный | Перед экзаменами я всегда нервничаю. | nervös | Vor Prüfungen bin ich immer nervös.
+jealous | ревнивый, завистливый | Он завидует успеху брата. | eifersüchtig, neidisch | Er ist neidisch auf den Erfolg seines Bruders.
+embarrassed | смущённый | Мне было неловко, когда я упал. | verlegen, peinlich berührt | Es war mir peinlich, als ich hingefallen bin.
+disappointed | разочарованный | Мы были разочарованы фильмом. | enttäuscht | Wir waren von dem Film enttäuscht.
+grateful | благодарный | Я благодарен за вашу помощь. | dankbar | Ich bin dankbar für Ihre Hilfe.
+lonely | одинокий | В новом городе она чувствовала себя одинокой. | einsam | In der neuen Stadt fühlte sie sich einsam.
+anxious | встревоженный | Родители волнуются, когда дети опаздывают. | besorgt, ängstlich | Eltern werden unruhig, wenn die Kinder zu spät kommen.
+relieved | испытывающий облегчение | Я почувствовал облегчение, когда сдал тест. | erleichtert | Ich war erleichtert, als ich den Test bestanden hatte.
+confident | уверенный | Она уверенно говорит. | selbstbewusst, sicher | Sie spricht sehr selbstbewusst.
+upset | расстроенный | Не расстраивайся, это не твоя вина. | traurig, verärgert | Sei nicht traurig, es ist nicht deine Schuld.
+calm | спокойный | Сохраняй спокойствие и слушай. | ruhig | Bleib ruhig und hör zu.
+to cheer up | подбадривать, поднимать настроение | Эта песня всегда поднимает мне настроение. | aufmuntern | Dieses Lied muntert mich immer auf.
+fear | страх | Он боится собак. | die Angst | Er hat Angst vor Hunden.
+mood | настроение | У тебя сегодня хорошее настроение. | die Laune, die Stimmung | Du hast heute gute Laune.
+device | устройство | Выключите все электронные устройства. | das Gerät | Schalten Sie alle elektronischen Geräte aus.
+to download | скачивать | Я скачал новое приложение. | herunterladen | Ich habe eine neue App heruntergeladen.
+password | пароль | Никогда никому не говори свой пароль. | das Passwort | Teile niemals dein Passwort.
+screen | экран | У меня разбит экран телефона. | der Bildschirm | Mein Handybildschirm ist kaputt.
+battery | батарея, аккумулятор | Батарея почти разряжена. | der Akku, die Batterie | Mein Akku ist fast leer.
+to charge | заряжать | Мне нужно зарядить телефон. | aufladen | Ich muss mein Handy aufladen.
+software | программное обеспечение | Мы установили новые программы. | die Software | Wir haben neue Software installiert.
+to search | искать | Поищи ответ в интернете. | suchen | Such die Antwort im Internet.
+website | сайт | Подробности на нашем сайте. | die Webseite, die Website | Mehr Informationen auf unserer Webseite.
+to delete | удалять | Я удалил старые фото. | löschen | Ich habe die alten Fotos gelöscht.
+account | аккаунт, учётная запись | Создайте аккаунт, чтобы продолжить. | das Konto | Erstellen Sie ein Konto, um fortzufahren.
+wireless | беспроводной | Это беспроводная мышь. | drahtlos, kabellos | Das ist eine kabellose Maus.
+to update | обновлять | Обновите приложение до последней версии. | aktualisieren | Aktualisiere die App auf die neueste Version.
+online | онлайн, в интернете | Я купил это онлайн. | im Internet, online | Ich habe es im Internet gekauft.
+inventor | изобретатель | Эдисон был знаменитым изобретателем. | der Erfinder | Edison war ein berühmter Erfinder.
+neighbourhood | район, окрестности | Это тихий район. | die Nachbarschaft, das Viertel | Das ist ein ruhiges Viertel.
+traffic | движение, пробки | Утром много машин на дорогах. | der Verkehr | Morgens ist viel Verkehr.
+crowded | переполненный | Автобус был переполнен. | voll, überfüllt | Der Bus war sehr voll.
+pollution | загрязнение | Загрязнение воздуха — большая проблема городов. | die Umweltverschmutzung | Luftverschmutzung ist in Städten ein großes Problem.
+citizen | гражданин | Она гражданка Узбекистана. | der Bürger, die Bürgerin | Sie ist Bürgerin Usbekistans.
+law | закон | Все должны соблюдать закон. | das Gesetz | Alle müssen sich an das Gesetz halten.
+government | правительство | Правительство построило новую дорогу. | die Regierung | Die Regierung hat eine neue Straße gebaut.
+crime | преступление, преступность | В этом районе низкая преступность. | das Verbrechen, die Kriminalität | In dieser Gegend gibt es wenig Kriminalität.
+to vote | голосовать | Ты голосовал на выборах? | wählen | Hast du bei der Wahl gewählt?
+public | общественный | Пользуйтесь общественным транспортом. | öffentlich | Fahren Sie mit öffentlichen Verkehrsmitteln.
+local | местный | Я покупаю овощи у местных фермеров. | lokal, örtlich | Ich kaufe Gemüse bei Bauern aus der Gegend.
+to recycle | перерабатывать | Мы сдаём бумагу и стекло на переработку. | recyceln, wiederverwerten | Wir recyceln Papier und Glas.
+volunteer | волонтёр | Волонтёры убрали парк. | der Freiwillige, der Ehrenamtliche | Freiwillige haben den Park aufgeräumt.
+community | сообщество, община | Наше сообщество очень дружное. | die Gemeinschaft | Unsere Gemeinschaft ist sehr freundlich.
+rent | арендная плата | Арендную плату нужно внести первого числа. | die Miete | Die Miete ist am Ersten fällig.
+relationship | отношения | У них хорошие отношения с соседями. | die Beziehung | Sie haben eine gute Beziehung zu ihren Nachbarn.
+wedding | свадьба | Нас пригласили на их свадьбу. | die Hochzeit | Wir wurden zu ihrer Hochzeit eingeladen.
+couple | пара | По соседству поселилась молодая пара. | das Paar | Ein junges Paar ist nebenan eingezogen.
+partner | партнёр, спутник жизни | Она пришла на вечеринку с партнёром. | der Partner, die Partnerin | Sie kam mit ihrem Partner zur Party.
+trust | доверие | В дружбе важно доверие. | das Vertrauen | In einer Freundschaft ist Vertrauen wichtig.
+argument | ссора, спор | Они поссорились из-за денег. | der Streit | Sie hatten Streit wegen Geld.
+to get married | жениться, выходить замуж | Они поженились прошлым летом. | heiraten | Sie haben letzten Sommer geheiratet.
+to get on with | ладить с | Я хорошо лажу с сестрой. | sich verstehen mit | Ich verstehe mich gut mit meiner Schwester.
+to fall in love | влюбляться | Он влюбился в неё с первого взгляда. | sich verlieben | Er hat sich auf den ersten Blick in sie verliebt.
+to break up | расставаться | Они расстались через два года. | sich trennen, Schluss machen | Sie haben sich nach zwei Jahren getrennt.
+to forgive | прощать | Пожалуйста, прости меня. | verzeihen, vergeben | Bitte verzeih mir.
+to apologise | извиняться | Тебе нужно извиниться перед ней. | sich entschuldigen | Du solltest dich bei ihr entschuldigen.
+to support | поддерживать | Семья всегда меня поддерживает. | unterstützen | Meine Familie unterstützt mich immer.
+to rely on | полагаться на | На меня всегда можно положиться. | sich verlassen auf | Du kannst dich immer auf mich verlassen.
+honest | честный | Он честный человек. | ehrlich | Er ist ein ehrlicher Mensch.
+loyal | верный, преданный | Собака — верный друг. | treu, loyal | Ein Hund ist ein treuer Freund.
+generous | щедрый | Мой дядя очень щедрый. | großzügig | Mein Onkel ist sehr großzügig.
+selfish | эгоистичный | Не будь таким эгоистом! | egoistisch | Sei nicht so egoistisch!
+engaged | помолвленный | Моя сестра помолвлена с врачом. | verlobt | Meine Schwester ist mit einem Arzt verlobt.
+relative | родственник | На праздник приехали все родственники. | der Verwandte | Alle Verwandten kamen zum Fest.
+actor | актёр | Он мой любимый актёр. | der Schauspieler | Er ist mein Lieblingsschauspieler.
+audience member | зритель | Каждый зритель получил бесплатный билет. | der Zuschauer | Jeder Zuschauer bekam eine Freikarte.
+stage | сцена | Группа вышла на сцену. | die Bühne | Die Band kam auf die Bühne.
+performance | выступление, спектакль | Спектакль длился два часа. | die Aufführung, der Auftritt | Die Aufführung dauerte zwei Stunden.
+band | группа (музыкальная) | Мой брат играет на барабанах в группе. | die Band | Mein Bruder spielt Schlagzeug in einer Band.
+song | песня | Эта песня очень популярна. | das Lied | Dieses Lied ist sehr beliebt.
+exhibition | выставка | Мы посетили фотовыставку. | die Ausstellung | Wir haben eine Fotoausstellung besucht.
+artist | художник | Художник нарисовал мой портрет. | der Künstler, der Maler | Der Maler hat mein Porträt gemalt.
+novel | роман | Я читаю роман Толстого. | der Roman | Ich lese einen Roman von Tolstoi.
+character | персонаж, герой | Главная героиня — молодая девушка. | die Figur | Die Hauptfigur ist ein junges Mädchen.
+plot | сюжет | Сюжет фильма был скучным. | die Handlung | Die Handlung des Films war langweilig.
+scene | сцена (эпизод) | Последняя сцена была очень грустной. | die Szene | Die letzte Szene war sehr traurig.
+review | рецензия, отзыв | Фильм получил хорошие отзывы. | die Kritik, die Rezension | Der Film hat gute Kritiken bekommen.
+ticket office | касса | Купите билеты в кассе. | die Kasse, der Kartenschalter | Kaufen Sie die Karten an der Kasse.
+to perform | выступать, исполнять | Группа выступит сегодня вечером. | auftreten | Die Gruppe tritt heute Abend auf.
+to clap | хлопать, аплодировать | В конце все хлопали. | klatschen | Am Ende klatschten alle.
+to record | записывать | Они записали новый альбом. | aufnehmen | Sie haben ein neues Album aufgenommen.
+famous | знаменитый | Она хочет стать знаменитой певицей. | berühmt | Sie möchte eine berühmte Sängerin werden.
+boring | скучный | Лекция была скучной. | langweilig | Die Vorlesung war langweilig.
+exciting | захватывающий | Это был захватывающий матч. | spannend, aufregend | Das war ein spannendes Spiel.
+team | команда | Наша команда выиграла кубок. | die Mannschaft | Unsere Mannschaft hat den Pokal gewonnen.
+match | матч, игра | Ты смотрел матч вчера вечером? | das Spiel | Hast du gestern Abend das Spiel gesehen?
+coach | тренер | Тренер очень строгий. | der Trainer | Der Trainer ist sehr streng.
+player | игрок | Он лучший игрок команды. | der Spieler | Er ist der beste Spieler im Team.
+competition | соревнование, конкурс | Она выиграла соревнование по плаванию. | der Wettbewerb | Sie hat einen Schwimmwettbewerb gewonnen.
+score | счёт | Какой счёт? | der Spielstand | Wie steht es?
+stadium | стадион | Стадион был полон. | das Stadion | Das Stadion war voll.
+gym | спортзал | Я хожу в спортзал три раза в неделю. | das Fitnessstudio | Ich gehe dreimal pro Woche ins Fitnessstudio.
+goal | гол; цель | Он забил отличный гол. | das Tor; das Ziel | Er hat ein tolles Tor geschossen.
+medal | медаль | Она выиграла золотую медаль. | die Medaille | Sie hat eine Goldmedaille gewonnen.
+fan | болельщик, фанат | Он большой фанат футбола. | der Fan | Er ist ein großer Fußballfan.
+to win | выигрывать, побеждать | Кто выиграл игру? | gewinnen | Wer hat das Spiel gewonnen?
+to lose | проигрывать; терять | Мы проиграли два-один. | verlieren | Wir haben zwei zu eins verloren.
+to train | тренироваться | Они тренируются каждое утро. | trainieren | Sie trainieren jeden Morgen.
+to score | забивать (гол) | Он забил на последней минуте. | ein Tor schießen | Er schoss in der letzten Minute ein Tor.
+to beat | побеждать, обыгрывать | Мы обыграли лучшую команду лиги. | schlagen, besiegen | Wir haben die beste Mannschaft der Liga geschlagen.
+to join | вступать, присоединяться | Я хочу вступить в теннисный клуб. | beitreten | Ich möchte einem Tennisclub beitreten.
+fit | в хорошей форме | Она поддерживает форму бегом. | fit, in Form | Sie hält sich mit Laufen in Form.
+professional | профессиональный | Он профессиональный футболист. | professionell, Profi- | Er ist Profifußballer.
+race | гонка, забег | Он пришёл вторым в забеге. | das Rennen | Er wurde Zweiter im Rennen.
+diet | питание, диета | Здоровое питание включает фрукты и овощи. | die Ernährung | Eine gesunde Ernährung enthält Obst und Gemüse.
+habit | привычка | Курение — вредная привычка. | die Gewohnheit | Rauchen ist eine schlechte Gewohnheit.
+stress | стресс | Упражнения помогают при стрессе. | der Stress | Sport hilft gegen Stress.
+energy | энергия, силы | У меня сегодня нет сил. | die Energie | Ich habe heute keine Energie.
+weight | вес | Он хочет похудеть. | das Gewicht | Er möchte abnehmen.
+injury | травма | У него травма колена. | die Verletzung | Er hat eine Knieverletzung.
+treatment | лечение | Лечение длится две недели. | die Behandlung | Die Behandlung dauert zwei Wochen.
+symptom | симптом | Температура — симптом гриппа. | das Symptom | Fieber ist ein Symptom der Grippe.
+to recover | выздоравливать | Она быстро выздоровела. | sich erholen, genesen | Sie hat sich schnell erholt.
+to avoid | избегать | Старайся избегать сахара. | vermeiden | Versuch, Zucker zu vermeiden.
+to give up | бросать, отказываться | Мой отец бросил курить. | aufgeben, aufhören mit | Mein Vater hat mit dem Rauchen aufgehört.
+to breathe | дышать | Дыши медленно и расслабься. | atmen | Atme langsam und entspann dich.
+to sweat | потеть | Летом я сильно потею. | schwitzen | Im Sommer schwitze ich viel.
+to sneeze | чихать | От пыли я чихаю. | niesen | Von Staub muss ich niesen.
+regular | регулярный | Регулярные упражнения полезны. | regelmäßig | Regelmäßige Bewegung ist gesund.
+balanced | сбалансированный | Питайтесь сбалансированно. | ausgewogen | Ernähren Sie sich ausgewogen.
+active | активный | Моя бабушка всё ещё очень активна. | aktiv | Meine Oma ist noch sehr aktiv.
+unhealthy | вредный, нездоровый | Фастфуд вреден для здоровья. | ungesund | Fast Food ist ungesund.
+vitamin | витамин | В апельсинах есть витамин C. | das Vitamin | Orangen enthalten Vitamin C.
+sleep | сон | Вам нужно восемь часов сна. | der Schlaf | Du brauchst acht Stunden Schlaf.
+flat | квартира | Они живут в маленькой квартире. | die Wohnung | Sie wohnen in einer kleinen Wohnung.
+landlord | арендодатель, хозяин квартиры | Хозяин квартиры хочет больше денег. | der Vermieter | Der Vermieter will mehr Geld.
+furniture | мебель | Мы купили новую мебель. | die Möbel | Wir haben neue Möbel gekauft.
+floor | пол; этаж | Мы живём на пятом этаже. | der Boden; der Stock | Wir wohnen im fünften Stock.
+roof | крыша | Крышу нужно отремонтировать. | das Dach | Das Dach muss repariert werden.
+stairs | лестница | Иди по лестнице, лифт сломан. | die Treppe | Nimm die Treppe, der Aufzug ist kaputt.
+balcony | балкон | Мы пьём чай на балконе. | der Balkon | Wir trinken Tee auf dem Balkon.
+heating | отопление | Отопление не работает. | die Heizung | Die Heizung funktioniert nicht.
+lift | лифт | Лифт не работает. | der Aufzug | Der Aufzug ist außer Betrieb.
+to move | переезжать | В прошлом году мы переехали в новую квартиру. | umziehen | Letztes Jahr sind wir in eine neue Wohnung umgezogen.
+to share | делить, пользоваться вместе | Мы с братом живём в одной комнате. | teilen | Ich teile ein Zimmer mit meinem Bruder.
+to repair | ремонтировать, чинить | Ты можешь починить кран? | reparieren | Kannst du den Wasserhahn reparieren?
+to decorate | ремонтировать, украшать | Мы сделали ремонт в гостиной. | renovieren, dekorieren | Wir haben das Wohnzimmer renoviert.
+to tidy | убирать, наводить порядок | Убери, пожалуйста, свою комнату. | aufräumen | Räum bitte dein Zimmer auf.
+spacious | просторный | Кухня светлая и просторная. | geräumig | Die Küche ist hell und geräumig.
+cosy | уютный | Это уютный маленький дом. | gemütlich | Das ist ein gemütliches kleines Haus.
+noisy | шумный | Наша улица очень шумная. | laut | Unsere Straße ist sehr laut.
+neighbourly | добрососедский | Это был добрососедский поступок. | nachbarschaftlich, hilfsbereit | Das war sehr nachbarschaftlich.
+address | адрес | Какой у вас адрес? | die Adresse | Wie ist Ihre Adresse?
+fridge | холодильник | Поставь молоко в холодильник. | der Kühlschrank | Stell die Milch in den Kühlschrank.
+sightseeing | осмотр достопримечательностей | Мы осматривали достопримечательности Самарканда. | die Besichtigung | Wir haben in Samarkand die Sehenswürdigkeiten besichtigt.
+guide | гид, экскурсовод | Наш гид говорил на трёх языках. | der Reiseführer | Unser Reiseführer sprach drei Sprachen.
+souvenir | сувенир | Я купил сувенир для мамы. | das Souvenir, das Andenken | Ich habe ein Andenken für meine Mama gekauft.
+accommodation | жильё, проживание | В цену входит проживание. | die Unterkunft | Die Unterkunft ist im Preis enthalten.
+adventure | приключение | Наша поездка была настоящим приключением. | das Abenteuer | Unsere Reise war ein echtes Abenteuer.
+destination | место назначения | Париж — популярное направление. | das Reiseziel | Paris ist ein beliebtes Reiseziel.
+culture | культура | Я люблю узнавать о других культурах. | die Kultur | Ich lerne gern andere Kulturen kennen.
+custom | обычай | Снимать обувь — местный обычай. | der Brauch, die Sitte | Es ist hier Brauch, die Schuhe auszuziehen.
+backpack | рюкзак | Он путешествовал только с рюкзаком. | der Rucksack | Er reiste nur mit einem Rucksack.
+flight | рейс, полёт | Наш рейс задержали. | der Flug | Unser Flug hatte Verspätung.
+to explore | исследовать, осматривать | Мы обошли старый город. | erkunden | Wir haben die Altstadt erkundet.
+to pack | собирать (вещи) | Ты собрал чемодан? | packen | Hast du deinen Koffer gepackt?
+to check in | регистрироваться | Мы заселились в отель в 15:00. | einchecken | Wir haben um 15 Uhr im Hotel eingecheckt.
+to miss | опоздать на; скучать | Мы опоздали на поезд. | verpassen; vermissen | Wir haben den Zug verpasst.
+to get lost | заблудиться | Мы заблудились в горах. | sich verlaufen, sich verirren | Wir haben uns in den Bergen verlaufen.
+to recommend | рекомендовать | Можете порекомендовать хороший отель? | empfehlen | Können Sie ein gutes Hotel empfehlen?
+amazing | потрясающий | Вид был потрясающий. | erstaunlich, toll | Die Aussicht war toll.
+foreign | иностранный | Я люблю пробовать иностранную еду. | ausländisch, fremd | Ich probiere gern ausländisches Essen.
+crowd | толпа | На фестивале была огромная толпа. | die Menschenmenge | Auf dem Festival war eine riesige Menschenmenge.
+view | вид | Из номера вид на море. | die Aussicht | Das Zimmer hat Aussicht aufs Meer.
+to manage | суметь, справиться | Мне удалось закончить вовремя. | schaffen | Ich habe es geschafft, pünktlich fertig zu werden.
+to decide | решать | Мы решили остаться дома. | sich entscheiden, beschließen | Wir haben beschlossen, zu Hause zu bleiben.
+to suggest | предлагать | Предлагаю взять такси. | vorschlagen | Ich schlage vor, ein Taxi zu nehmen.
+to prefer | предпочитать | Я предпочитаю чай кофе. | bevorzugen, lieber mögen | Ich trinke lieber Tee als Kaffee.
+to expect | ожидать | Я не ожидал столько людей. | erwarten | Ich habe nicht so viele Leute erwartet.
+to explain | объяснять | Можете объяснить это правило? | erklären | Können Sie diese Regel erklären?
+to describe | описывать | Опиши своего лучшего друга. | beschreiben | Beschreib deinen besten Freund.
+to compare | сравнивать | Сравните две цены. | vergleichen | Vergleichen Sie die beiden Preise.
+to borrow | брать взаймы | Можно взять твою ручку? | ausleihen, borgen | Kann ich mir deinen Stift ausleihen?
+to lend | одалживать, давать взаймы | Я могу одолжить тебе денег. | leihen | Ich kann dir etwas Geld leihen.
+to look after | присматривать, заботиться | Она присматривает за младшим братом. | sich kümmern um | Sie kümmert sich um ihren kleinen Bruder.
+to look forward to | с нетерпением ждать | Я с нетерпением жду каникул. | sich freuen auf | Ich freue mich auf die Ferien.
+to find out | узнавать, выяснять | Я узнал правду. | herausfinden | Ich habe die Wahrheit herausgefunden.
+to turn down | отклонять; убавлять | Она отказалась от работы. | ablehnen; leiser stellen | Sie hat die Stelle abgelehnt.
+to set up | основывать, создавать | Он основал собственную компанию. | gründen | Er hat seine eigene Firma gegründet.
+to take part | участвовать | В конкурсе участвовали десять школ. | teilnehmen | Zehn Schulen haben am Wettbewerb teilgenommen.
+to happen | происходить, случаться | Что случилось вчера? | passieren, geschehen | Was ist gestern passiert?
+to agree | соглашаться | Я с тобой согласен. | zustimmen | Ich stimme dir zu.
+to refuse | отказываться | Он отказался нам помочь. | sich weigern | Er hat sich geweigert, uns zu helfen.
+to warn | предупреждать | Я предупреждал тебя о льде. | warnen | Ich habe dich vor dem Eis gewarnt.

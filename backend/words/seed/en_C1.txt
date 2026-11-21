@@ -92,7 +92,7 @@ subsidy | noun | money the government pays to lower a price | subsidiya | Farmer
 tariff | noun | a tax on imported goods | boj tarifi | The government raised tariffs on cars. | Hukumat avtomobillarga boj tariflarini oshirdi.
 asset | noun | something valuable that a person or company owns | aktiv, boylik | The house is their biggest asset. | Uy ularning eng katta boyligi.
 liability | noun | a debt; legal responsibility | majburiyat; javobgarlik | The company has huge liabilities. | Kompaniyaning katta majburiyatlari bor.
-dividend | noun | part of a company's profit paid to shareholders | dividend | Shareholders received a dividend. | Aksiyadorlar dividend olishdi.
+dividend | noun | part of a company's profit paid to shareholders | dividend, foyda ulushi | Shareholders received a dividend. | Aksiyadorlar dividend olishdi.
 monopoly | noun | complete control of a market by one company | monopoliya | The firm has a monopoly on electricity. | Firma elektr energiyasi bo'yicha monopoliyaga ega.
 austerity | noun | strict cuts in government spending | tejamkorlik siyosati | Austerity made people angry. | Tejamkorlik siyosati odamlarni g'azablantirdi.
 expenditure | noun | the total amount of money spent | xarajat | Public expenditure on health increased. | Sog'liqni saqlashga davlat xarajatlari oshdi.

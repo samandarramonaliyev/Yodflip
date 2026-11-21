@@ -53,6 +53,33 @@ class DeckViewSet(viewsets.ModelViewSet):
     def list(self, request, *args, **kwargs):
         return super().list(request, *args, **kwargs)
 
+    @extend_schema(request=dict, responses={200: DeckDetailSerializer})
+    @action(detail=True, methods=["post"])
+    def translate(self, request, pk=None):
+        """'AI bilan tarjima qilish': fill extra_translations[lang] for cards that miss it (cached)."""
+        from .ai import AIUnavailable, translate_terms
+
+        deck = self.get_object()
+        lang = request.data.get("lang")
+        if lang not in ("uz", "ru", "en", "de") or lang == deck.track:
+            raise ValidationError({"lang": "invalid_language_pair"})
+        cards = [
+            c for c in deck.cards.all() if lang != deck.translation_lang and not (c.extra_translations or {}).get(lang)
+        ]
+        if cards:
+            try:
+                result = translate_terms(
+                    deck.track, lang, [(c.term, c.translation, deck.translation_lang) for c in cards]
+                )
+            except AIUnavailable:
+                return Response({"detail": "ai_unavailable"}, status=status.HTTP_503_SERVICE_UNAVAILABLE)
+            for c, text in zip(cards, result, strict=True):
+                if text:
+                    c.extra_translations = {**(c.extra_translations or {}), lang: text[:300]}
+                    c.save(update_fields=["extra_translations"])
+        deck = Deck.objects.annotate(card_count=Count("cards")).get(pk=deck.pk)
+        return Response(DeckDetailSerializer(deck, context={"request": request}).data)
+
     # --- cards -------------------------------------------------------------
     @action(detail=True, methods=["get", "post"], serializer_class=CardSerializer)
     def cards(self, request, pk=None):
@@ -183,7 +210,12 @@ class SharedDeckView(APIView):
         src = self._get(request, code)
         with transaction.atomic():
             copy = Deck.objects.create(
-                owner=request.user, name=src.name, track=src.track, description=src.description, copied_from=src
+                owner=request.user,
+                name=src.name,
+                track=src.track,
+                description=src.description,
+                translation_lang=src.translation_lang,
+                copied_from=src,
             )
             Card.objects.bulk_create(
                 [
@@ -191,6 +223,7 @@ class SharedDeckView(APIView):
                         deck=copy,
                         term=c.term,
                         translation=c.translation,
+                        extra_translations=c.extra_translations,
                         definition=c.definition,
                         example=c.example,
                         article=c.article,
@@ -248,6 +281,7 @@ class WordSetViewSet(viewsets.ModelViewSet):
                         deck=deck,
                         term=p.word,
                         translation=p.translation_uz or "—",
+                        extra_translations={k: v for k, v in (p.translations or {}).items() if k != ws.track},
                         definition=p.definition,
                         article=p.article,
                         order=i,

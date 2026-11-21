@@ -5,6 +5,13 @@ from django.utils import timezone
 from accounts.models import CEFR_CHOICES, TRACK_CHOICES
 
 ARTICLE_CHOICES = [("der", "der"), ("die", "die"), ("das", "das")]
+TRANSLATION_LANGS = ("uz", "ru", "en", "de")
+TRANSLATION_LANG_CHOICES = [("uz", "O'zbekcha"), ("ru", "Русский"), ("en", "English"), ("de", "Deutsch")]
+
+
+def allowed_translation_langs(track: str) -> list[str]:
+    """Translation languages for a learning track: never the track's own language."""
+    return [lang for lang in TRANSLATION_LANGS if lang != track]
 
 
 def term_key(term: str) -> str:
@@ -57,6 +64,21 @@ class Word(models.Model):
     @property
     def display(self) -> str:
         return f"{self.article} {self.word}" if self.article else self.word
+
+
+class WordTranslation(models.Model):
+    """Translation of a built-in word into one language (uz / ru / en / de, never its own)."""
+
+    word = models.ForeignKey(Word, on_delete=models.CASCADE, related_name="translations")
+    lang = models.CharField(max_length=2, choices=TRANSLATION_LANG_CHOICES)
+    text = models.CharField(max_length=200)
+    example_translation = models.CharField(max_length=300, blank=True)
+
+    class Meta:
+        constraints = [models.UniqueConstraint(fields=["word", "lang"], name="uniq_word_translation_lang")]
+
+    def __str__(self):
+        return f"{self.word} → {self.lang}: {self.text}"
 
 
 class UserWord(models.Model):

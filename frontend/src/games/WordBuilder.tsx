@@ -92,7 +92,7 @@ export default function WordBuilder({ items, track, reverse, onFinish }: GamePro
       <div className="card flex min-h-[120px] items-center justify-center gap-3 p-6 text-center">
         {item.is_filler && <FillerBadge />}
         <span className="text-2xl font-black">{sides.prompt}</span>
-        {sides.promptLang !== 'uz' && <SpeakButton text={sides.prompt} track={track} />}
+        <SpeakButton text={sides.prompt} track={track} lang={sides.promptLang} />
       </div>
 
       <motion.div animate={status === 'wrong' || (wrongTries && placed.length === 0) ? { x: [0, -6, 6, 0] } : {}} className="flex flex-wrap justify-center gap-x-4 gap-y-2">

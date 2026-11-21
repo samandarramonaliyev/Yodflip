@@ -1,10 +1,10 @@
 from django.contrib.auth import authenticate
 from drf_spectacular.utils import extend_schema
-from rest_framework import generics, permissions, status
+from rest_framework import generics, permissions, serializers, status
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
-from .models import User
+from .models import TranslationPreference, User
 from .serializers import (
     LoginSerializer,
     RegisterSerializer,
@@ -58,3 +58,42 @@ class SetEmailPasswordView(APIView):
         user.set_password(ser.validated_data["password"])
         user.save()
         return Response(UserSerializer(user).data)
+
+
+class TranslationPrefSerializer(serializers.Serializer):
+    track = serializers.ChoiceField(choices=["en", "de"])
+    preferred_translation_lang = serializers.ChoiceField(choices=["uz", "ru", "en", "de"])
+    preferred_direction = serializers.ChoiceField(choices=["forward", "reverse"], default="forward")
+    remember_choice = serializers.BooleanField(default=False)
+
+    def validate(self, attrs):
+        if attrs["preferred_translation_lang"] == attrs["track"]:
+            raise serializers.ValidationError({"preferred_translation_lang": "invalid_language_pair"})
+        return attrs
+
+
+def _pref_dict(user, track: str) -> dict:
+    p = TranslationPreference.objects.filter(user=user, track=track).first()
+    return {
+        "track": track,
+        "preferred_translation_lang": p.preferred_translation_lang if p else "uz",
+        "preferred_direction": p.preferred_direction if p else "forward",
+        "remember_choice": p.remember_choice if p else False,
+    }
+
+
+class TranslationPrefView(APIView):
+    """Translation language + direction per track, shared by the website and the Mini App."""
+
+    @extend_schema(responses={200: dict})
+    def get(self, request):
+        return Response({t: _pref_dict(request.user, t) for t in ("en", "de")})
+
+    @extend_schema(request=TranslationPrefSerializer, responses={200: dict})
+    def put(self, request):
+        ser = TranslationPrefSerializer(data=request.data)
+        ser.is_valid(raise_exception=True)
+        d = dict(ser.validated_data)
+        track = d.pop("track")
+        TranslationPreference.objects.update_or_create(user=request.user, track=track, defaults=d)
+        return Response(_pref_dict(request.user, track))

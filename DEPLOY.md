@@ -78,7 +78,8 @@ This sends reminders (at most one per user per day, only if they haven't played)
 ## Updating
 
 - **Code:** `git push`. Render runs `build.sh` again (migrations included) and restarts gunicorn, which re-registers the webhook.
-- **Vocabulary:** edit `backend/words/seed/*.txt` and push. It reloads once. Each level must have exactly A1 100 / A2 150 / B1 200 / B2 250 / C1 300 words per track; check locally with `python manage.py check_seed`. To force a reload: `python manage.py seed_words --force` in the Shell (safe: progress is kept).
+- **Vocabulary:** edit `backend/words/seed/*.txt` and push. It reloads once. Each level must have exactly A1 100 / A2 150 / B1 200 / B2 250 / C1 300 words per track, and every word needs uz + ru + the other track language (`backend/words/seed/translations/`); check locally with `python manage.py check_seed`. To force a reload: `python manage.py seed_words --force` in the Shell (safe: progress is kept).
+- **AI deck translation** uses the same `ANTHROPIC_API_KEY` as the scanner; without it the button shows "Tarjima mavjud emas".
 - **Camera:** the scanner uses `getUserMedia`, which needs HTTPS (Render provides it). Django sends `Permissions-Policy: camera=(self)`.
 - **Env vars:** change them in the dashboard; the service restarts.
 - **Rollback:** Render → *Deploys* → pick an earlier deploy → *Rollback*.

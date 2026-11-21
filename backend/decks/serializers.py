@@ -1,15 +1,47 @@
 from django.db import transaction
 from rest_framework import serializers
 
+from words.models import TRANSLATION_LANGS
+from words.translations import available_langs
+
 from .models import Card, Deck, SetPair, WordSet
+
+
+def clean_translations(value) -> dict:
+    """{lang: text} with known language codes and short, trimmed texts."""
+    if value in (None, ""):
+        return {}
+    if not isinstance(value, dict):
+        raise serializers.ValidationError("must_be_object")
+    out = {}
+    for lang, text in value.items():
+        if lang not in TRANSLATION_LANGS:
+            raise serializers.ValidationError("invalid_language")
+        text = " ".join(str(text or "").split())[:300]
+        if text:
+            out[lang] = text
+    return out
 
 
 class CardSerializer(serializers.ModelSerializer):
     class Meta:
         model = Card
-        fields = ("id", "term", "translation", "definition", "example", "article", "image", "order")
+        fields = (
+            "id",
+            "term",
+            "translation",
+            "extra_translations",
+            "definition",
+            "example",
+            "article",
+            "image",
+            "order",
+        )
         read_only_fields = ("id",)
-        extra_kwargs = {"order": {"required": False}}
+        extra_kwargs = {"order": {"required": False}, "extra_translations": {"required": False}}
+
+    def validate_extra_translations(self, value):
+        return clean_translations(value)
 
     def validate_image(self, image):
         """Re-encode card images (JPEG, max 800px, EXIF stripped) and cap the size."""
@@ -54,6 +86,7 @@ class DeckSerializer(serializers.ModelSerializer):
             "name",
             "track",
             "description",
+            "translation_lang",
             "is_public",
             "share_code",
             "card_count",
@@ -63,6 +96,13 @@ class DeckSerializer(serializers.ModelSerializer):
             "updated_at",
         )
         read_only_fields = ("id", "share_code", "created_at", "updated_at")
+
+    def validate(self, attrs):
+        track = attrs.get("track") or getattr(self.instance, "track", None)
+        lang = attrs.get("translation_lang") or getattr(self.instance, "translation_lang", "uz")
+        if lang not in TRANSLATION_LANGS or lang == track:
+            raise serializers.ValidationError({"translation_lang": "invalid_language_pair"})
+        return attrs
 
     def get_is_owner(self, obj) -> bool:
         req = self.context.get("request")
@@ -95,19 +135,27 @@ class QuickAddSerializer(serializers.Serializer):
 class SetPairSerializer(serializers.ModelSerializer):
     class Meta:
         model = SetPair
-        fields = ("id", "word", "definition", "part_of_speech", "article", "translation_uz", "order")
+        fields = ("id", "word", "definition", "part_of_speech", "article", "translation_uz", "translations", "order")
         read_only_fields = ("id",)
-        extra_kwargs = {"order": {"required": False}}
+        extra_kwargs = {"order": {"required": False}, "translations": {"required": False}}
+
+    def validate_translations(self, value):
+        return clean_translations(value)
 
 
 class WordSetSerializer(serializers.ModelSerializer):
     pairs = SetPairSerializer(many=True)
     pair_count = serializers.SerializerMethodField()
+    available_langs = serializers.SerializerMethodField()
 
     class Meta:
         model = WordSet
-        fields = ("id", "name", "track", "pairs", "pair_count", "created_at", "updated_at")
+        fields = ("id", "name", "track", "pairs", "pair_count", "available_langs", "created_at", "updated_at")
         read_only_fields = ("id", "created_at", "updated_at")
+
+    def get_available_langs(self, obj) -> list[str]:
+        """Translation languages this set has (others are greyed out in the picker)."""
+        return available_langs(obj.track, [{"uz": p.translation_uz, **(p.translations or {})} for p in obj.pairs.all()])
 
     def get_pair_count(self, obj) -> int:
         return obj.pairs.count()

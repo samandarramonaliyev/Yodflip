@@ -1,0 +1,101 @@
+# word | ru | example (ru) | de | example (de)
+apple | яблоко | Я ем яблоко каждый день. | der Apfel | Ich esse jeden Tag einen Apfel.
+bread | хлеб | Мы покупаем свежий хлеб утром. | das Brot | Wir kaufen morgens frisches Brot.
+water | вода | Можно стакан воды? | das Wasser | Kann ich ein Glas Wasser haben?
+milk | молоко | Малыш пьёт молоко. | die Milch | Das Baby trinkt Milch.
+egg | яйцо | На завтрак я ем два яйца. | das Ei | Zum Frühstück esse ich zwei Eier.
+rice | рис | Плов готовят из риса. | der Reis | Plov wird mit Reis gekocht.
+meat | мясо | Мой отец не ест мясо. | das Fleisch | Mein Vater isst kein Fleisch.
+tea | чай | Хочешь зелёного чая? | der Tee | Möchtest du grünen Tee?
+sugar | сахар | Я не кладу сахар в кофе. | der Zucker | Ich nehme keinen Zucker in den Kaffee.
+cheese | сыр | В этом бутерброде есть сыр. | der Käse | In diesem Sandwich ist Käse.
+hungry | голодный | После школы я очень голоден. | hungrig | Nach der Schule bin ich sehr hungrig.
+delicious | вкусный | Твой суп очень вкусный! | lecker, köstlich | Deine Suppe ist lecker!
+to cook | готовить | Мама готовит ужин каждый вечер. | kochen | Meine Mutter kocht jeden Abend.
+breakfast | завтрак | Мы завтракаем в семь. | das Frühstück | Wir frühstücken um sieben.
+vegetable | овощ | Ешь больше овощей. | das Gemüse | Iss mehr Gemüse.
+mother | мать, мама | Моя мама учительница. | die Mutter | Meine Mutter ist Lehrerin.
+father | отец, папа | Его отец работает в банке. | der Vater | Sein Vater arbeitet in einer Bank.
+brother | брат | У меня есть старший брат. | der Bruder | Ich habe einen älteren Bruder.
+sister | сестра | Моя сестра живёт в Ташкенте. | die Schwester | Meine Schwester wohnt in Taschkent.
+friend | друг, подруга | Али — мой лучший друг. | der Freund, die Freundin | Ali ist mein bester Freund.
+child | ребёнок | Ребёнок играет в саду. | das Kind | Das Kind spielt im Garten.
+baby | малыш, младенец | Малыш спит. | das Baby | Das Baby schläft.
+grandmother | бабушка | Моя бабушка печёт вкусный хлеб. | die Großmutter, die Oma | Meine Oma backt gutes Brot.
+husband | муж | Её муж — врач. | der Ehemann, der Mann | Ihr Mann ist Arzt.
+wife | жена | Его жена говорит по-английски. | die Ehefrau, die Frau | Seine Frau spricht Englisch.
+name | имя | Как тебя зовут? | der Name | Wie ist dein Name?
+old | старый | Мой дедушка старый, но сильный. | alt | Mein Opa ist alt, aber stark.
+young | молодой | Она слишком молода, чтобы водить. | jung | Sie ist zu jung zum Autofahren.
+happy | счастливый, радостный | Я рад тебя видеть. | glücklich, froh | Ich freue mich, dich zu sehen.
+to love | любить | Я люблю свою семью. | lieben | Ich liebe meine Familie.
+house | дом | Они живут в большом доме. | das Haus | Sie wohnen in einem großen Haus.
+room | комната | Моя комната маленькая, но уютная. | das Zimmer | Mein Zimmer ist klein, aber schön.
+kitchen | кухня | Мама на кухне. | die Küche | Mama ist in der Küche.
+bed | кровать | Я ложусь спать в десять. | das Bett | Ich gehe um zehn ins Bett.
+door | дверь | Закрой, пожалуйста, дверь. | die Tür | Mach bitte die Tür zu.
+window | окно | Открой окно, жарко. | das Fenster | Mach das Fenster auf, es ist heiß.
+table | стол | Ключи на столе. | der Tisch | Die Schlüssel liegen auf dem Tisch.
+chair | стул | Садись на этот стул. | der Stuhl | Setz dich auf diesen Stuhl.
+key | ключ | Я потерял ключ. | der Schlüssel | Ich habe meinen Schlüssel verloren.
+garden | сад | В нашем саду растут яблони. | der Garten | In unserem Garten stehen Apfelbäume.
+to sleep | спать | Малыши много спят. | schlafen | Babys schlafen viel.
+to clean | убирать, чистить | По воскресеньям я убираю свою комнату. | putzen, sauber machen | Sonntags putze ich mein Zimmer.
+clean | чистый | У тебя чистые руки. | sauber | Deine Hände sind sauber.
+big | большой | Это большая собака. | groß | Das ist ein großer Hund.
+small | маленький | У меня маленькая квартира. | klein | Ich habe eine kleine Wohnung.
+morning | утро | Я бегаю каждое утро. | der Morgen | Ich laufe jeden Morgen.
+night | ночь | Сегодня ночью звёзды яркие. | die Nacht | Heute Nacht sind die Sterne hell.
+day | день | В неделе семь дней. | der Tag | Eine Woche hat sieben Tage.
+week | неделя | Я вижу её каждую неделю. | die Woche | Ich sehe sie jede Woche.
+time | время | Который час? | die Zeit | Wie spät ist es?
+school | школа | Моя школа рядом с домом. | die Schule | Meine Schule ist in der Nähe meines Hauses.
+book | книга | Эта книга очень интересная. | das Buch | Dieses Buch ist sehr interessant.
+phone | телефон | Мой телефон в сумке. | das Handy, das Telefon | Mein Handy ist in meiner Tasche.
+to read | читать | Я читаю перед сном. | lesen | Ich lese vor dem Schlafen.
+to write | писать | Напиши здесь своё имя. | schreiben | Schreib hier deinen Namen.
+to go | идти, ехать | По субботам мы ходим в парк. | gehen | Samstags gehen wir in den Park.
+to work | работать | Она работает в больнице. | arbeiten | Sie arbeitet in einem Krankenhaus.
+to drink | пить | Пей больше воды. | trinken | Trink mehr Wasser.
+to buy | покупать | Я хочу купить новую сумку. | kaufen | Ich möchte eine neue Tasche kaufen.
+tired | усталый | После работы я устаю. | müde | Nach der Arbeit bin ich müde.
+head | голова | У меня болит голова. | der Kopf | Mein Kopf tut weh.
+hand | рука, кисть | Мой руки перед обедом. | die Hand | Wasch dir vor dem Mittagessen die Hände.
+eye | глаз | У неё голубые глаза. | das Auge | Sie hat blaue Augen.
+ear | ухо | У кошки большие уши. | das Ohr | Die Katze hat große Ohren.
+nose | нос | У меня замёрз нос. | die Nase | Meine Nase ist kalt.
+mouth | рот | Откройте, пожалуйста, рот. | der Mund | Machen Sie bitte den Mund auf.
+leg | нога | Он сломал ногу. | das Bein | Er hat sich das Bein gebrochen.
+foot | ступня, нога | У меня мокрая нога. | der Fuß | Mein Fuß ist nass.
+hair | волосы | У неё длинные чёрные волосы. | das Haar, die Haare | Sie hat lange schwarze Haare.
+face | лицо | Умывайся по утрам. | das Gesicht | Wasch dir morgens das Gesicht.
+shirt | рубашка | Он в белой рубашке. | das Hemd | Er trägt ein weißes Hemd.
+shoe | ботинок, туфля | Эти туфли новые. | der Schuh | Diese Schuhe sind neu.
+dress | платье | У неё красное платье. | das Kleid | Sie hat ein rotes Kleid.
+hat | шапка, шляпа | Надень шапку, холодно. | der Hut, die Mütze | Setz deine Mütze auf, es ist kalt.
+coat | пальто | Возьмите пальто. | der Mantel | Nehmen Sie Ihren Mantel.
+trousers | брюки | Мои брюки слишком длинные. | die Hose | Meine Hose ist zu lang.
+to wear | носить (одежду) | В школе я ношу форму. | tragen | In der Schule trage ich eine Uniform.
+to wash | мыть, стирать | После ужина я мою посуду. | waschen, spülen | Nach dem Abendessen spüle ich das Geschirr.
+to sit | сидеть | Пожалуйста, садитесь сюда. | sitzen, sich setzen | Bitte setzen Sie sich hierher.
+to stand | стоять | Мы стоим в очереди. | stehen | Wir stehen in der Schlange.
+red | красный | Я люблю красные яблоки. | rot | Ich mag rote Äpfel.
+blue | синий, голубой | Небо голубое. | blau | Der Himmel ist blau.
+green | зелёный | Трава зелёная. | grün | Das Gras ist grün.
+white | белый | Кошка белая. | weiß | Die Katze ist weiß.
+black | чёрный | У него чёрная машина. | schwarz | Er hat ein schwarzes Auto.
+yellow | жёлтый | Банан жёлтый. | gelb | Die Banane ist gelb.
+number | номер, число | Какой у тебя номер телефона? | die Nummer, die Zahl | Wie ist deine Telefonnummer?
+money | деньги | У меня мало денег. | das Geld | Ich habe nicht viel Geld.
+car | машина, автомобиль | Мой отец водит машину. | das Auto | Mein Vater fährt Auto.
+bus | автобус | Я езжу в школу на автобусе. | der Bus | Ich fahre mit dem Bus zur Schule.
+street | улица | Я живу на этой улице. | die Straße | Ich wohne in dieser Straße.
+shop | магазин | Магазин открывается в девять. | der Laden, das Geschäft | Der Laden öffnet um neun.
+city | город | Ташкент — большой город. | die Stadt | Taschkent ist eine große Stadt.
+good | хороший | Это хорошая книга. | gut | Das ist ein gutes Buch.
+bad | плохой | Сегодня плохая погода. | schlecht | Heute ist das Wetter schlecht.
+new | новый | У меня новый телефон. | neu | Ich habe ein neues Handy.
+to come | приходить, приезжать | Иди сюда, пожалуйста. | kommen | Komm bitte her.
+to see | видеть | Я вижу горы. | sehen | Ich kann die Berge sehen.
+to speak | говорить | Вы говорите по-английски? | sprechen | Sprechen Sie Englisch?
+to play | играть | Дети играют в футбол. | spielen | Die Kinder spielen Fußball.

@@ -71,7 +71,7 @@ export default function QuizGame({ items, track, reverse, onFinish }: GameProps)
           </div>
           <div className="flex items-center justify-center gap-2">
             <span className="break-words text-3xl font-black">{sides.prompt}</span>
-            {sides.promptLang !== 'uz' && <SpeakButton text={sides.prompt} track={track} />}
+            <SpeakButton text={sides.prompt} track={track} lang={sides.promptLang} />
           </div>
           {item.example && !reverse && <p className="font-read text-sm text-muted">“{item.example}”</p>}
         </motion.div>

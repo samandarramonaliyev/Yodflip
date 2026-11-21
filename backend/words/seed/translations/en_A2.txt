@@ -1,0 +1,151 @@
+# word | ru | example (ru) | de | example (de)
+airport | аэропорт | Мы приехали в аэропорт рано. | der Flughafen | Wir waren früh am Flughafen.
+ticket | билет | Я купил билет на поезд онлайн. | die Fahrkarte, das Ticket | Ich habe die Zugfahrkarte online gekauft.
+passport | паспорт | Не забудь паспорт. | der Reisepass | Vergiss deinen Reisepass nicht.
+luggage | багаж | Мой багаж очень тяжёлый. | das Gepäck | Mein Gepäck ist sehr schwer.
+hotel | гостиница, отель | Наш отель рядом с пляжем. | das Hotel | Unser Hotel ist in der Nähe vom Strand.
+map | карта | Давай посмотрим на карту. | die Landkarte, der Stadtplan | Schauen wir auf die Karte.
+journey | поездка, путь | Поездка занимает три часа. | die Reise, die Fahrt | Die Fahrt dauert drei Stunden.
+abroad | за границей, за границу | Она хочет учиться за границей. | im Ausland, ins Ausland | Sie möchte im Ausland studieren.
+to arrive | прибывать, приезжать | Поезд прибывает в шесть. | ankommen | Der Zug kommt um sechs an.
+to leave | уходить, уезжать | Мы выходим из дома в восемь. | verlassen, abfahren | Wir verlassen das Haus um acht.
+to book | бронировать | Я забронировал номер на две ночи. | buchen | Ich habe ein Zimmer für zwei Nächte gebucht.
+trip | поездка | Мы съездили в Самарканд. | der Ausflug, die Reise | Wir haben einen Ausflug nach Samarkand gemacht.
+station | вокзал, станция | Вокзал в пяти минутах отсюда. | der Bahnhof, die Station | Der Bahnhof ist fünf Minuten entfernt.
+tourist | турист | Многие туристы посещают Бухару. | der Tourist | Viele Touristen besuchen Buchara.
+delay | задержка | Задержка — два часа. | die Verspätung | Es gibt zwei Stunden Verspätung.
+headache | головная боль | У меня ужасно болит голова. | die Kopfschmerzen | Ich habe schreckliche Kopfschmerzen.
+medicine | лекарство | Принимайте это лекарство два раза в день. | das Medikament | Nehmen Sie das Medikament zweimal täglich.
+fever | температура, жар | У ребёнка температура. | das Fieber | Das Kind hat Fieber.
+healthy | здоровый, полезный | Фрукты — полезная еда. | gesund | Obst ist gesund.
+ill | больной | На прошлой неделе он болел. | krank | Letzte Woche war er krank.
+pain | боль | Я чувствую боль в спине. | der Schmerz | Ich habe Schmerzen im Rücken.
+to hurt | болеть, причинять боль | У меня болит нога. | wehtun | Mein Bein tut weh.
+to rest | отдыхать | Вам нужно отдохнуть несколько дней. | sich ausruhen | Sie sollten sich ein paar Tage ausruhen.
+appointment | приём, встреча | У меня приём у врача в три. | der Termin | Ich habe um drei einen Arzttermin.
+exercise | физические упражнения | Упражнения полезны для сердца. | die Bewegung, der Sport | Bewegung ist gut für das Herz.
+tooth | зуб | Я чищу зубы два раза в день. | der Zahn | Ich putze mir zweimal am Tag die Zähne.
+stomach | желудок, живот | У меня болит живот. | der Magen, der Bauch | Mein Bauch tut weh.
+cold | простуда | Я простудился. | die Erkältung | Ich habe mich erkältet.
+nurse | медсестра | Медсестра сделала мне укол. | die Krankenschwester, die Pflegekraft | Die Krankenschwester hat mir eine Spritze gegeben.
+to feel | чувствовать (себя) | Сегодня я чувствую себя гораздо лучше. | sich fühlen | Heute fühle ich mich viel besser.
+price | цена | Цена слишком высокая. | der Preis | Der Preis ist zu hoch.
+cheap | дешёвый | Эта рубашка дешёвая. | billig | Dieses Hemd ist billig.
+expensive | дорогой | Эта машина очень дорогая. | teuer | Das Auto ist sehr teuer.
+to pay | платить | Можно оплатить картой? | bezahlen | Kann ich mit Karte bezahlen?
+cash | наличные | У меня нет наличных. | das Bargeld | Ich habe kein Bargeld.
+receipt | чек, квитанция | Сохраните чек. | die Quittung, der Kassenbon | Heben Sie die Quittung auf.
+size | размер | Какой размер у этих туфель? | die Größe | Welche Größe haben diese Schuhe?
+customer | покупатель, клиент | У магазина много покупателей. | der Kunde | Das Geschäft hat viele Kunden.
+sale | распродажа | Я купил это пальто на распродаже. | der Ausverkauf, der Schlussverkauf | Ich habe den Mantel im Ausverkauf gekauft.
+to try on | примерять | Можно примерить эту куртку? | anprobieren | Kann ich diese Jacke anprobieren?
+market | рынок | Мы покупаем фрукты на рынке. | der Markt | Wir kaufen Obst auf dem Markt.
+to spend | тратить | Я трачу слишком много на кофе. | ausgeben | Ich gebe zu viel für Kaffee aus.
+bill | счёт | Принесите, пожалуйста, счёт. | die Rechnung | Die Rechnung, bitte.
+change | сдача | Вот ваша сдача. | das Wechselgeld | Hier ist Ihr Wechselgeld.
+discount | скидка | Студентам скидка 10%. | der Rabatt | Studenten bekommen 10 % Rabatt.
+weather | погода | Сегодня хорошая погода. | das Wetter | Heute ist schönes Wetter.
+sunny | солнечный | Сегодня солнечный день. | sonnig | Es ist ein sonniger Tag.
+rainy | дождливый | Осень здесь дождливая. | regnerisch | Der Herbst ist hier regnerisch.
+snow | снег | Дети играют в снегу. | der Schnee | Die Kinder spielen im Schnee.
+wind | ветер | Сегодня очень сильный ветер. | der Wind | Heute ist der Wind sehr stark.
+cloud | облако, туча | В небе тёмные тучи. | die Wolke | Am Himmel sind dunkle Wolken.
+temperature | температура | Температура 35 градусов. | die Temperatur | Die Temperatur liegt bei 35 Grad.
+season | время года | Весна — моё любимое время года. | die Jahreszeit | Der Frühling ist meine Lieblingsjahreszeit.
+forest | лес | Мы гуляли в лесу. | der Wald | Wir sind im Wald spazieren gegangen.
+river | река | Амударья — длинная река. | der Fluss | Der Amudarja ist ein langer Fluss.
+mountain | гора | Они поднялись на гору. | der Berg | Sie haben den Berg bestiegen.
+lake | озеро | Мы плавали в озере. | der See | Wir sind im See geschwommen.
+storm | буря, гроза | Буря сломала много деревьев. | der Sturm, das Gewitter | Der Sturm hat viele Bäume umgeworfen.
+warm | тёплый | Весной тепло. | warm, mild | Im Frühling ist es warm.
+dry | сухой | Лето здесь жаркое и сухое. | trocken | Der Sommer ist hier heiß und trocken.
+hobby | хобби, увлечение | Моё хобби — фотография. | das Hobby | Mein Hobby ist Fotografieren.
+guitar | гитара | Он играет на гитаре каждый вечер. | die Gitarre | Er spielt jeden Abend Gitarre.
+camera | фотоаппарат, камера | Я сделал это фото новой камерой. | die Kamera | Ich habe das Foto mit meiner neuen Kamera gemacht.
+concert | концерт | В субботу мы ходили на концерт. | das Konzert | Am Samstag waren wir im Konzert.
+film | фильм | Давай посмотрим фильм вечером. | der Film | Lass uns heute Abend einen Film sehen.
+picnic | пикник | Мы устроили пикник у озера. | das Picknick | Wir haben am See gepicknickt.
+painting | картина | На стене висит красивая картина. | das Gemälde, das Bild | An der Wand hängt ein schönes Gemälde.
+chess | шахматы | Дедушка научил меня играть в шахматы. | das Schach | Mein Opa hat mir Schach beigebracht.
+to dance | танцевать | Она обожает танцевать. | tanzen | Sie tanzt sehr gern.
+to sing | петь | Они поют в хоре. | singen | Sie singen in einem Chor.
+to swim | плавать | Ты умеешь плавать? | schwimmen | Kannst du schwimmen?
+to draw | рисовать | Мой сын любит рисовать животных. | zeichnen | Mein Sohn zeichnet gern Tiere.
+to collect | собирать, коллекционировать | Он собирает старые монеты. | sammeln | Er sammelt alte Münzen.
+to relax | отдыхать, расслабляться | Я отдыхаю за чтением книг. | sich entspannen | Beim Lesen entspanne ich mich.
+free time | свободное время | Что ты делаешь в свободное время? | die Freizeit | Was machst du in deiner Freizeit?
+bank | банк | Банк рядом с почтой. | die Bank | Die Bank ist neben der Post.
+post office | почта, почтовое отделение | Мне нужно на почту. | die Post, das Postamt | Ich muss zur Post.
+hospital | больница | Она работает в больнице. | das Krankenhaus | Sie arbeitet im Krankenhaus.
+library | библиотека | Я занимаюсь в библиотеке. | die Bibliothek | Ich lerne in der Bibliothek.
+museum | музей | По понедельникам музей закрыт. | das Museum | Montags ist das Museum geschlossen.
+bridge | мост | Перейдите через мост. | die Brücke | Gehen Sie über die Brücke.
+corner | угол | Кафе на углу. | die Ecke | Das Café ist an der Ecke.
+square | площадь | На главной площади есть фонтан. | der Platz | Auf dem Hauptplatz gibt es einen Brunnen.
+traffic lights | светофор | На светофоре поверните налево. | die Ampel | An der Ampel links abbiegen.
+to turn | поворачивать | После банка поверните направо. | abbiegen | Biegen Sie nach der Bank rechts ab.
+to cross | переходить | Будь осторожен, когда переходишь дорогу. | überqueren | Sei vorsichtig, wenn du die Straße überquerst.
+straight on | прямо | Идите прямо двести метров. | geradeaus | Gehen Sie zweihundert Meter geradeaus.
+near | рядом, около | Здесь рядом есть аптека? | in der Nähe von, nah | Gibt es hier in der Nähe eine Apotheke?
+opposite | напротив | Отель напротив вокзала. | gegenüber | Das Hotel ist gegenüber dem Bahnhof.
+far | далёкий, далеко | Аэропорт далеко от города. | weit, fern | Der Flughafen ist weit von der Stadt entfernt.
+menu | меню | Можно посмотреть меню? | die Speisekarte | Kann ich die Speisekarte sehen?
+waiter | официант | Официант принёс наш суп. | der Kellner | Der Kellner hat unsere Suppe gebracht.
+dish | блюдо | Плов — знаменитое узбекское блюдо. | das Gericht | Plov ist ein berühmtes usbekisches Gericht.
+recipe | рецепт | Дашь мне рецепт этого торта? | das Rezept | Gibst du mir das Rezept für diesen Kuchen?
+soup | суп | Суп слишком горячий. | die Suppe | Die Suppe ist zu heiß.
+salt | соль | Передайте, пожалуйста, соль. | das Salz | Gib mir bitte das Salz.
+pepper | перец | Добавьте немного чёрного перца. | der Pfeffer | Gib etwas schwarzen Pfeffer dazu.
+knife | нож | Нарежь хлеб ножом. | das Messer | Schneide das Brot mit dem Messer.
+fork | вилка | Я ем вилкой и ножом. | die Gabel | Ich esse mit Gabel und Messer.
+to order | заказывать | Вы готовы сделать заказ? | bestellen | Möchten Sie bestellen?
+to fry | жарить | Жарьте лук пять минут. | braten | Braten Sie die Zwiebeln fünf Minuten.
+to boil | варить, кипятить | Варите яйца десять минут. | kochen | Kochen Sie die Eier zehn Minuten.
+sweet | сладкий | Этот чай слишком сладкий. | süß | Der Tee ist zu süß.
+spicy | острый | Я не люблю острую еду. | scharf | Ich mag kein scharfes Essen.
+fresh | свежий | Мы покупаем свежие фрукты на рынке. | frisch | Wir kaufen frisches Obst auf dem Markt.
+teacher | учитель | Наш учитель очень добрый. | der Lehrer, die Lehrerin | Unser Lehrer ist sehr nett.
+student | ученик, студент | В моём классе тридцать учеников. | der Schüler, der Student | In meiner Klasse sind dreißig Schüler.
+lesson | урок | Урок английского начинается в девять. | die Unterrichtsstunde, die Lektion | Die Englischstunde beginnt um neun.
+homework | домашнее задание | Ты сделал домашнее задание? | die Hausaufgaben | Hast du deine Hausaufgaben gemacht?
+exam | экзамен | Завтра у меня экзамен по математике. | die Prüfung | Morgen habe ich eine Matheprüfung.
+dictionary | словарь | Посмотри слово в словаре. | das Wörterbuch | Schlag das Wort im Wörterbuch nach.
+notebook | тетрадь | Запишите новые слова в тетрадь. | das Heft | Schreibt die neuen Wörter in euer Heft.
+mistake | ошибка | Я сделал две ошибки в тесте. | der Fehler | Ich habe zwei Fehler im Test gemacht.
+question | вопрос | Можно задать вопрос? | die Frage | Darf ich eine Frage stellen?
+answer | ответ | Ты знаешь ответ? | die Antwort | Weißt du die Antwort?
+to learn | учить, изучать | Я хочу выучить испанский. | lernen | Ich möchte Spanisch lernen.
+to teach | учить, преподавать | Она преподаёт историю. | unterrichten, lehren | Sie unterrichtet Geschichte.
+to understand | понимать | Я не понимаю это слово. | verstehen | Ich verstehe dieses Wort nicht.
+to remember | помнить, вспоминать | Не могу вспомнить его имя. | sich erinnern | Ich kann mich nicht an seinen Namen erinnern.
+easy | лёгкий, простой | Тест был лёгким. | leicht, einfach | Der Test war leicht.
+jacket | куртка | Возьми куртку, может пойти дождь. | die Jacke | Nimm eine Jacke mit, es könnte regnen.
+skirt | юбка | На ней длинная юбка. | der Rock | Sie trägt einen langen Rock.
+sweater | свитер | Бабушка связала этот свитер. | der Pullover | Meine Oma hat diesen Pullover gestrickt.
+boots | сапоги, ботинки | Мне нужны новые зимние сапоги. | die Stiefel | Ich brauche neue Winterstiefel.
+socks | носки | Эти носки тёплые. | die Socken | Diese Socken sind warm.
+gloves | перчатки | Не забудь перчатки. | die Handschuhe | Vergiss deine Handschuhe nicht.
+scarf | шарф | Холодно, надень шарф. | der Schal | Es ist kalt, zieh einen Schal an.
+uniform | форма | В нашей школе ученики носят форму. | die Uniform | An unserer Schule tragen die Schüler eine Uniform.
+pocket | карман | Мои ключи в кармане. | die Tasche, die Hosentasche | Meine Schlüssel sind in der Tasche.
+fashion | мода | Она всегда следит за модой. | die Mode | Sie folgt immer der Mode.
+to put on | надевать | Надень пальто. | anziehen | Zieh deinen Mantel an.
+to take off | снимать | Снимите, пожалуйста, обувь. | ausziehen | Zieh bitte die Schuhe aus.
+tight | тесный, узкий | Эти джинсы слишком узкие. | eng | Die Jeans ist zu eng.
+comfortable | удобный | Эти туфли очень удобные. | bequem | Diese Schuhe sind sehr bequem.
+beautiful | красивый | Какое красивое платье! | schön | Was für ein schönes Kleid!
+tall | высокий | Мой брат очень высокий. | groß | Mein Bruder ist sehr groß.
+short | невысокий, короткий | Она невысокая и с кудрявыми волосами. | klein, kurz | Sie ist klein und hat lockige Haare.
+thin | худой | Он худой, потому что много бегает. | dünn, schlank | Er ist dünn, weil er viel läuft.
+strong | сильный | Мой отец очень сильный. | stark | Mein Vater ist sehr stark.
+friendly | дружелюбный | Наши соседи дружелюбные. | freundlich | Unsere Nachbarn sind freundlich.
+funny | смешной, забавный | Он рассказывает смешные истории. | lustig | Er erzählt lustige Geschichten.
+kind | добрый | Очень мило с твоей стороны помочь. | nett, freundlich | Es war nett von dir zu helfen.
+shy | застенчивый | Маленькая девочка застенчивая. | schüchtern | Das kleine Mädchen ist schüchtern.
+clever | умный | Она умная ученица. | klug | Sie ist eine kluge Schülerin.
+lazy | ленивый | Не ленись, помоги мне! | faul | Sei nicht faul, hilf mir!
+polite | вежливый | Он всегда со всеми вежлив. | höflich | Er ist immer zu allen höflich.
+beard | борода | У моего дяди седая борода. | der Bart | Mein Onkel hat einen grauen Bart.
+glasses | очки | Она носит очки для чтения. | die Brille | Sie trägt beim Lesen eine Brille.
+to look like | быть похожим на | Ты похож на маму. | aussehen wie, ähneln | Du siehst aus wie deine Mutter.
+neighbour | сосед | У нашего соседа большая собака. | der Nachbar | Unser Nachbar hat einen großen Hund.

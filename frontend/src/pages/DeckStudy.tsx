@@ -19,7 +19,7 @@ import { haptic } from '../lib/telegram'
 import type { Card, Deck, ResultsResponse } from '../lib/types'
 import { useApp } from '../store/app'
 
-export function cardToItem(c: Card): GameItem {
+export function cardToItem(c: Card, lang: GameItem['translation_lang'] = 'uz'): GameItem {
   const parts = c.term.split(/\s+/)
   let word = c.term
   let article = c.article
@@ -38,6 +38,7 @@ export function cardToItem(c: Card): GameItem {
     pos: '',
     example: c.example,
     example_uz: '',
+    translation_lang: lang,
   }
 }
 
@@ -64,7 +65,7 @@ export default function DeckStudy() {
   const [saving, setSaving] = useState(false)
   const [subset, setSubset] = useState<GameItem[] | null>(null)
   const savedRounds = useRef(new Set<number>())
-  const items = useMemo(() => (deck?.cards || []).map(cardToItem).filter((i) => i.translation), [deck])
+  const items = useMemo(() => (deck?.cards || []).map((c) => cardToItem(c, deck?.translation_lang ?? 'uz')).filter((i) => i.translation), [deck])
 
   if (error) return <div className="page"><ErrorState error={error} onRetry={reload} /></div>
   if (loading || !deck) return <div className="page"><ListSkeleton rows={3} height="h-40" /></div>
@@ -195,7 +196,7 @@ function Flashcards({ items, track, reverse, onFinish }: StudyProps) {
     <div className="flex h-full w-full flex-col items-center justify-center gap-3 rounded-[24px] bg-card p-6 text-center shadow-lift">
       <span className="break-words text-3xl font-black">{text}</span>
       {sub && <span className="font-read text-sm text-muted">{sub}</span>}
-      {lang !== 'uz' && <SpeakButton text={text} track={track} />}
+      <SpeakButton text={text} track={track} lang={lang} />
     </div>
   )
 
@@ -304,7 +305,7 @@ function Learn({ items, track, reverse, onFinish }: StudyProps) {
         <div className="text-xs font-black uppercase text-muted">{stage === 0 ? t('study.choose') : t('study.type')}</div>
         <div className="flex items-center justify-center gap-2">
           <span className="break-words text-3xl font-black">{s.prompt}</span>
-          {s.promptLang !== 'uz' && <SpeakButton text={s.prompt} track={track} />}
+          <SpeakButton text={s.prompt} track={track} lang={s.promptLang} />
         </div>
       </div>
       {stage === 0 && options ? (
@@ -381,7 +382,7 @@ function Write({ items, track, reverse, onFinish }: StudyProps) {
         <div className="text-xs font-black uppercase text-muted">{t('study.type')}</div>
         <div className="flex items-center justify-center gap-2">
           <span className="break-words text-3xl font-black">{s.prompt}</span>
-          {s.promptLang !== 'uz' && <SpeakButton text={s.prompt} track={track} />}
+          <SpeakButton text={s.prompt} track={track} lang={s.promptLang} />
         </div>
       </div>
       <form onSubmit={submit} className="space-y-2">

@@ -29,6 +29,10 @@ export interface GameItem {
   example_uz: string
   /** Level rounds: an already-found word that only fills the board ("takror"). */
   is_filler?: boolean
+  /** Language of `translation` (uz / ru / en / de); Uzbek when missing. */
+  translation_lang?: 'uz' | 'ru' | 'en' | 'de'
+  /** Example sentence in the translation language */
+  example_tr?: string
 }
 
 export interface ResultItem {
@@ -51,6 +55,8 @@ export interface GameOutcome {
 
 export interface GameProps {
   items: GameItem[]
+  /** Translation language of this game (for labels and text-to-speech) */
+  translationLang?: 'uz' | 'ru' | 'en' | 'de'
   track: Track
   reverse: boolean
   onFinish: (outcome: GameOutcome) => void

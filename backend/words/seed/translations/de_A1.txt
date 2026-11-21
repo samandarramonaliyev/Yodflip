@@ -1,0 +1,101 @@
+# word | ru | example (ru) | en | example (en)
+der Apfel | яблоко | Я ем яблоко каждый день. | apple | I eat an apple every day.
+das Brot | хлеб | Утром мы покупаем свежий хлеб. | bread | We buy fresh bread in the morning.
+das Wasser | вода | Стакан воды, пожалуйста. | water | A glass of water, please.
+die Milch | молоко | Ребёнок пьёт молоко. | milk | The child drinks milk.
+das Ei | яйцо | На завтрак я ем два яйца. | egg | I eat two eggs for breakfast.
+der Reis | рис | Плов готовят из риса. | rice | Plov is cooked with rice.
+das Fleisch | мясо | Мой отец не ест мясо. | meat | My father doesn't eat meat.
+der Tee | чай | Хочешь зелёного чая? | tea | Would you like green tea?
+der Zucker | сахар | Я не кладу сахар. | sugar | I don't take sugar.
+der Käse | сыр | Хлеб с сыром — вкусно. | cheese | Bread with cheese tastes good.
+das Frühstück | завтрак | Завтрак в семь часов. | breakfast | Breakfast is at seven o'clock.
+das Gemüse | овощи | Ешь больше овощей! | vegetables | Eat more vegetables!
+lecker | вкусный | Суп очень вкусный. | tasty, delicious | The soup is very tasty.
+kochen | готовить, варить | Мама готовит каждый вечер. | to cook | My mother cooks every evening.
+trinken | пить | Я пью много воды. | to drink | I drink a lot of water.
+die Mutter | мать, мама | Моя мама учительница. | mother | My mother is a teacher.
+der Vater | отец, папа | Его отец работает в банке. | father | His father works in a bank.
+der Bruder | брат | У меня есть старший брат. | brother | I have an older brother.
+die Schwester | сестра | Моя сестра живёт в Ташкенте. | sister | My sister lives in Tashkent.
+der Freund | друг | Али — мой лучший друг. | friend, boyfriend | Ali is my best friend.
+das Kind | ребёнок | Ребёнок играет в саду. | child | The child is playing in the garden.
+das Baby | малыш, младенец | Малыш спит. | baby | The baby is sleeping.
+die Großmutter | бабушка | Моя бабушка печёт вкусный хлеб. | grandmother | My grandmother bakes good bread.
+der Mann | мужчина; муж | Мужчина читает газету. | man; husband | The man is reading a newspaper.
+die Frau | женщина; жена | Женщина говорит по-английски. | woman; wife | The woman speaks English.
+der Name | имя | Как тебя зовут? | name | What's your name?
+alt | старый | Мой дедушка старый, но сильный. | old | My grandfather is old but strong.
+jung | молодой | Она ещё очень молода. | young | She is still very young.
+glücklich | счастливый | Я рад тебя видеть. | happy | I'm happy to see you.
+lieben | любить | Я люблю свою семью. | to love | I love my family.
+das Haus | дом | Они живут в большом доме. | house | They live in a big house.
+das Zimmer | комната | Моя комната маленькая. | room | My room is small.
+die Küche | кухня | Мама на кухне. | kitchen | Mum is in the kitchen.
+das Bett | кровать | Я ложусь спать в десять. | bed | I go to bed at ten.
+die Tür | дверь | Закрой, пожалуйста, дверь. | door | Please close the door.
+das Fenster | окно | Открой окно, тепло. | window | Open the window, it's warm.
+der Tisch | стол | Ключи лежат на столе. | table | The keys are on the table.
+der Stuhl | стул | Садись на стул. | chair | Sit down on the chair.
+der Schlüssel | ключ | Я потерял ключ. | key | I've lost my key.
+der Garten | сад | В саду растут яблони. | garden | There are apple trees in the garden.
+die Wohnung | квартира | В нашей квартире три комнаты. | flat, apartment | Our flat has three rooms.
+schlafen | спать | Малыши много спят. | to sleep | Babies sleep a lot.
+groß | большой; высокий | Это большая собака. | big; tall | That's a big dog.
+klein | маленький | У меня маленькая квартира. | small, little | I have a small flat.
+sauber | чистый | У тебя чистые руки. | clean | Your hands are clean.
+der Morgen | утро | Утром я пью кофе. | morning | In the morning I drink coffee.
+die Nacht | ночь | Спокойной ночи! | night | Good night!
+der Tag | день | В неделе семь дней. | day | The week has seven days.
+die Woche | неделя | Я вижу её каждую неделю. | week | I see her every week.
+die Zeit | время | У меня нет времени. | time | I have no time.
+die Schule | школа | Школа рядом с моим домом. | school | The school is next to my house.
+das Buch | книга | Книга очень интересная. | book | The book is very interesting.
+das Handy | мобильный телефон | Мой телефон в сумке. | mobile phone | My phone is in my bag.
+lesen | читать | Я читаю перед сном. | to read | I read before I go to sleep.
+schreiben | писать | Напиши здесь своё имя. | to write | Write your name here.
+gehen | идти | Мы идём в парк. | to go, to walk | We are going to the park.
+arbeiten | работать | Она работает в больнице. | to work | She works in a hospital.
+kaufen | покупать | Я хочу купить новую сумку. | to buy | I want to buy a new bag.
+müde | усталый | После работы я устаю. | tired | I'm tired after work.
+heute | сегодня | Сегодня понедельник. | today | Today is Monday.
+der Kopf | голова | У меня болит голова. | head | My head hurts.
+die Hand | рука, кисть | Помой руки! | hand | Wash your hands!
+das Auge | глаз | У неё карие глаза. | eye | She has brown eyes.
+das Ohr | ухо | У зайца длинные уши. | ear | The hare has long ears.
+die Nase | нос | У меня замёрз нос. | nose | My nose is cold.
+der Mund | рот | Открой рот, пожалуйста. | mouth | Open your mouth, please.
+das Bein | нога | Он сломал ногу. | leg | He broke his leg.
+der Fuß | ступня, нога | У меня мокрая нога. | foot | My foot is wet.
+das Haar | волос, волосы | У неё длинные чёрные волосы. | hair | She has long black hair.
+das Gesicht | лицо | По утрам я умываю лицо. | face | I wash my face in the morning.
+das Hemd | рубашка | Он в белой рубашке. | shirt | He is wearing a white shirt.
+der Schuh | ботинок, туфля | Туфли новые. | shoe | The shoes are new.
+das Kleid | платье | У неё красное платье. | dress | She has a red dress.
+die Mütze | шапка | Надень шапку, холодно! | cap, woolly hat | Put your hat on, it's cold!
+die Jacke | куртка | Возьми с собой куртку. | jacket | Take a jacket with you.
+die Hose | брюки | Брюки слишком длинные. | trousers | The trousers are too long.
+tragen | носить; нести | Сегодня я в очках. | to wear; to carry | I'm wearing glasses today.
+waschen | мыть, стирать | Я мою машину. | to wash | I'm washing the car.
+sitzen | сидеть | Мы сидим в саду. | to sit | We are sitting in the garden.
+stehen | стоять | Он стоит у двери. | to stand | He is standing at the door.
+rot | красный | Я люблю красные яблоки. | red | I like red apples.
+blau | синий, голубой | Небо голубое. | blue | The sky is blue.
+grün | зелёный | Трава зелёная. | green | The grass is green.
+weiß | белый | Кошка белая. | white | The cat is white.
+schwarz | чёрный | У него чёрная машина. | black | He has a black car.
+gelb | жёлтый | Банан жёлтый. | yellow | The banana is yellow.
+die Zahl | число, цифра | Семь — моё счастливое число. | number | Seven is my lucky number.
+das Geld | деньги | У меня мало денег. | money | I don't have much money.
+das Auto | машина, автомобиль | Мой отец водит машину. | car | My father drives a car.
+der Bus | автобус | Я езжу в школу на автобусе. | bus, coach | I go to school by bus.
+die Straße | улица | Я живу на этой улице. | street, road | I live on this street.
+das Geschäft | магазин | Магазин открывается в девять. | shop | The shop opens at nine.
+die Stadt | город | Ташкент — большой город. | city, town | Tashkent is a big city.
+gut | хороший | Это хорошая книга. | good | This is a good book.
+schlecht | плохой | Сегодня плохая погода. | bad | The weather is bad today.
+neu | новый | У меня новый телефон. | new | I have a new phone.
+kommen | приходить, приезжать | Иди сюда, пожалуйста! | to come | Come here, please!
+sehen | видеть | Я вижу горы. | to see | I can see the mountains.
+sprechen | говорить | Ты говоришь по-немецки? | to speak | Do you speak German?
+spielen | играть | Дети играют в футбол. | to play | The children are playing football.

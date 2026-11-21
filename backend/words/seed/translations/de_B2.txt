@@ -1,0 +1,251 @@
+# word | ru | example (ru) | en | example (en)
+der Gewinn | прибыль; выигрыш | Фирма получила большую прибыль. | profit; prize | The company made a big profit.
+die Investition | инвестиция | Недвижимость — надёжная инвестиция. | investment | Property is a safe investment.
+verhandeln | вести переговоры | Они ведут переговоры о новом договоре. | to negotiate | They are negotiating a new contract.
+das Budget | бюджет | Наш бюджет ограничен. | budget | Our budget is tight.
+die Konkurrenz | конкуренция, конкуренты | Конкуренты снизили цены. | competition, competitors | The competition has lowered its prices.
+einführen | вводить, внедрять | Фирма выпускает новый телефон. | to introduce, to launch | The company is launching a new phone.
+der Umsatz | оборот, выручка | Оборот вырос на 20 процентов. | turnover, sales | Sales rose by 20 percent.
+der Kredit | кредит | Он взял кредит. | loan, credit | He took out a loan.
+die Schulden | долги | Они выплатили все долги. | debts | They paid off all their debts.
+sich leisten | позволить себе | Мы не можем позволить себе новую машину. | to afford | We can't afford a new car.
+der Engpass | дефицит, узкое место | Из-за дефицита растут цены. | shortage, bottleneck | Prices are rising because of the shortage.
+die Nachfrage | спрос | Спрос на медсестёр большой. | demand | The demand for nurses is high.
+der Vertrag | договор | Прочитай договор, прежде чем подписывать. | contract | Read the contract before you sign.
+investieren | инвестировать | Она вложила деньги в кафе. | to invest | She invested in a café.
+der Unternehmer | предприниматель | Молодым предпринимателям нужна поддержка. | entrepreneur | Young entrepreneurs need support.
+das Klima | климат | Климат меняется. | climate | The climate is changing.
+die Dürre | засуха | Засуха уничтожила урожай. | drought | The drought destroyed the harvest.
+bedroht | находящийся под угрозой | Снежный барс — вид под угрозой исчезновения. | endangered, threatened | The snow leopard is an endangered species.
+erneuerbar | возобновляемый | Солнечная энергия возобновляема. | renewable | Solar energy is renewable.
+verschwenden | расточать, тратить впустую | Не трать воду зря! | to waste | Don't waste water!
+der Ausstoß | выброс | Выбросы CO2 должны сократиться. | emission(s), output | CO2 emissions must fall.
+schützen | защищать | Мы должны защищать природу. | to protect | We must protect nature.
+die Tierart | вид животных | Здесь живут многие редкие виды животных. | animal species | Many rare species live here.
+die Überschwemmung | наводнение | Наводнение повредило много домов. | flood | The flood damaged many houses.
+nachhaltig | устойчивый, экологичный | Нам нужно устойчивое сельское хозяйство. | sustainable | We need sustainable agriculture.
+verringern | уменьшать | Сократи потребление пластика. | to reduce | Reduce your plastic consumption.
+der Brennstoff | топливо | Уголь — ископаемое топливо. | fuel | Coal is a fossil fuel.
+schädlich | вредный | Курение вредно для здоровья. | harmful | Smoking is harmful to your health.
+zerstören | разрушать | Пожар уничтожил лес. | to destroy | The fire destroyed the forest.
+der Klimawandel | изменение климата | Изменение климата касается всех нас. | climate change | Climate change affects us all.
+der Abschluss | диплом, окончание учёбы | У неё юридическое образование. | degree, qualification | She has a degree in law.
+das Stipendium | стипендия | Он получил стипендию в Корею. | scholarship | He got a scholarship to Korea.
+die Hausarbeit | курсовая работа; работа по дому | Курсовая должна быть готова к понедельнику. | term paper; housework | The term paper must be finished by Monday.
+die Vorlesung | лекция | Лекция длится два часа. | lecture | The lecture lasts two hours.
+die Forschung | исследование, наука | Она работает в науке. | research | She works in research.
+das Wissen | знание | Знание — сила. | knowledge | Knowledge is power.
+auswendig lernen | учить наизусть | Я выучил стихотворение наизусть. | to learn by heart | I learnt the poem by heart.
+der Lehrplan | учебный план | Программирование теперь в учебном плане. | curriculum | Programming is now on the curriculum.
+durchfallen | провалиться (на экзамене) | Он провалил экзамен по вождению. | to fail (an exam) | He failed his driving test.
+fließend | свободно, бегло | Она свободно говорит по-немецки. | fluent, fluently | She speaks fluent German.
+verbessern | улучшать | Чтение улучшает словарный запас. | to improve | Reading improves your vocabulary.
+die Studiengebühr | плата за обучение | Плата за обучение растёт. | tuition fee | Tuition fees are rising.
+das Semester | семестр | Семестр начинается в октябре. | semester, term | The semester begins in October.
+bewerten | оценивать | Учителя оценивают успехи учеников. | to assess, to evaluate | Teachers assess the pupils' performance.
+die Prüfung | экзамен | Завтра у меня важный экзамен. | exam | I have an important exam tomorrow.
+die Schlagzeile | заголовок | Заголовок был шокирующим. | headline | The headline was shocking.
+der Journalist | журналист | Журналист взял интервью у министра. | journalist | The journalist interviewed the minister.
+senden | транслировать; отправлять | Матч транслируют в прямом эфире. | to broadcast; to send | The match is being broadcast live.
+die Werbung | реклама | По телевизору слишком много рекламы. | advertising, advert | There's too much advertising on TV.
+das Publikum | публика | Публика громко аплодировала. | audience | The audience clapped loudly.
+zuverlässig | надёжный | Этот источник надёжный? | reliable | Is this source reliable?
+überzeugen | убеждать | Я убедил его пойти с нами. | to convince, to persuade | I convinced him to come along.
+die Meinung | мнение | По-моему, это хорошая идея. | opinion | In my opinion, that's a good idea.
+das Gerücht | слух | Не верь каждому слуху. | rumour | Don't believe every rumour.
+beeinflussen | влиять | Соцсети влияют на молодёжь. | to influence | Social media influences young people.
+das Thema | тема | Это важная тема. | topic, subject | That's an important topic.
+sich streiten | ссориться, спорить | Они часто ссорятся из-за денег. | to argue, to quarrel | They often argue about money.
+die Privatsphäre | частная жизнь | У звёзд мало личной жизни. | privacy | Celebrities have little privacy.
+der Standpunkt | точка зрения | Я понимаю твою точку зрения. | point of view | I understand your point of view.
+einseitig | односторонний | Отчёт был очень односторонним. | one-sided, biased | The report was very one-sided.
+der Verdächtige | подозреваемый | Полиция задержала подозреваемого. | suspect | The police arrested a suspect.
+der Zeuge | свидетель | Свидетель описал машину. | witness | The witness described the car.
+das Opfer | жертва | Пострадавшего отвезли в больницу. | victim | The victim was taken to hospital.
+der Prozess | процесс (судебный); процесс | Процесс длился три недели. | trial; process | The trial lasted three weeks.
+der Richter | судья | Судья приговорил его к пяти годам. | judge | The judge sentenced him to five years.
+der Anwalt | адвокат | Поговорите с адвокатом. | lawyer | Talk to a lawyer.
+die Strafe | наказание; штраф | Он получил суровое наказание. | punishment, penalty | He got a severe punishment.
+das Bußgeld | штраф | Мне пришлось заплатить штраф за неправильную парковку. | fine | I had to pay a fine for illegal parking.
+der Diebstahl | кража | Кражи машин здесь часты. | theft | Car theft is common here.
+der Betrug | мошенничество | Его осудили за мошенничество. | fraud | He was convicted of fraud.
+festnehmen | задерживать | Вчера задержали двух мужчин. | to arrest | Two men were arrested yesterday.
+beschuldigen | обвинять | Она обвинила его во лжи. | to accuse | She accused him of lying.
+begehen | совершать | Он совершил преступление в одиночку. | to commit | He committed the crime alone.
+ermitteln | расследовать | Полиция расследует это дело. | to investigate | The police are investigating the case.
+bestrafen | наказывать | Преступники должны быть наказаны. | to punish | Criminals must be punished.
+leugnen | отрицать | Он всё отрицал. | to deny | He denied everything.
+schuldig | виновный | Суд признал её виновной. | guilty | The court found her guilty.
+unschuldig | невиновный | Он говорит, что невиновен. | innocent | He says he is innocent.
+illegal | незаконный | Ездить без прав незаконно. | illegal, unlawful | Driving without a licence is illegal.
+das Experiment | эксперимент | Мы провели эксперимент в лаборатории. | experiment | We did an experiment in the lab.
+das Labor | лаборатория | Она работает в лаборатории. | laboratory, lab | She works in a lab.
+die Entdeckung | открытие | Открытие изменило медицину. | discovery | The discovery changed medicine.
+die Theorie | теория | Теория Эйнштейна знаменита. | theory | Einstein's theory is famous.
+die Daten | данные | Нам нужно больше данных. | data | We need more data.
+der Roboter | робот | На этой фабрике машины собирают роботы. | robot | Robots build cars in this factory.
+die künstliche Intelligenz | искусственный интеллект | Искусственный интеллект меняет многие профессии. | artificial intelligence | Artificial intelligence is changing many jobs.
+der Ingenieur | инженер | Моя сестра — инженер. | engineer | My sister is an engineer.
+der Satellit | спутник | Спутник передаёт телесигнал. | satellite | The satellite transmits TV signals.
+die Innovation | инновация | Фирма известна инновациями. | innovation | The company is known for innovation.
+der Durchbruch | прорыв | Исследователи совершили прорыв. | breakthrough | Researchers have made a breakthrough.
+erfinden | изобретать | Кто изобрёл телефон? | to invent | Who invented the telephone?
+messen | измерять | Измерь длину стола. | to measure | Measure the length of the table.
+beweisen | доказывать | Ты можешь это доказать? | to prove | Can you prove it?
+beobachten | наблюдать | Исследователи наблюдают за животными в природе. | to observe, to watch | Researchers observe animals in the wild.
+entwickeln | разрабатывать, развивать | Они разработали новую вакцину. | to develop | They developed a new vaccine.
+wissenschaftlich | научный | Научных доказательств нет. | scientific | There's no scientific proof.
+fortschrittlich | прогрессивный, передовой | Это очень передовая техника. | advanced, progressive | That's very advanced technology.
+digital | цифровой | Мы живём в цифровом мире. | digital, electronic | We live in a digital world.
+der Chirurg | хирург | Хирург прооперировал его сердце. | surgeon | The surgeon operated on his heart.
+die Operation | операция | Ей нужна операция на колене. | operation, surgery | She needs an operation on her knee.
+der Patient | пациент | У врача много пациентов. | patient | The doctor has many patients.
+die Krankheit | болезнь | Болезни сердца распространены. | illness, disease | Heart diseases are common.
+die Infektion | инфекция | У него инфекция уха. | infection | He has an ear infection.
+der Impfstoff | вакцина | Вакцина для детей бесплатная. | vaccine | The vaccine is free for children.
+die Spritze | укол, шприц | Я боюсь уколов. | injection, syringe | I'm afraid of injections.
+die Allergie | аллергия | У меня аллергия на орехи. | allergy | I have a nut allergy.
+das Blut | кровь | Он потерял много крови. | blood | He lost a lot of blood.
+das Herz | сердце | Спорт полезен для сердца. | heart | Sport is good for the heart.
+die Tablette | таблетка | Принимай по таблетке после каждой еды. | tablet, pill | Take a tablet after every meal.
+heilen | заживать, лечить | Рана медленно заживает. | to heal, to cure | The wound is healing slowly.
+vorbeugen | предотвращать | Мытьё рук предотвращает инфекции. | to prevent | Washing your hands prevents infections.
+leiden | страдать | Она страдает от болей в спине. | to suffer | She suffers from back pain.
+untersuchen | осматривать; исследовать | Врач осмотрел моё горло. | to examine; to investigate | The doctor examined my throat.
+bluten | кровоточить | У него шла кровь из носа. | to bleed | His nose was bleeding.
+ernst | серьёзный | Это не серьёзная болезнь. | serious | It isn't a serious illness.
+psychisch | психический | Психическое здоровье очень важно. | mental, psychological | Mental health is very important.
+schwanger | беременная | Моя сестра беременна. | pregnant | My sister is pregnant.
+die Persönlichkeit | личность | У неё сильная личность. | personality | She has a strong personality.
+das Verhalten | поведение | Его поведение в школе улучшилось. | behaviour | His behaviour at school has improved.
+die Einstellung | отношение, установка; приём на работу | У неё позитивное отношение к работе. | attitude; hiring | She has a positive attitude to work.
+das Gedächtnis | память | У меня хорошая память на лица. | memory | I have a good memory for faces.
+das Gefühl | чувство | Он не показывает свои чувства. | feeling | He doesn't show his feelings.
+die Motivation | мотивация | Она потеряла мотивацию. | motivation | She has lost her motivation.
+das Selbstvertrauen | уверенность в себе | Ему не хватает уверенности в себе. | self-confidence | He lacks self-confidence.
+der Druck | давление | Ученики находятся под большим давлением. | pressure | Pupils are under a lot of pressure.
+der Instinkt | инстинкт, чутьё | Доверься своему чутью. | instinct | Trust your instinct.
+bewältigen | справляться | Как ты справляешься со стрессом? | to cope with, to manage | How do you cope with stress?
+sich anpassen | приспосабливаться | Дети быстро приспосабливаются. | to adapt | Children adapt quickly.
+sich konzentrieren | сосредоточиваться | При таком шуме я не могу сосредоточиться. | to concentrate | I can't concentrate with this noise.
+zögern | колебаться | Не стесняйся мне позвонить. | to hesitate | Don't hesitate to call me.
+merken | замечать | Я заметил, что забыл ключ. | to notice, to realise | I noticed that I'd forgotten the key.
+sich vorstellen | представлять себе; представляться | Представь, что ты на пляже. | to imagine; to introduce oneself | Imagine you're on the beach.
+bewusst | сознательный, осознающий | Ты осознаёшь риски? | aware, conscious | Are you aware of the risks?
+empfindlich | чувствительный | Он очень чувствителен к критике. | sensitive | He is very sensitive to criticism.
+neugierig | любопытный | Дети от природы любопытны. | curious | Children are naturally curious.
+unabhängig | независимый | Она очень независима. | independent | She is very independent.
+der Manager | менеджер | Я хочу поговорить с менеджером. | manager | I'd like to speak to the manager.
+das Personal | персонал | Персонал дружелюбный. | staff, personnel | The staff are friendly.
+die Verantwortung | ответственность | Это моя ответственность. | responsibility | That's my responsibility.
+die Aufgabe | задача, задание | Сегодня у меня три задачи. | task | I have three tasks today.
+das Ziel | цель | Наша цель — больше продаж. | goal, aim | Our goal is more sales.
+die Strategie | стратегия | Нам нужна новая стратегия. | strategy | We need a new strategy.
+der Bericht | отчёт, доклад | Пришлите мне отчёт до пятницы. | report | Send me the report by Friday.
+das Projekt | проект | Проект длится шесть месяцев. | project | The project lasts six months.
+die Rückmeldung | обратная связь, отзыв | Спасибо за отзыв. | feedback | Thank you for your feedback.
+der Zeitplan | график | Мы отстаём от графика. | schedule, timetable | We're behind schedule.
+delegieren | делегировать | Хороший начальник умеет делегировать. | to delegate | A good boss can delegate.
+erreichen | достигать; дозвониться | Мы достигли своей цели. | to reach, to achieve | We have reached our goal.
+organisieren | организовывать | Она организовала конференцию. | to organise | She organised the conference.
+zusammenarbeiten | сотрудничать | Две фирмы тесно сотрудничают. | to work together, to cooperate | The two companies work closely together.
+motivieren | мотивировать | Хороший начальник мотивирует команду. | to motivate | A good boss motivates the team.
+beaufsichtigen | контролировать, присматривать | Он руководит десятью рабочими. | to supervise | He supervises ten workers.
+effizient | эффективный | Новая система эффективнее. | efficient | The new system is more efficient.
+flexibel | гибкий | У меня гибкий рабочий график. | flexible | I have flexible working hours.
+erfahren | опытный | Мы ищем опытную учительницу. | experienced | We're looking for an experienced teacher.
+das Meisterwerk | шедевр | «Мона Лиза» — шедевр. | masterpiece | The Mona Lisa is a masterpiece.
+die Skulptur | скульптура | В парке стоит бронзовая скульптура. | sculpture | There's a bronze sculpture in the park.
+die Dichtung | поэзия; уплотнитель | Поэзия Навои знаменита. | poetry; seal | Navoi's poetry is famous.
+die Literatur | литература | Она изучает узбекскую литературу. | literature | She studies Uzbek literature.
+das Erbe | наследие, наследство | Бухара входит во всемирное культурное наследие. | heritage, inheritance | Bukhara is a World Heritage Site.
+die Tradition | традиция | Есть плов по пятницам — наша традиция. | tradition | Eating plov on Fridays is a tradition for us.
+die Galerie | галерея | Мы идём в национальную галерею. | gallery | We're visiting the national gallery.
+das Handwerk | ремесло | Гончарство — традиционное ремесло. | craft, trade | Pottery is a traditional craft.
+der Autor | автор | Кто автор этого романа? | author | Who is the author of this novel?
+das Theater | театр | Вчера мы были в театре. | theatre | We were at the theatre yesterday.
+das Festival | фестиваль | Музыкальный фестиваль длится три дня. | festival | The music festival lasts three days.
+erschaffen | создавать | Она создаёт чудесные картины. | to create | She creates wonderful pictures.
+ausdrücken | выражать | Музыка помогает мне выражать чувства. | to express | Music helps me express my feelings.
+inspirieren | вдохновлять | Природа вдохновляет многих художников. | to inspire | Nature inspires many artists.
+bewundern | восхищаться | Я восхищаюсь его работой. | to admire | I admire his work.
+klassisch | классический | Она любит классическую музыку. | classical, classic | She loves classical music.
+originell | оригинальный, самобытный | Это оригинальная идея. | original, creative | That's an original idea.
+kreativ | творческий | Мой сын очень творческий. | creative | My son is very creative.
+zeitgenössisch | современный | Я не понимаю современное искусство. | contemporary | I don't understand contemporary art.
+die Reiseroute | маршрут | Наш маршрут охватывает три города. | itinerary, route | Our route covers three cities.
+der Ferienort | курорт | Они были на горнолыжном курорте. | holiday resort | They were at a ski resort.
+der Ausflug | экскурсия, поездка | Мы едем на экскурсию в горы. | trip, outing | We're going on a trip to the mountains.
+die Reservierung | бронь | У меня бронь на две ночи. | reservation, booking | I have a reservation for two nights.
+die Abfahrt | отправление | Отправление в шесть утра. | departure | Departure is at six in the morning.
+der Zoll | таможня; пошлина | Мы быстро прошли таможню. | customs; duty | We got through customs quickly.
+das Visum | виза | Мне нужна виза в Германию? | visa | Do I need a visa for Germany?
+das Wahrzeichen | символ, достопримечательность | Регистан — символ Самарканда. | landmark, emblem | The Registan is Samarkand's landmark.
+der Einheimische | местный житель | Спроси дорогу у местного жителя. | local | Ask a local for directions.
+die Hauptsaison | высокий сезон | В высокий сезон отели дорогие. | peak season | Hotels are expensive in peak season.
+stornieren | отменять (бронь) | Мне пришлось отменить рейс. | to cancel | I had to cancel the flight.
+verschieben | переносить | Мы перенесли поездку на весну. | to postpone | We postponed the trip until spring.
+pendeln | ездить на работу (из пригорода) | Я езжу на работу на метро. | to commute | I commute by underground.
+einsteigen | садиться (в транспорт) | Пассажиры могут садиться. | to get on, to board | Passengers may now board.
+bummeln | прогуливаться | Мы прогуливались по старому городу. | to stroll | We strolled through the old town.
+atemberaubend | захватывающий дух | Вид с вершины захватывает дух. | breathtaking | The view from the summit is breathtaking.
+abgelegen | отдалённый | Они живут в отдалённой деревне. | remote | They live in a remote village.
+malerisch | живописный | Это живописный городок. | picturesque | It's a picturesque little town.
+überfüllt | переполненный | Пляж был переполнен. | overcrowded | The beach was overcrowded.
+die Armut | бедность | Миллионы людей живут в бедности. | poverty | Millions of people live in poverty.
+die Arbeitslosigkeit | безработица | Безработица снизилась. | unemployment | Unemployment has fallen.
+obdachlos | бездомный | Организация помогает бездомным людям. | homeless | The organisation helps homeless people.
+die Wohltätigkeit | благотворительность | Она много жертвует на благотворительность. | charity | She gives a lot to charity.
+die Gleichberechtigung | равноправие | Мы выступаем за равноправие. | equal rights, equality | We stand up for equal rights.
+die Diskriminierung | дискриминация | Дискриминация на работе запрещена. | discrimination | Discrimination at work is prohibited.
+die Bevölkerung | население | Население города растёт. | population | The city's population is growing.
+der Einwanderer | иммигрант | Многие иммигранты работают на стройке. | immigrant | Many immigrants work in construction.
+die Gewalt | насилие; власть | По телевизору слишком много насилия. | violence; power | There's too much violence on TV.
+die Generation | поколение | Молодое поколение много пользуется соцсетями. | generation | The young generation uses social media a lot.
+das Recht | право | У детей тоже есть права. | right; law | Children have rights too.
+protestieren | протестовать | Студенты протестовали против закона. | to protest | Students protested against the law.
+spenden | жертвовать | Он пожертвовал свою старую одежду. | to donate | He donated his old clothes.
+lösen | решать | Мы должны решить проблему вместе. | to solve | We must solve the problem together.
+bekämpfen | бороться с | Правительство должно бороться с бедностью. | to fight, to combat | The government must fight poverty.
+steigen | расти, подниматься | Цены выросли на десять процентов. | to rise, to climb | Prices have risen by ten percent.
+älter | пожилой; старше | Мы должны помогать пожилым людям. | elderly; older | We should help elderly people.
+behindert | с инвалидностью | Здание доступно для людей с инвалидностью. | disabled | The building is accessible to disabled people.
+gerecht | справедливый | Это несправедливо! | fair, just | That's not fair!
+offensichtlich | очевидный | Ответ очевиден. | obvious | The answer is obvious.
+selten | редкий | Эта птица очень редкая. | rare | This bird is very rare.
+riesig | огромный | Они живут в огромном доме. | huge, enormous | They live in a huge house.
+winzig | крошечный | У малыша крошечные ручки. | tiny | The baby has tiny hands.
+uralt | древний, очень старый | Мы посетили древний город. | ancient, ages old | We visited an ancient city.
+modern | современный | Отель очень современный. | modern, up-to-date | The hotel is very modern.
+gewöhnlich | обычный | Это был обычный день. | ordinary, usual | It was an ordinary day.
+ungewöhnlich | необычный | Какое необычное имя! | unusual | What an unusual name!
+kompliziert | сложный | Инструкция сложная. | complicated | The instructions are complicated.
+wesentlich | существенный | Это существенная разница. | essential, significant | That's a significant difference.
+wertvoll | ценный | Спасибо за ценный совет. | valuable | Thanks for the valuable advice.
+eindrucksvoll | впечатляющий | Её немецкий впечатляет. | impressive | Her German is impressive.
+ekelhaft | отвратительный | Еда была отвратительной. | disgusting | The food was disgusting.
+schrecklich | ужасный | У меня был ужасный день. | terrible, awful | I had a terrible day.
+wunderschön | прекрасный | Какой прекрасный вид! | beautiful, gorgeous | What a beautiful view!
+glatt | гладкий; скользкий | Дорога скользкая. | smooth; slippery | The road is slippery.
+rau | шершавый; грубый | Стена шершавая на ощупь. | rough | The wall feels rough.
+großartig | великолепный | Отличная идея! | great, brilliant | That's a great idea!
+bunt | разноцветный | Дети рисуют разноцветные картинки. | colourful | The children are painting colourful pictures.
+erfordern | требовать | Эта работа требует опыта. | to require | The job requires experience.
+erhalten | получать; сохранять | Вы получите ответ по электронной почте. | to receive; to preserve | You will receive the answer by email.
+aufrechterhalten | поддерживать | Трудно поддерживать связь. | to maintain | It's hard to maintain contact.
+sicherstellen | обеспечивать | Пожалуйста, убедитесь, что дверь закрыта. | to ensure, to make sure | Please make sure the door is closed.
+betreffen | касаться | Проблема касается всех. | to affect, to concern | The problem affects everyone.
+berücksichtigen | учитывать | Мы должны учитывать расходы. | to take into account | We must take the costs into account.
+schätzen | оценивать; ценить | Думаю, это займёт два часа. | to estimate; to appreciate | I estimate it will take two hours.
+feststellen | устанавливать, замечать | Врач не обнаружил ничего серьёзного. | to determine, to find | The doctor found nothing serious.
+enthüllen | раскрывать | Наконец он раскрыл правду. | to reveal | He finally revealed the truth.
+ersetzen | заменять | Нам нужно заменить батарейку. | to replace | We need to replace the battery.
+sich bemühen | стараться | Она старается найти работу. | to try hard, to make an effort | She is trying hard to find a job.
+entstehen | возникать | Возникли новые проблемы. | to arise, to emerge | New problems arose.
+anlocken | привлекать | Город привлекает многих туристов. | to attract, to lure | The city attracts many tourists.
+ermutigen | ободрять, поощрять | Родители поощряли меня учиться. | to encourage | My parents encouraged me to study.
+zustehen | полагаться (по праву) | Тебе полагается перерыв. | to be entitled to | You're entitled to a break.
+zugeben | признавать | Он признал свою ошибку. | to admit | He admitted his mistake.
+erinnern | напоминать | Напомни мне ей позвонить. | to remind | Remind me to call her.
+genehmigen | утверждать, разрешать | План утвердили. | to approve, to authorise | The plan was approved.
+annehmen | предполагать; принимать | Полагаю, ты уже знаешь. | to assume; to accept | I assume you already know.

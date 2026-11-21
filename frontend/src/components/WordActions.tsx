@@ -2,7 +2,7 @@ import { BookmarkPlus, Plus, Volume2 } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { api } from '../lib/api'
-import { speak, ttsSupported } from '../lib/tts'
+import { hasVoice, speakIn, ttsSupported } from '../lib/tts'
 import type { Deck } from '../lib/types'
 import type { Track } from '../games/types'
 import { useT } from '../i18n'
@@ -16,16 +16,18 @@ export interface WordLike {
   word_id?: number | null
 }
 
-export function SpeakButton({ text, track, className = '' }: { text: string; track: Track; className?: string }) {
+/** Speaks the foreign word (track voice) or, with `lang`, a translation in that language. */
+export function SpeakButton({ text, track, lang, className = '' }: { text: string; track: Track; lang?: string; className?: string }) {
   const t = useT()
-  if (!ttsSupported()) return null
+  const voiceLang = lang || track
+  if (!ttsSupported() || !hasVoice(voiceLang)) return null
   return (
     <button
       type="button"
       className={`grid h-10 w-10 shrink-0 place-items-center rounded-full bg-primary-soft text-primary ${className}`}
       onClick={(e) => {
         e.stopPropagation()
-        speak(text, track)
+        speakIn(text, voiceLang)
       }}
       aria-label={t('common.listen')}
     >

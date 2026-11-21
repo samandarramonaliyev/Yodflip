@@ -365,5 +365,19 @@
   "level.rule": "A word counts as learned at its first correct answer. 70% unlocks the next level.",
   "level.found_list": "Found words ({n})",
   "ach.level_complete": "Level complete",
-  "ach.level_complete_desc": "Find every word of a level"
+  "ach.level_complete_desc": "Find every word of a level",
+  "tr.title": "Translate into which language?",
+  "tr.word": "Word",
+  "tr.translation": "Translation",
+  "tr.direction": "Direction",
+  "tr.remember": "Remember my choice",
+  "tr.unavailable": "Translation not available",
+  "tr.ui_note": "The app language is changed separately in settings",
+  "tr.setup_hint": "You'll pick the translation language and direction before starting.",
+  "tr.tabs": "Translation languages",
+  "decks.translation_lang": "Translation language",
+  "decks.translation_lang_hint": "Card translations are written in this language. Deck games use it automatically.",
+  "decks.ai_translate": "Translate with AI",
+  "decks.ai_done": "{lang} translations added",
+  "profile.played_in": "Played in"
 }

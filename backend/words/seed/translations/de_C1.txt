@@ -1,0 +1,301 @@
+# word | ru | example (ru) | en | example (en)
+analysieren | анализировать | Нам нужно тщательно проанализировать данные. | to analyse | We need to analyse the data carefully.
+die Hypothese | гипотеза | Результаты подтверждают нашу гипотезу. | hypothesis | The results confirm our hypothesis.
+erheblich | значительный | Произошёл значительный рост. | considerable, significant | There was a considerable increase.
+betonen | подчёркивать | Она подчеркнула необходимость реформ. | to emphasise, to stress | She stressed the need for reforms.
+der Beweis | доказательство | Этому нет доказательств. | proof, evidence | There's no proof of that.
+widersprechen | противоречить, возражать | Два отчёта противоречат друг другу. | to contradict | The two reports contradict each other.
+umfassend | всеобъемлющий | Это всеобъемлющий отчёт. | comprehensive | This is a comprehensive report.
+mehrdeutig | многозначный, двусмысленный | Его ответ был двусмысленным. | ambiguous | His answer was ambiguous.
+untergraben | подрывать | Ложь подрывает доверие. | to undermine | Lies undermine trust.
+der Rahmen | рамки; рама | В рамках проекта были собраны данные. | framework; frame | Data were collected as part of the project.
+unvermeidlich | неизбежный | Перемены неизбежны. | inevitable, unavoidable | Change is inevitable.
+rechtfertigen | оправдывать | Как ты можешь оправдать эти расходы? | to justify | How can you justify these costs?
+der Begriff | понятие, термин | Этот термин трудно объяснить. | term, concept | This term is hard to explain.
+ableiten | выводить | Из этого можно вывести правило. | to derive, to deduce | You can derive a rule from this.
+schlüssig | логичный, убедительный | Аргумент логичен. | conclusive, coherent | The argument is coherent.
+gewissenhaft | добросовестный | Она работает очень добросовестно. | conscientious | She works very conscientiously.
+belastbar | выносливый, стрессоустойчивый | Для этой работы нужно быть стрессоустойчивым. | resilient, able to work under pressure | You have to be resilient for this job.
+arrogant | высокомерный | Он грубый и высокомерный. | arrogant, haughty | He is rude and arrogant.
+bescheiden | скромный | Несмотря на успех, он остался скромным. | modest, humble | Despite his success he remained modest.
+stur | упрямый | Мой младший брат очень упрямый. | stubborn | My little brother is very stubborn.
+fleißig | прилежный, трудолюбивый | Она прилежная студентка. | hard-working, diligent | She is a hard-working student.
+leichtgläubig | легковерный | Не будь таким легковерным! | gullible | Don't be so gullible!
+aufrichtig | искренний | Спасибо за искренний ответ. | sincere | Thank you for your sincere answer.
+mitfühlend | сочувствующий | Медработники должны быть чуткими. | compassionate | Carers must be compassionate.
+leichtsinnig | легкомысленный, неосторожный | Неосторожная езда приводит к авариям. | reckless, careless | Reckless driving causes accidents.
+aufschieben | откладывать | Хватит всё откладывать! | to put off, to procrastinate | Stop putting everything off!
+die Ehrlichkeit | честность | Честность для меня очень важна. | honesty | Honesty is very important to me.
+sich einfühlen | сопереживать, вживаться | Я хорошо понимаю твои чувства. | to empathise | I can really empathise with you.
+durchsetzungsfähig | напористый, умеющий настоять на своём | В профессии нужно уметь настоять на своём. | assertive | You have to be assertive at work.
+redegewandt | красноречивый | Она произнесла красноречивую речь. | eloquent | She gave an eloquent speech.
+die Ungleichheit | неравенство | Социальное неравенство растёт. | inequality | Social inequality is growing.
+sich einsetzen | выступать за, бороться за | Она борется за права женщин. | to campaign for, to stand up for | She campaigns for women's rights.
+die Gesetzgebung | законодательство | Новое законодательство скоро вступит в силу. | legislation | The new legislation will come into force soon.
+der Konsens | консенсус | Мы достигли консенсуса. | consensus | We reached a consensus.
+abschaffen | отменять, упразднять | Смертную казнь отменили. | to abolish | The death penalty was abolished.
+der Wohlstand | благосостояние | Благосостояние в стране выросло. | prosperity, wealth | Prosperity in the country has risen.
+umstritten | спорный | Это спорное решение. | controversial | That's a controversial decision.
+umsetzen | осуществлять | Реформы быстро осуществили. | to implement | The reforms were implemented quickly.
+die Souveränität | суверенитет | Каждая страна ценит свой суверенитет. | sovereignty | Every country values its sovereignty.
+die Bürokratie | бюрократия | Слишком много бюрократии. | bureaucracy | There's too much bureaucracy.
+ausbeuten | эксплуатировать | Фирмы не должны эксплуатировать рабочих. | to exploit | Companies must not exploit workers.
+das Vorurteil | предрассудок | Мы должны преодолевать предрассудки. | prejudice | We must break down prejudices.
+verantwortlich | ответственный | Кто за это отвечает? | responsible | Who is responsible for this?
+übernehmen | брать на себя | Он взялся за сложный проект. | to take on, to take over | He took on a difficult project.
+der Widerstand | сопротивление | План встретил сильное сопротивление. | resistance, opposition | There was strong opposition to the plan.
+subtil | тонкий | Есть тонкое различие. | subtle | There is a subtle difference.
+vermitteln | передавать; посредничать | Книга даёт ясное представление. | to convey; to mediate | The book conveys a clear picture.
+tiefgreifend | глубокий, коренной | Это имело глубокие последствия. | profound, far-reaching | That had far-reaching consequences.
+erläutern | пояснять | Можете пояснить подробнее? | to explain, to elaborate | Could you explain that in more detail?
+anschaulich | наглядный | Он объясняет очень наглядно. | vivid, clear | He explains things very clearly.
+andeuten | намекать | Ты намекаешь, что я солгал? | to imply, to hint | Are you implying that I lied?
+mühsam | трудный, утомительный | Заполнять анкеты утомительно. | tedious, laborious | Filling in the forms is tedious.
+allgegenwärtig | вездесущий | Сегодня смартфоны повсюду. | ubiquitous | Smartphones are ubiquitous today.
+grübeln | ломать голову, размышлять | Не размышляй так много о своих ошибках. | to brood, to ponder | Don't brood so much over your mistakes.
+unverblümt | прямо, без обиняков | Он прямо сказал мне правду. | bluntly, frank | He told me the truth bluntly.
+wehmütig | грустно-тоскливый | Старые песни навевают на меня грусть. | wistful, nostalgic | Old songs make me wistful.
+übersehen | не заметить | Мы не заметили важную деталь. | to overlook | We overlooked an important detail.
+skurril | чудной, причудливый | У фильма причудливый юмор. | whimsical, quirky | The film has a quirky sense of humour.
+prüfen | проверять | Эксперты тщательно проверяют отчёт. | to examine, to check | Experts are examining the report closely.
+ergreifend | трогательный | Это был трогательный момент. | moving, poignant | It was a moving moment.
+die Prämisse | предпосылка | Предпосылка его аргумента неверна. | premise | The premise of his argument is wrong.
+das Gegenargument | контраргумент | Подумай и о контраргументе. | counterargument | Consider the counterargument too.
+der Trugschluss | ложный вывод | Это ложный вывод, что деньги делают счастливым. | fallacy | It's a fallacy that money makes you happy.
+die Begründung | обоснование | В чём обоснование этого изменения? | justification, reasoning | What is the reasoning behind this change?
+die Haltung | позиция; осанка | Какую позицию занимает партия по налогам? | stance, attitude; posture | What is the party's stance on taxes?
+das Zugeständnis | уступка | Обе стороны пошли на уступки. | concession | Both sides made concessions.
+widerlegen | опровергать | Она опровергла все его утверждения. | to refute, to disprove | She refuted all his claims.
+einräumen | признавать | Он признал, что ошибался. | to concede, to admit | He conceded that he had been wrong.
+behaupten | утверждать | Он утверждает, что невиновен. | to claim, to assert | He claims to be innocent.
+bestreiten | оспаривать, отрицать | Никто не оспаривает факты. | to dispute, to deny | No one disputes the facts.
+in Einklang bringen | согласовывать, совмещать | Трудно совмещать работу и семью. | to reconcile | It's hard to reconcile work and family.
+untermauern | подкреплять (доказательствами) | Можете подкрепить это утверждение? | to back up, to substantiate | Can you back up this claim?
+abtun | отмахиваться | Он отмахнулся от идеи как от чепухи. | to dismiss | He dismissed the idea as nonsense.
+überzeugend | убедительный | У неё убедительный аргумент. | convincing, compelling | She has a convincing argument.
+stichhaltig | веский, обоснованный | Это веский аргумент. | sound, valid | That's a sound argument.
+fehlerhaft | ошибочный, с ошибками | Исследование было ошибочным. | faulty, flawed | The study was flawed.
+schlagfertig | находчивый (в ответах) | Она очень находчивая. | quick-witted | She is very quick-witted.
+rhetorisch | риторический | Это был просто риторический вопрос. | rhetorical | That was just a rhetorical question.
+unwiderlegbar | неопровержимый | Доказательства неопровержимы. | irrefutable | The evidence is irrefutable.
+die Nuance | нюанс | Переводчики должны понимать каждый нюанс. | nuance | Translators must understand every nuance.
+die Inflation | инфляция | Инфляция составила десять процентов. | inflation | Inflation was ten percent.
+die Rezession | рецессия | Страна находится в рецессии. | recession | The country is in recession.
+fiskalisch | фискальный | Фискальная ситуация сложная. | fiscal | The fiscal situation is difficult.
+die Subvention | субсидия | Фермеры получают субсидии. | subsidy | Farmers receive subsidies.
+der Zolltarif | таможенный тариф | Правительство повысило таможенные тарифы. | tariff | The government raised tariffs.
+das Vermögen | состояние, имущество | Он унаследовал большое состояние. | fortune, assets | He inherited a large fortune.
+die Verbindlichkeit | обязательство | У фирмы большие обязательства. | liability | The company has large liabilities.
+die Dividende | дивиденд | Акционеры получили дивиденд. | dividend | The shareholders received a dividend.
+das Monopol | монополия | У фирмы монополия на электричество. | monopoly | The company has a monopoly on electricity.
+die Sparpolitik | политика жёсткой экономии | Политика экономии разозлила многих. | austerity | Austerity made many people angry.
+die Ausgaben | расходы | Расходы на образование растут. | expenditure, spending | Spending on education is rising.
+das Eigenkapital | собственный капитал | Банк требует больше собственного капитала. | equity | The bank requires more equity.
+schwanken | колебаться | Цены на нефть сильно колеблются. | to fluctuate | Oil prices fluctuate sharply.
+ankurbeln | стимулировать, оживлять | Низкие ставки должны оживить экономику. | to boost, to stimulate | Low interest rates should boost the economy.
+zuweisen | выделять, распределять | Город выделил деньги на школы. | to allocate, to assign | The city allocated money for schools.
+erschöpfen | истощать; изматывать | Война истощила резервы. | to exhaust, to deplete | The war depleted the reserves.
+lukrativ | прибыльный | Это прибыльный бизнес. | lucrative | That's a lucrative business.
+volatil | неустойчивый | Рынок очень неустойчив. | volatile | The market is very volatile.
+wohlhabend | состоятельный | Они живут в состоятельном районе. | affluent, wealthy | They live in an affluent neighbourhood.
+das Wirtschaftswachstum | экономический рост | Экономический рост был слабым. | economic growth | Economic growth was weak.
+die Zuständigkeit | компетенция, юрисдикция | Это не в нашей компетенции. | jurisdiction, responsibility | That's not within our jurisdiction.
+das Urteil | приговор, решение суда; суждение | Суд вынес приговор. | verdict, judgement | The court delivered a verdict.
+der Kläger | истец | Истец потребовал возмещения ущерба. | plaintiff | The plaintiff demanded damages.
+der Angeklagte | обвиняемый, подсудимый | Подсудимый не признал вину. | defendant, the accused | The defendant pleaded not guilty.
+der Schadenersatz | возмещение ущерба | Она получила возмещение за травму. | compensation, damages | She received compensation for the injury.
+der Präzedenzfall | прецедент | Это дело создало прецедент. | precedent | The case set a precedent.
+die Satzung | устав | Устав объединения изменили. | statute, articles of association | The club's statutes were changed.
+die Gesetzesänderung | поправка к закону | Парламент принял поправку к закону. | amendment | Parliament passed an amendment.
+die Gesetzeslücke | лазейка в законе | Они воспользовались лазейкой в законе. | loophole | They used a loophole.
+die Freiheit | свобода | Они боролись за свободу. | freedom, liberty | They fought for freedom.
+anklagen | предъявлять обвинение | Ему предъявили обвинение в мошенничестве. | to charge, to prosecute | He was charged with fraud.
+durchsetzen | проводить, добиваться исполнения | Полиция обеспечивает соблюдение закона. | to enforce, to push through | The police enforce the law.
+Berufung einlegen | подать апелляцию | Она подаст апелляцию. | to appeal | She will appeal.
+verletzen | нарушать; ранить | Фирма нарушила договор. | to violate; to injure | The company violated the contract.
+aufheben | отменять; поднимать | Суд отменил приговор. | to overturn, to annul; to pick up | The court overturned the verdict.
+aussagen | давать показания | Она дала показания против него. | to testify | She testified against him.
+rechtmäßig | законный | Он законный владелец. | lawful, rightful | He is the rightful owner.
+verbindlich | обязательный | Соглашение юридически обязательно. | binding | The agreement is legally binding.
+unparteiisch | беспристрастный | Судья должен быть беспристрастным. | impartial | A judge must be impartial.
+der Verstoß | нарушение | Это нарушение договора. | violation, breach | That's a breach of contract.
+die Methodik | методика | Методика была понятно объяснена. | methodology | The methodology was clearly explained.
+die Stichprobe | выборка | Выборка состояла из 500 человек. | sample | The sample consisted of 500 people.
+die Variable | переменная | Температура — важнейшая переменная. | variable | Temperature is the most important variable.
+der Zusammenhang | связь, взаимосвязь | Есть связь между питанием и здоровьем. | connection, correlation | There's a connection between diet and health.
+die Erkenntnis | вывод, познание | Исследование дало новые выводы. | finding, insight | The study produced new findings.
+das Gutachten | экспертное заключение | Экспертное заключение ещё не готово. | expert report, assessment | The expert report isn't ready yet.
+die Abweichung | отклонение | Данные показали отклонение. | deviation, anomaly | The data showed a deviation.
+das Kriterium | критерий | Каков важнейший критерий? | criterion | What is the most important criterion?
+das Paradigma | парадигма | Открытие изменило парадигму. | paradigm | The discovery changed the paradigm.
+empirisch | эмпирический | Нам нужны эмпирические данные. | empirical | We need empirical evidence.
+qualitativ | качественный | Они провели качественные интервью. | qualitative | They conducted qualitative interviews.
+quantitativ | количественный | Это количественное исследование. | quantitative | This is a quantitative study.
+vorläufig | предварительный, временный | Предварительные результаты хорошие. | preliminary, provisional | The preliminary results are good.
+gründlich | основательный, тщательный | Тесты были тщательными. | thorough | The tests were thorough.
+wiederholen | повторять | Другие исследователи повторили исследование. | to repeat, to replicate | Other researchers replicated the study.
+vermuten | предполагать | Я предполагаю, что он прав. | to suspect, to presume | I suspect he's right.
+bestätigen | подтверждать | Результаты подтверждают теорию. | to confirm | The results confirm the theory.
+beziffern | выражать в цифрах | Ущерб трудно оценить в цифрах. | to quantify, to put a figure on | The damage is hard to put a figure on.
+zusammenfassen | обобщать, резюмировать | Кратко изложите текст. | to summarise | Summarise the text.
+hochrechnen | экстраполировать, делать прогноз | Цифры можно экстраполировать на всю страну. | to extrapolate, to project | The figures can be extrapolated to the whole country.
+die Kognition | познание, когнитивные процессы | Сон влияет на когнитивные процессы. | cognition | Sleep affects cognition.
+die Wahrnehmung | восприятие | Наше восприятие времени меняется. | perception | Our perception of time changes.
+das Trauma | травма (психическая) | Война оставляет глубокие травмы. | trauma | War leaves deep traumas.
+die Angststörung | тревожное расстройство | Она лечится от тревожного расстройства. | anxiety disorder | She is being treated for an anxiety disorder.
+das Selbstwertgefühl | самооценка | Похвала укрепляет самооценку. | self-esteem | Praise boosts self-esteem.
+die Voreingenommenheit | предвзятость | У каждого есть неосознанная предвзятость. | bias, prejudice | Everyone has unconscious biases.
+die Verdrängung | вытеснение (из сознания) | Вытеснение помогает лишь ненадолго. | repression, suppression | Repression only helps in the short term.
+das Temperament | темперамент | У него спокойный темперамент. | temperament | He has a calm temperament.
+die Willenskraft | сила воли | Чтобы бросить курить, нужна сила воли. | willpower | Quitting smoking takes willpower.
+der Introvertierte | интроверт | Как интроверту, мне нужно время для себя. | introvert | As an introvert I need time to myself.
+wahrnehmen | воспринимать | Её воспринимают как сильного руководителя. | to perceive | She is perceived as a strong leader.
+unterdrücken | подавлять; угнетать | Он подавил свой гнев. | to suppress; to oppress | He suppressed his anger.
+lindern | облегчать, смягчать | Музыка может смягчить стресс. | to relieve, to alleviate | Music can relieve stress.
+manipulieren | манипулировать | Он манипулирует другими людьми. | to manipulate | He manipulates other people.
+verarbeiten | переживать, осмыслить; перерабатывать | Ей сначала нужно пережить утрату. | to come to terms with; to process | She first has to come to terms with the loss.
+unterbewusst | подсознательный | Это была подсознательная реакция. | subconscious | That was a subconscious reaction.
+impulsiv | импульсивный | Он принял импульсивное решение. | impulsive | He made an impulsive decision.
+besorgt | обеспокоенный | Я обеспокоен из-за разговора. | worried, concerned | I'm worried about the conversation.
+nachdenklich | задумчивый | Она тихая, задумчивая девушка. | thoughtful, pensive | She is a quiet, thoughtful girl.
+verletzlich | уязвимый, ранимый | Дети особенно уязвимы. | vulnerable | Children are especially vulnerable.
+ästhetisch | эстетический | У здания высокая эстетическая ценность. | aesthetic | The building has great aesthetic value.
+das Genre | жанр | Мой любимый жанр — научная фантастика. | genre | My favourite genre is science fiction.
+die Erzählung | рассказ, повествование | Действие рассказа происходит в Средние века. | story, narrative | The story is set in the Middle Ages.
+der Protagonist | главный герой | Главный герой — молодой врач. | protagonist | The protagonist is a young doctor.
+die Metapher | метафора | «Время — деньги» — это метафора. | metaphor | "Time is money" is a metaphor.
+die Satire | сатира | Передача — сатира на политику. | satire | The show is a satire on politics.
+die Rezension | рецензия | Она написала рецензию на роман. | review | She wrote a review of the novel.
+der Beifall | аплодисменты, одобрение | Фильм встретил бурные аплодисменты. | applause, acclaim | The film received great applause.
+die Darstellung | изображение, исполнение | Его исполнение роли короля было блестящим. | portrayal, depiction | His portrayal of the king was brilliant.
+die Symbolik | символика | Стихотворение полно символики. | symbolism | The poem is full of symbolism.
+darstellen | изображать | На картине изображена битва. | to depict, to portray | The painting depicts a battle.
+hervorrufen | вызывать | Песня вызывает воспоминания. | to evoke, to cause | The song evokes memories.
+rezensieren | рецензировать | Он рецензирует книги для газеты. | to review | He reviews books for a newspaper.
+deuten | толковать; указывать | Как ты толкуешь это стихотворение? | to interpret; to point | How do you interpret this poem?
+fesseln | захватывать; связывать | История захватила публику. | to captivate; to tie up | The story captivated the audience.
+eindringlich | проникновенный, настойчивый | Это проникновенное музыкальное произведение. | haunting, powerful | It's a haunting piece of music.
+abgekupfert | списанный, подражательный | Критики назвали фильм подражательным. | copied, derivative | Critics called the film derivative.
+avantgardistisch | авангардный | Она создаёт авангардную моду. | avant-garde | She makes avant-garde fashion.
+erhaben | возвышенный | Музыка была возвышенной. | sublime, lofty | The music was sublime.
+mittelmäßig | посредственный | Еда была посредственной. | mediocre | The food was mediocre.
+die Artenvielfalt | биоразнообразие | В тропическом лесу большое биоразнообразие. | biodiversity | The rainforest has great biodiversity.
+das Ökosystem | экосистема | Загрязнение вредит экосистеме. | ecosystem | Pollution harms the ecosystem.
+die Abholzung | вырубка лесов | Вырубка лесов — большая проблема. | deforestation | Deforestation is a big problem.
+der CO2-Fußabdruck | углеродный след | Перелёты увеличивают углеродный след. | carbon footprint | Flying increases your carbon footprint.
+die Eindämmung | сдерживание | Сдерживание изменения климата неотложно. | containment, mitigation | Limiting climate change is urgent.
+der Lebensraum | среда обитания | Среда обитания тигра сокращается. | habitat | The tiger's habitat is shrinking.
+der Naturschutz | охрана природы | Она работает в сфере охраны природы. | nature conservation | She works in nature conservation.
+die Verseuchung | заражение, загрязнение | Заражение воды сделало многих больными. | contamination | The contamination of the water made many people ill.
+die Knappheit | нехватка | Нехватка воды затрагивает миллионы. | scarcity, shortage | Water scarcity affects millions.
+die Mülldeponie | свалка | Много пластика попадает на свалку. | landfill, rubbish dump | A lot of plastic ends up in landfill.
+eindämmen | сдерживать, ограничивать | Мы должны ограничить выбросы. | to curb, to contain | We must curb emissions.
+ausgleichen | компенсировать, уравновешивать | Сажать деревья, чтобы компенсировать CO2. | to offset, to balance | Plant trees to offset CO2.
+zersetzen | разлагать | Пластику нужны века, чтобы разложиться. | to decompose | Plastic takes centuries to decompose.
+auffüllen | пополнять | Дождь снова наполняет реки. | to replenish, to refill | The rain replenishes the rivers.
+auslaufen lassen | постепенно сворачивать | Страна постепенно отказывается от угля. | to phase out | The country is phasing out coal.
+unumkehrbar | необратимый | Ущерб, возможно, необратим. | irreversible | The damage may be irreversible.
+giftig | ядовитый | Завод сбрасывал ядовитые отходы. | poisonous, toxic | The factory discharged toxic waste.
+endlich | конечный; наконец | Нефть — ограниченный ресурс. | finite; finally | Oil is a finite resource.
+dürr | засушливый, сухой | Регион очень засушливый. | arid, dry | The region is very arid.
+unberührt | нетронутый | Пляжи нетронутые. | untouched, pristine | The beaches are pristine.
+der Interessenvertreter | заинтересованная сторона | Мы опросили все заинтересованные стороны. | stakeholder | We consulted all stakeholders.
+die Fusion | слияние | Слияние создало огромный банк. | merger | The merger created a huge bank.
+die Übernahme | поглощение; принятие на себя | Поглощение стоило миллиарды. | takeover, acquisition | The takeover cost billions.
+der Maßstab | масштаб, критерий | Продукт задаёт новые стандарты. | benchmark, standard; scale | The product sets new standards.
+das Druckmittel | средство давления | У нас почти нет средств давления. | leverage, means of pressure | We have hardly any leverage.
+die Auslagerung | аутсорсинг, вывод на сторону | Аутсорсинг снизил расходы. | outsourcing | Outsourcing reduced costs.
+der Synergieeffekt | синергетический эффект | Слияние даёт синергетический эффект. | synergy effect | The merger brings synergies.
+die Fluktuation | текучесть кадров; колебание | Текучесть кадров в команде высокая. | staff turnover; fluctuation | Staff turnover in the team is high.
+die Marktnische | рыночная ниша | Они нашли рыночную нишу. | market niche | They found a market niche.
+die Machbarkeit | осуществимость | Мы проверяем осуществимость проекта. | feasibility | We're checking the feasibility of the project.
+straffen | упорядочивать, оптимизировать | Мы оптимизировали процесс. | to streamline | We streamlined the process.
+diversifizieren | диверсифицировать | Фирма диверсифицировала деятельность. | to diversify | The company has diversified.
+nutzen | использовать | Мы должны использовать этот шанс. | to use, to take advantage of | We must take advantage of this chance.
+prognostizieren | прогнозировать | Эксперты прогнозируют рост. | to forecast, to predict | Experts forecast growth.
+umstrukturieren | реструктурировать | Фирму реструктурировали. | to restructure | The company was restructured.
+übertreffen | превосходить | Результаты превзошли ожидания. | to exceed, to surpass | The results exceeded expectations.
+skalierbar | масштабируемый | Бизнес-модель масштабируема? | scalable | Is the business model scalable?
+tragfähig | жизнеспособный | Это жизнеспособная концепция. | viable, sustainable | That's a viable concept.
+der Wettbewerbsvorteil | конкурентное преимущество | Качество — наше конкурентное преимущество. | competitive advantage | Quality is our competitive advantage.
+vorausschauend | дальновидный | Нам нужно дальновидное планирование. | forward-looking, proactive | We need forward-looking planning.
+erleichtern | облегчать | Техника облегчает общение. | to make easier, to facilitate | Technology makes communication easier.
+abmildern | смягчать | Меры должны смягчить последствия. | to mitigate, to soften | The measures should mitigate the consequences.
+verschärfen | обострять | Засуха обострила кризис. | to aggravate, to exacerbate | The drought aggravated the crisis.
+einhalten | соблюдать | Все должны соблюдать правила. | to comply with, to observe | Everyone must comply with the rules.
+befürworten | поддерживать, одобрять | Министр поддерживает план. | to endorse, to advocate | The minister endorses the plan.
+in Erwägung ziehen | рассматривать (возможность) | Мы рассматриваем переезд. | to consider | We're considering a move.
+umgehen | обходить | Они обошли правила. | to circumvent, to bypass | They circumvented the regulations.
+ablösen | сменять, заменять | Новый закон заменяет старый. | to replace, to supersede | The new law replaces the old one.
+ergänzen | дополнять, заполнять | Пожалуйста, заполните анкету. | to complete, to supplement | Please complete the form.
+eruieren | выяснять | Причину пока не удалось выяснить. | to ascertain, to find out | The cause has not yet been ascertained.
+abgrenzen | разграничивать | Понятия нужно чётко разграничивать. | to delimit, to distinguish | The terms must be clearly distinguished.
+sich halten an | придерживаться | Мы придерживаемся строгих стандартов. | to adhere to, to stick to | We adhere to strict standards.
+anspielen auf | намекать на | Она намекнула на своё прошлое. | to allude to | She alluded to her past.
+auslösen | вызывать, запускать | Скандал вызвал его отставку. | to trigger, to cause | The scandal triggered his resignation.
+bekräftigen | подтверждать, подкреплять | Министр подтвердил свою позицию. | to reaffirm, to reiterate | The minister reaffirmed his position.
+erachten | считать | План сочли слишком рискованным. | to deem, to consider | The plan was deemed too risky.
+voraussetzen | предполагать, требовать | Эта должность требует опыта. | to require, to presuppose | The position requires experience.
+überschreiten | превышать | Расходы превышают бюджет. | to exceed | The costs exceed the budget.
+gipfeln in | достигать кульминации в | Праздник завершился фейерверком. | to culminate in | The celebration culminated in fireworks.
+beanstanden | предъявлять претензии | Клиент предъявил претензию к доставке. | to complain about, to object to | The customer complained about the delivery.
+durchdringend | пронзительный, всепроникающий | Комнату наполнил резкий запах. | penetrating, pervasive | A penetrating smell filled the room.
+inhärent | присущий | Каждому бизнесу присущи риски. | inherent | Every business has inherent risks.
+plausibel | правдоподобный | Это правдоподобное объяснение. | plausible | That's a plausible explanation.
+nachteilig | невыгодный, вредный | Курение вредно для здоровья. | detrimental, disadvantageous | Smoking is detrimental to health.
+unerlässlich | необходимый | Опыт необходим. | indispensable, essential | Experience is essential.
+weit verbreitet | широко распространённый | Это мнение широко распространено. | widespread | This opinion is widespread.
+ausdrücklich | явный, категорический | Он прямо это запретил. | explicit, expressly | He expressly forbade it.
+stillschweigend | молчаливый, негласный | Было негласное соглашение. | tacit, implicit | There was a tacit agreement.
+willkürlich | произвольный | Решение кажется произвольным. | arbitrary | The decision seems arbitrary.
+veraltet | устаревший | Эта техника устарела. | outdated, obsolete | This technology is outdated.
+durchführbar | выполнимый | План выполним? | feasible | Is the plan feasible?
+vorrangig | первоочередной | Безопасность — в первую очередь. | of top priority, paramount | Safety is the top priority.
+zaghaft | робкий, нерешительный | Она сделала робкую попытку. | tentative, timid | She made a tentative attempt.
+umständlich | громоздкий, запутанный | Процедура громоздкая. | cumbersome, complicated | The procedure is cumbersome.
+die Diskrepanz | расхождение | В цифрах есть расхождение. | discrepancy | There is a discrepancy in the figures.
+markant | выразительный, характерный | У него выразительное лицо. | striking, distinctive | He has a striking face.
+beispiellos | беспрецедентный | Цены росли беспрецедентными темпами. | unprecedented | Prices rose at an unprecedented rate.
+vergänglich | преходящий | Слава преходяща. | transient, fleeting | Fame is fleeting.
+akribisch | скрупулёзный | Она работает скрупулёзно. | meticulous | She works meticulously.
+zwangsläufig | неизбежно | Это неизбежно ведёт к проблемам. | inevitably, necessarily | This inevitably leads to problems.
+das Dilemma | дилемма | Врачи часто стоят перед моральными дилеммами. | dilemma | Doctors often face moral dilemmas.
+die Einwilligung | согласие | Пациенты должны дать согласие. | consent | Patients must give their consent.
+die Sterbehilfe | эвтаназия | Во многих странах эвтаназия запрещена. | euthanasia, assisted dying | Assisted dying is banned in many countries.
+die Pandemie | пандемия | Пандемия изменила нашу жизнь. | pandemic | The pandemic changed our lives.
+die Epidemie | эпидемия | В городе эпидемия гриппа. | epidemic | There's a flu epidemic in the city.
+die Diagnose | диагноз | Диагноз — рак. | diagnosis | The diagnosis was cancer.
+die Prognose | прогноз | Прогноз хороший. | prognosis, forecast | The prognosis is good.
+die Nebenwirkung | побочное действие | У средства почти нет побочных действий. | side effect | The medicine has hardly any side effects.
+die Schweigepflicht | врачебная тайна, обязанность молчать | Врачи обязаны хранить тайну. | duty of confidentiality | Doctors are bound by confidentiality.
+das Wohlbefinden | хорошее самочувствие | Спорт улучшает самочувствие. | wellbeing | Sport improves wellbeing.
+chronisch | хронический | У него хронические боли. | chronic | He has chronic pain.
+akut | острый | У неё острый аппендицит. | acute | She has acute appendicitis.
+ansteckend | заразный | Вирус очень заразный. | contagious, infectious | The virus is highly contagious.
+gutartig | доброкачественный | К счастью, опухоль была доброкачественной. | benign | Luckily the tumour was benign.
+unheilbar | неизлечимый | Болезнь неизлечима. | incurable, terminal | The disease is incurable.
+verabreichen | вводить, давать (лекарство) | Медсестра сделала укол. | to administer | The nurse administered the injection.
+diagnostizieren | диагностировать | У неё диагностировали диабет. | to diagnose | She was diagnosed with diabetes.
+der Rückfall | рецидив | Через месяц у него был рецидив. | relapse | He had a relapse after a month.
+sich anstecken | заразиться | Я заразился от сына. | to catch (an illness) | I caught it from my son.
+ganzheitlich | целостный, комплексный | Она предпочитает целостную медицину. | holistic | She prefers holistic medicine.
+die Propaganda | пропаганда | Плакаты были военной пропагандой. | propaganda | The posters were war propaganda.
+die Zensur | цензура | В этой стране строгая цензура. | censorship | There's strict censorship in that country.
+die Falschinformation | ложная информация | Ложная информация быстро распространяется. | misinformation | Misinformation spreads quickly.
+der Diskurs | дискурс | Политический дискурс стал грубее. | discourse | Political discourse has become rougher.
+die Berichterstattung | освещение в СМИ | Выборы широко освещались. | coverage, reporting | The election got a lot of coverage.
+die Effekthascherei | погоня за эффектом | Газета известна погоней за эффектом. | sensationalism | The newspaper is known for sensationalism.
+die Glaubwürdigkeit | достоверность, авторитет | Скандал подорвал его авторитет. | credibility | The scandal damaged his credibility.
+die Transparenz | прозрачность | Мы требуем больше прозрачности. | transparency | We demand more transparency.
+die Schönfärberei | приукрашивание | Это чистое приукрашивание. | whitewashing, spin | That's pure whitewashing.
+die Filterblase | информационный пузырь | Соцсети создают информационные пузыри. | filter bubble | Social media create filter bubbles.
+verbreiten | распространять | Результаты распространили в интернете. | to spread, to disseminate | The results were spread online.
+fälschen | подделывать | Журналист подделал цитаты. | to fake, to forge | The journalist faked the quotes.
+verzerren | искажать | Статья искажает мои слова. | to distort | The article distorts my words.
+aufbauschen | раздувать | Пресса раздула историю. | to blow up, to exaggerate | The press blew the story up.
+hinterfragen | критически осмысливать | Новости всегда стоит подвергать сомнению. | to question, to scrutinise | You should always question the news.
+widerrufen | опровергать, отзывать | Газета отозвала сообщение. | to retract, to revoke | The newspaper retracted the report.
+parteiisch | пристрастный | Газета очень пристрастна. | partisan, biased | The newspaper is very partisan.
+sachlich | деловой, объективный | Пожалуйста, оставайся объективным. | objective, factual | Please stay objective.
+anonym | анонимный | Анонимный источник дал наводку. | anonymous | An anonymous source gave the tip.
+strittig | спорный | Это спорный вопрос. | contentious, disputed | That's a contentious question.

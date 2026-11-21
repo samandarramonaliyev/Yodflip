@@ -102,7 +102,7 @@ export default function SpeedMatch({ items, track, reverse, onFinish }: GameProp
         <motion.div key={idx} initial={{ y: 16, opacity: 0 }} animate={{ y: 0, opacity: 1 }} exit={{ y: -16, opacity: 0 }} transition={{ duration: 0.18 }} className="card flex min-h-[140px] items-center justify-center gap-3 p-6 text-center">
           {item.is_filler && <FillerBadge />}
           <span className="break-words text-3xl font-black">{sides.prompt}</span>
-          {sides.promptLang !== 'uz' && <SpeakButton text={sides.prompt} track={track} />}
+          <SpeakButton text={sides.prompt} track={track} lang={sides.promptLang} />
         </motion.div>
       </AnimatePresence>
 

@@ -1,3 +1,4 @@
+import { allowedLangs, LANG_META, type TrLang } from '../lib/translation'
 import { Globe, Lock, Plus, Search } from 'lucide-react'
 import { useEffect, useState, type FormEvent } from 'react'
 import { Link, useNavigate, useSearchParams } from 'react-router-dom'
@@ -36,6 +37,7 @@ export default function Decks() {
   const [name, setName] = useState('')
   const [desc, setDesc] = useState('')
   const [isPublic, setIsPublic] = useState(false)
+  const [lang, setLang] = useState<TrLang>('uz')
   const [busy, setBusy] = useState(false)
   const mine = useAsync(() => api.get<Deck[]>('/decks/', { track }), [track])
   const pub = useAsync(() => (tab === 'public' ? api.get<Deck[]>('/decks/public/', { track, q }) : Promise.resolve([] as Deck[])), [track, tab, q])
@@ -53,7 +55,7 @@ export default function Decks() {
     if (!name.trim()) return
     setBusy(true)
     try {
-      const d = await api.post<Deck>('/decks/', { name: name.trim(), description: desc, track, is_public: isPublic })
+      const d = await api.post<Deck>('/decks/', { name: name.trim(), description: desc, track, is_public: isPublic, translation_lang: lang })
       toast.ok(t('decks.created'))
       nav(`/decks/${d.id}`)
     } catch {
@@ -113,6 +115,24 @@ export default function Decks() {
           <div className="rounded-2xl bg-line/50 px-3 text-sm font-bold">
             {t('decks.track')}: {track === 'en' ? 'EN · English' : 'DE · Deutsch'}
           </div>
+          <label className="block space-y-1">
+            <span className="text-sm font-bold">{t('decks.translation_lang')}</span>
+            <div className="grid grid-cols-3 gap-2" role="radiogroup" aria-label={t('decks.translation_lang')}>
+              {allowedLangs(track).map((l) => (
+                <button
+                  key={l}
+                  type="button"
+                  role="radio"
+                  aria-checked={lang === l}
+                  onClick={() => setLang(l)}
+                  className={`min-h-[48px] rounded-2xl text-sm font-extrabold ${lang === l ? 'bg-primary text-white' : 'bg-line/60'}`}
+                >
+                  {LANG_META[l].flag} {LANG_META[l].name}
+                </button>
+              ))}
+            </div>
+            <span className="text-xs text-muted">{t('decks.translation_lang_hint')}</span>
+          </label>
           <Toggle checked={isPublic} onChange={setIsPublic} label={t('decks.is_public')} />
           <button className="btn-primary w-full" disabled={busy}>
             {busy && <Spinner className="h-5 w-5" />} {t('decks.create')}

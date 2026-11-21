@@ -2,7 +2,8 @@
  * Game Direction Rules (strict, mirrors backend games/rules.py)
  *
  * 1. DEFINITION games: word ↔ same-language definition. Never Uzbek. No reverse.
- * 2. MEMORIZATION games: word ↔ Uzbek translation. Reverse toggle = Uzbek → word.
+ * 2. MEMORIZATION games: word ↔ translation in the chosen language (uz / ru / en / de, never the
+ *    word's own language). Reverse = translation → word.
  * 3. ARTICLE game (Der·Die·Das): German noun → article. German track only.
  */
 import type { GameId, GameItem, Mode, Track } from './types'
@@ -35,13 +36,15 @@ export function supportsReverse(game: GameId): boolean {
   return GAME_MODES[game] === 'memorize'
 }
 
+export type SideLang = Track | 'uz' | 'ru'
+
 export interface Sides {
   /** What the player sees / is asked about */
   prompt: string
   /** The expected answer */
   answer: string
-  promptLang: Track | 'uz'
-  answerLang: Track | 'uz'
+  promptLang: SideLang
+  answerLang: SideLang
 }
 
 /** Resolve prompt/answer for an item according to the rules. */
@@ -54,10 +57,11 @@ export function sidesFor(item: GameItem, game: GameId, track: Track, reverse = f
   if (mode === 'article') {
     return { prompt: item.word, answer: item.article, promptLang: 'de', answerLang: 'de' }
   }
+  const trLang: SideLang = item.translation_lang ?? 'uz'
   if (reverse && supportsReverse(game)) {
-    return { prompt: item.translation, answer: item.term, promptLang: 'uz', answerLang: track }
+    return { prompt: item.translation, answer: item.term, promptLang: trLang, answerLang: track }
   }
-  return { prompt: item.term, answer: item.translation, promptLang: track, answerLang: 'uz' }
+  return { prompt: item.term, answer: item.translation, promptLang: track, answerLang: trLang }
 }
 
 /** Items that can actually be used in a game (has the needed back side). */

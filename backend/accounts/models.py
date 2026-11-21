@@ -67,3 +67,19 @@ class User(AbstractBaseUser, PermissionsMixin):
 
     def cefr_for(self, track: str) -> str:
         return self.cefr_level_de if track == "de" else self.cefr_level_en
+
+
+class TranslationPreference(models.Model):
+    """Translation language + direction chosen before memorization games, per user and track."""
+
+    DIRECTIONS = [("forward", "Word → translation"), ("reverse", "Translation → word")]
+
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="translation_prefs")
+    track = models.CharField(max_length=2, choices=TRACK_CHOICES)
+    preferred_translation_lang = models.CharField(max_length=2, default="uz")
+    preferred_direction = models.CharField(max_length=7, choices=DIRECTIONS, default="forward")
+    remember_choice = models.BooleanField(default=False)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        constraints = [models.UniqueConstraint(fields=["user", "track"], name="uniq_translation_pref")]

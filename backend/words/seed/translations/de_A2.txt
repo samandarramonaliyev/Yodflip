@@ -1,0 +1,151 @@
+# word | ru | example (ru) | en | example (en)
+der Flughafen | аэропорт | Мы рано приехали в аэропорт. | airport | We are at the airport early.
+die Fahrkarte | билет (проездной) | Я купил билет онлайн. | ticket | I bought the ticket online.
+der Reisepass | загранпаспорт | Не забудь паспорт! | passport | Don't forget your passport!
+das Gepäck | багаж | Мой багаж очень тяжёлый. | luggage | My luggage is very heavy.
+das Hotel | гостиница, отель | Отель находится на пляже. | hotel | The hotel is on the beach.
+der Bahnhof | вокзал | Вокзал недалеко. | railway station | The station isn't far.
+die Reise | путешествие, поездка | Поездка длится три часа. | journey, trip | The journey takes three hours.
+der Urlaub | отпуск | Летом мы едем в отпуск. | holiday, vacation | We go on holiday in summer.
+ankommen | прибывать | Поезд прибывает в шесть. | to arrive | The train arrives at six.
+abfahren | отправляться | Автобус отправляется через пять минут. | to depart, to leave | The bus leaves in five minutes.
+buchen | бронировать | Я забронировал номер. | to book | I've booked a room.
+die Verspätung | опоздание, задержка | Поезд опаздывает. | delay | The train is delayed.
+die Haltestelle | остановка | Остановка на углу. | stop (bus, tram) | The stop is on the corner.
+das Ausland | заграница | Она хочет учиться за границей. | abroad, foreign countries | She wants to study abroad.
+die Landkarte | карта | Посмотри на карту! | map | Look at the map!
+der Arzt | врач | Мне нужно к врачу. | doctor | I have to go to the doctor.
+das Medikament | лекарство | Принимай лекарство два раза в день. | medicine, medication | Take the medicine twice a day.
+das Fieber | температура, жар | У ребёнка температура. | fever, temperature | The child has a fever.
+die Kopfschmerzen | головная боль | У меня сильно болит голова. | headache | I have a bad headache.
+gesund | здоровый, полезный | Фрукты полезны. | healthy | Fruit is healthy.
+krank | больной | На прошлой неделе он болел. | ill, sick | He was ill last week.
+der Schmerz | боль | У меня болит спина. | pain | I have pain in my back.
+wehtun | болеть | У меня болит нога. | to hurt | My leg hurts.
+sich ausruhen | отдыхать | Тебе нужно отдохнуть пару дней. | to rest | You should rest for a few days.
+der Termin | приём, назначенная встреча | У меня приём в три. | appointment | I have an appointment at three.
+der Zahn | зуб | Я чищу зубы два раза в день. | tooth | I brush my teeth twice a day.
+der Bauch | живот | У меня болит живот. | stomach, belly | My stomach hurts.
+die Erkältung | простуда | У меня простуда. | cold | I have a cold.
+die Apotheke | аптека | Аптека открыта до восьми. | pharmacy, chemist's | The pharmacy is open until eight.
+sich fühlen | чувствовать себя | Сегодня я чувствую себя лучше. | to feel | I feel better today.
+der Preis | цена | Цена слишком высокая. | price | The price is too high.
+billig | дешёвый | Рубашка дешёвая. | cheap | The shirt is cheap.
+teuer | дорогой | Машина очень дорогая. | expensive | The car is very expensive.
+bezahlen | платить | Можно оплатить картой? | to pay | Can I pay by card?
+das Bargeld | наличные | У меня нет наличных. | cash | I don't have any cash.
+die Quittung | квитанция, чек | Сохраните чек. | receipt | Keep the receipt.
+die Größe | размер | Какой у вас размер? | size | What size are you?
+der Kunde | покупатель, клиент | Клиент всегда прав. | customer | The customer is king.
+das Angebot | предложение, акция | Сегодня бананы по акции. | offer, special offer | Bananas are on offer today.
+anprobieren | примерять | Можно примерить куртку? | to try on | May I try on the jacket?
+der Markt | рынок | Мы покупаем фрукты на рынке. | market | We buy fruit at the market.
+ausgeben | тратить | Я трачу слишком много денег на кофе. | to spend | I spend too much money on coffee.
+die Rechnung | счёт | Счёт, пожалуйста! | bill | The bill, please!
+das Wechselgeld | сдача | Вот ваша сдача. | change | Here's your change.
+der Rabatt | скидка | Студенты получают скидку десять процентов. | discount | Students get a ten percent discount.
+das Wetter | погода | Сегодня хорошая погода. | weather | The weather is nice today.
+sonnig | солнечный | Сегодня солнечно. | sunny | It's sunny today.
+der Regen | дождь | Дождь не прекращается. | rain | The rain won't stop.
+der Schnee | снег | Дети играют в снегу. | snow | The children are playing in the snow.
+der Wind | ветер | Сегодня сильный ветер. | wind | The wind is strong today.
+die Wolke | облако, туча | В небе тёмные тучи. | cloud | There are dark clouds in the sky.
+die Temperatur | температура | Температура 35 градусов. | temperature | The temperature is 35 degrees.
+die Jahreszeit | время года | Весна — моё любимое время года. | season | Spring is my favourite season.
+der Wald | лес | Мы гуляем в лесу. | forest, woods | We go for a walk in the forest.
+der Fluss | река | Река очень широкая. | river | The river is very wide.
+der Berg | гора | Они поднимаются на гору. | mountain | They are climbing the mountain.
+der See | озеро | Мы плаваем в озере. | lake | We swim in the lake.
+das Gewitter | гроза | Вчера была гроза. | thunderstorm | There was a thunderstorm yesterday.
+warm | тёплый | Весной тепло. | warm, mild | It's warm in spring.
+trocken | сухой | Лето здесь жаркое и сухое. | dry | The summer here is hot and dry.
+das Hobby | хобби, увлечение | Моё хобби — фотография. | hobby | My hobby is photography.
+die Gitarre | гитара | Он играет на гитаре каждый вечер. | guitar | He plays the guitar every evening.
+die Kamera | фотоаппарат, камера | У меня новая камера. | camera | I have a new camera.
+das Konzert | концерт | В субботу мы идём на концерт. | concert | We're going to a concert on Saturday.
+der Film | фильм | Посмотрим сегодня фильм? | film, movie | Shall we watch a film today?
+das Picknick | пикник | Мы устраиваем пикник у озера. | picnic | We're having a picnic by the lake.
+das Bild | картина, фото | На стене висит красивая картина. | picture, painting | There's a beautiful picture on the wall.
+das Schach | шахматы | Мой дедушка любит играть в шахматы. | chess | My grandad likes playing chess.
+tanzen | танцевать | Она очень любит танцевать. | to dance | She loves dancing.
+singen | петь | Мы поём в хоре. | to sing | We sing in a choir.
+schwimmen | плавать | Ты умеешь плавать? | to swim | Can you swim?
+malen | рисовать (красками) | Мой сын любит рисовать животных. | to paint | My son likes painting animals.
+sammeln | собирать, коллекционировать | Он собирает старые монеты. | to collect | He collects old coins.
+sich entspannen | расслабляться, отдыхать | Я отдыхаю за чтением. | to relax | Reading helps me relax.
+die Freizeit | свободное время | Что ты делаешь в свободное время? | free time, leisure | What do you do in your free time?
+die Bank | банк; скамейка | Банк рядом с почтой. | bank; bench | The bank is next to the post office.
+die Post | почта | Мне нужно на почту. | post office | I need to go to the post office.
+das Krankenhaus | больница | Она работает в больнице. | hospital | She works in a hospital.
+die Bibliothek | библиотека | Я занимаюсь в библиотеке. | library | I study in the library.
+das Museum | музей | По понедельникам музей закрыт. | museum | The museum is closed on Mondays.
+die Brücke | мост | Перейди через мост. | bridge | Go across the bridge.
+die Ecke | угол | Кафе на углу. | corner | The café is on the corner.
+der Platz | площадь; место | На площади фонтан. | square; seat, place | There's a fountain in the square.
+die Ampel | светофор | На светофоре поверните налево. | traffic lights | Turn left at the traffic lights.
+abbiegen | поворачивать | После банка поверните направо. | to turn (off) | Turn right after the bank.
+überqueren | переходить | Будь осторожен, когда переходишь улицу. | to cross | Be careful when you cross the street.
+geradeaus | прямо | Идите прямо двести метров. | straight ahead | Go straight ahead for two hundred metres.
+in der Nähe | поблизости, рядом | Здесь поблизости есть аптека? | nearby, near here | Is there a pharmacy near here?
+gegenüber | напротив | Отель напротив вокзала. | opposite | The hotel is opposite the station.
+weit | далёкий, далеко | Аэропорт далеко от города. | far | The airport is far from the city.
+die Speisekarte | меню | Можно мне меню? | menu | Can I have the menu, please?
+der Kellner | официант | Официант приносит суп. | waiter | The waiter brings the soup.
+das Gericht | блюдо; суд | Плов — знаменитое узбекское блюдо. | dish; court | Plov is a famous Uzbek dish.
+das Rezept | рецепт | Дашь мне рецепт торта? | recipe; prescription | Will you give me the recipe for the cake?
+die Suppe | суп | Суп слишком горячий. | soup | The soup is too hot.
+das Salz | соль | Передай мне, пожалуйста, соль. | salt | Pass me the salt, please.
+der Pfeffer | перец | Немного чёрного перца, пожалуйста. | pepper | A little black pepper, please.
+das Messer | нож | Нарежь хлеб ножом. | knife | Cut the bread with the knife.
+die Gabel | вилка | Я ем ножом и вилкой. | fork | I eat with a knife and fork.
+bestellen | заказывать | Хотите сделать заказ сейчас? | to order | Would you like to order now?
+braten | жарить | Жарь лук пять минут. | to fry, to roast | Fry the onions for five minutes.
+backen | печь | Бабушка печёт каждое воскресенье. | to bake | My grandma bakes every Sunday.
+süß | сладкий | Чай слишком сладкий. | sweet | The tea is too sweet.
+scharf | острый | Я не люблю острое. | spicy, hot; sharp | I don't like spicy food.
+frisch | свежий | Мы покупаем свежие фрукты на рынке. | fresh | We buy fresh fruit at the market.
+der Lehrer | учитель | Наш учитель очень милый. | teacher | Our teacher is very nice.
+der Schüler | ученик, школьник | В моём классе тридцать учеников. | pupil, student | There are thirty pupils in my class.
+der Unterricht | урок, занятия | Занятия начинаются в восемь. | lessons, classes | Lessons start at eight.
+die Hausaufgabe | домашнее задание | Ты сделал домашнее задание? | homework | Have you done your homework?
+der Test | тест, контрольная | Завтра у нас контрольная. | test | We have a test tomorrow.
+das Wörterbuch | словарь | Посмотри в словаре. | dictionary | Look it up in the dictionary.
+das Heft | тетрадь | Запиши слова в тетрадь. | exercise book, notebook | Write the words in your exercise book.
+der Fehler | ошибка | Я сделал две ошибки. | mistake, error | I made two mistakes.
+die Frage | вопрос | Можно задать вопрос? | question | May I ask a question?
+die Antwort | ответ | Ты знаешь ответ? | answer | Do you know the answer?
+lernen | учить, учиться | Я учу английский. | to learn, to study | I'm learning English.
+unterrichten | преподавать | Она преподаёт историю. | to teach | She teaches history.
+verstehen | понимать | Я не понимаю это слово. | to understand | I don't understand the word.
+sich erinnern | вспоминать, помнить | Я не помню его имя. | to remember | I can't remember his name.
+leicht | лёгкий | Тест был лёгким. | easy; light | The test was easy.
+der Rock | юбка | На ней длинная юбка. | skirt | She's wearing a long skirt.
+der Pullover | свитер | Бабушка связала этот свитер. | jumper, sweater | My grandma knitted the jumper.
+der Stiefel | сапог | Мне нужны новые зимние сапоги. | boot | I need new winter boots.
+die Socke | носок | Носки тёплые. | sock | The socks are warm.
+der Handschuh | перчатка | Не забудь перчатки! | glove | Don't forget your gloves!
+der Schal | шарф | Холодно, возьми шарф. | scarf | It's cold, take a scarf.
+der Mantel | пальто | Надень пальто. | coat | Put your coat on.
+die Tasche | сумка; карман | Мой ключ в кармане. | bag; pocket | My key is in my pocket.
+die Mode | мода | Она интересуется модой. | fashion | She's interested in fashion.
+die Brille | очки | Он носит очки. | glasses | He wears glasses.
+anziehen | надевать; одеваться | Одевайся теплее! | to put on, to get dressed | Dress warmly!
+ausziehen | снимать; съезжать | Сними, пожалуйста, обувь. | to take off; to move out | Please take your shoes off.
+eng | узкий, тесный | Джинсы слишком узкие. | tight, narrow | The jeans are too tight.
+bequem | удобный | Эти туфли очень удобные. | comfortable | These shoes are very comfortable.
+schön | красивый | Какое красивое платье! | beautiful, nice | What a beautiful dress!
+dünn | худой; тонкий | Он очень худой. | thin | He is very thin.
+dick | толстый | Кошка слишком толстая. | fat; thick | The cat is too fat.
+stark | сильный | Мой отец очень сильный. | strong | My father is very strong.
+freundlich | дружелюбный | Соседи дружелюбные. | friendly | The neighbours are friendly.
+lustig | весёлый, смешной | Он рассказывает смешные истории. | funny | He tells funny stories.
+nett | милый, приятный | Твоя сестра очень милая. | nice, kind | Your sister is very nice.
+schüchtern | застенчивый | Маленькая девочка застенчивая. | shy | The little girl is shy.
+klug | умный | Она умная ученица. | clever, smart | She is a clever pupil.
+faul | ленивый; гнилой | Не будь таким ленивым! | lazy; rotten | Don't be so lazy!
+höflich | вежливый | Он всегда вежлив. | polite | He is always polite.
+der Bart | борода | У моего дяди седая борода. | beard | My uncle has a grey beard.
+blond | светловолосый | Её дочь светловолосая. | blonde, fair-haired | Her daughter is blonde.
+hübsch | хорошенький, симпатичный | Какой симпатичный ребёнок! | pretty | What a pretty child!
+aussehen | выглядеть | Ты выглядишь усталым. | to look (appear) | You look tired.
+der Nachbar | сосед | У нашего соседа большая собака. | neighbour | Our neighbour has a big dog.

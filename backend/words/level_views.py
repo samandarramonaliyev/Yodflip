@@ -10,6 +10,7 @@ from rest_framework.views import APIView
 from . import levels
 from .models import LevelRound
 from .serializers import WordSerializer
+from .translations import apply_translations, resolve
 
 
 def _check(track: str, level: str | None = None) -> None:
@@ -23,6 +24,10 @@ def round_item(w, is_filler: bool) -> dict:
     from games.sources import item_from_word
 
     return {**item_from_word(w), "is_filler": is_filler}
+
+
+def round_items(words, filler_ids: set[int], lang: str) -> list[dict]:
+    return apply_translations([round_item(w, w.id in filler_ids) for w in words], lang)
 
 
 class TrackProgressView(APIView):
@@ -53,6 +58,8 @@ class RoundView(APIView):
             OpenApiParameter("size", int),
             OpenApiParameter("game", str),
             OpenApiParameter("pack", str),
+            OpenApiParameter("translation_lang", str, enum=["uz", "ru", "en", "de"]),
+            OpenApiParameter("direction", str, enum=["forward", "reverse"]),
         ],
         responses={200: dict},
     )
@@ -65,6 +72,8 @@ class RoundView(APIView):
         except ValueError:
             size = 6
         game = request.query_params.get("game", "") or ""
+        qp = request.query_params
+        lang, direction = resolve(track, qp.get("translation_lang"), qp.get("direction"))
         if game == "derdiedas" and track != "de":
             raise ValidationError({"detail": "game_not_available_for_track"})
         rnd = levels.build_round(
@@ -77,7 +86,9 @@ class RoundView(APIView):
                 "level": level,
                 "completed": rnd.completed,
                 "pool_done": rnd.pool_done,
-                "words": [round_item(w, w.id in rnd.filler_ids) for w in rnd.words],
+                "translation_lang": lang,
+                "direction": direction,
+                "words": round_items(rnd.words, rnd.filler_ids, lang),
                 "progress": levels.level_progress(request.user, track, level),
             }
         )

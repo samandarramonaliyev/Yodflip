@@ -32,6 +32,10 @@ Rules:
   otherwise "article" is null.
 - "part_of_speech": noun, verb, adjective, adverb, phrase, etc. (best guess, English labels).
 - "translation_uz": a natural, accurate Uzbek translation of the word in Latin script.
+- "translation_ru": a natural, accurate Russian translation (Cyrillic).
+- "translation_alt": the translation into the OTHER book language: German if the book is English
+  (nouns with der/die/das), English if the book is German.
+- Translations: most common meaning first, at most two short alternatives separated by ", ".
 - Skip page numbers, headings, exercises and example sentences that are not definitions.
 - If the page has no word-definition pairs, return an empty "pairs" list.
 Return ONLY the JSON object."""

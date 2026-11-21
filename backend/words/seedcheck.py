@@ -16,8 +16,14 @@ SEED_DIR = Path(__file__).resolve().parent / "seed"
 FIELDS = ("raw", "pos", "definition", "translation_uz", "example", "example_uz")
 
 
-def check_seed(seed_dir: Path = SEED_DIR) -> tuple[dict[str, dict[str, int]], list[str]]:
-    from words.management.commands.seed_words import parse_file
+def same_as_source(text: str, source: str) -> bool:
+    """An untranslated copy: the translation is exactly the word (ignoring case and spaces).
+    Cognates that differ by an article ("baby" -> "das Baby") are real translations."""
+    return " ".join(text.lower().split()) == " ".join(source.lower().split())
+
+
+def check_seed(seed_dir: Path = SEED_DIR, translations: bool = True) -> tuple[dict[str, dict[str, int]], list[str]]:
+    from words.management.commands.seed_words import other_lang, parse_file, parse_translations
 
     counts: dict[str, dict[str, int]] = {}
     errors: list[str] = []
@@ -37,10 +43,26 @@ def check_seed(seed_dir: Path = SEED_DIR) -> tuple[dict[str, dict[str, int]], li
                 continue
             slugs = Counter(p["slug"] for p in packs)
             errors += [f"{path.name}: duplicate pack slug {s}" for s, n in slugs.items() if n > 1]
+            tr = parse_translations(seed_dir / "translations" / path.name) if translations else {}
+            names = {w["raw"] for p in packs for w in p["words"]}
+            if translations:
+                errors += [f"translations/{path.name}: unknown word {x!r}" for x in tr if x not in names]
             n = 0
             for p in packs:
                 for w in p["words"]:
                     n += 1
+                    if translations:
+                        t = tr.get(w["raw"])
+                        if t is None:
+                            errors.append(f"translations/{path.name}: missing {w['raw']!r}")
+                        else:
+                            texts = {"uz": (w["translation_uz"], w["example_uz"]), **t}
+                            for lang in ("uz", "ru", other_lang(track)):
+                                text, example = texts[lang]
+                                if not text or not example:
+                                    errors.append(f"{path.name}: {w['raw']!r} has an empty {lang} translation/example")
+                                elif same_as_source(text, w["raw"]):
+                                    errors.append(f"{path.name}: {w['raw']!r} {lang} translation equals the word")
                     empty = [f for f in FIELDS if not w[f].strip()]
                     if empty:
                         errors.append(f"{path.name}: {w['raw']!r} has empty {', '.join(empty)}")

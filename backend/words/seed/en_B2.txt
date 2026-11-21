@@ -89,7 +89,7 @@ laboratory | noun | a room where scientists do tests | laboratoriya | She works 
 discovery | noun | finding something that was not known before | kashfiyot | The discovery changed medicine. | Bu kashfiyot tibbiyotni o'zgartirdi.
 theory | noun | an idea that tries to explain something | nazariya | Einstein's theory of relativity is famous. | Eynshteynning nisbiylik nazariyasi mashhur.
 data | noun | facts and numbers collected for study | ma'lumotlar | We need more data. | Bizga ko'proq ma'lumot kerak.
-robot | noun | a machine that can do tasks automatically | robot | Robots build cars in this factory. | Bu zavodda mashinalarni robotlar yig'adi.
+robot | noun | a machine that can do tasks automatically | robot, avtomat | Robots build cars in this factory. | Bu zavodda mashinalarni robotlar yig'adi.
 artificial intelligence | noun | computer systems that can think and learn like humans | sun'iy intellekt | Artificial intelligence is changing many jobs. | Sun'iy intellekt ko'plab kasblarni o'zgartirmoqda.
 engineer | noun | a person who designs machines, roads or buildings | muhandis | My sister is a civil engineer. | Opam qurilish muhandisi.
 satellite | noun | a machine sent into space that moves around the Earth | sun'iy yo'ldosh | The satellite sends TV signals. | Sun'iy yo'ldosh televizion signal uzatadi.

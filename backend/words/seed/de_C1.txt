@@ -135,7 +135,7 @@ die Erkenntnis | noun | ein neues Wissen, das man gewonnen hat | xulosa, bilim |
 das Gutachten | noun | eine Bewertung durch Experten | ekspert xulosasi | Das Gutachten liegt noch nicht vor. | Ekspert xulosasi hali tayyor emas.
 die Abweichung | noun | ein Unterschied zum Normalen | og'ish, farq | Die Daten zeigten eine Abweichung. | Ma'lumotlar og'ishni ko'rsatdi.
 das Kriterium | noun | ein Maßstab, nach dem man urteilt | mezon | Was ist das wichtigste Kriterium? | Eng muhim mezon nima?
-das Paradigma | noun | ein Denkmodell | paradigma | Die Entdeckung veränderte das Paradigma. | Kashfiyot paradigmani o'zgartirdi.
+das Paradigma | noun | ein Denkmodell | paradigma, namuna | Die Entdeckung veränderte das Paradigma. | Kashfiyot paradigmani o'zgartirdi.
 empirisch | adjective | auf Beobachtung und Experiment beruhend | empirik | Wir brauchen empirische Belege. | Bizga empirik dalillar kerak.
 qualitativ | adjective | die Qualität betreffend | sifatiy | Sie führten qualitative Interviews. | Ular sifatiy intervyular o'tkazishdi.
 quantitativ | adjective | die Menge betreffend | miqdoriy | Das ist eine quantitative Studie. | Bu miqdoriy tadqiqot.

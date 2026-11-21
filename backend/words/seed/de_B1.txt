@@ -93,7 +93,7 @@ die Band | noun | eine Gruppe von Musikern | musiqiy guruh | Mein Bruder spielt 
 das Lied | noun | ein kurzes Musikstück mit Text | qo'shiq | Das Lied ist sehr bekannt. | Bu qo'shiq juda mashhur.
 die Ausstellung | noun | eine öffentliche Präsentation von Kunst oder Dingen | ko'rgazma | Wir besuchen eine Fotoausstellung. | Biz foto ko'rgazmaga boramiz.
 der Künstler | noun | eine Person, die Kunst macht | rassom, san'atkor | Der Künstler hat mein Porträt gemalt. | Rassom mening portretimni chizdi.
-der Roman | noun | eine lange erzählte Geschichte in einem Buch | roman | Ich lese einen Roman von Tolstoi. | Tolstoyning romanini o'qiyapman.
+der Roman | noun | eine lange erzählte Geschichte in einem Buch | roman, badiiy asar | Ich lese einen Roman von Tolstoi. | Tolstoyning romanini o'qiyapman.
 die Figur | noun | eine Person in einer Geschichte; auch: Körperform | qahramon, personaj; qomat | Die Hauptfigur ist ein junges Mädchen. | Bosh qahramon yosh qiz.
 die Handlung | noun | was in einem Film oder Buch passiert | syujet, voqealar | Die Handlung des Films war langweilig. | Filmning syujeti zerikarli edi.
 die Szene | noun | ein Teil eines Films oder Theaterstücks | sahna, epizod | Die letzte Szene war sehr traurig. | Oxirgi sahna juda g'amgin edi.
@@ -112,7 +112,7 @@ der Trainer | noun | eine Person, die ein Team trainiert | murabbiy | Der Traine
 der Spieler | noun | eine Person, die bei einem Spiel mitmacht | o'yinchi | Er ist der beste Spieler im Team. | U jamoadagi eng yaxshi o'yinchi.
 der Wettbewerb | noun | eine Veranstaltung, bei der man gewinnen will | musobaqa, tanlov | Sie hat einen Schwimmwettbewerb gewonnen. | U suzish musobaqasida g'olib bo'ldi.
 das Ergebnis | noun | wie ein Spiel endet; auch: Resultat | natija, hisob | Wie ist das Ergebnis? | Hisob qanday?
-das Stadion | noun | ein großer Ort für Sportveranstaltungen | stadion | Das Stadion war voll. | Stadion to'la edi.
+das Stadion | noun | ein großer Ort für Sportveranstaltungen | stadion, sport maydoni | Das Stadion war voll. | Stadion to'la edi.
 das Fitnessstudio | noun | ein Ort mit Geräten für Sport | sport zali | Ich gehe dreimal pro Woche ins Fitnessstudio. | Haftada uch marta sport zaliga boraman.
 das Tor | noun | ein Punkt im Fußball; auch: großer Eingang | gol; darvoza | Er hat ein tolles Tor geschossen. | U ajoyib gol urdi.
 die Medaille | noun | ein rundes Stück Metall als Preis | medal | Sie hat eine Goldmedaille gewonnen. | U oltin medal yutdi.
@@ -129,7 +129,7 @@ das Rennen | noun | ein Wettkampf, wer am schnellsten ist | poyga | Er wurde Zwe
 ## lebensstil | 🥗 | Health & Lifestyle | Salomatlik va turmush tarzi | Здоровье и образ жизни
 die Ernährung | noun | was und wie man isst | ovqatlanish | Eine gesunde Ernährung ist wichtig. | Sog'lom ovqatlanish muhim.
 die Gewohnheit | noun | etwas, das man oft und regelmäßig tut | odat | Rauchen ist eine schlechte Gewohnheit. | Chekish yomon odat.
-der Stress | noun | ein Gefühl von Druck wegen Problemen oder Arbeit | stress | Sport hilft gegen Stress. | Sport stressga qarshi yordam beradi.
+der Stress | noun | ein Gefühl von Druck wegen Problemen oder Arbeit | stress, ruhiy zo'riqish | Sport hilft gegen Stress. | Sport stressga qarshi yordam beradi.
 die Energie | noun | die Kraft, aktiv zu sein | energiya, kuch-quvvat | Heute habe ich keine Energie. | Bugun hech kuchim yo'q.
 das Gewicht | noun | wie schwer jemand oder etwas ist | vazn, og'irlik | Er möchte Gewicht verlieren. | U vazn yo'qotmoqchi.
 die Verletzung | noun | ein Schaden am Körper, z. B. nach einem Unfall | jarohat | Er hat eine Knieverletzung. | Uning tizzasida jarohat bor.
@@ -145,7 +145,7 @@ regelmäßig | adjective | immer wieder zur gleichen Zeit | muntazam | Regelmä�
 ausgewogen | adjective | mit den richtigen Mengen von allem | muvozanatli | Iss ausgewogen! | Muvozanatli ovqatlan!
 aktiv | adjective | viel in Bewegung | faol, harakatchan | Meine Oma ist noch sehr aktiv. | Buvim hali ham juda harakatchan.
 ungesund | adjective | schlecht für die Gesundheit | zararli, nosog'lom | Fast Food ist ungesund. | Fast fud zararli.
-das Vitamin | noun | ein natürlicher Stoff im Essen, der gesund hält | vitamin | Orangen haben viel Vitamin C. | Apelsinda S vitamini ko'p.
+das Vitamin | noun | ein natürlicher Stoff im Essen, der gesund hält | vitamin, darmondori | Orangen haben viel Vitamin C. | Apelsinda S vitamini ko'p.
 der Schlaf | noun | der Zustand der Ruhe in der Nacht | uyqu | Du brauchst acht Stunden Schlaf. | Senga sakkiz soat uyqu kerak.
 ## haushalt | 🏠 | Home & Housing | Uy-joy | Жильё
 der Vermieter | noun | eine Person, die eine Wohnung vermietet | uy egasi (ijaraga beruvchi) | Der Vermieter will mehr Geld. | Uy egasi ko'proq pul so'rayapti.
@@ -153,7 +153,7 @@ die Möbel | noun | Tische, Stühle, Betten und andere Dinge in der Wohnung | me
 der Stock | noun | eine Etage in einem Gebäude; auch: Stab aus Holz | qavat; tayoq | Wir wohnen im fünften Stock. | Biz beshinchi qavatda yashaymiz.
 das Dach | noun | der obere Teil eines Hauses | tom | Das Dach muss repariert werden. | Tomni ta'mirlash kerak.
 die Treppe | noun | Stufen von einer Etage zur anderen | zinapoya | Nimm die Treppe, der Aufzug ist kaputt. | Zinadan chiq, lift buzuq.
-der Balkon | noun | ein kleiner Platz außen an einer Wohnung | balkon | Wir trinken Tee auf dem Balkon. | Biz balkonda choy ichamiz.
+der Balkon | noun | ein kleiner Platz außen an einer Wohnung | balkon, ayvon | Wir trinken Tee auf dem Balkon. | Biz balkonda choy ichamiz.
 die Heizung | noun | das System, das ein Haus warm macht | isitish tizimi | Die Heizung funktioniert nicht. | Isitish ishlamayapti.
 der Aufzug | noun | eine Maschine, die Menschen nach oben und unten fährt | lift | Der Aufzug ist außer Betrieb. | Lift ishlamayapti.
 umziehen | verb | in eine andere Wohnung gehen | ko'chmoq | Wir sind letztes Jahr umgezogen. | O'tgan yili ko'chib o'tdik.

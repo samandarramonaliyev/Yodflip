@@ -7,7 +7,7 @@ das Budget | noun | der Plan, wie viel Geld man ausgeben kann | byudjet | Unser 
 die Konkurrenz | noun | andere Firmen, die dieselben Waren anbieten | raqobat, raqobatchilar | Die Konkurrenz hat die Preise gesenkt. | Raqobatchilar narxlarni tushirishdi.
 einführen | verb | ein neues Produkt auf den Markt bringen oder etwas Neues beginnen | joriy etmoq, chiqarmoq | Die Firma führt ein neues Handy ein. | Firma yangi telefon chiqarmoqda.
 der Umsatz | noun | der Gesamtwert aller verkauften Waren in einer Zeit | savdo hajmi, tushum | Der Umsatz ist um 20 Prozent gestiegen. | Savdo hajmi 20 foizga oshdi.
-der Kredit | noun | Geld, das man von einer Bank leiht | kredit | Er hat einen Kredit aufgenommen. | U kredit oldi.
+der Kredit | noun | Geld, das man von einer Bank leiht | kredit, qarz | Er hat einen Kredit aufgenommen. | U kredit oldi.
 die Schulden | noun | Geld, das man jemandem zurückzahlen muss (Plural) | qarzlar | Sie haben alle Schulden bezahlt. | Ular barcha qarzlarini to'lashdi.
 sich leisten | verb | genug Geld für etwas haben | qurbi yetmoq | Wir können uns kein neues Auto leisten. | Yangi mashinaga qurbimiz yetmaydi.
 der Engpass | noun | ein Mangel: es gibt weniger von etwas, als man braucht | tanqislik, taqchillik | Wegen des Engpasses steigen die Preise. | Tanqislik tufayli narxlar oshmoqda.
@@ -174,7 +174,7 @@ die Galerie | noun | ein Ort, wo Kunst gezeigt wird | galereya | Wir besuchen di
 das Handwerk | noun | die Arbeit, Dinge mit der Hand herzustellen | hunarmandchilik | Töpferei ist ein traditionelles Handwerk. | Kulolchilik an'anaviy hunarmandchilik.
 der Autor | noun | eine Person, die ein Buch schreibt | muallif | Wer ist der Autor dieses Romans? | Bu romanning muallifi kim?
 das Theater | noun | ein Gebäude, in dem Stücke gespielt werden | teatr | Wir waren gestern im Theater. | Kecha teatrda edik.
-das Festival | noun | eine Veranstaltung mit Musik, Filmen oder Feiern | festival | Das Musikfestival dauert drei Tage. | Musiqa festivali uch kun davom etadi.
+das Festival | noun | eine Veranstaltung mit Musik, Filmen oder Feiern | festival, bayram | Das Musikfestival dauert drei Tage. | Musiqa festivali uch kun davom etadi.
 erschaffen | verb | etwas Neues herstellen, besonders Kunst | yaratmoq | Sie erschafft wunderschöne Bilder. | U ajoyib rasmlar yaratadi.
 ausdrücken | verb | ein Gefühl oder eine Meinung zeigen | ifodalamoq | Musik hilft mir, meine Gefühle auszudrücken. | Musiqa his-tuyg'ularimni ifodalashga yordam beradi.
 inspirieren | verb | jemandem Ideen oder Lust zum Schaffen geben | ilhomlantirmoq | Die Natur inspiriert viele Künstler. | Tabiat ko'plab rassomlarni ilhomlantiradi.

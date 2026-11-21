@@ -1,3 +1,4 @@
+import { LANG_META } from '../lib/translation'
 import { Flame, LogOut, Moon, Send, Star, Sun, Target, Trophy } from 'lucide-react'
 import { useEffect, useRef, useState, type FormEvent } from 'react'
 import { Link } from 'react-router-dom'
@@ -141,6 +142,11 @@ export default function Profile() {
               <div className="text-xs text-muted">{t('res.accuracy')}</div>
             </div>
           </section>
+          {d.translation_langs && d.translation_langs.length > 0 && (
+            <p className="card px-4 py-3 text-sm font-bold" data-testid="played-in">
+              🌐 {t('profile.played_in')}: {d.translation_langs.map((r) => `${LANG_META[r.lang].short} ${r.percent}%`).join(', ')}
+            </p>
+          )}
           <section className="grid gap-3 md:grid-cols-[2fr_1fr]">
             <div className="card min-w-0 p-4">
               <XpChart data={d.chart} />

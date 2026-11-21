@@ -365,5 +365,19 @@
   "level.rule": "Har bir so'z birinchi to'g'ri javobda o'rganilgan hisoblanadi. Keyingi darajani ochish uchun 70% kerak.",
   "level.found_list": "Topilgan so'zlar ({n})",
   "ach.level_complete": "Daraja yakunlandi",
-  "ach.level_complete_desc": "Darajaning barcha so'zlarini toping"
+  "ach.level_complete_desc": "Darajaning barcha so'zlarini toping",
+  "tr.title": "Qaysi tilga tarjima qilinsin?",
+  "tr.word": "So'z",
+  "tr.translation": "Tarjima",
+  "tr.direction": "Yo'nalish",
+  "tr.remember": "Tanlovimni eslab qol",
+  "tr.unavailable": "Tarjima mavjud emas",
+  "tr.ui_note": "Ilova tili sozlamalarda alohida o'zgaradi",
+  "tr.setup_hint": "Tarjima tili va yo'nalishi boshlashdan oldin so'raladi.",
+  "tr.tabs": "Tarjima tillari",
+  "decks.translation_lang": "Tarjima tili",
+  "decks.translation_lang_hint": "Kartalardagi tarjimalar shu tilda yoziladi. O'yinlar avtomatik shu tilda bo'ladi.",
+  "decks.ai_translate": "AI bilan tarjima qilish",
+  "decks.ai_done": "{lang} tarjimalari qo'shildi",
+  "profile.played_in": "O'ynalgan tillar"
 }
