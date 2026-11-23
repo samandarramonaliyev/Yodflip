@@ -112,7 +112,9 @@ def take_due_reminders(limit: int = 500) -> list[dict]:
     users = list(
         User.objects.filter(telegram_id__isnull=False, reminder_time__isnull=False, reminder_time__lte=now.time())
         .exclude(last_active_date=day)
-        .exclude(last_reminder_date=day)[:limit]
+        .exclude(last_reminder_date=day)
+        .exclude(quiz_settings__last_sent_at__date=day)  # the quiz already reminded them
+        .exclude(quiz_settings__bot_blocked=True)[:limit]
     )
     User.objects.filter(pk__in=[u.pk for u in users]).update(last_reminder_date=day)
     return [

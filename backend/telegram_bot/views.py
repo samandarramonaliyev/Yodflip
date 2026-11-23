@@ -7,6 +7,7 @@ from django.http import HttpResponse, HttpResponseForbidden, JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.http import require_http_methods, require_POST
 
+from botquiz.sender import send_due_quizzes
 from duels.services import expire_due
 
 from . import services
@@ -41,14 +42,7 @@ def _client_ip(request) -> str:
     return fwd.split(",")[0].strip() if fwd else request.META.get("REMOTE_ADDR", "")
 
 
-@csrf_exempt
-@require_http_methods(["GET", "POST"])
-def cron(request, secret: str):
-    """Send due daily reminders. Call every 5–15 min from an external scheduler (e.g. cron-job.org).
-
-    URL: /bot/cron/<BOT_CRON_SECRET>/ (trailing slash optional). Also keeps a free Render service awake.
-    No CSRF, no auth, no throttling: the secret in the path is the only check.
-    """
+def _cron_allowed(request, secret: str) -> bool:
     if not services.cron_secret_matches(secret):
         # Log why, never the secret itself.
         log.warning(
@@ -58,6 +52,19 @@ def cron(request, secret: str):
             len(services.cron_secret()),
             _client_ip(request),
         )
+        return False
+    return True
+
+
+@csrf_exempt
+@require_http_methods(["GET", "POST"])
+def cron(request, secret: str):
+    """Send due daily reminders. Call every 5–15 min from an external scheduler (e.g. cron-job.org).
+
+    URL: /bot/cron/<BOT_CRON_SECRET>/ (trailing slash optional). Also keeps a free Render service awake.
+    No CSRF, no auth, no throttling: the secret in the path is the only check.
+    """
+    if not _cron_allowed(request, secret):
         return HttpResponseForbidden("forbidden")
     if not settings.TELEGRAM_BOT_TOKEN:
         return JsonResponse({"ok": True, "sent": 0, "detail": "bot_disabled"})
@@ -65,3 +72,18 @@ def cron(request, secret: str):
     users = services.take_due_reminders()
     sent = send_reminders(users)
     return JsonResponse({"ok": True, "due": len(users), "sent": sent})
+
+
+@csrf_exempt
+@require_http_methods(["GET", "POST"])
+def cron_quiz(request, secret: str):
+    """Send the in-chat quiz to users whose chosen hour is now. Call every hour (0 * * * *).
+
+    Safe to call more often: every user gets at most one quiz per day.
+    """
+    if not _cron_allowed(request, secret):
+        return HttpResponseForbidden("forbidden")
+    expire_due()
+    if not settings.TELEGRAM_BOT_TOKEN:
+        return JsonResponse({"ok": True, "sent": 0, "detail": "bot_disabled"})
+    return JsonResponse({"ok": True, **send_due_quizzes()})

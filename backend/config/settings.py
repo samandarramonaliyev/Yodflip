@@ -74,6 +74,7 @@ INSTALLED_APPS = [
     "gamification",
     "telegram_bot",
     "duels",
+    "botquiz",
 ]
 
 MIDDLEWARE = [
@@ -223,6 +224,8 @@ TELEGRAM_BOT_TOKEN = env("TELEGRAM_BOT_TOKEN")
 TELEGRAM_BOT_USERNAME = env("TELEGRAM_BOT_USERNAME").lstrip("@")
 # Mini App short name (BotFather /newapp) for t.me/<bot>/<app>?startapp=... links. Optional.
 TELEGRAM_APP_SHORT_NAME = env("TELEGRAM_APP_SHORT_NAME")
+# How long the bot quiz shows ✅/❌ before the next question.
+QUIZ_FEEDBACK_SECONDS = float(env("QUIZ_FEEDBACK_SECONDS", "1.5"))
 # Webhook path secret / Telegram secret_token and the reminder-cron path secret. Optional:
 # derived from SECRET_KEY when empty (see telegram_bot.services).
 TELEGRAM_WEBHOOK_SECRET = env("TELEGRAM_WEBHOOK_SECRET")

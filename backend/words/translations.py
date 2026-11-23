@@ -9,7 +9,9 @@ from __future__ import annotations
 
 from rest_framework.exceptions import ValidationError
 
-from .models import TRANSLATION_LANGS, WordTranslation
+from .models import TRANSLATION_LANGS, WordTranslation, allowed_translation_langs
+
+__all__ = ["DIRECTIONS", "allowed_translation_langs", "apply_translations", "available_langs", "resolve"]
 
 DIRECTIONS = ("forward", "reverse")
 

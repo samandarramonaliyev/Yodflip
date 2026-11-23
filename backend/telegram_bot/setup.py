@@ -14,6 +14,7 @@ log = logging.getLogger(__name__)
 COMMANDS = [
     {"command": "start", "description": "Open Yodflip"},
     {"command": "daily", "description": "Today's challenge"},
+    {"command": "quiz", "description": "Quick quiz in the chat (/quiz settings)"},
     {"command": "duel", "description": "Challenge a friend"},
     {"command": "stats", "description": "My progress"},
     {"command": "review", "description": "Words due for review"},
@@ -44,7 +45,7 @@ def configure_telegram(client: httpx.Client | None = None) -> bool:
             json={
                 "url": url,
                 "secret_token": services.webhook_secret(),
-                "allowed_updates": ["message"],
+                "allowed_updates": ["message", "callback_query"],
                 "max_connections": 20,
             },
         )

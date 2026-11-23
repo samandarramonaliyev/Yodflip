@@ -4,6 +4,7 @@ import { useEffect, useRef, useState, type FormEvent } from 'react'
 import { Link } from 'react-router-dom'
 import { TrackSwitch } from '../components/Layout'
 import { DuelStatsCard } from '../components/DuelStatsCard'
+import { QuizSettingsCard } from '../components/QuizSettingsCard'
 import { WordListsSection } from '../components/WordListsSection'
 import { XpChart } from '../components/XpChart'
 import { Avatar, ErrorState, ProgressBar, Segmented, Skeleton, Toggle, toast } from '../components/ui'
@@ -188,6 +189,8 @@ export default function Profile() {
           ))}
         </div>
       </section>
+
+      <QuizSettingsCard linked={user.is_telegram_linked} />
 
       <section className="card space-y-4 p-4">
         <h2 className="h2">{t('profile.settings')}</h2>

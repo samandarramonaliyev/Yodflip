@@ -15,11 +15,13 @@ from asgiref.sync import async_to_sync
 from django.conf import settings
 
 from .handlers import open_button, router
+from .quiz_handlers import router as quiz_router
 from .texts import t
 
 log = logging.getLogger(__name__)
 
 dispatcher = Dispatcher()
+dispatcher.include_router(quiz_router)
 dispatcher.include_router(router)
 
 

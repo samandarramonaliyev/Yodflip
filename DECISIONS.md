@@ -154,3 +154,16 @@ Everything that was not fully specified, and what was chosen.
 - **Referral**: `User.invited_by`, set only when the account is created: signed `start_param`, or `duel_code` sent with webapp / widget / email registration from a duel page.
 - Sharing uses `t.me/share/url` (works without inline mode). `TELEGRAM_APP_SHORT_NAME` empty → the link falls back to `t.me/<bot>?start=duel_<code>` and the bot answers with a Web App button.
 - Group duels (optional in the task) are not built.
+
+## In-chat bot quiz
+- App `botquiz`: `QuizSettings` (one per user, created lazily), `QuizSession` (questions and answers stay on the server). Buttons: `qs:<sid>`, `ql:<sid>`, `qx`, `qm:<0|1>`, `qa:<sid>:<index>:<option>`, `qc:<setting>:<value>` (all < 64 bytes). The webhook now also subscribes to `callback_query`.
+- **On by default** for every Telegram user (19:00 Asia/Tashkent, 8 questions); one tap on 🔕 turns it off.
+- **Schedule**: `/bot/cron/<BOT_CRON_SECRET>/quiz/` every hour. A user is due when the hour in their timezone equals their chosen hour, the day is not quiet, they haven't played today and nothing was sent on their local date. The day is claimed with one conditional UPDATE before sending, so overlapping or repeated calls never send twice.
+- **Errors**: 429 → wait `retry_after` and retry (max 3, inside a 24 s budget; otherwise the claim is released for the next call); 403 → `bot_blocked` until the user writes /start or /quiz; any other error keeps the claim, because the message may have been delivered. About 25 messages/s × 24 s ≈ 600 per call; with more users call the URL several times per hour (it is safe).
+- "Played today" is the streak date (server timezone), the same date the app uses.
+- The plain reminder is skipped on a day a quiz was sent, and for users who blocked the bot.
+- **Words**: due → want to learn → missed → new words of the current open level (profile level if open and unfinished, else the first unfinished one). Words already learned (box 5) are not asked from the want list. Deck / scanned words without the quiz language are left out. Forward and reverse questions alternate; about 30% of German nouns ask for the article.
+- **Answers** use the shared `apply_answer`: found = learned for unfound built-in words, otherwise a Leitner step. Every answer is saved at once; XP (review rates), streak and activity when the quiz is finished.
+- **Stale**: a session older than 24 h or unknown → "Bu savol eskirgan" + a new-quiz button in the same message. A second press on an answered question only shows the toast, so the running quiz isn't replaced.
+- The 1.5 s ✅/❌ pause (`QUIZ_FEEDBACK_SECONDS`) happens inside the webhook request (there is no worker); it occupies one of 8 gunicorn threads.
+- `/quiz` starts at once; `/quiz settings` opens the settings menu, `/quiz on|off` switches it. The timezone is changed in the app profile.

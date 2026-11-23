@@ -450,5 +450,17 @@
   "ach.duel_wins_10": "10 Wins",
   "ach.duel_wins_10_desc": "Win 10 duels",
   "ach.invited_5": "Invited 5 Friends",
-  "ach.invited_5_desc": "Invite 5 friends through duels"
+  "ach.invited_5_desc": "Invite 5 friends through duels",
+  "quiz.title": "Daily quiz in the bot",
+  "quiz.hint": "At the chosen hour the bot sends a short quiz in the chat (if you haven't played that day).",
+  "quiz.blocked": "The bot is blocked. Send /start to the bot.",
+  "quiz.enabled": "Send the quiz",
+  "quiz.hour": "Time",
+  "quiz.timezone": "Timezone",
+  "quiz.count": "Number of questions",
+  "quiz.lang": "Translation language",
+  "quiz.lang_auto": "As in the app",
+  "quiz.quiet": "Quiet days (no quiz)",
+  "quiz.days": "Mo Tu We Th Fr Sa Su",
+  "quiz.bot_hint": "Type /quiz in the bot at any time. Settings: /quiz settings"
 }

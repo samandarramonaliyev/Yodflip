@@ -450,5 +450,17 @@
   "ach.duel_wins_10": "10 ta g'alaba",
   "ach.duel_wins_10_desc": "10 ta duelda g'olib bo'ling",
   "ach.invited_5": "5 ta do'st",
-  "ach.invited_5_desc": "Duel orqali 5 ta do'st taklif qiling"
+  "ach.invited_5_desc": "Duel orqali 5 ta do'st taklif qiling",
+  "quiz.title": "Botdagi kunlik viktorina",
+  "quiz.hint": "Bot tanlangan soatda chatda qisqa viktorina yuboradi (o'sha kuni o'ynamagan bo'lsangiz).",
+  "quiz.blocked": "Bot bloklangan. Botga /start yuboring.",
+  "quiz.enabled": "Viktorina yuborilsin",
+  "quiz.hour": "Vaqt",
+  "quiz.timezone": "Vaqt mintaqasi",
+  "quiz.count": "Savollar soni",
+  "quiz.lang": "Tarjima tili",
+  "quiz.lang_auto": "Ilovadagidek",
+  "quiz.quiet": "Dam olish kunlari (viktorinasiz)",
+  "quiz.days": "Du Se Ch Pa Ju Sh Ya",
+  "quiz.bot_hint": "Istalgan payt botda /quiz deb yozing. Sozlamalar: /quiz settings"
 }

@@ -168,6 +168,7 @@ def test_configure_telegram_sets_webhook(bot_settings):
         "start",
         "daily",
         "duel",
+        "quiz",
         "stats",
         "review",
         "remind",

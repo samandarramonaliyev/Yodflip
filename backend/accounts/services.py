@@ -59,6 +59,10 @@ def merge_users(keep: User, drop: User) -> User:
         if not DuelParticipant.objects.filter(duel=p.duel, user=keep).exists():
             p.user = keep
             p.save(update_fields=["user"])
+    if hasattr(drop, "quiz_settings") and not hasattr(keep, "quiz_settings"):
+        conf = drop.quiz_settings
+        conf.user = keep
+        conf.save(update_fields=["user"])
     User.objects.filter(invited_by=drop).exclude(pk=keep.pk).update(invited_by=keep)
     keep.xp += drop.xp
     keep.best_streak = max(keep.best_streak, drop.best_streak)
