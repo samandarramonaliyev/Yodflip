@@ -179,6 +179,22 @@ Har soatda chaqirilishi shart: har bir foydalanuvchi o'z soatini tanlaydi. Ko'pr
 
 Eslatma manzili: `https://<xizmat>.onrender.com/bot/cron/<BOT_CRON_SECRET>/`. Bu yerda `BOT_CRON_SECRET` Render → Environment bo'limidagi qiymat (o'zingiz ham kiritishingiz mumkin). Render Shell'da `cd backend && python manage.py telegram_setup` buyrug'i aniq manzilni chiqaradi. [cron-job.org](https://cron-job.org) saytida shu URL'ni **har 10 daqiqada** chaqiradigan cronjob yarating. Bu eslatmalarni yuboradi va bepul xizmatni "uyg'oq" saqlaydi.
 
+### 6. Sifatli talaffuz (Google Cloud Text-to-Speech)
+
+1. [console.cloud.google.com](https://console.cloud.google.com) → **New project** (masalan, `yodflip`). **Billing** ni ulang (bepul oylik limit bor; narx va limitni [rasmiy sahifada](https://cloud.google.com/text-to-speech/pricing) tekshiring). **Billing → Budgets & alerts** da ogohlantirish qo'ying.
+2. **APIs & Services → Library** → "Cloud Text-to-Speech API" → **Enable**.
+3. **IAM & Admin → Service Accounts → Create** (nom: `tts`, rol kerak emas) → akkaunt → **Keys → Add key → JSON**. Fayl yuklanadi — uni hech kimga bermang, git'ga qo'shmang.
+4. Render → **Environment** → `GOOGLE_TTS_CREDENTIALS_JSON` = fayl matnini **to'liq** qo'ying → Save.
+5. Audiolarni bir marta tayyorlang (o'z kompyuteringizda; Render bepul tarifida Shell yo'q):
+   - `.env` ga `GOOGLE_TTS_CREDENTIALS_JSON='{...bitta qatorda...}'` yozing;
+   - `cd backend && python manage.py migrate && python manage.py seed_words && python manage.py seed_exams`
+   - `python manage.py generate_tts --dry-run` (nechta fayl va belgi), keyin `python manage.py generate_tts`. To'xtab qolsa, qayta ishga tushiring — davom etadi. Qo'shimcha: `--slow`, `--voices all`, `--lang de`, `--no-examples`.
+   - `git add backend/tts_audio && git commit -m "TTS audio" && git push`. (`S3_*` o'rnatilgan bo'lsa, fayllar bucketga yuklanadi va commit kerak emas.)
+   - Bu qadam ixtiyoriy: qilinmasa, audio birinchi tinglashda yaratilib, bazada saqlanadi.
+6. Tekshirish: `https://<xizmat>.onrender.com/admin/tts-check/` (admin).
+
+Azure: `TTS_PROVIDER=azure`, `AZURE_TTS_KEY`, `AZURE_TTS_REGION`. Kalit bo'lmasa, brauzer ovozi ishlaydi.
+
 ### Yangilash
 
 - **Kod:** `git push`. Render `build.sh` ni qayta bajaradi (migratsiyalar ham shu yerda).

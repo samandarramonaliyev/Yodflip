@@ -16,7 +16,7 @@ import {
 } from 'lucide-react'
 import { useRef, useState, type FormEvent } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
-import { SpeakButton } from '../components/WordActions'
+import { SpeakButton } from '../components/SpeakButton'
 import { EmptyState, ErrorState, ListSkeleton, Sheet, Spinner, Toggle, toast } from '../components/ui'
 import { GAMES } from '../games/catalog'
 import { isAvailable, modeFor } from '../games/direction'

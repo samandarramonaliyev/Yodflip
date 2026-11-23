@@ -76,6 +76,7 @@ INSTALLED_APPS = [
     "duels",
     "botquiz",
     "exams",
+    "tts",
 ]
 
 MIDDLEWARE = [
@@ -140,6 +141,9 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # --- Static files, the React build and media ---------------------------------
 STATIC_URL = "static/"
 STATIC_ROOT = BASE_DIR / "staticfiles"
+# Pre-generated speech (manage.py generate_tts), served as /static/tts/<sha256>.mp3
+TTS_STATIC_DIR = BASE_DIR / "tts_audio"
+STATICFILES_DIRS = [("tts", TTS_STATIC_DIR)] if TTS_STATIC_DIR.exists() else []
 # The built React app (frontend/dist). Whitenoise serves its files at the site root
 # (/assets/..., /favicon.svg); core.views.spa serves index.html for client-side routes.
 FRONTEND_DIST = Path(env("FRONTEND_DIST", str(BASE_DIR.parent / "frontend" / "dist")))  # built by build.sh
@@ -149,7 +153,7 @@ WHITENOISE_MAX_AGE = 3600
 
 def _immutable_file_test(path: str, url: str) -> bool:
     # Vite emits content-hashed files under /assets/ -> cache forever.
-    return url.startswith("/assets/")
+    return url.startswith(("/assets/", "/static/tts/"))  # both are content-addressed
 
 
 WHITENOISE_IMMUTABLE_FILE_TEST = _immutable_file_test
@@ -227,6 +231,19 @@ TELEGRAM_BOT_USERNAME = env("TELEGRAM_BOT_USERNAME").lstrip("@")
 TELEGRAM_APP_SHORT_NAME = env("TELEGRAM_APP_SHORT_NAME")
 # How long the bot quiz shows ✅/❌ before the next question.
 QUIZ_FEEDBACK_SECONDS = float(env("QUIZ_FEEDBACK_SECONDS", "1.5"))
+# Neural text-to-speech. Without credentials the app uses the browser voice.
+TTS_PROVIDER = env("TTS_PROVIDER", "google")
+GOOGLE_TTS_CREDENTIALS_JSON = env("GOOGLE_TTS_CREDENTIALS_JSON")
+AZURE_TTS_KEY = env("AZURE_TTS_KEY")
+AZURE_TTS_REGION = env("AZURE_TTS_REGION")
+TTS_DAILY_LIMIT = int(env("TTS_DAILY_LIMIT", "200"))  # new audios per user and day
+# Optional S3-compatible bucket for the audio (R2, B2, AWS...)
+S3_ENDPOINT_URL = env("S3_ENDPOINT_URL")
+S3_BUCKET = env("S3_BUCKET")
+S3_REGION = env("S3_REGION", "auto")
+S3_ACCESS_KEY_ID = env("S3_ACCESS_KEY_ID")
+S3_SECRET_ACCESS_KEY = env("S3_SECRET_ACCESS_KEY")
+S3_PUBLIC_URL = env("S3_PUBLIC_URL")
 # Webhook path secret / Telegram secret_token and the reminder-cron path secret. Optional:
 # derived from SECRET_KEY when empty (see telegram_bot.services).
 TELEGRAM_WEBHOOK_SECRET = env("TELEGRAM_WEBHOOK_SECRET")

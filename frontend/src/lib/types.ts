@@ -212,4 +212,6 @@ export interface PublicConfig {
   telegram_mock: boolean
   ocr_mock: boolean
   ocr_daily_limit: number
+  /** Neural TTS is configured on the server */
+  tts?: boolean
 }

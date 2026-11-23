@@ -4,9 +4,12 @@ from django.urls import include, path, re_path
 from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView
 
 from core import views as core_views
+from tts import views as tts_views
 from words.views import MyWordsView
 
 urlpatterns = [
+    path("admin/tts-check/", tts_views.check, name="tts-check"),
+    path("admin/tts-check/url/", tts_views.check_url, name="tts-check-url"),
     path("admin/", admin.site.urls),
     path("api/health/", core_views.health, name="health"),
     path("api/schema/", SpectacularAPIView.as_view(), name="schema"),
@@ -22,6 +25,7 @@ urlpatterns = [
     path("api/duels/", include("duels.urls")),
     path("api/quiz/", include("botquiz.urls")),
     path("api/exams/", include("exams.urls")),
+    path("api/tts/", include("tts.urls")),
     path("api/gamification/", include("gamification.urls")),
     path("bot/", include("telegram_bot.urls")),  # Telegram webhook + reminder cron
     path(f"{settings.MEDIA_URL.strip('/')}/<path:path>", core_views.media, name="media"),

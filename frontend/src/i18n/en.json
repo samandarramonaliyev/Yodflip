@@ -497,5 +497,13 @@
   "ach.exam_pack_50": "Pack 50%",
   "ach.exam_pack_50_desc": "Find half of an exam pack",
   "ach.exam_pack_100": "Pack 100%",
-  "ach.exam_pack_100_desc": "Find a whole exam pack"
+  "ach.exam_pack_100_desc": "Find a whole exam pack",
+  "tts.title": "Pronunciation",
+  "tts.hint": "Tap again or hold for slow 🐢",
+  "tts.de_voice": "German voice",
+  "tts.female": "Female",
+  "tts.male": "Male",
+  "tts.en_accent": "English accent",
+  "tts.speed": "Speech speed",
+  "tts.auto": "Read words automatically"
 }

@@ -2,11 +2,12 @@ import { FillerBadge } from '../components/LevelProgress'
 import { AnimatePresence, motion } from 'framer-motion'
 import { Timer, Zap } from 'lucide-react'
 import { useMemo, useRef, useState } from 'react'
-import { SpeakButton } from '../components/WordActions'
+import { SpeakButton } from '../components/SpeakButton'
 import { useT } from '../i18n'
 import { feedbackCorrect, feedbackWrong } from '../lib/fx'
 import { useInterval } from '../lib/hooks'
 import { play } from '../lib/sound'
+import { usePreload } from '../lib/tts'
 import { sidesFor } from './direction'
 import { shuffle } from './matchMachine'
 import { makeOptions } from './quiz'
@@ -33,6 +34,7 @@ export default function SpeedMatch({ items, track, reverse, onFinish }: GameProp
   const startedAt = useRef(0)
 
   const item = order[idx % order.length]
+  usePreload([item.term, order[(idx + 1) % order.length]?.term], track)
   const sides = sidesFor(item, 'speed', track, reverse)
   const options = useMemo(() => makeOptions(item, items, 'speed', track, reverse) ?? [sides.answer], [item, items, track, reverse, sides.answer])
 

@@ -2,7 +2,7 @@ import { act, cleanup, fireEvent, render, screen, waitFor } from '@testing-libra
 import { afterEach, describe, expect, it, vi } from 'vitest'
 
 const post = vi.fn()
-vi.mock('../lib/api', () => ({ api: { post: (...a: unknown[]) => post(...a) } }))
+vi.mock('../lib/api', () => ({ getTokens: () => null, setTokens: () => undefined, api: { post: (...a: unknown[]) => post(...a) } }))
 vi.mock('../lib/fx', () => ({ burst: vi.fn(), feedbackCorrect: vi.fn(), feedbackWrong: vi.fn(), feedbackWin: vi.fn() }))
 
 import Flashcards from './Flashcards'

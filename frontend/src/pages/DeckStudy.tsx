@@ -4,7 +4,7 @@ import { useMemo, useRef, useState, type FormEvent } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { FlipCard } from '../components/FlipCard'
 import { Results } from '../components/Results'
-import { SpeakButton } from '../components/WordActions'
+import { SpeakButton } from '../components/SpeakButton'
 import { EmptyState, ErrorState, ListSkeleton, ProgressBar } from '../components/ui'
 import { sidesFor } from '../games/direction'
 import { shuffle } from '../games/matchMachine'
@@ -17,6 +17,7 @@ import { feedbackCorrect, feedbackWrong } from '../lib/fx'
 import { useAsync, useTelegramBack } from '../lib/hooks'
 import { haptic } from '../lib/telegram'
 import type { Card, Deck, ResultsResponse } from '../lib/types'
+import { useAutoSpeak, usePreload } from '../lib/tts'
 import { useApp } from '../store/app'
 
 export function cardToItem(c: Card, lang: GameItem['translation_lang'] = 'uz'): GameItem {
@@ -191,6 +192,9 @@ function Flashcards({ items, track, reverse, onFinish }: StudyProps) {
     if (info.offset.x > 90) answer(true)
     else if (info.offset.x < -90) answer(false)
   }
+
+  useAutoSpeak(item.term, track, reverse ? flipped : !flipped)
+  usePreload([item.term, order[idx + 1]?.term], track)
 
   const face = (text: string, lang: string, sub?: string) => (
     <div className="flex h-full w-full flex-col items-center justify-center gap-3 rounded-[24px] bg-card p-6 text-center shadow-lift">

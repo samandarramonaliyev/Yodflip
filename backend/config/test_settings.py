@@ -7,6 +7,8 @@ os.environ.setdefault("SECRET_KEY", "test-secret-key-not-for-production")
 os.environ["DATABASE_URL"] = "sqlite:///:memory:"
 os.environ.setdefault("TELEGRAM_BOT_TOKEN", "")
 os.environ.setdefault("ANTHROPIC_API_KEY", "")
+for _name in ("GOOGLE_TTS_CREDENTIALS_JSON", "AZURE_TTS_KEY", "S3_BUCKET"):
+    os.environ[_name] = ""
 
 from .settings import *  # noqa: E402,F403
 

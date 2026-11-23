@@ -178,3 +178,12 @@ Everything that was not fully specified, and what was chosen.
 - **Daily goal**: one pack at a time, new words found today (server date) in that pack.
 - `check_exams` and `seed_exams` run in build.sh and entrypoint.sh (hash-guarded, idempotent, words never deleted).
 - Words of the same spelling with another article or part of speech (EN "to book" / "book", DE "das Essen" / "essen") are separate entries, as in the levels.
+
+## Neural TTS
+- App `tts`, provider interface with Google (REST + service-account JWT, no SDK; `cryptography` added for RS256) and Azure. Voices: de-DE-Neural2-G / -H, en-US-Neural2-F, en-GB-Neural2-A, ru-RU-Wavenet-A.
+- `GET /api/tts/` returns the URL of the audio: `/static/tts/<key>.mp3` (pre-generated, git + whitenoise, immutable), the bucket, or `/api/tts/audio/<key>.mp3` (bytes in PostgreSQL). An `<audio>` element can't send the JWT, so the audio URL itself is public; the sha256 key is its only identifier.
+- `generate_tts` writes to the S3 bucket when configured, else to `backend/tts_audio/` (run locally, commit). Default = default voice, normal speed, words + examples; other voices and the slow speed are made on first play.
+- "Speech speed" (0.8 / 1 / 1.2) is the player's playback rate, so it needs no extra audio. Voice, accent, speed and auto-play are stored per device.
+- Limit: 200 new audios per user and day (cached plays don't count). Over the limit, on errors or without a key the browser voice is used; if the device has voices but none of that language, nothing is spoken. Guests (no login) get the browser voice.
+- Alternatives: "der Arzt, die Ärztin" and "a / b" speak only the first form; sentences keep their commas.
+- Uzbek: no speaker button. Russian: shown when the server has a key or the device has a Russian voice.

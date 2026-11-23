@@ -2,7 +2,8 @@ import { ArrowLeft, BookOpen, Brain } from 'lucide-react'
 import { useState } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import { LevelBar, unlockText } from '../components/LevelProgress'
-import { SpeakButton, WordActions } from '../components/WordActions'
+import { SpeakButton } from '../components/SpeakButton'
+import { WordActions } from '../components/WordActions'
 import { EmptyState, ErrorState, ListSkeleton, ProgressBar, Segmented, Sheet } from '../components/ui'
 import { GAMES } from '../games/catalog'
 import { isAvailable, modeFor } from '../games/direction'
@@ -127,7 +128,12 @@ export default function LevelPage() {
                   </div>
                   <div className="font-bold text-primary">{w.translation_uz}</div>
                   <div className="font-read text-sm text-muted">{w.definition}</div>
-                  {w.example && <div className="font-read mt-1 text-xs italic text-muted">“{w.example}” — {w.example_uz}</div>}
+                  {w.example && (
+                    <div className="mt-1 flex items-center gap-1">
+                      <SpeakButton text={w.example} track={track} className="h-8 w-8" />
+                      <span className="font-read text-xs italic text-muted">“{w.example}” — {w.example_uz}</span>
+                    </div>
+                  )}
                 </div>
                 <WordActions word={{ term: w.display, translation: w.translation_uz, definition: w.definition, article: w.article, word_id: w.id }} track={track} />
               </li>

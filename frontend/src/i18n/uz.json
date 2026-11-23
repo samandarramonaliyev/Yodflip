@@ -497,5 +497,13 @@
   "ach.exam_pack_50": "To'plam 50%",
   "ach.exam_pack_50_desc": "Imtihon to'plamining yarmini toping",
   "ach.exam_pack_100": "To'plam 100%",
-  "ach.exam_pack_100_desc": "Imtihon to'plamini to'liq toping"
+  "ach.exam_pack_100_desc": "Imtihon to'plamini to'liq toping",
+  "tts.title": "Talaffuz",
+  "tts.hint": "Yana bir marta yoki uzoq bosing — sekin 🐢",
+  "tts.de_voice": "Nemischa ovoz",
+  "tts.female": "Ayol",
+  "tts.male": "Erkak",
+  "tts.en_accent": "Inglizcha aksent",
+  "tts.speed": "Nutq tezligi",
+  "tts.auto": "So'zni avtomatik o'qish"
 }

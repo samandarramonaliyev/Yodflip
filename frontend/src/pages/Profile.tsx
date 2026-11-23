@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 import { TrackSwitch } from '../components/Layout'
 import { DuelStatsCard } from '../components/DuelStatsCard'
 import { QuizSettingsCard } from '../components/QuizSettingsCard'
+import { TtsSettings } from '../components/TtsSettings'
 import { WordListsSection } from '../components/WordListsSection'
 import { XpChart } from '../components/XpChart'
 import { Avatar, ErrorState, ProgressBar, Segmented, Skeleton, Toggle, toast } from '../components/ui'
@@ -213,6 +214,7 @@ export default function Profile() {
           </div>
         )}
         <Toggle checked={!muted} onChange={toggleMute} label={t('profile.sound')} />
+        <TtsSettings />
         <div className="space-y-1">
           <div className="font-bold">{t('profile.reminder')}</div>
           <p className="text-sm text-muted">{user.is_telegram_linked ? t('profile.reminder_hint') : t('profile.reminder_need_tg')}</p>

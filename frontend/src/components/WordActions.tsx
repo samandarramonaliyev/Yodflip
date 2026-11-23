@@ -1,8 +1,7 @@
-import { BookmarkPlus, Plus, Volume2 } from 'lucide-react'
+import { BookmarkPlus, Plus } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { api } from '../lib/api'
-import { hasVoice, speakIn, ttsSupported } from '../lib/tts'
 import type { Deck } from '../lib/types'
 import type { Track } from '../games/types'
 import { useT } from '../i18n'
@@ -14,26 +13,6 @@ export interface WordLike {
   definition?: string
   article?: string
   word_id?: number | null
-}
-
-/** Speaks the foreign word (track voice) or, with `lang`, a translation in that language. */
-export function SpeakButton({ text, track, lang, className = '' }: { text: string; track: Track; lang?: string; className?: string }) {
-  const t = useT()
-  const voiceLang = lang || track
-  if (!ttsSupported() || !hasVoice(voiceLang)) return null
-  return (
-    <button
-      type="button"
-      className={`grid h-10 w-10 shrink-0 place-items-center rounded-full bg-primary-soft text-primary ${className}`}
-      onClick={(e) => {
-        e.stopPropagation()
-        speakIn(text, voiceLang)
-      }}
-      aria-label={t('common.listen')}
-    >
-      <Volume2 className="h-5 w-5" />
-    </button>
-  )
 }
 
 export async function saveWant(track: Track, w: WordLike, t: (k: string) => string) {

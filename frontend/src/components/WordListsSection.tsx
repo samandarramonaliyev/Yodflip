@@ -6,7 +6,7 @@ import type { Track } from '../games/types'
 import { useT } from '../i18n'
 import { api } from '../lib/api'
 import type { Deck, UserWord } from '../lib/types'
-import { SpeakButton } from './WordActions'
+import { SpeakButton } from './SpeakButton'
 import { EmptyState, Sheet, Spinner, toast } from './ui'
 
 export type ListKind = 'learned' | 'want' | 'missed'

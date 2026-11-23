@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="uz"><head><meta charset="utf-8"><title>TTS check</title>
+<style>body{font:16px system-ui;margin:24px;max-width:900px}td{padding:6px 10px;border-bottom:1px solid #ddd}button{min-height:36px;margin:2px}</style></head>
+<body><h1>TTS check</h1>
+<p>Provider: <b>{{ provider }}</b> — {% if configured %}sozlangan ✅{% else %}kalit yo'q ⚠️ (brauzer ovozi ishlatiladi){% endif %}. <a href="/admin/">Admin</a></p>
+<table>{% for r in rows %}<tr><td>{{ r.lang }}</td><td><b>{{ r.text }}</b></td><td>
+{% for v in r.voices %}<button data-lang="{{ r.lang }}" data-text="{{ r.text }}" data-voice="{{ v.id }}" data-tag="{{ v.locale }}" data-rate="normal">🔊 {{ v.name }}</button><button data-lang="{{ r.lang }}" data-text="{{ r.text }}" data-voice="{{ v.id }}" data-tag="{{ v.locale }}" data-rate="slow">🐢</button>{% endfor %}
+</td></tr>{% endfor %}</table>
+<script>
+const player = new Audio();
+document.addEventListener('click', async (e) => {
+  const b = e.target.closest('button'); if (!b) return;
+  const d = b.dataset; b.disabled = true;
+  try {
+    const r = await fetch('/admin/tts-check/url/?' + new URLSearchParams({text: d.text, lang: d.lang, voice: d.voice, rate: d.rate}));
+    const j = await r.json();
+    if (j.url) { player.src = j.url; await player.play(); }
+    else { const u = new SpeechSynthesisUtterance(d.text); u.lang = d.tag; u.rate = d.rate === 'slow' ? .7 : .95;
+      const v = speechSynthesis.getVoices().find((x) => x.lang.replace('_', '-').startsWith(d.lang)); if (v) u.voice = v; speechSynthesis.speak(u); }
+  } finally { b.disabled = false; }
+});
+</script></body></html>

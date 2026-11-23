@@ -1,7 +1,7 @@
 import { Copy } from 'lucide-react'
 import { useState } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
-import { SpeakButton } from '../components/WordActions'
+import { SpeakButton } from '../components/SpeakButton'
 import { EmptyState, ErrorState, ListSkeleton, Spinner, toast } from '../components/ui'
 import { useT } from '../i18n'
 import { api } from '../lib/api'

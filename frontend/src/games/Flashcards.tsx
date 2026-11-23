@@ -3,11 +3,12 @@ import { Check, RotateCcw, Undo2, X } from 'lucide-react'
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { FlipCard } from '../components/FlipCard'
 import { FillerBadge } from '../components/LevelProgress'
-import { SpeakButton } from '../components/WordActions'
+import { SpeakButton } from '../components/SpeakButton'
 import { Toggle } from '../components/ui'
 import { useT } from '../i18n'
 import { api } from '../lib/api'
 import { feedbackCorrect, feedbackWrong } from '../lib/fx'
+import { useAutoSpeak, usePreload } from '../lib/tts'
 import { toResult, type GameItem, type GameProps, type ResultItem } from './types'
 
 const ARTICLE_COLOR: Record<string, string> = { der: 'text-sky-600', die: 'text-rose-500', das: 'text-emerald-600' }
@@ -33,7 +34,12 @@ function ForeignSide({ item, track }: { item: GameItem; track: 'en' | 'de' }) {
         {item.word || item.term}
       </span>
       {item.pos && <span className="text-xs font-bold uppercase tracking-wide text-muted">{item.pos}</span>}
-      {item.example && <span className="font-read text-sm italic text-muted">“{item.example}”</span>}
+      {item.example && (
+        <span className="flex items-center gap-1">
+          <SpeakButton text={item.example} track={track} className="h-8 w-8" />
+          <span className="font-read text-sm italic text-muted">“{item.example}”</span>
+        </span>
+      )}
       {item.collocations && <span className="text-xs font-bold">🔗 {item.collocations}</span>}
       <SpeakButton text={item.term} track={track} />
     </div>
@@ -72,6 +78,8 @@ export default function Flashcards({ items, track, onFinish, sessionId }: Flashc
   const start = useRef(Date.now())
   const done = useRef(false)
   const item = items[idx]
+  useAutoSpeak(item?.term, track, flipped !== teskari)
+  usePreload([item?.term, items[idx + 1]?.term], track)
 
   const flip = useCallback(() => {
     setFlipped((f) => !f)

@@ -44,6 +44,11 @@ services:
         generateValue: true
       - key: BOT_CRON_SECRET
         generateValue: true
+      # --- Neural TTS (empty = browser voice) ---
+      - key: TTS_PROVIDER
+        value: google
+      - key: GOOGLE_TTS_CREDENTIALS_JSON
+        sync: false
       # --- OCR (needed for real scans on Render: the native runtime has no Tesseract) ---
       - key: ANTHROPIC_API_KEY
         sync: false
