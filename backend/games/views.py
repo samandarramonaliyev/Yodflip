@@ -11,9 +11,9 @@ from rest_framework.views import APIView
 from accounts.models import TRACK_CHOICES
 from gamification.models import GameSession
 from gamification.services import check_achievements, level_for_xp, record_activity, today
-from words.levels import level_progress, record_answers
+from words.levels import record_answers, round_progress
 from words.models import LevelRound, UserLevelWord
-from words.services import record_answer
+from words.services import apply_answer, record_answer
 from words.translations import resolve
 
 from .models import DailyChallengeScore
@@ -42,7 +42,7 @@ class ResultsSerializer(serializers.Serializer):
     translation_lang = serializers.CharField(max_length=2, required=False, allow_blank=True)
 
     def validate(self, attrs):
-        if attrs.get("source") == "level" and not attrs.get("session_id"):
+        if attrs.get("source") in ("level", "exam") and not attrs.get("session_id"):
             raise serializers.ValidationError({"session_id": "required_for_level"})
         return attrs
 
@@ -62,7 +62,18 @@ class WordsView(APIView):
             OpenApiParameter(
                 "source",
                 str,
-                enum=["level", "levelreview", "deck", "set", "missed", "want", "learned", "review", "daily"],
+                enum=[
+                    "level",
+                    "levelreview",
+                    "deck",
+                    "set",
+                    "missed",
+                    "want",
+                    "learned",
+                    "review",
+                    "daily",
+                    "examreview",
+                ],
             ),
             OpenApiParameter("level", str),
             OpenApiParameter("pack", str),
@@ -136,12 +147,18 @@ class ResultsView(APIView):
         learned_now = []
         level_payload = None
         with transaction.atomic():
-            if d.get("source") == "level":
+            if d.get("source") in ("level", "exam"):
                 xp, perfect, level_payload = self._level_round(user, d, results, game, correct, attempts)
                 learned_now = level_payload.pop("learned_terms")
             elif game == "flashcards":
                 # Lists were already updated card by card via /api/words/flash/answer/.
                 xp, perfect = session_xp(game, correct, attempts, 0)
+            elif d.get("source") == "examreview":
+                for r in results:
+                    if apply_answer(user, track, r, r["correct"]):
+                        learned_now.append(r["term"])
+                user.refresh_from_db()  # a finished level may have given bonus XP
+                xp, perfect = session_xp(game, correct, attempts, d.get("combo_max", 0))
             else:
                 for r in results:
                     uw, became = record_answer(user, track, r, r["correct"])
@@ -214,7 +231,7 @@ class ResultsView(APIView):
         payload = {
             "session_id": rnd.session_id,
             "new_found_count": new_found,
-            "progress": outcome["progress"] if outcome else level_progress(user, rnd.track, rnd.level),
+            "progress": outcome["progress"] if outcome else round_progress(user, rnd),
             "completed_now": bool(outcome and outcome["completed_now"]),
             "bonus_xp": outcome["bonus_xp"] if outcome else 0,
             "learned_terms": [u.word.display for u in found_qs],

@@ -6,12 +6,13 @@ import { ListSkeleton, Segmented, Spinner, toast } from '../components/ui'
 import { useT } from '../i18n'
 import { api, ApiError } from '../lib/api'
 import type { Duel, DuelStats } from '../lib/duel'
+import type { ExamPackRow } from '../lib/exams'
 import { useAsync, useMainButton, useTelegramBack } from '../lib/hooks'
 import { allowedLangs, isValidPair, LANG_META, type TrLang } from '../lib/translation'
 import type { Deck, LevelRow } from '../lib/types'
 import { useApp } from '../store/app'
 
-type SourceTab = 'level' | 'deck'
+type SourceTab = 'level' | 'exam' | 'deck'
 
 /** Create a duel: track, source, mode, translation language. The creator plays first. */
 export default function DuelHub() {
@@ -19,24 +20,27 @@ export default function DuelHub() {
   const nav = useNavigate()
   useTelegramBack('/')
   const [params] = useSearchParams()
-  const { track, setTrack } = useApp()
+  const { track, setTrack, lang: uiLang } = useApp()
   const preset = params.get('source') as SourceTab | null
-  const [tab, setTab] = useState<SourceTab>(preset === 'deck' ? 'deck' : 'level')
+  const [tab, setTab] = useState<SourceTab>(preset === 'deck' || preset === 'exam' ? preset : 'level')
   const [ref, setRef] = useState<string>(params.get('ref') ?? 'A1')
   const [mode, setMode] = useState<'speed' | 'match'>('speed')
   const [lang, setLang] = useState<TrLang>('uz')
   const [busy, setBusy] = useState(false)
   const levels = useAsync(() => api.get<{ levels: LevelRow[] }>('/words/levels/', { track }), [track])
   const decks = useAsync(() => api.get<Deck[]>('/decks/', { track }), [track])
+  const exams = useAsync(() => api.get<{ packs: ExamPackRow[] }>('/exams/', { track }), [track])
   const stats = useAsync(() => api.get<DuelStats>('/duels/'), [])
   const tl: TrLang = isValidPair(track, lang) ? lang : 'uz'
 
   const options =
     tab === 'level'
       ? (levels.data?.levels ?? []).map((l) => ({ ref: l.level as string, label: `${l.level} · ${t(`cefr.${l.level}`)}`, sub: `${l.total}`, ok: l.unlocked }))
-      : (decks.data ?? []).map((d) => ({ ref: String(d.id), label: d.name, sub: t('decks.cards_n', { n: d.card_count }), ok: d.card_count >= 10 }))
+      : tab === 'exam'
+        ? (exams.data?.packs ?? []).map((p) => ({ ref: p.slug, label: `${p.emoji} ${p.name[uiLang]}`, sub: `${p.total}`, ok: true }))
+        : (decks.data ?? []).map((d) => ({ ref: String(d.id), label: d.name, sub: t('decks.cards_n', { n: d.card_count }), ok: d.card_count >= 10 }))
   const chosen = options.find((o) => o.ref === ref && o.ok)
-  const loading = { level: levels, deck: decks }[tab].loading
+  const loading = { level: levels, exam: exams, deck: decks }[tab].loading
 
   const create = async () => {
     if (!chosen || busy) return
@@ -83,6 +87,7 @@ export default function DuelHub() {
             }}
             options={[
               { value: 'level', label: t('src.levels') },
+              { value: 'exam', label: t('nav.exams') },
               { value: 'deck', label: t('src.decks') },
             ]}
           />

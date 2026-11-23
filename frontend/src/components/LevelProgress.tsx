@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 import { useT } from '../i18n'
 import { burst } from '../lib/fx'
 import type { LevelProgress } from '../lib/types'
+import { useApp } from '../store/app'
 
 const NEXT: Record<string, string | undefined> = { A1: 'A2', A2: 'B1', B1: 'B2', B2: 'C1', C1: undefined }
 
@@ -41,6 +42,7 @@ export function LevelBar({ progress, from }: { progress: LevelProgress; from?: n
 }
 
 export function unlockText(t: (k: string, v?: Record<string, string | number>) => string, p: LevelProgress): string {
+  if (p.exam) return p.completed ? t('exam.completed') : t('level.remaining', { n: p.remaining })
   if (p.completed) return t('level.completed_short')
   if (p.to_unlock > 0) return t('level.to_unlock', { n: p.to_unlock })
   return NEXT[p.level] ? t('level.next_open') : t('level.remaining', { n: p.remaining })
@@ -49,13 +51,14 @@ export function unlockText(t: (k: string, v?: Record<string, string | number>) =
 /** Results-screen panel of a level round: +N new words, animated bar, words left to unlock. */
 export function LevelRoundSummary({ before, after, newFound }: { before: LevelProgress; after: LevelProgress | null; newFound: number | null }) {
   const t = useT()
+  const lang = useApp((s) => s.lang)
   const shown = after ?? before
   const justUnlocked = Boolean(after && before.to_unlock > 0 && after.to_unlock === 0 && NEXT[after.level])
   return (
     <div className="mt-4 space-y-3 rounded-2xl bg-line/50 p-4 text-left" data-testid="level-summary">
       <div className="flex items-center justify-between gap-2">
         <span className="font-black">
-          {before.level} · {t(`cefr.${before.level}`)}
+          {before.exam ? `📘 ${before.name?.[lang] ?? ''}` : `${before.level} · ${t(`cefr.${before.level}`)}`}
         </span>
         <span className={`rounded-full px-3 py-1 text-sm font-black ${newFound ? 'bg-success/20 text-success' : 'bg-line text-muted'}`} data-testid="new-found">
           {newFound === null ? '…' : newFound > 0 ? t('level.new_found', { n: newFound }) : t('level.no_new')}
@@ -70,6 +73,27 @@ export function LevelRoundSummary({ before, after, newFound }: { before: LevelPr
           🔓 {t('level.unlocked_now', { level: NEXT[shown.level]! })}
         </Link>
       )}
+    </div>
+  )
+}
+
+/** A whole exam pack is found. */
+export function ExamComplete({ slug }: { slug: string }) {
+  const t = useT()
+  const ref = useRef<HTMLDivElement>(null)
+  useEffect(() => burst(ref.current), [])
+  return (
+    <div ref={ref} className="card space-y-4 p-6 text-center" data-testid="exam-complete">
+      <div className="text-6xl">🎖️</div>
+      <h2 className="h1">{t('exam.completed')}</h2>
+      <div className="grid gap-2">
+        <Link to={`/exams/${slug}/simulation`} className="btn-primary">
+          {t('exam.simulation')} <ChevronRight className="h-5 w-5" />
+        </Link>
+        <Link to={`/exams/${slug}`} className="btn-ghost">
+          {t('exam.back_to_pack')}
+        </Link>
+      </div>
     </div>
   )
 }

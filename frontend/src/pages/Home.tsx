@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
-import { Camera, ChevronRight, Flame, Layers, Library, RotateCcw, Star, Trophy } from 'lucide-react'
+import { Camera, ChevronRight, Flame, GraduationCap, Layers, Library, RotateCcw, Star, Trophy } from 'lucide-react'
 import { Link } from 'react-router-dom'
+import { GoalCard } from '../components/GoalCard'
 import { ErrorState, ProgressBar, Skeleton } from '../components/ui'
 import { GAMES } from '../games/catalog'
 import { isAvailable } from '../games/direction'
@@ -83,6 +84,8 @@ export default function Home() {
         </Link>
       </section>
 
+      <GoalCard />
+
       <Link to="/duel" className="card flex items-center gap-4 p-5 transition hover:shadow-lift" data-testid="home-duel">
         <span className="text-4xl">⚔️</span>
         <span className="flex-1">
@@ -92,9 +95,10 @@ export default function Home() {
         <ChevronRight className="text-muted" />
       </Link>
 
-      <section className="grid grid-cols-2 gap-3 md:grid-cols-4">
+      <section className="grid grid-cols-2 gap-3 md:grid-cols-5">
         {[
           { to: '/levels', icon: Layers, label: t('nav.levels') },
+          { to: '/exams', icon: GraduationCap, label: t('nav.exams') },
           { to: '/decks', icon: Library, label: t('nav.decks') },
           { to: '/sets', icon: Camera, label: t('sets.title') },
           { to: '/leaderboard', icon: Trophy, label: t('nav.leaderboard') },

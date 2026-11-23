@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Camera, Flame, Gamepad2, Home, Layers, Library, Trophy, User, Volume2, VolumeX } from 'lucide-react'
+import { Camera, Flame, Gamepad2, GraduationCap, Home, Layers, Library, Trophy, User, Volume2, VolumeX } from 'lucide-react'
 import { NavLink, Outlet, useLocation } from 'react-router-dom'
 import { useT } from '../i18n'
 import { useApp } from '../store/app'
@@ -36,6 +36,7 @@ export function TrackSwitch() {
 const NAV = [
   { to: '/', icon: Home, key: 'nav.home', end: true },
   { to: '/levels', icon: Layers, key: 'nav.levels' },
+  { to: '/exams', icon: GraduationCap, key: 'nav.exams' },
   { to: '/scan', icon: Camera, key: 'nav.scan', center: true },
   { to: '/decks', icon: Library, key: 'nav.decks' },
   { to: '/profile', icon: User, key: 'nav.profile' },
@@ -44,6 +45,7 @@ const NAV = [
 const DESKTOP_NAV = [
   { to: '/', icon: Home, key: 'nav.home', end: true },
   { to: '/levels', icon: Layers, key: 'nav.levels' },
+  { to: '/exams', icon: GraduationCap, key: 'nav.exams' },
   { to: '/games', icon: Gamepad2, key: 'nav.games' },
   { to: '/scan', icon: Camera, key: 'nav.scan' },
   { to: '/decks', icon: Library, key: 'nav.decks' },
@@ -112,7 +114,7 @@ export function BottomNav() {
               key={n.to}
               to={n.to}
               end={n.end}
-              className={({ isActive }) => `flex min-h-[52px] min-w-[56px] flex-col items-center justify-center gap-0.5 rounded-xl text-[11px] font-extrabold ${isActive ? 'text-primary' : 'text-muted'}`}
+              className={({ isActive }) => `flex min-h-[52px] min-w-0 flex-1 flex-col items-center justify-center gap-0.5 rounded-xl text-[10.5px] font-extrabold ${isActive ? 'text-primary' : 'text-muted'}`}
             >
               <n.icon className="h-6 w-6" />
               {t(n.key)}

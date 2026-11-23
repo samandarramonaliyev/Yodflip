@@ -21,6 +21,7 @@ PY
 
 python manage.py migrate --noinput
 python manage.py seed_words          # idempotent: skipped when this seed version is already loaded
+python manage.py seed_exams          # exam packs, idempotent as well
 python manage.py ensure_superuser    # only if DJANGO_SUPERUSER_EMAIL/PASSWORD are set and the user is missing
 if [ "${RUN_COLLECTSTATIC:-1}" = "1" ]; then
   python manage.py collectstatic --noinput -v 0

@@ -42,6 +42,10 @@ python manage.py check_seed
 echo "==> seed vocabulary (skipped when unchanged; idempotent, keeps word IDs)"
 python manage.py seed_words
 
+echo "==> exam packs (check, then seed; idempotent, skipped when unchanged)"
+python manage.py check_exams
+python manage.py seed_exams
+
 echo "==> admin user (only if DJANGO_SUPERUSER_EMAIL/PASSWORD are set)"
 python manage.py ensure_superuser
 

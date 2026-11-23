@@ -40,11 +40,15 @@ class Pack(models.Model):
 
 
 class Word(models.Model):
-    """A built-in word. Stores BOTH a same-language definition and an Uzbek translation."""
+    """A built-in word. Stores BOTH a same-language definition and an Uzbek translation.
+
+    Level words have a level and a themed pack. Words that only exist in an exam pack have
+    level = "" and no themed pack, so they never change level sizes or progress.
+    """
 
     track = models.CharField(max_length=2, choices=TRACK_CHOICES, db_index=True)
-    level = models.CharField(max_length=2, choices=CEFR_CHOICES, db_index=True)
-    pack = models.ForeignKey(Pack, on_delete=models.CASCADE, related_name="words")
+    level = models.CharField(max_length=2, choices=CEFR_CHOICES, db_index=True, blank=True)
+    pack = models.ForeignKey(Pack, null=True, blank=True, on_delete=models.CASCADE, related_name="words")
     word = models.CharField(max_length=120)  # German nouns stored without article
     article = models.CharField(max_length=3, choices=ARTICLE_CHOICES, blank=True)
     part_of_speech = models.CharField(max_length=20)
@@ -52,6 +56,8 @@ class Word(models.Model):
     translation_uz = models.CharField(max_length=200)  # Uzbek, Latin script
     example = models.CharField(max_length=300, blank=True)
     example_uz = models.CharField(max_length=300, blank=True)
+    collocations = models.CharField(max_length=200, blank=True)  # "conduct research; research findings"
+    word_family = models.CharField(max_length=200, blank=True)  # "analyse / analysis / analytical"
 
     class Meta:
         # A word belongs to exactly one level inside its track.
@@ -123,7 +129,7 @@ class UserWord(models.Model):
 
 
 class LevelRound(models.Model):
-    """One round of a level game built by the server (the "session" of the level API).
+    """One round of a level or exam-pack game built by the server (the "session" of the level API).
 
     Stores which words were shown and which of them were review fillers, so answers can be
     validated server-side and the next rounds can avoid the words of the last sessions.
@@ -132,7 +138,9 @@ class LevelRound(models.Model):
     session_id = models.CharField(max_length=40, unique=True)
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name="level_rounds")
     track = models.CharField(max_length=2, choices=TRACK_CHOICES)
-    level = models.CharField(max_length=2, choices=CEFR_CHOICES)
+    level = models.CharField(max_length=2, choices=CEFR_CHOICES, blank=True)
+    exam = models.CharField(max_length=60, blank=True)  # exam pack slug (level is "" then)
+    topic = models.CharField(max_length=200, blank=True)
     game = models.CharField(max_length=30, blank=True)
     word_ids = models.JSONField(default=list)
     filler_ids = models.JSONField(default=list)
@@ -155,7 +163,7 @@ class UserLevelWord(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name="level_words")
     word = models.ForeignKey(Word, on_delete=models.CASCADE, related_name="level_progress")
     track = models.CharField(max_length=2, choices=TRACK_CHOICES)
-    level = models.CharField(max_length=2, choices=CEFR_CHOICES)
+    level = models.CharField(max_length=2, choices=CEFR_CHOICES, blank=True)
     found_at = models.DateTimeField(null=True, blank=True)
     found_round = models.ForeignKey(LevelRound, null=True, blank=True, on_delete=models.SET_NULL, related_name="+")
     filler_uses = models.PositiveSmallIntegerField(default=0)

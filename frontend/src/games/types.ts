@@ -13,7 +13,7 @@ export type GameId =
   | 'memory'
   | 'derdiedas'
 
-export type Source = 'level' | 'levelreview' | 'deck' | 'set' | 'missed' | 'want' | 'learned' | 'review' | 'daily'
+export type Source = 'level' | 'levelreview' | 'deck' | 'set' | 'missed' | 'want' | 'learned' | 'review' | 'daily' | 'exam' | 'examreview'
 
 /** A word item as returned by /api/games/words/ */
 export interface GameItem {
@@ -31,6 +31,8 @@ export interface GameItem {
   is_filler?: boolean
   /** Language of `translation` (uz / ru / en / de); Uzbek when missing. */
   translation_lang?: 'uz' | 'ru' | 'en' | 'de'
+  collocations?: string
+  word_family?: string
   /** Example sentence in the translation language */
   example_tr?: string
 }

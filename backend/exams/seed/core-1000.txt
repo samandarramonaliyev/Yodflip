@@ -1,0 +1,360 @@
+# Original list of useful everyday words (by topic). Not an official word list.
+## food | 🍎 | Food & drink | Ovqat va ichimlik | Еда и напитки
+= apple; bread; water; milk; egg; rice; meat; tea; sugar; cheese; hungry; delicious; to cook; breakfast; vegetable
+= menu; waiter; dish; recipe; soup; salt; pepper; knife; fork; to order; to fry; to boil; sweet; spicy; fresh
+fruit | noun | a sweet food from plants, like apples | meva | фрукт | das Obst | I eat fruit every day. | Men har kuni meva yeyman. | Я ем фрукты каждый день. | Ich esse jeden Tag Obst.
+chicken | noun | a farm bird or its meat | tovuq | курица | das Huhn | We had chicken for dinner. | Kechki ovqatga tovuq yedik. | На ужин у нас была курица. | Zum Abendessen gab es Huhn.
+fish | noun | an animal that lives in water | baliq | рыба | der Fisch | This fish is fresh. | Bu baliq yangi. | Эта рыба свежая. | Dieser Fisch ist frisch.
+potato | noun | a round vegetable that grows in the ground | kartoshka | картофель | die Kartoffel | Peel the potato. | Kartoshkani archi. | Почисти картошку. | Schäl die Kartoffel.
+tomato | noun | a soft red fruit used as a vegetable | pomidor | помидор | die Tomate | The tomato is red. | Pomidor qizil. | Помидор красный. | Die Tomate ist rot.
+onion | noun | a vegetable that can make you cry | piyoz | лук | die Zwiebel | Chop one onion. | Bitta piyozni to'g'ra. | Нарежь одну луковицу. | Hacke eine Zwiebel.
+butter | noun | soft yellow food made from cream | sariyog' | сливочное масло | die Butter | Put butter on the bread. | Nonga sariyog' surt. | Намажь хлеб маслом. | Streich Butter aufs Brot.
+coffee | noun | a hot dark drink | qahva | кофе | der Kaffee | Coffee keeps me awake. | Qahva meni uxlatmaydi. | Кофе не даёт мне уснуть. | Kaffee hält mich wach.
+juice | noun | the liquid from fruit | sharbat | сок | der Saft | I'd like some apple juice. | Olma sharbati xohlayman. | Я бы выпил яблочного сока. | Ich möchte Apfelsaft.
+cake | noun | a sweet baked food | tort | торт | der Kuchen | She made a cake. | U tort pishirdi. | Она испекла торт. | Sie hat einen Kuchen gebacken.
+lunch | noun | the meal in the middle of the day | tushlik | обед | das Mittagessen | Lunch is ready. | Tushlik tayyor. | Обед готов. | Das Mittagessen ist fertig.
+dinner | noun | the main meal in the evening | kechki ovqat | ужин | das Abendessen | Dinner is at seven. | Kechki ovqat soat yettida. | Ужин в семь. | Das Abendessen ist um sieben.
+salad | noun | a dish of cold vegetables | salat (taom) | салат | der Salat | The salad needs salt. | Salatga tuz kerak. | В салат нужна соль. | Der Salat braucht Salz.
+cup | noun | a small container for hot drinks | finjon | чашка | die Tasse | The cup is on the table. | Finjon stol ustida. | Чашка на столе. | Die Tasse steht auf dem Tisch.
+plate | noun | a flat dish for food | likopcha | тарелка | der Teller | My plate is empty. | Likopcham bo'sh. | Моя тарелка пустая. | Mein Teller ist leer.
+spoon | noun | a tool for eating soup | qoshiq | ложка | der Löffel | I need a spoon. | Menga qoshiq kerak. | Мне нужна ложка. | Ich brauche einen Löffel.
+bottle | noun | a tall container for liquids | shisha idish | бутылка | die Flasche | The bottle is full. | Shisha idish to'la. | Бутылка полная. | Die Flasche ist voll.
+to eat | verb | to put food in your mouth and swallow it | yemoq | есть | essen | What did you eat? | Nima yeding? | Что ты ел? | Was hast du gegessen?
+to cut | verb | to divide something with a knife | kesmoq | резать | schneiden | Cut the bread, please. | Iltimos, nonni kes. | Порежь, пожалуйста, хлеб. | Schneide bitte das Brot.
+thirsty | adjective | needing to drink | chanqagan | испытывающий жажду | durstig | I'm very thirsty. | Men juda chanqadim. | Я очень хочу пить. | Ich bin sehr durstig.
+meal | noun | food eaten at one time | ovqat, taom | приём пищи | die Mahlzeit | It was a great meal. | Ajoyib taom bo'ldi. | Это была отличная еда. | Es war eine tolle Mahlzeit.
+taste | noun | the feeling of food in your mouth | ta'm | вкус | der Geschmack | I like the taste. | Ta'mi menga yoqadi. | Мне нравится вкус. | Ich mag den Geschmack.
+## family | 👨‍👩‍👧 | Family & relationships | Oila va munosabatlar | Семья и отношения
+= mother; father; brother; sister; friend; child; baby; grandmother; husband; wife; name; old; young; happy; to love
+= relationship; wedding; couple; partner; trust; argument; to get married; to get on with; to fall in love; to break up; to forgive; to apologise; to support; to rely on; honest
+= loyal; generous; selfish; engaged; relative
+parents | noun | a mother and a father | ota-ona | родители | die Eltern | My parents are at home. | Ota-onam uyda. | Мои родители дома. | Meine Eltern sind zu Hause.
+son | noun | a male child of a parent | o'g'il farzand | сын | der Sohn | Their son is six. | Ularning o'g'li olti yoshda. | Их сыну шесть лет. | Ihr Sohn ist sechs.
+daughter | noun | a female child of a parent | qiz farzand | дочь | die Tochter | Our daughter is clever. | Qizimiz aqlli. | Наша дочь умная. | Unsere Tochter ist klug.
+grandfather | noun | the father of your mother or father | buva | дедушка | der Großvater | My grandfather tells stories. | Buvam hikoya aytib beradi. | Дедушка рассказывает истории. | Mein Großvater erzählt Geschichten.
+uncle | noun | the brother of your mother or father | amaki, tog'a | дядя | der Onkel | My uncle is a pilot. | Amakim uchuvchi. | Мой дядя — пилот. | Mein Onkel ist Pilot.
+aunt | noun | the sister of your mother or father | amma, xola | тётя | die Tante | My aunt lives in Samarkand. | Xolam Samarqandda yashaydi. | Моя тётя живёт в Самарканде. | Meine Tante lebt in Samarkand.
+cousin | noun | a child of your uncle or aunt | amakivachcha, xolavachcha | двоюродный брат, сестра | der Cousin, die Cousine | My cousin is my age. | Amakivachcham men tengi. | Мой двоюродный брат — мой ровесник. | Mein Cousin ist so alt wie ich.
+boy | noun | a male child | o'g'il bola | мальчик | der Junge | The boy is laughing. | Bola kulyapti. | Мальчик смеётся. | Der Junge lacht.
+girl | noun | a female child | qiz bola | девочка | das Mädchen | The girl is reading. | Qizcha o'qiyapti. | Девочка читает. | Das Mädchen liest.
+man | noun | an adult male person | erkak | мужчина | der Mann | The man is tall. | Erkak baland bo'yli. | Мужчина высокий. | Der Mann ist groß.
+woman | noun | an adult female person | ayol | женщина | die Frau | The woman is a doctor. | Ayol — shifokor. | Женщина — врач. | Die Frau ist Ärztin.
+people | noun | men, women and children | odamlar | люди | die Leute | Many people are here. | Bu yerda ko'p odam bor. | Здесь много людей. | Viele Leute sind hier.
+person | noun | one human being | shaxs, kishi | человек | die Person | She is a kind person. | U mehribon inson. | Она добрый человек. | Sie ist eine nette Person.
+birthday | noun | the day you were born, each year | tug'ilgan kun | день рождения | der Geburtstag | Happy birthday! | Tug'ilgan kuning bilan! | С днём рождения! | Alles Gute zum Geburtstag!
+guest | noun | a person you invite | mehmon | гость | der Gast | The guests have arrived. | Mehmonlar keldi. | Гости приехали. | Die Gäste sind da.
+gift | noun | something you give to someone | sovg'a | подарок | das Geschenk | Thanks for the gift! | Sovg'a uchun rahmat! | Спасибо за подарок! | Danke für das Geschenk!
+## home | 🏠 | Home | Uy | Дом
+= house; room; kitchen; bed; door; window; table; chair; key; garden; to sleep; to clean; clean; big; small
+= flat; landlord; furniture; floor; roof; stairs; balcony; heating; lift; to move; to share; to repair; to decorate; to tidy; spacious
+= cosy; noisy; neighbourly; address; fridge
+bathroom | noun | a room for washing | hammom | ванная комната | das Badezimmer | The bathroom is clean. | Hammom toza. | Ванная чистая. | Das Badezimmer ist sauber.
+wall | noun | a side of a room | devor | стена | die Wand | The wall is white. | Devor oq. | Стена белая. | Die Wand ist weiß.
+mirror | noun | glass in which you see yourself | ko'zgu | зеркало | der Spiegel | Look in the mirror. | Ko'zguga qara. | Посмотри в зеркало. | Schau in den Spiegel.
+carpet | noun | a thick soft floor cover | gilam | ковёр | der Teppich | The carpet is soft. | Gilam yumshoq. | Ковёр мягкий. | Der Teppich ist weich.
+soap | noun | used with water for washing | sovun | мыло | die Seife | Wash with soap. | Sovun bilan yuv. | Мой с мылом. | Wasch dich mit Seife.
+towel | noun | a cloth for drying your body | sochiq | полотенце | das Handtuch | The towel is wet. | Sochiq ho'l. | Полотенце мокрое. | Das Handtuch ist nass.
+lamp | noun | a thing that gives light | chiroq | лампа | die Lampe | Turn on the lamp. | Chiroqni yoq. | Включи лампу. | Mach die Lampe an.
+toilet | noun | a place where you go when you need to | hojatxona | туалет | die Toilette | Where is the toilet? | Hojatxona qayerda? | Где туалет? | Wo ist die Toilette?
+to live | verb | to have your home somewhere | yashamoq | жить | leben, wohnen | We live here. | Biz shu yerda yashaymiz. | Мы живём здесь. | Wir wohnen hier.
+to open | verb | to move something so it is not closed | ochmoq | открывать | öffnen | Open the window. | Derazani och. | Открой окно. | Öffne das Fenster.
+to close | verb | to shut something | yopmoq | закрывать | schließen | Close the door. | Eshikni yop. | Закрой дверь. | Schließ die Tür.
+## daily | ⏰ | Time & daily life | Vaqt va kundalik hayot | Время и повседневность
+= morning; night; day; week; time; school; book; phone; to read; to write; to go; to work; to drink; to buy; tired
+= decade
+evening | noun | the end of the day before night | kechqurun | вечер | der Abend | I read in the evening. | Kechqurun kitob o'qiyman. | Вечером я читаю. | Abends lese ich.
+afternoon | noun | the time between noon and evening | tushdan keyin | вторая половина дня | der Nachmittag | See you this afternoon. | Tushdan keyin ko'rishamiz. | Увидимся днём. | Bis heute Nachmittag.
+hour | noun | sixty minutes | soat (60 daqiqa) | час | die Stunde | It takes an hour. | Bu bir soat oladi. | Это занимает час. | Es dauert eine Stunde.
+minute | noun | sixty seconds | daqiqa | минута | die Minute | Wait a minute. | Bir daqiqa kut. | Подожди минуту. | Warte eine Minute.
+month | noun | one of twelve parts of a year | oy (taqvim) | месяц | der Monat | June is a warm month. | Iyun iliq oy. | Июнь — тёплый месяц. | Juni ist ein warmer Monat.
+year | noun | twelve months | yil | год | das Jahr | Happy New Year! | Yangi yil bilan! | С Новым годом! | Frohes neues Jahr!
+today | adverb | on this day | bugun | сегодня | heute | I'm busy today. | Bugun bandman. | Сегодня я занят. | Ich bin heute beschäftigt.
+tomorrow | adverb | on the day after today | ertaga | завтра | morgen | Call me tomorrow. | Ertaga qo'ng'iroq qil. | Позвони мне завтра. | Ruf mich morgen an.
+yesterday | adverb | on the day before today | kecha | вчера | gestern | It rained yesterday. | Kecha yomg'ir yog'di. | Вчера шёл дождь. | Gestern hat es geregnet.
+now | adverb | at this moment | hozir | сейчас | jetzt | I have to go now. | Hozir ketishim kerak. | Мне пора идти. | Ich muss jetzt gehen.
+weekend | noun | Saturday and Sunday | dam olish kunlari | выходные | das Wochenende | Have a nice weekend! | Dam olish kunlari yaxshi o'tsin! | Хороших выходных! | Schönes Wochenende!
+always | adverb | at all times | doim | всегда | immer | She is always kind. | U doim mehribon. | Она всегда добрая. | Sie ist immer nett.
+often | adverb | many times | tez-tez | часто | oft | I often walk. | Men tez-tez piyoda yuraman. | Я часто хожу пешком. | Ich gehe oft zu Fuß.
+sometimes | adverb | not always, but at some times | ba'zan | иногда | manchmal | I sometimes cook. | Ba'zan ovqat pishiraman. | Иногда я готовлю. | Manchmal koche ich.
+never | adverb | at no time | hech qachon | никогда | nie | He never smokes. | U hech qachon chekmaydi. | Он никогда не курит. | Er raucht nie.
+early | adjective | before the usual time | erta | ранний | früh | I took an early train. | Men ertalabki poyezdga chiqdim. | Я сел на ранний поезд. | Ich nahm einen frühen Zug.
+late | adjective | after the right time | kech, kechikkan | поздний, опоздавший | spät | Sorry, I'm late. | Uzr, kechikdim. | Простите, я опоздал. | Entschuldigung, ich bin spät dran.
+to wake up | verb | to stop sleeping | uyg'onmoq | просыпаться | aufwachen | I wake up at six. | Men oltida uyg'onaman. | Я просыпаюсь в шесть. | Ich wache um sechs auf.
+to start | verb | to begin | boshlamoq | начинать | anfangen | Let's start! | Boshladik! | Начнём! | Fangen wir an!
+to finish | verb | to come to the end | tugatmoq | заканчивать | beenden | I finished my work. | Ishimni tugatdim. | Я закончил работу. | Ich habe meine Arbeit beendet.
+to wait | verb | to stay until something happens | kutmoq | ждать | warten | Wait for me! | Meni kut! | Подожди меня! | Warte auf mich!
+to help | verb | to make things easier for someone | yordam bermoq | помогать | helfen | Can you help me? | Menga yordam bera olasanmi? | Можешь мне помочь? | Kannst du mir helfen?
+to use | verb | to do something with a thing | foydalanmoq | использовать | benutzen | May I use your pen? | Ruchkangdan foydalansam maylimi? | Можно взять твою ручку? | Darf ich deinen Stift benutzen?
+## body | 🧍 | Body & movement | Tana va harakat | Тело и движение
+= head; hand; eye; ear; nose; mouth; leg; foot; hair; face; shirt; shoe; dress; hat; coat
+= trousers; to wear; to wash; to sit; to stand
+arm | noun | the part between shoulder and hand | qo'l (yelkadan) | рука | der Arm | My arm hurts. | Qo'lim og'riyapti. | Рука болит. | Mein Arm tut weh.
+finger | noun | one of five parts of the hand | barmoq | палец | der Finger | She cut her finger. | U barmog'ini kesib oldi. | Она порезала палец. | Sie hat sich in den Finger geschnitten.
+back | noun | the part of the body behind the chest | orqa, bel | спина | der Rücken | My back is sore. | Belim og'riyapti. | У меня болит спина. | Mein Rücken tut weh.
+neck | noun | the part between head and body | bo'yin | шея | der Hals | He has a long neck. | Uning bo'yni uzun. | У него длинная шея. | Er hat einen langen Hals.
+skin | noun | the outside cover of the body | teri | кожа | die Haut | Her skin is soft. | Uning terisi yumshoq. | У неё мягкая кожа. | Ihre Haut ist weich.
+knee | noun | the middle part of the leg that bends | tizza | колено | das Knie | I hurt my knee. | Tizzamni shikastladim. | Я ушиб колено. | Ich habe mir das Knie verletzt.
+to run | verb | to move fast on your feet | yugurmoq | бегать | rennen | She runs every day. | U har kuni yuguradi. | Она бегает каждый день. | Sie rennt jeden Tag.
+to walk | verb | to go on foot | piyoda yurmoq | ходить пешком | zu Fuß gehen | I walk to school. | Maktabga piyoda boraman. | Я хожу в школу пешком. | Ich gehe zu Fuß zur Schule.
+to smile | verb | to make a happy face | jilmaymoq | улыбаться | lächeln | The baby smiled. | Chaqaloq jilmaydi. | Малыш улыбнулся. | Das Baby lächelte.
+to cry | verb | to have tears in your eyes | yig'lamoq | плакать | weinen | Don't cry! | Yig'lama! | Не плачь! | Wein nicht!
+to laugh | verb | to make sounds when something is funny | kulmoq | смеяться | lachen | We laughed a lot. | Biz ko'p kuldik. | Мы много смеялись. | Wir haben viel gelacht.
+voice | noun | the sound you make when speaking | ovoz | голос | die Stimme | Her voice is nice. | Uning ovozi yoqimli. | У неё приятный голос. | Ihre Stimme ist schön.
+## basics | 🔤 | Basics | Asosiy so'zlar | Основные слова
+= red; blue; green; white; black; yellow; number; money; car; bus; street; shop; city; good; bad
+= new; to come; to see; to speak; to play; amount; average; figure
+colour | noun | red, blue and green are examples | rang | цвет | die Farbe | What colour is it? | U qanday rangda? | Какого это цвета? | Welche Farbe hat es?
+brown | adjective | the colour of chocolate | jigarrang | коричневый | braun | He has brown eyes. | Uning ko'zlari jigarrang. | У него карие глаза. | Er hat braune Augen.
+half | noun | one of two equal parts | yarim | половина | die Hälfte | Give me half. | Menga yarmini ber. | Дай мне половину. | Gib mir die Hälfte.
+part | noun | a piece of something | qism | часть | der Teil | This is the best part. | Bu eng yaxshi qismi. | Это лучшая часть. | Das ist der beste Teil.
+thing | noun | an object or a fact | narsa | вещь | das Ding | What is this thing? | Bu narsa nima? | Что это за вещь? | Was ist das für ein Ding?
+place | noun | an area or position | joy | место | der Ort | It's a quiet place. | Bu tinch joy. | Это тихое место. | Es ist ein ruhiger Ort.
+way | noun | how you do something or go somewhere | yo'l, usul | путь, способ | der Weg | This is the best way. | Bu eng yaxshi yo'l. | Это лучший способ. | Das ist der beste Weg.
+word | noun | letters that have a meaning | so'z | слово | das Wort | I don't know this word. | Bu so'zni bilmayman. | Я не знаю этого слова. | Ich kenne dieses Wort nicht.
+letter | noun | a sign of the alphabet or a written message | harf; xat | буква; письмо | der Buchstabe; der Brief | I got a letter. | Men xat oldim. | Я получил письмо. | Ich habe einen Brief bekommen.
+same | adjective | not different | bir xil | одинаковый | gleich | We have the same bag. | Sumkamiz bir xil. | У нас одинаковые сумки. | Wir haben die gleiche Tasche.
+different | adjective | not the same | boshqacha, turli | другой, разный | verschieden | They are very different. | Ular juda boshqacha. | Они очень разные. | Sie sind sehr verschieden.
+next | adjective | coming after this one | keyingi | следующий | nächste | The next bus is at five. | Keyingi avtobus beshda. | Следующий автобус в пять. | Der nächste Bus kommt um fünf.
+last | adjective | after all others | oxirgi | последний | letzte | This is the last page. | Bu oxirgi sahifa. | Это последняя страница. | Das ist die letzte Seite.
+first | adjective | before all others | birinchi | первый | erste | It's my first day. | Bu birinchi kunim. | Это мой первый день. | Es ist mein erster Tag.
+right | adjective | correct | to'g'ri | правильный | richtig | You are right. | Sen haqsan. | Ты прав. | Du hast recht.
+wrong | adjective | not correct | noto'g'ri | неправильный | falsch | The answer is wrong. | Javob noto'g'ri. | Ответ неправильный. | Die Antwort ist falsch.
+## town | 🚌 | Town & transport | Shahar va transport | Город и транспорт
+= bank; post office; hospital; library; museum; bridge; corner; square; traffic lights; to turn; to cross; straight on; near; opposite; far
+= neighbourhood; traffic; crowded; pollution; citizen; law; government; crime; to vote; public; local; to recycle; volunteer; community; rent
+train | noun | it carries people on rails | poyezd | поезд | der Zug | The train is late. | Poyezd kechikyapti. | Поезд опаздывает. | Der Zug hat Verspätung.
+plane | noun | a machine that flies | samolyot | самолёт | das Flugzeug | The plane has landed. | Samolyot qo'ndi. | Самолёт приземлился. | Das Flugzeug ist gelandet.
+bicycle | noun | it has two wheels and pedals | velosiped | велосипед | das Fahrrad | My bicycle is old. | Velosipedim eski. | Мой велосипед старый. | Mein Fahrrad ist alt.
+road | noun | a way for cars | yo'l | дорога | die Landstraße | The road is long. | Yo'l uzun. | Дорога длинная. | Die Landstraße ist lang.
+village | noun | a very small town | qishloq | деревня | das Dorf | He lives in a village. | U qishloqda yashaydi. | Он живёт в деревне. | Er lebt in einem Dorf.
+country | noun | a land with its own government | mamlakat | страна | das Land | Which country is this? | Bu qaysi mamlakat? | Какая это страна? | Welches Land ist das?
+world | noun | the Earth and all people | dunyo | мир | die Welt | She travels the world. | U dunyo bo'ylab sayohat qiladi. | Она путешествует по миру. | Sie reist um die Welt.
+building | noun | a structure with walls and a roof | bino | здание | das Gebäude | The building is tall. | Bino baland. | Здание высокое. | Das Gebäude ist hoch.
+park | noun | a green public place in a town | bog', istirohat bog'i | парк | der Park | We walked in the park. | Biz bog'da sayr qildik. | Мы гуляли в парке. | Wir gingen im Park spazieren.
+restaurant | noun | a place where you buy and eat meals | restoran | ресторан | das Restaurant | The restaurant is full. | Restoran to'la. | Ресторан полон. | Das Restaurant ist voll.
+police | noun | people who stop crime | politsiya | полиция | die Polizei | Call the police! | Politsiyani chaqir! | Вызови полицию! | Ruf die Polizei!
+driver | noun | a person who drives | haydovchi | водитель | der Fahrer | The driver stopped. | Haydovchi to'xtadi. | Водитель остановился. | Der Fahrer hielt an.
+to drive | verb | to control a car | mashina haydamoq | водить машину | fahren | Can you drive? | Mashina hayday olasanmi? | Ты умеешь водить? | Kannst du Auto fahren?
+to fly | verb | to move through the air | uchmoq | летать | fliegen | Birds can fly. | Qushlar ucha oladi. | Птицы умеют летать. | Vögel können fliegen.
+to travel | verb | to go from place to place | sayohat qilmoq | путешествовать | reisen | I love to travel. | Men sayohat qilishni yaxshi ko'raman. | Я люблю путешествовать. | Ich reise gern.
+to stop | verb | to end a movement or action | to'xtamoq | останавливаться | anhalten | Stop here, please. | Iltimos, shu yerda to'xtang. | Остановитесь здесь. | Halten Sie bitte hier an.
+## travel | ✈️ | Travel | Sayohat | Путешествия
+= airport; ticket; passport; luggage; hotel; map; journey; abroad; to arrive; to leave; to book; trip; station; tourist; delay
+= sightseeing; guide; souvenir; accommodation; adventure; destination; culture; custom; backpack; flight; to explore; to pack; to check in; to miss; to get lost
+= to recommend; amazing; foreign; crowd; view; resort; reservation; departure; customs; visa; landmark; to cancel; to postpone; to commute; to board
+= to wander; breathtaking; remote; overcrowded; tourism
+## nature | 🌳 | Nature & weather | Tabiat va ob-havo | Природа и погода
+= weather; sunny; rainy; snow; wind; cloud; temperature; season; forest; river; mountain; lake; storm; warm; dry
+= climate; drought; endangered; renewable; to waste; to protect; species; flood; sustainable; to reduce; wildlife; fuel; harmful; to destroy; global warming
+sun | noun | the star that gives us light | quyosh | солнце | die Sonne | The sun is hot. | Quyosh issiq. | Солнце горячее. | Die Sonne ist heiß.
+rain | noun | water falling from clouds | yomg'ir | дождь | der Regen | I like the rain. | Menga yomg'ir yoqadi. | Мне нравится дождь. | Ich mag den Regen.
+sky | noun | the space above us with clouds | osmon | небо | der Himmel | The sky is blue. | Osmon moviy. | Небо голубое. | Der Himmel ist blau.
+sea | noun | a large area of salt water | dengiz | море | das Meer | We swam in the sea. | Biz dengizda suzdik. | Мы плавали в море. | Wir schwammen im Meer.
+beach | noun | sand next to the sea | plyaj | пляж | der Strand | The beach is empty. | Plyaj bo'sh. | Пляж пустой. | Der Strand ist leer.
+tree | noun | a tall plant with wood | daraxt | дерево | der Baum | The tree is green. | Daraxt yashil. | Дерево зелёное. | Der Baum ist grün.
+flower | noun | the colourful part of a plant | gul | цветок | die Blume | What a pretty flower! | Qanday chiroyli gul! | Какой красивый цветок! | Was für eine hübsche Blume!
+grass | noun | short green plants on the ground | o't, maysa | трава | das Gras | The grass is wet. | Maysa ho'l. | Трава мокрая. | Das Gras ist nass.
+animal | noun | a living thing that can move | hayvon | животное | das Tier | This animal is wild. | Bu hayvon yovvoyi. | Это животное дикое. | Dieses Tier ist wild.
+dog | noun | a pet that barks | it | собака | der Hund | The dog is friendly. | It mehribon. | Собака дружелюбная. | Der Hund ist freundlich.
+cat | noun | a pet that catches mice | mushuk | кошка | die Katze | The cat is asleep. | Mushuk uxlayapti. | Кошка спит. | Die Katze schläft.
+bird | noun | an animal with wings | qush | птица | der Vogel | A bird is singing. | Qush sayrayapti. | Птица поёт. | Ein Vogel singt.
+horse | noun | a large animal people ride | ot | лошадь | das Pferd | He rides a horse. | U ot minadi. | Он ездит на лошади. | Er reitet ein Pferd.
+fire | noun | the heat and light of burning | olov | огонь | das Feuer | The fire is warm. | Olov iliq. | Огонь тёплый. | Das Feuer ist warm.
+air | noun | what we breathe | havo | воздух | die Luft | The air is clean here. | Bu yerda havo toza. | Здесь чистый воздух. | Die Luft ist hier sauber.
+summer | noun | the hottest season | yoz | лето | der Sommer | Summer is here. | Yoz keldi. | Лето пришло. | Der Sommer ist da.
+winter | noun | the coldest season | qish | зима | der Winter | It snows in winter. | Qishda qor yog'adi. | Зимой идёт снег. | Im Winter schneit es.
+moon | noun | the round light in the night sky | oy (osmondagi) | луна | der Mond | The moon is full. | Oy to'lin. | Луна полная. | Es ist Vollmond.
+star | noun | a small light in the night sky | yulduz | звезда | der Stern | I can see a star. | Yulduz ko'ryapman. | Я вижу звезду. | Ich sehe einen Stern.
+hot | adjective | very warm | issiq | горячий, жаркий | heiß | The soup is hot. | Sho'rva issiq. | Суп горячий. | Die Suppe ist heiß.
+## health | 🩺 | Health | Salomatlik | Здоровье
+= headache; medicine; fever; healthy; ill; pain; to hurt; to rest; appointment; exercise; tooth; stomach; cold; nurse; to feel
+= diet; habit; stress; energy; weight; injury; treatment; symptom; to recover; to avoid; to give up; to breathe; to sweat; to sneeze; regular
+= balanced; active; unhealthy; vitamin; sleep; surgeon; operation; patient; disease; infection; vaccine; prescription; allergy; blood; heart
+= pill; to cure; to prevent; to suffer; to examine; to bleed; serious; mental; pregnant; lifestyle
+## clothes | 👗 | Clothes & appearance | Kiyim va ko'rinish | Одежда и внешность
+= jacket; skirt; sweater; boots; socks; gloves; scarf; uniform; pocket; fashion; to put on; to take off; tight; comfortable; beautiful
+## people | 😊 | People & feelings | Odamlar va hislar | Люди и чувства
+= tall; short; thin; strong; friendly; funny; kind; shy; clever; lazy; polite; beard; glasses; to look like; neighbour
+= proud; nervous; jealous; embarrassed; disappointed; grateful; lonely; anxious; relieved; confident; upset; calm; to cheer up; fear; mood
+= personality; behaviour; attitude; memory; emotion; motivation; confidence; pressure; to cope; to adapt; to concentrate; to hesitate; to realise; to imagine; aware
+= sensitive; curious; independent
+## study | 🎒 | School & study | Maktab va o'qish | Школа и учёба
+= teacher; student; lesson; homework; exam; dictionary; notebook; mistake; question; answer; to learn; to teach; to understand; to remember; easy
+= degree; scholarship; to graduate; assignment; lecture; research; knowledge; to memorize; to fail; fluent; to improve; semester; qualification
+class | noun | a group of students or a lesson | sinf, dars | класс, урок | die Klasse | Our class is big. | Sinfimiz katta. | Наш класс большой. | Unsere Klasse ist groß.
+university | noun | a place of higher study | universitet | университет | die Universität | She goes to university. | U universitetda o'qiydi. | Она учится в университете. | Sie geht zur Universität.
+page | noun | one side of paper in a book | sahifa | страница | die Seite | Open page ten. | O'ninchi sahifani oching. | Откройте страницу десять. | Öffnet Seite zehn.
+paper | noun | thin material for writing | qog'oz | бумага | das Papier | I need some paper. | Menga qog'oz kerak. | Мне нужна бумага. | Ich brauche Papier.
+pen | noun | a tool for writing with ink | ruchka | ручка | der Kugelschreiber | My pen is blue. | Ruchkam ko'k. | Моя ручка синяя. | Mein Kugelschreiber ist blau.
+language | noun | the words people speak | til | язык | die Sprache | I speak three languages. | Men uch tilda gaplashaman. | Я говорю на трёх языках. | Ich spreche drei Sprachen.
+to repeat | verb | to say or do again | takrorlamoq | повторять | wiederholen | Please repeat that. | Iltimos, buni takrorlang. | Повторите, пожалуйста. | Bitte wiederholen Sie das.
+to count | verb | to say numbers in order | sanamoq | считать | zählen | Count to ten. | O'ngacha sana. | Посчитай до десяти. | Zähl bis zehn.
+to study | verb | to spend time learning | o'qimoq, shug'ullanmoq | учиться | studieren, lernen | I study at night. | Men kechasi shug'ullanaman. | Я учусь ночью. | Ich lerne nachts.
+example | noun | something that shows what you mean | misol | пример | das Beispiel | Give an example. | Misol keltiring. | Приведите пример. | Gib ein Beispiel.
+idea | noun | a thought or plan | g'oya, fikr | идея | die Idee | That's a good idea! | Bu yaxshi fikr! | Это хорошая идея! | Das ist eine gute Idee!
+to know | verb | to have information | bilmoq | знать | wissen, kennen | I know the answer. | Men javobni bilaman. | Я знаю ответ. | Ich weiß die Antwort.
+to think | verb | to use your mind | o'ylamoq | думать | denken | I think so. | Shunday deb o'ylayman. | Я так думаю. | Ich denke schon.
+to forget | verb | to not remember | unutmoq | забывать | vergessen | I forgot your name. | Ismingizni unutibman. | Я забыл ваше имя. | Ich habe Ihren Namen vergessen.
+## work | 💼 | Work & money | Ish va pul | Работа и деньги
+= price; cheap; expensive; to pay; cash; receipt; size; customer; sale; to try on; market; to spend; bill; change; discount
+= salary; colleague; to hire; interview; experience; deadline; to apply; skill; boss; career; to resign; meeting; to earn; employee; promotion
+= profit; investment; to negotiate; budget; to launch; loan; debt; to afford; supply; demand; contract; to invest; manager; staff; responsibility
+= task; strategy; report; project; feedback; schedule; to achieve; to organise; to cooperate; to motivate; efficient; flexible; experienced; economy; consumer
+job | noun | work you do for money | ish, kasb | работа | die Stelle | She has a new job. | Uning yangi ishi bor. | У неё новая работа. | Sie hat eine neue Stelle.
+office | noun | a room where people work at desks | ofis | офис | das Büro | The office is closed. | Ofis yopiq. | Офис закрыт. | Das Büro ist geschlossen.
+company | noun | a business organisation | kompaniya | компания | die Firma | The company is growing. | Kompaniya o'syapti. | Компания растёт. | Die Firma wächst.
+business | noun | making and selling things | biznes, tadbirkorlik | бизнес | das Geschäft | Business is good. | Biznes yaxshi. | Бизнес идёт хорошо. | Das Geschäft läuft gut.
+to sell | verb | to give something for money | sotmoq | продавать | verkaufen | He sells cars. | U mashina sotadi. | Он продаёт машины. | Er verkauft Autos.
+to save | verb | to keep money or make safe | tejamoq; qutqarmoq | экономить; спасать | sparen; retten | I want to save money. | Men pul tejamoqchiman. | Я хочу сэкономить. | Ich will Geld sparen.
+free | adjective | costing nothing, or not busy | bepul; bo'sh | бесплатный; свободный | kostenlos; frei | Are you free today? | Bugun bo'shmisan? | Ты сегодня свободен? | Bist du heute frei?
+worker | noun | a person who works | ishchi | рабочий | der Arbeiter | The workers are tired. | Ishchilar charchadi. | Рабочие устали. | Die Arbeiter sind müde.
+## tech | 💻 | Technology & media | Texnologiya va media | Технологии и медиа
+= device; to download; password; screen; battery; to charge; software; to search; website; to delete; account; wireless; to update; online; inventor
+= experiment; laboratory; discovery; theory; data; robot; artificial intelligence; engineer; innovation; to invent; to measure; to prove; to observe; to develop; scientific
+= advanced; digital; headline; journalist; to broadcast; advertisement; audience; reliable; to persuade; opinion; rumour; to influence; issue; to argue; privacy
+= social media
+computer | noun | an electronic machine for work and games | kompyuter | компьютер | der Computer | My computer is fast. | Kompyuterim tez. | Мой компьютер быстрый. | Mein Computer ist schnell.
+message | noun | information you send | xabar | сообщение | die Nachricht | I got your message. | Xabaringni oldim. | Я получил твоё сообщение. | Ich habe deine Nachricht bekommen.
+news | noun | information about recent events | yangilik | новости | die Nachrichten | Is there any news? | Yangilik bormi? | Есть новости? | Gibt es Nachrichten?
+newspaper | noun | printed pages with news | gazeta | газета | die Zeitung | He reads a newspaper. | U gazeta o'qiydi. | Он читает газету. | Er liest eine Zeitung.
+television | noun | a screen for watching programmes | televizor | телевизор | der Fernseher | Turn off the television. | Televizorni o'chir. | Выключи телевизор. | Mach den Fernseher aus.
+picture | noun | a drawing, painting or photo | rasm | картинка, фото | das Bild | I like this picture. | Bu rasm menga yoqadi. | Мне нравится эта картина. | Ich mag dieses Bild.
+to call | verb | to phone someone | qo'ng'iroq qilmoq | звонить | anrufen | Call me later. | Keyinroq qo'ng'iroq qil. | Позвони мне позже. | Ruf mich später an.
+to send | verb | to make something go to someone | yubormoq | отправлять | schicken | Send me a photo. | Menga rasm yubor. | Пришли мне фото. | Schick mir ein Foto.
+machine | noun | a thing with parts that does work | mashina, qurilma | машина, устройство | die Maschine | The machine is loud. | Qurilma shovqinli. | Машина шумная. | Die Maschine ist laut.
+## leisure | 🎬 | Free time, art & sport | Bo'sh vaqt, san'at va sport | Досуг, искусство и спорт
+= hobby; guitar; camera; concert; film; picnic; painting; chess; to dance; to sing; to swim; to draw; to collect; to relax; free time
+= actor; audience member; stage; performance; band; song; exhibition; artist; novel; character; plot; scene; review; ticket office; to perform
+= to clap; to record; famous; boring; exciting; team; match; coach; player; competition; score; stadium; gym; goal; medal
+= fan; to win; to lose; to train; to score; to beat; to join; fit; professional; race; poetry; literature; heritage; tradition; gallery
+= author; theatre; festival; to create; to express; to inspire; to admire; classical; original; creative; contemporary
+music | noun | sounds that are nice to hear | musiqa | музыка | die Musik | I love music. | Men musiqani yaxshi ko'raman. | Я люблю музыку. | Ich liebe Musik.
+game | noun | something you play | o'yin | игра | das Spiel | Let's play a game. | O'yin o'ynaymiz. | Давай сыграем в игру. | Lass uns ein Spiel spielen.
+story | noun | a description of events | hikoya | история, рассказ | die Geschichte | Tell me a story. | Menga hikoya aytib ber. | Расскажи мне историю. | Erzähl mir eine Geschichte.
+party | noun | a fun event with friends | ziyofat | вечеринка | die Party | The party was fun. | Ziyofat zo'r bo'ldi. | Вечеринка была весёлой. | Die Party war lustig.
+holiday | noun | a time without work or school | ta'til, bayram | каникулы, праздник | der Urlaub | We are on holiday. | Biz ta'tildamiz. | Мы в отпуске. | Wir sind im Urlaub.
+to listen | verb | to pay attention to sounds | tinglamoq | слушать | zuhören | Listen to me! | Menga quloq sol! | Послушай меня! | Hör mir zu!
+to watch | verb | to look at something for some time | tomosha qilmoq | смотреть | anschauen | We watched a film. | Biz film ko'rdik. | Мы посмотрели фильм. | Wir haben einen Film angeschaut.
+to visit | verb | to go to see a person or place | tashrif buyurmoq | посещать | besuchen | Come and visit us! | Bizni ko'rgani kel! | Приезжай к нам в гости! | Komm uns besuchen!
+## society | 🏛️ | Society & law | Jamiyat va qonun | Общество и закон
+= suspect; witness; victim; trial; judge; lawyer; sentence; fine; theft; to arrest; to accuse; to commit; to investigate; to punish; to deny
+= guilty; innocent; illegal; poverty; unemployment; homeless; charity; equality; discrimination; population; immigrant; violence; generation; rights; to protest
+= to donate; to solve; to tackle; to increase; elderly; disabled; fair; policy; authority; majority
+## verbs | 🏃 | Key verbs | Asosiy fe'llar | Ключевые глаголы
+= to manage; to decide; to suggest; to prefer; to expect; to explain; to describe; to compare; to borrow; to lend; to look after; to look forward to; to find out; to turn down; to set up
+= to take part; to happen; to agree; to refuse; to warn; to require; to obtain; to maintain; to ensure; to involve; to consider; to estimate; to identify; to reveal; to replace
+= to struggle; to emerge; to attract; to encourage; to deserve; to admit; to remind; to approve; to assume; to affect; to contribute; to rely; to rise; to drop; to remain
+= to double; to determine; to establish
+to have | verb | to own something | ega bo'lmoq, bor bo'lmoq | иметь | haben | I have two cats. | Mening ikkita mushugim bor. | У меня две кошки. | Ich habe zwei Katzen.
+to do | verb | to act; to perform an action | qilmoq | делать | tun | What do you do? | Nima ish qilasan? | Чем ты занимаешься? | Was tust du?
+to make | verb | to produce something | yasamoq, tayyorlamoq | делать, создавать | machen | I made tea. | Men choy damladim. | Я сделал чай. | Ich habe Tee gemacht.
+to give | verb | to put something in someone's hands | bermoq | давать | geben | Give me your hand. | Qo'lingni ber. | Дай мне руку. | Gib mir deine Hand.
+to take | verb | to get something with your hands | olmoq | брать | nehmen | Take this bag. | Bu sumkani ol. | Возьми эту сумку. | Nimm diese Tasche.
+to get | verb | to receive or obtain | olmoq, ega bo'lmoq | получать | bekommen | I got a letter. | Men xat oldim. | Я получил письмо. | Ich habe einen Brief bekommen.
+to want | verb | to wish to have | xohlamoq | хотеть | wollen | I want some water. | Men suv xohlayman. | Я хочу воды. | Ich will Wasser.
+to need | verb | to be unable to do without something | muhtoj bo'lmoq | нуждаться | brauchen | We need help. | Bizga yordam kerak. | Нам нужна помощь. | Wir brauchen Hilfe.
+to like | verb | to enjoy or find nice | yoqtirmoq | нравиться, любить | mögen | I like tea. | Menga choy yoqadi. | Мне нравится чай. | Ich mag Tee.
+to look | verb | to turn your eyes to something | qaramoq | смотреть (куда-то) | schauen | Look at that! | Anavinga qara! | Посмотри на это! | Schau dir das an!
+to hear | verb | to notice a sound | eshitmoq | слышать | hören | Can you hear me? | Meni eshityapsanmi? | Ты меня слышишь? | Hörst du mich?
+to tell | verb | to give information by speaking | aytib bermoq | рассказывать | erzählen | Tell me the truth. | Menga rostini ayt. | Скажи мне правду. | Erzähl mir die Wahrheit.
+to ask | verb | to say a question | so'ramoq | спрашивать | fragen | Ask your teacher. | O'qituvchingdan so'ra. | Спроси учителя. | Frag deinen Lehrer.
+to say | verb | to speak words | aytmoq | сказать | sagen | What did you say? | Nima deding? | Что ты сказал? | Was hast du gesagt?
+to talk | verb | to have a conversation | suhbatlashmoq | разговаривать | reden | We need to talk. | Gaplashishimiz kerak. | Нам нужно поговорить. | Wir müssen reden.
+to put | verb | to move something to a place | qo'ymoq | класть | legen, stellen | Put it on the table. | Uni stolga qo'y. | Положи это на стол. | Leg es auf den Tisch.
+to find | verb | to see something you were looking for | topmoq | находить | finden | I can't find my key. | Kalitimni topolmayapman. | Я не могу найти ключ. | Ich finde meinen Schlüssel nicht.
+to keep | verb | to have and not give away | saqlamoq | хранить | behalten | Keep the change. | Qaytimini olib qoling. | Сдачи не надо. | Behalten Sie den Rest.
+to bring | verb | to carry something to a place | olib kelmoq | приносить | bringen | Bring your book. | Kitobingni olib kel. | Принеси свою книгу. | Bring dein Buch mit.
+to show | verb | to let someone see | ko'rsatmoq | показывать | zeigen | Show me the way. | Menga yo'lni ko'rsat. | Покажи мне дорогу. | Zeig mir den Weg.
+to meet | verb | to come together with someone | uchrashmoq | встречать | treffen | Let's meet at six. | Oltida uchrashaylik. | Встретимся в шесть. | Treffen wir uns um sechs.
+to try | verb | to make an effort | harakat qilmoq, urinmoq | пытаться | versuchen | Try again! | Yana urinib ko'r! | Попробуй ещё раз! | Versuch es noch einmal!
+to become | verb | to begin to be | bo'lmoq, aylanmoq | становиться | werden | She became a doctor. | U shifokor bo'ldi. | Она стала врачом. | Sie wurde Ärztin.
+to build | verb | to make a house or other structure | qurmoq | строить | bauen | They built a bridge. | Ular ko'prik qurdi. | Они построили мост. | Sie haben eine Brücke gebaut.
+to break | verb | to damage into pieces | sindirmoq | ломать | zerbrechen | I broke a glass. | Men stakan sindirdim. | Я разбил стакан. | Ich habe ein Glas zerbrochen.
+to catch | verb | to take something moving | ushlamoq | ловить | fangen | Catch the ball! | To'pni ushla! | Лови мяч! | Fang den Ball!
+to choose | verb | to decide which one you want | tanlamoq | выбирать | auswählen | Choose a colour. | Rang tanla. | Выбери цвет. | Wähl eine Farbe aus.
+to hold | verb | to have in your hand | ushlab turmoq | держать | halten | Hold my bag, please. | Iltimos, sumkamni ushlab tur. | Подержи мою сумку. | Halt bitte meine Tasche.
+to hope | verb | to want something to happen | umid qilmoq | надеяться | hoffen | I hope you win. | Yutishingga umid qilaman. | Надеюсь, ты выиграешь. | Ich hoffe, du gewinnst.
+to believe | verb | to think that something is true | ishonmoq | верить | glauben | I believe you. | Men senga ishonaman. | Я тебе верю. | Ich glaube dir.
+to follow | verb | to go after someone | ergashmoq | следовать | folgen | Follow me, please. | Iltimos, ortimdan yuring. | Следуйте за мной. | Folgen Sie mir bitte.
+to grow | verb | to become bigger | o'smoq | расти | wachsen | Plants grow fast. | O'simliklar tez o'sadi. | Растения быстро растут. | Pflanzen wachsen schnell.
+to throw | verb | to send through the air by hand | otmoq | бросать | werfen | Throw me the ball. | Menga to'pni ot. | Брось мне мяч. | Wirf mir den Ball zu.
+to pull | verb | to move something towards you | tortmoq | тянуть | ziehen | Pull the door. | Eshikni tort. | Потяни дверь. | Zieh an der Tür.
+to push | verb | to move something away from you | itarmoq | толкать | schieben, drücken | Push the button. | Tugmani bos. | Нажми кнопку. | Drück den Knopf.
+to carry | verb | to hold and take somewhere | ko'tarib yurmoq | нести | tragen | I'll carry your bag. | Sumkangni ko'tarib boraman. | Я понесу твою сумку. | Ich trage deine Tasche.
+to fall | verb | to drop down | yiqilmoq | падать | fallen, hinfallen | Be careful, don't fall. | Ehtiyot bo'l, yiqilma. | Осторожно, не упади. | Pass auf, fall nicht hin.
+to touch | verb | to put your hand on something | tegmoq | трогать | berühren | Don't touch it! | Unga tegma! | Не трогай это! | Berühr das nicht!
+to mean | verb | to have a meaning | anglatmoq | означать | bedeuten | What does it mean? | Bu nimani anglatadi? | Что это значит? | Was bedeutet das?
+to stay | verb | to not leave | qolmoq | оставаться | bleiben | Stay here with me. | Men bilan shu yerda qol. | Останься здесь со мной. | Bleib hier bei mir.
+to return | verb | to come or give back | qaytmoq, qaytarmoq | возвращаться | zurückkehren | She returned home. | U uyga qaytdi. | Она вернулась домой. | Sie kehrte nach Hause zurück.
+to add | verb | to put something with other things | qo'shmoq | добавлять | hinzufügen | Add some salt. | Ozgina tuz qo'sh. | Добавь соли. | Füg etwas Salz hinzu.
+to allow | verb | to let someone do something | ruxsat bermoq | разрешать | erlauben | Dogs are not allowed. | Itlarga ruxsat yo'q. | С собаками нельзя. | Hunde sind nicht erlaubt.
+to invite | verb | to ask someone to come | taklif qilmoq | приглашать | einladen | I invited my friends. | Do'stlarimni taklif qildim. | Я пригласил друзей. | Ich habe meine Freunde eingeladen.
+to promise | verb | to say you will surely do it | va'da bermoq | обещать | versprechen | I promise to call. | Qo'ng'iroq qilishga va'da beraman. | Обещаю позвонить. | Ich verspreche anzurufen.
+to worry | verb | to feel afraid of problems | xavotirlanmoq | беспокоиться | sich Sorgen machen | Don't worry! | Xavotir olma! | Не волнуйся! | Mach dir keine Sorgen!
+to die | verb | to stop living | o'lmoq | умирать | sterben | The plant died. | O'simlik qurib qoldi. | Растение погибло. | Die Pflanze ist gestorben.
+to seem | verb | to look as if | tuyulmoq, ko'rinmoq | казаться | scheinen | He seems nice. | U yaxshi odam ko'rinadi. | Он кажется приятным. | Er scheint nett zu sein.
+## adjectives | 🎨 | Describing words | Tasvirlovchi so'zlar | Описательные слова
+= obvious; rare; huge; tiny; ancient; modern; ordinary; unusual; complicated; essential; valuable; impressive; disgusting; terrible; gorgeous
+= smooth; rough; brilliant; sharp; slight; widespread
+important | adjective | having great value or effect | muhim | важный | wichtig | This is important. | Bu muhim. | Это важно. | Das ist wichtig.
+interesting | adjective | holding your attention | qiziqarli | интересный | interessant | The book is interesting. | Kitob qiziqarli. | Книга интересная. | Das Buch ist interessant.
+difficult | adjective | not easy | qiyin | трудный | schwierig | The test was difficult. | Test qiyin edi. | Тест был трудным. | Der Test war schwierig.
+possible | adjective | that can happen | mumkin | возможный | möglich | Is it possible? | Bu mumkinmi? | Это возможно? | Ist das möglich?
+ready | adjective | prepared | tayyor | готовый | bereit | Are you ready? | Tayyormisan? | Ты готов? | Bist du bereit?
+busy | adjective | having a lot to do | band | занятый | beschäftigt | I'm busy now. | Hozir bandman. | Я сейчас занят. | Ich bin gerade beschäftigt.
+quiet | adjective | making little noise | jim, tinch | тихий | leise | The room is quiet. | Xona jimjit. | В комнате тихо. | Das Zimmer ist leise.
+loud | adjective | making much noise | baland (ovoz) | громкий | laut | The music is too loud. | Musiqa juda baland. | Музыка слишком громкая. | Die Musik ist zu laut.
+heavy | adjective | weighing a lot | og'ir | тяжёлый | schwer | This box is heavy. | Bu quti og'ir. | Эта коробка тяжёлая. | Diese Kiste ist schwer.
+light | adjective | not heavy, or not dark | yengil; yorug' | лёгкий; светлый | leicht; hell | My bag is light. | Sumkam yengil. | Моя сумка лёгкая. | Meine Tasche ist leicht.
+dark | adjective | with little or no light | qorong'i | тёмный | dunkel | It's dark outside. | Tashqari qorong'i. | На улице темно. | Es ist dunkel draußen.
+full | adjective | with no space left | to'la | полный | voll | The glass is full. | Stakan to'la. | Стакан полон. | Das Glas ist voll.
+empty | adjective | with nothing inside | bo'sh | пустой | leer | The box is empty. | Quti bo'sh. | Коробка пустая. | Die Kiste ist leer.
+deep | adjective | going far down | chuqur | глубокий | tief | The lake is deep. | Ko'l chuqur. | Озеро глубокое. | Der See ist tief.
+wide | adjective | large from side to side | keng | широкий | breit | The river is wide. | Daryo keng. | Река широкая. | Der Fluss ist breit.
+long | adjective | not short | uzun | длинный | lang | Her hair is long. | Uning sochi uzun. | У неё длинные волосы. | Ihr Haar ist lang.
+high | adjective | far above the ground | baland | высокий | hoch | The wall is high. | Devor baland. | Стена высокая. | Die Wand ist hoch.
+low | adjective | near the ground; not high | past | низкий | niedrig | The price is low. | Narxi past. | Цена низкая. | Der Preis ist niedrig.
+fast | adjective | moving quickly | tez | быстрый | schnell | He has a fast car. | Uning mashinasi tez. | У него быстрая машина. | Er hat ein schnelles Auto.
+slow | adjective | not fast | sekin | медленный | langsam | The internet is slow. | Internet sekin. | Интернет медленный. | Das Internet ist langsam.
+hard | adjective | not soft, or not easy | qattiq; qiyin | твёрдый; трудный | hart | The bed is hard. | Karavot qattiq. | Кровать жёсткая. | Das Bett ist hart.
+soft | adjective | not hard | yumshoq | мягкий | weich | The pillow is soft. | Yostiq yumshoq. | Подушка мягкая. | Das Kissen ist weich.
+rich | adjective | having a lot of money | boy | богатый | reich | His uncle is rich. | Uning amakisi boy. | Его дядя богат. | Sein Onkel ist reich.
+poor | adjective | having little money | kambag'al | бедный | arm | They were very poor. | Ular juda kambag'al edi. | Они были очень бедны. | Sie waren sehr arm.
+safe | adjective | not in danger | xavfsiz | безопасный | sicher | You are safe here. | Bu yerda xavfsizsan. | Здесь ты в безопасности. | Hier bist du sicher.
+dangerous | adjective | able to hurt you | xavfli | опасный | gefährlich | The road is dangerous. | Yo'l xavfli. | Дорога опасная. | Die Straße ist gefährlich.
+special | adjective | not ordinary | maxsus, alohida | особенный | besondere | Today is a special day. | Bugun alohida kun. | Сегодня особенный день. | Heute ist ein besonderer Tag.
+strange | adjective | unusual and surprising | g'alati | странный | seltsam | I had a strange dream. | G'alati tush ko'rdim. | Мне приснился странный сон. | Ich hatte einen seltsamen Traum.
+true | adjective | right and real | rost | правдивый, верный | wahr | Is it true? | Bu rostmi? | Это правда? | Ist das wahr?
+sure | adjective | certain; having no doubt | ishonchi komil | уверенный | sicher (überzeugt) | Are you sure? | Ishonching komilmi? | Ты уверен? | Bist du sicher?
+afraid | adjective | feeling fear | qo'rqqan | испуганный | ängstlich | I'm afraid of dogs. | Men itlardan qo'rqaman. | Я боюсь собак. | Ich habe Angst vor Hunden.
+angry | adjective | feeling that you want to shout | jahldor | сердитый | wütend | Why are you angry? | Nega jahling chiqdi? | Почему ты сердишься? | Warum bist du wütend?
+sad | adjective | not happy | g'amgin | грустный | traurig | She looks sad. | U g'amgin ko'rinadi. | Она выглядит грустной. | Sie sieht traurig aus.
+careful | adjective | paying attention to avoid danger | ehtiyotkor | осторожный | vorsichtig | Be careful! | Ehtiyot bo'l! | Осторожно! | Sei vorsichtig!
+dirty | adjective | not clean | iflos | грязный | schmutzig | My shoes are dirty. | Tuflim iflos. | Мои туфли грязные. | Meine Schuhe sind schmutzig.
+popular | adjective | liked by many people | mashhur, ommabop | популярный | beliebt | This song is popular. | Bu qo'shiq mashhur. | Эта песня популярна. | Dieses Lied ist beliebt.
+simple | adjective | easy to understand | oddiy | простой | einfach | The rule is simple. | Qoida oddiy. | Правило простое. | Die Regel ist einfach.
+wonderful | adjective | very good | ajoyib | чудесный | wunderbar | It was a wonderful day. | Ajoyib kun bo'ldi. | Это был чудесный день. | Es war ein wunderbarer Tag.
+## small | 🔗 | Small but useful words | Kichik, ammo foydali so'zlar | Маленькие полезные слова
+= however; therefore; although; despite; unless; in addition; for instance; as a result; due to; according to; overall; meanwhile; eventually; on the other hand; advantage
+= factor; impact
+very | adverb | to a high degree | juda | очень | sehr | It's very cold. | Juda sovuq. | Очень холодно. | Es ist sehr kalt.
+already | adverb | before now | allaqachon | уже | schon | I've already eaten. | Men allaqachon yedim. | Я уже поел. | Ich habe schon gegessen.
+still | adverb | continuing until now | hali ham | всё ещё | immer noch | He is still asleep. | U hali ham uxlayapti. | Он всё ещё спит. | Er schläft immer noch.
+again | adverb | one more time | yana | снова | wieder | Say it again. | Yana ayt. | Скажи ещё раз. | Sag es noch einmal.
+almost | adverb | nearly | deyarli | почти | fast, beinahe | I'm almost ready. | Men deyarli tayyorman. | Я почти готов. | Ich bin fast fertig.
+together | adverb | with each other | birga | вместе | zusammen | Let's go together. | Birga boraylik. | Пойдём вместе. | Gehen wir zusammen.
+perhaps | adverb | maybe | balki | возможно | vielleicht | Perhaps he is ill. | Balki u kasaldir. | Возможно, он болен. | Vielleicht ist er krank.
+soon | adverb | in a short time | tez orada | скоро | bald | See you soon! | Tez orada ko'rishamiz! | До скорого! | Bis bald!
+usually | adverb | most of the time | odatda | обычно | normalerweise | I usually get up early. | Odatda erta turaman. | Обычно я встаю рано. | Normalerweise stehe ich früh auf.
+here | adverb | in this place | shu yerda | здесь | hier | Come here! | Bu yerga kel! | Иди сюда! | Komm hierher!
+there | adverb | in that place | u yerda | там | dort | Sit there, please. | Iltimos, u yerga o'tiring. | Сядьте, пожалуйста, туда. | Setzen Sie sich bitte dorthin.
+outside | adverb | not in a building | tashqarida | снаружи | draußen | The kids are outside. | Bolalar tashqarida. | Дети на улице. | Die Kinder sind draußen.
+inside | adverb | in a building or thing | ichkarida | внутри | drinnen | Wait inside. | Ichkarida kut. | Подожди внутри. | Warte drinnen.
+before | preposition | earlier than | oldin | до, перед | vor (zeitlich) | Wash your hands before lunch. | Tushlikdan oldin qo'lingni yuv. | Мой руки перед обедом. | Wasch dir vor dem Essen die Hände.
+after | preposition | later than | keyin | после | nach | Come after six. | Oltidan keyin kel. | Приходи после шести. | Komm nach sechs.
+between | preposition | in the space separating two things | orasida | между | zwischen | Sit between us. | Oramizga o'tir. | Сядь между нами. | Setz dich zwischen uns.
+behind | preposition | at the back of | orqasida | за, позади | hinter | He is behind the door. | U eshik orqasida. | Он за дверью. | Er ist hinter der Tür.
+under | preposition | below | ostida | под | unter | The cat is under the bed. | Mushuk karavot ostida. | Кошка под кроватью. | Die Katze ist unter dem Bett.
+without | preposition | not having | ...siz | без | ohne | Tea without sugar, please. | Shakarsiz choy bering. | Чай без сахара, пожалуйста. | Tee ohne Zucker, bitte.
+because | conjunction | for the reason that | chunki | потому что | weil | I'm late because of you. | Sen tufayli kechikdim. | Я опоздал из-за тебя. | Ich bin wegen dir zu spät.
+enough | adverb | as much as is needed | yetarli | достаточно | genug | That's enough, thanks. | Yetarli, rahmat. | Достаточно, спасибо. | Das ist genug, danke.

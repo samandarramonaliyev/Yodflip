@@ -32,6 +32,8 @@ def item_from_word(w: Word) -> dict:
         "example_uz": w.example_uz,
         "example_tr": w.example_uz,
         "translation_lang": "uz",
+        "collocations": w.collocations,
+        "word_family": w.word_family,
     }
 
 
@@ -145,6 +147,12 @@ def _raw_items(user, track: str, source: str, params: dict, day: date | None = N
         if level not in LEVELS:
             raise ValidationError({"level": "invalid_level"})
         items = [item_from_word(w) for w in found_words(user, track, level)]
+    elif source == "examreview":
+        # Practise words of an exam pack (found or not), e.g. the weak topics of a simulation.
+        from exams.services import get_pack, pack_words
+
+        pack = get_pack(params.get("pack") or "", track)
+        items = [item_from_word(w) for w in pack_words(pack, params.get("topic") or "")]
     elif source == "deck":
         deck = get_object_or_404(Deck, pk=params.get("id"))
         if deck.owner_id != user.id and not deck.is_public:

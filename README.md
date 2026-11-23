@@ -12,6 +12,12 @@ Vocabulary games for Uzbek-speaking learners of **English** and **German**, as a
 - 🔥 XP, levels, streaks, badges, leaderboards. UI in Uzbek (default), English and Russian. Light/dark themes plus Telegram theme colours.
 - 🤖 Telegram bot (`/start`, `/daily`, `/stats`, `/review`, `/remind`) running **inside Django** in webhook mode.
 
+## Friends, bot quiz and exam packs
+
+- **Duel** (`/duel`, `backend/duels`): 10 frozen words, server-side answers and timing, guest play, rematch, referrals.
+- **Bot quiz** (`/quiz` in the bot, `backend/botquiz`): one message edited in place; hourly cron `/bot/cron/<secret>/quiz/`.
+- **Exam packs** (`/exams`, `backend/exams`): Goethe A1/A2/B1, IELTS Academic, Core 1000 (original, unofficial lists) with topics, all games, a daily goal and an exam simulation.
+
 ## Architecture
 
 One deployable service: **Django serves the API, the built React app and the Telegram bot webhook.**

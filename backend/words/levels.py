@@ -130,23 +130,39 @@ def _usable_qs(track: str, level: str, game: str = "", pack: str = ""):
 def build_round(
     user, track: str, level: str, size: int, *, game: str = "", pack: str = "", rng: random.Random | None = None
 ) -> Round:
+    level_ids = list(Word.objects.filter(track=track, level=level).values_list("id", flat=True))
+    pool = list(_usable_qs(track, level, game, pack).values_list("id", flat=True))
+    return assemble_round(user, track, level_ids, pool, size, game=game, level=level, rng=rng)
+
+
+def assemble_round(
+    user,
+    track: str,
+    all_ids: list[int],
+    pool: list[int],
+    size: int,
+    *,
+    game: str = "",
+    level: str = "",
+    exam: str = "",
+    topic: str = "",
+    rng: random.Random | None = None,
+) -> Round:
+    """Shared by levels and exam packs: unfound words first, found words only as fillers."""
     rng = rng or random.Random()
     size = max(MIN_ROUND, min(MAX_ROUND, size))
     states = {
         r["word_id"]: r
-        for r in UserLevelWord.objects.filter(user=user, track=track, level=level).values(
+        for r in UserLevelWord.objects.filter(user=user, word_id__in=all_ids).values(
             "word_id", "found_at", "filler_uses"
         )
     }
-    level_ids = list(Word.objects.filter(track=track, level=level).values_list("id", flat=True))
-    if level_ids and all(states.get(i, {}).get("found_at") for i in level_ids):
+    if all_ids and all(states.get(i, {}).get("found_at") for i in all_ids):
         return Round(session_id=None, completed=True)
 
-    pool = list(_usable_qs(track, level, game, pack).values_list("id", flat=True))
     recent: set[int] = set()
-    for ids in LevelRound.objects.filter(user=user, track=track, level=level).values_list("word_ids", flat=True)[
-        :RECENT_ROUNDS
-    ]:
+    rounds = LevelRound.objects.filter(user=user, track=track, level=level, exam=exam)
+    for ids in rounds.values_list("word_ids", flat=True)[:RECENT_ROUNDS]:
         recent.update(ids)
 
     def fresh_first(ids: list[int]) -> list[int]:
@@ -169,22 +185,28 @@ def build_round(
     rng.shuffle(ids)
 
     now = timezone.now()
+    by_id = Word.objects.select_related("pack").in_bulk(ids)
     with transaction.atomic():
         rnd = LevelRound.objects.create(
             session_id=uuid.uuid4().hex,
             user=user,
             track=track,
             level=level,
+            exam=exam,
+            topic=topic[:200],
             game=game[:30],
             word_ids=ids,
             filler_ids=fillers,
         )
         UserLevelWord.objects.bulk_create(
-            [UserLevelWord(user=user, word_id=i, track=track, level=level) for i in chosen if i not in states],
+            [
+                UserLevelWord(user=user, word_id=i, track=track, level=by_id[i].level)
+                for i in chosen
+                if i not in states and i in by_id
+            ],
             ignore_conflicts=True,
         )
         UserLevelWord.objects.filter(user=user, word_id__in=ids).update(last_shown_at=now)
-    by_id = Word.objects.select_related("pack").in_bulk(ids)
     return Round(session_id=rnd.session_id, words=[by_id[i] for i in ids if i in by_id], filler_ids=set(fillers))
 
 
@@ -257,7 +279,13 @@ def record_answers(user, rnd: LevelRound, answers: list[tuple[int, bool]]) -> di
             elif first and not UserLevelWord.objects.filter(user=user, word=w, found_at__isnull=False).exists():
                 _mark_missed(user, w, now)
 
-        row, completed_now, bonus = check_completion(user, rnd.track, rnd.level)
+        found = [words[i] for i in new_found]
+        if rnd.exam:
+            settle_found(user, found)
+            row, completed_now, bonus = round_progress(user, rnd), False, 0
+        else:
+            row, completed_now, bonus = check_completion(user, rnd.track, rnd.level)
+            _exam_badges(user, found)
     return {
         "session_id": rnd.session_id,
         "new_found": new_found,
@@ -287,10 +315,27 @@ def check_completion(user, track: str, level: str) -> tuple[dict, bool, int]:
     return row, True, COMPLETION_BONUS_XP
 
 
+def round_progress(user, rnd: LevelRound) -> dict:
+    """Progress of the level or exam pack a round belongs to."""
+    if rnd.exam:
+        from exams.services import progress_row
+
+        return progress_row(user, rnd.track, rnd.exam)
+    return level_progress(user, rnd.track, rnd.level)
+
+
+def _exam_badges(user, words: list[Word]) -> None:
+    if words:
+        from exams.services import award_badges
+
+        award_badges(user, [w.id for w in words])
+
+
 def settle_found(user, words: list[Word]) -> None:
-    """After words were found outside a round of their own level: level completion bonuses."""
+    """After words were found anywhere: level completion bonuses and exam pack badges."""
     for track, level in {(w.track, w.level) for w in words if w.level}:
         check_completion(user, track, level)
+    _exam_badges(user, words)
 
 
 def mark_found(user, w: Word, rnd: LevelRound | None = None) -> bool:

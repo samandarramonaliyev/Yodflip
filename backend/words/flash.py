@@ -18,7 +18,7 @@ from django.utils import timezone
 from rest_framework.exceptions import NotFound
 
 from . import leitner
-from .levels import check_completion, mark_found
+from .levels import check_completion, mark_found, settle_found
 from .models import FlashAnswer, LevelRound, UserLevelWord, UserWord, Word, term_key
 from .services import upsert_userword
 
@@ -100,8 +100,10 @@ def answer(user, *, client_id: str, track: str, item: dict, known: bool, card_id
 
         result = {"term": uw.term, "known": known, "lists": list_flags(uw), "level_found_now": bool(found_now)}
         if found_now:
-            row, completed_now, bonus = check_completion(user, word.track, word.level)
-            result.update({"level_progress": row, "completed_now": completed_now, "bonus_xp": bonus})
+            if word.level:
+                row, completed_now, bonus = check_completion(user, word.track, word.level)
+                result.update({"level_progress": row, "completed_now": completed_now, "bonus_xp": bonus})
+            settle_found(user, [word])
         fa = FlashAnswer.objects.create(
             user=user,
             client_id=client_id,

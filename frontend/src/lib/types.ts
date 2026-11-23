@@ -43,7 +43,10 @@ export interface PackRow {
 
 /** Server-side level progress (found words). */
 export interface LevelProgress {
-  level: Cefr
+  /** CEFR level, or the pack slug in exam pack rounds */
+  level: string
+  exam?: string
+  name?: Record<UiLang, string>
   total: number
   found: number
   learned: number

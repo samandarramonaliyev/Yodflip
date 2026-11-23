@@ -25,6 +25,9 @@ const Play = lazy(() => import('./pages/Play'))
 const Leaderboard = lazy(() => import('./pages/Leaderboard'))
 const Profile = lazy(() => import('./pages/Profile'))
 const Lists = lazy(() => import('./pages/Lists'))
+const Exams = lazy(() => import('./pages/Exams'))
+const ExamPage = lazy(() => import('./pages/ExamPage'))
+const ExamSim = lazy(() => import('./pages/ExamSim'))
 const DuelHub = lazy(() => import('./pages/DuelHub'))
 const DuelPage = lazy(() => import('./pages/DuelPage'))
 
@@ -117,6 +120,9 @@ export default function App() {
               <Route path="/duel/:code" element={<DuelPage />} />
               <Route path="/duel" element={<RequireAuth><DuelHub /></RequireAuth>} />
               <Route path="/" element={<RequireAuth><Home /></RequireAuth>} />
+              <Route path="/exams" element={<RequireAuth><Exams /></RequireAuth>} />
+              <Route path="/exams/:slug" element={<RequireAuth><ExamPage /></RequireAuth>} />
+              <Route path="/exams/:slug/simulation" element={<RequireAuth><ExamSim /></RequireAuth>} />
               <Route path="/levels" element={<RequireAuth><Levels /></RequireAuth>} />
               <Route path="/levels/:level" element={<RequireAuth><LevelPage /></RequireAuth>} />
               <Route path="/scan" element={<RequireAuth><Scan /></RequireAuth>} />

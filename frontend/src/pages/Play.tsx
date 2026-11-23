@@ -1,7 +1,7 @@
 import { ArrowLeft, ChevronDown, Play as PlayIcon } from 'lucide-react'
 import { lazy, Suspense, useCallback, useEffect, useReducer, useRef, useState } from 'react'
 import { Link, useNavigate, useParams, useSearchParams } from 'react-router-dom'
-import { LevelComplete, LevelRoundSummary } from '../components/LevelProgress'
+import { ExamComplete, LevelComplete, LevelRoundSummary } from '../components/LevelProgress'
 import { Results, RoundComplete } from '../components/Results'
 import { SourcePicker, type SourceChoice } from '../components/SourcePicker'
 import { TranslationPicker, type PickerChoice } from '../components/TranslationPicker'
@@ -219,20 +219,22 @@ function Runner({ game, source, params, onChangeLang }: { game: GameId; source: 
   const [session, dispatch] = useReducer(sessionReducer, createSession([]))
   const [daily, setDaily] = useState<{ already_played?: boolean; my_score?: number | null; score?: number }>({})
   const submitted = useRef(new Set<string>())
-  const isLevel = source === 'level'
+  const isExam = source === 'exam'
+  const isLevel = source === 'level' || isExam // server-built rounds: found = learned
   const [levelRound, setLevelRound] = useState<LevelState>({ sessionId: null, before: null, outcome: null })
   const sessionRef = useRef<string | null>(null)
 
   const fetchItems = useCallback(async () => {
     setLoad('loading')
     try {
-      if (source === 'level') {
+      if (isLevel) {
         // FOUND = LEARNED: the server builds every level round (unfound words first, "takror" fillers last).
         const size = game === 'match' ? BOARD_SIZES[difficulty] : (LEVEL_ROUND_SIZE[game] ?? 10)
-        const lr = await api.get<LevelRoundResponse>(`/levels/${track}/${params.get('level') || 'A1'}/round/`, {
+        const lr = await api.get<LevelRoundResponse>(isExam ? `/exams/${params.get('pack')}/round/` : `/levels/${track}/${params.get('level') || 'A1'}/round/`, {
           size,
           game,
-          pack: params.get('pack'),
+          pack: isExam ? undefined : params.get('pack'),
+          topic: params.get('topic'),
           translation_lang: tl,
           direction: dir,
         })
@@ -254,6 +256,7 @@ function Runner({ game, source, params, onChangeLang }: { game: GameId; source: 
         direction: dir,
         level: params.get('level'),
         pack: params.get('pack'),
+        topic: params.get('topic'),
         id: params.get('id'),
         limit: GAME_LIMITS[game],
       })
@@ -267,7 +270,7 @@ function Runner({ game, source, params, onChangeLang }: { game: GameId; source: 
       setError(e)
       setLoad('error')
     }
-  }, [game, track, source, params, difficulty, tl, dir])
+  }, [game, track, source, isLevel, isExam, params, difficulty, tl, dir])
 
   useEffect(() => {
     void fetchItems()
@@ -283,11 +286,11 @@ function Runner({ game, source, params, onChangeLang }: { game: GameId; source: 
       const sessionId = sessionRef.current
       if (!stat.results.length) {
         dispatch({ type: 'SAVED', playId, round: stat.round, xp: 0 })
-        if (source === 'level') setLevelRound((l) => (l.before ? { ...l, outcome: { session_id: sessionId || '', new_found_count: 0, progress: l.before, completed_now: false, bonus_xp: 0 } } : l))
+        if (isLevel) setLevelRound((l) => (l.before ? { ...l, outcome: { session_id: sessionId || '', new_found_count: 0, progress: l.before, completed_now: false, bonus_xp: 0 } } : l))
         continue
       }
       const save = async () => {
-        if (source === 'level' && sessionId && game !== 'flashcards') {
+        if (isLevel && sessionId && game !== 'flashcards') {
           // Flashcards save each answer themselves (/words/flash/answer/). Others: report every answer (idempotent on the server), then close the round.
           const answers = stat.results.filter((r) => r.word_id).map((r) => ({ word_id: r.word_id, correct: r.correct }))
           if (answers.length) await api.post('/levels/answer/', { session_id: sessionId, answers }).catch(() => null)
@@ -296,7 +299,7 @@ function Runner({ game, source, params, onChangeLang }: { game: GameId; source: 
           game,
           track,
           source,
-          session_id: source === 'level' ? sessionId : undefined,
+          session_id: isLevel ? sessionId : undefined,
           translation_lang: picker || source === 'deck' ? activeLang : undefined,
           results: stat.results,
           duration_ms: Math.round(stat.durationMs),
@@ -312,7 +315,7 @@ function Runner({ game, source, params, onChangeLang }: { game: GameId; source: 
         })
         .catch(() => dispatch({ type: 'SAVED', playId, round: stat.round, xp: 0 }))
     }
-  }, [session.stats, session.playId, game, track, source, bumpUser, picker, activeLang])
+  }, [session.stats, session.playId, game, track, source, isLevel, bumpUser, picker, activeLang])
 
   const onFinish = useCallback(
     (o: GameOutcome) => dispatch({ type: 'ROUND_DONE', results: o.results, durationMs: o.durationMs, flips: o.flips, comboMax: o.comboMax }),
@@ -350,7 +353,7 @@ function Runner({ game, source, params, onChangeLang }: { game: GameId; source: 
   if (load === 'completed')
     return (
       <div className="page max-w-xl">
-        <LevelComplete level={params.get('level') || 'A1'} bonusXp={0} />
+        {isExam ? <ExamComplete slug={params.get('pack') || ''} /> : <LevelComplete level={params.get('level') || 'A1'} bonusXp={0} />}
       </div>
     )
   if (load === 'pool_done')
@@ -359,8 +362,8 @@ function Runner({ game, source, params, onChangeLang }: { game: GameId; source: 
         <EmptyState
           emoji="✅"
           title={t('level.pool_done')}
-          text={t('level.pool_done_text')}
-          action={<Link className="btn-primary" to={`/levels/${params.get('level') || 'A1'}`}>{t('res.other_set')}</Link>}
+          text={t(isExam ? 'exam.topic_done' : 'level.pool_done_text')}
+          action={<Link className="btn-primary" to={otherSetPath(source, params)}>{t('res.other_set')}</Link>}
         />
       </div>
     )
@@ -432,7 +435,7 @@ function Runner({ game, source, params, onChangeLang }: { game: GameId; source: 
             <>
             {isLevel && lr && (lr.completed_now || lr.progress.completed) && (
               <div className="mx-auto mb-4 w-full max-w-xl">
-                <LevelComplete level={lr.progress.level} bonusXp={lr.bonus_xp} />
+                {isExam ? <ExamComplete slug={params.get('pack') || ''} /> : <LevelComplete level={lr.progress.level} bonusXp={lr.bonus_xp} />}
               </div>
             )}
             <Results

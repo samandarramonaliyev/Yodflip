@@ -25,6 +25,8 @@ ACHIEVEMENTS: dict[str, str] = {
     "first_duel": "⚔️",
     "duel_wins_10": "🥇",
     "invited_5": "🤝",
+    "exam_pack_50": "📘",
+    "exam_pack_100": "🎖️",
 }
 
 

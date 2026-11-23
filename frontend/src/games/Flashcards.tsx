@@ -34,6 +34,7 @@ function ForeignSide({ item, track }: { item: GameItem; track: 'en' | 'de' }) {
       </span>
       {item.pos && <span className="text-xs font-bold uppercase tracking-wide text-muted">{item.pos}</span>}
       {item.example && <span className="font-read text-sm italic text-muted">“{item.example}”</span>}
+      {item.collocations && <span className="text-xs font-bold">🔗 {item.collocations}</span>}
       <SpeakButton text={item.term} track={track} />
     </div>
   )

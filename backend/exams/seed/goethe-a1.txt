@@ -1,0 +1,143 @@
+# Original A1 preparation list (by topic). Not an official word list.
+## familie | 👨‍👩‍👧 | Family & people | Oila va odamlar | Семья и люди
+= die Mutter; der Vater; der Bruder; die Schwester; der Freund; das Kind; das Baby; die Großmutter; der Mann; die Frau; der Name; alt; jung; glücklich; lieben; heiraten; der Nachbar; freundlich; nett
+die Familie | noun | Eltern und Kinder zusammen | oila | семья | family | Meine Familie ist groß. | Oilam katta. | Моя семья большая. | My family is big.
+die Eltern | noun | Mutter und Vater | ota-ona | родители | parents | Meine Eltern wohnen hier. | Ota-onam shu yerda yashaydi. | Мои родители живут здесь. | My parents live here.
+der Sohn | noun | ein männliches Kind | o'g'il | сын | son | Ihr Sohn ist fünf. | Uning o'g'li besh yoshda. | Её сыну пять лет. | Her son is five.
+die Tochter | noun | ein weibliches Kind | qiz (farzand) | дочь | daughter | Unsere Tochter geht zur Schule. | Qizimiz maktabga boradi. | Наша дочь ходит в школу. | Our daughter goes to school.
+der Großvater | noun | der Vater der Mutter oder des Vaters | buva | дедушка | grandfather | Mein Großvater ist achtzig. | Buvam sakson yoshda. | Моему дедушке восемьдесят. | My grandfather is eighty.
+die Geschwister | noun | Brüder und Schwestern | aka-uka va opa-singillar | братья и сёстры | siblings | Hast du Geschwister? | Aka-uka yoki opa-singlingiz bormi? | У тебя есть братья и сёстры? | Do you have any siblings?
+der Mensch | noun | eine Person | inson | человек | human being | Jeder Mensch braucht Schlaf. | Har bir insonga uyqu kerak. | Каждому человеку нужен сон. | Every human being needs sleep.
+die Leute | noun | mehrere Personen | odamlar | люди | people | Viele Leute warten hier. | Bu yerda ko'p odam kutyapti. | Здесь ждёт много людей. | Many people are waiting here.
+der Junge | noun | ein männliches Kind oder Teenager | o'g'il bola | мальчик | boy | Der Junge spielt Fußball. | Bola futbol o'ynayapti. | Мальчик играет в футбол. | The boy is playing football.
+das Mädchen | noun | ein weibliches Kind oder Teenager | qiz bola | девочка | girl | Das Mädchen liest ein Buch. | Qizcha kitob o'qiyapti. | Девочка читает книгу. | The girl is reading a book.
+ledig | adjective | nicht verheiratet | turmush qurmagan | неженатый, незамужняя | single | Mein Bruder ist noch ledig. | Akam hali uylanmagan. | Мой брат ещё не женат. | My brother is still single.
+verheiratet | adjective | mit einem Ehepartner | oilali | женатый, замужняя | married | Sind Sie verheiratet? | Oilalimisiz? | Вы женаты? | Are you married?
+## person | 🪪 | Personal details | Shaxsiy ma'lumotlar | Личные данные
+= die Adresse; der Beruf
+das Alter | noun | wie viele Jahre man lebt | yosh | возраст | age | Wie ist Ihr Alter? | Yoshingiz nechada? | Какой у вас возраст? | What is your age?
+das Geschlecht | noun | männlich oder weiblich | jins | пол | gender | Bitte schreiben Sie Ihr Geschlecht. | Iltimos, jinsingizni yozing. | Укажите, пожалуйста, пол. | Please write your gender.
+der Vorname | noun | der erste Name einer Person | ism | имя | first name | Mein Vorname ist Anna. | Ismim Anna. | Меня зовут Анна. | My first name is Anna.
+der Familienname | noun | der Name der Familie | familiya | фамилия | surname | Wie ist Ihr Familienname? | Familiyangiz nima? | Как ваша фамилия? | What is your surname?
+die Telefonnummer | noun | die Zahlen für einen Anruf | telefon raqami | номер телефона | phone number | Gib mir deine Telefonnummer. | Telefon raqamingni ber. | Дай мне твой номер телефона. | Give me your phone number.
+die Postleitzahl | noun | die Nummer eines Ortes in der Adresse | pochta indeksi | почтовый индекс | postcode | Die Postleitzahl hat fünf Zahlen. | Pochta indeksi beshta raqamdan iborat. | В индексе пять цифр. | The postcode has five digits.
+der Geburtstag | noun | der Tag, an dem man geboren ist | tug'ilgan kun | день рождения | birthday | Heute ist mein Geburtstag. | Bugun mening tug'ilgan kunim. | Сегодня мой день рождения. | Today is my birthday.
+das Land | noun | ein Staat, zum Beispiel Deutschland | mamlakat | страна | country | Aus welchem Land kommst du? | Qaysi mamlakatdansan? | Из какой ты страны? | Which country are you from?
+die Sprache | noun | damit sprechen Menschen, z. B. Deutsch | til | язык | language | Deutsch ist eine schöne Sprache. | Nemis tili chiroyli til. | Немецкий — красивый язык. | German is a beautiful language.
+heißen | verb | einen Namen haben | ... deb atalmoq | называться, зваться | to be called | Ich heiße Timur. | Ismim Temur. | Меня зовут Тимур. | My name is Timur.
+wohnen | verb | an einem Ort leben | yashamoq | жить, проживать | to live | Wir wohnen in Taschkent. | Biz Toshkentda yashaymiz. | Мы живём в Ташкенте. | We live in Tashkent.
+buchstabieren | verb | ein Wort Buchstabe für Buchstabe sagen | harflab aytmoq | произносить по буквам | to spell | Können Sie das buchstabieren? | Buni harflab ayta olasizmi? | Можете сказать это по буквам? | Can you spell that?
+die Unterschrift | noun | der eigene Name, mit der Hand geschrieben | imzo | подпись | signature | Hier fehlt Ihre Unterschrift. | Bu yerda imzoyingiz yo'q. | Здесь нет вашей подписи. | Your signature is missing here.
+das Formular | noun | ein Papier mit Fragen zum Ausfüllen | anketa | формуляр, бланк | form | Das Formular ist lang. | Anketa uzun. | Бланк длинный. | The form is long.
+ausfüllen | verb | Antworten in ein Formular schreiben | to'ldirmoq | заполнять | to fill in | Bitte füllen Sie das aus. | Iltimos, buni to'ldiring. | Пожалуйста, заполните это. | Please fill this in.
+## essen | 🍎 | Food & drink | Ovqat va ichimlik | Еда и напитки
+= der Apfel; das Brot; das Wasser; die Milch; das Ei; der Reis; das Fleisch; der Tee; der Zucker; der Käse; das Frühstück; das Gemüse; lecker; kochen; trinken; die Speisekarte; der Kellner; die Suppe; das Salz; bestellen; süß; frisch
+essen | verb | Nahrung in den Mund nehmen und kauen | yemoq | есть, кушать | to eat | Ich esse gern Obst. | Men meva yeyishni yoqtiraman. | Я люблю есть фрукты. | I like eating fruit.
+das Obst | noun | Früchte wie Äpfel und Bananen | meva | фрукты | fruit | Obst ist gesund. | Meva foydali. | Фрукты полезны. | Fruit is healthy.
+der Fisch | noun | ein Tier, das im Wasser lebt | baliq | рыба | fish | Freitags essen wir Fisch. | Juma kunlari baliq yeymiz. | По пятницам мы едим рыбу. | On Fridays we eat fish.
+die Kartoffel | noun | ein rundes Gemüse aus der Erde | kartoshka | картофель | potato | Die Kartoffeln sind heiß. | Kartoshkalar issiq. | Картофель горячий. | The potatoes are hot.
+der Kaffee | noun | ein heißes schwarzes Getränk | qahva | кофе | coffee | Ich trinke Kaffee ohne Milch. | Men sutsiz qahva ichaman. | Я пью кофе без молока. | I drink coffee without milk.
+der Saft | noun | ein Getränk aus Früchten | sharbat | сок | juice | Der Saft ist kalt. | Sharbat sovuq. | Сок холодный. | The juice is cold.
+die Butter | noun | gelbes Fett aus Milch für das Brot | sariyog' | сливочное масло | butter | Brot mit Butter, bitte. | Sariyog'li non bering. | Хлеб с маслом, пожалуйста. | Bread with butter, please.
+der Kuchen | noun | etwas Süßes aus dem Ofen | pirog, tort | пирог | cake | Der Kuchen schmeckt gut. | Pirog mazali. | Пирог вкусный. | The cake tastes good.
+das Restaurant | noun | ein Ort, wo man für Geld isst | restoran | ресторан | restaurant | Wir essen im Restaurant. | Biz restoranda ovqatlanamiz. | Мы едим в ресторане. | We are eating at a restaurant.
+der Hunger | noun | das Gefühl, wenn man essen muss | ochlik | голод | hunger | Ich habe Hunger. | Qornim och. | Я голоден. | I am hungry.
+der Durst | noun | das Gefühl, wenn man trinken muss | chanqoq | жажда | thirst | Hast du Durst? | Chanqadingmi? | Ты хочешь пить? | Are you thirsty?
+das Mittagessen | noun | die Mahlzeit in der Mitte des Tages | tushlik | обед | lunch | Das Mittagessen ist um eins. | Tushlik soat birda. | Обед в час. | Lunch is at one.
+das Abendessen | noun | die Mahlzeit am Abend | kechki ovqat | ужин | dinner | Das Abendessen ist fertig. | Kechki ovqat tayyor. | Ужин готов. | Dinner is ready.
+schmecken | verb | einen guten oder schlechten Geschmack haben | mazasi bo'lmoq, yoqmoq (taom) | быть вкусным | to taste | Die Suppe schmeckt mir. | Sho'rva menga yoqdi. | Суп мне нравится. | I like the taste of the soup.
+die Flasche | noun | ein Gefäß für Getränke, oft aus Glas | shisha (idish) | бутылка | bottle | Eine Flasche Wasser, bitte. | Bir shisha suv bering. | Бутылку воды, пожалуйста. | A bottle of water, please.
+das Glas | noun | daraus trinkt man Wasser oder Saft | stakan | стакан | glass | Das Glas ist leer. | Stakan bo'sh. | Стакан пустой. | The glass is empty.
+## wohnen | 🏠 | Home | Uy-joy | Жильё
+= das Haus; das Zimmer; die Küche; das Bett; die Tür; das Fenster; der Tisch; der Stuhl; der Schlüssel; der Garten; die Wohnung; schlafen; groß; klein; sauber; die Möbel; der Kühlschrank; die Miete; laut
+das Bad | noun | das Zimmer mit Dusche oder Wanne | hammom | ванная комната | bathroom | Das Bad ist neu. | Hammom yangi. | Ванная новая. | The bathroom is new.
+die Toilette | noun | dorthin geht man, wenn man muss | hojatxona | туалет | toilet | Wo ist die Toilette? | Hojatxona qayerda? | Где туалет? | Where is the toilet?
+der Schrank | noun | ein Möbel für Kleidung oder Geschirr | shkaf | шкаф | cupboard | Die Jacke ist im Schrank. | Kurtka shkafda. | Куртка в шкафу. | The jacket is in the cupboard.
+die Lampe | noun | sie macht Licht im Zimmer | chiroq | лампа | lamp | Die Lampe ist kaputt. | Chiroq buzilgan. | Лампа сломана. | The lamp is broken.
+das Sofa | noun | ein weiches Möbel für mehrere Personen | divan | диван | couch | Das Sofa ist weich. | Divan yumshoq. | Диван мягкий. | The couch is soft.
+der Herd | noun | das Gerät zum Kochen | plita | плита | stove | Der Topf steht auf dem Herd. | Qozon plita ustida. | Кастрюля стоит на плите. | The pot is on the stove.
+die Dusche | noun | dort wäscht man sich im Stehen | dush | душ | shower | Die Dusche ist warm. | Dush iliq. | Душ тёплый. | The shower is warm.
+kaputt | adjective | nicht mehr in Ordnung | buzilgan | сломанный | broken | Mein Handy ist kaputt. | Telefonim buzilgan. | Мой телефон сломан. | My phone is broken.
+hell | adjective | mit viel Licht | yorug' | светлый | bright | Das Zimmer ist hell. | Xona yorug'. | Комната светлая. | The room is bright.
+dunkel | adjective | mit wenig oder ohne Licht | qorong'i | тёмный | dark | Es ist schon dunkel. | Allaqachon qorong'i. | Уже темно. | It is already dark.
+## alltag | ⏰ | Time & daily life | Vaqt va kundalik hayot | Время и повседневность
+= der Morgen; die Nacht; der Tag; die Woche; die Zeit; heute; müde; gehen; kommen; arbeiten; waschen; sitzen; stehen; der Termin
+machen | verb | etwas tun | qilmoq | делать | to do | Was machst du heute? | Bugun nima qilasan? | Что ты делаешь сегодня? | What are you doing today?
+der Monat | noun | ein Teil des Jahres, z. B. Mai | oy | месяц | month | Ein Monat hat vier Wochen. | Bir oyda to'rt hafta bor. | В месяце четыре недели. | A month has four weeks.
+das Jahr | noun | zwölf Monate | yil | год | year | Das Jahr hat zwölf Monate. | Bir yilda o'n ikki oy bor. | В году двенадцать месяцев. | A year has twelve months.
+die Stunde | noun | sechzig Minuten | soat (60 daqiqa) | час | hour | Der Film dauert eine Stunde. | Film bir soat davom etadi. | Фильм идёт час. | The film lasts one hour.
+die Minute | noun | sechzig Sekunden | daqiqa | минута | minute | Warte eine Minute! | Bir daqiqa kut! | Подожди минуту! | Wait a minute!
+die Uhr | noun | das Gerät, das die Zeit zeigt | soat (asbob) | часы | clock | Die Uhr ist alt. | Soat eski. | Часы старые. | The clock is old.
+der Abend | noun | die Zeit nach dem Nachmittag | kechqurun | вечер | evening | Am Abend lese ich. | Kechqurun kitob o'qiyman. | Вечером я читаю. | I read in the evening.
+der Mittag | noun | zwölf Uhr am Tag | tush payti | полдень | noon | Am Mittag esse ich Suppe. | Tushda sho'rva ichaman. | В полдень я ем суп. | I eat soup at noon.
+morgen | adverb | der Tag nach heute | ertaga | завтра | tomorrow | Morgen habe ich frei. | Ertaga bo'shman. | Завтра я свободен. | I am free tomorrow.
+gestern | adverb | der Tag vor heute | kecha | вчера | yesterday | Gestern war Montag. | Kecha dushanba edi. | Вчера был понедельник. | Yesterday was Monday.
+jetzt | adverb | in diesem Moment | hozir | сейчас | now | Ich muss jetzt gehen. | Hozir ketishim kerak. | Мне нужно сейчас идти. | I have to go now.
+früh | adjective | am Anfang des Tages, nicht spät | erta | ранний | early | Ich stehe früh auf. | Men erta turaman. | Я встаю рано. | I get up early.
+spät | adjective | nicht früh | kech | поздний | late | Es ist schon spät. | Allaqachon kech. | Уже поздно. | It is already late.
+aufstehen | verb | morgens aus dem Bett gehen | uyg'onib turmoq | вставать | to get up | Wann stehst du auf? | Qachon turasan? | Когда ты встаёшь? | When do you get up?
+anfangen | verb | beginnen | boshlanmoq | начинать(ся) | to start | Der Kurs fängt um neun an. | Kurs to'qqizda boshlanadi. | Курс начинается в девять. | The course starts at nine.
+warten | verb | an einem Ort bleiben, bis etwas passiert | kutmoq | ждать | to wait | Ich warte auf den Bus. | Men avtobus kutyapman. | Я жду автобус. | I am waiting for the bus.
+das Wochenende | noun | Samstag und Sonntag | dam olish kunlari | выходные | weekend | Am Wochenende schlafe ich lange. | Dam olish kunlari ko'p uxlayman. | В выходные я долго сплю. | I sleep long at the weekend.
+## schule | 🎒 | School & work | Maktab va ish | Школа и работа
+= wiederholen; die Schule; das Buch; lesen; schreiben; sprechen; der Lehrer; der Schüler; der Unterricht; die Hausaufgabe; das Wörterbuch; das Heft; der Fehler; die Frage; die Antwort; lernen; verstehen; leicht
+der Kurs | noun | Unterricht über einige Wochen | kurs | курс | course | Der Kurs ist interessant. | Kurs qiziqarli. | Курс интересный. | The course is interesting.
+der Satz | noun | mehrere Wörter mit einem Punkt am Ende | gap | предложение | sentence | Schreib einen Satz! | Bitta gap yoz! | Напиши предложение! | Write a sentence!
+das Wort | noun | ein Teil eines Satzes | so'z | слово | word | Das Wort ist neu für mich. | Bu so'z men uchun yangi. | Это слово для меня новое. | The word is new to me.
+der Buchstabe | noun | ein Zeichen des Alphabets | harf | буква | letter | A ist der erste Buchstabe. | A birinchi harf. | А — первая буква. | A is the first letter.
+fragen | verb | eine Frage stellen | so'ramoq | спрашивать | to ask | Darf ich etwas fragen? | Bir narsa so'rasam maylimi? | Можно спросить? | May I ask something?
+antworten | verb | auf eine Frage etwas sagen | javob bermoq | отвечать | to answer | Bitte antworten Sie. | Iltimos, javob bering. | Пожалуйста, ответьте. | Please answer.
+hören | verb | mit den Ohren Töne bemerken | eshitmoq | слышать, слушать | to hear | Ich höre Musik. | Men musiqa tinglayapman. | Я слушаю музыку. | I am listening to music.
+die Arbeit | noun | was man tut, um Geld zu verdienen | ish | работа | work | Die Arbeit beginnt um acht. | Ish sakkizda boshlanadi. | Работа начинается в восемь. | Work begins at eight.
+die Firma | noun | dort arbeiten Menschen für Geld | firma | фирма | company | Die Firma ist groß. | Firma katta. | Фирма большая. | The company is big.
+das Büro | noun | der Raum, in dem man am Schreibtisch arbeitet | ofis | офис | office | Sie arbeitet im Büro. | U ofisda ishlaydi. | Она работает в офисе. | She works in an office.
+der Computer | noun | das Gerät zum Schreiben und Surfen | kompyuter | компьютер | computer | Der Computer ist langsam. | Kompyuter sekin. | Компьютер медленный. | The computer is slow.
+## reisen | 🚆 | Travel & traffic | Sayohat va transport | Поездки и транспорт
+= der Flughafen; die Fahrkarte; das Hotel; der Bahnhof; die Reise; der Urlaub; ankommen; die Haltestelle; das Auto; der Bus; die Straße; die Stadt; geradeaus; weit; der Platz; die Bank; die Post
+fahren | verb | sich mit Auto, Bus oder Zug bewegen | (transportda) bormoq | ехать | to drive, to go (by vehicle) | Wir fahren nach Berlin. | Biz Berlinga boryapmiz. | Мы едем в Берлин. | We are going to Berlin.
+fliegen | verb | mit dem Flugzeug reisen | uchmoq | летать | to fly | Ich fliege nach Wien. | Men Venaga uchaman. | Я лечу в Вену. | I am flying to Vienna.
+der Zug | noun | er fährt auf Schienen | poyezd | поезд | train | Der Zug kommt gleich. | Poyezd hozir keladi. | Поезд сейчас придёт. | The train is coming soon.
+die U-Bahn | noun | ein Zug unter der Stadt | metro | метро | underground | Die U-Bahn ist schnell. | Metro tez. | Метро быстрое. | The underground is fast.
+das Fahrrad | noun | es hat zwei Räder und keinen Motor | velosiped | велосипед | bicycle | Mein Fahrrad ist rot. | Velosipedim qizil. | Мой велосипед красный. | My bicycle is red.
+das Flugzeug | noun | damit fliegt man | samolyot | самолёт | aeroplane | Das Flugzeug ist pünktlich. | Samolyot o'z vaqtida. | Самолёт прилетает вовремя. | The aeroplane is on time.
+der Koffer | noun | darin sind die Sachen für die Reise | chamadon | чемодан | suitcase | Der Koffer ist schwer. | Chamadon og'ir. | Чемодан тяжёлый. | The suitcase is heavy.
+links | adverb | auf der Seite des Herzens | chapda | слева | on the left | Das Hotel ist links. | Mehmonxona chapda. | Отель слева. | The hotel is on the left.
+rechts | adverb | nicht links | o'ngda | справа | on the right | Gehen Sie nach rechts. | O'ngga yuring. | Идите направо. | Go to the right.
+der Ausweis | noun | ein Dokument mit Name und Foto | shaxsiy guvohnoma | удостоверение личности | ID card | Zeigen Sie bitte Ihren Ausweis. | Guvohnomangizni ko'rsating. | Покажите удостоверение. | Please show your ID card.
+## einkaufen | 🛒 | Shopping & clothes | Xarid va kiyim | Покупки и одежда
+= das Hemd; der Schuh; das Kleid; die Mütze; die Jacke; die Hose; tragen; kaufen; das Geschäft; das Geld; die Zahl; der Preis; billig; teuer; bezahlen; die Größe; der Markt; die Rechnung; der Rock; der Pullover; die Tasche; die Brille; schön; neu; rot; blau; grün; weiß; schwarz; gelb
+der Supermarkt | noun | ein großes Geschäft für Lebensmittel | supermarket | супермаркет | supermarket | Der Supermarkt hat bis acht auf. | Supermarket sakkizgacha ochiq. | Супермаркет открыт до восьми. | The supermarket is open until eight.
+kosten | verb | einen Preis haben | turmoq (narx) | стоить | to cost | Was kostet das Hemd? | Ko'ylak qancha turadi? | Сколько стоит рубашка? | How much does the shirt cost?
+das Kilo | noun | tausend Gramm | kilogramm | килограмм | kilogram | Ein Kilo Äpfel, bitte. | Bir kilo olma bering. | Килограмм яблок, пожалуйста. | A kilo of apples, please.
+geöffnet | adjective | nicht geschlossen | ochiq | открытый | open | Das Geschäft ist geöffnet. | Do'kon ochiq. | Магазин открыт. | The shop is open.
+geschlossen | adjective | nicht geöffnet | yopiq | закрытый | closed | Sonntags ist alles geschlossen. | Yakshanba hammasi yopiq. | По воскресеньям всё закрыто. | On Sundays everything is closed.
+brauchen | verb | etwas haben müssen | kerak bo'lmoq | нуждаться | to need | Ich brauche eine Jacke. | Menga kurtka kerak. | Мне нужна куртка. | I need a jacket.
+## gesundheit | 🩺 | Body & health | Tana va salomatlik | Тело и здоровье
+= der Kopf; die Hand; das Auge; das Ohr; die Nase; der Mund; das Bein; der Fuß; das Haar; das Gesicht; der Arzt; das Fieber; gesund; krank; wehtun; der Bauch; die Apotheke; das Krankenhaus; die Tablette; gut; schlecht
+der Arm | noun | der Körperteil zwischen Schulter und Hand | qo'l (yelkadan) | рука | arm (body) | Mein Arm tut weh. | Qo'lim og'riyapti. | У меня болит рука. | My arm hurts.
+der Rücken | noun | die hintere Seite des Körpers | orqa, bel | спина | back | Der Rücken tut mir weh. | Belim og'riyapti. | У меня болит спина. | My back hurts.
+helfen | verb | für jemanden etwas Gutes tun | yordam bermoq | помогать | to help | Kannst du mir helfen? | Menga yordam bera olasanmi? | Ты можешь мне помочь? | Can you help me?
+die Hilfe | noun | wenn man jemandem hilft | yordam | помощь | help | Danke für deine Hilfe! | Yordaming uchun rahmat! | Спасибо за помощь! | Thanks for your help!
+## freizeit | ⚽ | Free time & weather | Bo'sh vaqt va ob-havo | Досуг и погода
+= spielen; sehen; das Handy; das Hobby; der Film; das Bild; tanzen; singen; schwimmen; das Wetter; der Regen; der Schnee; der Wind; warm; das Lied; das Spiel; langweilig
+der Sport | noun | z. B. Fußball, Laufen oder Tennis | sport | спорт | sports | Sport macht Spaß. | Sport zavqli. | Спорт — это весело. | Sports are fun.
+die Musik | noun | Töne und Lieder zum Hören | musiqa | музыка | music | Die Musik ist laut. | Musiqa baland. | Музыка громкая. | The music is loud.
+die Party | noun | ein Fest mit Freunden | ziyofat | вечеринка | party | Die Party ist am Samstag. | Ziyofat shanba kuni. | Вечеринка в субботу. | The party is on Saturday.
+der Hund | noun | ein Haustier, das bellt | it | собака | dog | Der Hund ist klein. | It kichkina. | Собака маленькая. | The dog is small.
+die Katze | noun | ein Haustier, das Mäuse fängt | mushuk | кошка | cat | Die Katze schläft viel. | Mushuk ko'p uxlaydi. | Кошка много спит. | The cat sleeps a lot.
+die Sonne | noun | sie macht den Tag hell und warm | quyosh | солнце | sun | Die Sonne scheint. | Quyosh charaqlayapti. | Светит солнце. | The sun is shining.
+kalt | adjective | nicht warm | sovuq | холодный | cold | Im Winter ist es kalt. | Qishda sovuq bo'ladi. | Зимой холодно. | It is cold in winter.
+heiß | adjective | sehr warm | issiq | жаркий, горячий | hot | Der Tee ist heiß. | Choy issiq. | Чай горячий. | The tea is hot.
+der Sommer | noun | die warme Jahreszeit | yoz | лето | summer | Im Sommer fahren wir weg. | Yozda biz safarga chiqamiz. | Летом мы уезжаем. | In summer we go away.
+der Winter | noun | die kalte Jahreszeit | qish | зима | winter | Der Winter ist lang. | Qish uzoq. | Зима длинная. | Winter is long.
+## kommunikation | 💬 | Communication & media | Muloqot va media | Общение и медиа
+= suchen
+der Brief | noun | eine Nachricht auf Papier | xat | письмо | letter (post) | Ich schreibe einen Brief. | Men xat yozyapman. | Я пишу письмо. | I am writing a letter.
+die E-Mail | noun | eine Nachricht am Computer | elektron xat | электронное письмо | email | Schick mir eine E-Mail. | Menga elektron xat yubor. | Пришли мне письмо по почте. | Send me an email.
+anrufen | verb | mit jemandem am Telefon sprechen wollen | qo'ng'iroq qilmoq | звонить | to call | Ich rufe dich morgen an. | Ertaga senga qo'ng'iroq qilaman. | Я позвоню тебе завтра. | I will call you tomorrow.
+die Zeitung | noun | Nachrichten auf Papier | gazeta | газета | newspaper | Mein Opa liest die Zeitung. | Bobom gazeta o'qiyapti. | Мой дедушка читает газету. | My grandpa is reading the newspaper.
+das Radio | noun | daraus hört man Musik und Nachrichten | radio | радио | radio | Das Radio ist aus. | Radio o'chiq. | Радио выключено. | The radio is off.
+der Fernseher | noun | das Gerät zum Sehen von Sendungen | televizor | телевизор | television | Der Fernseher ist neu. | Televizor yangi. | Телевизор новый. | The television is new.
+sagen | verb | etwas mit Worten ausdrücken | aytmoq | говорить, сказать | to say | Was sagst du? | Nima deyapsan? | Что ты говоришь? | What are you saying?
+danke | adverb | das sagt man, wenn man etwas bekommt | rahmat | спасибо | thank you | Danke für das Essen! | Ovqat uchun rahmat! | Спасибо за еду! | Thank you for the meal!
+bitte | adverb | das sagt man höflich beim Fragen | iltimos, marhamat | пожалуйста | please | Einen Tee, bitte. | Bitta choy, iltimos. | Один чай, пожалуйста. | A tea, please.

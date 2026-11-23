@@ -1,0 +1,501 @@
+# word | common collocations (1-2) | word family (optional)
+to increase | increase sharply; increase by 10% | increase / increasing / increasingly
+to fluctuate | fluctuate widely; fluctuate between | fluctuate / fluctuation
+to decline | decline steadily; decline in popularity | decline / declining
+to rise | rise sharply; rise to a peak | rise / rising
+to drop | drop dramatically; drop to 5%
+to plummet | prices plummet; plummet to a low
+to soar | soar to a record high; costs soar
+to peak | peak at 80%; peak in July | peak / peak (noun)
+to level off | level off at 50%; begin to level off
+to exceed | exceed expectations; exceed the limit | exceed / excess / excessive
+to double | double in size; nearly double
+to halve | halve the cost; halve in number | halve / half
+to account for | account for a third; account for the majority
+to illustrate | illustrate a point; the chart illustrates | illustrate / illustration
+to remain | remain stable; remain unchanged
+trend | an upward trend; a growing trend
+figure | official figures; a similar figure
+proportion | a large proportion; a higher proportion | proportion / proportional
+percentage | a high percentage; percentage point | percent / percentage
+amount | a large amount; the total amount
+rate | birth rate; at a steady rate
+average | on average; above average
+majority | the vast majority; majority of people | major / majority
+surge | a surge in demand; a sudden surge
+decade | over the past decade; in recent decades
+steady | steady growth; a steady increase | steady / steadily
+gradual | gradual change; a gradual decline | gradual / gradually
+sharp | a sharp rise; a sharp contrast | sharp / sharply
+slight | a slight increase; a slight difference | slight / slightly
+dramatic | a dramatic change; dramatic effect | dramatic / dramatically
+considerable | considerable amount; considerable effort | consider / considerable / considerably
+approximately | approximately half; approximately equal | approximate / approximately
+respectively | 10% and 15% respectively; in 2001 and 2005 respectively
+however | it is, however, important; however, this is rare
+therefore | it is therefore clear; and therefore
+moreover | moreover, it is cheaper; moreover, research shows
+furthermore | furthermore, studies show; furthermore, it creates jobs
+nevertheless | it is nevertheless true; nevertheless, some argue
+consequently | consequently, costs rise; and consequently | consequence / consequently
+although | although it is true; although many believe
+despite | despite the fact that; despite efforts
+whereas | whereas others prefer; whereas in 2010
+unless | unless action is taken; unless otherwise stated
+in addition | in addition to this; in addition, there is | add / addition / additional
+for instance | take, for instance; for instance, in Japan
+in contrast | in contrast to; by contrast | contrast / contrasting
+on the other hand | on the other hand, critics say; on the other hand, it costs more
+as a result | as a result of; as a result, demand fell
+due to | due to the fact; largely due to
+in terms of | in terms of cost; in terms of quality
+according to | according to the chart; according to experts
+in conclusion | in conclusion, I believe; in conclusion, both sides | conclude / conclusion
+overall | overall, it is clear; overall trend
+likewise | likewise, sales rose; do likewise
+meanwhile | meanwhile, exports fell; in the meanwhile
+thus | and thus; thus reducing costs
+provided that | provided that rules are followed; provided that there is funding
+similarly | similarly, the number rose; similarly important | similar / similarly / similarity
+eventually | eventually become; eventually decline | eventual / eventually
+climate | climate change; tropical climate | climate / climatic
+drought | severe drought; drought conditions
+endangered | endangered species; critically endangered | danger / endanger / endangered
+renewable | renewable energy; renewable sources | renew / renewal / renewable
+to waste | waste energy; waste resources | waste / wasteful
+emission | carbon emissions; cut emissions | emit / emission
+to protect | protect the environment; protect wildlife | protect / protection / protective
+species | rare species; a species of bird
+flood | flood damage; flash flood | flood / flooding
+sustainable | sustainable development; sustainable energy | sustain / sustainable / sustainability
+to reduce | reduce costs; significantly reduce | reduce / reduction
+wildlife | protect wildlife; wildlife reserve
+fuel | fuel consumption; alternative fuel
+harmful | harmful effects; harmful to health | harm / harmful / harmless
+to destroy | destroy habitats; completely destroy | destroy / destruction / destructive
+pollution | air pollution; tackle pollution | pollute / pollution / pollutant
+to recycle | recycle waste; recycle plastic | recycle / recycling / recyclable
+biodiversity | loss of biodiversity; protect biodiversity
+ecosystem | fragile ecosystem; marine ecosystem
+deforestation | tropical deforestation; halt deforestation | forest / deforestation
+carbon footprint | reduce your carbon footprint; a large carbon footprint
+mitigation | climate mitigation; mitigation measures | mitigate / mitigation
+habitat | natural habitat; habitat loss | habitat / inhabit / inhabitant
+conservation | wildlife conservation; energy conservation | conserve / conservation
+contamination | water contamination; risk of contamination | contaminate / contamination
+scarcity | water scarcity; food scarcity | scarce / scarcity / scarcely
+landfill | landfill site; sent to landfill
+to curb | curb emissions; curb spending
+to offset | offset the cost; offset carbon emissions
+to degrade | degrade the soil; degrade the environment | degrade / degradation
+to replenish | replenish supplies; replenish stocks
+to phase out | phase out coal; gradually phase out
+irreversible | irreversible damage; irreversible change | reverse / irreversible
+toxic | toxic waste; highly toxic | toxic / toxin / toxicity
+finite | finite resources; a finite number | finite / infinite
+arid | arid climate; arid region
+pristine | pristine beaches; pristine condition
+global warming | combat global warming; effects of global warming
+greenhouse gas | greenhouse gas emissions; reduce greenhouse gases
+fossil fuel | burn fossil fuels; dependence on fossil fuels
+solar power | generate solar power; solar power station
+extinction | face extinction; on the brink of extinction | extinct / extinction
+natural resource | exploit natural resources; limited natural resources
+degree | a university degree; degree course
+scholarship | win a scholarship; full scholarship
+to graduate | graduate from university; graduate with honours | graduate / graduation
+assignment | written assignment; complete an assignment | assign / assignment
+lecture | attend a lecture; give a lecture | lecture / lecturer
+research | conduct research; research findings | research / researcher
+knowledge | gain knowledge; background knowledge | know / knowledge / knowledgeable
+to memorize | memorize facts; memorize a list | memory / memorize / memorable
+curriculum | school curriculum; national curriculum
+to fail | fail an exam; fail to understand | fail / failure
+fluent | fluent in English; a fluent speaker | fluent / fluently / fluency
+to improve | improve skills; greatly improve | improve / improvement
+tuition | tuition fees; private tuition
+semester | first semester; semester exams
+to evaluate | evaluate progress; evaluate the results | evaluate / evaluation
+skill | social skills; develop skills | skill / skilled / skilful
+literacy | literacy rate; computer literacy | literate / illiterate / literacy
+academic | academic achievement; academic year | academy / academic / academically
+compulsory | compulsory education; compulsory subject
+discipline | school discipline; academic discipline | discipline / disciplinary
+qualification | gain a qualification; formal qualifications | qualify / qualified / qualification
+vocational | vocational training; vocational course | vocation / vocational
+to enrol | enrol on a course; enrol at university | enrol / enrolment
+experiment | carry out an experiment; scientific experiment | experiment / experimental
+laboratory | laboratory test; research laboratory
+discovery | make a discovery; scientific discovery | discover / discovery
+theory | in theory; put theory into practice | theory / theoretical
+data | collect data; analyse data
+robot | industrial robot; robot technology | robot / robotic / robotics
+artificial intelligence | use of artificial intelligence; artificial intelligence system
+engineer | software engineer; civil engineer | engineer / engineering
+satellite | satellite image; launch a satellite
+innovation | technological innovation; encourage innovation | innovate / innovation / innovative
+breakthrough | major breakthrough; medical breakthrough
+to invent | invent a machine; newly invented | invent / invention / inventor
+to measure | measure the effect; accurately measure | measure / measurement
+to prove | prove a theory; prove useful | prove / proof / proven
+to observe | observe behaviour; observe a change | observe / observation / observer
+to develop | develop a system; develop rapidly | develop / development / developing
+scientific | scientific evidence; scientific research | science / scientist / scientific
+advanced | advanced technology; highly advanced | advance / advanced / advancement
+digital | digital age; digital device | digit / digital / digitally
+device | mobile device; electronic device
+software | computer software; install software
+automation | factory automation; increased automation | automate / automatic / automation
+machinery | heavy machinery; farm machinery | machine / machinery
+to transform | transform society; completely transform | transform / transformation
+to rely | rely heavily on; rely on technology | rely / reliable / reliance
+revolution | industrial revolution; digital revolution | revolution / revolutionary
+poverty | live in poverty; poverty line | poor / poverty
+unemployment | unemployment rate; rising unemployment | employ / employment / unemployment
+homeless | homeless people; become homeless | home / homeless / homelessness
+charity | donate to charity; charity work | charity / charitable
+equality | gender equality; promote equality | equal / equality / equally
+discrimination | racial discrimination; ban discrimination | discriminate / discrimination
+population | population growth; ageing population | populate / population
+immigrant | illegal immigrant; immigrant community | immigrate / immigrant / immigration
+violence | domestic violence; act of violence | violent / violence / violently
+generation | younger generation; future generations | generate / generation
+rights | human rights; equal rights
+to protest | protest against; protest peacefully | protest / protester
+to donate | donate money; donate blood | donate / donation / donor
+to solve | solve a problem; solve a crime | solve / solution
+to tackle | tackle the issue; tackle crime
+elderly | elderly people; care for the elderly
+disabled | disabled access; disabled people | disable / disabled / disability
+fair | a fair share; fair trial | fair / fairly / unfair / fairness
+inequality | social inequality; income inequality | equal / inequality / unequal
+to advocate | advocate reform; strongly advocate | advocate / advocacy
+legislation | introduce legislation; new legislation | legislate / legislation / legislative
+consensus | reach a consensus; general consensus
+to abolish | abolish fees; abolish the death penalty | abolish / abolition
+welfare | welfare state; social welfare
+controversial | controversial issue; highly controversial | controversy / controversial
+to implement | implement a policy; fully implement | implement / implementation
+bureaucracy | excessive bureaucracy; reduce bureaucracy | bureaucrat / bureaucracy / bureaucratic
+to exploit | exploit workers; exploit resources | exploit / exploitation
+prejudice | racial prejudice; overcome prejudice | prejudice / prejudiced
+accountable | held accountable; accountable to the public | account / accountable / accountability
+to undertake | undertake research; undertake a project | undertake / undertaking
+dissent | political dissent; voice dissent
+sovereignty | national sovereignty; defend sovereignty | sovereign / sovereignty
+citizen | senior citizen; law-abiding citizen | citizen / citizenship
+government | local government; government funding | govern / government / governor
+community | local community; sense of community | community / communal
+volunteer | volunteer work; unpaid volunteer | volunteer / voluntary / voluntarily
+law | break the law; strict laws | law / lawful / lawyer
+urbanisation | rapid urbanisation; effects of urbanisation | urban / urbanise / urbanisation
+infrastructure | transport infrastructure; invest in infrastructure
+globalisation | effects of globalisation; economic globalisation | globe / global / globalisation
+authority | local authority; have authority over | authorise / authority
+policy | government policy; introduce a policy | policy / policymaker
+minority | ethnic minority; a small minority | minor / minority
+to migrate | migrate to cities; migrate in search of work | migrate / migration / migrant
+lifestyle | healthy lifestyle; lifestyle change
+social cohesion | promote social cohesion; threaten social cohesion | cohesive / cohesion
+patient | treat a patient; cancer patient | patient / patience
+disease | heart disease; spread of disease
+infection | viral infection; risk of infection | infect / infection / infectious
+vaccine | develop a vaccine; flu vaccine | vaccinate / vaccine / vaccination
+prescription | doctor's prescription; prescription drug | prescribe / prescription
+allergy | food allergy; allergy to nuts | allergy / allergic
+to cure | cure a disease; cure a patient | cure / curable / incurable
+to prevent | prevent disease; prevent accidents | prevent / prevention / preventable
+to suffer | suffer from stress; suffer a loss | suffer / suffering
+to examine | examine the causes; examine closely | examine / examination
+mental | mental health; mental illness | mental / mentally / mentality
+serious | serious problem; serious illness | serious / seriously
+diet | balanced diet; healthy diet | diet / dietary
+habit | eating habits; break a habit | habit / habitual
+stress | work-related stress; cope with stress | stress / stressful / stressed
+injury | serious injury; sports injury | injure / injury / injured
+treatment | medical treatment; receive treatment | treat / treatment
+symptom | common symptom; show symptoms
+to recover | recover from illness; recover quickly | recover / recovery
+balanced | balanced diet; balanced view | balance / balanced
+active | physically active; active lifestyle | act / active / activity
+pandemic | global pandemic; during the pandemic
+epidemic | flu epidemic; obesity epidemic
+diagnosis | early diagnosis; make a diagnosis | diagnose / diagnosis / diagnostic
+prognosis | poor prognosis; long-term prognosis
+side effect | harmful side effects; cause side effects
+wellbeing | physical wellbeing; sense of wellbeing
+chronic | chronic disease; chronic pain | chronic / chronically
+acute | acute shortage; acute pain | acute / acutely
+contagious | highly contagious; contagious disease | contagion / contagious
+to administer | administer a drug; administer a test | administer / administration
+to diagnose | diagnose a condition; diagnosed with | diagnose / diagnosis
+holistic | holistic approach; holistic medicine
+obesity | childhood obesity; obesity rate | obese / obesity
+nutrition | poor nutrition; nutrition advice | nutrient / nutrition / nutritious
+life expectancy | average life expectancy; increase life expectancy
+sedentary | sedentary lifestyle; sedentary job
+profit | make a profit; net profit | profit / profitable
+investment | foreign investment; investment in education | invest / investment / investor
+budget | tight budget; annual budget
+competitor | main competitor; business competitor | compete / competitor / competition
+to launch | launch a product; launch a campaign
+revenue | tax revenue; annual revenue
+loan | student loan; bank loan
+debt | in debt; pay off a debt
+to afford | afford a house; can't afford to | afford / affordable
+supply | food supply; supply and demand | supply / supplier
+demand | high demand; meet demand
+contract | sign a contract; employment contract
+to invest | invest in research; invest heavily | invest / investment
+entrepreneur | young entrepreneur; successful entrepreneur | entrepreneur / entrepreneurial
+to negotiate | negotiate a deal; negotiate a contract | negotiate / negotiation
+inflation | high inflation; rate of inflation | inflate / inflation
+recession | economic recession; go into recession
+fiscal | fiscal policy; fiscal year
+subsidy | government subsidy; farm subsidies | subsidise / subsidy
+tariff | import tariff; impose tariffs
+asset | valuable asset; financial assets
+monopoly | have a monopoly on; state monopoly | monopoly / monopolise
+expenditure | public expenditure; household expenditure | expend / expenditure
+to stimulate | stimulate growth; stimulate the economy | stimulate / stimulation / stimulus
+to allocate | allocate funds; allocate resources | allocate / allocation
+to deplete | deplete resources; deplete the ozone layer | deplete / depletion
+lucrative | lucrative business; lucrative market
+volatile | volatile market; highly volatile | volatile / volatility
+affluent | affluent society; affluent area | affluent / affluence
+sustainable growth | achieve sustainable growth; promote sustainable growth
+staff | members of staff; staff training
+responsibility | take responsibility; share responsibility | responsible / responsibility
+task | carry out a task; difficult task
+strategy | long-term strategy; develop a strategy | strategy / strategic
+report | annual report; write a report | report / reporter
+project | research project; complete a project
+feedback | positive feedback; give feedback
+to achieve | achieve a goal; achieve success | achieve / achievement
+efficient | energy-efficient; efficient system | efficient / efficiency / efficiently
+flexible | flexible working hours; flexible approach | flexible / flexibility
+experienced | experienced teacher; highly experienced | experience / experienced
+to motivate | motivate students; highly motivated | motivate / motivation / motivated
+stakeholder | key stakeholder; involve stakeholders
+benchmark | set a benchmark; benchmark for quality
+outsourcing | outsourcing of jobs; outsourcing company | outsource / outsourcing
+turnover | staff turnover; annual turnover
+niche | niche market; fill a niche
+to streamline | streamline the process; streamline production
+to diversify | diversify the economy; diversify crops | diverse / diversify / diversity
+to forecast | forecast growth; forecast the weather | forecast / forecaster
+viable | viable option; commercially viable | viable / viability
+scalable | scalable solution; scalable model | scale / scalable
+to outperform | outperform rivals; outperform expectations | perform / outperform
+salary | annual salary; high salary
+colleague | work colleague; former colleague
+employee | full-time employee; key employee | employ / employee / employer
+career | career prospects; pursue a career
+deadline | meet a deadline; tight deadline
+economy | global economy; boost the economy | economy / economic / economist
+consumer | consumer demand; consumer society | consume / consumer / consumption
+productivity | increase productivity; high productivity | produce / productive / productivity
+workforce | skilled workforce; ageing workforce
+suspect | main suspect; question a suspect | suspect / suspicion / suspicious
+witness | eye witness; witness to a crime
+victim | victim of crime; flood victims
+trial | stand trial; on trial
+judge | high court judge; tough judge | judge / judgement
+lawyer | defence lawyer; hire a lawyer | law / lawyer
+sentence | prison sentence; serve a sentence
+fine | heavy fine; pay a fine
+theft | identity theft; car theft | thief / theft
+fraud | credit card fraud; commit fraud | fraud / fraudulent
+to arrest | arrest a suspect; be arrested for
+to accuse | accuse of theft; falsely accuse | accuse / accusation
+to commit | commit a crime; commit an offence
+to investigate | investigate a crime; fully investigate | investigate / investigation
+to punish | punish criminals; severely punish | punish / punishment
+to deny | deny access; strongly deny | deny / denial
+guilty | found guilty; plead guilty | guilt / guilty
+innocent | innocent people; innocent until proven guilty | innocent / innocence
+illegal | illegal drugs; highly illegal | legal / illegal / illegally
+verdict | reach a verdict; guilty verdict
+compensation | pay compensation; claim compensation | compensate / compensation
+liberty | civil liberties; individual liberty | liberty / liberate
+to prosecute | prosecute offenders; prosecute a case | prosecute / prosecution
+to enforce | enforce the law; strictly enforce | enforce / enforcement
+to appeal | appeal against a decision; appeal to the court
+to violate | violate a law; violate human rights | violate / violation
+to testify | testify in court; testify against | testify / testimony
+lawful | lawful act; lawful means | law / lawful / unlawful
+impartial | impartial advice; impartial judge | partial / impartial / impartiality
+breach | breach of contract; security breach
+jurisdiction | under the jurisdiction of; legal jurisdiction
+crime | violent crime; crime rate | crime / criminal
+offender | young offender; repeat offender | offend / offence / offender
+deterrent | effective deterrent; act as a deterrent | deter / deterrent
+rehabilitation | rehabilitation programme; rehabilitation of offenders | rehabilitate / rehabilitation
+headline | hit the headlines; newspaper headline
+journalist | investigative journalist; freelance journalist | journal / journalist / journalism
+to broadcast | broadcast live; broadcast news | broadcast / broadcaster
+advertisement | television advertisement; job advertisement | advertise / advertisement / advertising
+audience | wide audience; target audience
+reliable | reliable source; reliable information | rely / reliable / reliability
+to persuade | persuade people; try to persuade | persuade / persuasion / persuasive
+opinion | public opinion; express an opinion
+to influence | influence behaviour; strongly influence | influence / influential
+issue | controversial issue; address an issue
+to argue | argue that; argue in favour of | argue / argument / argumentative
+privacy | invasion of privacy; protect privacy | private / privacy
+viewpoint | opposing viewpoint; from a viewpoint
+biased | biased view; politically biased | bias / biased / unbiased
+propaganda | political propaganda; spread propaganda
+censorship | media censorship; strict censorship | censor / censorship
+misinformation | spread misinformation; online misinformation | inform / information / misinformation
+discourse | public discourse; political discourse
+coverage | media coverage; live coverage | cover / coverage
+credibility | lack credibility; lose credibility | credible / credibility
+transparency | greater transparency; lack of transparency | transparent / transparency
+to disseminate | disseminate information; widely disseminate | disseminate / dissemination
+to distort | distort the facts; distort reality | distort / distortion
+objective | objective view; main objective | object / objective / objectively
+anonymous | anonymous source; remain anonymous | anonymous / anonymity
+contentious | contentious issue; highly contentious | contend / contentious / contention
+social media | social media platform; social media user
+interaction | social interaction; human interaction | interact / interaction / interactive
+methodology | research methodology; sound methodology | method / methodology
+sample | random sample; representative sample
+variable | key variable; control a variable | vary / variable / variation
+correlation | strong correlation; correlation between | correlate / correlation
+findings | research findings; key findings | find / findings
+peer review | undergo peer review; peer review process
+anomaly | statistical anomaly; detect an anomaly
+criterion | main criterion; meet the criteria
+paradigm | paradigm shift; new paradigm
+empirical | empirical evidence; empirical research | empirical / empirically
+qualitative | qualitative research; qualitative data | quality / qualitative
+quantitative | quantitative analysis; quantitative data | quantity / quantitative
+preliminary | preliminary results; preliminary study
+rigorous | rigorous testing; rigorous standards | rigour / rigorous / rigorously
+to replicate | replicate a study; replicate results | replicate / replication
+to validate | validate a theory; validate results | valid / validate / validation
+to quantify | quantify the impact; difficult to quantify | quantify / quantity
+to synthesise | synthesise information; synthesise ideas | synthesise / synthesis
+hypothesis | test a hypothesis; support a hypothesis | hypothesis / hypothetical
+evidence | strong evidence; provide evidence | evident / evidence
+framework | legal framework; theoretical framework
+notion | common notion; reject the notion
+to analyse | analyse data; carefully analyse | analyse / analysis / analytical
+to derive | derive from; derive benefit | derive / derivation
+coherent | coherent argument; coherent structure | coherent / coherence / coherently
+comprehensive | comprehensive study; comprehensive guide | comprehend / comprehensive
+significant | significant difference; statistically significant | significant / significance / significantly
+survey | conduct a survey; recent survey
+factor | key factor; contributing factor
+impact | negative impact; have an impact on
+premise | basic premise; false premise
+counterargument | strong counterargument; address a counterargument | argue / argument / counterargument
+rationale | rationale behind; clear rationale | rational / rationale
+stance | take a stance; tough stance
+concession | make a concession; important concession | concede / concession
+to refute | refute a claim; refute an argument | refute / refutation
+to concede | concede defeat; concede a point | concede / concession
+to assert | assert that; assert authority | assert / assertion / assertive
+to dispute | dispute a claim; dispute the facts | dispute / disputed
+to substantiate | substantiate a claim; substantiate evidence | substantiate / substantial
+to dismiss | dismiss an idea; dismiss a claim | dismiss / dismissal
+compelling | compelling argument; compelling evidence | compel / compelling
+valid | valid point; valid reason | valid / validity / invalid
+flawed | flawed argument; deeply flawed | flaw / flawed
+persuasive | persuasive argument; highly persuasive | persuade / persuasive
+to emphasise | emphasise the importance; emphasise the need | emphasise / emphasis / emphatic
+to contradict | contradict the evidence; contradict a statement | contradict / contradiction
+to justify | justify the cost; justify a decision | justify / justification
+to undermine | undermine confidence; undermine authority
+ambiguous | ambiguous statement; highly ambiguous | ambiguous / ambiguity
+inevitable | inevitable result; almost inevitable | inevitable / inevitably
+to convey | convey a message; convey meaning
+to elaborate | elaborate on a point; refuse to elaborate | elaborate / elaboration
+to imply | imply that; strongly imply | imply / implication / implicit
+nuance | subtle nuance; nuance of meaning
+advantage | take advantage of; competitive advantage | advantage / advantageous
+drawback | main drawback; a major drawback
+heritage | cultural heritage; heritage site | inherit / heritage
+tradition | long tradition; keep a tradition | tradition / traditional
+gallery | art gallery; national gallery
+festival | music festival; annual festival
+culture | popular culture; culture shock | culture / cultural
+landmark | famous landmark; historic landmark
+destination | tourist destination; popular destination
+accommodation | student accommodation; provide accommodation | accommodate / accommodation
+cognition | human cognition; social cognition | cognition / cognitive
+perception | public perception; visual perception | perceive / perception
+motivation | lack of motivation; strong motivation | motivate / motivation
+personality | strong personality; personality trait | person / personality
+behaviour | human behaviour; antisocial behaviour | behave / behaviour
+attitude | positive attitude; attitude towards
+memory | short-term memory; childhood memory | memory / memorise / memorable
+to cope | cope with stress; struggle to cope
+to adapt | adapt to change; adapt quickly | adapt / adaptation / adaptable
+to perceive | perceive as; widely perceived | perceive / perception
+aesthetic | aesthetic value; aesthetic appeal | aesthetic / aesthetically
+to depict | depict a scene; clearly depict | depict / depiction
+to interpret | interpret data; interpret a text | interpret / interpretation
+contemporary | contemporary art; contemporary society
+original | original idea; original source | origin / original / originality
+creative | creative thinking; creative industries | create / creative / creativity
+overcrowded | overcrowded city; overcrowded prisons | crowd / overcrowded / overcrowding
+remote | remote area; remote working | remote / remotely
+to commute | commute to work; commute by train | commute / commuter
+to attract | attract tourists; attract attention | attract / attraction / attractive
+tourism | mass tourism; tourism industry | tour / tourist / tourism
+to require | require skills; require attention | require / requirement
+to obtain | obtain information; obtain a degree
+to maintain | maintain standards; maintain contact | maintain / maintenance
+to ensure | ensure safety; ensure that
+to involve | involve risk; involve parents | involve / involvement
+to consider | consider the effects; carefully consider | consider / consideration / considerable
+to estimate | estimate the cost; roughly estimate | estimate / estimation
+to identify | identify a problem; identify the cause | identify / identification / identity
+to reveal | reveal a secret; studies reveal | reveal / revelation
+to replace | replace workers; replace with | replace / replacement
+to emerge | emerge from; new problems emerge | emerge / emergence
+to encourage | encourage people; strongly encourage | encourage / encouragement
+to assume | assume that; assume responsibility | assume / assumption
+to facilitate | facilitate learning; facilitate communication | facilitate / facility / facilitator
+to mitigate | mitigate the effects; mitigate risk | mitigate / mitigation
+to exacerbate | exacerbate the problem; exacerbate inequality
+to comply | comply with the law; comply with rules | comply / compliance
+to endorse | endorse a view; endorse a product | endorse / endorsement
+to envisage | envisage a future; envisage changes
+to circumvent | circumvent the law; circumvent a problem
+to augment | augment income; augment reality | augment / augmentation
+to ascertain | ascertain the facts; ascertain whether
+to adhere to | adhere to rules; strictly adhere to | adhere / adherence
+to presume | presume innocent; presume that | presume / presumption
+to reiterate | reiterate a point; reiterate the importance
+to culminate | culminate in success; culminate in a war | culminate / culmination
+pervasive | pervasive influence; all-pervasive | pervade / pervasive
+intrinsic | intrinsic value; intrinsic motivation | intrinsic / intrinsically
+plausible | plausible explanation; plausible theory
+detrimental | detrimental effect; detrimental to health | detriment / detrimental
+indispensable | indispensable tool; indispensable part
+inherent | inherent risk; inherent problem | inherent / inherently
+prevalent | prevalent among; widely prevalent | prevail / prevalent / prevalence
+explicit | explicit instructions; make explicit | explicit / explicitly
+implicit | implicit assumption; implicit bias | imply / implicit / implicitly
+arbitrary | arbitrary decision; arbitrary rule
+obsolete | become obsolete; obsolete technology
+feasible | feasible plan; economically feasible | feasible / feasibility
+paramount | of paramount importance; safety is paramount
+tentative | tentative conclusion; tentative plan
+discrepancy | discrepancy between; wide discrepancy
+unprecedented | unprecedented growth; on an unprecedented scale
+transient | transient population; transient nature
+essential | essential part; absolutely essential | essence / essential
+valuable | valuable resource; valuable lesson | value / valuable
+obvious | obvious reason; fairly obvious | obvious / obviously
+complicated | complicated process; complicated issue | complicate / complicated / complication
+rare | rare species; rare event | rare / rarely / rarity
+to contribute | contribute to pollution; contribute to society | contribute / contribution
+to affect | affect health; adversely affect | affect / effect / effective
+to indicate | figures indicate; clearly indicate | indicate / indication / indicator
+to determine | determine the cause; determine success | determine / determination
+to establish | establish a link; well established | establish / establishment
+widespread | widespread use; widespread concern

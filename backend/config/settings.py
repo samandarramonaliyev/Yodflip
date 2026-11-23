@@ -75,6 +75,7 @@ INSTALLED_APPS = [
     "telegram_bot",
     "duels",
     "botquiz",
+    "exams",
 ]
 
 MIDDLEWARE = [

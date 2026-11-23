@@ -26,10 +26,12 @@ GAMES.forEach((g) => used.add(`game.${g}`) && used.add(`game.${g}_desc`))
 ;['learned', 'missed', 'want'].forEach((l) => [`lists.${l}`, `lists.${l}_empty`, `lists.${l}_empty_text`].forEach((k) => used.add(k)))
 ;['easy', 'medium', 'hard'].forEach((d) => used.add(`play.${d}`))
 ;['network', 'limit', 'too_large', 'forbidden', 'not_found', 'server', 'generic'].forEach((e) => used.add(`err.${e}`))
-const ACH = ['first_game', 'first_scan', 'first_deck', 'perfect_round', 'streak_3', 'streak_7', 'streak_30', 'words_10', 'words_100', 'words_500', 'xp_1000', 'daily_first', 'polyglot', 'deck_master', 'level_complete', 'first_duel', 'duel_wins_10', 'invited_5']
+const ACH = ['first_game', 'first_scan', 'first_deck', 'perfect_round', 'streak_3', 'streak_7', 'streak_30', 'words_10', 'words_100', 'words_500', 'xp_1000', 'daily_first', 'polyglot', 'deck_master', 'level_complete', 'first_duel', 'duel_wins_10', 'invited_5', 'exam_pack_50', 'exam_pack_100']
 ACH.forEach((a) => used.add(`ach.${a}`) && used.add(`ach.${a}_desc`))
 
 ;['win', 'draw', 'loss'].forEach((o) => used.add(`duel.${o}`))
+
+;['translation', 'reverse', 'definition'].forEach((k) => used.add(`exam.q_${k}`))
 
 describe('i18n', () => {
   it.each([

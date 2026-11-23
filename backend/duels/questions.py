@@ -43,6 +43,12 @@ def load_items(user, *, track: str, source: str, ref: str, mode: str, lang: str,
         else:
             items = get_items(user, track, "level", {"level": ref}, game_mode, translation_lang=lang)
         return items, ref, lang
+    if source == "exam":
+        from exams.services import get_pack, pack_words
+
+        pack = get_pack(ref, track)
+        items = apply_translations([item_from_word(w) for w in pack_words(pack)], lang)
+        return [i for i in items if item_usable(i, game_mode)], pack.name_uz, lang
     raise ValidationError({"source": "invalid_source"})
 
 

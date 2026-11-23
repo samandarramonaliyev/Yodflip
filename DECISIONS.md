@@ -167,3 +167,14 @@ Everything that was not fully specified, and what was chosen.
 - **Stale**: a session older than 24 h or unknown → "Bu savol eskirgan" + a new-quiz button in the same message. A second press on an answered question only shows the toast, so the running quiz isn't replaced.
 - The 1.5 s ✅/❌ pause (`QUIZ_FEEDBACK_SECONDS`) happens inside the webhook request (there is no worker); it occupies one of 8 gunicorn threads.
 - `/quiz` starts at once; `/quiz settings` opens the settings menu, `/quiz on|off` switches it. The timezone is changed in the app profile.
+
+## Exam prep packs
+- App `exams`: `ExamPack`, `ExamTopic`, `PackWord(pack, word, topic, order)`, `ExamSimulation`, `ExamGoal`. Packs: goethe-a1 300, goethe-a2 400, goethe-b1 500, ielts-academic 500, core-1000 1000.
+- **Content** is original, written for this app by topic; no official list was copied. Words that already exist in the track are linked with `= word` lines (about 1,850 of the 2,700 places); about 850 new words have all fields (definition, uz / ru / other, part of speech, example + 3 translations, article). The three Goethe packs don't overlap. Collocations and the optional word family of IELTS words are in `seed/extra/ielts-academic.txt`. The texts were machine-written and only checked by the script, so a native-speaker review is recommended.
+- **Words that exist only in packs** have `Word.level = ""` and no themed pack. So level sizes, level progress, the Daily Challenge and the level seed are unchanged; search, lists, decks and the bot quiz's due words work with them.
+- **Progress** is the same `UserLevelWord.found_at` row for levels and packs, so a shared word is stored once and counts for both. Exam rounds reuse `LevelRound` (new fields `exam`, `topic`) and `/api/levels/answer/`. A pack word may belong to a locked level: finding it still counts for that level, and a level finished this way gets its bonus.
+- "Boshlash" opens the last played unfinished topic, else the first unfinished one. When a topic is fully found, its games run as a review (`source=examreview`).
+- **Simulation**: 30 questions spread over all topics (round robin), three kinds (translation, reverse, definition), 10 minutes, no feedback until the end. Unanswered = wrong, but doesn't put the word into Missed. Submitted more than 30 s late → scored, no XP. Weak topic = below 70%. 5 XP per correct answer, scored once.
+- **Daily goal**: one pack at a time, new words found today (server date) in that pack.
+- `check_exams` and `seed_exams` run in build.sh and entrypoint.sh (hash-guarded, idempotent, words never deleted).
+- Words of the same spelling with another article or part of speech (EN "to book" / "book", DE "das Essen" / "essen") are separate entries, as in the levels.

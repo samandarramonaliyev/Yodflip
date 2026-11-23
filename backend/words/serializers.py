@@ -7,7 +7,7 @@ from .models import Pack, UserWord, Word
 
 class WordSerializer(serializers.ModelSerializer):
     display = serializers.CharField(read_only=True)
-    pack_slug = serializers.CharField(source="pack.slug", read_only=True)
+    pack_slug = serializers.CharField(source="pack.slug", read_only=True, default="")
 
     class Meta:
         model = Word
@@ -24,6 +24,8 @@ class WordSerializer(serializers.ModelSerializer):
             "translation_uz",
             "example",
             "example_uz",
+            "collocations",
+            "word_family",
         )
 
 

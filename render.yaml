@@ -38,6 +38,8 @@ services:
         sync: false
       - key: TELEGRAM_BOT_USERNAME
         sync: false
+      - key: TELEGRAM_APP_SHORT_NAME # from @BotFather /newapp (duel links); may stay empty
+        sync: false
       - key: TELEGRAM_WEBHOOK_SECRET
         generateValue: true
       - key: BOT_CRON_SECRET

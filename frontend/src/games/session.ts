@@ -116,6 +116,7 @@ export function totals(state: SessionState, stats: RoundStat[] = state.stats): T
 /** Duel setup page, pre-filled with the source that was just played (if duels support it). */
 export function duelPath(source: string, params: URLSearchParams): string {
   if (source === 'level' && params.get('level')) return `/duel?source=level&ref=${params.get('level')}`
+  if ((source === 'exam' || source === 'examreview') && params.get('pack')) return `/duel?source=exam&ref=${params.get('pack')}`
   if (source === 'deck' && params.get('id')) return `/duel?source=deck&ref=${params.get('id')}`
   return '/duel'
 }
@@ -123,6 +124,7 @@ export function duelPath(source: string, params: URLSearchParams): string {
 /** Where "Boshqa to'plam" (choose another set) should go for a given source. */
 export function otherSetPath(source: string, params: URLSearchParams): string {
   if (source === 'level') return params.get('level') ? `/levels/${params.get('level')}` : '/levels'
+  if (source === 'exam' || source === 'examreview') return params.get('pack') ? `/exams/${params.get('pack')}` : '/exams'
   if (source === 'set') return '/sets'
   if (source === 'deck') return params.get('id') ? `/decks/${params.get('id')}` : '/decks'
   if (source === 'missed' || source === 'want' || source === 'learned') return `/lists/${source}`
