@@ -96,6 +96,8 @@ export interface ResultsProps {
   extra?: ReactNode
   /** Extra buttons (e.g. "study missed again") */
   extraActions?: ReactNode
+  /** "Do'stingni chaqir": duel with the same source */
+  duelTo?: string
 }
 
 export function Results({
@@ -112,6 +114,7 @@ export function Results({
   otherSetTo,
   extra,
   extraActions,
+  duelTo,
 }: ResultsProps) {
   const t = useT()
   const [deckOpen, setDeckOpen] = useState(false)
@@ -199,6 +202,9 @@ export function Results({
           </button>
         )}
         {extraActions}
+        <Link to={duelTo ?? '/duel'} className="btn-soft" data-testid="duel-invite">
+          ⚔️ {t('duel.invite')}
+        </Link>
       </ActionRow>
     </motion.div>
   )

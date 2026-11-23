@@ -78,6 +78,29 @@ def record_answer(user, track: str, item: dict, correct: bool) -> tuple[UserWord
     return uw, became
 
 
+def apply_answer(user, track: str, item: dict, correct: bool) -> bool:
+    """One answer outside a level round (duel, bot quiz, exam simulation). True if a word was found now.
+
+    Built-in word not found yet: the level rules apply (found = learned, counted once; a miss goes to
+    Missed). Everything else (found words, deck / scanned words): the normal Leitner step.
+    """
+    from . import levels
+    from .models import UserLevelWord
+
+    word = Word.objects.filter(pk=item["word_id"], track=track).first() if item.get("word_id") else None
+    if word is None or UserLevelWord.objects.filter(user=user, word=word, found_at__isnull=False).exists():
+        record_answer(user, track, item, correct)
+        return False
+    if not correct:
+        levels._mark_missed(user, word, timezone.now())
+        return False
+    if not levels.mark_found(user, word):
+        return False
+    levels._mark_learned(user, word, timezone.now())
+    levels.settle_found(user, [word])
+    return True
+
+
 def list_queryset(user, track: str, which: str):
     qs = UserWord.objects.filter(user=user, track=track)
     if which == "learned":

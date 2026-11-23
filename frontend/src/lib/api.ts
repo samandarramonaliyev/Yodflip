@@ -71,10 +71,10 @@ function qs(query?: Query) {
 export async function request<T>(
   method: string,
   path: string,
-  opts: { body?: unknown; query?: Query; form?: FormData; raw?: boolean; auth?: boolean } = {},
+  opts: { body?: unknown; query?: Query; form?: FormData; raw?: boolean; auth?: boolean; headers?: Record<string, string> } = {},
 ): Promise<T> {
   const doFetch = () => {
-    const headers: Record<string, string> = {}
+    const headers: Record<string, string> = { ...opts.headers }
     if (opts.auth !== false && tokens?.access) headers.Authorization = `Bearer ${tokens.access}`
     let body: BodyInit | undefined
     if (opts.form) body = opts.form

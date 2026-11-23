@@ -39,6 +39,19 @@ def process_update(update: dict) -> None:
     async_to_sync(_process)(update)
 
 
+async def _send_to_user(chat_id: int, text: str, button: str, path: str) -> None:
+    bot = make_bot()
+    try:
+        await bot.send_message(chat_id, text, reply_markup=open_button(button, path), request_timeout=8)
+    finally:
+        await bot.session.close()
+
+
+def send_to_user(chat_id: int, text: str, button: str, path: str) -> None:
+    """One message with a Web App button (duel notifications)."""
+    async_to_sync(_send_to_user)(chat_id, text, button, path)
+
+
 async def _send_reminders(users: list[dict]) -> int:
     bot = make_bot()
     sent = 0

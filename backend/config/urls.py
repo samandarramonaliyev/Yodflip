@@ -19,6 +19,7 @@ urlpatterns = [
     path("api/", include("decks.urls")),
     path("api/games/", include("games.urls")),
     path("api/ocr/", include("ocr.urls")),
+    path("api/duels/", include("duels.urls")),
     path("api/gamification/", include("gamification.urls")),
     path("bot/", include("telegram_bot.urls")),  # Telegram webhook + reminder cron
     path(f"{settings.MEDIA_URL.strip('/')}/<path:path>", core_views.media, name="media"),

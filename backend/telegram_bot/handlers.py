@@ -9,6 +9,8 @@ from aiogram.filters import Command, CommandObject, CommandStart
 from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message, WebAppInfo
 from asgiref.sync import sync_to_async
 
+from duels.services import code_from_param
+
 from . import services
 from .texts import t
 
@@ -35,10 +37,20 @@ async def lang_of(message: Message) -> str:
 
 
 @router.message(CommandStart())
-async def cmd_start(message: Message) -> None:
+async def cmd_start(message: Message, command: CommandObject) -> None:
     lang = await lang_of(message)
+    code = code_from_param(command.args)
+    if code:  # t.me/<bot>?start=duel_<code>
+        await message.answer(t(lang, "duel_invited"), reply_markup=open_button(t(lang, "duel_open"), f"/duel/{code}"))
+        return
     name = message.from_user.first_name if message.from_user else ""
     await message.answer(t(lang, "welcome", name=name), reply_markup=open_button(t(lang, "open"), "/"))
+
+
+@router.message(Command("duel"))
+async def cmd_duel(message: Message) -> None:
+    lang = await lang_of(message)
+    await message.answer(t(lang, "duel_help"), reply_markup=open_button(t(lang, "duel_new"), "/duel"))
 
 
 @router.message(Command("daily"))

@@ -22,6 +22,9 @@ ACHIEVEMENTS: dict[str, str] = {
     "polyglot": "🌍",
     "deck_master": "🃏",
     "level_complete": "🎓",
+    "first_duel": "⚔️",
+    "duel_wins_10": "🥇",
+    "invited_5": "🤝",
 }
 
 
@@ -67,6 +70,16 @@ def record_activity(user, xp: int, correct: int, attempts: int, games: int = 1) 
     update_streak(user, day)
     user.xp += xp
     user.save(update_fields=["xp", "streak", "best_streak", "last_active_date"])
+
+
+def add_xp(user, xp: int) -> None:
+    """XP that is not a play of the user right now (e.g. a duel the opponent just finished): no streak change."""
+    from .models import DailyActivity
+
+    act, _ = DailyActivity.objects.get_or_create(user=user, date=today())
+    DailyActivity.objects.filter(pk=act.pk).update(xp=F("xp") + xp)
+    type(user).objects.filter(pk=user.pk).update(xp=F("xp") + xp)
+    user.refresh_from_db(fields=["xp"])
 
 
 def grant(user, code: str) -> bool:

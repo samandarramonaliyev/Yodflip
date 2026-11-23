@@ -19,6 +19,7 @@ def merge_users(keep: User, drop: User) -> User:
     the higher Leitner box.
     """
     from decks.models import Deck, WordSet
+    from duels.models import Duel, DuelParticipant
     from gamification.models import DailyActivity, GameSession, UserAchievement
     from words.models import UserWord
 
@@ -52,6 +53,13 @@ def merge_users(keep: User, drop: User) -> User:
             ua.save()
         else:
             ua.delete()
+    Duel.objects.filter(creator=drop).update(creator=keep)
+    Duel.objects.filter(winner=drop).update(winner=keep)
+    for p in DuelParticipant.objects.filter(user=drop):
+        if not DuelParticipant.objects.filter(duel=p.duel, user=keep).exists():
+            p.user = keep
+            p.save(update_fields=["user"])
+    User.objects.filter(invited_by=drop).exclude(pk=keep.pk).update(invited_by=keep)
     keep.xp += drop.xp
     keep.best_streak = max(keep.best_streak, drop.best_streak)
     if drop.telegram_id and not keep.telegram_id:

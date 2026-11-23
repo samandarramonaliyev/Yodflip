@@ -73,6 +73,7 @@ INSTALLED_APPS = [
     "ocr",
     "gamification",
     "telegram_bot",
+    "duels",
 ]
 
 MIDDLEWARE = [
@@ -220,6 +221,8 @@ ANTHROPIC_API_KEY = env("ANTHROPIC_API_KEY")
 ANTHROPIC_MODEL = env("ANTHROPIC_MODEL", "claude-opus-5-5")
 TELEGRAM_BOT_TOKEN = env("TELEGRAM_BOT_TOKEN")
 TELEGRAM_BOT_USERNAME = env("TELEGRAM_BOT_USERNAME").lstrip("@")
+# Mini App short name (BotFather /newapp) for t.me/<bot>/<app>?startapp=... links. Optional.
+TELEGRAM_APP_SHORT_NAME = env("TELEGRAM_APP_SHORT_NAME")
 # Webhook path secret / Telegram secret_token and the reminder-cron path secret. Optional:
 # derived from SECRET_KEY when empty (see telegram_bot.services).
 TELEGRAM_WEBHOOK_SECRET = env("TELEGRAM_WEBHOOK_SECRET")

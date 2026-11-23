@@ -8,6 +8,7 @@ from rest_framework.views import APIView
 from accounts.models import User
 from accounts.serializers import TokenPairSerializer, UserSerializer
 from accounts.services import merge_users, tokens_for
+from duels.services import code_from_param, record_referral
 
 from .verify import (
     TelegramAuthError,
@@ -19,6 +20,7 @@ from .verify import (
 
 class InitDataSerializer(serializers.Serializer):
     init_data = serializers.CharField(allow_blank=True)
+    duel_code = serializers.CharField(required=False, allow_blank=True, max_length=16)
 
 
 class WidgetSerializer(serializers.Serializer):
@@ -60,7 +62,8 @@ def _display_name(tg: dict) -> str:
 
 
 @transaction.atomic
-def get_or_create_tg_user(tg: dict) -> User:
+def get_or_create_tg_user(tg: dict, duel_code: str = "") -> User:
+    """`duel_code`: the duel link a brand-new user came through (referral, recorded once)."""
     tg_id = int(tg["id"])
     user = User.objects.filter(telegram_id=tg_id).first()
     if user is None:
@@ -70,6 +73,7 @@ def get_or_create_tg_user(tg: dict) -> User:
             display_name=_display_name(tg),
             ui_language="ru" if lang == "ru" else ("en" if lang == "en" else "uz"),
         )
+        record_referral(user, duel_code)
     user.telegram_username = tg.get("username") or user.telegram_username
     if tg.get("photo_url"):
         user.avatar_url = tg["photo_url"]
@@ -93,7 +97,9 @@ class WebAppLoginView(APIView):
             return Response({"detail": str(exc)}, status=status.HTTP_401_UNAUTHORIZED)
         if "user" not in payload:
             return Response({"detail": "no_user"}, status=status.HTTP_400_BAD_REQUEST)
-        return Response(tokens_for(get_or_create_tg_user(payload["user"])))
+        # Signed start_param of t.me/<bot>/<app>?startapp=duel_<code>, or the duel page that was opened.
+        code = code_from_param(payload.get("start_param")) or ser.validated_data.get("duel_code", "")
+        return Response(tokens_for(get_or_create_tg_user(payload["user"], code)))
 
 
 class WidgetLoginView(APIView):
@@ -107,10 +113,12 @@ class WidgetLoginView(APIView):
         ser = WidgetSerializer(data=request.data)
         ser.is_valid(raise_exception=True)
         try:
-            payload = verify_any(widget=dict(request.data))
+            fields = {k: v for k, v in request.data.items() if k != "duel_code"}  # not part of the signed payload
+            payload = verify_any(widget=fields)
         except TelegramAuthError as exc:
             return Response({"detail": str(exc)}, status=status.HTTP_401_UNAUTHORIZED)
-        return Response(tokens_for(get_or_create_tg_user(payload["user"])))
+        code = str(request.data.get("duel_code") or "")[:16]
+        return Response(tokens_for(get_or_create_tg_user(payload["user"], code)))
 
 
 class LinkTelegramView(APIView):

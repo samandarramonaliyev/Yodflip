@@ -9,7 +9,7 @@ import { EmptyState, ErrorState, Segmented, Spinner, Toggle } from '../component
 import { GAME_LIMITS, gameInfo } from '../games/catalog'
 import { isAvailable, supportsReverse, usableItems } from '../games/direction'
 import { BOARD_SIZES, shuffle, splitRounds, type Difficulty } from '../games/matchMachine'
-import { accuracyOf, createSession, otherSetPath, sessionReducer, totals } from '../games/session'
+import { accuracyOf, createSession, duelPath, otherSetPath, sessionReducer, totals } from '../games/session'
 import type { GameId, GameItem, GameOutcome, GameProps, Source } from '../games/types'
 import { useT } from '../i18n'
 import { api } from '../lib/api'
@@ -446,6 +446,7 @@ function Runner({ game, source, params, onChangeLang }: { game: GameId; source: 
               newAchievements={sum.newAchievements}
               learnedNow={sum.learnedNow}
               onNewGame={newGame}
+              duelTo={duelPath(source, params)}
               otherSetTo={game === 'daily' || game === 'review' ? undefined : otherSetPath(source, params)}
               extraActions={
                 game === 'flashcards' && sum.missed.length > 0 ? (

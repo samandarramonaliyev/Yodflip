@@ -1,9 +1,10 @@
-import { lazy, Suspense, useEffect } from 'react'
-import { Navigate, Route, Routes, useLocation } from 'react-router-dom'
+import { lazy, Suspense, useEffect, useRef } from 'react'
+import { Navigate, Route, Routes, useLocation, useNavigate } from 'react-router-dom'
 import Layout from './components/Layout'
 import { Spinner, Toaster } from './components/ui'
 import { api, getTokens, setLogoutHandler } from './lib/api'
-import { isTelegram, tg } from './lib/telegram'
+import { duelCodeOf, startParamPath } from './lib/duel'
+import { isTelegram, startParam, tg } from './lib/telegram'
 import type { AuthResponse, PublicConfig, User } from './lib/types'
 import { useApp } from './store/app'
 import { useMediaQuery } from './lib/hooks'
@@ -24,6 +25,8 @@ const Play = lazy(() => import('./pages/Play'))
 const Leaderboard = lazy(() => import('./pages/Leaderboard'))
 const Profile = lazy(() => import('./pages/Profile'))
 const Lists = lazy(() => import('./pages/Lists'))
+const DuelHub = lazy(() => import('./pages/DuelHub'))
+const DuelPage = lazy(() => import('./pages/DuelPage'))
 
 function useThemeAndTrack() {
   const theme = useApp((s) => s.theme)
@@ -48,7 +51,10 @@ function useBoot() {
       try {
         if (isTelegram && tg) {
           // Mini App: always sign in with verified initData (fresh identity).
-          const r = await api.publicPost<AuthResponse>('/auth/telegram/webapp/', { init_data: tg.initData })
+          const r = await api.publicPost<AuthResponse>('/auth/telegram/webapp/', {
+            init_data: tg.initData,
+            duel_code: duelCodeOf(window.location.pathname), // signed start_param wins; this covers bot buttons
+          })
           login(r)
         } else if (getTokens()) {
           setUser(await api.get<User>('/auth/me/'))
@@ -61,6 +67,18 @@ function useBoot() {
     })()
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
+}
+
+/** Opened via t.me/<bot>/<app>?startapp=duel_<code>: go straight to the duel (once). */
+function useStartParam() {
+  const nav = useNavigate()
+  const done = useRef(false)
+  useEffect(() => {
+    if (done.current) return
+    done.current = true
+    const path = isTelegram ? startParamPath(startParam()) : null
+    if (path) nav(path, { replace: true })
+  }, [nav])
 }
 
 function FullSpinner() {
@@ -83,6 +101,7 @@ function RequireAuth({ children }: { children: JSX.Element }) {
 export default function App() {
   useThemeAndTrack()
   useBoot()
+  useStartParam()
   const booting = useApp((s) => s.booting)
   return (
     <>
@@ -95,6 +114,8 @@ export default function App() {
             <Route path="/login" element={<Login />} />
             <Route element={<Layout />}>
               <Route path="/d/:code" element={<SharedDeck />} />
+              <Route path="/duel/:code" element={<DuelPage />} />
+              <Route path="/duel" element={<RequireAuth><DuelHub /></RequireAuth>} />
               <Route path="/" element={<RequireAuth><Home /></RequireAuth>} />
               <Route path="/levels" element={<RequireAuth><Levels /></RequireAuth>} />
               <Route path="/levels/:level" element={<RequireAuth><LevelPage /></RequireAuth>} />

@@ -83,6 +83,15 @@ export default function Home() {
         </Link>
       </section>
 
+      <Link to="/duel" className="card flex items-center gap-4 p-5 transition hover:shadow-lift" data-testid="home-duel">
+        <span className="text-4xl">⚔️</span>
+        <span className="flex-1">
+          <span className="block text-xl font-black">{t('duel.title')}</span>
+          <span className="text-muted">{t('duel.home_desc')}</span>
+        </span>
+        <ChevronRight className="text-muted" />
+      </Link>
+
       <section className="grid grid-cols-2 gap-3 md:grid-cols-4">
         {[
           { to: '/levels', icon: Layers, label: t('nav.levels') },

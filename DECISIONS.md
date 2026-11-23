@@ -139,3 +139,18 @@ Everything that was not fully specified, and what was chosen.
 - Tabs Yodlanganlar · Yodlanadiganlar · Topa olmaganlar with counts. Collapsed: the 6 most recent words + "Hammasini ko'rish (N)". Expanded: search, sort (newest / A–Z), level and deck filters, 30 rows per request ("Ko'proq yuklash"), move / delete / 🔊 per row, "Yopish" at the top and sticky at the bottom on mobile (collapsing scrolls to the section header).
 - Backend: `GET /api/me/words/?list=&page=&page_size=(max 30)&search=&sort=new|az&level=&deck=&track=` → `count`, `has_more`, `counts` for all three lists, `results`. Deck filter = words whose term is a card of that (own) deck.
 - The open/closed state per tab is kept in `sessionStorage` (session only).
+
+## Friend duels
+- New app `duels`: `Duel` (frozen `words` JSON = prompt, options, answer index, item) and `DuelParticipant`. The answer index never leaves the server before the answer is posted. `/api/duels/` create + stats, `/api/duels/<code>/` get / `start` / `answer` / `finish` / `claim` / `rematch`.
+- **Match duel** = two boards of 5 words + 5 same-language definitions, all cards open, exactly one attempt per word. The normal face-down Match always ends with every pair found, so it can't produce "8/10"; the open board keeps the mechanic and gives a fair score. Speed duel = 10 questions with 4 options.
+- **Time** = sum of server-side gaps between accepted posts (network latency included, same for both players). Rejected: a gap below 300 ms, a client-reported time below 300 ms, a second answer for a word (409), anything after finishing. Finishing early adds the last waiting time; unanswered = wrong.
+- **One opponent per code**: unique (duel, role) in the database. An opponent who starts and leaves without finishing frees the place after 30 minutes if somebody else comes (otherwise one tap on the link could block a duel forever).
+- The creator must finish first (status pending → open); the 48 h start again at that moment. Expired duels are swept by both cron URLs and lazily when opened; the creator is notified once.
+- The challenger's score and time are visible in the invitation (they are in the share text); answers and words are not.
+- **Guests** get a random `guest_token` (kept in localStorage, sent as `X-Duel-Guest`). After registering or signing in, `/claim/` moves the result to the account, with XP and learning, once.
+- **Learning**: `words.services.apply_answer`: a built-in word that is not found yet follows the level rules (found = learned, once; miss → Missed); found words and deck cards do a normal Leitner step.
+- **XP** win 30 / draw 15 / loss 10 on completion (`add_xp`, no streak change for the waiting player); playing itself keeps the streak.
+- **Rematch**: a new duel with the same source and new words, created and first played by the player who asked; the other one gets a bot message when it is ready. Asking twice returns the same duel. A rematch may use the other player's deck (only the 10 frozen words are shown).
+- **Referral**: `User.invited_by`, set only when the account is created: signed `start_param`, or `duel_code` sent with webapp / widget / email registration from a duel page.
+- Sharing uses `t.me/share/url` (works without inline mode). `TELEGRAM_APP_SHORT_NAME` empty → the link falls back to `t.me/<bot>?start=duel_<code>` and the bot answers with a Web App button.
+- Group duels (optional in the task) are not built.

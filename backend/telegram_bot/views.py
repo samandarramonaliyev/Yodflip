@@ -7,6 +7,8 @@ from django.http import HttpResponse, HttpResponseForbidden, JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.http import require_http_methods, require_POST
 
+from duels.services import expire_due
+
 from . import services
 from .bot import process_update, send_reminders
 
@@ -59,6 +61,7 @@ def cron(request, secret: str):
         return HttpResponseForbidden("forbidden")
     if not settings.TELEGRAM_BOT_TOKEN:
         return JsonResponse({"ok": True, "sent": 0, "detail": "bot_disabled"})
+    expire_due()
     users = services.take_due_reminders()
     sent = send_reminders(users)
     return JsonResponse({"ok": True, "due": len(users), "sent": sent})

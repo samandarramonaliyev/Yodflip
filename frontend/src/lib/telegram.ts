@@ -22,7 +22,7 @@ interface TgButton {
 
 export interface TelegramWebApp {
   initData: string
-  initDataUnsafe: { user?: { id: number; first_name: string; username?: string; photo_url?: string } }
+  initDataUnsafe: { user?: { id: number; first_name: string; username?: string; photo_url?: string }; start_param?: string }
   colorScheme: 'light' | 'dark'
   themeParams: ThemeParams
   platform: string
@@ -51,6 +51,9 @@ declare global {
 }
 
 export const tg: TelegramWebApp | undefined = typeof window !== 'undefined' ? window.Telegram?.WebApp : undefined
+
+/** Parameter of t.me/<bot>/<app>?startapp=<param> (signed inside initData). */
+export const startParam = (): string | undefined => tg?.initDataUnsafe?.start_param
 
 /** True only when actually running inside Telegram (initData present). */
 export const isTelegram = Boolean(tg?.initData)

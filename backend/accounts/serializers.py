@@ -56,6 +56,7 @@ class RegisterSerializer(serializers.Serializer):
     password = serializers.CharField(write_only=True, min_length=6)
     display_name = serializers.CharField(max_length=80, required=False, allow_blank=True)
     ui_language = serializers.ChoiceField(choices=["uz", "en", "ru"], required=False)
+    duel_code = serializers.CharField(required=False, allow_blank=True, max_length=16)
 
     def validate_email(self, value):
         value = value.strip().lower()
@@ -68,12 +69,16 @@ class RegisterSerializer(serializers.Serializer):
         return value
 
     def create(self, data):
-        return User.objects.create_user(
+        from duels.services import record_referral
+
+        user = User.objects.create_user(
             email=data["email"],
             password=data["password"],
             display_name=data.get("display_name") or data["email"].split("@")[0],
             ui_language=data.get("ui_language", "uz"),
         )
+        record_referral(user, data.get("duel_code", ""))
+        return user
 
 
 class LoginSerializer(serializers.Serializer):

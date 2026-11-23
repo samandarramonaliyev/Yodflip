@@ -287,6 +287,12 @@ def check_completion(user, track: str, level: str) -> tuple[dict, bool, int]:
     return row, True, COMPLETION_BONUS_XP
 
 
+def settle_found(user, words: list[Word]) -> None:
+    """After words were found outside a round of their own level: level completion bonuses."""
+    for track, level in {(w.track, w.level) for w in words if w.level}:
+        check_completion(user, track, level)
+
+
 def mark_found(user, w: Word, rnd: LevelRound | None = None) -> bool:
     """Mark a built-in word found (FOUND = LEARNED). True only the first time."""
     UserLevelWord.objects.get_or_create(user=user, word=w, defaults={"track": w.track, "level": w.level})

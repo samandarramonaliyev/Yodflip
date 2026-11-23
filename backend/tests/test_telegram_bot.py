@@ -167,6 +167,7 @@ def test_configure_telegram_sets_webhook(bot_settings):
     assert {c["command"] for c in methods["setMyCommands"]["commands"]} == {
         "start",
         "daily",
+        "duel",
         "stats",
         "review",
         "remind",

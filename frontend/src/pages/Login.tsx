@@ -5,6 +5,7 @@ import { Navigate, useNavigate, useSearchParams } from 'react-router-dom'
 import { Segmented, Spinner } from '../components/ui'
 import { LANG_NAMES, useT } from '../i18n'
 import { api, ApiError } from '../lib/api'
+import { duelCodeOf } from '../lib/duel'
 import type { AuthResponse, UiLang } from '../lib/types'
 import { useApp } from '../store/app'
 
@@ -32,6 +33,7 @@ export default function Login() {
   const nav = useNavigate()
   const [params] = useSearchParams()
   const next = params.get('next') || '/'
+  const duelCode = duelCodeOf(next)
   const { user, login, config, lang, setLang } = useApp()
   const [mode, setMode] = useState<'login' | 'register'>('login')
   const [email, setEmail] = useState('')
@@ -55,7 +57,7 @@ export default function Login() {
       const r =
         mode === 'login'
           ? await api.publicPost<AuthResponse>('/auth/login/', { email, password })
-          : await api.publicPost<AuthResponse>('/auth/register/', { email, password, display_name: name, ui_language: lang })
+          : await api.publicPost<AuthResponse>('/auth/register/', { email, password, display_name: name, ui_language: lang, duel_code: duelCode })
       done(r)
     } catch (err) {
       const data = err instanceof ApiError ? (err.data as Record<string, unknown>) : null
@@ -70,7 +72,7 @@ export default function Login() {
 
   const widgetAuth = async (u: Record<string, unknown>) => {
     try {
-      done(await api.publicPost<AuthResponse>('/auth/telegram/widget/', u))
+      done(await api.publicPost<AuthResponse>('/auth/telegram/widget/', duelCode ? { ...u, duel_code: duelCode } : u))
     } catch {
       setError(t('auth.tg_failed'))
     }
@@ -79,7 +81,7 @@ export default function Login() {
   const demoTelegram = async () => {
     setBusy(true)
     try {
-      done(await api.publicPost<AuthResponse>('/auth/telegram/webapp/', { init_data: '' }))
+      done(await api.publicPost<AuthResponse>('/auth/telegram/webapp/', { init_data: '', duel_code: duelCode }))
     } catch {
       setError(t('auth.tg_failed'))
     } finally {

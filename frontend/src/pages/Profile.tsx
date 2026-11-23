@@ -3,11 +3,13 @@ import { Flame, LogOut, Moon, Send, Star, Sun, Target, Trophy } from 'lucide-rea
 import { useEffect, useRef, useState, type FormEvent } from 'react'
 import { Link } from 'react-router-dom'
 import { TrackSwitch } from '../components/Layout'
+import { DuelStatsCard } from '../components/DuelStatsCard'
 import { WordListsSection } from '../components/WordListsSection'
 import { XpChart } from '../components/XpChart'
 import { Avatar, ErrorState, ProgressBar, Segmented, Skeleton, Toggle, toast } from '../components/ui'
 import { LANG_NAMES, useT } from '../i18n'
 import { api } from '../lib/api'
+import type { DuelStats } from '../lib/duel'
 import { useAsync } from '../lib/hooks'
 import { isTelegram } from '../lib/telegram'
 import type { Achievement, Cefr, ProfileStats, UiLang, User } from '../lib/types'
@@ -79,6 +81,7 @@ export default function Profile() {
   const { track, user, lang, setLang, theme, setTheme, muted, toggleMute, logout, setUser } = useApp()
   const stats = useAsync(() => api.get<ProfileStats>('/gamification/profile/', { track }), [track])
   const ach = useAsync(() => api.get<Achievement[]>('/gamification/achievements/'), [])
+  const duels = useAsync(() => api.get<DuelStats>('/duels/'), [])
   const [reminder, setReminder] = useState(user?.reminder_time?.slice(0, 5) || '')
 
   if (!user) return null
@@ -167,6 +170,8 @@ export default function Profile() {
           </section>
         </>
       )}
+
+      {duels.data && <DuelStatsCard stats={duels.data} />}
 
       <div className="card p-4">
         <WordListsSection track={track} />

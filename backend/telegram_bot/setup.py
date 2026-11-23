@@ -14,6 +14,7 @@ log = logging.getLogger(__name__)
 COMMANDS = [
     {"command": "start", "description": "Open Yodflip"},
     {"command": "daily", "description": "Today's challenge"},
+    {"command": "duel", "description": "Challenge a friend"},
     {"command": "stats", "description": "My progress"},
     {"command": "review", "description": "Words due for review"},
     {"command": "remind", "description": "Daily reminder: /remind 19:00 or off"},

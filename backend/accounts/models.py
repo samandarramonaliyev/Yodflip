@@ -47,6 +47,9 @@ class User(AbstractBaseUser, PermissionsMixin):
     reminder_time = models.TimeField(null=True, blank=True)
     last_reminder_date = models.DateField(null=True, blank=True)
 
+    # Who brought this user to Yodflip (duel link); set once, when the account is created.
+    invited_by = models.ForeignKey("self", null=True, blank=True, on_delete=models.SET_NULL, related_name="invited")
+
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
     date_joined = models.DateTimeField(default=timezone.now)
