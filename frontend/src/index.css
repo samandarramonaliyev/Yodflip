@@ -143,3 +143,17 @@ a,
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Exam simulation only (class added by useExamGuard) */
+body.exam-mode,
+body.exam-mode * {
+  -webkit-user-select: none !important;
+  user-select: none !important;
+  -webkit-touch-callout: none !important;
+  -webkit-user-drag: none !important;
+}
+@media print {
+  body.exam-mode {
+    display: none !important;
+  }
+}

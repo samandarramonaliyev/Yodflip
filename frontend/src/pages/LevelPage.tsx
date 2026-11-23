@@ -98,6 +98,9 @@ export default function LevelPage() {
         <button className="btn-tint mt-3 w-full" onClick={() => setPlayPack('')}>
           {t('levels.play_all')}
         </button>
+        <Link to={`/levels/${level}/words`} className="btn-ghost mt-2 w-full">
+          📖 {t('study2.title')}
+        </Link>
       </section>
 
       <section>

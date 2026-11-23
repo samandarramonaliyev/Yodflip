@@ -124,6 +124,7 @@ export function duelPath(source: string, params: URLSearchParams): string {
 /** Where "Boshqa to'plam" (choose another set) should go for a given source. */
 export function otherSetPath(source: string, params: URLSearchParams): string {
   if (source === 'level') return params.get('level') ? `/levels/${params.get('level')}` : '/levels'
+  if (source === 'lesson') return params.get('pack') ? `/exams/${params.get('pack')}/words` : `/levels/${params.get('level') || 'A1'}/words`
   if (source === 'exam' || source === 'examreview') return params.get('pack') ? `/exams/${params.get('pack')}` : '/exams'
   if (source === 'set') return '/sets'
   if (source === 'deck') return params.get('id') ? `/decks/${params.get('id')}` : '/decks'

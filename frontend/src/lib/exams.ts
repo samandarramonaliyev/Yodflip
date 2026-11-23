@@ -58,7 +58,10 @@ export interface Simulation {
   pack: string
   name: Names
   time_limit: number
-  questions: SimQuestion[]
+  total: number
+  max_violations: number
+  /** Questions come one at a time */
+  question: SimQuestion | null
 }
 
 export interface SimResult {
@@ -69,6 +72,8 @@ export interface SimResult {
   xp_total: number
   streak: number
   late: boolean
+  terminated?: boolean
+  violations?: { kind: string; at: string }[]
   duration_ms: number
   weak_topics: string[]
   topics: { slug: string; emoji: string; name: Names; correct: number; total: number; percent: number; weak: boolean }[]

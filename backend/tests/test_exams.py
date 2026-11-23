@@ -248,45 +248,96 @@ def start(api):
     return r.data
 
 
-def test_simulation_flow(api, user, pack):
+def post(api, sim, what, body=None):
+    return api.post(f"/api/exams/simulations/{sim.pk}/{what}/", body or {}, format="json")
+
+
+def test_simulation_flow_one_question_at_a_time(api, user, pack):
     d = start(api)
-    assert len(d["questions"]) == 30 and d["time_limit"] == 600
-    assert {q["kind"] for q in d["questions"]} == {"translation", "reverse", "definition"}
-    assert "answer" not in str(d["questions"])
+    assert d["total"] == 30 and d["time_limit"] == 600 and "questions" not in d
     sim = ExamSimulation.objects.get()
     assert {q["topic"] for q in sim.questions} == {"t0", "t1", "t2", "t3"}
     assert len({q["word_id"] for q in sim.questions}) == 30
-    # everything right except topic t3
-    answers = [
-        {"index": n, "choice": q["answer"] if q["topic"] != "t3" else (q["answer"] + 1) % 4}
-        for n, q in enumerate(sim.questions)
-    ]
+    assert {q["kind"] for q in sim.questions} == {"translation", "reverse", "definition"}
+    q = d["question"]
+    for n, full in enumerate(sim.questions):  # everything right except topic t3
+        assert set(q) == {"index", "kind", "prompt", "options"} and q["index"] == n
+        choice = full["answer"] if full["topic"] != "t3" else (full["answer"] + 1) % 4
+        r = post(api, sim, "answer", {"index": n, "choice": choice})
+        assert "correct" not in r.data
+        again = post(api, sim, "answer", {"index": n, "choice": 0})  # repeated post: nothing changes
+        assert again.data == r.data
+        q = r.data["question"]
+    assert r.data == {"done": True, "question": None}
     wrong = sum(q["topic"] == "t3" for q in sim.questions)
-    url = f"/api/exams/simulations/{sim.pk}/submit/"
-    r = api.post(url, {"answers": answers}, format="json")
+    r = post(api, sim, "submit")
     assert r.status_code == 200, r.data
     assert r.data["score"] == 30 - wrong and r.data["weak_topics"] == ["t3"]
     assert r.data["topics"][0]["name"]["uz"] == "T3" and r.data["xp"] == 5 * (30 - wrong)
+    assert r.data["violations"] == [] and r.data["terminated"] is False
     assert UserLevelWord.objects.filter(user=user, found_at__isnull=False).count() == 30 - wrong
     assert UserWord.objects.filter(user=user, box=1, miss_count=1).count() == wrong
     user.refresh_from_db()
     xp = user.xp
-    again = api.post(url, {"answers": []}, format="json")  # scored only once
-    assert again.data["score"] == 30 - wrong
+    assert post(api, sim, "submit").data["score"] == 30 - wrong  # scored only once
     user.refresh_from_db()
     assert user.xp == xp and user.streak == 1 and GameSession.objects.filter(game="exam_sim").count() == 1
     assert api.get("/api/exams/mini/").data["last_simulation"]["score"] == 30 - wrong
 
 
+def test_skipped_question_and_invalid_choice(api, user, pack):
+    start(api)
+    sim = ExamSimulation.objects.get()
+    assert post(api, sim, "answer", {"index": 0, "choice": 9}).status_code == 400
+    assert post(api, sim, "answer", {"index": 0, "choice": None}).data["question"]["index"] == 1
+    assert post(api, sim, "submit").data["score"] == 0
+    assert not UserWord.objects.filter(user=user).exists()
+
+
+def test_third_violation_finishes_without_xp_and_badges(api, user, pack):
+    start(api)
+    sim = ExamSimulation.objects.get()
+    for n in range(25):
+        post(api, sim, "answer", {"index": n, "choice": sim.questions[n]["answer"]})
+    assert post(api, sim, "violation", {"kind": "nonsense"}).status_code == 400
+    for n, kind in enumerate(("tab_switch", "printscreen"), start=1):
+        r = post(api, sim, "violation", {"kind": kind})
+        assert (r.data["count"], r.data["terminated"], r.data["result"]) == (n, False, None)
+    r = post(api, sim, "violation", {"kind": "copy"})
+    assert r.data["terminated"] is True and r.data["result"]["xp"] == 0 and r.data["result"]["score"] == 25
+    sim.refresh_from_db()
+    assert sim.finished_at and sim.terminated
+    assert [v["kind"] for v in sim.violations] == ["tab_switch", "printscreen", "copy"]
+    assert [v["kind"] for v in post(api, sim, "submit").data["violations"]] == ["tab_switch", "printscreen", "copy"]
+    assert post(api, sim, "answer", {"index": 25, "choice": 0}).data["done"] is True
+    assert post(api, sim, "violation", {"kind": "copy"}).data["count"] == 3  # finished: not counted any more
+    user.refresh_from_db()
+    assert user.xp == 0 and not UserLevelWord.objects.filter(user=user, found_at__isnull=False).exists()
+    assert not UserAchievement.objects.filter(user=user).exists()
+
+
 def test_late_simulation_gives_no_xp_and_is_private(api, client_for, pack, django_user_model):
-    d = start(api)
-    other = django_user_model.objects.create_user(email="x@example.com", password="secret123")
-    url = f"/api/exams/simulations/{d['id']}/submit/"
-    assert client_for(other).post(url, {"answers": []}, format="json").status_code == 404
+    start(api)
+    sim = ExamSimulation.objects.get()
+    other = client_for(django_user_model.objects.create_user(email="x@example.com", password="secret123"))
+    for what, body in (("submit", {}), ("answer", {"index": 0, "choice": 0}), ("violation", {"kind": "copy"})):
+        assert post(other, sim, what, body).status_code == 404
+    post(api, sim, "answer", {"index": 0, "choice": sim.questions[0]["answer"]})
     ExamSimulation.objects.update(created_at=timezone.now() - timedelta(hours=1))
-    q = ExamSimulation.objects.get().questions[0]
-    r = api.post(url, {"answers": [{"index": 0, "choice": q["answer"]}]}, format="json")
+    assert post(api, sim, "answer", {"index": 1, "choice": 0}).data["done"] is True
+    r = post(api, sim, "submit")
     assert r.data["late"] is True and r.data["xp"] == 0 and r.data["score"] == 1
+
+
+# --- word list of a pack ---------------------------------------------------------------------
+def test_pack_study_list(api, pack):
+    d = api.get("/api/exams/mini/study/", {"lang": "ru", "lesson": 2}).data
+    assert (d["lesson"], d["lessons"], d["total"]) == (2, 2, 40)
+    assert [w["word"] for w in d["words"]] == [f"w{i}" for i in range(20, 40)] and d["words"][0]["topic"] == "t2"
+    assert api.get("/api/exams/mini/study/", {"topic": "t1"}).data["total"] == 10
+    ids = ",".join(str(w["id"]) for w in d["words"][:5])
+    q = {"game": "flashcards", "track": "en", "source": "lesson", "pack": "mini", "ids": ids}
+    assert len(api.get("/api/games/words/", q).data["items"]) == 5
 
 
 def test_unknown_pack_and_german_only_game(api, pack):

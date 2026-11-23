@@ -258,6 +258,7 @@ function Runner({ game, source, params, onChangeLang }: { game: GameId; source: 
         pack: params.get('pack'),
         topic: params.get('topic'),
         id: params.get('id'),
+        ids: params.get('ids'),
         limit: GAME_LIMITS[game],
       })
       const usable = usableItems(r.items, game)

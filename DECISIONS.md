@@ -187,3 +187,15 @@ Everything that was not fully specified, and what was chosen.
 - Limit: 200 new audios per user and day (cached plays don't count). Over the limit, on errors or without a key the browser voice is used; if the device has voices but none of that language, nothing is spoken. Guests (no login) get the browser voice.
 - Alternatives: "der Arzt, die Ärztin" and "a / b" speak only the first form; sentences keep their commas.
 - Uzbek: no speaker button. Russian: shown when the server has a key or the device has a Russian voice.
+
+## Exam simulation protection
+- A web page can't fully block screenshots; these are deterrents, active only while the simulation is on screen (`useExamGuard`, class `exam-mode`).
+- Questions are served one at a time; answers are stored on the server, there is no way back, and correct answers come only with the result. `null` = skipped. This replaces the earlier full question list.
+- Violations (tab_switch, focus_loss, printscreen, copy, devtools) are stored with the simulation (admin shows them). One physical event within 1 s counts once. Ctrl+A / S / P, right click and drag are blocked but not counted. The third one finishes the exam on the server: no XP, badges, streak or learning progress. Violations that can't be sent (offline) are sent when the player returns.
+- The limit can be evaded by starting a new simulation; abandoned ones stay in admin without a score.
+- Telegram: no documented screenshot protection was found in the public WebApp API docs at the time of writing (the official page couldn't be fetched automatically), so only feature detection of likely method names is in place and it does nothing on current clients.
+
+## Word list study mode
+- `GET /api/levels/{track}/{level}/words/` and `/api/exams/{slug}/study/`: lessons of 20 in theme order. With a filter the filtered list is split into lessons; the remembered lesson (per device) is the unfiltered one. Locked levels stay locked.
+- Reading changes nothing. "Learned" = found, or box 5. ⭐ toggles Want to learn.
+- The lesson check opens flashcards with `source=lesson&ids=…` (exactly these words; max 20). Language changes are saved in the same translation preference.

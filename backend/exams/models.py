@@ -62,6 +62,10 @@ class ExamSimulation(models.Model):
     translation_lang = models.CharField(max_length=2, default="uz")
     questions = models.JSONField(default=list)
     time_limit = models.PositiveIntegerField(default=600)  # seconds
+    position = models.PositiveSmallIntegerField(default=0)  # questions are served one at a time
+    answers = models.JSONField(default=dict, blank=True)  # {"0": 2}
+    violations = models.JSONField(default=list, blank=True)  # [{kind, at}]
+    terminated = models.BooleanField(default=False)  # auto-finished after MAX_VIOLATIONS
     score = models.PositiveSmallIntegerField(default=0)
     result = models.JSONField(default=dict, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)

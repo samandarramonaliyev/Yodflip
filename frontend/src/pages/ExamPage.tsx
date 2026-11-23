@@ -68,6 +68,9 @@ export default function ExamPage() {
         <button className="btn-primary w-full" onClick={() => open(p.next_topic)}>
           <Play className="h-5 w-5" /> {p.completed ? t('exam.review') : p.found ? t('exam.continue') : t('common.start')}
         </button>
+        <button className="btn-ghost w-full" onClick={() => go(`/exams/${slug}/words`)}>
+          📖 {t('study2.title')}
+        </button>
         <div className="grid gap-2 sm:grid-cols-2">
           <Link to={`/exams/${slug}/simulation`} className="btn-soft">
             <Timer className="h-5 w-5" /> {t('exam.simulation')}

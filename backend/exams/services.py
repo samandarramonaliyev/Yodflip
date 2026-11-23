@@ -24,6 +24,8 @@ SIM_SECONDS = 600
 SIM_GRACE = 30
 WEAK_PERCENT = 70
 XP_PER_CORRECT = 5
+MAX_VIOLATIONS = 3
+VIOLATIONS = ("tab_switch", "focus_loss", "printscreen", "copy", "devtools")
 
 
 def get_pack(slug: str, track: str | None = None) -> ExamPack:
@@ -266,11 +268,59 @@ def simulation_payload(sim: ExamSimulation) -> dict:
         "pack": sim.pack.slug,
         "name": _names(sim.pack),
         "time_limit": sim.time_limit,
-        "questions": [
-            {"index": n, "kind": q["kind"], "prompt": q["prompt"], "options": q["options"]}
-            for n, q in enumerate(sim.questions)
-        ],
+        "total": len(sim.questions),
+        "max_violations": MAX_VIOLATIONS,
+        "question": current_question(sim),
     }
+
+
+def current_question(sim: ExamSimulation) -> dict | None:
+    """Only the current question, never the answer."""
+    if sim.finished_at or sim.position >= len(sim.questions):
+        return None
+    q = sim.questions[sim.position]
+    return {"index": sim.position, "kind": q["kind"], "prompt": q["prompt"], "options": q["options"]}
+
+
+def _deadline(sim: ExamSimulation):
+    return sim.created_at + timedelta(seconds=sim.time_limit + SIM_GRACE)
+
+
+def _locked(user, sim_id: int) -> ExamSimulation:
+    sim = ExamSimulation.objects.select_for_update().filter(pk=sim_id, user=user).first()
+    if sim is None:
+        raise NotFound("simulation_not_found")
+    return sim
+
+
+def answer_question(user, sim_id: int, index: int, choice: int | None) -> dict:
+    """Store one answer (None = skipped) and return the next question. No feedback before submitting."""
+    with transaction.atomic():
+        sim = _locked(user, sim_id)
+        if sim.finished_at or timezone.now() > _deadline(sim):
+            return {"done": True, "question": None}
+        if index == sim.position and index < len(sim.questions):  # a repeated post changes nothing
+            if choice is not None:
+                if choice >= len(sim.questions[index]["options"]):
+                    raise ValidationError({"choice": "invalid"})
+                sim.answers = {**sim.answers, str(index): choice}
+            sim.position += 1
+            sim.save(update_fields=["answers", "position"])
+        q = current_question(sim)
+        return {"done": q is None, "question": q}
+
+
+def record_violation(user, sim_id: int, kind: str) -> dict:
+    """Count a violation; the third one finishes the exam without XP and badges."""
+    with transaction.atomic():
+        sim = _locked(user, sim_id)
+        if not sim.finished_at:
+            sim.violations = [*sim.violations, {"kind": kind, "at": timezone.now().isoformat()}]
+            if len(sim.violations) >= MAX_VIOLATIONS:
+                sim.terminated = True
+            sim.save(update_fields=["violations", "terminated"])
+        result = submit_simulation(user, sim_id) if sim.terminated else None
+        return {"count": len(sim.violations), "max": MAX_VIOLATIONS, "terminated": sim.terminated, "result": result}
 
 
 def score_simulation(questions: list[dict], answers: dict[int, int]) -> dict:
@@ -298,53 +348,63 @@ def score_simulation(questions: list[dict], answers: dict[int, int]) -> dict:
     }
 
 
-def submit_simulation(user, sim_id: int, answers: dict[int, int]) -> dict:
-    """Score once; the same result is returned for repeated submits."""
+def submit_simulation(user, sim_id: int) -> dict:
+    """Score the stored answers once; the same result is returned for repeated submits."""
     with transaction.atomic():
-        sim = ExamSimulation.objects.select_for_update().filter(pk=sim_id, user=user).first()
-        if sim is None:
-            raise NotFound("simulation_not_found")
+        sim = _locked(user, sim_id)
         if sim.finished_at:
             return sim.result
         now = timezone.now()
-        late = now > sim.created_at + timedelta(seconds=sim.time_limit + SIM_GRACE)
+        answers = {int(k): v for k, v in sim.answers.items()}
+        late = now > _deadline(sim)
         res = score_simulation(sim.questions, answers)
         names = {t.slug: t for t in sim.pack.topics.all()}
         for row in res["topics"]:
             t = names.get(row["slug"])
             row["name"] = _names(t) if t else {"uz": row["slug"], "en": row["slug"], "ru": row["slug"]}
             row["emoji"] = t.emoji if t else "📚"
-        for n, choice in answers.items():
-            if 0 <= n < len(sim.questions):
-                q = sim.questions[n]
-                apply_answer(user, sim.pack.track, {"term": q["term"], "word_id": q["word_id"]}, choice == q["answer"])
-        user.refresh_from_db()
-        xp = 0 if late else XP_PER_CORRECT * res["score"]
         duration = int((now - sim.created_at).total_seconds() * 1000)
-        GameSession.objects.create(
-            user=user,
-            track=sim.pack.track,
-            game="exam_sim",
-            mode="memorize",
-            source=f"exam:{sim.pack.slug}"[:40],
-            translation_lang=sim.translation_lang,
-            xp=xp,
-            correct=res["score"],
-            attempts=res["total"],
-            duration_ms=duration,
-        )
-        record_activity(user, xp, res["score"], res["total"])
-        check_achievements(user)
+        xp = 0
+        if not sim.terminated:  # a terminated exam gives no XP, badges or learning progress
+            for n, choice in answers.items():
+                q = sim.questions[n]
+                item = {"term": q["term"], "word_id": q["word_id"]}
+                apply_answer(user, sim.pack.track, item, choice == q["answer"])
+            user.refresh_from_db()
+            xp = 0 if late else XP_PER_CORRECT * res["score"]
+            GameSession.objects.create(
+                user=user,
+                track=sim.pack.track,
+                game="exam_sim",
+                mode="memorize",
+                source=f"exam:{sim.pack.slug}"[:40],
+                translation_lang=sim.translation_lang,
+                xp=xp,
+                correct=res["score"],
+                attempts=res["total"],
+                duration_ms=duration,
+            )
+            record_activity(user, xp, res["score"], res["total"])
+            check_achievements(user)
         review = [
             {
                 "prompt": q["prompt"],
                 "answer": q["options"][q["answer"]],
-                "given": q["options"][answers[n]] if 0 <= answers.get(n, -1) < len(q["options"]) else None,
+                "given": q["options"][answers[n]] if n in answers else None,
                 "correct": answers.get(n) == q["answer"],
             }
             for n, q in enumerate(sim.questions)
         ]
-        res.update(xp=xp, late=late, duration_ms=duration, streak=user.streak, xp_total=user.xp, review=review)
+        res.update(
+            xp=xp,
+            late=late,
+            duration_ms=duration,
+            streak=user.streak,
+            xp_total=user.xp,
+            review=review,
+            terminated=sim.terminated,
+            violations=sim.violations,
+        )
         sim.score, sim.result, sim.finished_at = res["score"], res, now
         sim.save(update_fields=["score", "result", "finished_at"])
     return res

@@ -73,6 +73,7 @@ class WordsView(APIView):
                     "review",
                     "daily",
                     "examreview",
+                    "lesson",
                 ],
             ),
             OpenApiParameter("level", str),
@@ -153,7 +154,7 @@ class ResultsView(APIView):
             elif game == "flashcards":
                 # Lists were already updated card by card via /api/words/flash/answer/.
                 xp, perfect = session_xp(game, correct, attempts, 0)
-            elif d.get("source") == "examreview":
+            elif d.get("source") in ("examreview", "lesson"):
                 for r in results:
                     if apply_answer(user, track, r, r["correct"]):
                         learned_now.append(r["term"])

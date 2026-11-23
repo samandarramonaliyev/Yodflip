@@ -2,10 +2,12 @@
 import { act, cleanup, fireEvent, render, screen, waitFor } from '@testing-library/react'
 import { MemoryRouter, Route, Routes } from 'react-router-dom'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
+import { setTelegramProtection, watermark } from '../lib/examGuard'
 import { useApp } from '../store/app'
 import DuelPage from './DuelPage'
 import ExamPage from './ExamPage'
 import ExamSim from './ExamSim'
+import WordStudy from './WordStudy'
 
 vi.mock('canvas-confetti', () => ({ default: () => null })) // no canvas in jsdom
 
@@ -151,41 +153,134 @@ describe('exam pack', () => {
     expect(screen.getByText('Falling Words')).toBeTruthy()
   })
 
-  it('simulation: answers are sent once, weak topics are offered', async () => {
-    const questions = [0, 1].map((index) => ({ index, kind: 'translation', prompt: `word${index}`, options: ['a', 'b', 'c', 'd'] }))
-    handler = (method, path) => {
-      if (path.endsWith('/submit/'))
-        return {
-          score: 1,
-          total: 2,
-          percent: 50,
-          xp: 5,
-          xp_total: 5,
-          streak: 1,
-          late: false,
-          duration_ms: 5000,
-          weak_topics: ['t1'],
-          topics: [{ slug: 't1', emoji: '🍎', name: names('Food'), correct: 1, total: 2, percent: 50, weak: true }],
-          review: [],
-        }
-      if (method === 'POST') return { id: 7, pack: 'mini', name: names('Mini pack'), time_limit: 600, questions }
+  const simQ = (index: number) => ({ index, kind: 'translation', prompt: `word${index}`, options: ['a', 'b', 'c', 'd'] })
+  const simResult = { score: 1, total: 2, percent: 50, xp: 5, xp_total: 5, streak: 1, late: false, duration_ms: 5000, weak_topics: ['t1'], topics: [{ slug: 't1', emoji: '🍎', name: names('Food'), correct: 1, total: 2, percent: 50, weak: true }], review: [], terminated: false, violations: [] as { kind: string; at: string }[] }
+  let violations = 0
+  async function startSim() {
+    violations = 0
+    handler = (method, path, body) => {
+      if (path.endsWith('/submit/')) return simResult
+      if (path.endsWith('/answer/')) return body.index === 0 ? { done: false, question: simQ(1) } : { done: true, question: null }
+      if (path.endsWith('/violation/')) {
+        violations++
+        const terminated = violations >= 3
+        return { count: violations, max: 3, terminated, result: terminated ? { ...simResult, xp: 0, terminated, violations: [1, 2, 3].map(() => ({ kind: 'copy', at: '' })) } : null }
+      }
+      if (method === 'POST') return { id: 7, pack: 'mini', name: names('Mini pack'), time_limit: 600, total: 2, max_violations: 3, question: simQ(0) }
       return pack
     }
     page('/exams/mini/simulation', '/exams/:slug/simulation', <ExamSim />)
     await screen.findByText('Mini pack')
     fireEvent.click(screen.getByText('Start'))
     await screen.findByText('word0')
+  }
+
+  it('simulation: one question at a time, weak topics are offered', async () => {
+    await startSim()
+    expect(screen.queryByText('word1')).toBeNull()
     expect(screen.getByText(/10:00|9:59/)).toBeTruthy()
     fireEvent.click(screen.getByText('b'))
     fireEvent.click(screen.getByText('Next'))
+    await screen.findByText('word1')
     fireEvent.click(screen.getByText('c'))
     fireEvent.click(screen.getByText(/Finish/))
     await screen.findByTestId('sim-result')
     await waitFor(() => expect(calls.filter((c) => c.path.endsWith('/submit/')).length).toBe(1))
-    expect(calls.find((c) => c.path.endsWith('/submit/'))!.body.answers).toEqual([
+    expect(calls.filter((c) => c.path.endsWith('/answer/')).map((c) => c.body)).toEqual([
       { index: 0, choice: 1 },
       { index: 1, choice: 2 },
     ])
     expect(screen.getByText(/Practise weak topics/).closest('a')!.getAttribute('href')).toBe('/play/flashcards?source=examreview&pack=mini&topic=t1')
+  })
+
+  const prevented = (type: string, target: EventTarget = document.body) => {
+    const e = new Event(type, { bubbles: true, cancelable: true })
+    act(() => void target.dispatchEvent(e))
+    return e.defaultPrevented
+  }
+
+  it('protection: copy and context menu are blocked only during the exam', async () => {
+    expect(prevented('copy')).toBe(false)
+    await startSim()
+    expect(document.body.classList.contains('exam-mode')).toBe(true)
+    for (const type of ['copy', 'contextmenu', 'dragstart', 'selectstart', 'paste']) expect(prevented(type)).toBe(true)
+    const key = new KeyboardEvent('keydown', { key: 's', ctrlKey: true, cancelable: true, bubbles: true })
+    window.dispatchEvent(key)
+    expect(key.defaultPrevented).toBe(true)
+    expect(screen.getByTestId('watermark')).toBeTruthy()
+    expect(decodeURIComponent(watermark('Ali #7 · 2026'))).toContain('#7')
+    cleanup()
+    expect(document.body.classList.contains('exam-mode')).toBe(false)
+    for (const type of ['copy', 'contextmenu']) expect(prevented(type)).toBe(false)
+  })
+
+  it('protection: overlay + warning on a tab switch, the 3rd violation finishes the exam', async () => {
+    await startSim()
+    const now = vi.spyOn(Date, 'now')
+    const base = 5_000_000_000_000
+    Object.defineProperty(document, 'hidden', { configurable: true, get: () => true })
+    now.mockReturnValue(base)
+    act(() => {
+      document.dispatchEvent(new Event('visibilitychange'))
+      window.dispatchEvent(new Event('blur')) // the same switch: counted once
+    })
+    expect(screen.getByTestId('exam-overlay').textContent).toContain('Tap to return')
+    expect(screen.queryByText('word0')).toBeNull()
+    await screen.findByText(/\(1\/3\)/)
+    fireEvent.click(screen.getByTestId('exam-overlay'))
+    expect(screen.queryByTestId('exam-overlay')).toBeNull()
+    now.mockReturnValue(base + 5000)
+    act(() => void window.dispatchEvent(new KeyboardEvent('keyup', { key: 'PrintScreen' })))
+    await screen.findByText(/\(2\/3\)/)
+    now.mockReturnValue(base + 10000)
+    prevented('copy')
+    await screen.findByTestId('terminated')
+    expect(screen.getByTestId('violations').textContent).toContain('3')
+    expect(calls.filter((c) => c.path.endsWith('/violation/')).map((c) => c.body.kind)).toEqual(['tab_switch', 'printscreen', 'copy'])
+    expect(document.body.classList.contains('exam-mode')).toBe(false)
+    now.mockRestore()
+    Reflect.deleteProperty(document, 'hidden')
+  })
+
+  it('Telegram capture protection is feature-detected', () => {
+    expect(setTelegramProtection(true, undefined)).toBe(false)
+    expect(setTelegramProtection(true, { version: '6.0' })).toBe(false)
+    const boom = { enableScreenCaptureProtection: () => { throw new Error('unsupported') }, disableScreenCaptureProtection: () => undefined } // prettier-ignore
+    expect(setTelegramProtection(true, boom)).toBe(false)
+    const log: string[] = []
+    const ok = { enableScreenCaptureProtection: () => log.push('on'), disableScreenCaptureProtection: () => log.push('off') }
+    expect(setTelegramProtection(true, ok) && setTelegramProtection(false, ok)).toBe(true)
+    expect(log).toEqual(['on', 'off'])
+  })
+})
+
+describe('word list', () => {
+  const word = (n: number) => ({ id: n, term: `word${n}`, word: `word${n}`, article: '', pos: 'noun', definition: 'd', translation: `soz${n}`, translation_uz: `soz${n}`, example: `Ex ${n}.`, example_tr: `Misol ${n}.`, topic: 'food', learned: n === 1, want: false, userword_id: null })
+  it('shows a lesson, hides and reveals, stars, switches language, offers flashcards', async () => {
+    handler = (method, path) => {
+      if (path.includes('translation-prefs')) return { en: { track: 'en', preferred_translation_lang: 'ru', preferred_direction: 'forward', remember_choice: true } }
+      if (method === 'POST') return { id: 99 }
+      return { track: 'en', lang: 'ru', lesson: 1, lessons: 5, lesson_size: 20, total: 100, topics: [], words: [word(1), word(2)] }
+    }
+    page('/levels/A1/words', '/levels/:level/words', <WordStudy />)
+    await screen.findByText('word1')
+    expect(screen.getAllByText('Lesson 2: 21–40').length).toBe(2)
+    expect(screen.getAllByTestId('learned-badge').length).toBe(1)
+    expect(screen.getByTestId('study-note')).toBeTruthy()
+    expect(screen.getByTestId('lesson-flashcards').getAttribute('href')).toBe('/play/flashcards?source=lesson&level=A1&ids=1,2&tl=ru')
+    const [hideTr, hideWord] = screen.getAllByRole('switch')
+    fireEvent.click(hideTr)
+    expect(screen.queryByText('soz1')).toBeNull()
+    fireEvent.click(screen.getAllByTestId('study-row')[0])
+    expect(screen.getByText('soz1')).toBeTruthy()
+    expect(screen.queryByText('soz2')).toBeNull()
+    fireEvent.click(hideWord)
+    expect(screen.queryByText('word1')).toBeNull()
+    expect(screen.getByText('soz2')).toBeTruthy()
+    fireEvent.click(screen.getAllByLabelText('Add to Want to learn')[0])
+    await waitFor(() => expect(calls.some((c) => c.path === '/words/lists/want/add/' && c.body.word_id === 1)).toBe(true))
+    fireEvent.click(screen.getByText(/DE$/))
+    await waitFor(() => expect(calls.find((c) => c.method === 'PUT')?.body.preferred_translation_lang).toBe('de'))
+    expect(calls.find((c) => c.method === 'PUT')?.body.remember_choice).toBe(true)
   })
 })

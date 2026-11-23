@@ -24,9 +24,13 @@ class PackWordAdmin(admin.ModelAdmin):
 
 @admin.register(ExamSimulation)
 class ExamSimulationAdmin(admin.ModelAdmin):
-    list_display = ("user", "pack", "score", "finished_at", "created_at")
-    list_filter = ("pack",)
+    list_display = ("user", "pack", "score", "violation_count", "terminated", "finished_at", "created_at")
+    list_filter = ("pack", "terminated")
     raw_id_fields = ("user",)
+
+    @admin.display(description="violations")
+    def violation_count(self, obj):
+        return len(obj.violations)
 
 
 @admin.register(ExamGoal)

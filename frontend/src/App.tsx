@@ -25,6 +25,7 @@ const Play = lazy(() => import('./pages/Play'))
 const Leaderboard = lazy(() => import('./pages/Leaderboard'))
 const Profile = lazy(() => import('./pages/Profile'))
 const Lists = lazy(() => import('./pages/Lists'))
+const WordStudy = lazy(() => import('./pages/WordStudy'))
 const Exams = lazy(() => import('./pages/Exams'))
 const ExamPage = lazy(() => import('./pages/ExamPage'))
 const ExamSim = lazy(() => import('./pages/ExamSim'))
@@ -121,6 +122,8 @@ export default function App() {
               <Route path="/duel" element={<RequireAuth><DuelHub /></RequireAuth>} />
               <Route path="/" element={<RequireAuth><Home /></RequireAuth>} />
               <Route path="/exams" element={<RequireAuth><Exams /></RequireAuth>} />
+              <Route path="/exams/:slug/words" element={<RequireAuth><WordStudy /></RequireAuth>} />
+              <Route path="/levels/:level/words" element={<RequireAuth><WordStudy /></RequireAuth>} />
               <Route path="/exams/:slug" element={<RequireAuth><ExamPage /></RequireAuth>} />
               <Route path="/exams/:slug/simulation" element={<RequireAuth><ExamSim /></RequireAuth>} />
               <Route path="/levels" element={<RequireAuth><Levels /></RequireAuth>} />

@@ -4,7 +4,8 @@ from rest_framework.exceptions import ValidationError
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
-from words.level_views import round_items
+from words import study
+from words.level_views import STUDY_PARAMS, round_items
 from words.serializers import WordSerializer
 from words.translations import apply_translations, resolve
 
@@ -124,17 +125,44 @@ class SimulationStartView(APIView):
 
 class SimAnswerSerializer(serializers.Serializer):
     index = serializers.IntegerField(min_value=0)
-    choice = serializers.IntegerField(min_value=0)
+    choice = serializers.IntegerField(min_value=0, allow_null=True)
 
 
-class SimSubmitSerializer(serializers.Serializer):
-    answers = SimAnswerSerializer(many=True)
+class SimulationAnswerView(APIView):
+    """Answer the current question (choice null = skip); the next question comes back."""
+
+    @extend_schema(request=SimAnswerSerializer, responses={200: dict})
+    def post(self, request, pk: int):
+        ser = SimAnswerSerializer(data=request.data)
+        ser.is_valid(raise_exception=True)
+        return Response(services.answer_question(request.user, pk, **ser.validated_data))
+
+
+class SimViolationSerializer(serializers.Serializer):
+    kind = serializers.ChoiceField(choices=services.VIOLATIONS)
+
+
+class SimulationViolationView(APIView):
+    @extend_schema(request=SimViolationSerializer, responses={200: dict})
+    def post(self, request, pk: int):
+        ser = SimViolationSerializer(data=request.data)
+        ser.is_valid(raise_exception=True)
+        return Response(services.record_violation(request.user, pk, ser.validated_data["kind"]))
 
 
 class SimulationSubmitView(APIView):
-    @extend_schema(request=SimSubmitSerializer, responses={200: dict})
+    @extend_schema(request=None, responses={200: dict})
     def post(self, request, pk: int):
-        ser = SimSubmitSerializer(data=request.data)
-        ser.is_valid(raise_exception=True)
-        answers = {a["index"]: a["choice"] for a in ser.validated_data["answers"]}
-        return Response(services.submit_simulation(request.user, pk, answers))
+        return Response(services.submit_simulation(request.user, pk))
+
+
+class PackStudyView(APIView):
+    """Word list study mode of a pack (lessons of 20). Reading never changes progress."""
+
+    @extend_schema(parameters=STUDY_PARAMS, responses={200: dict})
+    def get(self, request, slug: str):
+        pack = services.get_pack(slug)
+        topics = [(t.slug, t.emoji, services._names(t)) for t in pack.topics.all()]
+        qs = services.pack_words(pack, request.query_params.get("topic") or "")
+        links = dict(pack.pack_words.values_list("word_id", "topic__slug"))
+        return Response(study.study_page(request, pack.track, qs, topics, lambda w: links.get(w.id, "")))

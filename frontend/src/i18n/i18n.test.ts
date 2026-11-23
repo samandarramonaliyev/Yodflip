@@ -33,6 +33,8 @@ ACH.forEach((a) => used.add(`ach.${a}`) && used.add(`ach.${a}_desc`))
 
 ;['translation', 'reverse', 'definition'].forEach((k) => used.add(`exam.q_${k}`))
 
+;['tab_switch', 'focus_loss', 'printscreen', 'copy', 'devtools'].forEach((k) => used.add(`exam.v_${k}`))
+
 describe('i18n', () => {
   it.each([
     ['uz', uz],

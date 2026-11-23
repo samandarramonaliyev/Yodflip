@@ -147,6 +147,22 @@ def _raw_items(user, track: str, source: str, params: dict, day: date | None = N
         if level not in LEVELS:
             raise ValidationError({"level": "invalid_level"})
         items = [item_from_word(w) for w in found_words(user, track, level)]
+    elif source == "lesson":
+        # Exactly the words of one lesson of the word list (a level, or an exam pack).
+        ids = [int(i) for i in (params.get("ids") or "").split(",") if i.isdigit()][:20]
+        qs = Word.objects.filter(track=track, id__in=ids)
+        if params.get("pack"):
+            from exams.services import get_pack
+
+            qs = qs.filter(exam_links__pack=get_pack(params["pack"], track))
+        else:
+            level = params.get("level")
+            if level not in LEVELS:
+                raise ValidationError({"level": "invalid_level"})
+            if not is_level_unlocked(user, track, level):
+                raise PermissionDenied("level_locked")
+            qs = qs.filter(level=level)
+        items = [item_from_word(w) for w in qs]
     elif source == "examreview":
         # Practise words of an exam pack (found or not), e.g. the weak topics of a simulation.
         from exams.services import get_pack, pack_words

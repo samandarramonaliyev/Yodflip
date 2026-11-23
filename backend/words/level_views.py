@@ -8,8 +8,9 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 
 from . import levels
-from .models import LevelRound
+from .models import LevelRound, Pack, Word
 from .serializers import WordSerializer
+from .study import study_page
 from .translations import apply_translations, resolve
 
 
@@ -18,6 +19,34 @@ def _check(track: str, level: str | None = None) -> None:
         raise ValidationError({"track": "invalid_track"})
     if level is not None and level not in levels.LEVELS:
         raise ValidationError({"level": "invalid_level"})
+
+
+STUDY_PARAMS = [
+    OpenApiParameter("lesson", int),
+    OpenApiParameter("lang", str, enum=["uz", "ru", "en", "de"]),
+    OpenApiParameter("search", str),
+    OpenApiParameter("topic", str),
+    OpenApiParameter("only_unlearned", bool),
+]
+
+
+class LevelStudyView(APIView):
+    """Word list study mode of a level (lessons of 20). Reading never changes progress."""
+
+    @extend_schema(parameters=STUDY_PARAMS, responses={200: dict})
+    def get(self, request, track: str, level: str):
+        _check(track, level)
+        if not levels.is_unlocked(request.user, track, level):
+            raise PermissionDenied("level_locked")
+        qs = Word.objects.filter(track=track, level=level).select_related("pack").order_by("pack__order", "id")
+        topic = request.query_params.get("topic")
+        if topic:
+            qs = qs.filter(pack__slug=topic)
+        topics = [
+            (p.slug, p.emoji, {"uz": p.name_uz, "en": p.name_en, "ru": p.name_ru})
+            for p in Pack.objects.filter(track=track, level=level).order_by("order")
+        ]
+        return Response(study_page(request, track, qs, topics, lambda w: w.pack.slug))
 
 
 def round_item(w, is_filler: bool) -> dict:
