@@ -180,10 +180,10 @@ def test_not_sent_when_played_off_quiet_or_blocked(tg, words, monkeypatch):
 def test_403_marks_inactive_and_writing_again_reactivates(tg, words, player, monkeypatch):
     at(monkeypatch, 2026, 3, 2, 14, 0)
     tg.fail[777] = [lambda m: TelegramForbiddenError(method=m, message="bot was blocked by the user")]
-    assert cron().json()["blocked"] == 1
+    assert cron().json()["quiz"]["blocked"] == 1
     assert QuizSettings.objects.get(user=player).bot_blocked is True
     at(monkeypatch, 2026, 3, 3, 14, 0)
-    assert cron().json()["due"] == 0
+    assert cron().json()["quiz"]["due"] == 0
     message("/start")
     assert QuizSettings.objects.get(user=player).bot_blocked is False
 
@@ -198,14 +198,14 @@ def test_429_is_retried_after_the_given_time(tg, words, player, monkeypatch, bot
 def test_429_longer_than_the_budget_is_sent_by_the_next_call(tg, words, player, monkeypatch):
     at(monkeypatch, 2026, 3, 2, 14, 0)
     tg.fail[777] = [lambda m: TelegramRetryAfter(method=m, message="flood", retry_after=900)]
-    assert cron().json()["retry_later"] == 1
+    assert cron().json()["quiz"]["retry_later"] == 1
     assert cron().json()["sent"] == 1
 
 
 def test_unknown_error_never_sends_twice(tg, words, player, monkeypatch):
     at(monkeypatch, 2026, 3, 2, 14, 0)
     tg.fail[777] = [lambda m: RuntimeError("timeout")]
-    assert cron().json()["failed"] == 1
+    assert cron().json()["quiz"]["failed"] == 1
     assert cron().json()["sent"] == 0
 
 
@@ -215,9 +215,9 @@ def test_plain_reminder_is_skipped_after_a_quiz(tg, words, player, monkeypatch):
     player.reminder_time = time(0, 0)
     player.save()
     at(monkeypatch, 2026, 3, 2, 14, 0)
-    cron()
-    r = APIClient().get("/bot/cron/cron-secret/")  # the old endpoint still works
-    assert r.json()["sent"] == 1
+    r = cron().json()  # one URL does both jobs
+    assert (r["quiz"]["sent"], r["reminders"]["sent"]) == (1, 1)
+    assert APIClient().get("/bot/cron/cron-secret/").json()["sent"] == 0
     assert [m.chat_id for m in tg.of(SendMessage)] == [777, 888]
 
 

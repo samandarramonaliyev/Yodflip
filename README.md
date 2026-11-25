@@ -15,7 +15,8 @@ Vocabulary games for Uzbek-speaking learners of **English** and **German**, as a
 ## Friends, bot quiz and exam packs
 
 - **Duel** (`/duel`, `backend/duels`): 10 frozen words, server-side answers and timing, guest play, rematch, referrals.
-- **Bot quiz** (`/quiz` in the bot, `backend/botquiz`): one message edited in place; hourly cron `/bot/cron/<secret>/quiz/`.
+- **Bot quiz** (`/quiz` in the bot, `backend/botquiz`): one message edited in place; sent by the cron URL `/bot/cron/<secret>/`.
+- **Admin broadcast** (`/admin/broadcast/`, `backend/broadcasts`) and the cron job, run log and optional in-app scheduler (`backend/jobs`): see DEPLOY.md, section 5.
 - **Exam packs** (`/exams`, `backend/exams`): Goethe A1/A2/B1, IELTS Academic, Core 1000 (original, unofficial lists) with topics, all games, a daily goal and an exam simulation.
 
 ## Architecture

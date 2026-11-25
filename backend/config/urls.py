@@ -10,6 +10,7 @@ from words.views import MyWordsView
 urlpatterns = [
     path("admin/tts-check/", tts_views.check, name="tts-check"),
     path("admin/tts-check/url/", tts_views.check_url, name="tts-check-url"),
+    path("admin/broadcast/", include("broadcasts.urls")),
     path("admin/", admin.site.urls),
     path("api/health/", core_views.health, name="health"),
     path("api/schema/", SpectacularAPIView.as_view(), name="schema"),

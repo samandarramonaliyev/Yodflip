@@ -7,7 +7,6 @@ import hmac
 from datetime import datetime
 
 from django.conf import settings
-from django.utils import timezone
 
 from accounts.models import User
 from games.sources import daily_words
@@ -100,29 +99,3 @@ def set_reminder(tg_id: int, value: str) -> str | None:
     u.reminder_time = None if value == "off" else datetime.strptime(value, "%H:%M").time()
     u.save(update_fields=["reminder_time"])
     return "off" if u.reminder_time is None else u.reminder_time.strftime("%H:%M")
-
-
-def take_due_reminders(limit: int = 500) -> list[dict]:
-    """Users whose reminder time has passed today, who haven't played and weren't reminded.
-
-    Marks them as reminded (so each user gets at most one reminder per day).
-    """
-    now = timezone.localtime()
-    day = now.date()
-    users = list(
-        User.objects.filter(telegram_id__isnull=False, reminder_time__isnull=False, reminder_time__lte=now.time())
-        .exclude(last_active_date=day)
-        .exclude(last_reminder_date=day)
-        .exclude(quiz_settings__last_sent_at__date=day)  # the quiz already reminded them
-        .exclude(quiz_settings__bot_blocked=True)[:limit]
-    )
-    User.objects.filter(pk__in=[u.pk for u in users]).update(last_reminder_date=day)
-    return [
-        {
-            "telegram_id": u.telegram_id,
-            "ui_language": u.ui_language,
-            "streak": u.streak,
-            "due": due_queryset(u, u.active_track).count(),
-        }
-        for u in users
-    ]

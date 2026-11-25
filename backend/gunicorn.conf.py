@@ -28,6 +28,16 @@ except ImportError:  # gunicorn not installed (e.g. Windows dev)
     pass
 
 
+def post_worker_init(worker):
+    """In-app scheduler (ALWAYS_ON_SCHEDULER=true): one thread per worker, a DB row picks one for each run."""
+    try:
+        from jobs.scheduler import start
+
+        start()
+    except Exception as exc:  # noqa: BLE001 - never block the worker
+        worker.log.error("Scheduler not started: %s", exc)
+
+
 def when_ready(server):
     try:
         import django

@@ -10,8 +10,9 @@
  │ gunicorn → Django                                                    │
  │   /api/...                REST API                                   │
  │   /bot/webhook/<secret>/  Telegram bot (aiogram 3, webhook mode)     │
- │   /bot/cron/<secret>/quiz/ in-chat quiz (called EVERY HOUR by cron)  │
- │   /bot/cron/<secret>/     daily reminders (called by a free cron)    │
+ │   /bot/cron/<secret>/     quiz + reminders + scheduled broadcasts    │
+ │   /bot/cron/<secret>/status/  what the last runs did (sends nothing) │
+ │   /admin/broadcast/       message to the users (staff)               │
  │   /assets/..., /...       React app (whitenoise; index.html for SPA) │
  └───────────────────────────────┬──────────────────────────────────────┘
                                  │ DATABASE_URL (SSL)
@@ -65,36 +66,56 @@ The bot sets its menu button automatically on startup. To set it by hand, or to 
 
 Test: send `/start` to the bot → **🎮 O'yinni ochish**. You're signed in automatically (the server verifies Telegram's `initData` signature with your bot token).
 
-## 5. Bot quiz, daily reminders + keeping the free service awake
+## 5. Bot quiz, daily reminders, scheduled broadcasts
 
-There's no background worker, so messages are sent when a secret URL is called.
+There is no background worker: messages are sent when one secret URL is called.
 
-### 5a. Bot quiz: EVERY HOUR (new, required)
+### 5a. cron-job.org: exactly ONE cronjob (free plan, required)
 
-At [cron-job.org](https://cron-job.org) create (or change your existing) cronjob:
-
-| Setting | Value |
+| Setting at [cron-job.org](https://cron-job.org) | Value |
 |---|---|
-| URL | `https://<your-service>.onrender.com/bot/cron/<BOT_CRON_SECRET>/quiz/` (e.g. `https://yodflip.onrender.com/bot/cron/<BOT_CRON_SECRET>/quiz/`) |
-| Schedule | crontab `0 * * * *` (every hour, minute 0) |
+| URL | `https://<your-service>.onrender.com/bot/cron/<BOT_CRON_SECRET>/` (for yodflip: `https://yodflip.onrender.com/bot/cron/<BOT_CRON_SECRET>/`) |
+| Schedule | crontab `*/10 * * * *` (every 10 minutes) |
 | Timezone | `Asia/Tashkent` |
+| Request method | `GET` |
+| Notifications | on: "execution fails" and "cronjob will be disabled because of too many failures" |
 
-It must run every hour: each user chooses an hour in their own timezone, and the call sends the quiz only to users whose hour is now and who haven't played today. Calling it more often is safe (one quiz per user per day). The answer shows the numbers, e.g. `{"ok": true, "due": 12, "sent": 11, "blocked": 1, ...}`. If `remaining` is above 0 (more than ~600 users in one hour), also run it at minutes 5 and 10 (`0,5,10 * * * *`).
-A sleeping free service needs 30–60 s to wake up and cron-job.org may report a timeout for that call. Keep the 10-minute job below as well: it keeps the service awake, so the hourly call is on time.
+- `<BOT_CRON_SECRET>`: Render → Environment → `BOT_CRON_SECRET` → reveal, copied exactly. Recommended: set your own value of letters and digits only (24+ characters), because a generated value may contain `/`, `+` or `=`.
+- This one call does everything: quiz (each user's hour), reminders (each user's `/remind` time), scheduled broadcasts, expired duels. It also keeps the free service awake.
+- The old address `/bot/cron/<BOT_CRON_SECRET>/quiz/` runs exactly the same job. An old cronjob may stay or be deleted: nobody gets a message twice.
+- Use `https://`, and make sure the cronjob is **enabled** (a service like cron-job.org may disable a job after many failed or timed-out calls, e.g. while a free service was waking up).
 
-### 5b. Reminders and keep-awake: every 10 minutes
+Answers: `{"ok": true, "sent": 12, "quiz": {...}, "reminders": {...}}` · `403` = wrong secret · `"detail": "already_running"` = another run is in progress (fine) · `"detail": "bot_disabled"` = `TELEGRAM_BOT_TOKEN` is missing.
 
-1. Your reminder URL is `https://<your-service>.onrender.com/bot/cron/<BOT_CRON_SECRET>/`, using the
-   value of the `BOT_CRON_SECRET` env var (Render → Environment → reveal). You can also set your own
-   value there (letters/digits, at least 24 characters). The trailing slash is optional, and GET and POST both work.
-   `cd backend && python manage.py telegram_setup` in the Render **Shell** prints the exact URL too.
-2. At [cron-job.org](https://cron-job.org) (free): **Create cronjob** → that URL → **every 10 minutes**.
-   A correct URL returns `{"ok": true, ...}`. A wrong one returns `403`, and the service log shows
-   `Cron 403: secret mismatch (...)` (the secret itself is never logged).
+### 5b. Check that it works: the status URL
 
-This sends reminders (at most one per user per day, only if they haven't played) and keeps the free service from sleeping. Without it, a free service sleeps after ~15 min idle: the first request then takes 30–60 s, and Telegram retries the webhook, so messages still arrive, just late.
+Open `https://<your-service>.onrender.com/bot/cron/<BOT_CRON_SECRET>/status/` in a browser (don't add it as a cronjob: it sends nothing).
 
-On a day a quiz was sent, the plain reminder is skipped for that user. Both URLs also close duels nobody accepted within 48 hours.
+| Field | Meaning |
+|---|---|
+| `minutes_since_last_run` | must stay around 10 or below. `null` or large = cron-job.org isn't calling |
+| `users.reminder_enabled` | users who set a reminder time (`/remind 19:00` or profile). **Nobody else gets the plain reminder** |
+| `users.bot_blocked` | users the bot can't write to (blocked, or never pressed /start) |
+| `jobs.reminders.runs` | the last 7 runs: matched, sent, failed, skipped |
+| `skip_reasons` | `reminder_off`, `not_yet_time`, `played_today`, `already_sent_today`, `quiz_sent_today`, `bot_blocked`, `inactive_account`; for the quiz also `quiz_off`, `quiet_day`, `hour_passed` |
+| `details.errors` | Telegram's error texts |
+
+The same data is in `/admin/` → **Cron run logs** (kept for 14 days) and, as one line per job, in the Render log (`Job reminders (cron): matched=…`).
+
+**Who gets what:** quiz: on by default at 19:00 (user's timezone), only if the user hasn't played today; a missed hour is made up for during the following 2 hours. Plain reminder: only users with a reminder time, from that time on, at most one a day, and not on a day the quiz was sent.
+
+### 5c. Free or Starter?
+
+| Render plan | Setup |
+|---|---|
+| **Free** (sleeps after ~15 min) | keep cron-job.org (5a). Leave `ALWAYS_ON_SCHEDULER` empty |
+| **Starter ($7, never sleeps)** | set `ALWAYS_ON_SCHEDULER=true`; cron-job.org becomes optional |
+
+With `ALWAYS_ON_SCHEDULER=true` the app runs the same job itself every 10 minutes (`SCHEDULER_EVERY_MINUTES`, 60 = once an hour). A database row lets one gunicorn worker do each run, and cron-job.org may stay on as well: no message is sent twice. Don't set it on the free plan: a sleeping service can't run a timer.
+
+### 5d. Broadcast: `/admin/broadcast/`
+
+`/admin/` → **📣 Xabar yuborish**. Link your Telegram to the admin account first (website → sign in with the admin email → Profile → link Telegram): needed for the test message. Sending runs in the background (≤25 messages / s). After a restart or sleep the broadcast shows "To'xtab qolgan" (up to 2 minutes later): press **Davom ettirish**. Scheduled messages go out with the first cron run after their time (within 10 minutes).
 
 ## Updating
 
@@ -118,6 +139,7 @@ On a day a quiz was sent, the plain reminder is skipped for that user. Both URLs
 | Scanning says it can't read the page | Set `ANTHROPIC_API_KEY`. |
 | Quiz buttons do nothing | The webhook must also receive `callback_query`: restart the service (it re-registers the webhook on start) or run `python manage.py telegram_setup`. |
 | Duel link opens the bot, not the duel | Create the Mini App with `/newapp` and set `TELEGRAM_APP_SHORT_NAME`. |
+| Reminders don't arrive | Open the status URL (5b). `minutes_since_last_run` large → cron-job.org; `matched` 0 → read `skip_reasons`; `failed` → `details.errors`. |
 | Reminder URL returns 403 | The part after `/bot/cron/` must equal `BOT_CRON_SECRET`. Check the log line `Cron 403: …` (lengths, whether the variable is set). |
 
 ---
@@ -164,20 +186,21 @@ Bot "Play" tugmasini o'zi o'rnatadi. Qo'lda o'rnatish uchun:
 
 Sinov: botga `/start` yuboring va **🎮 O'yinni ochish** tugmasini bosing.
 
-### 5. Bot viktorinasi (HAR SOATDA) va eslatmalar
+### 5. Viktorina, eslatmalar, rejalashtirilgan xabarlar
 
-**Viktorina.** cron-job.org da cronjob'ni shunday sozlang:
+[cron-job.org](https://cron-job.org) da **bitta** cronjob kerak:
 
-- URL: `https://<xizmat>.onrender.com/bot/cron/<BOT_CRON_SECRET>/quiz/`
-- Jadval (crontab): `0 * * * *` — har soatda
-- Vaqt mintaqasi: `Asia/Tashkent`
+- URL: `https://<xizmat>.onrender.com/bot/cron/<BOT_CRON_SECRET>/` (masalan, `https://yodflip.onrender.com/bot/cron/<BOT_CRON_SECRET>/`)
+- Jadval (crontab): `*/10 * * * *` — har 10 daqiqada
+- Vaqt mintaqasi: `Asia/Tashkent`, usul: `GET`, xato haqida bildirishnoma: yoqilgan
 
-Har soatda chaqirilishi shart: har bir foydalanuvchi o'z soatini tanlaydi. Ko'proq chaqirish ham xavfsiz — bir kunda bir foydalanuvchiga faqat bitta viktorina boradi.
+`BOT_CRON_SECRET`: Render → Environment (aynan o'zini nusxalang; faqat harf va raqamdan iborat 24+ belgili qiymat qo'yish tavsiya etiladi). Bu manzil hammasini bajaradi va bepul xizmatni uyg'oq saqlaydi. Eski `/quiz/` manzili ham xuddi shu ishni bajaradi; ikkalasi birga tursa ham xabar ikki marta ketmaydi.
 
-**Eslatmalar** (avvalgidek, har 10 daqiqada, ikkinchi cronjob sifatida qoldiring — xizmatni "uyg'oq" saqlaydi). Viktorina yuborilgan kuni oddiy eslatma yuborilmaydi.
+**Tekshirish:** brauzerda `https://<xizmat>.onrender.com/bot/cron/<BOT_CRON_SECRET>/status/` ni oching. `minutes_since_last_run` 10 atrofida bo'lishi kerak. `skip_reasons` nega yuborilmaganini ko'rsatadi (`reminder_off` = foydalanuvchi vaqt tanlamagan). Oddiy eslatma faqat `/remind 19:00` yoki profilda vaqt tanlaganlarga boradi; viktorina esa hammaga standart bo'yicha 19:00 da boradi (o'sha kuni o'ynamagan bo'lsa).
 
+**Bepul tarif:** cron-job.org qolsin. **Starter ($7):** `ALWAYS_ON_SCHEDULER=true` qo'ying — cron-job.org ixtiyoriy bo'ladi (ikkalasi birga ham xavfsiz).
 
-Eslatma manzili: `https://<xizmat>.onrender.com/bot/cron/<BOT_CRON_SECRET>/`. Bu yerda `BOT_CRON_SECRET` Render → Environment bo'limidagi qiymat (o'zingiz ham kiritishingiz mumkin). Render Shell'da `cd backend && python manage.py telegram_setup` buyrug'i aniq manzilni chiqaradi. [cron-job.org](https://cron-job.org) saytida shu URL'ni **har 10 daqiqada** chaqiradigan cronjob yarating. Bu eslatmalarni yuboradi va bepul xizmatni "uyg'oq" saqlaydi.
+**Xabar yuborish:** `/admin/` → **📣 Xabar yuborish**. Avval saytda admin email bilan kirib, Profil → Telegram'ni ulang. Shablon yoki matn → "Menga test yuborish" → "Hammaga yuborish" → tasdiqlash. Server o'chib qolsa, 2 daqiqadan keyin **Davom ettirish** tugmasi chiqadi.
 
 ### 6. Sifatli talaffuz (Google Cloud Text-to-Speech)
 

@@ -13,4 +13,4 @@ class Command(BaseCommand):
             ("Webhook set: " if ok else "Webhook NOT set (see log): ") + (webhook_url() and "/bot/webhook/<secret>/")
         )
         cron = services.webapp_url(f"/bot/cron/{services.cron_secret()}/")
-        self.stdout.write(f"Reminder cron URL (keep it secret, call every 10 min): {cron or '/bot/cron/<secret>/'}")
+        self.stdout.write(f"Cron URL (keep it secret, call every 10 min): {cron or '/bot/cron/<secret>/'}")

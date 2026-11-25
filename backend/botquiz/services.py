@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+from collections import Counter
 from datetime import datetime, timedelta
 from zoneinfo import ZoneInfo, available_timezones
 
@@ -20,6 +21,7 @@ from .selection import build_questions
 
 EXPIRES = timedelta(hours=24)
 MORE = 5
+CATCH_UP_HOURS = 2
 
 
 def settings_for(user: User) -> QuizSettings:
@@ -61,7 +63,7 @@ def mark_reachable(tg_id: int) -> None:
 
 
 def mark_blocked(user_id: int) -> None:
-    QuizSettings.objects.filter(user_id=user_id).update(bot_blocked=True)
+    QuizSettings.objects.update_or_create(user_id=user_id, defaults={"bot_blocked": True})
 
 
 def _alive(s: QuizSession | None) -> bool:
@@ -168,33 +170,53 @@ def menu_action(user: User, action: str, value: str) -> QuizSettings:
 
 
 # --------------------------------------------------------------------------- schedule
-def due_settings(now: datetime | None = None, limit: int = 1000) -> list[tuple[int, object]]:
-    """[(settings id, the user's local date)] of users whose chosen hour is now in their timezone."""
+def _local(conf: QuizSettings, now: datetime) -> datetime:
+    return now.astimezone(ZoneInfo(conf.timezone if valid_timezone(conf.timezone) else DEFAULT_TZ))
+
+
+def skip_reason(conf: QuizSettings, now: datetime) -> str | None:
+    """None = the quiz is due: the chosen hour is now, or at most CATCH_UP_HOURS ago on the same local day
+    (a sleeping server or a failed cron call must not cost the whole day)."""
+    local = _local(conf, now)
+    if not conf.user.is_active:
+        return "inactive_account"
+    if not conf.enabled:
+        return "quiz_off"
+    if conf.bot_blocked:
+        return "bot_blocked"
+    if local.weekday() in conf.quiet_days:
+        return "quiet_day"
+    if local.hour < conf.hour:
+        return "not_yet_time"
+    if conf.last_sent_on == local.date():
+        return "already_sent_today"
+    if local.hour > conf.hour + CATCH_UP_HOURS:
+        return "hour_passed"
+    if conf.user.last_active_date == today():
+        return "played_today"
+    return None
+
+
+def select_due(now: datetime | None = None) -> tuple[list[tuple[int, object]], dict[str, int]]:
+    """([(settings id, the user's local date)], {reason: skipped users}) over everyone with Telegram."""
     now = now or timezone.now()
     missing = User.objects.filter(telegram_id__isnull=False, quiz_settings__isnull=True).values_list("id", flat=True)
     QuizSettings.objects.bulk_create([QuizSettings(user_id=i) for i in missing], ignore_conflicts=True)
     out: list[tuple[int, object]] = []
-    for tz in QuizSettings.objects.order_by().values_list("timezone", flat=True).distinct():
-        local = now.astimezone(ZoneInfo(tz if valid_timezone(tz) else DEFAULT_TZ))
-        rows = (
-            QuizSettings.objects.filter(
-                enabled=True,
-                bot_blocked=False,
-                timezone=tz,
-                hour=local.hour,
-                user__telegram_id__isnull=False,
-                user__is_active=True,
-            )
-            .exclude(last_sent_on=local.date())
-            .exclude(user__last_active_date=today())
-            .order_by("id")[:limit]
-        )
-        out += [(c.id, local.date()) for c in rows if local.weekday() not in c.quiet_days]
-    return out[:limit]
+    skipped: Counter = Counter()
+    for conf in QuizSettings.objects.filter(user__telegram_id__isnull=False).select_related("user").order_by("id"):
+        reason = skip_reason(conf, now)
+        if reason:
+            skipped[reason] += 1
+        else:
+            out.append((conf.id, _local(conf, now).date()))
+    return out, dict(skipped)
 
 
+@transaction.atomic
 def claim(settings_id: int, day) -> dict | None:
-    """Reserve today's quiz for one user (atomic, so overlapping cron calls never send twice)."""
+    """Reserve today's quiz for one user (conditional update, so overlapping calls never send twice).
+    If building the quiz fails, the claim is rolled back with it."""
     now = timezone.now()
     updated = (
         QuizSettings.objects.filter(pk=settings_id, enabled=True)
@@ -206,6 +228,7 @@ def claim(settings_id: int, day) -> dict | None:
     user = User.objects.get(quiz_settings__pk=settings_id)
     session = new_session(user)
     if session is None:
+        not_delivered(settings_id)  # nothing to ask: the plain reminder may still go out
         return None
     return {
         "settings_id": settings_id,
@@ -215,6 +238,11 @@ def claim(settings_id: int, day) -> dict | None:
         "sid": session.sid,
         "count": len(session.questions),
     }
+
+
+def not_delivered(settings_id: int) -> None:
+    """The day stays used for the quiz, but it doesn't count as "already reminded"."""
+    QuizSettings.objects.filter(pk=settings_id).update(last_sent_at=None)
 
 
 def release(job: dict) -> None:

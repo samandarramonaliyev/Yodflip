@@ -199,3 +199,19 @@ Everything that was not fully specified, and what was chosen.
 - `GET /api/levels/{track}/{level}/words/` and `/api/exams/{slug}/study/`: lessons of 20 in theme order. With a filter the filtered list is split into lessons; the remembered lesson (per device) is the unfiltered one. Locked levels stay locked.
 - Reading changes nothing. "Learned" = found, or box 5. ⭐ toggles Want to learn.
 - The lesson check opens flashcards with `source=lesson&ids=…` (exactly these words; max 20). Language changes are saved in the same translation preference.
+
+## Reminders fix, broadcast, in-app scheduler
+- **Why reminders could get lost** (found in the code and reproduced by tests; production logs and database were not available): (1) the quiz matched only its exact hour, so one failed or late hourly call lost the day; (2) the day was marked as used *before* sending (reminders: the whole list at once) and errors were swallowed, so a 429, a network error or a killed process lost it; (3) one exception while building a quiz or closing duels ended the whole run; (4) a failed or empty quiz still suppressed the plain reminder; (5) DEPLOY.md suggested changing the existing cronjob to the `/quiz/` URL, which then never sent reminders; (6) the reminder used the server's timezone and ignored `is_active`; (7) reminder_time is empty by default, so only users who chose a time match.
+- **One job**: both cron URLs and the scheduler call `jobs.services.run_all` (quiz, reminders, broadcasts, duels). Every part is isolated and logged in `CronRunLog` (14 days). The JSON answer is now nested per part.
+- **Still opt-in**: the plain reminder isn't switched on for existing users, because an empty time may mean "/remind off". The quiz (default on, 19:00) is the default daily nudge.
+- **Idempotency**: one conditional UPDATE per user right before sending. The claim is given back only when Telegram certainly did not deliver (429 that can't be waited out, no connection, wrong token). Timeouts keep it: rather no message than two.
+- The quiz is made up for up to 2 hours later on the same local day; it isn't carried over midnight.
+- 403 and "chat not found" → `QuizSettings.bot_blocked` (no bot messages). `User.is_active` is not touched: it would lock the login. Any private message or button press clears the flag.
+- **Lock**: a row with an expiry, taken by conditional UPDATE. Session advisory locks don't work behind Neon's PgBouncer pooler.
+- **Scheduler**: a small thread per gunicorn worker instead of APScheduler (no new dependency). It runs every 10 minutes by default, not hourly, so that a 19:30 reminder is on time; `SCHEDULER_EVERY_MINUTES=60` gives hourly runs.
+- **Broadcast recipients** are written down once at the start: people who join later don't get it. A row that was being sent when the process died is counted as an error and not sent again.
+- One broadcast runs at a time; others wait in the queue and are started by the cron job. A dead one can be resumed 2 minutes after its last heartbeat; resuming is manual.
+- Audiences contain only active accounts with Telegram that haven't blocked the bot. "Inactive 3+ days" includes people who never played and joined 3+ days ago. "Website users" = accounts with an email.
+- `{streak}` is 0 when yesterday was missed (the stored value changes only by playing).
+- A broadcast's photo is stored like other media (public URL with a random name). Test messages store nothing.
+- Bot tokens are now redacted in all log output, including tracebacks (httpx logs full API URLs at INFO).

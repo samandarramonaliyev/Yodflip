@@ -7,11 +7,11 @@ from django.http import HttpResponse, HttpResponseForbidden, JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.http import require_http_methods, require_POST
 
-from botquiz.sender import send_due_quizzes
-from duels.services import expire_due
+from botquiz.services import mark_reachable
+from jobs.services import run_all, status_report
 
 from . import services
-from .bot import process_update, send_reminders
+from .bot import process_update
 
 log = logging.getLogger(__name__)
 
@@ -31,10 +31,20 @@ def webhook(request, secret: str):
     except json.JSONDecodeError:
         return HttpResponse(status=400)
     try:
+        _note_reachable(update)
         process_update(update)
     except Exception:  # noqa: BLE001 - always 200 so Telegram doesn't retry forever
         log.exception("Failed to process Telegram update %s", update.get("update_id"))
     return HttpResponse("ok")
+
+
+def _note_reachable(update: dict) -> None:
+    """Any private message or button press proves that the bot can write to this user (again)."""
+    part = update.get("callback_query") or update.get("message") or {}
+    chat = (part.get("message") or part).get("chat") or {}
+    sender = (part.get("from") or {}).get("id")
+    if sender and chat.get("type") == "private":
+        mark_reachable(sender)
 
 
 def _client_ip(request) -> str:
@@ -59,31 +69,21 @@ def _cron_allowed(request, secret: str) -> bool:
 @csrf_exempt
 @require_http_methods(["GET", "POST"])
 def cron(request, secret: str):
-    """Send due daily reminders. Call every 5–15 min from an external scheduler (e.g. cron-job.org).
+    """/bot/cron/<BOT_CRON_SECRET>/ and /bot/cron/<BOT_CRON_SECRET>/quiz/ (trailing slash optional).
 
-    URL: /bot/cron/<BOT_CRON_SECRET>/ (trailing slash optional). Also keeps a free Render service awake.
-    No CSRF, no auth, no throttling: the secret in the path is the only check.
+    Both run the same job (quiz, reminders, scheduled broadcasts, expired duels). Every part sends at
+    most once per user and day, so calling it often, or from several schedulers, is safe. A call every
+    10 minutes also keeps a free Render service awake. The secret in the path is the only check.
     """
     if not _cron_allowed(request, secret):
         return HttpResponseForbidden("forbidden")
-    if not settings.TELEGRAM_BOT_TOKEN:
-        return JsonResponse({"ok": True, "sent": 0, "detail": "bot_disabled"})
-    expire_due()
-    users = services.take_due_reminders()
-    sent = send_reminders(users)
-    return JsonResponse({"ok": True, "due": len(users), "sent": sent})
+    return JsonResponse(run_all("cron"))
 
 
 @csrf_exempt
 @require_http_methods(["GET", "POST"])
-def cron_quiz(request, secret: str):
-    """Send the in-chat quiz to users whose chosen hour is now. Call every hour (0 * * * *).
-
-    Safe to call more often: every user gets at most one quiz per day.
-    """
+def cron_status(request, secret: str):
+    """/bot/cron/<BOT_CRON_SECRET>/status/: the last runs. Sends nothing."""
     if not _cron_allowed(request, secret):
         return HttpResponseForbidden("forbidden")
-    expire_due()
-    if not settings.TELEGRAM_BOT_TOKEN:
-        return JsonResponse({"ok": True, "sent": 0, "detail": "bot_disabled"})
-    return JsonResponse({"ok": True, **send_due_quizzes()})
+    return JsonResponse(status_report())

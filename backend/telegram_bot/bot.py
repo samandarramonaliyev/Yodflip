@@ -8,17 +8,12 @@ which runs those calls back on the request's own thread and database connection.
 
 from __future__ import annotations
 
-import logging
-
 from aiogram import Bot, Dispatcher
 from asgiref.sync import async_to_sync
 from django.conf import settings
 
 from .handlers import open_button, router
 from .quiz_handlers import router as quiz_router
-from .texts import t
-
-log = logging.getLogger(__name__)
 
 dispatcher = Dispatcher()
 dispatcher.include_router(quiz_router)
@@ -52,27 +47,3 @@ async def _send_to_user(chat_id: int, text: str, button: str, path: str) -> None
 def send_to_user(chat_id: int, text: str, button: str, path: str) -> None:
     """One message with a Web App button (duel notifications)."""
     async_to_sync(_send_to_user)(chat_id, text, button, path)
-
-
-async def _send_reminders(users: list[dict]) -> int:
-    bot = make_bot()
-    sent = 0
-    try:
-        for u in users:
-            lang = u.get("ui_language", "uz")
-            try:
-                await bot.send_message(
-                    u["telegram_id"],
-                    t(lang, "reminder", streak=u.get("streak", 0), due=u.get("due", 0)),
-                    reply_markup=open_button(t(lang, "open"), "/"),
-                )
-                sent += 1
-            except Exception as exc:  # noqa: BLE001 - e.g. the user blocked the bot
-                log.info("Reminder to %s failed: %s", u.get("telegram_id"), exc)
-    finally:
-        await bot.session.close()
-    return sent
-
-
-def send_reminders(users: list[dict]) -> int:
-    return async_to_sync(_send_reminders)(users) if users else 0

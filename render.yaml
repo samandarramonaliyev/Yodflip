@@ -44,6 +44,9 @@ services:
         generateValue: true
       - key: BOT_CRON_SECRET
         generateValue: true
+      # "true" only on a paid instance that never sleeps (see DEPLOY.md 5c)
+      - key: ALWAYS_ON_SCHEDULER
+        value: "false"
       # --- Neural TTS (empty = browser voice) ---
       - key: TTS_PROVIDER
         value: google

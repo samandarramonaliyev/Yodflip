@@ -143,12 +143,13 @@ def test_reminder_cron(bot_settings, sent):
     c = APIClient()
     assert c.get("/bot/cron/wrong/").status_code == 403
     r = c.get(f"/bot/cron/{services.cron_secret()}/")
-    assert r.json() == {"ok": True, "due": 1, "sent": 1}
+    body = r.json()
+    assert body["ok"] is True and body["reminders"]["due"] == 1 and body["reminders"]["sent"] == 1
     assert [m.chat_id for m in sent] == [1]
     due.refresh_from_db()
     assert due.last_reminder_date == now.date()
     # at most one reminder per day
-    assert c.get(f"/bot/cron/{services.cron_secret()}/").json()["due"] == 0
+    assert c.get(f"/bot/cron/{services.cron_secret()}/").json()["reminders"]["due"] == 0
 
 
 def test_configure_telegram_sets_webhook(bot_settings):

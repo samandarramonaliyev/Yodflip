@@ -1,0 +1,252 @@
+{% extends "admin/base_site.html" %}
+{% block extrahead %}{{ block.super }}
+<style>
+#bc{--card:var(--body-bg);--line:var(--hairline-color);--ok:#1a7f4b;--bad:#c0392b;max-width:1120px;font-size:15px}
+#bc .grid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(260px,1fr);gap:20px;align-items:start}
+#bc .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;margin-bottom:18px}
+#bc h2{background:none;color:var(--body-fg);padding:0;margin:0 0 12px;font-size:17px;font-weight:700;text-transform:none;letter-spacing:0}
+#bc label{display:block;font-weight:600;margin:14px 0 5px;width:auto;float:none}
+#bc textarea,#bc input[type=text],#bc input[type=url],#bc input[type=datetime-local],#bc select{width:100%;box-sizing:border-box;padding:10px 12px;border:1px solid var(--border-color);border-radius:10px;background:var(--body-bg);color:var(--body-fg);font:inherit;height:auto;margin:0}
+#bc textarea{min-height:170px;resize:vertical;line-height:1.5}
+#bc :focus-visible{outline:2px solid var(--link-fg);outline-offset:1px}
+#bc .row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+#bc button{min-height:40px;padding:8px 14px;border-radius:10px;border:1px solid var(--border-color);background:var(--darkened-bg);color:var(--body-fg);font:inherit;font-weight:600;cursor:pointer;margin:0}
+#bc button:disabled{opacity:.5;cursor:default}
+#bc button.main{background:#e8590c;border-color:#e8590c;color:#fff}
+#bc button.sm{min-height:34px;padding:4px 10px;font-size:14px}
+#bc .muted{color:var(--body-quiet-color);font-size:13px}
+#bc .count{font-size:17px;font-weight:700}
+#bc .warn{border-left:4px solid #e8a30c;padding:10px 14px;background:var(--darkened-bg);border-radius:8px;margin-bottom:12px}
+#bc .msg{min-height:22px;margin-top:12px;font-weight:600}
+#bc .msg.ok{color:var(--ok)} #bc .msg.bad{color:var(--bad)}
+#bc .phone{background:#d7e6d3;border-radius:14px;padding:16px;color:#111;position:sticky;top:12px}
+#bc .bubble{background:#fff;border-radius:14px 14px 14px 4px;overflow:hidden;box-shadow:0 1px 2px #0002}
+#bc .bubble img{display:block;width:100%;max-height:260px;object-fit:cover}
+#bc .bubble .t{padding:10px 12px;white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.45;min-height:22px}
+#bc .bubble a{color:#1c6fb8;text-decoration:underline}
+#bc .bubble code,#bc .bubble pre{background:#eee;border-radius:4px;padding:0 4px;color:#111;white-space:pre-wrap}
+#bc .bubble blockquote{border-left:3px solid #1c6fb8;margin:4px 0;padding-left:8px;color:inherit}
+#bc .bubble .spoiler{background:#bbb;border-radius:4px}
+#bc .kb{margin-top:6px;background:#ffffffb8;border-radius:10px;text-align:center;padding:9px;font-weight:600;color:#1c5d99}
+#bc .item{border-top:1px solid var(--line);padding:12px 0}
+#bc .item:first-child{border-top:0}
+#bc .item .txt{white-space:pre-wrap;overflow-wrap:anywhere;max-height:66px;overflow:hidden;margin:4px 0}
+#bc .bar{height:8px;border-radius:8px;background:var(--darkened-bg);overflow:hidden;margin:6px 0}
+#bc .bar i{display:block;height:100%;background:var(--ok);transition:width .4s}
+#bc .tag{border-radius:20px;padding:2px 10px;font-size:13px;font-weight:600;background:var(--darkened-bg)}
+#bc .tag.running{background:#1c6fb8;color:#fff} #bc .tag.done{background:var(--ok);color:#fff}
+#bc .tag.stalled,#bc .tag.paused{background:#b8650a;color:#fff}
+#bc dialog{border:0;border-radius:16px;padding:22px;max-width:420px;background:var(--body-bg);color:var(--body-fg);box-shadow:0 20px 60px #0006}
+#bc dialog::backdrop{background:#0007}
+#bc [hidden]{display:none!important}
+@media(max-width:860px){#bc .grid{grid-template-columns:minmax(0,1fr)}#bc .phone{position:static}}
+</style>
+{% endblock %}
+{% block content %}
+<div id="bc">
+  {% if not bot_ready %}<div class="warn">⚠️ <b>TELEGRAM_BOT_TOKEN</b> o'rnatilmagan: xabar yuborib bo'lmaydi.</div>{% endif %}
+  {% if not telegram_linked %}<div class="warn">ℹ️ Sinov xabari uchun admin akkauntingizga Telegram ulang: saytga shu email bilan kiring → Profil → Telegram'ni ulash.</div>{% endif %}
+  <p class="muted">Avtomatik eslatmalar: {% if cron_minutes is None %}<b>cron hali biror marta ham ishlamagan</b> (DEPLOY.md, 5-bo'lim){% elif cron_minutes > 70 %}<b>⚠️ oxirgi ishga tushish {{ cron_minutes }} daqiqa oldin</b> — cron-job.org ni tekshiring{% else %}oxirgi ishga tushish {{ cron_minutes }} daqiqa oldin ✅{% endif %} · <a href="/admin/jobs/cronrunlog/">jurnal</a></p>
+
+  <div class="grid">
+    <form class="card" id="form" enctype="multipart/form-data" novalidate>
+      {% csrf_token %}
+      <input type="hidden" name="nonce" value="{{ nonce }}">
+      <h2>Xabar</h2>
+      <div class="row" id="templates" aria-label="Tayyor shablonlar"></div>
+      <label for="text">Matn</label>
+      <div class="row" style="margin-bottom:6px">
+        <button type="button" class="sm" data-tag="b" title="Qalin"><b>B</b></button>
+        <button type="button" class="sm" data-tag="i" title="Kursiv"><i>I</i></button>
+        <button type="button" class="sm" data-link title="Havola">🔗</button>
+        <button type="button" class="sm" data-ins="{name}">{name}</button>
+        <button type="button" class="sm" data-ins="{streak}">{streak}</button>
+        <button type="button" class="sm" data-ins="{due_words}">{due_words}</button>
+      </div>
+      <textarea id="text" name="text" required></textarea>
+      <div class="muted"><span id="len">0</span> / <span id="max">4096</span> belgi</div>
+
+      <label for="photo">Rasm (ixtiyoriy: JPG, PNG, WEBP, 5 MB gacha)</label>
+      <div class="row"><input type="file" id="photo" name="photo" accept="image/jpeg,image/png,image/webp"><button type="button" class="sm" id="nophoto" hidden>Rasmni olib tashlash</button></div>
+
+      <label for="button_kind">Tugma</label>
+      <select id="button_kind" name="button_kind">
+        <option value="">Tugmasiz</option><option value="webapp">Mini App'ni ochadi</option><option value="url">Havola (URL)</option>
+      </select>
+      <div id="btnfields" hidden>
+        <label for="button_text">Tugma matni</label><input type="text" id="button_text" name="button_text" maxlength="64">
+        <div id="urlfield"><label for="button_url">Havola</label><input type="url" id="button_url" name="button_url" placeholder="https://"></div>
+      </div>
+
+      <label for="audience">Kimlarga</label>
+      <select id="audience" name="audience">{% for key, label, n in audiences %}<option value="{{ key }}">{{ label }} ({{ n }})</option>{% endfor %}</select>
+      <p class="count">Qabul qiluvchilar: <span id="count">…</span> kishi</p>
+
+      <div class="row" style="margin-top:14px">
+        <button type="button" id="test">🧪 Menga test yuborish</button>
+        <button type="button" id="send" class="main">📣 Hammaga yuborish</button>
+      </div>
+      <label for="scheduled_at">Keyinroq yuborish ({{ tz }} vaqti)</label>
+      <div class="row"><input type="datetime-local" id="scheduled_at" name="scheduled_at" style="width:auto"><button type="button" id="schedule">🕒 Rejalashtirish</button></div>
+      <div class="msg" id="msg" role="status"></div>
+    </form>
+
+    <div class="phone" aria-label="Ko'rinishi">
+      <div class="bubble"><img id="pimg" alt="" hidden><div class="t" id="preview"></div></div>
+      <div class="kb" id="pkb" hidden></div>
+    </div>
+  </div>
+
+  <div class="card"><h2>Yuborilgan xabarlar</h2><div id="history"><p class="muted">Yuklanmoqda…</p></div></div>
+
+  <dialog id="dlg"><h2>Yuborilsinmi?</h2><p id="dlgtext"></p>
+    <div class="row" style="justify-content:flex-end"><button type="button" id="no">Yo'q</button><button type="button" class="main" id="yes">Ha, yuborilsin</button></div>
+  </dialog>
+</div>
+{{ templates|json_script:"tpl" }}{{ sample|json_script:"sample" }}
+<script>
+(() => {
+  const $ = (id) => document.getElementById(id);
+  const json = (id) => JSON.parse($(id).textContent);
+  const tpls = json('tpl'), sample = json('sample'), form = $('form');
+  const csrf = form.querySelector('[name=csrfmiddlewaretoken]').value;
+  const ALLOWED = {B:'b',STRONG:'b',I:'i',EM:'i',U:'u',INS:'u',S:'s',STRIKE:'s',DEL:'s',CODE:'code',PRE:'pre',BLOCKQUOTE:'blockquote','TG-SPOILER':'span'};
+  let imgUrl = '';
+
+  // ---- preview (only known tags are rebuilt, nothing is injected as HTML)
+  const copy = (from, to) => from.childNodes.forEach((n) => {
+    if (n.nodeType === 3) return to.append(n.data);
+    if (n.nodeType !== 1) return;
+    let el = to;
+    if (n.tagName === 'A' && /^(https?|tg|mailto):/i.test(n.getAttribute('href') || '')) {
+      el = document.createElement('a'); el.href = n.getAttribute('href'); el.target = '_blank'; el.rel = 'noopener'; to.append(el);
+    } else if (ALLOWED[n.tagName]) {
+      el = document.createElement(ALLOWED[n.tagName]); if (n.tagName === 'TG-SPOILER') el.className = 'spoiler'; to.append(el);
+    }
+    copy(n, el);
+  });
+  const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  const draw = () => {
+    let html = $('text').value;
+    for (const k of ['streak', 'due_words', 'name']) html = html.split('{' + k + '}').join(esc(sample[k]));
+    const doc = new DOMParser().parseFromString('<body>' + html.replace(/^\s+/, ''), 'text/html');
+    const out = $('preview'); out.textContent = ''; copy(doc.body, out);
+    $('len').textContent = out.textContent.length;
+    $('max').textContent = imgUrl ? 1024 : 4096;
+    $('pimg').hidden = !imgUrl; if (imgUrl) $('pimg').src = imgUrl;
+    const kind = $('button_kind').value;
+    $('btnfields').hidden = !kind; $('urlfield').hidden = kind !== 'url';
+    $('pkb').hidden = !kind; $('pkb').textContent = $('button_text').value || 'Tugma';
+  };
+  form.addEventListener('input', draw);
+
+  const insert = (before, after = '') => {
+    const t = $('text'), s = t.selectionStart, e = t.selectionEnd;
+    t.setRangeText(before + t.value.slice(s, e) + after, s, e, 'end');
+    if (s === e && after) t.selectionStart = t.selectionEnd = s + before.length;
+    t.focus(); draw();
+  };
+  form.addEventListener('click', (ev) => {
+    const b = ev.target.closest('button'); if (!b) return;
+    if (b.dataset.tag) insert(`<${b.dataset.tag}>`, `</${b.dataset.tag}>`);
+    else if (b.dataset.ins) insert(b.dataset.ins);
+    else if ('link' in b.dataset) insert('<a href="https://">', '</a>');
+  });
+  tpls.forEach((t) => {
+    const b = document.createElement('button'); b.type = 'button'; b.className = 'sm'; b.textContent = t.name;
+    b.onclick = () => {
+      $('text').value = t.text; $('button_kind').value = 'webapp'; $('button_text').value = t.button_text;
+      $('audience').value = t.audience; draw(); count();
+    };
+    $('templates').append(b);
+  });
+  $('photo').onchange = () => {
+    if (imgUrl) URL.revokeObjectURL(imgUrl);
+    const f = $('photo').files[0]; imgUrl = f ? URL.createObjectURL(f) : ''; $('nophoto').hidden = !f; draw();
+  };
+  $('nophoto').onclick = () => { $('photo').value = ''; $('photo').onchange(); };
+
+  // ---- audience
+  const count = async () => {
+    const key = $('audience').value; $('count').textContent = '…';
+    const r = await fetch('count/?audience=' + key).then((x) => x.json());
+    if (key === $('audience').value) $('count').textContent = r.count;
+    return r.count;
+  };
+  $('audience').onchange = count;
+
+  // ---- sending
+  const say = (text, ok) => { $('msg').textContent = text; $('msg').className = 'msg ' + (ok ? 'ok' : 'bad'); };
+  const post = async (url, body) => {
+    try {
+      const r = await fetch(url, {method: 'POST', headers: {'X-CSRFToken': csrf}, body});
+      return await r.json();
+    } catch { return {ok: false, error: "Server javob bermadi. Pastdagi ro'yxatni tekshiring."}; }
+  };
+  const submit = async (action) => {
+    const data = new FormData(form); data.set('action', action);
+    if (action !== 'schedule') data.delete('scheduled_at');
+    if (!$('button_kind').value) { data.set('button_text', ''); }
+    if ($('button_kind').value !== 'url') data.set('button_url', '');
+    const buttons = ['test', 'send', 'schedule'].map($); buttons.forEach((b) => b.disabled = true); say('…', true);
+    const r = await post('submit/', data);
+    buttons.forEach((b) => b.disabled = false);
+    if (!r.ok) return say('❌ ' + r.error, false);
+    if (action === 'test') return say('✅ Sinov xabari Telegram\'ingizga yuborildi', true);
+    say(action === 'schedule' ? '✅ Rejalashtirildi' : r.started === false ? '✅ Navbatga qo\'shildi' : '✅ Yuborish boshlandi', true);
+    form.querySelector('[name=nonce]').value = newNonce(); load();
+  };
+  const newNonce = () => {
+    const a = crypto.getRandomValues(new Uint8Array(16)); a[6] = a[6] & 15 | 64; a[8] = a[8] & 63 | 128;
+    return [...a].map((x) => x.toString(16).padStart(2, '0')).join('').replace(/^(.{8})(.{4})(.{4})(.{4})/, '$1-$2-$3-$4-');
+  };
+  $('test').onclick = () => submit('test');
+  let pending = 'send';
+  const ask = async (action) => {
+    if (!$('text').value.trim()) return say('❌ Xabar matni bo\'sh', false);
+    const n = await count(); pending = action;
+    $('dlgtext').textContent = `${n} kishiga (${$('audience').selectedOptions[0].text.replace(/ \(\d+\)$/, '')}) xabar ` +
+      (action === 'schedule' ? `${$('scheduled_at').value.replace('T', ' ')} da yuboriladi.` : 'hozir yuboriladi.');
+    $('dlg').showModal();
+  };
+  $('send').onclick = () => ask('send');
+  $('schedule').onclick = () => $('scheduled_at').value ? ask('schedule') : say('❌ Vaqtni tanlang', false);
+  $('no').onclick = () => $('dlg').close();
+  $('yes').onclick = () => { $('dlg').close(); submit(pending); };
+
+  // ---- history + live progress
+  const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
+  const act = async (id, action) => { const r = await post(`${id}/${action}/`); if (!r.ok) say('❌ ' + r.error, false); load(); };
+  const item = (b) => {
+    const d = el('div', 'item'), head = el('div', 'row');
+    head.append(el('span', 'tag ' + b.status, b.label), el('span', 'muted', `${b.when} · ${b.audience} · ${b.by}`));
+    d.append(head, el('div', 'txt', b.text));
+    if (b.total) {
+      const bar = el('div', 'bar'), i = el('i'); i.style.width = 100 * (b.sent + b.failed) / b.total + '%'; bar.append(i);
+      d.append(bar, el('div', '', `Yuborildi ${b.sent} / ${b.total} · Xato ${b.failed}`));
+    }
+    if (b.error) d.append(el('div', 'muted', '⚠️ ' + b.error));
+    const row = el('div', 'row'); row.style.marginTop = '8px';
+    [['can_resume', 'resume', '▶ Davom ettirish'], ['can_pause', 'pause', '⏸ To\'xtatish'], ['can_cancel', 'cancel', '✖ Bekor qilish']].forEach(([flag, action, text]) => {
+      if (!b[flag]) return;
+      const x = el('button', 'sm', text); x.type = 'button';
+      x.onclick = () => { if (action === 'cancel' && !x.dataset.sure) { x.dataset.sure = 1; x.textContent = '✖ Aniqmi? Yana bosing'; return; } act(b.id, action); };
+      row.append(x);
+    });
+    d.append(row); return d;
+  };
+  let timer, shown = '';
+  const load = async () => {
+    clearTimeout(timer); let wait = 15000;
+    try {
+      const r = await fetch('history/').then((x) => x.json());
+      if (r.busy) wait = 2000;
+      const key = JSON.stringify(r.items);
+      if (key !== shown) { shown = key; $('history').replaceChildren(...(r.items.length ? r.items.map(item) : [el('p', 'muted', 'Hali xabar yuborilmagan.')])); }
+    } catch { /* offline or waking up: try again later */ }
+    timer = setTimeout(load, wait);
+  };
+  draw(); count(); load();
+})();
+</script>
+{% endblock %}

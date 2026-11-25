@@ -77,6 +77,8 @@ INSTALLED_APPS = [
     "botquiz",
     "exams",
     "tts",
+    "jobs",
+    "broadcasts",
 ]
 
 MIDDLEWARE = [
@@ -249,6 +251,11 @@ S3_PUBLIC_URL = env("S3_PUBLIC_URL")
 TELEGRAM_WEBHOOK_SECRET = env("TELEGRAM_WEBHOOK_SECRET")
 BOT_CRON_SECRET = env("BOT_CRON_SECRET")
 
+# Runs the cron job inside the app too. Only for an instance that never sleeps (Render Starter).
+ALWAYS_ON_SCHEDULER = env_bool("ALWAYS_ON_SCHEDULER", False)
+# 60 = once an hour. 10 sends reminders such as 19:30 on time (the job is idempotent).
+SCHEDULER_EVERY_MINUTES = min(60, max(1, int(env("SCHEDULER_EVERY_MINUTES", "10"))))
+
 # Sample OCR data is a development convenience only. In production without an Anthropic key
 # the Tesseract fallback is used instead.
 OCR_MOCK = env_bool("OCR_MOCK", DEBUG and not ANTHROPIC_API_KEY)
@@ -260,7 +267,12 @@ TELEGRAM_AUTH_MAX_AGE = int(env("TELEGRAM_AUTH_MAX_AGE", str(24 * 3600)))
 LOGGING = {
     "version": 1,
     "disable_existing_loggers": False,
-    "formatters": {"plain": {"format": "%(asctime)s %(levelname)s %(name)s: %(message)s"}},
+    "formatters": {
+        "plain": {
+            "()": "core.logging.RedactingFormatter",
+            "format": "%(asctime)s %(levelname)s %(name)s: %(message)s",
+        }
+    },
     # Never write the webhook/cron URL secrets to the logs (e.g. Django's "Forbidden: /bot/cron/...").
     "filters": {"redact_secrets": {"()": "core.logging.RedactSecretsFilter"}},
     "handlers": {"console": {"class": "logging.StreamHandler", "formatter": "plain", "filters": ["redact_secrets"]}},
