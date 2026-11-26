@@ -239,6 +239,14 @@ GOOGLE_TTS_CREDENTIALS_JSON = env("GOOGLE_TTS_CREDENTIALS_JSON")
 AZURE_TTS_KEY = env("AZURE_TTS_KEY")
 AZURE_TTS_REGION = env("AZURE_TTS_REGION")
 TTS_DAILY_LIMIT = int(env("TTS_DAILY_LIMIT", "200"))  # new audios per user and day
+# Routing: single words (with the German article) and example sentences can use different providers.
+# The other one is the fallback (ElevenLabs quota used up, missing key or language); then the browser voice.
+TTS_WORDS_PROVIDER = env("TTS_WORDS_PROVIDER") or "elevenlabs"
+TTS_SENTENCES_PROVIDER = env("TTS_SENTENCES_PROVIDER")  # empty = TTS_PROVIDER
+ELEVENLABS_API_KEY = env("ELEVENLABS_API_KEY")
+ELEVENLABS_MODEL = env("ELEVENLABS_MODEL") or "eleven_multilingual_v2"
+ELEVENLABS_VOICE_DE = env("ELEVENLABS_VOICE_DE") or "EXAVITQu4vr4xnSDxMaL"
+ELEVENLABS_VOICE_EN = env("ELEVENLABS_VOICE_EN") or "EXAVITQu4vr4xnSDxMaL"
 # Optional S3-compatible bucket for the audio (R2, B2, AWS...)
 S3_ENDPOINT_URL = env("S3_ENDPOINT_URL")
 S3_BUCKET = env("S3_BUCKET")

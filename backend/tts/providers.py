@@ -1,4 +1,7 @@
-"""Neural TTS providers behind one interface. TTS_PROVIDER=google|azure."""
+"""Neural TTS providers behind one interface: google | azure | elevenlabs.
+
+Words and sentences are routed separately (TTS_WORDS_PROVIDER, TTS_SENTENCES_PROVIDER); see `chain`.
+"""
 
 from __future__ import annotations
 
@@ -22,6 +25,10 @@ RATES = {"normal": 0.95, "slow": 0.7}
 
 class TtsError(Exception):
     pass
+
+
+class QuotaExceeded(TtsError):
+    """The provider refuses further requests (credits used up, key revoked, rate limited): use the fallback."""
 
 
 @dataclass(frozen=True)
@@ -150,8 +157,97 @@ class AzureProvider(TTSProvider):
             raise TtsError(f"azure: {type(exc).__name__}")
 
 
-PROVIDERS = {"google": GoogleProvider, "azure": AzureProvider}
+class ElevenLabsProvider(TTSProvider):
+    """One native voice per language. language_code is sent on every request, so German stays German."""
+
+    name = "elevenlabs"
+    URL = "https://api.elevenlabs.io/v1/text-to-speech/{voice}?output_format=mp3_44100_64"
+    # Credits per character (self-serve plans): flash / turbo models cost half.
+    CREDITS_PER_CHAR = {"eleven_flash_v2_5": 0.5, "eleven_turbo_v2_5": 0.5, "eleven_flash_v2": 0.5}
+
+    @property
+    def voices(self) -> dict[str, list[Voice]]:  # read on every use: settings can change in tests / admin
+        return {
+            "de": [Voice("default", "de-DE", settings.ELEVENLABS_VOICE_DE)],
+            "en": [Voice("default", "en-US", settings.ELEVENLABS_VOICE_EN)],
+        }
+
+    @classmethod
+    def credits(cls, chars: int) -> float:
+        return chars * cls.CREDITS_PER_CHAR.get(settings.ELEVENLABS_MODEL, 1.0)
+
+    def configured(self) -> bool:
+        return bool(settings.ELEVENLABS_API_KEY)
+
+    def synthesize(self, text: str, voice: Voice, rate: float) -> bytes:
+        try:
+            r = httpx.post(
+                self.URL.format(voice=voice.name),
+                headers={"xi-api-key": settings.ELEVENLABS_API_KEY, "Accept": "audio/mpeg"},
+                json={
+                    "text": text,
+                    "model_id": settings.ELEVENLABS_MODEL,
+                    "language_code": voice.locale[:2],
+                    "voice_settings": {"stability": 0.5, "similarity_boost": 0.75, "speed": max(0.7, rate)},
+                },
+                timeout=30,
+            )
+        except httpx.HTTPError as exc:
+            raise TtsError(f"elevenlabs: {type(exc).__name__}")
+        if r.status_code in (401, 402, 429):
+            try:
+                status = r.json().get("detail", {}).get("status", "")
+            except (ValueError, AttributeError):
+                status = ""
+            raise QuotaExceeded(f"elevenlabs: {r.status_code} {status}".strip())
+        if r.status_code != 200 or not r.content:
+            raise TtsError(f"elevenlabs: HTTP {r.status_code}")
+        return r.content
 
 
-def get_provider() -> TTSProvider:
-    return PROVIDERS.get(settings.TTS_PROVIDER, GoogleProvider)()
+PROVIDERS = {"google": GoogleProvider, "azure": AzureProvider, "elevenlabs": ElevenLabsProvider}
+PAID = {"elevenlabs"}
+QUOTA_PAUSE = 3600  # seconds a provider is skipped after a quota error
+
+
+def get_provider(name: str = "") -> TTSProvider:
+    return PROVIDERS.get(name or settings.TTS_PROVIDER, GoogleProvider)()
+
+
+def sentences_name() -> str:
+    return settings.TTS_SENTENCES_PROVIDER or settings.TTS_PROVIDER
+
+
+def chain(kind: str, lang: str) -> list[TTSProvider]:
+    """Providers for a word or a sentence, preferred first, then the other route as the fallback.
+
+    Only providers that have a voice of this language are included (ElevenLabs has no Russian voice here).
+    A paid-per-character provider (ElevenLabs) is never a fallback: it is used only where it is preferred.
+    """
+    words, sentences = settings.TTS_WORDS_PROVIDER, sentences_name()
+    names = [words, sentences] if kind == "word" else [sentences, words]
+    names = names[:1] + [n for n in names[1:] if n not in PAID]
+    out: list[TTSProvider] = []
+    for name in dict.fromkeys(n for n in names if n in PROVIDERS):
+        p = get_provider(name)
+        if lang in p.voices:
+            out.append(p)
+    return out or [get_provider()]
+
+
+def any_configured() -> bool:
+    names = {settings.TTS_WORDS_PROVIDER, sentences_name()}
+    return any(get_provider(n).configured() for n in names if n in PROVIDERS)
+
+
+def paused(provider: TTSProvider) -> bool:
+    from django.core.cache import cache
+
+    return bool(cache.get(f"tts:quota:{provider.name}"))
+
+
+def pause(provider: TTSProvider) -> None:
+    from django.core.cache import cache
+
+    log.warning("TTS provider %s paused for %ss (quota)", provider.name, QUOTA_PAUSE)
+    cache.set(f"tts:quota:{provider.name}", 1, QUOTA_PAUSE)

@@ -10,7 +10,7 @@ from rest_framework.views import APIView
 
 from . import services
 from .models import TtsAudio
-from .providers import RATES, get_provider
+from .providers import PROVIDERS, RATES, get_provider, sentences_name
 from .text import spoken_text
 
 GERMAN = (
@@ -69,13 +69,22 @@ def audio(_request, key: str):
 
 @staff_member_required
 def check(request):
-    """/admin/tts-check/: compare voices."""
-    provider = get_provider()
+    """/admin/tts-check/: words provider vs sentences provider side by side (e.g. ElevenLabs vs Google)."""
+    from django.conf import settings
+
+    names = list(dict.fromkeys(n for n in (settings.TTS_WORDS_PROVIDER, sentences_name()) if n in PROVIDERS))
+    providers = [get_provider(n) for n in names] or [get_provider()]
     rows = [("de", w.strip()) for w in GERMAN.split(",")] + [("en", w.strip()) for w in ENGLISH.split(",")]
     ctx = {
-        "provider": provider.name,
-        "configured": provider.configured(),
-        "rows": [{"lang": lang, "text": text, "voices": provider.voices[lang]} for lang, text in rows],
+        "providers": [{"name": p.name, "configured": p.configured()} for p in providers],
+        "rows": [
+            {
+                "lang": lang,
+                "text": text,
+                "cols": [{"provider": p.name, "voices": p.voices.get(lang, [])} for p in providers],
+            }
+            for lang, text in rows
+        ],
     }
     return render(request, "tts/check.html", ctx)
 
@@ -86,11 +95,12 @@ def check_url(request):
     from django.http import JsonResponse
 
     lang, rate = request.GET.get("lang"), request.GET.get("rate", "normal")
+    only = request.GET.get("provider", "")
     text = spoken_text((request.GET.get("text") or "")[: services.MAX_CHARS], lang or "")
-    if lang not in services.LANGS or rate not in RATES or not text:
+    if lang not in services.LANGS or rate not in RATES or not text or (only and only not in PROVIDERS):
         return JsonResponse({"detail": "invalid"}, status=400)
     try:
-        url = services.get_url(request.user, text, lang, rate, request.GET.get("voice", ""))
+        url = services.get_url(request.user, text, lang, rate, request.GET.get("voice", ""), only=only)
     except services.LimitReached:
         return JsonResponse({"detail": "limit"}, status=429)
     return JsonResponse({"url": url})

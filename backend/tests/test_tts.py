@@ -22,8 +22,12 @@ pytestmark = pytest.mark.django_db
 
 @pytest.fixture(autouse=True)
 def audio_dir(settings, tmp_path):
+    from django.core.cache import cache
+
+    cache.clear()  # quota pauses live in the cache
     settings.TTS_STATIC_DIR = tmp_path
     settings.TTS_PROVIDER = "google"
+    settings.TTS_WORDS_PROVIDER, settings.TTS_SENTENCES_PROVIDER = "elevenlabs", ""
     return tmp_path
 
 
@@ -216,6 +220,146 @@ def test_check_page_is_staff_only(client, google):
     html = client.get("/admin/tts-check/").content.decode()
     for w in ("Eichhörnchen", "Straße", "der Ingenieur", "das Restaurant"):
         assert w in html
-    assert html.count("🐢") == 30 * 2 + 10 * 2
+    assert html.count("🐢") == 30 * 3 + 10 * 3  # google: 2 voices, elevenlabs: 1
+    assert html.count('data-provider="elevenlabs"') == 40 * 2
     r = client.get("/admin/tts-check/url/", {"text": "das Öl", "lang": "de", "voice": "male"})
     assert r.json()["url"] and google[-1][1]["voice"]["name"] == "de-DE-Neural2-H"
+
+
+# --- ElevenLabs: routing, quota fallback, credits ------------------------------------------------
+@pytest.fixture
+def eleven(settings, google, monkeypatch):
+    """ElevenLabs + Google configured; one fake transport records both. `state["fail"]` → HTTP status."""
+    settings.ELEVENLABS_API_KEY, settings.ELEVENLABS_MODEL = "xi", "eleven_multilingual_v2"
+    settings.ELEVENLABS_VOICE_DE, settings.ELEVENLABS_VOICE_EN = "voice-de", "voice-en"
+    google_post = providers.httpx.post
+    state = {"sent": [], "fail": None, "ok_before_fail": 0}
+
+    def post(url, **kw):
+        if "elevenlabs" not in url:
+            return google_post(url, **kw)
+        state["sent"].append((url, kw["json"], kw["headers"]))
+        if state["fail"] and len(state["sent"]) > state["ok_before_fail"]:
+            body = {"detail": {"status": "quota_exceeded", "message": "quota"}}
+            return httpx.Response(state["fail"], json=body, request=httpx.Request("POST", url))
+        return httpx.Response(200, content=b"XI" + kw["json"]["text"].encode(), request=httpx.Request("POST", url))
+
+    monkeypatch.setattr(providers.httpx, "post", post)
+    monkeypatch.setattr(httpx, "get", lambda url, **kw: httpx.Response(401, json={}))  # no subscription read
+    return state
+
+
+@pytest.mark.parametrize(
+    "text,kind",
+    [("der Bahnhof", "word"), ("sich freuen auf", "word"), ("Ich gehe nach Hause.", "sentence")]
+    + [("Wo ist der Bahnhof?", "sentence"), ("das ist ein sehr langer Satz ohne Punkt", "sentence")],
+)
+def test_kind_of(text, kind):
+    from tts.text import kind_of
+
+    assert kind_of(text) == kind
+
+
+def test_words_go_to_elevenlabs_with_language_code(api, eleven, google):
+    assert get(api, "der Bahnhof").data["url"]
+    url, body, headers = eleven["sent"][0]
+    assert "/text-to-speech/voice-de" in url and headers["xi-api-key"] == "xi"
+    assert body["text"] == "der Bahnhof" and body["language_code"] == "de"
+    assert body["model_id"] == "eleven_multilingual_v2" and body["voice_settings"]["speed"] == 0.95
+    get(api, "house", "en")
+    assert eleven["sent"][1][1]["language_code"] == "en" and "voice-en" in eleven["sent"][1][0]
+    assert google == []
+
+
+def test_sentences_go_to_google(api, eleven, google):
+    assert get(api, "Ich gehe nach Hause.").data["url"]
+    assert eleven["sent"] == [] and google[0][1]["voice"]["languageCode"] == "de-DE"
+
+
+def test_sentences_never_fall_back_to_elevenlabs(api, words, eleven, settings):
+    settings.GOOGLE_TTS_CREDENTIALS_JSON = ""
+    assert get(api, "Ich gehe nach Hause.").data["fallback"] is True and eleven["sent"] == []
+    out = run("--dry-run")
+    assert "elevenlabs: 3 files, 21 characters" in out and "google: 3 files" in out
+    assert "Estimated ElevenLabs credits: 21 " in out
+
+
+def test_language_without_elevenlabs_voice_uses_google(api, eleven, google):
+    get(api, "aka", "ru")
+    assert eleven["sent"] == [] and google[0][1]["voice"]["languageCode"] == "ru-RU"
+
+
+def test_routing_is_configurable(api, eleven, google, settings):
+    settings.TTS_WORDS_PROVIDER, settings.TTS_SENTENCES_PROVIDER = "google", "elevenlabs"
+    get(api, "der Bahnhof")
+    get(api, "Ich gehe nach Hause.")
+    assert [b["input"]["text"] for _, b in google] == ["der Bahnhof"]
+    assert [b["text"] for _, b, _ in eleven["sent"]] == ["Ich gehe nach Hause."]
+
+
+@pytest.mark.parametrize("status", [401, 429])
+def test_quota_error_falls_back_to_google_and_pauses_elevenlabs(api, eleven, google, status):
+    eleven["fail"] = status
+    first = get(api, "der Bahnhof").data
+    assert first["url"] and first["fallback"] is False
+    assert len(eleven["sent"]) == 1 and google[0][1]["input"]["text"] == "der Bahnhof"
+    assert get(api, "das Haus").data["url"] and len(eleven["sent"]) == 1  # paused: not asked again
+    assert len(google) == 2
+
+
+def test_quota_without_fallback_uses_browser_voice(api, eleven, settings):
+    settings.GOOGLE_TTS_CREDENTIALS_JSON = ""
+    eleven["fail"] = 401
+    assert get(api, "der Bahnhof").data["fallback"] is True
+
+
+def test_existing_elevenlabs_audio_is_served_without_a_key(api, eleven, settings):
+    url = get(api, "der Bahnhof").data["url"]
+    settings.ELEVENLABS_API_KEY = ""
+    assert get(api, "der Bahnhof").data["url"] == url and len(eleven["sent"]) == 1
+
+
+def test_check_page_compares_providers(client, eleven, google):
+    client.force_login(User.objects.create_superuser("a@b.uz", "secret123"))
+    for provider in ("elevenlabs", "google"):
+        r = client.get("/admin/tts-check/url/", {"text": "der Bahnhof", "lang": "de", "provider": provider})
+        assert r.json()["url"]
+    assert len(eleven["sent"]) == 1 and len(google) == 1
+    assert client.get("/admin/tts-check/url/", {"text": "x", "lang": "de", "provider": "nope"}).status_code == 400
+
+
+def test_generate_dry_run_counts_characters_and_credits(words, eleven, google):
+    out = run("--dry-run")
+    # words: "der Bahnhof" (11) + "gehen" (5) + "house" (5); sentences: 16 + 14 + 14
+    assert "6 files to generate, 65 characters." in out
+    assert "elevenlabs: 3 files, 21 characters" in out and "google: 3 files, 44 characters" in out
+    assert "Estimated ElevenLabs credits: 21" in out
+    assert "files to generate, 11 characters" in run("--dry-run", "--limit", "1")
+    assert eleven["sent"] == [] and google == []
+
+
+def test_generate_credit_estimate_for_flash(words, eleven, settings):
+    settings.ELEVENLABS_MODEL = "eleven_flash_v2_5"
+    assert "Estimated ElevenLabs credits: 10 " in run("--dry-run", "--no-examples")  # 21 * 0.5
+
+
+def test_generate_quota_falls_back_and_never_regenerates(words, eleven, google, audio_dir):
+    eleven["fail"], eleven["ok_before_fail"] = 429, 1
+    out = run()
+    assert "stopped elevenlabs after 1 files" in out and "6 files generated" in out
+    assert len(eleven["sent"]) == 2  # one success, one refused, then never asked again
+    assert sorted(b["input"]["text"] for _, b in google) == sorted(
+        ["gehen", "house", "Example Bahnhof.", "Example gehen.", "Example house."]
+    )
+    assert len(list(audio_dir.glob("*.mp3"))) == 6
+    eleven["fail"] = None
+    assert "0 files to generate" in run()  # fallback audio counts as existing
+    assert "2 files to generate" in run("--upgrade", "--dry-run")
+    assert len(eleven["sent"]) == 2
+
+
+def test_generate_skips_when_no_provider_is_left(words, eleven, settings, audio_dir):
+    settings.GOOGLE_TTS_CREDENTIALS_JSON = ""
+    eleven["fail"] = 401
+    out = run()
+    assert "0 files generated" in out and "6 left for the browser voice" in out

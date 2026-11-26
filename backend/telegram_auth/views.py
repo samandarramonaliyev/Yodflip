@@ -9,7 +9,7 @@ from accounts.models import User
 from accounts.serializers import TokenPairSerializer, UserSerializer
 from accounts.services import merge_users, tokens_for
 from duels.services import code_from_param, record_referral
-from tts.providers import get_provider
+from tts.providers import any_configured
 
 from .verify import (
     TelegramAuthError,
@@ -164,6 +164,6 @@ class PublicConfigView(APIView):
                 "telegram_mock": settings.TELEGRAM_MOCK,
                 "ocr_mock": settings.OCR_MOCK,
                 "ocr_daily_limit": settings.OCR_DAILY_LIMIT,
-                "tts": get_provider().configured(),
+                "tts": any_configured(),
             }
         )

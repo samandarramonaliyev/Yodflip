@@ -218,6 +218,39 @@ Sinov: botga `/start` yuboring va **🎮 O'yinni ochish** tugmasini bosing.
 
 Azure: `TTS_PROVIDER=azure`, `AZURE_TTS_KEY`, `AZURE_TTS_REGION`. Kalit bo'lmasa, brauzer ovozi ishlaydi.
 
+### 6a. So'zlar uchun ElevenLabs (eng tabiiy talaffuz)
+
+**Taqsimot:** so'zlar (artikli bilan, masalan `der Bahnhof`) → ElevenLabs; misol gaplar → Google/Azure (arzonroq).
+
+| O'zgaruvchi | Qiymat |
+|---|---|
+| `ELEVENLABS_API_KEY` | elevenlabs.io → **Developers → API Keys**. Kamida **Text to Speech** ruxsati kerak. **Voices: Read** va **User: Read** ruxsatlari ham berilsa, `generate_tts` qolgan kreditni ko'rsatadi |
+| `ELEVENLABS_MODEL` | `eleven_multilingual_v2` (standart, 1 belgi = 1 kredit). `eleven_flash_v2_5` ikki barobar arzon, lekin sifati pastroq |
+| `ELEVENLABS_VOICE_DE` | nemischa ovoz ID |
+| `ELEVENLABS_VOICE_EN` | inglizcha ovoz ID |
+| `TTS_WORDS_PROVIDER` | `elevenlabs` (standart) |
+| `TTS_SENTENCES_PROVIDER` | bo'sh = `TTS_PROVIDER` (google) |
+
+Har bir so'rovda til kodi (`language_code`: `de` / `en`) yuboriladi, shuning uchun nemischa so'z ingliz aksentida o'qilmaydi.
+
+**Ovozlar:**
+- Standart qiymat: ikkala til uchun ham `EXAVITQu4vr4xnSDxMaL`. Bu ElevenLabs'ning ko'p tilli **Sarah** ovozi va har qanday akkauntda ishlaydi. Inglizcha so'zlar uchun yaxshi.
+- Nemischa uchun ona tilida gapiruvchi ovoz tanlang: **Voice Library** → Language: **German**, Accent: **Standard** → bir nechtasini tinglang → **Add to my voices**. Keyin **My Voices** → ovoz → **ID** ni nusxalang → `ELEVENLABS_VOICE_DE`.
+- Ovozni almashtirsangiz, kesh kaliti ham o'zgaradi: shu so'zlar uchun yangi audio yaratiladi (kredit sarflanadi).
+
+**Kredit xavfsizligi:**
+- `python manage.py generate_tts --dry-run`: fayllar soni, belgilar va taxminiy kredit. Hech narsa yaratilmaydi.
+- Hozirgi baza: hamma so'zlar ≈ 26 000 kredit (nemischa ≈ 15 200); gaplar Google'ga ketadi.
+- `--limit 500`: faqat birinchi 500 ta fayl. Qayta ishga tushirsangiz, davom etadi.
+- `--lang de`, `--no-examples`: faqat kerakli qismini yaratish.
+- Mavjud audio hech qachon qayta yaratilmaydi.
+- Kredit tugasa (ElevenLabs 401/429 qaytaradi), buyruq to'xtamaydi: qolgan so'zlar Google bilan yaratiladi. Google ham bo'lmasa, ular o'tkazib yuboriladi va ilovada brauzer ovozi ishlaydi.
+- Saytda ham shunday: kredit tugasa, ElevenLabs 1 soatga o'chiriladi va Google ishlatiladi.
+- Gaplar hech qachon ElevenLabs'ga ketmaydi (u faqat birinchi tanlov bo'lganda ishlatiladi).
+- Kredit qayta to'lgandan keyin Google bilan yaratilgan so'zlarni ElevenLabs ovoziga almashtirish: `generate_tts --upgrade --dry-run`, so'ng `--upgrade`.
+
+**Tekshirish:** `/admin/tts-check/`. 30 ta nemischa so'zni ElevenLabs va Google ustunlarida yonma-yon tinglang. Qizil hoshiya = audio yo'q (kalit yo'q yoki limit tugagan), brauzer ovozi chalindi.
+
 ### Yangilash
 
 - **Kod:** `git push`. Render `build.sh` ni qayta bajaradi (migratsiyalar ham shu yerda).

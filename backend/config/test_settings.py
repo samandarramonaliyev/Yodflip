@@ -8,8 +8,10 @@ os.environ["DATABASE_URL"] = "sqlite:///:memory:"
 os.environ.setdefault("TELEGRAM_BOT_TOKEN", "")
 os.environ["ALWAYS_ON_SCHEDULER"] = ""
 os.environ.setdefault("ANTHROPIC_API_KEY", "")
-for _name in ("GOOGLE_TTS_CREDENTIALS_JSON", "AZURE_TTS_KEY", "S3_BUCKET"):
+for _name in ("GOOGLE_TTS_CREDENTIALS_JSON", "AZURE_TTS_KEY", "ELEVENLABS_API_KEY", "S3_BUCKET"):
     os.environ[_name] = ""
+for _name in ("TTS_PROVIDER", "TTS_WORDS_PROVIDER", "TTS_SENTENCES_PROVIDER"):
+    os.environ.pop(_name, None)
 
 from .settings import *  # noqa: E402,F403
 

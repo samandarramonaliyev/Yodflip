@@ -25,3 +25,9 @@ def spoken_text(text: str, lang: str) -> str:
         elif lang == "de" and len(parts) > 1 and ARTICLE.match(parts[0]) and parts[1].startswith("-"):
             s = parts[0]  # "der Lehrer, -in"
     return " ".join(s.split()).strip(" ,;/-")
+
+
+def kind_of(text: str) -> str:
+    """'sentence' (ends with . ! ? … or is long) or 'word' (a word or short phrase, e.g. 'der Bahnhof')."""
+    s = (text or "").strip()
+    return "sentence" if re.search(r"[.!?…]$", s) or len(s.split()) > 4 else "word"
