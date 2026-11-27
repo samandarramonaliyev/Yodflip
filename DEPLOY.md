@@ -47,6 +47,7 @@
    | `TELEGRAM_BOT_TOKEN` | token from @BotFather |
    | `TELEGRAM_BOT_USERNAME` | bot username without `@` |
    | `TELEGRAM_APP_SHORT_NAME` | short name of the Mini App from @BotFather `/newapp` (see step 4). May stay empty: duel links then open the bot first |
+   | `LEAGUE_TIMEZONE` | optional, default `Asia/Tashkent`: weekly leagues run Monday 00:00 – Sunday 23:59 in this timezone. The weekly rollover is part of the same cron job (nothing new to schedule) |
    | `ANTHROPIC_API_KEY` | Claude API key: **needed for photo scanning** (the native Render runtime has no Tesseract) |
    | `DJANGO_SUPERUSER_EMAIL` / `DJANGO_SUPERUSER_PASSWORD` | your admin login for `/admin/` |
 

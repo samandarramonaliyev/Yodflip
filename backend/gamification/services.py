@@ -27,6 +27,7 @@ ACHIEVEMENTS: dict[str, str] = {
     "invited_5": "🤝",
     "exam_pack_50": "📘",
     "exam_pack_100": "🎖️",
+    "league_trophy": "🏆",
 }
 
 
@@ -72,6 +73,14 @@ def record_activity(user, xp: int, correct: int, attempts: int, games: int = 1) 
     update_streak(user, day)
     user.xp += xp
     user.save(update_fields=["xp", "streak", "best_streak", "last_active_date"])
+    _league(user, xp)
+
+
+def _league(user, xp: int) -> None:
+    """Every XP event also counts for the weekly league (both tracks)."""
+    from leagues.services import on_xp
+
+    on_xp(user, xp)
 
 
 def add_xp(user, xp: int) -> None:
@@ -82,6 +91,7 @@ def add_xp(user, xp: int) -> None:
     DailyActivity.objects.filter(pk=act.pk).update(xp=F("xp") + xp)
     type(user).objects.filter(pk=user.pk).update(xp=F("xp") + xp)
     user.refresh_from_db(fields=["xp"])
+    _league(user, xp)
 
 
 def grant(user, code: str) -> bool:

@@ -20,6 +20,7 @@ export interface User {
   best_streak: number
   last_active_date: string | null
   notify_classes?: boolean
+  notify_leagues?: boolean
   reminder_time: string | null
   has_password: boolean
   is_telegram_linked: boolean

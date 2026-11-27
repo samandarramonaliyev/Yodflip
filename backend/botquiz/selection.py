@@ -8,7 +8,7 @@ import re
 from games.sources import item_from_userword, item_from_word
 from words.leitner import MAX_BOX
 from words.levels import progress
-from words.models import UserLevelWord, Word, WordTranslation, term_key
+from words.models import UserLevelWord, UserWord, Word, WordTranslation, term_key
 from words.services import list_queryset
 
 OPTIONS = 4
@@ -66,7 +66,14 @@ def pick_items(user, track: str, lang: str, count: int, rng: random.Random) -> l
     level = current_level(user, track) if len(chosen) < count else None
     if level:
         found = UserLevelWord.objects.filter(user=user, track=track, found_at__isnull=False).values("word_id")
-        ids = list(Word.objects.filter(track=track, level=level).exclude(id__in=found).values_list("id", flat=True))
+        learned = UserWord.objects.filter(user=user, track=track, box__gte=MAX_BOX, word__isnull=False)
+        learned = learned.values("word_id")  # (no NULLs: NOT IN with a NULL would exclude everything)
+        ids = list(
+            Word.objects.filter(track=track, level=level)
+            .exclude(id__in=found)
+            .exclude(id__in=learned)  # already Learned (e.g. in a deck): not "new"
+            .values_list("id", flat=True)
+        )
         rng.shuffle(ids)
         by_id = Word.objects.in_bulk(ids[: count * 2])
         add([item_from_word(by_id[i]) for i in ids[: count * 2] if i in by_id])

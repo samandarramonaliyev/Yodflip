@@ -29,6 +29,7 @@ class UserSerializer(serializers.ModelSerializer):
             "last_active_date",
             "reminder_time",
             "notify_classes",
+            "notify_leagues",
             "date_joined",
             "has_password",
             "is_telegram_linked",

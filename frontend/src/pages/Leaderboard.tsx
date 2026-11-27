@@ -1,6 +1,6 @@
 import { Send } from 'lucide-react'
 import { useState } from 'react'
-import { useSearchParams } from 'react-router-dom'
+import { Link, useSearchParams } from 'react-router-dom'
 import { Avatar, EmptyState, ErrorState, ListSkeleton, Segmented } from '../components/ui'
 import { useT } from '../i18n'
 import { api } from '../lib/api'
@@ -48,6 +48,9 @@ export default function Leaderboard() {
   return (
     <div className="page max-w-2xl space-y-4">
       <h1 className="h1">{t('nav.leaderboard')}</h1>
+      <Link to="/league" className="card flex items-center gap-3 p-4 font-black transition hover:shadow-lift" data-testid="league-link">
+        <span className="text-3xl">🏆</span> {t('league.home_card')}
+      </Link>
       <Segmented
         value={tab}
         onChange={setTab}

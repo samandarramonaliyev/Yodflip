@@ -8,8 +8,28 @@ import { isAvailable } from '../games/direction'
 import { useT } from '../i18n'
 import { api } from '../lib/api'
 import { useAsync } from '../lib/hooks'
+import type { LeagueState } from '../lib/league'
 import type { ProfileStats } from '../lib/types'
 import { useApp } from '../store/app'
+
+function LeagueCard() {
+  const t = useT()
+  const lang = useApp((s) => s.lang)
+  const { data } = useAsync(() => api.get<LeagueState>('/leagues/'), [])
+  if (!data) return null
+  return (
+    <Link to="/league" className="card flex items-center gap-4 p-5 transition hover:shadow-lift" data-testid="home-league">
+      <span className="text-4xl">{data.tier.emoji}</span>
+      <span className="flex-1">
+        <span className="block text-xl font-black">
+          {t('league.home_card')} · {data.tier.name[lang]}
+        </span>
+        <span className="text-muted">{data.me ? t('league.home_rank', { rank: data.me.rank, xp: data.me.xp }) : t('league.not_joined_text')}</span>
+      </span>
+      <ChevronRight className="text-muted" />
+    </Link>
+  )
+}
 
 export default function Home() {
   const t = useT()
@@ -85,6 +105,8 @@ export default function Home() {
       </section>
 
       <GoalCard />
+
+      <LeagueCard />
 
       <Link to="/duel" className="card flex items-center gap-4 p-5 transition hover:shadow-lift" data-testid="home-duel">
         <span className="text-4xl">⚔️</span>

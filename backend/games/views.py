@@ -1,7 +1,11 @@
+import hashlib
 import random
+from datetime import datetime, time
 
+from django.conf import settings
 from django.db import transaction
 from django.shortcuts import get_object_or_404
+from django.utils import timezone
 from drf_spectacular.utils import OpenApiParameter, extend_schema
 from rest_framework import serializers, status
 from rest_framework.exceptions import ValidationError
@@ -12,7 +16,7 @@ from accounts.models import TRACK_CHOICES
 from gamification.models import GameSession
 from gamification.services import check_achievements, level_for_xp, record_activity, today
 from words.levels import record_answers, round_progress
-from words.models import LevelRound, UserLevelWord
+from words.models import LevelRound, UserLevelWord, term_key
 from words.services import apply_answer, record_answer
 from words.translations import resolve
 
@@ -20,6 +24,19 @@ from .models import DailyChallengeScore
 from .rules import GAMES, SESSION_XP_CAP, XP_PER_CORRECT, allowed_for_track, mode_for
 from .scoring import daily_score, match_round_score, session_xp
 from .sources import get_items
+
+
+def round_signature(game: str, track: str, source: str, results: list[dict]) -> str:
+    """Identity of a played set of words, to recognise replays of the same round."""
+    terms = sorted({term_key(r["term"]) for r in results})
+    return hashlib.sha1("|".join([game, track, source or "", *terms]).encode()).hexdigest()[:20]
+
+
+def replay_factor(user, signature: str) -> float:
+    """1.0 for the first REPLAY_FREE_PER_DAY plays of the same round today, then REPLAY_XP_FACTOR."""
+    day_start = timezone.make_aware(datetime.combine(timezone.localdate(), time.min))
+    played = GameSession.objects.filter(user=user, signature=signature, created_at__gte=day_start).count()
+    return settings.REPLAY_XP_FACTOR if played >= settings.REPLAY_FREE_PER_DAY else 1.0
 
 
 class ResultItemSerializer(serializers.Serializer):
@@ -185,10 +202,17 @@ class ResultsView(APIView):
                 if not created:
                     xp = 0  # replays of the daily challenge don't give XP
                 daily_payload = {"score": obj.score, "first_attempt": created}
+            signature = round_signature(game, track, d.get("source", ""), results)
+            capped = False
+            if xp and d.get("source") not in ("level", "exam"):  # level rounds only pay newly found words
+                factor = replay_factor(user, signature)
+                if factor < 1:
+                    xp, capped = round(xp * factor), True
             GameSession.objects.create(
                 user=user,
                 track=track,
                 game=game,
+                signature=signature,
                 mode=GAMES[game],
                 source=d.get("source", ""),
                 translation_lang=lang if GAMES[game] != "definition" else "",
@@ -211,6 +235,7 @@ class ResultsView(APIView):
             "perfect": perfect,
             "learned_now": learned_now,
             "new_achievements": new_achievements,
+            "replay_capped": capped,
         }
         if game == "match":
             r = match_round_score(correct, attempts - correct)

@@ -80,6 +80,7 @@ INSTALLED_APPS = [
     "jobs",
     "broadcasts",
     "classes",
+    "leagues",
 ]
 
 MIDDLEWARE = [
@@ -288,6 +289,12 @@ LOGGING = {
     "root": {"handlers": ["console"], "level": env("LOG_LEVEL", "INFO")},
     "loggers": {"django.security": {"handlers": ["console"], "level": "WARNING", "propagate": False}},
 }
+
+# Weekly leagues: weeks run Monday 00:00 → Sunday 23:59 in this timezone.
+LEAGUE_TIMEZONE = env("LEAGUE_TIMEZONE", "Asia/Tashkent")
+LEAGUE_SPIKE_XP = int(env("LEAGUE_SPIKE_XP", "3000"))  # XP in one day that is logged for admin review
+REPLAY_FREE_PER_DAY = 5  # replays of the same round per day with full XP; then 20%
+REPLAY_XP_FACTOR = 0.2
 
 # Classes (teacher mode). No payments yet: "plan" is stored on classes / organizations for later.
 CLASS_LIMITS = {

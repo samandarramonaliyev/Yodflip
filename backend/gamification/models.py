@@ -28,6 +28,8 @@ class GameSession(models.Model):
     correct = models.PositiveIntegerField(default=0)
     attempts = models.PositiveIntegerField(default=0)
     duration_ms = models.PositiveIntegerField(default=0)
+    # Identity of the played word set (game + source + terms): repeated replays earn less XP.
+    signature = models.CharField(max_length=20, blank=True, db_index=True)
     # Played from a class assignment ("Boshlash"): counts for "play at least N times" targets.
     assignment = models.ForeignKey(
         "classes.Assignment", null=True, blank=True, on_delete=models.SET_NULL, related_name="sessions"

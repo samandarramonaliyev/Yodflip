@@ -33,6 +33,7 @@ const ExamSim = lazy(() => import('./pages/ExamSim'))
 const DuelHub = lazy(() => import('./pages/DuelHub'))
 const DuelPage = lazy(() => import('./pages/DuelPage'))
 const Classes = lazy(() => import('./pages/Classes'))
+const League = lazy(() => import('./pages/League'))
 const ClassPage = lazy(() => import('./pages/ClassPage'))
 const ClassStudent = lazy(() => import('./pages/ClassStudent'))
 const JoinClass = lazy(() => import('./pages/JoinClass'))
@@ -145,6 +146,7 @@ export default function App() {
               <Route path="/leaderboard" element={<RequireAuth><Leaderboard /></RequireAuth>} />
               <Route path="/profile" element={<RequireAuth><Profile /></RequireAuth>} />
               <Route path="/lists/:which" element={<RequireAuth><Lists /></RequireAuth>} />
+              <Route path="/league" element={<RequireAuth><League /></RequireAuth>} />
               <Route path="/classes" element={<RequireAuth><Classes /></RequireAuth>} />
               <Route path="/classes/:id" element={<RequireAuth><ClassPage /></RequireAuth>} />
               <Route path="/classes/:id/students/:uid" element={<RequireAuth><ClassStudent /></RequireAuth>} />

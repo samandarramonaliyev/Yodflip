@@ -227,6 +227,7 @@ export default function Profile() {
         )}
         <Toggle checked={!muted} onChange={toggleMute} label={t('profile.sound')} />
         {user.is_telegram_linked && <Toggle checked={user.notify_classes !== false} onChange={(v) => patch({ notify_classes: v })} label={t('profile.notify_classes')} />}
+        {user.is_telegram_linked && <Toggle checked={user.notify_leagues !== false} onChange={(v) => patch({ notify_leagues: v })} label={t('profile.notify_leagues')} />}
         <TtsSettings />
         <div className="space-y-1">
           <div className="font-bold">{t('profile.reminder')}</div>

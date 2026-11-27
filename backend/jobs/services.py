@@ -23,7 +23,7 @@ TOTAL_BUDGET = 24  # seconds; cron-job.org stops waiting after 30
 QUIZ_BUDGET = 14
 KEEP = timedelta(days=14)
 RUNS_SHOWN = 7
-JOBS = ("quiz", "reminders", "broadcasts", "duels", "classes")
+JOBS = ("quiz", "reminders", "broadcasts", "duels", "classes", "leagues")
 NO_TOKEN = "bot_disabled"
 
 
@@ -62,6 +62,7 @@ def _parts(deadline: float):
     from broadcasts.services import run_scheduled
     from classes.reminders import send_due as class_reminders
     from duels.services import expire_due
+    from leagues import notify as leagues
     from telegram_bot.reminders import send_due_reminders
 
     def bot(func):
@@ -80,7 +81,17 @@ def _parts(deadline: float):
         ("broadcasts", bot(run_scheduled)),
         ("duels", duels),
         ("classes", bot(lambda: class_reminders(budget=min(8, left())))),
+        ("leagues", lambda: leagues_part(leagues, settings, left)),
     ]
+
+
+def leagues_part(leagues, settings, left) -> dict:
+    """The weekly rollover runs even without a bot token; the messages need the bot."""
+    if not settings.TELEGRAM_BOT_TOKEN:
+        from leagues.services import finalize_due
+
+        return {"due": 0, "sent": 0, "detail": NO_TOKEN, **finalize_due()}
+    return leagues.run(budget=min(8, left()))
 
 
 def run_all(trigger: str = "cron") -> dict:
