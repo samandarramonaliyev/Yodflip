@@ -319,17 +319,10 @@ def expire_due(limit: int = 30) -> int:
 # --------------------------------------------------------------------------- referrals / stats
 def record_referral(user: User, code: str) -> bool:
     """Set invited_by once. Callers use it only for brand-new accounts that came through a duel link."""
-    duel = Duel.objects.select_related("creator").filter(code=code).first() if code else None
-    if duel is None or duel.creator_id == user.pk:
-        return False
-    if not User.objects.filter(pk=user.pk, invited_by__isnull=True).update(invited_by=duel.creator_id):
-        return False
-    user.refresh_from_db(fields=["invited_by"])
-    from gamification.services import grant
+    from accounts.services import record_invite
 
-    if User.objects.filter(invited_by=duel.creator_id).count() >= 5:
-        grant(duel.creator, "invited_5")
-    return True
+    duel = Duel.objects.select_related("creator").filter(code=code).first() if code else None
+    return record_invite(user, duel.creator if duel else None)
 
 
 def player(p: DuelParticipant) -> dict:

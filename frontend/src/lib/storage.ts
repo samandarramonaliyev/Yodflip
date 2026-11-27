@@ -16,3 +16,10 @@ export function save(key: string, value: unknown): void {
     /* ignore */
   }
 }
+
+/** Invite code the app was opened with (?ref=<code>): sent once when a new account is created. */
+export function captureRefCode(search: string): void {
+  const code = new URLSearchParams(search).get('ref')
+  if (code && /^[A-Za-z0-9]{1,12}$/.test(code)) save('wf.ref', code.toLowerCase())
+}
+export const refCode = (): string | undefined => load<string | null>('wf.ref', null) ?? undefined

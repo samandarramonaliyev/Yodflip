@@ -8,6 +8,7 @@ class UserSerializer(serializers.ModelSerializer):
     level = serializers.IntegerField(read_only=True)
     has_password = serializers.SerializerMethodField()
     is_telegram_linked = serializers.SerializerMethodField()
+    referral_code = serializers.SerializerMethodField()
 
     class Meta:
         model = User
@@ -33,6 +34,7 @@ class UserSerializer(serializers.ModelSerializer):
             "date_joined",
             "has_password",
             "is_telegram_linked",
+            "referral_code",
         )
         read_only_fields = (
             "id",
@@ -52,6 +54,11 @@ class UserSerializer(serializers.ModelSerializer):
     def get_is_telegram_linked(self, obj) -> bool:
         return obj.telegram_id is not None
 
+    def get_referral_code(self, obj) -> str:
+        from .services import ensure_referral_code
+
+        return ensure_referral_code(obj) if obj.pk else ""
+
 
 class RegisterSerializer(serializers.Serializer):
     email = serializers.EmailField()
@@ -59,6 +66,7 @@ class RegisterSerializer(serializers.Serializer):
     display_name = serializers.CharField(max_length=80, required=False, allow_blank=True)
     ui_language = serializers.ChoiceField(choices=["uz", "en", "ru"], required=False)
     duel_code = serializers.CharField(required=False, allow_blank=True, max_length=16)
+    ref_code = serializers.CharField(required=False, allow_blank=True, max_length=12)
 
     def validate_email(self, value):
         value = value.strip().lower()
@@ -79,7 +87,10 @@ class RegisterSerializer(serializers.Serializer):
             display_name=data.get("display_name") or data["email"].split("@")[0],
             ui_language=data.get("ui_language", "uz"),
         )
-        record_referral(user, data.get("duel_code", ""))
+        from .services import record_ref_code
+
+        if not record_referral(user, data.get("duel_code", "")):
+            record_ref_code(user, (data.get("ref_code") or "").lower())
         return user
 
 

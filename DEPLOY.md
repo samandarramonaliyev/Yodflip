@@ -63,7 +63,7 @@ The bot sets its menu button automatically on startup. To set it by hand, or to 
 - `/mybots` → bot → **Bot Settings → Configure Mini App → Enable Mini App** → the same URL.
 - Website login with Telegram: `/setdomain` → bot → `<your-service>.onrender.com`.
 
-- **Duel links (`startapp`)**: `/newapp` → choose the bot → title, description, a 640×360 picture → **Web App URL** `https://<your-service>.onrender.com` → **short name**, e.g. `play`. Put that short name into Render's `TELEGRAM_APP_SHORT_NAME`. Duel links then look like `https://t.me/<bot>/play?startapp=duel_<code>` and open the duel directly. Without it the app shares `https://t.me/<bot>?start=duel_<code>` (one extra tap in the bot). The same short name is used for class invitations (`?startapp=class_<code>`).
+- **Duel links (`startapp`)**: `/newapp` → choose the bot → title, description, a 640×360 picture → **Web App URL** `https://<your-service>.onrender.com` → **short name**, e.g. `play`. Put that short name into Render's `TELEGRAM_APP_SHORT_NAME`. Duel links then look like `https://t.me/<bot>/play?startapp=duel_<code>` and open the duel directly. Without it the app shares `https://t.me/<bot>?start=duel_<code>` (one extra tap in the bot). The same short name is used for class invitations (`?startapp=class_<code>`) and for the referral QR code on share cards (`?startapp=ref_<code>`). Telegram stories from the Mini App need nothing extra (Bot API 7.8+ clients); the card image is served from `/media/shares/…`, so `PUBLIC_URL` must be the public HTTPS address.
 
 Test: send `/start` to the bot → **🎮 O'yinni ochish**. You're signed in automatically (the server verifies Telegram's `initData` signature with your bot token).
 

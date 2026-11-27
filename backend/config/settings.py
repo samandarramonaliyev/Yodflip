@@ -81,6 +81,7 @@ INSTALLED_APPS = [
     "broadcasts",
     "classes",
     "leagues",
+    "shares",
 ]
 
 MIDDLEWARE = [
@@ -202,7 +203,7 @@ REST_FRAMEWORK = {
     "DEFAULT_AUTHENTICATION_CLASSES": ("rest_framework_simplejwt.authentication.JWTAuthentication",),
     "DEFAULT_PERMISSION_CLASSES": ("rest_framework.permissions.IsAuthenticated",),
     "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
-    "DEFAULT_THROTTLE_RATES": {"auth": "30/min"},
+    "DEFAULT_THROTTLE_RATES": {"auth": "30/min", "share_render": "10/min"},
 }
 if not DEBUG:
     REST_FRAMEWORK["DEFAULT_RENDERER_CLASSES"] = ("rest_framework.renderers.JSONRenderer",)

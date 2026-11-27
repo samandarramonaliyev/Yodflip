@@ -21,6 +21,7 @@ export interface User {
   last_active_date: string | null
   notify_classes?: boolean
   notify_leagues?: boolean
+  referral_code?: string
   reminder_time: string | null
   has_password: boolean
   is_telegram_linked: boolean
@@ -154,6 +155,9 @@ export interface WordSet {
 
 export interface ProfileStats {
   user: User
+  /** This league week (Monday → now): for the weekly share card */
+  week?: { start: string; xp: number; words: number; accuracy: number }
+  invited?: number
   track: Track
   xp: number
   level: number
@@ -211,6 +215,8 @@ export interface ResultsResponse {
 
 export interface PublicConfig {
   bot_username: string
+  /** Mini App short name from @BotFather (t.me/<bot>/<app>?startapp=...) */
+  app_short_name?: string
   telegram_mock: boolean
   ocr_mock: boolean
   ocr_daily_limit: number

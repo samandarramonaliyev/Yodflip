@@ -44,6 +44,33 @@ def profile_stats(user, track: str) -> dict:
         "cefr": user.cefr_for(track),
         "chart": chart,
         "translation_langs": translation_breakdown(user, track),
+        "week": week_stats(user),
+        "invited": user.invited.count(),
+    }
+
+
+def week_stats(user) -> dict:
+    """This league week (Monday → now, both tracks): XP, words found / learned, accuracy — for the share card."""
+    from datetime import datetime, time
+
+    from django.utils import timezone
+
+    from leagues.services import tz, week_start_for
+    from words.models import UserLevelWord
+
+    start = week_start_for()
+    acts = DailyActivity.objects.filter(user=user, date__gte=start).aggregate(
+        xp=Sum("xp"), c=Sum("correct"), a=Sum("attempts")
+    )
+    since = datetime.combine(start, time.min, tzinfo=tz())
+    words = UserLevelWord.objects.filter(user=user, found_at__gte=since).count()
+    attempts = acts["a"] or 0
+    return {
+        "start": start.isoformat(),
+        "xp": acts["xp"] or 0,
+        "words": words,
+        "accuracy": round(100 * (acts["c"] or 0) / attempts) if attempts else 0,
+        "now": timezone.now().isoformat(),
     }
 
 

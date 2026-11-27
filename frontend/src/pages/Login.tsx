@@ -7,6 +7,7 @@ import { LANG_NAMES, useT } from '../i18n'
 import { api, ApiError } from '../lib/api'
 import { duelCodeOf } from '../lib/duel'
 import type { AuthResponse, UiLang } from '../lib/types'
+import { refCode } from '../lib/storage'
 import { useApp } from '../store/app'
 
 function TelegramWidget({ bot, onAuth }: { bot: string; onAuth: (u: Record<string, unknown>) => void }) {
@@ -57,7 +58,7 @@ export default function Login() {
       const r =
         mode === 'login'
           ? await api.publicPost<AuthResponse>('/auth/login/', { email, password })
-          : await api.publicPost<AuthResponse>('/auth/register/', { email, password, display_name: name, ui_language: lang, duel_code: duelCode })
+          : await api.publicPost<AuthResponse>('/auth/register/', { email, password, display_name: name, ui_language: lang, duel_code: duelCode, ref_code: refCode() })
       done(r)
     } catch (err) {
       const data = err instanceof ApiError ? (err.data as Record<string, unknown>) : null
@@ -72,7 +73,7 @@ export default function Login() {
 
   const widgetAuth = async (u: Record<string, unknown>) => {
     try {
-      done(await api.publicPost<AuthResponse>('/auth/telegram/widget/', duelCode ? { ...u, duel_code: duelCode } : u))
+      done(await api.publicPost<AuthResponse>('/auth/telegram/widget/', { ...u, ...(duelCode ? { duel_code: duelCode } : {}), ...(refCode() ? { ref_code: refCode() } : {}) }))
     } catch {
       setError(t('auth.tg_failed'))
     }
@@ -81,7 +82,7 @@ export default function Login() {
   const demoTelegram = async () => {
     setBusy(true)
     try {
-      done(await api.publicPost<AuthResponse>('/auth/telegram/webapp/', { init_data: '', duel_code: duelCode }))
+      done(await api.publicPost<AuthResponse>('/auth/telegram/webapp/', { init_data: '', duel_code: duelCode, ref_code: refCode() }))
     } catch {
       setError(t('auth.tg_failed'))
     } finally {

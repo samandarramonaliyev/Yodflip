@@ -8,6 +8,7 @@ import { ErrorState, ListSkeleton, ProgressBar, Sheet, toast } from '../componen
 import { GAMES } from '../games/catalog'
 import { isAvailable } from '../games/direction'
 import { useT } from '../i18n'
+import { ShareButton } from '../components/ShareSheet'
 import { api } from '../lib/api'
 import { examPlayUrl, type ExamGoal, type ExamPackDetail, type PackWord } from '../lib/exams'
 import { useAsync, useTelegramBack } from '../lib/hooks'
@@ -65,6 +66,7 @@ export default function ExamPage() {
 
       <div className="card space-y-3 p-4">
         <LevelBar progress={p} />
+        {p.percent >= 50 && <ShareButton input={{ template: 'exam', pack: `${p.emoji} ${p.name[lang]}`, percent: p.percent >= 100 ? 100 : 50, found: p.found, total: p.total }} className="btn-soft w-full" />}
         <button className="btn-primary w-full" onClick={() => open(p.next_topic)}>
           <Play className="h-5 w-5" /> {p.completed ? t('exam.review') : p.found ? t('exam.continue') : t('common.start')}
         </button>

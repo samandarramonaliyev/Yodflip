@@ -3,6 +3,8 @@ import { BookmarkPlus, ChevronRight, Clock, Hand, Home, Layers, Plus, RotateCcw,
 import { useEffect, useRef, useState, type ReactNode } from 'react'
 import { Link } from 'react-router-dom'
 import { useT } from '../i18n'
+import type { CardInput } from '../lib/share'
+import { ShareButton } from './ShareSheet'
 import { api } from '../lib/api'
 import { burst, feedbackWin } from '../lib/fx'
 import { useMainButton } from '../lib/hooks'
@@ -98,6 +100,8 @@ export interface ResultsProps {
   extraActions?: ReactNode
   /** "Do'stingni chaqir": duel with the same source */
   duelTo?: string
+  /** "📸 Ulashish" cards offered on this screen (game result, streak milestone...) */
+  share?: CardInput[]
 }
 
 export function Results({
@@ -115,6 +119,7 @@ export function Results({
   extra,
   extraActions,
   duelTo,
+  share = [],
 }: ResultsProps) {
   const t = useT()
   const [deckOpen, setDeckOpen] = useState(false)
@@ -202,6 +207,9 @@ export function Results({
           </button>
         )}
         {extraActions}
+        {share.map((s) => (
+          <ShareButton key={s.template} input={s} className={s.template === 'game' ? 'btn-soft' : 'btn-soft ring-2 ring-accent'} />
+        ))}
         <Link to={duelTo ?? '/duel'} className="btn-soft" data-testid="duel-invite">
           ⚔️ {t('duel.invite')}
         </Link>

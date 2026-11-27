@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom'
 import { TrackSwitch } from '../components/Layout'
 import { DuelStatsCard } from '../components/DuelStatsCard'
 import { CreateClassSheet } from './Classes'
+import { ShareButton } from '../components/ShareSheet'
+import { referralLink } from '../lib/share'
 import { QuizSettingsCard } from '../components/QuizSettingsCard'
 import { TtsSettings } from '../components/TtsSettings'
 import { WordListsSection } from '../components/WordListsSection'
@@ -81,7 +83,7 @@ function SetEmail() {
 
 export default function Profile() {
   const t = useT()
-  const { track, user, lang, setLang, theme, setTheme, muted, toggleMute, logout, setUser } = useApp()
+  const { track, user, lang, setLang, theme, setTheme, muted, toggleMute, logout, setUser, config } = useApp()
   const stats = useAsync(() => api.get<ProfileStats>('/gamification/profile/', { track }), [track])
   const ach = useAsync(() => api.get<Achievement[]>('/gamification/achievements/'), [])
   const duels = useAsync(() => api.get<DuelStats>('/duels/'), [])
@@ -184,6 +186,29 @@ export default function Profile() {
         </button>
       </section>
       <CreateClassSheet open={classSheet} onClose={() => setClassSheet(false)} data={null} />
+
+      {d?.week && (
+        <section className="card flex flex-wrap items-center gap-3 p-4" data-testid="profile-week">
+          <div className="min-w-0 flex-1">
+            <div className="font-black">📊 {t('share.k_weekly')}</div>
+            <div className="text-sm text-muted">
+              {d.week.xp} XP · {t('share.words')}: {d.week.words} · {t('share.accuracy')}: {d.week.accuracy}%
+            </div>
+          </div>
+          <ShareButton input={{ template: 'weekly', xp: d.week.xp, words: d.week.words, accuracy: d.week.accuracy, streak: d.streak }} />
+        </section>
+      )}
+
+      <section className="card flex flex-wrap items-center gap-3 p-4" data-testid="profile-invites">
+        <span className="text-3xl">🤝</span>
+        <div className="min-w-0 flex-1">
+          <div className="font-black">{t('share.invited', { n: d?.invited ?? 0 })}</div>
+          <div className="text-xs text-muted">{t('share.invite_hint')}</div>
+        </div>
+        <button className="btn-soft" onClick={() => void navigator.clipboard?.writeText(referralLink(user.referral_code, config, window.location.origin)).then(() => toast.ok(t('share.copied')))}>
+          🔗 {t('share.copy_link')}
+        </button>
+      </section>
 
       {duels.data && <DuelStatsCard stats={duels.data} />}
 

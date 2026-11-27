@@ -9,6 +9,7 @@ from aiogram.filters import Command, CommandObject, CommandStart
 from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message, WebAppInfo
 from asgiref.sync import sync_to_async
 
+from accounts.services import ref_code_from_param
 from botquiz.services import mark_reachable
 from classes.services import code_from_param as class_code
 from duels.services import code_from_param
@@ -52,7 +53,9 @@ async def cmd_start(message: Message, command: CommandObject) -> None:
         await message.answer(t(lang, "class_invited"), reply_markup=open_button(t(lang, "class_join"), f"/join/{code}"))
         return
     name = message.from_user.first_name if message.from_user else ""
-    await message.answer(t(lang, "welcome", name=name), reply_markup=open_button(t(lang, "open"), "/"))
+    ref = ref_code_from_param(command.args)  # t.me/<bot>?start=ref_<code> (share card QR code)
+    path = f"/?ref={ref}" if ref else "/"
+    await message.answer(t(lang, "welcome", name=name), reply_markup=open_button(t(lang, "open"), path))
 
 
 @router.message(Command("duel"))

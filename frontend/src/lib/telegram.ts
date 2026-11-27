@@ -41,6 +41,13 @@ export interface TelegramWebApp {
   setHeaderColor?: (c: string) => void
   setBackgroundColor?: (c: string) => void
   disableVerticalSwipes?: () => void
+  /** Bot API 7.8+: post a photo / video to the user's story (media_url must be a public HTTPS URL). */
+  shareToStory?: (mediaUrl: string, params?: { text?: string; widget_link?: { url: string; name?: string } }) => void
+  /** Bot API 8.0+: native "save file" dialog. */
+  downloadFile?: (params: { url: string; file_name: string }, cb?: (accepted: boolean) => void) => void
+  openLink?: (url: string) => void
+  isVersionAtLeast?: (version: string) => boolean
+  version?: string
 }
 
 declare global {

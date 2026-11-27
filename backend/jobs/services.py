@@ -23,7 +23,7 @@ TOTAL_BUDGET = 24  # seconds; cron-job.org stops waiting after 30
 QUIZ_BUDGET = 14
 KEEP = timedelta(days=14)
 RUNS_SHOWN = 7
-JOBS = ("quiz", "reminders", "broadcasts", "duels", "classes", "leagues")
+JOBS = ("quiz", "reminders", "broadcasts", "duels", "classes", "leagues", "shares")
 NO_TOKEN = "bot_disabled"
 
 
@@ -63,6 +63,7 @@ def _parts(deadline: float):
     from classes.reminders import send_due as class_reminders
     from duels.services import expire_due
     from leagues import notify as leagues
+    from shares.views import cleanup as share_cleanup
     from telegram_bot.reminders import send_due_reminders
 
     def bot(func):
@@ -82,6 +83,7 @@ def _parts(deadline: float):
         ("duels", duels),
         ("classes", bot(lambda: class_reminders(budget=min(8, left())))),
         ("leagues", lambda: leagues_part(leagues, settings, left)),
+        ("shares", share_cleanup),
     ]
 
 

@@ -6,6 +6,7 @@ import { useT } from '../i18n'
 import { burst } from '../lib/fx'
 import type { LevelProgress } from '../lib/types'
 import { useApp } from '../store/app'
+import { ShareButton } from './ShareSheet'
 
 const NEXT: Record<string, string | undefined> = { A1: 'A2', A2: 'B1', B1: 'B2', B2: 'C1', C1: undefined }
 
@@ -99,8 +100,9 @@ export function ExamComplete({ slug }: { slug: string }) {
 }
 
 /** "Daraja yakunlandi 🎉" — badge, one-time bonus XP, next level and a review session. */
-export function LevelComplete({ level, bonusXp }: { level: string; bonusXp: number }) {
+export function LevelComplete({ level, bonusXp, words = 0 }: { level: string; bonusXp: number; words?: number }) {
   const t = useT()
+  const track = useApp((s) => s.track)
   const ref = useRef<HTMLDivElement>(null)
   useEffect(() => burst(ref.current), [])
   const next = NEXT[level]
@@ -119,6 +121,7 @@ export function LevelComplete({ level, bonusXp }: { level: string; bonusXp: numb
         <Link to={`/play/speed?source=levelreview&level=${level}`} className="btn-ghost">
           <RotateCcw className="h-5 w-5" /> {t('level.review')}
         </Link>
+        <ShareButton input={{ template: 'level', level, track, words }} />
       </div>
     </motion.div>
   )

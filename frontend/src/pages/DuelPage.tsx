@@ -6,6 +6,7 @@ import { Avatar, EmptyState, ErrorState, Spinner, toast } from '../components/ui
 import { ActionRow } from '../components/Results'
 import DuelBoard from '../games/DuelBoard'
 import { useT } from '../i18n'
+import { ShareButton } from '../components/ShareSheet'
 import { ApiError } from '../lib/api'
 import { duelApi, guestToken, seconds, setGuestToken, type Duel, type DuelSide } from '../lib/duel'
 import { burst, feedbackWin } from '../lib/fx'
@@ -235,6 +236,9 @@ function DuelResult({ duel }: { duel: Duel }) {
           <Link className="btn-soft" to="/duel">
             <UserPlus className="h-5 w-5" /> {t('duel.invite_other')}
           </Link>
+          {outcome === 'win' && mySide && (
+            <ShareButton input={{ template: 'duel', score: mySide.score ?? 0, total: duel.total, opponent: other?.name || t('duel.rival'), timeMs: mySide.time_ms ?? 0 }} />
+          )}
         </ActionRow>
       )}
       <ReviewList duel={duel} />

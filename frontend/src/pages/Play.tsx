@@ -16,6 +16,7 @@ import { api } from '../lib/api'
 import { useMainButton, useTelegramBack } from '../lib/hooks'
 import { autoStartChoice, chipLabel, DEFAULT_PREF, isValidPair, needsPicker, type Direction, type TrLang, type TranslationPref } from '../lib/translation'
 import type { LevelProgress, LevelRoundOutcome, ResultsResponse } from '../lib/types'
+import { isStreakMilestone, type CardInput } from '../lib/share'
 import { useApp } from '../store/app'
 
 const COMPONENTS: Record<string, React.LazyExoticComponent<React.ComponentType<GameProps>>> = {
@@ -206,6 +207,7 @@ function Runner({ game, source, params, onChangeLang }: { game: GameId; source: 
   const t = useT()
   const track = useApp((s) => s.track)
   const bumpUser = useApp((s) => s.bumpUser)
+  const streak = useApp((s) => s.user?.streak ?? 0)
   const picker = needsPicker(game, source)
   const tl = (isValidPair(track, params.get('tl')) ? params.get('tl') : 'uz') as TrLang
   const dir: Direction = params.get('dir') === 'reverse' ? 'reverse' : 'forward'
@@ -437,7 +439,7 @@ function Runner({ game, source, params, onChangeLang }: { game: GameId; source: 
             <>
             {isLevel && lr && (lr.completed_now || lr.progress.completed) && (
               <div className="mx-auto mb-4 w-full max-w-xl">
-                {isExam ? <ExamComplete slug={params.get('pack') || ''} /> : <LevelComplete level={lr.progress.level} bonusXp={lr.bonus_xp} />}
+                {isExam ? <ExamComplete slug={params.get('pack') || ''} /> : <LevelComplete level={lr.progress.level} bonusXp={lr.bonus_xp} words={lr.progress.total} />}
               </div>
             )}
             <Results
@@ -452,6 +454,7 @@ function Runner({ game, source, params, onChangeLang }: { game: GameId; source: 
               learnedNow={sum.learnedNow}
               onNewGame={newGame}
               duelTo={duelPath(source, params)}
+              share={shareInputs(game, t(`game.${game}`), session.stats.flatMap((s) => s.results), sum, streak)}
               otherSetTo={game === 'daily' || game === 'review' ? undefined : otherSetPath(source, params)}
               extraActions={
                 game === 'flashcards' && sum.missed.length > 0 ? (
@@ -485,6 +488,16 @@ function Runner({ game, source, params, onChangeLang }: { game: GameId; source: 
         })()}
     </div>
   )
+}
+
+/** Cards offered on the result screen: the game result, plus the streak on 7 / 30 / 100 days. */
+export function shareInputs(game: string, gameName: string, results: { correct: boolean }[], sum: { durationMs: number; accuracy: number; xp: number | null; saving: boolean }, streak: number): CardInput[] {
+  if (sum.saving || !results.length) return []
+  const out: CardInput[] = [
+    { template: 'game', game: gameName, correct: results.filter((r) => r.correct).length, total: results.length, accuracy: sum.accuracy, durationMs: sum.durationMs, xp: sum.xp ?? 0 },
+  ]
+  if (isStreakMilestone(streak)) out.push({ template: 'streak', days: streak, best: streak })
+  return game === 'daily' && sum.xp === 0 ? out.slice(1) : out
 }
 
 function FlashSummary({ results }: { results: { correct: boolean }[] }) {

@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Avatar, EmptyState, ErrorState, Skeleton } from '../components/ui'
+import { ShareButton } from '../components/ShareSheet'
 import { useT } from '../i18n'
 import { api } from '../lib/api'
 import { useTelegramBack } from '../lib/hooks'
@@ -109,6 +110,19 @@ export default function League() {
           <span className="flex-1">
             {t('league.last_week')}: <ResultLine r={data.last_result} />
           </span>
+          {(data.last_result.result === 'promoted' || data.last_result.result === 'trophy') && (
+            <ShareButton
+              className="btn-soft min-h-[40px] px-3"
+              input={{
+                template: 'league',
+                tierEmoji: (data.last_result.new_tier ?? data.last_result.tier).emoji,
+                tierName: (data.last_result.new_tier ?? data.last_result.tier).name[lang],
+                result: data.last_result.result,
+                rank: data.last_result.rank ?? 1,
+                xp: data.last_result.xp,
+              }}
+            />
+          )}
         </div>
       )}
 

@@ -8,6 +8,7 @@ import { duelCodeOf, startParamPath } from './lib/duel'
 import { isTelegram, startParam, tg } from './lib/telegram'
 import type { AuthResponse, PublicConfig, User } from './lib/types'
 import { useApp } from './store/app'
+import { captureRefCode, refCode } from './lib/storage'
 import { useMediaQuery } from './lib/hooks'
 
 const Home = lazy(() => import('./pages/Home'))
@@ -56,6 +57,7 @@ function useThemeAndTrack() {
 function useBoot() {
   const { setUser, login, setBooting, setConfig, logout } = useApp.getState()
   useEffect(() => {
+    captureRefCode(window.location.search)
     setLogoutHandler(() => logout())
     api.publicGet<PublicConfig>('/auth/telegram/config/').then(setConfig).catch(() => undefined)
     ;(async () => {
@@ -65,6 +67,7 @@ function useBoot() {
           const r = await api.publicPost<AuthResponse>('/auth/telegram/webapp/', {
             init_data: tg.initData,
             duel_code: duelCodeOf(window.location.pathname), // signed start_param wins; this covers bot buttons
+            ref_code: refCode(),
           })
           login(r)
         } else if (getTokens()) {

@@ -51,6 +51,8 @@ class User(AbstractBaseUser, PermissionsMixin):
 
     # Who brought this user to Yodflip (duel link); set once, when the account is created.
     invited_by = models.ForeignKey("self", null=True, blank=True, on_delete=models.SET_NULL, related_name="invited")
+    # Personal invite code for share cards: t.me/<bot>/<app>?startapp=ref_<code> (created on first use).
+    referral_code = models.CharField(max_length=12, unique=True, null=True, blank=True)
 
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
