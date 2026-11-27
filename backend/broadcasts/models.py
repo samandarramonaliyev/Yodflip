@@ -12,6 +12,8 @@ AUDIENCES = [
     ("not_today", "Bugun o'ynamagan"),
     ("web", "Saytdan ro'yxatdan o'tgan va Telegram ulangan"),
 ]
+# Not offered in the admin form: used by teacher announcements (audience_ref = the class id).
+ALL_AUDIENCES = [*AUDIENCES, ("class", "Sinf o'quvchilari")]
 
 
 class Broadcast(models.Model):
@@ -33,7 +35,9 @@ class Broadcast(models.Model):
     button_kind = models.CharField(max_length=6, choices=BUTTONS, blank=True)
     button_text = models.CharField(max_length=64, blank=True)
     button_url = models.URLField(max_length=500, blank=True)
-    audience = models.CharField(max_length=12, choices=AUDIENCES, default="all")
+    audience = models.CharField(max_length=12, choices=ALL_AUDIENCES, default="all")
+    audience_ref = models.CharField(max_length=40, blank=True)  # e.g. the class id for audience="class"
+    webapp_path = models.CharField(max_length=200, default="/")  # where the Mini App button opens
     # One value per opened form: a double click or a retried request creates one broadcast.
     nonce = models.UUIDField(unique=True, default=uuid.uuid4)
     created_by = models.ForeignKey(settings.AUTH_USER_MODEL, null=True, on_delete=models.SET_NULL, related_name="+")

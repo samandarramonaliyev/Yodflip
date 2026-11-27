@@ -19,6 +19,7 @@ export interface User {
   streak: number
   best_streak: number
   last_active_date: string | null
+  notify_classes?: boolean
   reminder_time: string | null
   has_password: boolean
   is_telegram_linked: boolean

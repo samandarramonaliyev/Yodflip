@@ -79,6 +79,7 @@ INSTALLED_APPS = [
     "tts",
     "jobs",
     "broadcasts",
+    "classes",
 ]
 
 MIDDLEWARE = [
@@ -286,4 +287,10 @@ LOGGING = {
     "handlers": {"console": {"class": "logging.StreamHandler", "formatter": "plain", "filters": ["redact_secrets"]}},
     "root": {"handlers": ["console"], "level": env("LOG_LEVEL", "INFO")},
     "loggers": {"django.security": {"handlers": ["console"], "level": "WARNING", "propagate": False}},
+}
+
+# Classes (teacher mode). No payments yet: "plan" is stored on classes / organizations for later.
+CLASS_LIMITS = {
+    "free": {"classes": int(env("CLASS_FREE_MAX_CLASSES", "2")), "students": int(env("CLASS_FREE_MAX_STUDENTS", "40"))},
+    "pro": {"classes": 100, "students": 300},
 }

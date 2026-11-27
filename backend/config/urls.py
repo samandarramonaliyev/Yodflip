@@ -28,6 +28,7 @@ urlpatterns = [
     path("api/exams/", include("exams.urls")),
     path("api/tts/", include("tts.urls")),
     path("api/gamification/", include("gamification.urls")),
+    path("api/classes/", include("classes.urls")),
     path("bot/", include("telegram_bot.urls")),  # Telegram webhook + reminder cron
     path(f"{settings.MEDIA_URL.strip('/')}/<path:path>", core_views.media, name="media"),
     # Everything else is a client-side route of the React app.

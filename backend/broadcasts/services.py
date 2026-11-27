@@ -38,9 +38,13 @@ D = BroadcastDelivery
 
 
 # --------------------------------------------------------------------------- audience
-def audience(key: str):
+def audience(key: str, ref: str = ""):
     qs = User.objects.filter(telegram_id__isnull=False, is_active=True).exclude(quiz_settings__bot_blocked=True)
     day = today()
+    if key == "class":
+        from classes.services import announcement_recipients
+
+        return announcement_recipients(qs, ref)
     if key in ("en", "de"):
         return qs.filter(active_track=key)
     if key == "active7":
@@ -64,7 +68,7 @@ def markup_for(b: Broadcast) -> InlineKeyboardMarkup | None:
     if b.button_kind == "webapp":
         from telegram_bot.handlers import open_button
 
-        return open_button(b.button_text, "/")
+        return open_button(b.button_text, b.webapp_path or "/")
     return None
 
 
@@ -179,7 +183,7 @@ def prepare(pk: int) -> None:
     with transaction.atomic():
         b = Broadcast.objects.select_for_update().get(pk=pk)
         if not b.prepared:
-            ids = audience(b.audience).values_list("pk", flat=True)
+            ids = audience(b.audience, b.audience_ref).values_list("pk", flat=True)
             rows = [D(broadcast=b, user_id=i) for i in ids]
             D.objects.bulk_create(rows, batch_size=500, ignore_conflicts=True)
             b.total, b.prepared = len(rows), True

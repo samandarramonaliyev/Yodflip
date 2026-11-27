@@ -46,6 +46,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     last_active_date = models.DateField(null=True, blank=True)
     reminder_time = models.TimeField(null=True, blank=True)
     last_reminder_date = models.DateField(null=True, blank=True)
+    notify_classes = models.BooleanField(default=True)  # class deadlines and teacher announcements
 
     # Who brought this user to Yodflip (duel link); set once, when the account is created.
     invited_by = models.ForeignKey("self", null=True, blank=True, on_delete=models.SET_NULL, related_name="invited")

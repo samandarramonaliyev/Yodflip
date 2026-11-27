@@ -40,6 +40,7 @@ class ResultsSerializer(serializers.Serializer):
     combo_max = serializers.IntegerField(min_value=0, required=False, default=0)
     session_id = serializers.CharField(max_length=40, required=False, allow_blank=True)
     translation_lang = serializers.CharField(max_length=2, required=False, allow_blank=True)
+    assignment_id = serializers.IntegerField(required=False, allow_null=True)
 
     def validate(self, attrs):
         if attrs.get("source") in ("level", "exam") and not attrs.get("session_id"):
@@ -74,6 +75,7 @@ class WordsView(APIView):
                     "daily",
                     "examreview",
                     "lesson",
+                    "assignment",
                 ],
             ),
             OpenApiParameter("level", str),
@@ -102,7 +104,7 @@ class WordsView(APIView):
             deck = Deck.objects.filter(pk=p.get("id")).only("translation_lang").first()
             lang = deck.translation_lang if deck else lang  # a deck always plays in its own language
         items = get_items(request.user, track, source, p, mode, translation_lang=lang)
-        if p.get("source") != "daily":
+        if p.get("source") not in ("daily", "assignment"):  # assignment: unlearned words first
             random.shuffle(items)
         try:
             limit = max(1, min(int(p.get("limit", 200)), 200))
@@ -147,6 +149,11 @@ class ResultsView(APIView):
         correct = sum(1 for r in results if r["correct"])
         learned_now = []
         level_payload = None
+        assignment = None
+        if d.get("assignment_id"):
+            from classes.services import assignment_for_player
+
+            assignment = assignment_for_player(user, d["assignment_id"])
         with transaction.atomic():
             if d.get("source") in ("level", "exam"):
                 xp, perfect, level_payload = self._level_round(user, d, results, game, correct, attempts)
@@ -154,7 +161,7 @@ class ResultsView(APIView):
             elif game == "flashcards":
                 # Lists were already updated card by card via /api/words/flash/answer/.
                 xp, perfect = session_xp(game, correct, attempts, 0)
-            elif d.get("source") in ("examreview", "lesson"):
+            elif d.get("source") in ("examreview", "lesson", "assignment"):
                 for r in results:
                     if apply_answer(user, track, r, r["correct"]):
                         learned_now.append(r["term"])
@@ -189,6 +196,7 @@ class ResultsView(APIView):
                 correct=correct,
                 attempts=attempts,
                 duration_ms=d["duration_ms"],
+                assignment=assignment,
             )
             record_activity(user, xp, correct, attempts)
             new_achievements = check_achievements(user, perfect=perfect, daily=game == "daily")

@@ -23,7 +23,7 @@ TOTAL_BUDGET = 24  # seconds; cron-job.org stops waiting after 30
 QUIZ_BUDGET = 14
 KEEP = timedelta(days=14)
 RUNS_SHOWN = 7
-JOBS = ("quiz", "reminders", "broadcasts", "duels")
+JOBS = ("quiz", "reminders", "broadcasts", "duels", "classes")
 NO_TOKEN = "bot_disabled"
 
 
@@ -60,6 +60,7 @@ def run_logged(job: str, trigger: str, func) -> dict:
 def _parts(deadline: float):
     from botquiz.sender import send_due_quizzes
     from broadcasts.services import run_scheduled
+    from classes.reminders import send_due as class_reminders
     from duels.services import expire_due
     from telegram_bot.reminders import send_due_reminders
 
@@ -78,6 +79,7 @@ def _parts(deadline: float):
         ("reminders", bot(lambda: send_due_reminders(budget=left()))),
         ("broadcasts", bot(run_scheduled)),
         ("duels", duels),
+        ("classes", bot(lambda: class_reminders(budget=min(8, left())))),
     ]
 
 

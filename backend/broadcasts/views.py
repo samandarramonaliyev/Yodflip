@@ -188,7 +188,7 @@ def submit(request):
         b.status = Broadcast.SCHEDULED
     else:
         b.scheduled_at = None
-        if not services.audience(b.audience).exists():
+        if not services.audience(b.audience, b.audience_ref).exists():
             return _problem("Qabul qiluvchilar yo'q")
     b.created_by = request.user
     try:

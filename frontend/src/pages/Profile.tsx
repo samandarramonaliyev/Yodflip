@@ -4,6 +4,7 @@ import { useEffect, useRef, useState, type FormEvent } from 'react'
 import { Link } from 'react-router-dom'
 import { TrackSwitch } from '../components/Layout'
 import { DuelStatsCard } from '../components/DuelStatsCard'
+import { CreateClassSheet } from './Classes'
 import { QuizSettingsCard } from '../components/QuizSettingsCard'
 import { TtsSettings } from '../components/TtsSettings'
 import { WordListsSection } from '../components/WordListsSection'
@@ -85,6 +86,7 @@ export default function Profile() {
   const ach = useAsync(() => api.get<Achievement[]>('/gamification/achievements/'), [])
   const duels = useAsync(() => api.get<DuelStats>('/duels/'), [])
   const [reminder, setReminder] = useState(user?.reminder_time?.slice(0, 5) || '')
+  const [classSheet, setClassSheet] = useState(false)
 
   if (!user) return null
   const d = stats.data
@@ -173,6 +175,16 @@ export default function Profile() {
         </>
       )}
 
+      <section className="grid gap-3 sm:grid-cols-2" data-testid="profile-classes">
+        <Link to="/classes" className="card flex items-center gap-3 p-4 font-black transition hover:shadow-lift">
+          <span className="text-3xl">🏫</span> {t('cls.my_classes')}
+        </Link>
+        <button className="card flex items-center gap-3 p-4 text-left font-black transition hover:shadow-lift" onClick={() => setClassSheet(true)}>
+          <span className="text-3xl">👩‍🏫</span> {t('cls.create')}
+        </button>
+      </section>
+      <CreateClassSheet open={classSheet} onClose={() => setClassSheet(false)} data={null} />
+
       {duels.data && <DuelStatsCard stats={duels.data} />}
 
       <div className="card p-4">
@@ -214,6 +226,7 @@ export default function Profile() {
           </div>
         )}
         <Toggle checked={!muted} onChange={toggleMute} label={t('profile.sound')} />
+        {user.is_telegram_linked && <Toggle checked={user.notify_classes !== false} onChange={(v) => patch({ notify_classes: v })} label={t('profile.notify_classes')} />}
         <TtsSettings />
         <div className="space-y-1">
           <div className="font-bold">{t('profile.reminder')}</div>

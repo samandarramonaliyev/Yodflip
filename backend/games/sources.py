@@ -163,6 +163,12 @@ def _raw_items(user, track: str, source: str, params: dict, day: date | None = N
                 raise PermissionDenied("level_locked")
             qs = qs.filter(level=level)
         items = [item_from_word(w) for w in qs]
+    elif source == "assignment":
+        # A class assignment: exactly its words, the ones not learned yet first.
+        from classes.services import assignment_for_player, assignment_items
+
+        a = assignment_for_player(user, params.get("id"))
+        items = assignment_items(user, a, track)
     elif source == "examreview":
         # Practise words of an exam pack (found or not), e.g. the weak topics of a simulation.
         from exams.services import get_pack, pack_words
@@ -172,7 +178,10 @@ def _raw_items(user, track: str, source: str, params: dict, day: date | None = N
     elif source == "deck":
         deck = get_object_or_404(Deck, pk=params.get("id"))
         if deck.owner_id != user.id and not deck.is_public:
-            raise PermissionDenied("not_your_deck")
+            from classes.services import deck_assigned_to
+
+            if not deck_assigned_to(user, deck):
+                raise PermissionDenied("not_your_deck")
         if deck.track != track:
             raise ValidationError({"track": "track_mismatch"})
         items = [item_from_card(c) for c in deck.cards.select_related("deck")]

@@ -28,6 +28,10 @@ class GameSession(models.Model):
     correct = models.PositiveIntegerField(default=0)
     attempts = models.PositiveIntegerField(default=0)
     duration_ms = models.PositiveIntegerField(default=0)
+    # Played from a class assignment ("Boshlash"): counts for "play at least N times" targets.
+    assignment = models.ForeignKey(
+        "classes.Assignment", null=True, blank=True, on_delete=models.SET_NULL, related_name="sessions"
+    )
     created_at = models.DateTimeField(auto_now_add=True)
 
     class Meta:

@@ -28,6 +28,7 @@ class UserSerializer(serializers.ModelSerializer):
             "best_streak",
             "last_active_date",
             "reminder_time",
+            "notify_classes",
             "date_joined",
             "has_password",
             "is_telegram_linked",

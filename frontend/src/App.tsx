@@ -3,6 +3,7 @@ import { Navigate, Route, Routes, useLocation, useNavigate } from 'react-router-
 import Layout from './components/Layout'
 import { Spinner, Toaster } from './components/ui'
 import { api, getTokens, setLogoutHandler } from './lib/api'
+import { classStartPath } from './lib/classes'
 import { duelCodeOf, startParamPath } from './lib/duel'
 import { isTelegram, startParam, tg } from './lib/telegram'
 import type { AuthResponse, PublicConfig, User } from './lib/types'
@@ -31,6 +32,11 @@ const ExamPage = lazy(() => import('./pages/ExamPage'))
 const ExamSim = lazy(() => import('./pages/ExamSim'))
 const DuelHub = lazy(() => import('./pages/DuelHub'))
 const DuelPage = lazy(() => import('./pages/DuelPage'))
+const Classes = lazy(() => import('./pages/Classes'))
+const ClassPage = lazy(() => import('./pages/ClassPage'))
+const ClassStudent = lazy(() => import('./pages/ClassStudent'))
+const JoinClass = lazy(() => import('./pages/JoinClass'))
+const TeachInvite = lazy(() => import('./pages/JoinClass').then((m) => ({ default: m.TeachInvite })))
 
 function useThemeAndTrack() {
   const theme = useApp((s) => s.theme)
@@ -80,7 +86,7 @@ function useStartParam() {
   useEffect(() => {
     if (done.current) return
     done.current = true
-    const path = isTelegram ? startParamPath(startParam()) : null
+    const path = isTelegram ? startParamPath(startParam()) ?? classStartPath(startParam()) : null
     if (path) nav(path, { replace: true })
   }, [nav])
 }
@@ -139,6 +145,11 @@ export default function App() {
               <Route path="/leaderboard" element={<RequireAuth><Leaderboard /></RequireAuth>} />
               <Route path="/profile" element={<RequireAuth><Profile /></RequireAuth>} />
               <Route path="/lists/:which" element={<RequireAuth><Lists /></RequireAuth>} />
+              <Route path="/classes" element={<RequireAuth><Classes /></RequireAuth>} />
+              <Route path="/classes/:id" element={<RequireAuth><ClassPage /></RequireAuth>} />
+              <Route path="/classes/:id/students/:uid" element={<RequireAuth><ClassStudent /></RequireAuth>} />
+              <Route path="/join/:code" element={<RequireAuth><JoinClass /></RequireAuth>} />
+              <Route path="/teach/:code" element={<RequireAuth><TeachInvite /></RequireAuth>} />
               <Route path="*" element={<Navigate to="/" replace />} />
             </Route>
           </Routes>

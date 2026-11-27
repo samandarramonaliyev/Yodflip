@@ -13,7 +13,7 @@ export type GameId =
   | 'memory'
   | 'derdiedas'
 
-export type Source = 'level' | 'levelreview' | 'deck' | 'set' | 'missed' | 'want' | 'learned' | 'review' | 'daily' | 'exam' | 'examreview' | 'lesson'
+export type Source = 'level' | 'levelreview' | 'deck' | 'set' | 'missed' | 'want' | 'learned' | 'review' | 'daily' | 'exam' | 'examreview' | 'lesson' | 'assignment'
 
 /** A word item as returned by /api/games/words/ */
 export interface GameItem {

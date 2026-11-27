@@ -303,6 +303,7 @@ function Runner({ game, source, params, onChangeLang }: { game: GameId; source: 
           session_id: isLevel ? sessionId : undefined,
           translation_lang: picker || source === 'deck' ? activeLang : undefined,
           results: stat.results,
+          assignment_id: params.get('assignment') ? Number(params.get('assignment')) : undefined,
           duration_ms: Math.round(stat.durationMs),
           combo_max: stat.comboMax ?? 0,
         })
@@ -316,7 +317,7 @@ function Runner({ game, source, params, onChangeLang }: { game: GameId; source: 
         })
         .catch(() => dispatch({ type: 'SAVED', playId, round: stat.round, xp: 0 }))
     }
-  }, [session.stats, session.playId, game, track, source, isLevel, bumpUser, picker, activeLang])
+  }, [session.stats, session.playId, game, track, source, isLevel, bumpUser, picker, activeLang, params])
 
   const onFinish = useCallback(
     (o: GameOutcome) => dispatch({ type: 'ROUND_DONE', results: o.results, durationMs: o.durationMs, flips: o.flips, comboMax: o.comboMax }),
